@@ -1,0 +1,12 @@
+# Core packages
+pandas
+numpy
+matplotlib
+
+# NLP
+transformers
+sentence-transformers
+spacy
+
+# Notebook Support
+jupyter
