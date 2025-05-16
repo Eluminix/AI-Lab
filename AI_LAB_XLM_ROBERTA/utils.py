@@ -23,21 +23,19 @@ def load(json_file):
         return json.load(f)
 
 # truncate text from either head or tail part
-def trunc_text(text, trunc_pos, length, max_total_len=256):
-    text_ids = tokenizer.encode(text, truncation=True, max_length=max_total_len)[1:-1]
+def trunc_text(text, trunc_pos, length):
+
+    text_ids = tokenizer.encode(text)[1:-1]
 
     if trunc_pos == 'head':
         text_trunc_ids = text_ids[:length]
     elif trunc_pos == 'tail':
         text_trunc_ids = text_ids[-length:]
-    else:
-        text_trunc_ids = text_ids[:]
 
     text_trunc_tokens = tokenizer.convert_ids_to_tokens(text_trunc_ids)
     text_trunc_back_sent = ''.join([x.replace('▁', ' ') for x in text_trunc_tokens])[:-1]
 
     return text_trunc_back_sent
-
 
 # extract the title and text parts of a single news by id
 def extract_news_byID(raw_data_root_dir, id: str):
@@ -69,14 +67,10 @@ def extract_data_from_raw(data_link_filepath, raw_data_root_dir, manual_crawl_fi
         id1, id2 = row['pair_id'].strip().split('_')
         text1, text2 = extract_news_byID(raw_data_root_dir, id1), extract_news_byID(raw_data_root_dir, id2)
 
-        if not text1:
-            full_text = manual_crawl_dict[f"{row['pair_id']}"]['text1']
-            text1 = f"{trunc_text(full_text, 'head', 200)} {trunc_text(full_text, 'tail', 56)}"
-        if not text2:
-            full_text2 = manual_crawl_dict[f"{row['pair_id']}"]['text2']
-            text2 = f"{trunc_text(full_text2, 'head', 200)} {trunc_text(full_text2, 'tail', 56)}"
+        if not text1: text1 = manual_crawl_dict[f"{row['pair_id']}"]['text1']
+        if not text2: text2 = manual_crawl_dict[f"{row['pair_id']}"]['text2']
 
         cur_data = [row['pair_id'], row['lang1'], row['lang2'], text1, text2, row['Geography'], row['Entities'], row['Time'], row['Narrative'], row['Overall'], row['Style'], row['Tone']]
         final_data.append(cur_data)
 
-    pd.DataFrame(final_data, columns=final_columns).to_csv(dataset_save_filepath, index=False)
+    pd.DataFrame(final_data, columns=final_columns).to_csv(dataset_save_filepath)
