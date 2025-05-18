@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="pl-PL" data-bs-theme="light">
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+      <!-- //preconnect https://fonts.gstatic.com -->
+    
+    <link rel="preload" href="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" as="image">
+    <link rel="preload" fetchpriority="high"  href="https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg" as="image" type="image/webp">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <!-- <link rel="manifest" href="https://wlocie.pl/wp-content/themes/bootnews/assets/js/manifest.json"> -->
+    <script>
+		var scriptsExecuted = false;
+		var head = document.getElementsByTagName('head')[0] || document.documentElement;
+		
+		function executeScripts() {
+			var fscripts = document.querySelectorAll('fscript');
+			function decodeHtml(html) { 
+				var txt = document.createElement('textarea');
+				txt.innerHTML = html;
+				return txt.value;
+			}
+	
+			[].forEach.call(fscripts, function(fscript) {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+		
+				if (fscript.hasAttributes()) {
+					for (var attributeKey in fscript.attributes) {
+						if (fscript.attributes.hasOwnProperty(attributeKey)) {
+							script[ fscript.attributes[ attributeKey ].name ] = fscript.attributes[ attributeKey ].value || true;
+						}
+					}
+				} else {
+					const contentScripts = 'setTimeout(() => { ' + decodeHtml(fscript.innerHTML) + '}, 150)';
+					script.appendChild( document.createTextNode(contentScripts) );
+				}
+		
+				head.insertBefore( script, head.firstChild );
+			});
+		}
+		
+		function initScripts() {
+			if (scriptsExecuted) {
+				return;
+			}
+		
+			scriptsExecuted = true;
+		
+			setTimeout(function() {
+				if ('requestIdleCallback' in window) {
+					requestIdleCallback(executeScripts, { timeout: 1000 });
+				} else {
+					executeScripts();
+				}
+			}, 1000);
+		}
+		
+		window.addEventListener('scroll', function() {
+			initScripts();
+		}, false);
+	
+		window.addEventListener('mousemove', function() {
+			initScripts();
+		}, false);
+		
+	
+	</script>
+    
+    <style>fscript{display:none!important}</style>
+
+
+<script>
+    function filterScripts(){
+    function blockAllGscriptScripts(script) {
+      const includes = ['google', 'gstatic', 'analytics', 'googletagmanager', 'googletagmanager', 'gtag', 'adsbygoogle', 'googletagservices', 'doubleclick', 'googlesyndication', 'googleadservices', 'googletagservices', 'gtm'];
+
+        let block = false;
+
+        if (includes.some(v => script.src.includes(v))) {
+          //add to script type="text/plain", data-category="analytics", data-service="Google Analytics"
+          script.type = 'text/plain';
+          script.setAttribute('type', 'text/plain');
+          script.setAttribute('data-category', 'analytics');
+          script.setAttribute('data-service', 'Google Analytics');
+          block = true;
+        }
+
+        //add if script body contains google analytics
+        if(includes.some(v => script.innerHTML.includes(v))){
+            script.type = 'text/plain';
+            script.setAttribute('type', 'text/plain');
+            script.setAttribute('data-category', 'analytics');
+            script.setAttribute('data-service', 'Google Analytics');
+            block = true;
+          }
+
+          //firefox
+      const beforeScriptExecuteListener = function (event) {
+            if(script.getAttribute('type') === 'text/plain'){
+                event.preventDefault()
+                script.removeEventListener('beforescriptexecute', beforeScriptExecuteListener)
+            }
+        }
+        script.addEventListener('beforescriptexecute', beforeScriptExecuteListener);
+          //firefox
+
+        blocked.push(script.src ? script.src : script.innerHTML);
+    }
+
+
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(({ addedNodes }) => {
+            addedNodes.forEach(node => {
+                // For each added script tag
+                if(node.nodeType === 1 && node.tagName === 'SCRIPT') {
+                  console.log(node);
+                  return;
+                    node.type = 'text/plain';
+                    node.setAttribute('type', 'text/plain');
+                    const src = node.src || '';
+                    const type = node.type;
+                    const innerHTML = node.innerHTML || '';
+                    const haveSkip = node.getAttribute('data-skip');
+                    const srcContainCookieConsent = src.includes('cookieconsent');
+                    const innerHTmlContainSCCconfig = innerHTML.includes('CookieConsent') || innerHTML.includes('SCCconfig ');
+                    if(haveSkip || srcContainCookieConsent || innerHTmlContainSCCconfig) return;
+                  
+                    // blockAllGscriptScripts(node);
+                }
+            })
+        })
+    })
+
+    // Starts the monitoring
+    observer.observe(document.documentElement, {
+        childList: true,
+        subtree: true
+    });
+  }
+
+// filterScripts();
+</script>
+<fscript>
+function loadFonts() {
+  WebFontConfig = {
+    google: {
+      families: [
+        "Roboto:400,300,500,700&display=swap",
+        "Open Sans:300;400;700;600&display=swap",
+      ],
+    },
+  };
+  (function () {
+    const wf = document.createElement("script");
+    wf.src =
+      ("https:" == document.location.protocol ? "https" : "http") +
+      "://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+    wf.type = "text/javascript";
+    wf.async = "true";
+    const s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(wf, s);
+    document.body.classList.add("fonts-loaded");
+  })();
+}
+// loadFonts();
+
+
+function lazyLoadingImageHTML() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.custom-lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.customSrc;
+          lazyImage.classList.remove("custom-lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Possibly fall back to event handlers here
+  }
+}
+
+function runFiframeIfInViewport() {
+ var iframes = [].slice.call(document.querySelectorAll("fiframe"));
+
+ if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var iframe = document.createElement("iframe");
+          const target = entry.target;
+
+          if (target.hasAttributes()) {
+					for (var attributeKey in target.attributes) {
+						if (target.attributes.hasOwnProperty(attributeKey)) {
+							iframe[ target.attributes[ attributeKey ].name ] = target.attributes[ attributeKey ].value || true;
+						}
+					}
+        }
+          entry.target.replaceWith(iframe);
+        }
+      });
+    });
+
+    iframes.forEach(function (iframe) {
+      lazyImageObserver.observe(iframe);
+    });
+  }
+}
+
+
+
+    lazyLoadingImageHTML();
+    loadFonts();
+    runFiframeIfInViewport();
+</fscript>
+<!-- <div id="player"></div> -->
+
+<!-- Include the YouTube Iframe API
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+function youtubeAutoplay(){
+  var youtube = document.querySelectorAll( ".youtube" );
+  for (var i = 0; i < youtube.length; i++) {
+    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+      youtube[ i ].appendChild( image );
+    }( i ) );
+    youtube[i].addEventListener( "click", function() {
+      var iframe = document.createElement( "iframe" );
+      iframe.setAttribute( "frameborder", "0" );
+      iframe.setAttribute( "allowfullscreen", "" );
+      iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+      this.innerHTML = "";
+      this.appendChild( iframe );
+    } );
+  };
+
+}
+
+
+var player;
+
+// Callback function called when YouTube Iframe API is ready
+function onYouTubeIframeAPIReady() {
+    // Create a new YouTube Player object
+    player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: '-SGI16qD9Hg', // Replace VIDEO_ID_HERE with your YouTube video ID
+        events: {
+          'onReady': onPlayerReady,
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+// Callback function called when the player is ready
+function onPlayerReady(event) {
+   if(event.target.playVideo !== undefined){
+    event.target.playVideo();
+   }
+   console.log('onPlayerReady')
+
+    if (player.isMuted()) {
+    player.unMute();
+  } else {
+    player.mute();
+  }
+}
+
+// youtubeplayer
+</script> -->
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.0 (Yoast SEO v24.0) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Doda musi chronić męża i rodzinę. Podała powód | wLocie.pl</title>
+	<meta name="description" content="Doda i jej mąż Emil Stępień bez wątpienia cieszą się dużym zainteresowaniem na profilu na portalu Instagram należącym do byłej gwiazdy zespołu Virgin." />
+	<link rel="canonical" href="https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/" />
+	<meta property="og:locale" content="pl_PL" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Doda musi chronić męża i rodzinę. Podała powód" />
+	<meta property="og:description" content="Doda i jej mąż Emil Stępień bez wątpienia cieszą się dużym zainteresowaniem na profilu na portalu Instagram należącym do byłej gwiazdy zespołu Virgin." />
+	<meta property="og:url" content="https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/" />
+	<meta property="og:site_name" content="wLocie.pl" />
+	<meta property="article:published_time" content="2020-01-30T09:33:44+00:00" />
+	<meta property="article:modified_time" content="2020-01-30T09:41:16+00:00" />
+	<meta property="og:image" content="https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg" />
+	<meta property="og:image:width" content="1080" />
+	<meta property="og:image:height" content="592" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Bartosz Palędzki" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Napisane przez" />
+	<meta name="twitter:data1" content="Bartosz Palędzki" />
+	<meta name="twitter:label2" content="Szacowany czas czytania" />
+	<meta name="twitter:data2" content="4 minuty" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#article","isPartOf":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/"},"author":{"name":"Bartosz Palędzki","@id":"https://wlocie.pl/#/schema/person/d177ecb1e9d1361a506d01cb901268f6"},"headline":"Doda musi chronić męża i rodzinę. Podała powód","datePublished":"2020-01-30T09:33:44+00:00","dateModified":"2020-01-30T09:41:16+00:00","mainEntityOfPage":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/"},"wordCount":738,"publisher":{"@id":"https://wlocie.pl/#organization"},"image":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#primaryimage"},"thumbnailUrl":"https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg","keywords":["Doda","Doda Emil Stępień","Doda mąż","Emil Stępień","Instagram","Virgin"],"articleSection":["Gwiazdy","TOP","Wydarzenia"],"inLanguage":"pl-PL","copyrightYear":"2020","copyrightHolder":{"@id":"https://wlocie.pl/#organization"}},{"@type":"WebPage","@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/","url":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/","name":"Doda musi chronić męża i rodzinę. Podała powód | wLocie.pl","isPartOf":{"@id":"https://wlocie.pl/#website"},"primaryImageOfPage":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#primaryimage"},"image":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#primaryimage"},"thumbnailUrl":"https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg","datePublished":"2020-01-30T09:33:44+00:00","dateModified":"2020-01-30T09:41:16+00:00","description":"Doda i jej mąż Emil Stępień bez wątpienia cieszą się dużym zainteresowaniem na profilu na portalu Instagram należącym do byłej gwiazdy zespołu Virgin.","breadcrumb":{"@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#breadcrumb"},"inLanguage":"pl-PL","potentialAction":[{"@type":"ReadAction","target":["https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/"]}]},{"@type":"ImageObject","inLanguage":"pl-PL","@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#primaryimage","url":"https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg","contentUrl":"https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg","width":1080,"height":592,"caption":"Doda/ screen YouTube"},{"@type":"BreadcrumbList","@id":"https://wlocie.pl/wydarzenia/doda-maz-emil-stepien/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Strona główna","item":"https://wlocie.pl/"},{"@type":"ListItem","position":2,"name":"Gwiazdy","item":"https://wlocie.pl/gwiazdy/"},{"@type":"ListItem","position":3,"name":"Doda musi chronić męża i rodzinę. Podała powód"}]},{"@type":"WebSite","@id":"https://wlocie.pl/#website","url":"https://wlocie.pl/","name":"wLocie.pl","description":"Najnowsze informacje z Polski i ze świata, ciekawostki, plotki o gwiazdach.  Znami jesteś zawsze na bieżąco","publisher":{"@id":"https://wlocie.pl/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://wlocie.pl/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pl-PL"},{"@type":"Organization","@id":"https://wlocie.pl/#organization","name":"Wlocie.pl","alternateName":"Wlocie.pl","url":"https://wlocie.pl/","logo":{"@type":"ImageObject","inLanguage":"pl-PL","@id":"https://wlocie.pl/#/schema/logo/image/","url":"https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp","contentUrl":"https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp","width":523,"height":150,"caption":"Wlocie.pl"},"image":{"@id":"https://wlocie.pl/#/schema/logo/image/"}},{"@type":"Person","@id":"https://wlocie.pl/#/schema/person/d177ecb1e9d1361a506d01cb901268f6","name":"Bartosz Palędzki","description":"Polityka, ciekawostki i trochę ploteczki. Uważam, że nie ma na świecie człowieka którego polityka nie dotyczy. Każdego z nas dotyka dlatego lepiej wiedzieć co w trawie piszczy."}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//st-n.ads1-adnow.com' />
+
+<style id='classic-theme-styles-inline-css' >
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' >
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='bootnews-styles-css' href='https://wlocie.pl/wp-content/themes/bootnews/dist/css/bundle.min.css?ver=2.4.0.1710420937'  media='all' />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="wLocie.pl - Najnowsze informacje z Polski i ze świata, ciekawostki, plotki o gwiazdach.  Znami jesteś zawsze na bieżąco">
+
+<!-- Begin Custom CSS -->
+<style id="bootnews-custom-css">
+.primary{color:#0055dd;}
+:root {
+  --bs-primary: #0055dd;
+  --bs-secondary: #000000;
+  --bs-primary-rgb: 0, 85, 221;
+  --bs-secondary-rgb: 0,0,0;
+  --bs-link-color: #0055dd;
+  --bs-link-hover-color: #0055dd;
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  border: none;
+}
+.btn-primary {
+  --bs-btn-bg:#0055dd;
+  --bs-btn-border-color:#0055dd;
+  --bs-btn-hover-bg: #0055dd;
+  --bs-btn-hover-border-color: #0055dd;
+  --bs-btn-active-bg: #0055dd;
+  --bs-btn-active-border-color: #0055dd;
+  --bs-btn-disabled-bg: #0055dd;
+  --bs-btn-disabled-border-color: #0055dd;
+}
+.btn-secondary {
+  --bs-btn-bg: #000000;
+  --bs-btn-border-color: #000000;
+  --bs-btn-hover-bg: #000000;
+  --bs-btn-hover-border-color: #000000;
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: #000000;
+  --bs-btn-disabled-bg: #000000;
+  --bs-btn-disabled-border-color: #000000;
+}
+.btn-outline-primary {
+  --bs-btn-color: #0055dd;
+  --bs-btn-border-color: #0055dd;
+  --bs-btn-hover-bg: #0055dd;
+  --bs-btn-hover-border-color: #0055dd;
+  --bs-btn-active-bg: #0055dd;
+  --bs-btn-active-border-color: #0055dd;
+  --bs-btn-disabled-color: #0055dd;
+}
+.btn-outline-secondary {
+  --bs-btn-color:#000000;
+  --bs-btn-border-color:#000000;
+  --bs-btn-hover-bg:#000000;
+  --bs-btn-hover-border-color:#000000;
+  --bs-btn-active-bg:#000000;
+  --bs-btn-active-border-color:#000000;
+  --bs-btn-disabled-color:#000000;
+}
+.dropdown-menu {
+  --bs-dropdown-link-active-color: #0055dd;
+}
+.dropdown-menu-dark {
+  --bs-dropdown-link-active-color: #0055dd;
+}
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #0055dd;
+}
+.navbar {
+  --bs-navbar-brand-color: #0055dd;
+  --bs-navbar-brand-hover-color: #0055dd;
+}
+.navbar-light {
+  --bs-navbar-active-color: #0055dd;
+}
+.pagination {
+  --bs-pagination-active-bg: #0055dd;
+  --bs-pagination-active-border-color: #0055dd;
+}
+.progress {
+  --bs-progress-bar-bg: #0055dd;
+}
+.list-group {
+  --bs-list-group-active-bg: #0055dd;
+  --bs-list-group-active-border-color: #0055dd;
+}
+.link-primary {
+  color: #0055dd !important;
+}
+.link-primary:hover, .link-primary:focus {
+  color: #0055dd !important;
+}
+.btn:focus, .btn:hover {
+  opacity: .9 !important;
+}
+.font-family h1, .font-family h2, .font-family h3, .font-family h4, .font-family h5, .font-family h6, .font-family .h1, .font-family .h2, .font-family .h3, .font-family .h4, .font-family .h5, .font-family .h6, .font-family .navbar-nav, .menu-mobile a, .u-breadcrumb .breadcrumb-item, .post-content .tags-list li:first-child {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.bg-custom-footer {
+  background-color: #0055dd;
+}
+.bg-navcustom {
+    background: #0055dd !important;
+}
+.post-content figure {
+    max-width: 100%;
+}
+h2.widgettitle, h3.widgettitle, h4.widgettitle, h5.widgettitle {
+    font-size: 1rem;
+	  position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: var(--bs-border-color) 2px solid;
+}
+h2.widgettitle:before, h3.widgettitle:before, h4.widgettitle:before, h5.widgettitle:before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 2.5rem;
+    top: 2rem;
+    background: var(--bs-primary);
+}
+@media (min-width: 992px) {
+  .showbacktop.is-fixed.bg-navcustom, .showbacktop.bg-navcustom.is-visible{
+    background: #0055dd !important;
+  }
+}
+</style>
+<!-- End Custom CSS -->
+<link rel="icon" href="https://wlocie.pl/wp-content/uploads/2024/03/cropped-cropped-wlocie-favicon-32x32.webp" sizes="32x32" />
+<link rel="icon" href="https://wlocie.pl/wp-content/uploads/2024/03/cropped-cropped-wlocie-favicon-192x192.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://wlocie.pl/wp-content/uploads/2024/03/cropped-cropped-wlocie-favicon-180x180.webp" />
+<meta name="msapplication-TileImage" content="https://wlocie.pl/wp-content/uploads/2024/03/cropped-cropped-wlocie-favicon-270x270.webp" />
+		<style  id="wp-custom-css">
+			#main-logo{
+	a{
+		text-align:left;
+		display:flex;
+		justify-content:flex-start;
+	}
+	img {
+    height:100px;
+		object-fit:contain;
+/* 	    margin-bottom: 0rem; */
+/* 		margin:0; */
+/*     max-width: 16.875rem; */
+	max-width:75%;
+}
+}
+
+.d-inline-block.d-md-block.bg-primary.text-white.text-center.breaking-caret.py-1.px-2{
+	background-color:#e30202!important;
+	font-weight:bold;
+}
+.
+@media (min-width: 1300px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1270px;
+}
+}
+@media (min-width: 1400px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1370px;
+}
+}
+
+@media (min-width: 1500px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1470px;
+}
+}
+.featured-1 .newsbox .height-ratio, .featured-1 .height-ratio{
+	padding-bottom:54.777%;
+/* 	height:auto; */
+/* 	padding:0; */
+}
+
+.ratio_110-77, .ratio_115-80, .ratio_160-112 {
+    padding-bottom: 55.5%;
+}
+
+#footer {
+	.container .row > .col-md-4{
+		width:100%;
+		text-align:center;
+	}
+}
+
+.wp-block-latest-posts.wp-block-latest-posts__list{
+	.wp-block-latest-posts__post-title{
+		font-weight:bold;
+	}
+	.wp-block-latest-posts__post-excerpt{
+		font-size:13px;
+	}
+	li{
+		border-bottom:2px solid rgba(var(--bs-primary-rgb));
+	}
+}
+
+.flickity-viewport{
+	.image-wrapper img{
+		height:320px;
+		min-height:320px;
+		object-fit:cover;
+		height:auto;
+	}
+}
+
+.showbacktop.is-visible .logo-showbacktop img{
+	object-fit:contain;
+}
+
+@media(max-width:768px){
+	.card.card-full.text-white.overflow.zoom{
+		.badge{
+			display:none;
+		}
+		.h6{
+			line-height:15px;
+		}
+	}
+	.flickity-button {
+		display:none;
+	}
+	.navbar.navbar-expand-lg{
+		    display: flex;
+    flex-wrap: nowrap;
+		.mobile-logo{
+		    object-fit: contain;
+    max-width: 80%;
+	}
+	}
+	
+#showStartPush, .hamburger-icon, [data-bs-target="#navbarTogglerDemo2"] svg{
+	width:48px;
+	height:48px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.hamburger-icon{
+	display:block;
+	margin-top:22px;
+}
+
+.mobile-logo{
+	min-height:80px;
+	margin:0;
+}
+
+a:has(.mobile-logo){
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+	
+	.breadcrumb{
+		display:none!important;
+	}
+}
+
+.end-sidebar-lg:after{
+	display:none;
+}
+
+.wp-block-latest-posts__post-date{
+	display:block;
+}
+.wp-block-latest-posts__featured-image.alignleft{
+	float:left;
+	margin-right:10px;
+}
+
+fiframe{
+	width:100%;
+	height:1px;
+	background:blue;
+	display:block;
+}
+
+
+
+.post-content .wp-block-embed{
+position: relative;
+    padding-bottom: 70.25%;
+/*     padding-top: 30px; */
+/*     height: auto; */
+    overflow: hidden;
+}
+
+.wp-block-embed.is-type-video{
+	.wp-block-embed__wrapper{
+		 position: relative;
+		overflow: hidden;
+		width: 100%;
+		padding-top: 56.25%;
+	}
+
+	iframe{
+		width:100%;
+	 position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+/* 		height:100%; */
+	}
+}
+
+.entry-meta .me-2.me-md-3.text-muted.d-none.d-md-inline-block{display:none!important}
+
+.social-share a{
+	font-weight:bold!important
+}
+
+.bg-envelope, .btn-envelope {
+    background-color: #c14800!important; 
+}
+
+.bg-twitter, .btn-twitter {
+    background-color: black !important;
+}
+
+@media(min-width:992px){
+	.col-lg-4:has(#main-logo), #main-logo{
+		    display: flex !important;
+    align-content: center;
+    flex-wrap: wrap;
+	}
+}
+
+.tags-links a{
+	padding:10px;
+	margin:5px;
+}		</style>
+		
+  <script>
+        window.dataLayer = window.dataLayer || [];
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+
+        gtag('config', 'G-3L7N3G8BBE');
+    	  gtag('js', new Date());
+
+
+   
+    gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied", 
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 2000,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
+
+    </script>
+<script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></script>
+	
+    <fscript>
+
+      setTimeout(function(){
+        acceptcsm();
+      }, 1000);
+
+      function acceptcsm(){
+        const btn = document.querySelector('.fc-consent-root .fc-primary-button .fc-button-label');
+        if(!btn) return;
+        btn.addEventListener('click', function(){
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
+            functionality_storage: "granted",
+            personalization_storage: "granted",
+            security_storage: "granted",
+            wait_for_update: 2000,
+          });
+          localStorage.setItem('csm', 'true');
+        });
+      }
+
+      function sendcsm(){
+        if(localStorage.getItem('csm') === 'true'){
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
+            functionality_storage: "granted",
+            personalization_storage: "granted",
+            security_storage: "granted",
+            wait_for_update: 2000,
+          });
+        }
+      }
+
+      sendcsm();
+
+    </fscript>
+
+    <!-- Google tag (gtag.js) -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-3L7N3G8BBE"></script>
+
+<meta name="generator" content="WP Rocket 3.18.3" data-wpr-features="wpr_defer_js wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_host_fonts_locally wpr_desktop" /></head>
+
+<body class="wp-singular post-template-default single single-post postid-38882 single-format-standard wp-custom-logo wp-theme-bootnews full-width font-family group-blog">
+    
+    <!--Skippy-->
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
+      <div data-rocket-location-hash="e6eb6fcccd8ab4e0754c54f80a5d14c0" class="container">
+        <span class="skiplink-text">Przejdź do treści</span>
+      </div>
+    </a>
+    
+    <div data-rocket-location-hash="167a6c2d40f2df29ed55a1d4e5b77e0c" class="bg-image"></div>
+    <!-- ========== WRAPPER ========== -->
+    <div data-rocket-location-hash="0df92fc98dde7b11c40cea26e15722b5" class="wrapper">
+        
+    
+<!--Header start-->
+<header data-rocket-location-hash="9743db0d800bfb6875b0e0fac69da23c" class="header">
+	<!--top mobile menu start-->
+	<div data-rocket-location-hash="95836c4005e7cd0e0f98f4a92eccde6d" class="top-menu bg-white">
+		<div data-rocket-location-hash="ad0d0d9caad992a98cde7a0ed92e0e39" class="container">
+			<!--Navbar Mobile-->
+			<nav class="navbar navbar-expand d-lg-none navbar-light px-0">
+				<div id="navbar-mobile" class="collapse navbar-collapse nav-top-mobile">
+					    					    															
+					<!--Top right menu-->
+					<ul class="navbar-nav ms-auto text-center">
+											</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<!-- top menu -->
+	<div data-rocket-location-hash="13bec16a4eff8ced9426dfbc902f2abe" class="mobile-sticky fs-6 bg-secondary">
+		<div class="container">
+			<!--Navbar-->
+			<nav class="navbar navbar-expand-lg navbar-dark px-0 py-0">
+				<!--Hamburger button-->
+				<a id="showStartPush" aria-label="sidebar menu" class="navbar-toggler sidebar-menu-trigger side-hamburger border-0 px-0" href="javascript:;">
+	              <span class="hamburger-icon">
+	                <span></span><span></span><span></span><span></span>
+	              </span>
+	            </a>
+				
+				<!-- Mobile logo -->
+				<a title='Strona główna' href="https://wlocie.pl/">
+					<img width="523" height="150" class="mobile-logo img-fluid d-lg-none mx-auto" alt="mobile logo" src="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe-white.webp">				</a>
+				
+				<!--Right Toggle Button-->
+				<button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo2" aria-expanded="false" aria-label="Toggle navigation">
+					<svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><line x1="338.29" y1="338.29" x2="448" y2="448" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
+				</button>
+				
+				<!--Top Navbar-->
+				<div id="navbarTogglerDemo" class="collapse navbar-collapse">
+				    										<!--Top start menu-->
+										
+					<!--Top right menu-->
+					<ul class="navbar-nav ms-auto text-center">
+											</ul>
+				</div>
+			</nav>
+
+			<!--search mobile-->
+			<div class="collapse navbar-collapse col-12 py-2" id="navbarTogglerDemo2">
+				<!--search form-->
+				<form class="form-inline"  method="get" action="https://wlocie.pl/" role="search">
+					<div class="input-group w-100">
+						<input class="form-control border border-right-0" name="s" type="text" placeholder="Szukaj &hellip;" value="">
+						<input class="submit btn btn-primary" id="searchmobile" name="submit" type="submit" value="Szukaj">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--start second header-->
+<div data-rocket-location-hash="3c8fc3711ad3f9c7a088ff4b2af3a753" class="second-header">
+	<div class="container">
+		<div class="row">
+		    			<div class="col-lg-4">
+				<!-- logo -->
+				<div id="main-logo" class="main-logo my-2 my-lg-4 d-none d-lg-block text-center-md-down">
+				        					<a href="https://wlocie.pl/" class="navbar-brand custom-logo-link" rel="home"><img width="523" height="150" src="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp" class="img-fluid" alt="wLocie.pl" decoding="async" fetchpriority="high" srcset="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp 523w, https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe-300x86.webp 300w" sizes="(max-width: 523px) 100vw, 523px" /></a>    				    								</div>
+			</div>
+			
+			<!--Right content ads-->
+			<div class="col-lg-8">
+				<div id="block-8" class="my-2 my-md-3 my-lg-4 d-none d-md-block text-center"><fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="8812799093"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins></div><!-- .footer-widget -->			</div>
+
+					</div>
+	</div>
+</div></header>
+
+<!-- main menu -->
+<div data-rocket-location-hash="7c53b05d7e2b08d00fe563fb4c40623f" id="showbacktop" class="showbacktop full-nav bg-white border-lg-1 border-bottom shadow-b-sm border-none py-0">
+	<div class="container">
+		<nav id="main-menu" class="main-menu navbar navbar-expand-lg navbar-light px-2 px-lg-0 py-0">
+			<!--Navbar menu-->
+			<div id="navbarTogglerDemo1" class="collapse navbar-collapse hover-mode">
+				<!-- logo in navbar -->
+				<div class="logo-showbacktop">
+				        					<a href="https://wlocie.pl/" class="navbar-brand custom-logo-link" rel="home"><img width="523" height="150" src="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp" class="img-fluid" alt="wLocie.pl" decoding="async" srcset="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp 523w, https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe-300x86.webp 300w" sizes="(max-width: 523px) 100vw, 523px" /></a>    														</div>
+				
+				<!--start main menu start-->
+				<ul id="start-main" class="navbar-nav main-nav navbar-uppercase first-start-lg-0"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70610" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-70610 nav-item"><a title="Wydarzenia" href="https://wlocie.pl/wydarzenia/" class="nav-link">Wydarzenia</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70611" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70611 nav-item"><a title="Polityka" href="https://wlocie.pl/polityka/" class="nav-link">Polityka</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70612" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-70612 nav-item"><a title="Gwiazdy" href="https://wlocie.pl/gwiazdy/" class="nav-link">Gwiazdy</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70613" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70613 nav-item"><a title="Styl życia" href="https://wlocie.pl/styl-zycia/" class="nav-link">Styl życia</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70614" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70614 nav-item"><a title="Sport" href="https://wlocie.pl/sport/" class="nav-link">Sport</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70615" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70615 nav-item"><a title="Biznes i Finanse" href="https://wlocie.pl/biznes-i-finanse/" class="nav-link">Biznes i Finanse</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70616" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70616 nav-item"><a title="Opinie" href="https://wlocie.pl/opinie/" class="nav-link">Opinie</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70617" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70617 nav-item"><a title="Wideo" href="https://wlocie.pl/wideo/" class="nav-link">Wideo</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-60482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60482 nav-item"><a title="Kontakt" href="https://wlocie.pl/kontakt/" class="nav-link">Kontakt</a></li>
+</ul>				<!--end start main menu-->
+
+				<!--Search form-->
+	            <div class="navbar-nav ms-auto d-none d-lg-block">
+	              <div class="search-box">
+	                <!--hide search-->
+	                <div class="search-menu no-shadow border-0 py-0">
+	                  <form class="form-src form-inline"  method="get" action="https://wlocie.pl/" role="search">
+	                    <div class="input-group">
+	                      <input name="s" class="form-control end-0" type="text" placeholder="Szukaj &hellip;" value="">
+	                       <span class="icones text-dark">
+	                          <svg xmlns="http://www.w3.org/2000/svg" class="ms-n4" width="1.2rem" height="1.2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M221.09,64A157.09,157.09,0,1,0,378.18,221.09,157.1,157.1,0,0,0,221.09,64Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><line x1="338.29" y1="338.29" x2="448" y2="448" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
+	                       </span>
+	                    </div>
+	                  </form>
+	                </div>
+	              </div>
+	            </div>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<!-- mobile menu -->
+
+<div data-rocket-location-hash="626c91ecda3c5528e7cd2f5b2fe6bb74" class="mobile-side">
+    <!--Back Mobile menu-->
+    <div data-rocket-location-hash="91859f52643aff089778a0217429c380" id="back-menu" class="back-menu back-menu-start">
+        <span class="hamburger-icon open">
+          <svg class="bi bi-x" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"></path>
+          </svg>
+        </span>
+    </div>
+	<nav id="mobile-menu" class="menu-mobile d-flex flex-column push push-start shadow-r-sm bg-white">
+		<!-- mobile menu content -->
+		<div class="mobile-content mb-auto">
+			<!--logo-->
+			<div class="logo-sidenav p-2">
+			        				<a href="https://wlocie.pl/" class="navbar-brand custom-logo-link" rel="home"><img width="523" height="150" src="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp" class="img-fluid" alt="wLocie.pl" decoding="async" srcset="https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe.webp 523w, https://wlocie.pl/wp-content/uploads/2024/03/wlocie-logo-news-nowe-300x86.webp 300w" sizes="(max-width: 523px) 100vw, 523px" /></a>    											</div>
+			<!--navigation-->
+			<div class="sidenav-menu">
+				<nav class="navbar navbar-light navbar-inverse">
+					<ul id="side-menu" class="nav navbar-nav list-group list-unstyled side-link"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-70610 nav-item"><a title="Wydarzenia" href="https://wlocie.pl/wydarzenia/" class="nav-link">Wydarzenia</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70611 nav-item"><a title="Polityka" href="https://wlocie.pl/polityka/" class="nav-link">Polityka</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent active menu-item-70612 nav-item"><a title="Gwiazdy" href="https://wlocie.pl/gwiazdy/" class="nav-link">Gwiazdy</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70613 nav-item"><a title="Styl życia" href="https://wlocie.pl/styl-zycia/" class="nav-link">Styl życia</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70614 nav-item"><a title="Sport" href="https://wlocie.pl/sport/" class="nav-link">Sport</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70615 nav-item"><a title="Biznes i Finanse" href="https://wlocie.pl/biznes-i-finanse/" class="nav-link">Biznes i Finanse</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70616 nav-item"><a title="Opinie" href="https://wlocie.pl/opinie/" class="nav-link">Opinie</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70617 nav-item"><a title="Wideo" href="https://wlocie.pl/wideo/" class="nav-link">Wideo</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60482 nav-item"><a title="Kontakt" href="https://wlocie.pl/kontakt/" class="nav-link">Kontakt</a></li>
+</ul>				</nav>
+			</div>
+		</div>
+		<!-- copyright mobile sidebar menu -->
+		<div class="mobile-copyright mt-5 text-center">
+							<p>Wlocie.pl</p>
+					</div>
+	</nav>
+</div>
+      <main data-rocket-location-hash="0a48c042d06ee6abffc6fb607d87423d" id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb u-breadcrumb  pt-3 px-0 mb-0 bg-transparent small"><a class="breadcrumb-item" href="https://wlocie.pl">wLocie.pl</a>&nbsp;&nbsp;&#187;&nbsp;&nbsp;<a href="https://wlocie.pl/gwiazdy/" rel="category tag">Gwiazdy</a> / <a href="https://wlocie.pl/top/" rel="category tag">TOP</a> / <a href="https://wlocie.pl/wydarzenia/" rel="category tag">Wydarzenia</a>&nbsp;&nbsp;&#187;&nbsp;&nbsp;<span class="d-none d-md-inline">Doda musi chronić męża i rodzinę. Podała powód</span></div>            </div>
+
+                            <div
+                    class="col-md-8">
+                    
+                    <div class='code-block code-block-1' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie nowa przed zdjęciem -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="7479536123"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+                    <article class="post-38882 post type-post status-publish format-standard has-post-thumbnail hentry category-gwiazdy category-top category-wydarzenia tag-doda tag-doda-emil-stepien tag-doda-maz tag-emil-stepien tag-instagram tag-virgin" id="post-38882">
+    <header class="entry-header post-title">
+        <h1 class="entry-title display-4 display-2-lg mt-2">Doda musi chronić męża i rodzinę. Podała powód</h1>        <div class="entry-meta post-atribute mb-3 small fw-normal text-muted">
+            <span class="byline me-2 me-md-3">
+    				<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-person me-1" viewBox="0 0 16 16">
+					  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+					</svg> przez<span class="author vcard"><a class="url fn n fw-bold" href="https://wlocie.pl/author/b-c/"> Bartosz Palędzki</a></span></span><span class="posted-on me-2 me-md-3">
+				<span title="Posted on"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pencil-square me-1" viewBox="0 0 16 16">
+				  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+				  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+				</svg></span> <time class="entry-date published" datetime="2020-01-30T10:33:44+01:00">30 stycznia 2020</time> <time class="updated d-none d-md-inline-block" datetime="2020-01-30T10:41:16+01:00"> ( 30 stycznia 2020 ) </time></span>            <span class="me-2 me-md-3 text-muted d-none d-md-inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-chat-left-dots me-1" viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z">
+                    </path>
+                    <path
+                        d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                    </path>
+                </svg> 0 Komentarze            </span>
+
+            <!-- <span class="me-2 me-md-3 text-muted d-md-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-chat-left-dots me-1" viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z">
+                    </path>
+                    <path
+                        d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z">
+                    </path>
+                </svg>             </span> -->
+
+        </div>
+                <!--social share-->
+        
+<div class="social-share mb-3">
+    <!-- share facebook -->
+    <a class="btn btn-social btn-facebook text-white btn-sm blank-windows" href="https://www.facebook.com/sharer.php?u=https://wlocie.pl/gwiazdy/doda-maz-emil-stepien/" target="_blank" rel="noopener" title="Share to facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </svg> 
+        <span class="d-none d-sm-inline">Facebook</span>
+    </a>
+    <!-- share twitter -->
+    <a class="btn btn-social btn-twitter text-white btn-sm blank-windows" href="https://www.twitter.com/share?url=https://wlocie.pl/gwiazdy/doda-maz-emil-stepien/" target="_blank" rel="noopener" title="Twitter/X">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </svg> 
+        <span class="d-none d-sm-inline">Twitter/X</span>
+    </a>
+    <!-- share linkedin -->
+    <a class="btn btn-social btn-linkedin text-white btn-sm blank-windows" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://wlocie.pl/gwiazdy/doda-maz-emil-stepien/" target="_blank" rel="noopener" title="Share to Linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><path d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"/></svg>
+        <span class="d-none d-sm-inline">Linkedin</span>
+    </a>
+    <!-- share to whatsapp -->
+    <a class="btn btn-success text-white btn-sm d-md-none" href="whatsapp://send?text=Read&nbsp;more&nbsp;in&nbsp;https://wlocie.pl/gwiazdy/doda-maz-emil-stepien/" data-action="share/whatsapp/share" target="_blank" rel="noopener" title="Share to whatsapp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><path d="M414.73,97.1A222.14,222.14,0,0,0,256.94,32C134,32,33.92,131.58,33.87,254A220.61,220.61,0,0,0,63.65,365L32,480l118.25-30.87a223.63,223.63,0,0,0,106.6,27h.09c122.93,0,223-99.59,223.06-222A220.18,220.18,0,0,0,414.73,97.1ZM256.94,438.66h-.08a185.75,185.75,0,0,1-94.36-25.72l-6.77-4L85.56,427.26l18.73-68.09-4.41-7A183.46,183.46,0,0,1,71.53,254c0-101.73,83.21-184.5,185.48-184.5A185,185,0,0,1,442.34,254.14C442.3,355.88,359.13,438.66,256.94,438.66ZM358.63,300.47c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54,2.78-14.4,18-17.65,21.75-6.5,4.16-12.07,1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56,2.44-11.32c2.51-2.49,5.57-6.48,8.36-9.72s3.72-5.56,5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53,20.53,0,0,0-14.86,6.94c-5.11,5.56-19.51,19-19.51,46.28s20,53.68,22.76,57.38,39.3,59.73,95.21,83.76a323.11,323.11,0,0,0,31.78,11.68c13.35,4.22,25.5,3.63,35.1,2.2,10.71-1.59,33-13.42,37.63-26.38s4.64-24.06,3.25-26.37S364.21,303.24,358.63,300.47Z" style="fill-rule:evenodd"/></svg> 
+        <span class="d-none d-sm-inline">Whatsapp</span>
+    </a>
+    <!--Share to pinterest-->
+    <a class="btn btn-social btn-pinterest text-white btn-sm blank-windows" href="https://pinterest.com/pin/create/button/?url=https://wlocie.pl/gwiazdy/doda-maz-emil-stepien/" target="_blank" rel="noopener" title="Share to Pinterest">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><path d="M256.05,32c-123.7,0-224,100.3-224,224,0,91.7,55.2,170.5,134.1,205.2-.6-15.6-.1-34.4,3.9-51.4,4.3-18.2,28.8-122.1,28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2,19.2-58,43.2-58,20.4,0,30.2,15.3,30.2,33.6,0,20.5-13.1,51.1-19.8,79.5-5.6,23.8,11.9,43.1,35.4,43.1,42.4,0,71-54.5,71-119.1,0-49.1-33.1-85.8-93.2-85.8-67.9,0-110.3,50.7-110.3,107.3,0,19.5,5.8,33.3,14.8,43.9,4.1,4.9,4.7,6.9,3.2,12.5-1.1,4.1-3.5,14-4.6,18-1.5,5.7-6.1,7.7-11.2,5.6-31.3-12.8-45.9-47-45.9-85.6,0-63.6,53.7-139.9,160.1-139.9,85.5,0,141.8,61.9,141.8,128.3,0,87.9-48.9,153.5-120.9,153.5-24.2,0-46.9-13.1-54.7-27.9,0,0-13,51.6-15.8,61.6-4.7,17.3-14,34.5-22.5,48a225.13,225.13,0,0,0,63.5,9.2c123.7,0,224-100.3,224-224S379.75,32,256.05,32Z"/></svg>
+        <span class="d-none d-sm-inline">Pinterest</span>
+    </a>
+    <!-- share via email -->
+    <a class="btn btn-social btn-envelope text-white btn-sm" href="/cdn-cgi/l/email-protection#26195553444c4345521b7f49535400484455561d5649555200484455561d524f524a4300474b561d4449425f1b7443474200484455561d45494b564a43524300484455561d4754524f454a4300484455561d4f4800484455561d4e43544300484455561d4e525256551c0909514a49454f4308564a0941514f475c425f09424942470b4b475c0b434b4f4a0b555243564f434809" target="_blank" rel="noopener" title="Share by Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+        </svg>
+        <span class="d-none d-sm-inline">E-mail</span>
+    </a>
+</div><!-- social share -->            </header>
+    <div class="entry-content post-content">
+                        <figure class="image-single-wrapper">
+
+            <img width="100%" height="500" class="img-fluid custom-lazy" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" data-custom-src="https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube-1024x561.jpg" alt="Doda musi chronić męża i rodzinę. Podała powód"/>            <figcaption class="bg-themes">Doda/ screen YouTube </figcaption>
+        </figure>
+
+        
+                        <div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie nowa przed akapitem 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="7691289110"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+
+<p><strong>Doda i jej mąż Emil Stępień bez wątpienia cieszą się dużym zainteresowaniem na profilu na portalu Instagram należącym do byłej gwiazdy zespołu Virgin. Trzeba jednak zaznaczyć, że widok Doroty w towarzystwie męża jest niezwykle rzadki. Piosenkarka bardzo sobie cenię prywatność w sprawach dotyczących jej najbliższej rodziny. Już kilka lat temu granicę w tej kwestii naruszyła stacją TVN. Doda bez wahania podjęła wówczas decyzję o skierowaniu sprawy na drogę prawną, którą ostatecznie wygrała. Z tego właśnie powodu na Insta Dody możemy spotkać się jedynie z postami, które odnoszą się do popularnej piosenkarki. Mimo wszystko Doda szanuję również i swój wizerunek w mediach społecznościowych. Dlatego próżno jest szukać u niej na profilu reklam konkretnych produktów i marek.</strong></p>
+
+
+
+<p class="has-text-color has-background has-very-light-gray-color has-vivid-red-background-color">TO JEST CZYTANE NAJCZĘŚCIEJ:</p><div class='code-block code-block-3' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie nowe przed akapitem 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="5974882767"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+
+
+
+
+<ol class="wp-block-list"><li><strong><a href="https://wlocie.pl/bez-kategorii/rasizm-w-tvn-jungkook/">To poszło na żywo w TVN! Prowadzący poniosą konsekwencje</a></strong></li><li><a href="https://wlocie.pl/plotki-o-gwiazdach/krolikowski-nowe-informacje/"><strong>Fani we łzach. Reżyser „Ranczo” potwierdził tragiczne wieści o Królikowskim.</strong></a></li><li><a href="https://wlocie.pl/plotki-o-gwiazdach/roksana-wegiel-konflikt-tvp/"><strong>Roxie przerwała milczenie. Ujawniła co działo się za kulisami Eurowizji</strong></a></li></ol>
+
+
+
+<h2 class="wp-block-heading">Doda nie chcę reklam u siebie na Insta</h2>
+
+
+
+<p>Doda i jej mąż, Emil Stępień bez wątpienia cieszą się bardzo dużym zainteresowaniem na profilu Instagram gwiazdy zespołu Virgin. Jednym z czynników,  który pozytywnie na to wpływa jest przede wszystkim fakt, iż Doda bardzo sporadycznie zamieszcza zdjęcia i filmy związane z jej rodziną. Celebrytka w tych sferach ceni sobie prywatność. Na Instagramie publikuję w przeważającej większości zdjęcia i nagrania związane bezpośrednio z nią oraz jej pracą. Często odrzuca także propozycję reklam,  ponieważ: </p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p><em>&#8222;Instagram i moje social media w ogóle nie są żadnym polem do reklam&#8221;.</em></p></blockquote>
+
+
+
+<p><strong>Zobacz również:&nbsp;<a href="https://wlocie.pl/wiadomosci/andrzej-duda-w-oswiecimiu/">Andrzej Duda nie wytrzymał. Jego słowa usłyszał cały świat</a></strong></p><div class='code-block code-block-5' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie nowa po akapicie 3 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="3560472413"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p><em>&#8222;Odnajduję, ale nie jestem uzależniona. Nie chodzę z telefonem przyklejonym do ręki. Nie upubliczniam każdej chwili. Poza tym wszystko założyłam za późno. Profil na Facebooku i na Instagramie. Nigdy w życiu nie użyłam żadnego hashtagu, który ponoć zwiększa możliwość dostrzeżenia ciebie przez cały świat. To trąci desperacją. Poprawka – jednego użyłam: #artyściprzeciwnienawiści, kiedy organizowałam wielki koncert. Jak ktoś chce mnie znaleźć w sieci, to mnie znajdzie. Mój Instagram i moje social media w ogóle nie są żadnym polem do reklam i nigdy nie były. Jak oglądam profile innych osób publicznych, to co drugi post jest jakąś otagowaną reklamą&#8221; </em></p></blockquote>
+
+
+
+<p>&#8211; powiedziała w rozmowie dla magazynu &#8222;Forbes&#8221;.</p>
+
+
+
+<p><strong>Czytaj też:&nbsp;<a href="https://wlocie.pl/plotki-o-gwiazdach/wieniawa-taniec-z-gwiazdami-partner/">Oficjalnie! To z nim Wieniawa zatańczy w show „Taniec z gwiazdami” – wygrana w kieszeni</a></strong></p><div class='code-block code-block-6' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie nowe po akapicie 7 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="1864247368"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p><em>&#8222;Nie mogę co drugi dzień robić postów za hajs w koszulkach, bo jestem piosenkarką. To wbrew moim zasadom. To jest drobnica, ja po nią nie sięgam z szacunku choćby do samej siebie. Ostatnio miałam ofertę reklamową od bardzo znanej, wielkiej firmy. Chodziło o zareklamowanie w spocie internetowym w sposób dość kontrowersyjny produktu, o którym nie mogę nic powiedzieć poza tym, że pomysł był tak zabawny i rozbrajający, że podałam najniższą z możliwych <a rel="noreferrer noopener" aria-label=" (otwiera się na nowej zakładce)" href="https://youtu.be/XbDvnvoEbPo" target="_blank">kwot</a>, żeby się nie przerazili. Okazała się dwa razy większa od tego, co zaproponowała inna bardzo znana twarz show-biznesu. Tak się psuje rynek&#8221; </em></p></blockquote>
+
+
+
+<p>&#8211; zaznaczyłą artystka.</p>
+
+
+
+<h3 class="wp-block-heading">Doda i jej mąż Emil Stępień  </h3>
+
+
+
+<p>Doda wyznała także, że dziś dba o swoją prywatność.</p>
+
+
+
+<p><em>&#8222;Nawet nauczyłam się w końcu o tę prywatność dbać i ją chronić. O tym, że wyszłam za mąż, media dowiedziały się dopiero po fakcie, i to ode mnie. Nie dziwię się młodym, że w amoku sławy sprzedają wszystko, ale jestem w szoku, że ludzie w moim wieku potrafią z taką łatwością monetyzować swoje małżeństwo, dzieci&#8230; niejednokrotnie jeszcze te nienarodzone&#8221; </em></p>
+
+
+
+<p>&#8211; powiedziała piosenkarka.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="561" loading="lazy" src="https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube-1024x561.jpg" alt="Doda i jej mąż Emil Stępień bez wątpienia cieszą się dużym zainteresowaniem na profilu na portalu Instagram należącym do byłej gwiazdy zespołu Virgin." class="wp-image-38885" srcset="https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube-1024x561.jpg 1024w, https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube-300x164.jpg 300w, https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube-768x421.jpg 768w, https://wlocie.pl/wp-content/uploads/2020/01/Screenshot_20200129-180248_YouTube.jpg 1080w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption>Doda/ screen YouTube </figcaption></figure>
+
+
+
+<p><strong>POLECAMY TAKŻE:</strong></p>
+
+
+
+<p><a href="https://wlocie.pl/plotki-o-gwiazdach/agnieszka-chylinska-wychudzona/"><strong>Przerażający widok! Agnieszka Chylińska pokazała swoje zdjęcie. Jest skrajnie wychudzona (foto)</strong></a></p>
+
+
+
+<p><a href="https://wlocie.pl/wiadomosci/kaczynski-zamknij-sie-sejm/"><strong>Awantura w Sejmie: Kaczyńskiego poniosło: „Zamknij się!” (wideo)</strong></a></p>
+
+
+
+<p><strong>POLECAMY RÓWNIEŻ:</strong></p>
+
+
+
+<p><a href="https://wlocie.pl/wiadomosci/prezydent-izraela-obrazil-polakow/"><strong>Szokujące słowa! Prezydent Izraela obraził Polaków?</strong></a></p>
+
+
+
+<p><a href="https://wlocie.pl/wiadomosci/andrzej-duda-do-prezydenta-izraela/"><strong>Świat w szoku: Andrzej Duda ostro do prezydenta Izraela</strong></a></p>
+
+
+
+<p><a href="https://wlocie.pl/plotki-o-gwiazdach/krolikowski-nowe-informacje/"><strong>Fani we łzach. Reżyser „Ranczo” potwierdził tragiczne wieści o Królikowskim.</strong></a></p>
+
+
+
+<p>/Doda Instagram</p>
+<div class='code-block code-block-7' style='margin: 8px 0; clear: both;'>
+<fscript async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3555295649837252"
+     crossorigin="anonymous"></fscript>
+<!-- wlocie jakas tam dalwj -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3555295649837252"
+     data-ad-slot="3702805899"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<fscript>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</fscript></div>
+<div class='code-block code-block-13' style='margin: 8px 0; clear: both;'>
+<!-- Composite Start -->
+ <div id="M943452ScriptRootC1611079">
+ </div>
+ <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://jsc.mgid.com/w/l/wlocie.pl.1611079.js" async>
+ </script>
+ <!-- Composite End --></div>
+<!-- CONTENT END 1 -->
+            </div>
+    <footer class="entry-footer">
+        <div class="tags-links mb-3"><span class="fw-bold me-2">Kategoria</span> <a href="https://wlocie.pl/gwiazdy/" rel="category tag">Gwiazdy</a> <a href="https://wlocie.pl/top/" rel="category tag">TOP</a> <a href="https://wlocie.pl/wydarzenia/" rel="category tag">Wydarzenia</a></div><div class="tags-links tagcloud"><span class="fw-bold me-2">Tagi</span>  <a href="https://wlocie.pl/tag/doda/" rel="tag">Doda</a><a href="https://wlocie.pl/tag/doda-emil-stepien/" rel="tag">Doda Emil Stępień</a><a href="https://wlocie.pl/tag/doda-maz/" rel="tag">Doda mąż</a><a href="https://wlocie.pl/tag/emil-stepien/" rel="tag">Emil Stępień</a><a href="https://wlocie.pl/tag/instagram/" rel="tag">Instagram</a><a href="https://wlocie.pl/tag/virgin/" rel="tag">Virgin</a></div>    </footer>
+</article>                    <hr>
+                    
+                                        <!--author-->
+                    <div class="media author-box">
+    <div class="media-figure mb-3">
+            </div>
+    <div class="ms-sm-3 media-body">
+        <p class="mb-2 font-weight-bold">Bartosz Palędzki</p>
+                <p>Polityka, ciekawostki i trochę ploteczki. Uważam, że nie ma na świecie człowieka którego polityka nie dotyczy. Każdego z nas dotyka dlatego lepiej wiedzieć co w trawie piszczy.</p>
+    </div>
+</div>                    <hr>
+                    
+                    <div class="prev-next-post">
+    <div class="row my-5">
+        <!-- Previous article -->
+        <div class="col-12 col-sm-6 prev-post-start">
+                        <span class="d-block text-muted mb-2">Poprzedni artykuł</span>
+            &laquo; <a href="https://wlocie.pl/bez-kategorii/rasizm-w-tvn-jungkook/" rel="prev">To poszło na żywo w TVN! Prowadzący poniosą konsekwencje</a>                    </div>
+        <!-- Next article -->
+        <div class="col-12 col-sm-6 next-post-end">
+                        <span class="d-block text-muted mb-2">Następny artykuł</span>
+            <a href="https://wlocie.pl/wydarzenia/brexit-nigel-farage-zwolal-konferencje-prasowa/" rel="next">Mocne pożegnanie Farage z UE. Padły ostre słowa na koniec (wideo)</a> &raquo;                    </div>
+    </div>
+</div>                    <div class="related-post mb-4">
+    
+<div class="block-title-6"><h4 class="h5 border-primary"><span class="bg-primary text-white">Polecane</span></h4></div>	    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/gwiazdy/magda-gessler-chudnie-kuchenne-rewolucje/">
+					<img width="180" height="98" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Magda Gessler drastycznie chudnie! Na nowych zdjęciach jest nie do poznania" data-src="https://wlocie.pl/wp-content/uploads/2020/06/magda-gessler-dieta.png" decoding="async" srcset="https://wlocie.pl/wp-content/uploads/2020/06/magda-gessler-dieta.png 1506w, https://wlocie.pl/wp-content/uploads/2020/06/magda-gessler-dieta-300x164.png 300w, https://wlocie.pl/wp-content/uploads/2020/06/magda-gessler-dieta-1024x558.png 1024w, https://wlocie.pl/wp-content/uploads/2020/06/magda-gessler-dieta-768x419.png 768w" sizes="(max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/gwiazdy/magda-gessler-chudnie-kuchenne-rewolucje/">Magda Gessler drastycznie chudnie! Na nowych zdjęciach jest nie do poznania</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Magda Gessler w Dzień Dziecka zaskoczyła swoich fanów w serwisie Instagram, jej nowe zdjęcia zszokowały wszystkich, prowadząca &#8222;Kuchenne...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/d-d/" title="Wpisy od Małgorzata Piętak" rel="author">Małgorzata Piętak</a>					</span>
+										<time class="news-date" datetime="2020-06-02T19:32:08+02:00">2 czerwca 2020</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 0 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/wydarzenia/uwaga-nowy-obowiazek-dla-kierowcow/">
+					<img width="180" height="96" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Uwaga: Nowy obowiązek dla kierowców! Za brak tej rzeczy czekają wysokie kary" data-src="https://wlocie.pl/wp-content/uploads/2020/06/nowe-prawo-kierowcy.png" decoding="async" srcset="https://wlocie.pl/wp-content/uploads/2020/06/nowe-prawo-kierowcy.png 1142w, https://wlocie.pl/wp-content/uploads/2020/06/nowe-prawo-kierowcy-300x160.png 300w, https://wlocie.pl/wp-content/uploads/2020/06/nowe-prawo-kierowcy-1024x545.png 1024w, https://wlocie.pl/wp-content/uploads/2020/06/nowe-prawo-kierowcy-768x409.png 768w" sizes="(max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/wydarzenia/uwaga-nowy-obowiazek-dla-kierowcow/">Uwaga: Nowy obowiązek dla kierowców! Za brak tej rzeczy czekają wysokie kary</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Nowe prawo wchodzi w życie i każdy kierowca bez wyjątku będzie musiał się dostosować. Wszystko przez nowe wymogi,...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/admin/" title="Wpisy od Redakcja wLocie.pl" rel="author">Redakcja wLocie.pl</a>					</span>
+										<time class="news-date" datetime="2020-06-20T13:12:53+02:00">20 czerwca 2020</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 0 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/wydarzenia/swiat-wstrzymal-oddech-wywoluja-halucynacje-i-wymioty-rosjanie-juz-montuja-je-na-okretach-wideo/">
+					<img width="180" height="103" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Świat wstrzymał oddech. Wywołują halucynacje i wymioty. Rosjanie już montują je na okrętach [WIDEO]" data-src="https://wlocie.pl/wp-content/uploads/2018/01/WojnaPutina-1.jpg" decoding="async" loading="lazy" srcset="https://wlocie.pl/wp-content/uploads/2018/01/WojnaPutina-1.jpg 906w, https://wlocie.pl/wp-content/uploads/2018/01/WojnaPutina-1-300x172.jpg 300w, https://wlocie.pl/wp-content/uploads/2018/01/WojnaPutina-1-768x439.jpg 768w" sizes="auto, (max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/wydarzenia/swiat-wstrzymal-oddech-wywoluja-halucynacje-i-wymioty-rosjanie-juz-montuja-je-na-okretach-wideo/">Świat wstrzymał oddech. Wywołują halucynacje i wymioty. Rosjanie już montują je na okrętach [WIDEO]</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Rosjanie rozpoczęli wyposażanie swojej floty okrętów wojennych w system ochronny 5P-42 Filin (z rosyjskiego &#8222;Puchacz&#8221;). Na pokładach montowane...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/admin/" title="Wpisy od Redakcja wLocie.pl" rel="author">Redakcja wLocie.pl</a>					</span>
+										<time class="news-date" datetime="2019-02-07T12:55:33+01:00">7 lutego 2019</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 0 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/wydarzenia/mazurek-zmiazdzyl-trzaskowskiego-w-rmf-to-trzeba-zobaczyc-wideo/">
+					<img width="180" height="98" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Mazurek zmiażdżył Trzaskowskiego w RMF. To trzeba zobaczyć (wideo)" data-src="https://wlocie.pl/wp-content/uploads/2020/10/mazurek-trzaskowski.jpg" decoding="async" loading="lazy" srcset="https://wlocie.pl/wp-content/uploads/2020/10/mazurek-trzaskowski.jpg 1079w, https://wlocie.pl/wp-content/uploads/2020/10/mazurek-trzaskowski-300x163.jpg 300w, https://wlocie.pl/wp-content/uploads/2020/10/mazurek-trzaskowski-1024x557.jpg 1024w, https://wlocie.pl/wp-content/uploads/2020/10/mazurek-trzaskowski-768x418.jpg 768w" sizes="auto, (max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/wydarzenia/mazurek-zmiazdzyl-trzaskowskiego-w-rmf-to-trzeba-zobaczyc-wideo/">Mazurek zmiażdżył Trzaskowskiego w RMF. To trzeba zobaczyć (wideo)</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Rafał Trzaskowski i Robert Mazurek zmierzyli się ze sobą niedawno w radiu RMF, gdzie rozmawiali na temat bieżących...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/admin/" title="Wpisy od Redakcja wLocie.pl" rel="author">Redakcja wLocie.pl</a>					</span>
+										<time class="news-date" datetime="2020-10-11T12:21:18+02:00">11 października 2020</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 0 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/wydarzenia/historyczna-chwila-w-sejmie-uchwalenie-tej-ustawy-przyjeto-owacja-na-stojaco-miazdzace-zwyciestwo/">
+					<img width="180" height="91" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Historyczna chwila w Sejmie! Uchwalenie tej ustawy przyjęto owacją na stojąco. Miażdżące zwycięstwo" data-src="https://wlocie.pl/wp-content/uploads/2018/01/PILNESEJM1.png" decoding="async" loading="lazy" srcset="https://wlocie.pl/wp-content/uploads/2018/01/PILNESEJM1.png 800w, https://wlocie.pl/wp-content/uploads/2018/01/PILNESEJM1-300x152.png 300w, https://wlocie.pl/wp-content/uploads/2018/01/PILNESEJM1-768x389.png 768w" sizes="auto, (max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/wydarzenia/historyczna-chwila-w-sejmie-uchwalenie-tej-ustawy-przyjeto-owacja-na-stojaco-miazdzace-zwyciestwo/">Historyczna chwila w Sejmie! Uchwalenie tej ustawy przyjęto owacją na stojąco. Miażdżące zwycięstwo</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Emeryci i renciści otrzymają w maju jednorazowo 1100 zł brutto (ok. 888 zł netto) – przewiduje uchwalona w...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/admin/" title="Wpisy od Redakcja wLocie.pl" rel="author">Redakcja wLocie.pl</a>					</span>
+										<time class="news-date" datetime="2019-04-04T12:43:06+02:00">4 kwietnia 2019</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 1 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<article class="card card-full hover-a mb-module">
+	<div class="row">
+		<div class="col-3 pe-2 pe-md-0">
+						<div class="ratio_180-123 image-wrapper">
+				<a href="https://wlocie.pl/wydarzenia/skandal-z-ukraincami-w-roli-glownej-polacy-sa-wsciekli/">
+					<img width="180" height="104" src="https://wlocie.pl/wp-content/themes/bootnews/assets/img/assets/lazy-empty.png" class="img-fluid lazy wp-post-image" alt="Skandal z ukraińcami w roli głównej! Polacy są wściekli!" data-src="https://wlocie.pl/wp-content/uploads/2018/09/PicsArt_10-05-06.03.25.jpg" decoding="async" loading="lazy" srcset="https://wlocie.pl/wp-content/uploads/2018/09/PicsArt_10-05-06.03.25.jpg 596w, https://wlocie.pl/wp-content/uploads/2018/09/PicsArt_10-05-06.03.25-300x173.jpg 300w" sizes="auto, (max-width: 180px) 100vw, 180px" />				    <!-- post type -->
+        							</a>
+			</div>
+					</div>
+		<div class="col-9">
+			<div class="card-body pt-0">
+				<h2 class="card-title h5 h4-sm h3-lg">
+					<a href="https://wlocie.pl/wydarzenia/skandal-z-ukraincami-w-roli-glownej-polacy-sa-wsciekli/">Skandal z ukraińcami w roli głównej! Polacy są wściekli!</a>
+				</h2>
+				<p class="card-text mb-2 d-none d-md-block">(adsbygoogle = window.adsbygoogle || ).push({}); Sieć komórkowa Play jest jednym z największych w Polsce dostawców usług telefonicznych oraz internetowych. Do gustu wielu Polaków...</p>
+				<div class="card-text text-muted small">
+				    					<!--author-->
+					<span class="fw-bold d-none d-sm-inline me-1">
+						<a href="https://wlocie.pl/author/admin/" title="Wpisy od Redakcja wLocie.pl" rel="author">Redakcja wLocie.pl</a>					</span>
+										<time class="news-date" datetime="2018-09-14T16:45:00+02:00">14 września 2018</time>
+					<span title="5 comment" class="ms-1">
+						<span class="icon-comments"></span> 0 Comment					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>    	    	<div class="gap-0"></div>
+	</div>
+                    
+                    					<div id='additional-codes'>
+											</div>
+					
+
+                                    </div>
+
+                                
+	<aside class="col-md-4 widget-area end-sidebar-lg" id="right-sidebar">
+    
+        <div class="sticky">
+            <aside id="block-5" class="widget widget_block widget_recent_entries"><ul class="wp-block-latest-posts__list has-dates wp-block-latest-posts"><li><div class="wp-block-latest-posts__featured-image alignleft"><a href="https://wlocie.pl/top/leasing-drukarki-praktyczne-i-oplacalne-rozwiazanie-dla-firm/" aria-label="Leasing drukarki – praktyczne i opłacalne rozwiązanie dla firm"><img decoding="async" loading="lazy" width="150" height="150" src="https://wlocie.pl/wp-content/uploads/2025/05/leasing-drukarek-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style="max-width:38px;max-height:38px;" srcset="https://wlocie.pl/wp-content/uploads/2025/05/leasing-drukarek-150x150.png 150w, https://wlocie.pl/wp-content/uploads/2025/05/leasing-drukarek-376x376.png 376w, https://wlocie.pl/wp-content/uploads/2025/05/leasing-drukarek-337x337.png 337w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></div><a class="wp-block-latest-posts__post-title" href="https://wlocie.pl/top/leasing-drukarki-praktyczne-i-oplacalne-rozwiazanie-dla-firm/">Leasing drukarki – praktyczne i opłacalne rozwiązanie dla firm</a><time datetime="2025-05-14T08:26:29+02:00" class="wp-block-latest-posts__post-date">14 maja 2025</time><div class="wp-block-latest-posts__post-excerpt">(adsbygoogle = window.adsbygoogle || []).push({}); Zakup nowoczesnego sprzętu biurowego to spory wydatek – zwłaszcza dla małych i średnich firm, które muszą rozsądnie gospodarować budżetem. Właśnie ...</div></li>
+<li><div class="wp-block-latest-posts__featured-image alignleft"><a href="https://wlocie.pl/biznes-i-finanse/roznica-miedzy-plynem-do-plukania-tkanin-a-perfumami-do-prania/" aria-label="Różnica między płynem do płukania tkanin a perfumami do prania"><img decoding="async" loading="lazy" width="150" height="150" src="https://wlocie.pl/wp-content/uploads/2025/05/pranie-oblecenia-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style="max-width:38px;max-height:38px;" srcset="https://wlocie.pl/wp-content/uploads/2025/05/pranie-oblecenia-150x150.jpg 150w, https://wlocie.pl/wp-content/uploads/2025/05/pranie-oblecenia-376x376.jpg 376w, https://wlocie.pl/wp-content/uploads/2025/05/pranie-oblecenia-337x337.jpg 337w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></div><a class="wp-block-latest-posts__post-title" href="https://wlocie.pl/biznes-i-finanse/roznica-miedzy-plynem-do-plukania-tkanin-a-perfumami-do-prania/">Różnica między płynem do płukania tkanin a perfumami do prania</a><time datetime="2025-05-08T13:20:52+02:00" class="wp-block-latest-posts__post-date">8 maja 2025</time><div class="wp-block-latest-posts__post-excerpt">(adsbygoogle = window.adsbygoogle || []).push({}); Środki do zmiękczania tkanin mają przede wszystkim na celu teksturę tkaniny i kontrolę statyczną. Powlekają one włókna środkami nawilżającymi, aby ...</div></li>
+<li><div class="wp-block-latest-posts__featured-image alignleft"><a href="https://wlocie.pl/top/papiez-franciszek-nie-zyje/" aria-label="Papież Franciszek nie żyje"><img decoding="async" loading="lazy" width="150" height="150" src="https://wlocie.pl/wp-content/uploads/2025/04/papiez-franciszek-nie-zyje-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Papież Franciszek nie żyje – taką wiadomość przekazał w poniedziałkowy poranek Watykan. Informację potwierdziła agencja Reuters" style="max-width:38px;max-height:38px;" srcset="https://wlocie.pl/wp-content/uploads/2025/04/papiez-franciszek-nie-zyje-150x150.jpg 150w, https://wlocie.pl/wp-content/uploads/2025/04/papiez-franciszek-nie-zyje-376x376.jpg 376w, https://wlocie.pl/wp-content/uploads/2025/04/papiez-franciszek-nie-zyje-337x337.jpg 337w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></div><a class="wp-block-latest-posts__post-title" href="https://wlocie.pl/top/papiez-franciszek-nie-zyje/">Papież Franciszek nie żyje</a><time datetime="2025-04-21T10:17:00+02:00" class="wp-block-latest-posts__post-date">21 kwietnia 2025</time><div class="wp-block-latest-posts__post-excerpt">(adsbygoogle = window.adsbygoogle || []).push({}); Papież Franciszek nie żyje – taką wiadomość przekazał w poniedziałkowy poranek Watykan. Informację potwierdziła agencja Reuters, powołując się na oficjalny ...</div></li>
+<li><div class="wp-block-latest-posts__featured-image alignleft"><a href="https://wlocie.pl/polityka/zakaz-sprzedazy-alkoholu/" aria-label="Lobby alkoholowe sabotuje zakaz reklamy piwa? Wiceminister się wygadał"><img decoding="async" loading="lazy" width="150" height="150" src="https://wlocie.pl/wp-content/uploads/2025/03/unnamed-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style="max-width:38px;max-height:38px;" srcset="https://wlocie.pl/wp-content/uploads/2025/03/unnamed-150x150.jpg 150w, https://wlocie.pl/wp-content/uploads/2025/03/unnamed-376x376.jpg 376w, https://wlocie.pl/wp-content/uploads/2025/03/unnamed-337x337.jpg 337w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></div><a class="wp-block-latest-posts__post-title" href="https://wlocie.pl/polityka/zakaz-sprzedazy-alkoholu/">Lobby alkoholowe sabotuje zakaz reklamy piwa? Wiceminister się wygadał</a><time datetime="2025-03-28T13:35:40+01:00" class="wp-block-latest-posts__post-date">28 marca 2025</time><div class="wp-block-latest-posts__post-excerpt">(adsbygoogle = window.adsbygoogle || []).push({}); A więc jednak! Wiceminister zdrowia Wojciech Konieczny potwierdził, że wpływowe lobby skutecznie hamuje wprowadzenie przepisów ograniczających dostęp do alkoholu. Czy ...</div></li>
+</ul></aside>        
+    </div>
+    </aside>            </div>
+        </div>
+</main>
+	    <footer data-rocket-location-hash="c3c71bd8c238839c72e45908b661c977">
+	          
+    
+<!--Footer content-->
+<div id="footer" class="footer-dark bg-dark  py-5 px-3" >
+	<div class="container">
+		<div class="row">
+			<!-- left widget -->
+			<div class="col-md-4">
+							</div>
+			<!-- center widget -->
+			<div class="col-sm-6 col-md-4">
+							</div>
+			<!-- right widget -->
+			<div class="widget col-sm-6 col-md-4">
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer copyright menu -->
+<div data-rocket-location-hash="2c939b30b3eaadc92d837b0f76da3585" class="footer-copyright bg-secondary">
+	<div class="container">
+		<!--Navbar-->
+		<nav class="navbar navbar-expand navbar-dark px-0">
+			<!--footer start menu-->
+						
+			<!-- footer copyright -->
+			<ul class="navbar-nav ms-auto text-center footer-nav-end">
+									<li class="d-inline navbar-text">Wlocie.pl</li>
+							</ul>
+		</nav>
+	</div>
+</div>	    </footer>
+	</div>
+	<!-- ========== END WRAPPER ========== -->
+
+	<!--Back to top-->
+	<button class="back-top btn btn-light border position-fixed r-1 b-1">
+	    <svg class="bi bi-arrow-up" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	      <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
+	      <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>
+	    </svg>
+	</button>
+
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bootnews\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<fscript>
+		function loadStylesAfterLoading(){
+			var link = document.createElement("link");
+			link.href = "https://wlocie.pl/wp-includes/css/dist/block-library/style.min.css";
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		}
+		loadStylesAfterLoading();
+		
+		</fscript><script  src="https://wlocie.pl/wp-content/plugins/adnowjds/script.js" id="adnowJDS-js" data-rocket-defer defer></script>
+<script src="https://st-n.ads1-adnow.com/js/a.js" id="adnowJDSremote-js" data-rocket-defer defer></script>
+<script  id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script  id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/wlocie.pl","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script  id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script  src="https://wlocie.pl/wp-content/themes/bootnews/dist/js/bundle.min.js?ver=2.4.0.1710420937" id="bootnews-scripts-js" data-rocket-defer defer></script>
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/wlocie.pl\/wp-admin\/admin-ajax.php","nonce":"07239d29cd","url":"https:\/\/wlocie.pl\/gwiazdy\/doda-maz-emil-stepien","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800}</script><script data-name="wpr-wpr-beacon" src='https://wlocie.pl/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+</html>
+
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1747380970 -->

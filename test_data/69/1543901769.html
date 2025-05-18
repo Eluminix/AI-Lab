@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="2019年时代中国实现合同销售额783.6亿元，同比增幅约29.3%。2020年时代中国销售目标是823亿元，预期增速仅为5%左右。" />
+<meta name="author" content="经济观察网 " />
+<meta name="baidu_union_verify" content="408775e14748f2475adb9911f2990a33">
+<meta name="verify-v1" content="sOT5jBB7T1adQvvYvFvIAJjqInu6Fpl4IrxQY8xmP24=" />
+<meta name="verify-v1" content="lbQxqJs+JxJUrmb7XAyfA+xUenItwC4DR5OqyhpVXd4=" />
+<title>【表里归一】2020年预期销售增速5% 时代中国称千亿目标已经不重要 - 经济观察网 － 专业财经新闻网站</title>
+
+<script src="https://img.eeo.com.cn/apps/m/js/device.js"  type="text/javascript" language="javascript"></script>
+
+<script type="text/javascript" src="https://img.eeo.com.cn/pc/js/jquery-1.9.1.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://img.eeo.com.cn/templates/2011style/cns/js/index.js"></script>
+<script type="text/javascript" src="https://img.eeo.com.cn/templates/eeo/cns/jsfile/flashWrite.js"></script>
+<script type="text/javascript" src="https://img.eeo.com.cn/templates/2011style/cns/js/zhengwen.js"></script>
+
+
+<script type="text/javascript" src="https://www.eeo.com.cn/zt/2021/upload/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://img.eeo.com.cn/pc/js/jquery.dotdotdot.js"></script><!--文本溢出插件-->
+
+<!-- 报名 -->
+<script type="text/javascript">
+    var signObjType = 'Article';
+</script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<!-- <link rel="stylesheet" href="https://www.eeo.com.cn/zt/2021/upload/bootstrap-3.4.1-dist/css/bootstrap.min.css" /> -->
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link id="bootstraptheme" rel="stylesheet" href="https://www.eeo.com.cn/zt/2021/upload/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css" />
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://www.eeo.com.cn/zt/2021/upload/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://img.eeo.com.cn/js/lib/jquery.cookie.js"></script> <!--定义cookie.js-->
+<style>
+#myModalSign{color:#333; background: none; width: 100%;}
+#myModalSign h4.modal-title{font-size:18px; font-weight: 500;}
+#myModalSign p.sign-msg{font-size:14px;}
+.modal-dialog-sign{margin:auto auto;width:350px;height: 500px;position: absolute;left:0;right: 0;top:0;bottom: 0;}
+.modal-dialog-sign .modal-body{text-align: center;padding:30px 30px 0;box-shadow: none;}
+.modal-dialog-sign .modal-footer{border: 0;text-align: center;padding:0 0 30px}
+.modal-dialog-sign .modal-footer .btn{width:140px;height: 40px;}
+</style>
+<!-- Modal -->
+<div class="modal fade" id="myModalSign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index:9999990">
+<div class="modal-dialog-sign" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#bootstrapcss').remove()"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="myModalLabel">前往报名</h4>
+    </div>
+    <div class="modal-body panel">
+      <div class="panel_body">
+        <div class="info">
+          <p class="sign-msg">点击报名按钮进行报名，不报名可关闭</p>
+        </div>
+      </div>          
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger btn-sign">去报名</button>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+    var apiDomain = 'https://api.eeo.com.cn';
+    var appDomain = 'https://app.eeo.com.cn';
+    var bootCssStr = '<link rel="stylesheet" id="bootstrapcss" href="https://www.eeo.com.cn/zt/2021/upload/bootstrap-3.4.1-dist/css/bootstrap.min.css" />';
+
+    var signUrl = '';
+    var authStr = $.cookie('cmstop_auth');
+    var objUuid = (signObjType == 'Article') ? '378051' : '';
+    getAppSignInfo();
+    function getAppSignInfo()
+    {
+      $.ajax({
+        type: 'post',
+        url: apiDomain + '/?app=article&controller=synApp&action=getSignInfo&key=9e89202f0cff20029199b19e7882c1fa&sign=eeo',
+        crossDomain: true,
+        data: {objUuid:objUuid,objType:signObjType,authStr:authStr},
+        async: false,
+        dataType: 'json',
+        success:function (data){
+          // console.log(data);
+          var code = data.code;
+          if (code == 200) {
+            showSignModal(data.data);
+            signUrl = data.data.signUrl;
+          }
+        }
+      })
+    }
+
+    function showSignModal(data) {
+        // 报名状态
+        if (data.signUpStatus) {
+          $("#bootstraptheme").before(bootCssStr)
+            setTimeout(function(){
+              $('#myModalSign').modal('hide')
+            },300)
+          
+        } else {
+          //$('.modal-dialog-sign button.close').show(); // 默认显示关闭按钮
+          // 是否强制报名
+          if (data.signUp && data.signMethod) {
+              // 判断登录
+              if (!authStr) {
+                window.location.href = appDomain + '/?app=member&controller=index&action=login&url=' + window.location.href;
+              }
+              
+              $('.modal-header button').hide();
+              $('.sign-msg').html('请先报名，报名后可观看');
+
+
+          }
+          // 是否开启报名
+        　if (data.signUp) {
+            $("#bootstraptheme").before(bootCssStr)
+            setTimeout(function(){
+              $('#myModalSign').modal({
+                    keyboard: false,
+                    show:true,
+                    backdrop:'static',
+                })
+            },300)
+          } else {
+            $('#myModalSign').hide();
+          }
+          
+          
+        }
+    }
+
+    $(".btn-sign").click(function(){
+      window.location.href = signUrl;
+    })
+</script> 
+<link rel="stylesheet" type="text/css" href="https://img.eeo.com.cn/pc/css/style.css" />
+<link rel="stylesheet" type="text/css" href="https://img.eeo.com.cn/2023/css/style.css" />
+<link href="https://img.eeo.com.cn/pc/css/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+
+<style>
+    .xd-bottom .xd-b-left .xd-nr p.ql-align-center {text-align:center;}
+    .ql-align-justify{text-align: justify;}
+	.ql-align-center{text-align: center}
+</style>
+
+<!-- 请置于所有广告位代码之前 -->
+<!-- <script type="text/javascript" src="https://cbjs.baidu.com/js/m.js"></script>
+<script type="text/javascript">
+    BAIDU_CLB_preloadSlots("250351","250353","250352","250384");
+</script>
+<script src="https://dup.baidustatic.com/js/os.js"></script> -->
+<!-- header_top 部分 -->
+<script type="text/javascript">
+var author="陈博";
+
+$(function(){
+	$('.xd-a-left').click(function(){
+		$(".thiszihao-box-add").slideToggle();   
+	})  
+	 
+	$(".thiszihao-box-add p").click(function(){
+		var thisEle = $(".xd-nr p").css("font-size");  
+		var textFontSize = parseFloat(thisEle , 10);
+		var unit = thisEle.slice(-2); 
+		var cName = $(this).attr("class");
+		if(cName == "thiszihao-jia"){ 
+				textFontSize += 2;
+		}else if(cName == "thiszihao-jian"){
+				textFontSize -= 2;
+		} 
+		$(".xd-nr p").css("font-size",  textFontSize + unit );
+	})
+})	
+
+function hideFocus() {
+	$(".onfocus").hide();
+}
+</script>
+</head>
+
+<body class="index">
+<div class="ad_1000">
+  <script>
+  (function() {
+      var s = "_" + Math.random().toString(36).slice(2);
+      document.write('<div id="' + s + '"></div>');
+      (window.slotbydup=window.slotbydup || []).push({
+          id: '2892025',
+          container: s,
+          size: '1000,90',
+          display: 'inlay-fix'
+      });
+  })();
+  </script>
+</div>  
+  <!-- head开始 -->
+  <div class="head">
+  <div class="head_main">
+    <div class="logo">
+      <img src="https://img.eeo.com.cn/2024/images/logo.jpg" />
+    </div>
+    <div class="user">
+      <p>
+        
+        <a class="fg_logo" href="https://app.eeo.com.cn/?app=member&controller=panel&action=profile" id="nickname"></a>
+        <a class="tc_logo_dl fg_logo">退出</a>
+
+        <a href="https://app.eeo.com.cn/?app=member&controller=index&action=card" target="_blank">激活卡</a>
+        <a href="https://www.eeo.com.cn/epaper/eeocover/1.shtml" target="_blank">电子版</a>
+        <a href="javascript:void(0);" id="card"><img src="https://img.eeo.com.cn/2024/images/card.png" style="width: 16px; height: 16px; margin-bottom: 3px;"> 购物车</a>
+        <a href="https://app.eeo.com.cn/?app=member&controller=index&action=register" target="_blank" class="xd-logo-l">注册</a>
+        <a href="javascript:void(0);" class="login_dl xd-logo-l">登录</a></p>
+      <img src="https://img.eeo.com.cn/2024/images/top_qrcode.png" />
+    </div>
+    <div class="nav_btn">
+      <img src="https://img.eeo.com.cn/2023/images/menu-button.png" />
+    </div>
+  </div>      
+</div>
+<script type="text/javascript">
+  $('#card').click(function(){
+    var localStorageUrl = 'https://jg-mvvm.eeo.com.cn/cart';
+    if ($.cookie(COOKIE_PRE+'auth')) {
+      window.location.href = localStorageUrl;
+    } else {
+      $(".overlay").show();
+      $(".modal").show();
+      $("#login_css").addClass("zoomInDown");
+      localStorage.setItem("localStorageUrl", localStorageUrl);
+    }
+  })
+</script>
+  <!-- head结束 -->
+  <div id="login_css" class="modal pop_login animated" style="top: 135px; left:50%; margin-left: -210px; display: none; ">
+	<div class="p_b_bd ">
+		<div class="img_logo_wp">
+			<img src="https://img.eeo.com.cn/pc/images/logo.png" alt="">
+		</div>
+		<div class="tb_wpb">
+			<div class="hd">
+				<h3>
+					<p class="ts_p"><span class="login_active one">用户名登录</span>/<span class="two">手机号登录</span></p>
+					<p  class="pay_b_logo" style="">还没有账号？<a  href="https://app.eeo.com.cn/?app=member&controller=index&action=register" title="" class="text_cite">免费注册</a></p>
+				</h3>
+			</div>
+			<div class="bd bd_bg fs login_showz">
+    				<p id="al_warn" class="in_box_cite color_red" style="display: none;"></p>
+    				<div class="in_box">
+    					<label  for="username" style="" ></label>
+    					<input  class="in_txt" id="username" type="text" name="username" required="required"  placeholder="用户名："/>
+    				</div>
+    				<div class="in_box">
+    					<label for="password" ></label>
+    					<input name="password" value="" class="in_txt" id="password"  required="required" type="password" placeholder="密码" >
+    				</div>
+    				<div class="in_box in_boxa" style="display:block;">
+    				</div>
+    				<div class="pay_btn">
+    					<input class="login_dl_pd" type="submit" value="登 录" />
+    				</div>
+				<a href="http://app.eeo.com.cn/?app=member&controller=index&action=wxqrlogin" style="color: white">
+					<div style="color: #f6f6f6;background: #1dad17;position: relative;display: flex;padding: 12px 20px;font-size: 18px;justify-content: center;border-radius: 3px;" class="wechat-login qxjg">
+						<img style="display: block;margin-right: 0.4rem;height: 20px;" src="https://img.eeo.com.cn/pc/images/wx_login_icon.png" alt="">
+						微信注册或登录
+					</div>
+				</a>
+    				<p class="pay_a_logo"><a href="https://app.eeo.com.cn/?app=member&controller=index&action=resetpwd" title="忘记密码？" target="_blank" class="text_cite">忘记密码？</a></p>
+    				
+						<div style="height: 20px; width: 100%; clear: both;"></div>
+			</div>
+			<div class="bd bd_bg ft" id="login_phone">
+				<p id="al_warn2" class="in_box_cite color_red" style="display: none;"></p>
+				<div class="in_box">
+					<label  for="username2" style="" ></label>
+					<input  class="in_txt" id="username2" type="text" name="username2" required="required"  placeholder="手机号："/>
+				</div>
+				<div class="in_box" style="overflow: hidden;">
+                    <label  for="register_seccode" style="" ></label>
+                    <input  class="in_txt" id="register_seccode" type="text" name="seccode" required="required"  placeholder="随机验证码：" style="height:6px;width: 200px;float: left;" />
+                    <img src="http://app.eeo.com.cn/?app=system&controller=seccode&action=image" id="seccodeimg2" onclick="this.src='http://app.eeo.com.cn/?app=system&controller=seccode&action=image&id='+Math.random()*5;" style="cursor:pointer;padding:0;margin-top:0;border:none; height: 40px;width: 100px;float: right;"/>
+                </div>
+				<div class="in_box" style="overflow: hidden;">
+					<label for="password" ></label>
+					<input name="password2" value="" class="in_txt" id="password2"  style="height:6px;width: 200px;float: left;" required="required" type="text" placeholder="验证码" >
+					<input id="mobile_send1" value="发送短信码" style="padding:0;margin-top:0;border:none; height: 40px;color: #fff;   background-color: #bbbbbb;width: 100px;float: right;" disable="disable"  class="fl-r submit disable button1" type="button">
+
+				</div>
+				<div class="in_box in_boxa" style="display:block;">
+					<p class="pay_a_logo"><a href="https://app.eeo.com.cn/?app=member&controller=index&action=resetpwd" title="忘记密码？" target="_blank" class="text_cite">忘记密码？</a></p>
+				</div>
+				<div class="pay_btn">
+					<div class="code_tj"   style="   background: #e31e27 none repeat scroll 0 0;border-radius: 3px;color: #fff;display: inline-block;font: 18px/45px 微软雅黑;height: 45px;position: relative;text-align: center;width: 100%;border: 0;">登 录</div>
+				</div>
+				<a href="https://app.eeo.com.cn/?app=member&controller=index&action=wxqrlogin" style="color: white">
+					<div style="color: #f6f6f6;background: #1dad17;position: relative;display: flex;padding: 12px 20px;font-size: 18px;justify-content: center;border-radius: 3px;" class="wechat-login qxjg">
+						<img style="display: block;margin-right: 0.4rem;height: 20px;" src="https://img.eeo.com.cn/pc/images/wx_login_icon.png" alt="">
+						微信注册或登录
+					</div>
+				</a>
+			</div>
+		</div>
+		<a id="log_close" class="p_b_close" title="关闭" href="javascript:void(0);">关闭</a>
+	</div>
+</div>
+<div class="overlay" style=" display: none;"></div>	
+<script src="https://img.eeo.com.cn/2023/js/login.js" type="text/javascript" charset="utf-8"></script><!--引用判断 以及效果-->
+<script type="text/javascript" src="https://img.eeo.com.cn/js/config.js"></script><!--定义url-->
+<script type="text/javascript" src="https://img.eeo.com.cn/js/lib/jquery.cookie.js"></script> <!--定义cookie.js-->
+<script type="text/javascript">
+	var http_protocol = document.location.protocol;
+
+    $("#login_css .ts_p .one").click(function () {
+        $(this).addClass("login_active").siblings("span").removeClass("login_active");
+        $("#login_css .fs").addClass("login_showz").siblings(".ft").removeClass("login_showz");
+    })
+    $("#login_css .ts_p .two").click(function () {
+        $(this).addClass("login_active").siblings("span").removeClass("login_active");
+        $("#login_css .ft").addClass("login_showz").siblings(".fs").removeClass("login_showz");
+    })
+
+    $('#login_phone .code_tj').click(function(){
+        var username2= $("input[name=username2]").val();
+        var password2 = $("input[name=password2]").val();
+        if (!username2) {
+            $('#al_warn2').text('*请输入手机号');
+            $("#al_warn2").show();
+            return false;
+        }
+        if (!password2) {
+            $('#al_warn2').text('*请输入验证码');
+            $('#al_warn2').show();
+            return false;
+        }
+
+        $.ajax({
+            dataType:'jsonp',
+            type:'get',
+            data:{'username2' : username2,'password2':password2,jsonp_callback1:'jsonp_callback1'},
+            url:http_protocol+'//app.eeo.com.cn/?app=member&controller=index&action=codelogin',
+            success:function(res){
+
+            }
+        })
+
+
+    })
+    var getRequest = true; // 是否请求验证码
+    $('#mobile_send1').click(function(){
+        if ($(this).attr('disable') == 'disable' && !getRequest) {
+            return false;
+        }
+        var mobileNum = $('#username2').val();
+        if (!mobileNum) {
+            $('#username2').parent().addClass('border-red');
+            $('#al_warn2').text('*请输入手机号');
+            $("#al_warn2").show();
+            return false;
+        }else{
+            $("#al_warn2").hide();
+        }
+
+
+        if (getRequest) {
+            $.ajax({
+                dataType:'jsonp',
+                type:'get',
+                data:{'mobilenumber' : parseInt($('#username2').val()),'seccode':$('#register_seccode').val(),jsonp_callback:'jsonp_callback'},
+                url:http_protocol+'//app.eeo.com.cn/?app=member&controller=index&action=sendmessages',
+                success:function(res){
+
+                }
+            })
+        }
+    });
+
+    function jsonp_callback(res){
+        if (res.state) {
+			$('#seccodeimg2').click();
+            var waitTime = 60;
+            var timer = setInterval(function(){
+                $('#mobile_send1').addClass('disable').attr('disable', 'disable');
+
+                $('#mobile_send1').val(--waitTime +'重新获取');
+                if (waitTime == 0) {
+                    clearInterval(timer);
+                    $('#mobile_send1').removeClass('disable').css('cursor','pointer').attr('disable', '').val('重新获取');
+                    getRequest = true;
+                }
+            }, 1000);
+            getRequest = false;
+            alert(res.message);
+        } else {
+            alert(res.error);
+        }
+	}
+
+    function jsonp_callback1(res){
+        if (res.state==true) {
+            window.location.href =http_protocol+'//app.eeo.com.cn/?app=memberpay&controller=index&action=eeoepaper';
+            return false;
+        } else {
+            alert(res.error);
+            window.location.reload();
+            return false;
+        }
+    }
+
+</script>
+
+<!-- 导航开始 -->
+<div class="nav">
+  <div class="nav_main">
+    <ul>
+      <li class="text"><a href="https://www.eeo.com.cn">首页</a></li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/shangyechanye/">商业产业</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/dashi/">大事</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/huanbao/">环保</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/xiaofei/">消费</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/zhizao/">制造</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/nycl/">能源材料</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/jkyl/">健康养老</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/jiaoyu/">教育</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/wenlvyule/">文旅娱乐</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/shangyechanye/cyjbj/">创业家笔记</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/caijing/">财经</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/zhengquan/">证券</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/kechuangban/">科创板</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/yinxing/">银行</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/baoxian/">保险</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/zhaishi/">债市</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/dzsp/">大宗商品</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/ziben/">资本</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/PEchuangtou/">PE/创投</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/caifu/">财富</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/caijing/jrkj/">金融科技</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/ssgsn/">上市公司</a></li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/dichan/">地产</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/dichan/zhuzhai/">住宅</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/dichan/wuye/">物业</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/dichan/shangye/">商业</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/dichan/jiazhuang/">家装</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/qiche/">汽车</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/qiche/xycy/">行业产业</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/qiche/qccp/">汽车产品</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/tmt/">TMT</a>
+        <div class="sub_nav">
+           <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/tmt/xinnengyuan/">新科技</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/tmt/dianshang/">互联网</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/tmt/wuliu/">O2O</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/pinglun/">评论</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/pinglun/guandian/">观点</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/pinglun/sixiang/">思想</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/yingxiao/">营销</a>
+        <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/pinpaijianshe/">品牌建设</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/guanggaogongsi/">广告公司</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/hulianwanggongsi/">互联网公司</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/meijie/">媒介</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/guojiguanggao/">国际广告</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/gana/">戛纳</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yingxiao/yanjiuyuanxd/">研究院</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/shipin/">视频</a></li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/yanjiuyuan/">研究院</a>
+          <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/yanjiuyuan/glycxalyjy/">管理与创新案例研究院</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yanjiuyuan/hgjjyjy/">宏观经济研究院</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/yanjiuyuan/csyzfswyjy/">城市与政府事务研究院</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/jijin/">基金</a>
+          <div class="sub_nav">
+          <dl>
+            <dd><a href="https://www.eeo.com.cn/eeo/jijin/jijinzixun/">基金资讯</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/jijin/jijinshuju/">基金数据</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/jijin/renshidongtai/">人事动态</a></dd>
+            <dd><a href="https://www.eeo.com.cn/eeo/jijin/jijintoujiao/">基金投教</a></dd>
+          </dl>
+        </div>
+      </li>
+      <li>|</li>
+      <li class="text"><a href="https://www.eeo.com.cn/eeo/esg/">ESG·碳</a></li>
+    </ul>
+    <div class="search">
+      <a href="https://www.eeo.com.cn/search/index.shtml" target="_blank">
+        <img src="https://img.eeo.com.cn/2023/images/search_icon.jpg">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 导航结束 -->
+			
+<div class="xd-bottom main">
+			<div class="xd-bottom-jz">
+				<div class="xd-b-left">
+					<div class="xd-b-b">
+						<div class="thiszihao-box-add" style="display: none;">
+					                	<p class="thiszihao-jia">+</p>
+					                    <p class="thiszihao-jian">-</p>
+				        </div>
+						<h1>【表里归一】2020年预期销售增速5% 时代中国称千亿目标已经不重要</h1>
+						<p>
+							2020-03-10 21:31														<a href="javascript:" class="xd-a-left">
+								<img src="https://img.eeo.com.cn/pc/images/xd-smg.png" alt="" />
+							</a>
+							
+							<a href="javascript:" class="right_ewm">
+								<img class="right_ewm_icon" width="28" height="auto" src="https://img.eeo.com.cn/pc/images/icon_ewm.png" alt="" />
+								<span style="display:none;"><img src="http://upload.eeo.com.cn/erweima/article/378051.png" width="150"height="150"></span>
+							</a>
+							<script>
+							$('.right_ewm_icon').click(function(){
+								$(this).siblings('span').stop(true,true).slideToggle();
+							})
+							</script>
+						</p>
+						<div class="cls"></div>
+					</div>
+					<div class="xd-nr">
+						
+						<div class="xd-xd-xd-newsimg"><img src="http://upload.eeo.com.cn/2019/0131/1548912993876.jpg"></div>						<div class="xd-xd-xd-rwm" style="display:none;">
+							<img src="http://upload.eeo.com.cn/erweima/article/378051.png" width="150"height="150"> <br />
+							扫描二维码分享到朋友圈
+						</div>
+						<div class="xx_boxsing"><p><strong>经济观察网</strong><strong style="text-indent: 2em;">&nbsp;记者&nbsp;陈博&nbsp;</strong>&ldquo;影响应该集中在2、3月份体现，4月份开始就会慢慢减少。&rdquo;3月10日，时代中国（01233.HK）2019年线上业绩发布会上，对于疫情造成的影响，董事会主席、行政总裁岑钊雄如是表述。</p>
+<p>六天前，时代中国发布2月经营数据，2月合同销售金额约10.82亿元，同比下降65.34%；签约建筑面积约7.3万平方米，同比减少61.78%。</p>
+<p>岑钊雄说，疫情期间，时代中国推进线上认购、线上交易等活动，通过线上或其他社交工具来协助达成销售。</p>
+<p>但通过线上交易在销售金额中占比并不大。岑钊雄表示：&ldquo;交易的一个重要环节是签署买卖合同，买卖合同必须走备案程序，所以也需要监管部门在线上同步。&rdquo;&nbsp;</p>
+<p>时代中国鼓励客户多尝试使用线上交易平台。岑钊雄认为线上交易是一种趋势，随着使用习惯的改变，线上交易比例将会加大，这一点在其他行业里面已经得到印证，刚开始占比不高，但慢慢会有所增加。</p>
+<p>近期房企销售普遍下滑也直接映射到时代中国2020年的销售目标中。2019年时代中国实现合同销售额783.6亿元，同比增幅约29.3%。2020年时代中国销售目标是823亿元，预期增速仅为5%左右。</p>
+<p>按照既定目标，2020年时代中国推货值大概是1400-1500亿，这意味着，今年只需完成可售货值的45%左右，时代中国就可实现销售目标。</p>
+<p>早在2018年，时代中国曾提到千亿目标在2019或2020年完成。这一次，岑钊雄对外的说法是，千亿目标只是阶段性的，目前千亿已经不是一个很重要的目标了。&ldquo;我们相信这个目标很快就可以实现，今年不能实现，明年也会实现的，所以我们现在设立的是一个更高的目标。&rdquo;</p>
+<p>虽然预期增速放缓，但岑钊雄对2020年销售安排比较乐观。他看到了疫情带来一波改善型需求的机会。受到这些改善型需求的驱动，后续市场购买力也将形成一个很好的支撑。</p>
+<p>在他看来，今年整个市场应该呈现&ldquo;前低后稳&rdquo;的局面。一季度受疫情影响，整体销售会走低；但二季度开始，市场表现会平稳。房价方面，阶段性可能会出现一些促销安排，但整体平稳是主调。</p>
+<p>第二个机会点则体现在于融资方面。截至2019年12月31日，时代中国的现金及银行结存账面结余约292.79亿元，其中受限制银行存款约34.05亿元。而计息银行贷款及其他借款合计约532.61亿元，其中一年内到期借款为185.98亿元。</p>
+<p>岑钊雄称，已经对年内到期做了准备及安排。年内时代中国到期美元债约8.5亿元，已经通过发行新的境外债覆盖；国内到期债务也在陆续安排，疫情对资金流动性不会产生太大压力。</p>
+<p>&ldquo;现在看起来，年内到期债务反而给到我们一个窗口期，可以在融资成本较低的情况下进行置换。让公司融资成本在原来基础上有所下降。&rdquo;岑钊雄透露，2019年，时代中国的融资利率成本介于7.4%-7.5%，预计2020年这一指标会进一步下降7%以下。</p></div>
+						<div class="xd-xd-xd-newsimg foot_ad"></div>
+
+<!-----------------------------版权声明---------------------------------------->
+											<div style="font-size:14px;color:#999999;MARGIN-TOP:50px;margin-bottom:40px;line-height: 25px;letter-spacing: 1px;background:#e5e5e5;padding: 16px"><span style="display:inline;color:#333333;font-weight: bold;">版权声明：</span>以上内容为《经济观察报》社原创作品，版权归《经济观察报》社所有。未经《经济观察报》社授权，严禁转载或镜像，否则将依法追究相关行为主体的法律责任。版权合作请致电：【010-60910566-1260】。</div>
+														<script type="text/javascript" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/yb-js/jjgcb.js"></script>
+							
+						
+
+<!-----------------------------记者---------------------------------------->
+		
+<!----------------------------------------------------------------------->
+						<div class="xd-lj">
+							<a href="javascript:addFavorite();" target="_self"><img src="https://img.eeo.com.cn/pc/images/xd-ss.png" alt="" /><br />收藏</a>
+							<div class="cls" style="clear: both;"></div>
+						</div>
+					</div>
+
+				</div>
+				
+				
+				
+				
+				
+<div class="xd-b-right">
+	<!--2018/4/2 删除“你可能还想看”栏目html-->
+					<!--<h1>你可能还想看</h1>
+					<div class="xd-sp" style="margin-top: 0px;border-top: 0px solid #ccc;padding-top: 0px;border-bottom:1px solid #ccc;">
+						<div class="svideo_tj" id="svideo_tj" style="background: #f0f0f0;">
+						</div>
+					</div>-->
+					<h1 style="margin-top: 10px;">热新闻</h1>
+<ul>
+ 				<li >
+					<a href="http://www.eeo.com.cn/2025/0516/726920.shtml" target="_blank" title="新冠再来袭 专家提醒：当前正处于小波峰">新冠再来袭 专家提醒：当前正处于小波峰 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726702.shtml" target="_blank" title="解决高额彩礼的路径不是“限高”">解决高额彩礼的路径不是“限高” </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726680.shtml" target="_blank" title="迪奥的用户信息遭泄露，问题可能出在哪儿">迪奥的用户信息遭泄露，问题可能出在哪儿 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726668.shtml" target="_blank" title="中美“关税战”暂缓 外贸人又忙起来了">中美“关税战”暂缓 外贸人又忙起来了 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726703.shtml" target="_blank" title="4月信贷数据回落 或受到三方面因素影响">4月信贷数据回落 或受到三方面因素影响 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726622.shtml" target="_blank" title="从实验室到产业生态：量子“国家队”打通量子计算“最后一公里”">从实验室到产业生态：量子“国家队”打通量 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0515/726906.shtml" target="_blank" title="多次宴请公职人员，南通爱尔眼科医院CEO被撤销政协委员身份">多次宴请公职人员，南通爱尔眼科医院CEO被 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0514/726707.shtml" target="_blank" title="药价是别国的3倍 特朗普降价令能撼动美国医疗市场吗">药价是别国的3倍 特朗普降价令能撼动美国医 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0515/726864.shtml" target="_blank" title="投资机构二季度密集调研机器人产业链 产业竞速已起跑">投资机构二季度密集调研机器人产业链 产业 </a>
+				</li>
+
+								<li >
+					<a href="http://www.eeo.com.cn/2025/0515/726819.shtml" target="_blank" title="全球首例 我国量子密码技术实现双重加密里程碑">全球首例 我国量子密码技术实现双重加密里 </a>
+				</li>
+
+				</ul>		
+					<div class="xd-div" style="display: none;">
+						<ul>
+
+					   
+<li class="xd-a-c" ><a href="http://www.eeo.com.cn/2025/0420/722614.shtml" target="_blank" title="再回应“抛弃华为”传闻 阿维塔称其新车型为“华为最美轿车”">1、再回应“抛弃华为”传闻 阿维塔称   </a></li>
+   
+   
+<li class="xd-a-c" ><a href="http://www.eeo.com.cn/2025/0420/722615.shtml" target="_blank" title="第二十六届菜博会| 寿光市委书记李鹏：全国新建蔬菜大棚一半以上有寿光元素">2、第二十六届菜博会| 寿光市委书记李   </a></li>
+   
+   
+<li class="xd-a-c" ><a href="http://www.eeo.com.cn/2025/0420/722609.shtml" target="_blank" title="机器人跑马拉松“用脚投票”：特步、斯凯奇童鞋被选中">3、机器人跑马拉松“用脚投票”：特步   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722607.shtml" target="_blank" title="北京国际电影节·产业论坛 | 黄建新：电影还需要两个半小时吗？">4、北京国际电影节·产业论坛 | 黄建   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722604.shtml" target="_blank" title="发卡量收缩、不良承压，股份行信用卡业务的2024 | 银行“年”景">5、发卡量收缩、不良承压，股份行信用   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722606.shtml" target="_blank" title="降本增效的风，刮向银行“打工人”|银行“年”景">6、降本增效的风，刮向银行“打工人”   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722601.shtml" target="_blank" title="国家电网举办二季度研讨班 聚焦多领域推动高质量发展">7、国家电网举办二季度研讨班 聚焦多   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722599.shtml" target="_blank" title="不玩固态电池玩天幕 智己L6苦寻市场新定位">8、不玩固态电池玩天幕 智己L6苦寻市   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722600.shtml" target="_blank" title="珠三角密集出台稳外贸政策 助力供应链产业链升级">9、珠三角密集出台稳外贸政策 助力供   </a></li>
+   
+   
+<li ><a href="http://www.eeo.com.cn/2025/0420/722596.shtml" target="_blank" title="中航产融主动退市进入倒计时 即将开启现金选择权申报">10、中航产融主动退市进入倒计时 即将   </a></li>
+   
+ 
+						</ul>
+					</div>
+					
+						
+					<div class="xd-sp">
+						<h1>
+							视频推荐
+						</h1>
+						<div>
+	<div class="svideo_tj">
+<a href="https://www.eeo.com.cn/2024/0316/644939.shtml" target="_blank"><h5><img width="310px" height="168px" src="https://jg-app.obs.cn-north-4.myhuaweicloud.com/prod/upload/0/jpg/86EA1315C058E4D5DD39F04948AC1BA0.jpg" /><span id="bossplay-big-span"></span></h5><p class="xd-p-p-0">总编对话｜从中国走向世界——对话松下电器中国东北亚公司总裁CEO木下步</p></a>
+<a href="https://www.eeo.com.cn/2024/0116/628226.shtml" target="_blank" class="xd-sp-a"><h5><img width="143px" height="107px" src="https://jg-app.obs.cn-north-4.myhuaweicloud.com/prod/upload/jpg/D2C889925580BC30CBEE7837EABBA33A.jpg" /><span id="bossplay-min-span"></span></h5><p class="xd-p-p-0" style="padding: 0 10px;">聚焦主业 提升品牌：恒安集团接班人的长期主义理想</p></a>
+<a href="https://www.eeo.com.cn/2023/1228/621955.shtml" target="_blank" class="xd-sp-a"><h5><img width="143px" height="107px" src="https://jg-app.obs.cn-north-4.myhuaweicloud.com/prod/upload/jpg/4900B7A0D4ABB17F16E412E5A38F4B80.jpg" /><span id="bossplay-min-span"></span></h5><p class="xd-p-p-0" style="padding: 0 10px;">希捷科技全球执行副总裁暨首席商务官郑万成：未来五年，中国将成为全球生成数据最多的市场</p></a>
+	
+</div>	
+							
+						</div>
+					</div>
+
+					<!--<div class="xd-guanggao">
+						<img src="https://img.eeo.com.cn/pc/images/xd-guanggao.png" alt="" />
+					</div>-->
+ 
+					<div class="xd-dz xd-dz-dz-dz">
+						<h1>电子刊物</h1>
+							<div>
+		<img width="240px" src="http://upload.eeo.com.cn/2025/0516/1747402739931.jpg" alt="" />
+	</div>
+	<div>
+		<a href="http://www.eeo.com.cn/epaper/eeocover/jjgcb/" target="_blank">点击进入</a>
+	</div>
+
+
+					</div>
+				</div>
+	
+			<em class="xd-c"></em>
+			</div>
+		
+		</div>
+	
+<link href="https://web.sdk.qcloud.com/player/tcplayer/release/v5.0.0/tcplayer.min.css" rel="stylesheet"/>
+<!--播放器脚本文件-->
+<script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.6.0/libs/hls.min.1.1.5.js"></script>
+<script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.6.0/tcplayer.v4.6.0.min.js"></script>
+
+<script type="text/javascript">
+  $(".xd-nr video").each(function (index) {
+    $(this).attr("id","video_"+index);
+    var m3u8=$(this).attr("src");
+    var poster=$(this).attr("poster");
+    var fileid=$(this).data('fileid');
+
+    if (fileid) {
+      var player = TCPlayer('video_' + index, {
+          fileID: fileid,
+          appID: '1258661566',
+          licenseUrl: 'https://license.vod2.myqcloud.com/license/v2/1258661566_1/v_cube.license',
+      });
+    } else {
+      var player = new TCPlayer('video_' + index, {
+        poster: poster || '',
+        licenseUrl: 'https://license.vod2.myqcloud.com/license/v2/1258661566_1/v_cube.license',
+      });
+      player.src(m3u8);
+    }
+  })
+
+
+  setTimeout(() => {
+    $('.video-js').css('width','100%')
+    $('.video-js').css('height',$('.video-js').width()*9/16)
+    // $('.xd-bottom .xd-b-left .xd-nr .vjs-control-bar span,.xd-bottom .xd-b-left .xd-nr span.vjs-menu-item-text').css({'color':'#fff', 'font-size':'12px', 'margin':0, 'display':'inline'})
+    
+    $('.vjs-time-control span').css('display','inline')
+    $('.vjs-big-play-button span').css('display', 'none')
+  }, 0);
+
+</script>		
+<style>
+.xd-bottom .xd-b-left .xd-nr .vjs-control-bar span,.xd-bottom .xd-b-left .xd-nr span.vjs-menu-item-text,.xd-bottom .xd-b-left .xd-nr .xx_boxsing .tcp-quality-switcher-value p{color:#fff; font-size: 12px; margin: 0;}
+.xd-bottom .xd-b-left .xd-nr .vjs-selected span.vjs-menu-item-text{color:#000;}
+</style> 
+<script>
+function guanzhuspace(data){
+	var data = data;
+
+	$.getJSON('https://app.eeo.com.cn/?app=hfive&controller=hfive&action=guanzhuspace&jsoncallback=?&id='+data+'&jt=1', function(data){
+		if(data.status == 1){
+		alert(data.msg);
+			location.reload() ;
+		}else if(data.status == 2){
+		if(confirm('请登录后再订阅'))
+			{
+				window.location.href="https://app.eeo.com.cn/?app=member&controller=index&action=login";
+			}
+		}else{
+		alert(data.msg);
+		}
+		
+	}) 
+}
+
+$(function(){
+	$('#pinglun').focus(function(){
+			$('.bottom-pl').show();	
+	})
+	
+})
+
+
+var jg_video = $('.jg_video').length;
+if (jg_video) {
+	$('.xd-xd-xd-newsimg').hide();
+}
+
+</script>  		
+<!--增加文章点击量-->
+<script type="text/javascript">
+var contentid = "378051";
+var uuid = "c0550f1f36299f81e00a6caeafd1bdc0";
+$.getJSON('https://app.eeo.com.cn/?app=system&controller=content&action=stat&jsoncallback=?&contentid='+contentid);
+</script>
+<script type="text/javascript" src="https://img.eeo.com.cn//pc/js/article_ad.js"></script>       
+<!--增加文章点击量-->
+    <!-- 底部 -->
+    <div class="foot">
+      <div class="foot_main">
+        <div class="foot_logo">
+          <img src="https://img.eeo.com.cn/pc/images/xd-logo-a.png" alt="">
+        </div>
+        <ul>
+          <li>地址：北京市朝阳区小关北里217号越界锦荟园B座西侧501</li>
+          <li>邮编：100081 电话：4001560066 传真：86-10-88510872</li>
+          <li>违法和不良信息举报电话：010-60910566</li>
+          <li>举报邮箱：jubao@eeo.com.cn</li>
+          <li id="copyrightYear">Copyright @ 经济观察网 2001-<span id="thisYear">2024</span></li>
+          <li>
+            <a target="_blank" href="http://www.beian.miit.gov.cn">京ICP备18019893号</a>
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802028547">
+              <img src="http://img.eeo.com.cn/pc/images/gadh.png" />
+              <span>京公网安备 11010802028547号</span>
+            </a>
+          </li>
+          <li>广播电视节目制作经营许可证 (京)字第12950号</li>
+          <li>增值电信业务经营许可证 B2-20214402</li>
+          <li>京网文[2024]1990-097号</li>
+          <li><a target="_blank" href="https://xyt.xcc.cn/getpcInfo?sn=1557666160340566016&language=CN&certType=8&url=*.eeo.com.cn"><img src="https://xyt.xcc.cn/img/icon/icon8.png" id="img_smv_tem_25_12" style="width: 105px; height: 35px;">
+        </a></li>
+        </ul>
+        <ul style="height: 120px;">
+          <li><a href="https://www.eeo.com.cn/aboutus/banquan.html">版权声明 Copyright</a></li>
+          <li><a href="https://www.eeo.com.cn/aboutus/lianxi.html">联系我们 Contact Us</a></li>
+          <li><a href="https://www.eeo.com.cn/aboutus/aboutus.html">关于我们 About Us</a></li>
+          <li><a href="https://www.eeo.com.cn/friendlink/">友情链接 Links</a></li>
+        </ul>
+        <ul style="border: 0;height: 120px;">
+          <li><a href="https://www.eeo.com.cn/aboutus/job.html">经观招聘 EEO Jobs</a></li>
+          <li><a href="https://www.eeo.com.cn/epaper/eeocover/1.shtml">订购中心 Subscribe</a></li>
+          <li><a href="https://www.eeo.com.cn/aboutus/published.html">广告刊例 Advertising</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+<script src="https://img.eeo.com.cn/2023/js/main.js" type="text/javascript"></script>
+</html>
