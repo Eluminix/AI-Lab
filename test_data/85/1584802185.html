@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+<head>
+	
+<meta name="distribution" content="global">
+	<meta http-equiv="content-language" content="it">
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = "www.themoneytizer.com";
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="icon" type="image/png" href="https://www.ilmetropolitano.it/wp-content/uploads/2010/09/metro_job.gif" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>International police cooperation leads to the arrest of a dark web child sex abuser in Spain - Ilmetropolitano.it</title>
+	<meta name="description" content="The operation to bring down a child sex abuser, who had made explicit videos of an underage boy, owes its success to international cooperation" />
+	<link rel="canonical" href="https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/" />
+	<meta property="og:locale" content="it_IT" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="International police cooperation leads to the arrest of a dark web child sex abuser in Spain - Ilmetropolitano.it" />
+	<meta property="og:description" content="The operation to bring down a child sex abuser, who had made explicit videos of an underage boy, owes its success to international cooperation" />
+	<meta property="og:url" content="https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/" />
+	<meta property="og:site_name" content="Ilmetropolitano.it" />
+	<meta property="article:publisher" content="https://www.facebook.com/ilmetropolitan/" />
+	<meta property="article:author" content="https://www.facebook.com/ilmetropolitan" />
+	<meta property="article:published_time" content="2020-04-21T16:09:03+00:00" />
+	<meta property="og:image" content="https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg" />
+	<meta property="og:image:width" content="885" />
+	<meta property="og:image:height" content="509" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="PrM 1" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@ilmetropolitan" />
+	<meta name="twitter:site" content="@ilmetropolitan" />
+	<meta name="twitter:label1" content="Scritto da" />
+	<meta name="twitter:data1" content="PrM 1" />
+	<meta name="twitter:label2" content="Tempo di lettura stimato" />
+	<meta name="twitter:data2" content="2 minuti" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#article","isPartOf":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/"},"author":{"name":"PrM 1","@id":"https://www.ilmetropolitano.it/#/schema/person/865c13f34ea67dbf182ad627312c42fe"},"headline":"International police cooperation leads to the arrest of a dark web child sex abuser in Spain","datePublished":"2020-04-21T16:09:03+00:00","mainEntityOfPage":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/"},"wordCount":507,"publisher":{"@id":"https://www.ilmetropolitano.it/#organization"},"image":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#primaryimage"},"thumbnailUrl":"https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg","keywords":["Europol","sex abuser","social media","web child"],"articleSection":["COMUNICATI"],"inLanguage":"it-IT"},{"@type":"WebPage","@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/","url":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/","name":"International police cooperation leads to the arrest of a dark web child sex abuser in Spain - Ilmetropolitano.it","isPartOf":{"@id":"https://www.ilmetropolitano.it/#website"},"primaryImageOfPage":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#primaryimage"},"image":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#primaryimage"},"thumbnailUrl":"https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg","datePublished":"2020-04-21T16:09:03+00:00","description":"The operation to bring down a child sex abuser, who had made explicit videos of an underage boy, owes its success to international cooperation","breadcrumb":{"@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#breadcrumb"},"inLanguage":"it-IT","potentialAction":[{"@type":"ReadAction","target":["https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/"]}]},{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#primaryimage","url":"https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg","contentUrl":"https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg","width":885,"height":509},{"@type":"BreadcrumbList","@id":"https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ilmetropolitano.it/"},{"@type":"ListItem","position":2,"name":"International police cooperation leads to the arrest of a dark web child sex abuser in Spain"}]},{"@type":"WebSite","@id":"https://www.ilmetropolitano.it/#website","url":"https://www.ilmetropolitano.it/","name":"Ilmetropolitano.it","description":"Quotidiano d&#039;approfondimento on line","publisher":{"@id":"https://www.ilmetropolitano.it/#organization"},"alternateName":"ilmetropolitan","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ilmetropolitano.it/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"it-IT"},{"@type":"Organization","@id":"https://www.ilmetropolitano.it/#organization","name":"il Metropolitano","alternateName":"Quotidiano on line ilmetropolitano.it","url":"https://www.ilmetropolitano.it/","logo":{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://www.ilmetropolitano.it/#/schema/logo/image/","url":"https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano.jpg","contentUrl":"https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano.jpg","width":512,"height":512,"caption":"il Metropolitano"},"image":{"@id":"https://www.ilmetropolitano.it/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/ilmetropolitan/","https://x.com/ilmetropolitan","https://www.instagram.com/ilmetropolitan","https://www.youtube.com/user/ilmetropolitano","https://www.linkedin.com/in/ilmetropolitano-it-716229204/","https://www.dailymotion.com/ilmetropolitan"]},{"@type":"Person","@id":"https://www.ilmetropolitano.it/#/schema/person/865c13f34ea67dbf182ad627312c42fe","name":"PrM 1","image":{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://www.ilmetropolitano.it/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=96&d=identicon&r=g","contentUrl":"https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=96&d=identicon&r=g","caption":"PrM 1"},"sameAs":["http://www.ilmetropolitano.it","https://www.facebook.com/ilmetropolitan","https://x.com/ilmetropolitan"],"url":"https://www.ilmetropolitano.it/author/pr1/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Ilmetropolitano.it &raquo; Feed" href="https://www.ilmetropolitano.it/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ilmetropolitano.it &raquo; Feed dei commenti" href="https://www.ilmetropolitano.it/comments/feed/" />
+<link rel='stylesheet' id='dashicons-css' href='https://www.ilmetropolitano.it/wp-includes/css/dashicons.min.css?ver=6.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css' href='https://www.ilmetropolitano.it/wp-includes/js/thickbox/thickbox.css?ver=6.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='demo_fonts-css' href='//fonts.googleapis.com/css?family=Open+Sans%3Aregular%2Citalic%2C700|Roboto+Condensed%3Aregular%2Citalic%2C700%26subset%3Dlatin%2C' type='text/css' media='screen' />
+<link rel='stylesheet' id='advancedmagazine-style-css' href='https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/style.css?ver=20170921' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css' href='https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/genericons/genericons.css?ver=6.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css' href='https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/responsive.css?ver=20170808' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.ilmetropolitano.it/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.ilmetropolitano.it/wp-json/wp/v2/posts/340706" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ilmetropolitano.it/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.1" />
+<link rel='shortlink' href='https://www.ilmetropolitano.it/?p=340706' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.ilmetropolitano.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.ilmetropolitano.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F&#038;format=xml" />
+<div id="49035-38"><script src="//ads.themoneytizer.com/s/gen.js?type=38"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=38"></script></div><div id="49035-11"><script src="//ads.themoneytizer.com/s/gen.js?type=11"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=11"></script></div>                <script id="auto-cmp-tmzr" data-version="v2.2u1.1" type="text/javascript" async="true">
+                    (function() {
+                    var host = "www.themoneytizer.com";
+                    var element = document.createElement('script');
+                    var firstScript = document.getElementsByTagName('script')[0];
+                    var url = 'https://cmp.inmobi.com'
+                        .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js?tag_version=V3');
+                    var uspTries = 0;
+                    var uspTriesLimit = 3;
+                    element.async = true;
+                    element.type = 'text/javascript';
+                    element.src = url;
+
+                    firstScript.parentNode.insertBefore(element, firstScript);
+
+                    function makeStub() {
+                        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+                        var queue = [];
+                        var win = window;
+                        var cmpFrame;
+
+                        function addFrame() {
+                        var doc = win.document;
+                        var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                        if (!otherCMP) {
+                            if (doc.body) {
+                            var iframe = doc.createElement('iframe');
+
+                            iframe.style.cssText = 'display:none';
+                            iframe.name = TCF_LOCATOR_NAME;
+                            doc.body.appendChild(iframe);
+                            } else {
+                            setTimeout(addFrame, 5);
+                            }
+                        }
+                        return !otherCMP;
+                        }
+
+                        function tcfAPIHandler() {
+                        var gdprApplies;
+                        var args = arguments;
+
+                        if (!args.length) {
+                            return queue;
+                        } else if (args[0] === 'setGdprApplies') {
+                            if (
+                            args.length > 3 &&
+                            args[2] === 2 &&
+                            typeof args[3] === 'boolean'
+                            ) {
+                            gdprApplies = args[3];
+                            if (typeof args[2] === 'function') {
+                                args[2]('set', true);
+                            }
+                            }
+                        } else if (args[0] === 'ping') {
+                            var retr = {
+                            gdprApplies: gdprApplies,
+                            cmpLoaded: false,
+                            cmpStatus: 'stub'
+                            };
+
+                            if (typeof args[2] === 'function') {
+                            args[2](retr);
+                            }
+                        } else {
+                            if(args[0] === 'init' && typeof args[3] === 'object') {
+                            args[3] = Object.assign(args[3], { tag_version: 'V3' });
+                            }
+                            queue.push(args);
+                        }
+                        }
+
+                        function postMessageEventHandler(event) {
+                        var msgIsString = typeof event.data === 'string';
+                        var json = {};
+
+                        try {
+                            if (msgIsString) {
+                            json = JSON.parse(event.data);
+                            } else {
+                            json = event.data;
+                            }
+                        } catch (ignore) {}
+
+                        var payload = json.__tcfapiCall;
+
+                        if (payload) {
+                            window.__tcfapi(
+                            payload.command,
+                            payload.version,
+                            function(retValue, success) {
+                                var returnMsg = {
+                                __tcfapiReturn: {
+                                    returnValue: retValue,
+                                    success: success,
+                                    callId: payload.callId
+                                }
+                                };
+                                if (msgIsString) {
+                                returnMsg = JSON.stringify(returnMsg);
+                                }
+                                if (event && event.source && event.source.postMessage) {
+                                event.source.postMessage(returnMsg, '*');
+                                }
+                            },
+                            payload.parameter
+                            );
+                        }
+                        }
+
+                        while (win) {
+                        try {
+                            if (win.frames[TCF_LOCATOR_NAME]) {
+                            cmpFrame = win;
+                            break;
+                            }
+                        } catch (ignore) {}
+
+                        if (win === window.top) {
+                            break;
+                        }
+                        win = win.parent;
+                        }
+                        if (!cmpFrame) {
+                        addFrame();
+                        win.__tcfapi = tcfAPIHandler;
+                        win.addEventListener('message', postMessageEventHandler, false);
+                        }
+                    };
+
+                    makeStub();
+
+                    var uspStubFunction = function() {
+                        var arg = arguments;
+                        if (typeof window.__uspapi !== uspStubFunction) {
+                        setTimeout(function() {
+                            if (typeof window.__uspapi !== 'undefined') {
+                            window.__uspapi.apply(window.__uspapi, arg);
+                            }
+                        }, 500);
+                        }
+                    };
+
+                    var checkIfUspIsReady = function() {
+                        uspTries++;
+                        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                        console.warn('USP is not accessible');
+                        } else {
+                        clearInterval(uspInterval);
+                        }
+                    };
+
+                    if (typeof window.__uspapi === 'undefined') {
+                        window.__uspapi = uspStubFunction;
+                        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+                    }
+                    })();
+                </script>
+            
+<!-- Begin Custom CSS -->
+<style type="text/css" id="demo-custom-css">
+.primary{color:#9e1a00;}
+</style>
+<!-- End Custom CSS -->
+<link rel="icon" href="https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.ilmetropolitano.it/wp-content/uploads/2016/07/cropped-ilmetropolitano-270x270.jpg" />
+	<script>
+    window.onload = function() {
+        setTimeout(function () {
+            location.reload()
+        }, 120000);
+     };
+</script>
+
+<style type="text/css" media="all">
+	body,
+	h1,h2,h3,h4,h5,h6,
+	.breadcrumbs h3,
+	.section-header h3,
+	label,
+	input,
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="password"],
+	textarea,
+	button,
+	.btn,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	table,
+	#primary-menu li li a,
+	.sidebar .widget_ad .widget-title,
+	.site-footer .widget_ad .widget-title {
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	#primary-menu li a,
+	h3.section-heading,
+	.widget-title,
+	.breadcrumbs h3,
+	button,
+	.btn,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	a,
+	a:visited,
+	a:hover,
+	.site-title a:hover,
+	#primary-bar.bar-1 #primary-menu li a:hover,
+	.mobile-menu ul li a:hover,	
+	.entry-meta a,
+	.edit-link a,
+	.comment-reply-title small a:hover,
+	.entry-content a,
+	.entry-content a:visited,
+	.page-content a,
+	.page-content a:visited,
+	.pagination .page-numbers.current,
+	.content-block .section-heading h3 a,
+	.content-block .section-heading h3 a:visited,
+	.pagination .page-numbers:hover,	
+	.sidebar .widget a:hover,
+	.site-footer .widget a:hover,
+	.sidebar .widget ul li a:hover,
+	.site-footer .widget ul li a:hover,
+	.entry-related .hentry .entry-title a:hover,
+	.author-box .author-name span a:hover,
+	.entry-tags .tag-links a:hover:before,
+	.widget_tag_cloud .tagcloud a:hover:before,
+	.entry-content a:hover,
+	.page-content a:hover,
+	.content-block .section-heading h3 a:hover,
+	.content-block .section-heading .section-more-link a:hover,
+	.entry-meta .entry-comment a:hover,
+	.entry-title a:hover,
+	.page-content ul li:before,
+	.entry-content ul li:before,
+	.site-footer.footer-light .footer-nav li a:hover,
+	.site-footer.footer-dark .footer-nav li a:hover,
+	.site-footer.footer-light #site-bottom .site-info a:hover,
+	.site-footer.footer-dark #site-bottom .site-info a:hover,
+	h3.section-heading,
+	h3.section-heading a,
+	.three-column-block .column-one .hentry a:hover .entry-title,
+	#site-bottom .site-info a:hover,
+	.header-date,
+	.search-button .genericon:hover,
+	.search-button .genericon.active, 
+	.slogan h4 {
+		color: #9e1a00;
+	}
+	.mobile-menu-icon .menu-icon-close,
+	.mobile-menu-icon .menu-icon-open,
+	.more-button a,
+	.more-button a:hover,
+	.entry-header .entry-category-icon a,
+	.three-column-block .column-one h3.section-heading ,
+	.header-date .arrow-right:before,
+	.header-search .search-submit,
+	button,
+	.btn,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button:hover,
+	.btn:hover,
+	input[type="reset"]:hover,
+	input[type="submit"]:hover,
+	input[type="button"]:hover	 {
+		background-color: #9e1a00;
+	}
+	.my-pager a:hover,
+	.my-pager a.active,
+	.header-search .search-submit {
+		border-color: #9e1a00;
+	}
+	#primary-bar.bar-2 {
+		background-color: #ffffff;
+	}
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            background-color: transparent !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-alt-action,
+        .qc-cmp-link {
+            color: #000000 !important;
+        }
+        .qc-cmp-button,
+        .qc-cmp-button.qc-cmp-secondary-button:hover {
+            color: #ffffff !important;
+        }
+        .qc-cmp-button:hover,
+        .qc-cmp-button.qc-cmp-secondary-button {
+            color: #000000 !important;
+        }
+        .qc-cmp-small-toggle,
+        .qc-cmp-toggle {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+        }
+        .qc-cmp-main-messaging,
+		.qc-cmp-messaging,
+		.qc-cmp-sub-title,
+		.qc-cmp-privacy-settings-title,
+		.qc-cmp-purpose-list,
+		.qc-cmp-tab,
+		.qc-cmp-title,
+		.qc-cmp-vendor-list,
+		.qc-cmp-vendor-list-title,
+		.qc-cmp-enabled-cell,
+		.qc-cmp-toggle-status,
+		.qc-cmp-table,
+		.qc-cmp-table-header {
+    		color: #000000 !important;
+		}
+       	
+        .qc-cmp-ui {
+  			background-color: #ffffff !important;
+		}
+
+		.qc-cmp-table,
+		.qc-cmp-table-row {
+			  border: 1px solid !important;
+			  border-color: #000000 !important;
+		} 
+    #qcCmpButtons a {
+            text-decoration: none !important;
+
+    }
+    
+    #qcCmpButtons button {
+        margin-top: 65px;
+    }
+  .qc-cmp-qc-link-container{
+    display:none;
+  }
+    </style>
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-340706 single-format-standard wp-theme-advanced-magazine group-blog">
+
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div id="top-bar" class="container clear">
+
+			<span class="header-date">
+				<span class="arrow-right"></span> Saturday, May 17, 2025			</span>
+
+							
+				<span class="search-button">
+					<span class="genericon genericon-search"> <strong>Search</strong></span>
+					<span class="genericon genericon-close"> <strong>Search</strong></span>			
+				</span>
+
+				<div class="header-search">
+					<form id="searchform" method="get" action="https://www.ilmetropolitano.it/">
+						<input type="search" name="s" class="search-input" placeholder="Enter keywords..." autocomplete="off">
+						<button type="submit" class="search-submit">Go</button>		
+					</form>
+				</div><!-- .header-search -->
+
+					
+
+			
+			<span class="header-social ">
+
+									<a class="twitter" href="https://twitter.com/home"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-twitter-white.png" alt="Twitter"></a>
+				
+									<a class="facebook" href="https://www.facebook.com/ilmetropolitan"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-facebook-white.png" alt="Facebook"></a>
+				
+								
+									<a class="youtube" href="https://www.youtube.com/channel/UCmWkaSdOo6EdaicCCNWP4AA"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-youtube-white.png" alt="YouTube"></a>
+				
+									<a class="linkedin" href="https://www.linkedin.com/in/ilmetropolitano-it-716229204/"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-linkedin-white.png" alt="LinkedIn"></a>
+				
+								
+									
+
+			</span>
+
+			
+			<span class="mobile-menu-icon">
+				<span class="menu-icon-open">Menu</span>
+				<span class="menu-icon-close"><span class="genericon genericon-close"></span></span>		
+			</span>				
+
+		</div><!-- #top-bar -->
+
+		<div class="site-start clear header-1">
+
+			<div class="container">
+
+			<div class="site-branding">
+
+								
+				<div id="logo">
+					<span class="helper"></span>
+					<a href="https://www.ilmetropolitano.it/" rel="home">
+						<img src="https://www.ilmetropolitano.it/wp-content/uploads/2024/03/ilmetropolitano-scritta-B.jpg" alt=""/>
+					</a>
+				</div><!-- #logo -->
+
+				
+			</div><!-- .site-branding -->
+
+			
+				<div class="slogan slogan-left">
+												<img src="https://www.ilmetropolitano.it/wp-content/uploads/2024/11/Crisi-della-fertilita-in-Europa-e1732083855800.jpg" alt=""/>
+										<div class="slogan-content">
+						<h4>L'influenza dei fattori sociali</h4>
+						<p><a href="https://www.ilmetropolitano.it/2024/11/17/perche-leuropa-ha-il-tasso-di-fertilita-piu-basso/">Perché l’Europa ha il tasso di fertilità più basso?</a></p>
+					</div>
+				</div>
+
+				<div class="slogan slogan-right">
+												<img src="https://www.ilmetropolitano.it/wp-content/uploads/2021/12/internet-scaled-e1640023971608.jpg" alt=""/>
+										<div class="slogan-content">
+						<h4>I nuovi rischi legati all’IA</h4>
+						<p><a href="https://www.ilmetropolitano.it/2024/11/17/attacchi-deepfake-per-raggiare-utenti-e-aziende-ecco-i-nuovi-rischi-legati-allia/">Attacchi deepfake per raggiare utenti e aziende</a></p>
+					</div>	
+				</div>			
+
+						
+			</div><!-- .container -->
+
+		</div><!-- .site-start -->
+
+		<div id="primary-bar" class="container clear bar-1">
+
+			<nav id="primary-nav" class="primary-navigation">
+
+				<div class="menu-principale-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-47671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-47671"><a href="https://www.ilmetropolitano.it">HOME</a>
+<ul class="sub-menu">
+	<li id="menu-item-176096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176096"><a href="https://www.ilmetropolitano.it/mission-de-il-metropolitano/">Mission</a></li>
+	<li id="menu-item-72134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72134"><a href="https://www.ilmetropolitano.it/chi-siamo/">CHI SIAMO</a></li>
+	<li id="menu-item-61510" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-61510"><a rel="privacy-policy" href="https://www.ilmetropolitano.it/privacy/">PRIVACY POLICY</a></li>
+</ul>
+</li>
+<li id="menu-item-47698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47698"><a href="https://www.ilmetropolitano.it/category/cronaca/">CRONACA</a>
+<ul class="sub-menu">
+	<li id="menu-item-302782" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-302782"><a href="https://www.ilmetropolitano.it/category/cronaca/lavoro/">Lavoro</a></li>
+	<li id="menu-item-107680" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-107680"><a href="https://www.ilmetropolitano.it/category/cronaca/mor/">METRO on the Road</a></li>
+	<li id="menu-item-47672" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47672"><a href="https://www.ilmetropolitano.it/category/storie-di-successo/">STORIE DI SUCCESSO</a>
+	<ul class="sub-menu">
+		<li id="menu-item-47696" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47696"><a href="https://www.ilmetropolitano.it/category/storie-di-successo/famosi-domani/">Famosi Domani</a></li>
+		<li id="menu-item-47719" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47719"><a href="https://www.ilmetropolitano.it/category/tu-per-tu/">A TU PER TU</a></li>
+	</ul>
+</li>
+	<li id="menu-item-47728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47728"><a href="https://www.ilmetropolitano.it/category/pagina-tre/">Paginatre</a>
+	<ul class="sub-menu">
+		<li id="menu-item-91472" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-91472"><a href="https://www.ilmetropolitano.it/category/pagina-tre/i-racconti-di-enzo-cuzzola/">I racconti di Enzo Cuzzola</a>
+		<ul class="sub-menu">
+			<li id="menu-item-91476" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91476"><a href="https://www.ilmetropolitano.it/category/pagina-tre/i-racconti-di-enzo-cuzzola/ricordi-nostalgia-ed-emozioni-della-mia-infanzia/">Ricordi, nostalgia ed emozioni della mia infanzia</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-47722" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47722"><a href="https://www.ilmetropolitano.it/category/pagina-tre/senza-parole/">SENZA PAROLE</a></li>
+	<li id="menu-item-47731" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47731"><a href="https://www.ilmetropolitano.it/category/pagina-tre/lettera-al-direttore/">Lettera al Direttore</a></li>
+	<li id="menu-item-228091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-228091"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cultura-cultura/leggendo-tra-le-righe/">Leggendo tra le righe</a></li>
+	<li id="menu-item-47729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47729"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cultura-cultura/">Cultura</a>
+	<ul class="sub-menu">
+		<li id="menu-item-47730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47730"><a href="https://www.ilmetropolitano.it/category/pagina-tre/langolo-della-poesia/">L&#8217;angolo della Poesia</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-47674" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47674"><a href="https://www.ilmetropolitano.it/category/2-politica/">POLITICA</a></li>
+<li id="menu-item-47677" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47677"><a href="https://www.ilmetropolitano.it/category/5-mondo/">ESTERO</a></li>
+<li id="menu-item-47679" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47679"><a href="https://www.ilmetropolitano.it/category/sport/">SPORT</a></li>
+<li id="menu-item-47707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47707"><a href="https://www.ilmetropolitano.it/category/cultura/economia/">ECONOMIA</a></li>
+<li id="menu-item-47695" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47695"><a href="https://www.ilmetropolitano.it/category/6-eventi/">EVENTI</a>
+<ul class="sub-menu">
+	<li id="menu-item-47721" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47721"><a href="https://www.ilmetropolitano.it/category/musica/">MUSICA</a></li>
+</ul>
+</li>
+<li id="menu-item-47686" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47686"><a href="https://www.ilmetropolitano.it/category/cultura/">SOCIETA&#8217;</a>
+<ul class="sub-menu">
+	<li id="menu-item-47706" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47706"><a href="https://www.ilmetropolitano.it/category/cultura/cucina/">Cucina</a></li>
+	<li id="menu-item-47709" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47709"><a href="https://www.ilmetropolitano.it/category/cultura/tecnologia/">Tecnologia</a></li>
+	<li id="menu-item-47712" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47712"><a href="https://www.ilmetropolitano.it/category/cultura/moda/">Moda e Costume</a></li>
+	<li id="menu-item-176326" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-176326"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cinema-pagina-tre/">Il Cinematografo</a></li>
+	<li id="menu-item-47733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47733"><a href="https://www.ilmetropolitano.it/category/cultura/viaggi/">Viaggi</a></li>
+	<li id="menu-item-47732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47732"><a href="https://www.ilmetropolitano.it/category/cultura/salute-benessere/">Salute e Benessere</a></li>
+	<li id="menu-item-47718" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47718"><a href="https://www.ilmetropolitano.it/category/cultura/salute-benessere/psicologia-e-dintorni/">Psicologia e dintorni</a></li>
+	<li id="menu-item-47710" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47710"><a href="https://www.ilmetropolitano.it/category/cultura/lavvocato-risponde/">L&#8217;Avvocato Risponde</a></li>
+	<li id="menu-item-47720" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47720"><a href="https://www.ilmetropolitano.it/category/la-metropolitana/">La Metropolitana</a></li>
+	<li id="menu-item-47704" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47704"><a href="https://www.ilmetropolitano.it/category/cultura/animali/">Animali</a></li>
+	<li id="menu-item-47705" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47705"><a href="https://www.ilmetropolitano.it/category/cultura/z-beviamoci-su/">Beviamoci su</a></li>
+</ul>
+</li>
+<li id="menu-item-47673" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-47673"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/">COMUNICATI</a>
+<ul class="sub-menu">
+	<li id="menu-item-47688" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47688"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/carabinieri/">Carabinieri</a></li>
+	<li id="menu-item-47689" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47689"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/capitaneria/">Capitaneria</a></li>
+	<li id="menu-item-47690" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47690"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/comune/">Comune</a></li>
+	<li id="menu-item-360139" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360139"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/universita/">Università</a></li>
+	<li id="menu-item-84546" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84546"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/ente-parco-comunicati-stampa/">Ente Parco d&#8217;Aspromonte</a></li>
+	<li id="menu-item-47692" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47692"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/esercito/">Esercito</a></li>
+	<li id="menu-item-47693" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47693"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/provincia/">Provincia</a></li>
+	<li id="menu-item-47694" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47694"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/questura/">Questura</a></li>
+	<li id="menu-item-47687" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47687"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/regione/">Regione</a></li>
+</ul>
+</li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+		</div><!-- .primary-bar -->
+
+		<div id="secondary-bar" class="container clear">
+
+			<nav id="secondary-nav" class="secondary-navigation">
+
+				<div class="menu-secondario-container"><ul id="secondary-menu" class="sf-menu"><li id="menu-item-543262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543262"><a href="https://www.ilmetropolitano.it/ultima-ora-latest-news/">Ultima ora-Latest news</a></li>
+<li id="menu-item-344879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344879"><a target="_blank" href="https://www.dailymotion.com/ilmetropolitan">IL METROPOLITANO TV</a></li>
+<li id="menu-item-238107" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-238107"><a href="https://www.ilmetropolitano.it/category/la-metropolitana/">La Metropolitana</a></li>
+<li id="menu-item-238108" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238108"><a href="https://www.instagram.com/ilmetropolitan/">METRO-INSTAGRAM</a></li>
+<li id="menu-item-380557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-380557"><a target="_blank" href="https://www.retewebitalia.net/">RETE ITALIAWEB</a></li>
+<li id="menu-item-267339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-267339"><a href="https://www.ilmetropolitano.it/category/cronaca/lavoro/">Lavoro</a></li>
+<li id="menu-item-300171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300171"><a href="https://www.ilmetropolitano.it/pubblicita-elettorale/">Pubblicità Elettorale</a></li>
+</ul></div>
+			</nav><!-- #secondary-nav -->	
+
+		</div><!-- #secondary-bar -->			
+
+		<div class="mobile-menu clear">
+
+			<div class="container">
+
+			<div class="menu-left"><h3>Categories</h3><div class="menu-principale-container"><ul id="primary-mobile-menu" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-47671"><a href="https://www.ilmetropolitano.it">HOME</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47698"><a href="https://www.ilmetropolitano.it/category/cronaca/">CRONACA</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47674"><a href="https://www.ilmetropolitano.it/category/2-politica/">POLITICA</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47677"><a href="https://www.ilmetropolitano.it/category/5-mondo/">ESTERO</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47679"><a href="https://www.ilmetropolitano.it/category/sport/">SPORT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47707"><a href="https://www.ilmetropolitano.it/category/cultura/economia/">ECONOMIA</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47695"><a href="https://www.ilmetropolitano.it/category/6-eventi/">EVENTI</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47686"><a href="https://www.ilmetropolitano.it/category/cultura/">SOCIETA&#8217;</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-47673"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/">COMUNICATI</a></li>
+</ul></div></div><div class="menu-right"><h3>Pages</h3><div class="menu-secondario-container"><ul id="secondary-mobile-menu" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543262"><a href="https://www.ilmetropolitano.it/ultima-ora-latest-news/">Ultima ora-Latest news</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344879"><a target="_blank" href="https://www.dailymotion.com/ilmetropolitan">IL METROPOLITANO TV</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-238107"><a href="https://www.ilmetropolitano.it/category/la-metropolitana/">La Metropolitana</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238108"><a href="https://www.instagram.com/ilmetropolitan/">METRO-INSTAGRAM</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-380557"><a target="_blank" href="https://www.retewebitalia.net/">RETE ITALIAWEB</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-267339"><a href="https://www.ilmetropolitano.it/category/cronaca/lavoro/">Lavoro</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300171"><a href="https://www.ilmetropolitano.it/pubblicita-elettorale/">Pubblicità Elettorale</a></li>
+</ul></div></div>	<div id="49035-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=6" ></script></div>  
+    <div id="49035-38"><script src="//ads.themoneytizer.com/s/gen.js?type=38"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=38"></script></div>
+			</div><!-- .container -->
+
+		</div><!-- .mobile-menu -->	
+		<meta name="facebook-domain-verification" content="bt1vgzg15b9rglexh2lltwpybswb8f" />
+
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+
+		<main id="main" class="site-main" >
+
+		
+<article id="post-340706" class="post-340706 post type-post status-publish format-standard has-post-thumbnail hentry category-comunicati-stampa tag-europol tag-sex-abuser tag-social-media tag-web-child">
+	<header class="entry-header clear">
+	
+		<div class="entry-category-icon"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/" title="View all posts in COMUNICATI" >COMUNICATI</a> </div>
+
+		<h1 class="entry-title">International police cooperation leads to the arrest of a dark web child sex abuser in Spain</h1>
+		<div class="entry-meta clear">
+
+	<span class="entry-author"><a href="https://www.ilmetropolitano.it/author/pr1/"><img alt='' src='https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=48&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=96&#038;d=identicon&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' decoding='async'/></a> <a href="https://www.ilmetropolitano.it/author/pr1/" title="Articoli scritti da PrM 1" rel="author">PrM 1</a> &#8212; </span> 
+	<span class="entry-date">21 Aprile 2020</span>
+
+	<span class='entry-comment'><span class="comments-link">comments off</span></span>
+	
+</div><!-- .entry-meta -->
+		
+		<div class="social-share-icons">
+
+	<a href="https://twitter.com/intent/tweet?text=International+police+cooperation+leads+to+the+arrest+of+a+dark+web+child+sex+abuser+in+Spain&amp;url=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F" target="_blank"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-twitter-square.png" alt=""/></a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F" target="_blank"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-facebook-square.png" alt=""/></a>
+
+	<a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F" target="_blank"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-google-plus-square.png" alt=""/></a>
+
+	<a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.ilmetropolitano.it%2F2020%2F04%2F21%2Finternational-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain%2F&amp;media=https%3A%2F%2Fwww.ilmetropolitano.it%2Fwp-content%2Fuploads%2F2020%2F04%2FEuropol.jpg" target="_blank"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-pinterest-square.png" alt=""/></a>
+
+	<a href="mailto:?subject=International%20police%20cooperation%20leads%20to%20the%20arrest%20of%20a%20dark%20web%20child%20sex%20abuser%20in%20Spain&body=https://www.ilmetropolitano.it/2020/04/21/international-police-cooperation-leads-to-the-arrest-of-a-dark-web-child-sex-abuser-in-spain/" target="_blank"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-mail-square.png" alt=""/></a>
+
+</div>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<img width="820" height="500" src="https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol-820x500.jpg" class="attachment-single_thumb size-single_thumb wp-post-image" alt="" decoding="async" fetchpriority="high" />	
+		<p><?xml encoding="utf-8" ?></p>
+<div>
+<p style="text-align: justify;"><a href="https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg"><img decoding="async" class="alignright size-medium wp-image-340707" src="https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol-500x288.jpg" alt="" width="500" height="288" srcset="https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol-500x288.jpg 500w, https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol-768x442.jpg 768w, https://www.ilmetropolitano.it/wp-content/uploads/2020/04/Europol.jpg 885w" sizes="(max-width: 500px) 100vw, 500px" /></a>The operation to bring down a child sex abuser, who had made explicit videos of an underage boy, owes its success to international cooperation. Information from Queensland Police &ndash; Australia&rsquo;s Taskforce Argos sent via Europol&rsquo;s secure communication channel allowed Europol experts to carry out operational analysis, which revealed that a video from 2015 found in Belgium and France may have been filmed in Spain.</p>
+<p style="text-align: justify;"><strong>A CRUCIAL BREAKTHROUGH ON SOCIAL MEDIA</strong></p>
+<p style="text-align: justify;">The analysis of the images and video &ndash; which showed how the suspect abused a boy who was under five years old at the time &ndash; led the Spanish National Police (Polic&iacute;a Nacional) to locate the suspect. When looking into the message published with the video, officers noticed that the suspect used words and phrases from Spain and not from a Latin American country.</p>
+<p style="text-align: justify;">Using operational analysis, open-source enquiries and cross-checking information, Europol experts found that the suspect was registered on several websites and boards dedicated to child sexual abuse and exploitation on the dark web. The investigation revealed that the suspect was also using a social media network where he was in touch with a woman who shared the same surname as the one in the title of the sexual abuse video.</p>
+<p style="text-align: justify;"><strong>COVID-19 PANDEMIC FORCES A CHANGE OF TACTICS</strong></p>
+<p style="text-align: justify;">Once the abuser was located in Barcelona, cybercrime experts from the Spanish National Police Central High-Tech Crime Unit located in Madrid moved to Barcelona. Due to the lockdown in Spain, they were assisted remotely by other experts in Madrid. The material seized showed how the arrested suspect was using several email addresses and dark web access points to commit this horrific crime. The material seized is pending analysis, which is of special value as it could provide important clues about other child sex abusers on the dark web.</p>
+<p style="text-align: justify;">Fernando Ruiz, Acting Head of the&nbsp;European Cybercrime Centre (EC3)&nbsp;at Europol, adds, &lsquo;This type of international cooperation during the COVID-19 crisis shows how children are being protected as a priority by law enforcement from all over the world. &nbsp;Europol is proud to support this investigation and to bring together the contributions of the Member States and non-EU partners to help identify those sexually exploiting and abusing children. We encourage everyone to be aware of the potential dangers to children during this time. Europol has published preventive messaging on its&nbsp;website&nbsp;and social media channels.&rsquo;</p>
+<div style="text-align: justify;">
+<div>
+<p>Europol encourages you to use the term &lsquo;child (sexual) abuse material&rsquo; and not &lsquo;child pornography&rsquo; in your reporting.</p>
+</div>
+</div>
+<p style="text-align: justify;">The use of the term &lsquo;child pornography&rsquo; helps child sex abusers as it indicates legitimacy and compliance on the part of the victim, and therefore legality on the part of the sex abuser. By using the phrase &lsquo;child pornography&rsquo;, it conjures up images of children posing in &lsquo;provocative&rsquo; positions, rather than suffering horrific abuse. Every photograph or video captures an actual situation where a child has been abused. &nbsp;This is not pornography.</p>
+<p>Fonte: <a href="https://www.europol.europa.eu/newsroom/news/international-police-cooperation-leads-to-arrest-of-dark-web-child-sex-abuser-in-spain" target="_blank" rel="noopener noreferrer">https://www.europol.europa.eu/newsroom/news/international-police-cooperation-leads-to-arrest-of-dark-web-child-sex-abuser-in-spain</a></p>
+</div>
+<div class="group-metadata field-group-div">
+<div class="field field-name-field-crime-areas field-type-taxonomy-term-reference field-label-inlinec clearfix field-label-inline field-wrapper" style="text-align: justify;"></div>
+</div>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+
+		<span class="tag-links"> <a href="https://www.ilmetropolitano.it/tag/europol/" rel="tag">Europol</a> <a href="https://www.ilmetropolitano.it/tag/sex-abuser/" rel="tag">sex abuser</a> <a href="https://www.ilmetropolitano.it/tag/social-media/" rel="tag">social media</a> <a href="https://www.ilmetropolitano.it/tag/web-child/" rel="tag">web child</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+<div id="custom_html-3" class="widget_text content-ad widget_custom_html"><h3 class="widget-title">banner</h3><div class="textwidget custom-html-widget"><div id="49035-1"><script src="//ads.themoneytizer.com/s/gen.js?type=1"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=1"></script></div></div></div>
+		<div class="entry-related clear">
+			<h3>Recommended For You</h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://www.ilmetropolitano.it/2025/05/16/polizia-di-stato-attenzione-alla-truffa-telefonica-con-la-tecnica-dello-spoofing/">
+								<div class="thumbnail-wrap">
+									<img width="300" height="200" src="https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640-300x200.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="telefono, telefonata, Telemarketing" decoding="async" loading="lazy" srcset="https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640-300x200.jpg 300w, https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640-600x400.jpg 600w, https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640-150x100.jpg 150w, https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640.jpg 640w" sizes="auto, (max-width: 300px) 100vw, 300px" />								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://www.ilmetropolitano.it/2025/05/16/polizia-di-stato-attenzione-alla-truffa-telefonica-con-la-tecnica-dello-spoofing/">Polizia di Stato: attenzione alla truffa telefonica con la tecnica dello “spoofing”</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry">
+													<a class="thumbnail-link" href="https://www.ilmetropolitano.it/2025/05/16/tutti-a-tavola-tutti-insieme-ll-comune-di-reggio-calabria-aderisce-alla-giornata-mondiale-della-celiachia/">
+								<div class="thumbnail-wrap">
+									<img width="300" height="200" src="https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-300x200.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="Palazzo San Giorgio Comune di Reggio Calabria" decoding="async" loading="lazy" srcset="https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-300x200.jpg 300w, https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-720x480.jpg 720w, https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-600x400.jpg 600w, https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-150x100.jpg 150w" sizes="auto, (max-width: 300px) 100vw, 300px" />								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://www.ilmetropolitano.it/2025/05/16/tutti-a-tavola-tutti-insieme-ll-comune-di-reggio-calabria-aderisce-alla-giornata-mondiale-della-celiachia/">“Tutti a tavola, tutti insieme”  ll Comune di Reggio Calabria aderisce alla Giornata mondiale della Celiachia</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="https://www.ilmetropolitano.it/2025/05/16/privacy-tour-2025-terza-tappa-a-catanzaro-21-e-22-maggio/">
+								<div class="thumbnail-wrap">
+									<img width="300" height="200" src="https://www.ilmetropolitano.it/wp-content/uploads/2019/10/privacy-300x200.jpg" class="attachment-post_thumb size-post_thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.ilmetropolitano.it/wp-content/uploads/2019/10/privacy-300x200.jpg 300w, https://www.ilmetropolitano.it/wp-content/uploads/2019/10/privacy-150x100.jpg 150w" sizes="auto, (max-width: 300px) 100vw, 300px" />								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="https://www.ilmetropolitano.it/2025/05/16/privacy-tour-2025-terza-tappa-a-catanzaro-21-e-22-maggio/">Privacy Tour 2025: terza tappa a Catanzaro 21 e 22 Maggio</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+
+<div class="author-box clear">
+	<a href="https://www.ilmetropolitano.it/author/pr1/"><img alt='' src='https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=120&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/47937f3bb205dff1240cce9fd2d89370133181c365e3364f05abe9ee7b269c68?s=240&#038;d=identicon&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy' decoding='async'/></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="https://www.ilmetropolitano.it/author/pr1/">PrM 1</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div class="OUTBRAIN" data-src="DROP_PERMALINK_HERE" data-widget-id="GS_1" data-ob-template="Ilmetropolitano.it/"></div><script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area sidebar">
+
+
+	<div id="block-3" class="widget widget_block"><div id="49035-4"><script src="//ads.themoneytizer.com/s/gen.js?type=4"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=4" ></script></div></div><div id="advancedmagazine-recent-6" class="widget widget-advancedmagazine-recent widget_posts_thumbnail"><h2 class="widget-title"><span>Notizie ora per ora</span></h2><ul><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/sinner-batte-paul-e-vola-finale-a-roma/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Jannik-Sinner-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Jannik Sinner" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/sinner-batte-paul-e-vola-finale-a-roma/" rel="bookmark">Sinner batte Paul e vola finale a Roma</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/meloni-non-saremo-tra-i-volenterosi/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2024/10/Giorgia-Meloni-1-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Giorgia Meloni" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/meloni-non-saremo-tra-i-volenterosi/" rel="bookmark">Meloni: Non saremo tra i Volenterosi</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/trasporti-mit-anticipo-tariffe-ferroviarie-merci-segnale-concreto-di-attenzione-al-settore/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2018/11/Matteo-Salvini-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Matteo Salvini" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/trasporti-mit-anticipo-tariffe-ferroviarie-merci-segnale-concreto-di-attenzione-al-settore/" rel="bookmark">Trasporti: MIT, anticipo tariffe ferroviarie merci segnale concreto di attenzione al settore</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/bando-400-posti-notaio-2022-approvazione-graduatoria/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2020/12/avvocato-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/bando-400-posti-notaio-2022-approvazione-graduatoria/" rel="bookmark">Bando 400 posti Notaio 2022, approvazione graduatoria</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/polizia-di-stato-attenzione-alla-truffa-telefonica-con-la-tecnica-dello-spoofing/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2022/01/make-a-phone-call-g5c6de85b3_640-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="telefono, telefonata, Telemarketing" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/polizia-di-stato-attenzione-alla-truffa-telefonica-con-la-tecnica-dello-spoofing/" rel="bookmark">Polizia di Stato: attenzione alla truffa telefonica con la tecnica dello “spoofing”</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/collecorvino-pe-sorvegliato-speciale-trasporta-87-kg-di-marijuana/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2019/07/Carabinieri-Alt-generico-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/collecorvino-pe-sorvegliato-speciale-trasporta-87-kg-di-marijuana/" rel="bookmark">Collecorvino (Pe). Sorvegliato speciale trasporta 87 kg di marijuana</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/clima-mase-avanti-su-energia-sostenibile-e-adattamento-in-africa/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Gilberto-Pichetto-Fratin-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Gilberto Pichetto Fratin" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/clima-mase-avanti-su-energia-sostenibile-e-adattamento-in-africa/" rel="bookmark">Clima: MASE, avanti su energia sostenibile e adattamento in Africa</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/tutti-a-tavola-tutti-insieme-ll-comune-di-reggio-calabria-aderisce-alla-giornata-mondiale-della-celiachia/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2020/03/Comune-Reggio-Calabria-Palazzo-San-Giorgio-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Palazzo San Giorgio Comune di Reggio Calabria" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/tutti-a-tavola-tutti-insieme-ll-comune-di-reggio-calabria-aderisce-alla-giornata-mondiale-della-celiachia/" rel="bookmark">“Tutti a tavola, tutti insieme”  ll Comune di Reggio Calabria aderisce alla Giornata mondiale della Celiachia</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/dierre-scrive-la-storia-e-sogna-la-b-cotroneo-esulta-dopo-la-semifinale-play-off-squadra-fenomenale-ora-testa-alla-finale/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Cotroneo-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Cotroneo" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/dierre-scrive-la-storia-e-sogna-la-b-cotroneo-esulta-dopo-la-semifinale-play-off-squadra-fenomenale-ora-testa-alla-finale/" rel="bookmark">Dierre scrive la storia e sogna la B: Cotroneo esulta dopo la semifinale play off. &#8220;Squadra fenomenale, ora testa alla finale&#8221;</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/privacy-tour-2025-terza-tappa-a-catanzaro-21-e-22-maggio/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2019/10/privacy-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/privacy-tour-2025-terza-tappa-a-catanzaro-21-e-22-maggio/" rel="bookmark">Privacy Tour 2025: terza tappa a Catanzaro 21 e 22 Maggio</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/emergenza-idrica-tavolo-tecnico-regione-prefettura-reggio/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/emergenza-idrica-giovanni-calabrese-1-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="emergenza idrica giovanni calabrese" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/emergenza-idrica-tavolo-tecnico-regione-prefettura-reggio/" rel="bookmark">Emergenza idrica, Tavolo tecnico Regione-Prefettura Reggio Calabria</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/san-giorgio-doro-al-professore-paolo-strati/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Strati4-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="premio paolo Strati, san giorgio d&#039;oro" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/san-giorgio-doro-al-professore-paolo-strati/" rel="bookmark">San Giorgio d’oro al professore Paolo Strati</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/basket-il-19-e-20-maggio-a-reggio-calabria-il-final-event-della-jr-nba-fip-schools-league-2025/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Final-Event-JrNBA-FIP-Schools-League-2025-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Final Event JrNBA FIP Schools League 2025" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/basket-il-19-e-20-maggio-a-reggio-calabria-il-final-event-della-jr-nba-fip-schools-league-2025/" rel="bookmark">Basket. Il 19 e 20 Maggio a Reggio Calabria il Final Event della Jr. NBA FIP Schools League 2025</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/la-metrocity-rilancia-sullestate-2025-a-luglio-sky-calciomercato-loriginale-torna-a-reggio-calabria/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/sky-calciomercato-4-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="sky calciomercato 4" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/la-metrocity-rilancia-sullestate-2025-a-luglio-sky-calciomercato-loriginale-torna-a-reggio-calabria/" rel="bookmark">La Metrocity rilancia sull&#8217;estate 2025: a luglio Sky Calciomercato L&#8217;Originale torna a Reggio Calabria</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/reggio-calabria-convocazione-del-consiglio-comunale-3/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="91" src="https://www.ilmetropolitano.it/wp-content/uploads/2016/04/comune-reggio-calabria-e1470121842588.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Comune Reggio Calabria, Palazzo San Giorgio" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/reggio-calabria-convocazione-del-consiglio-comunale-3/" rel="bookmark">Reggio Calabria. Convocazione del Consiglio Comunale</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/tutto-esaurito-per-math-in-action-2025-boom-di-prenotazioni-sulla-piattaforma-online/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/mathinaction_2025-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="mathinaction_2025" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/tutto-esaurito-per-math-in-action-2025-boom-di-prenotazioni-sulla-piattaforma-online/" rel="bookmark">Tutto esaurito per Math in Action 2025: boom di prenotazioni sulla piattaforma online</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/nuova-misura-a-favore-delle-imprese-vari-40-mln-di-euro-per-sostenere-il-tessuto-produttivo-e-rafforzare-lattrattivita-del-territorio/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/Rosario-Vari-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Rosario Varì" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/nuova-misura-a-favore-delle-imprese-vari-40-mln-di-euro-per-sostenere-il-tessuto-produttivo-e-rafforzare-lattrattivita-del-territorio/" rel="bookmark">Nuova misura a favore delle imprese, Varì: “40 mln di euro per sostenere il tessuto produttivo e rafforzare l’attrattività del territorio”</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/ingv-aperte-le-iscrizioni-per-la-scuola-di-formazione-sullo-studio-delle-nubi-vulcaniche/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2021/10/Etna-INGV-150x150.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/ingv-aperte-le-iscrizioni-per-la-scuola-di-formazione-sullo-studio-delle-nubi-vulcaniche/" rel="bookmark">INGV: aperte le iscrizioni per la Scuola di formazione sullo studio delle nubi vulcaniche</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/torna-a-rende-la-fiera-del-disco-un-weekend-imperdibile-per-gli-amanti-della-musica-analogica/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2025/05/foto-fiera-del-disco-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="foto fiera del disco" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/torna-a-rende-la-fiera-del-disco-un-weekend-imperdibile-per-gli-amanti-della-musica-analogica/" rel="bookmark">Torna a Rende la Fiera del Disco: un weekend imperdibile per gli amanti della musica analogica</a><div class="entry-meta">16 Maggio 2025</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2025/05/16/vicenza-salva-lamica-chiamando-la-polizia-di-stato/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="100" src="https://www.ilmetropolitano.it/wp-content/uploads/2017/06/113-e1496745080945.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Polizia di Stato" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2025/05/16/vicenza-salva-lamica-chiamando-la-polizia-di-stato/" rel="bookmark">Vicenza. Salva l’amica chiamando la Polizia di Stato</a><div class="entry-meta">16 Maggio 2025</div></div></li></ul></div><div id="happythemes-ad-8" class="widget widget_ad ad-widget"><h2 class="widget-title"><span>ADV</span></h2><div class="adwidget"><div id="49035-4"><script src="//ads.themoneytizer.com/s/gen.js?type=4"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=4" ></script></div></div></div>
+
+</aside><!-- #secondary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer footer-light">
+
+		<div class="menu-principale-container"><ul id="footer-menu" class="footer-nav container"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-47671"><a href="https://www.ilmetropolitano.it">HOME</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176096"><a href="https://www.ilmetropolitano.it/mission-de-il-metropolitano/">Mission</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72134"><a href="https://www.ilmetropolitano.it/chi-siamo/">CHI SIAMO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-61510"><a rel="privacy-policy" href="https://www.ilmetropolitano.it/privacy/">PRIVACY POLICY</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47698"><a href="https://www.ilmetropolitano.it/category/cronaca/">CRONACA</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-302782"><a href="https://www.ilmetropolitano.it/category/cronaca/lavoro/">Lavoro</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-107680"><a href="https://www.ilmetropolitano.it/category/cronaca/mor/">METRO on the Road</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47672"><a href="https://www.ilmetropolitano.it/category/storie-di-successo/">STORIE DI SUCCESSO</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47696"><a href="https://www.ilmetropolitano.it/category/storie-di-successo/famosi-domani/">Famosi Domani</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47719"><a href="https://www.ilmetropolitano.it/category/tu-per-tu/">A TU PER TU</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47728"><a href="https://www.ilmetropolitano.it/category/pagina-tre/">Paginatre</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-91472"><a href="https://www.ilmetropolitano.it/category/pagina-tre/i-racconti-di-enzo-cuzzola/">I racconti di Enzo Cuzzola</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91476"><a href="https://www.ilmetropolitano.it/category/pagina-tre/i-racconti-di-enzo-cuzzola/ricordi-nostalgia-ed-emozioni-della-mia-infanzia/">Ricordi, nostalgia ed emozioni della mia infanzia</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47722"><a href="https://www.ilmetropolitano.it/category/pagina-tre/senza-parole/">SENZA PAROLE</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47731"><a href="https://www.ilmetropolitano.it/category/pagina-tre/lettera-al-direttore/">Lettera al Direttore</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-228091"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cultura-cultura/leggendo-tra-le-righe/">Leggendo tra le righe</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47729"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cultura-cultura/">Cultura</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47730"><a href="https://www.ilmetropolitano.it/category/pagina-tre/langolo-della-poesia/">L&#8217;angolo della Poesia</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47674"><a href="https://www.ilmetropolitano.it/category/2-politica/">POLITICA</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47677"><a href="https://www.ilmetropolitano.it/category/5-mondo/">ESTERO</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47679"><a href="https://www.ilmetropolitano.it/category/sport/">SPORT</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47707"><a href="https://www.ilmetropolitano.it/category/cultura/economia/">ECONOMIA</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47695"><a href="https://www.ilmetropolitano.it/category/6-eventi/">EVENTI</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47721"><a href="https://www.ilmetropolitano.it/category/musica/">MUSICA</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-47686"><a href="https://www.ilmetropolitano.it/category/cultura/">SOCIETA&#8217;</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47706"><a href="https://www.ilmetropolitano.it/category/cultura/cucina/">Cucina</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47709"><a href="https://www.ilmetropolitano.it/category/cultura/tecnologia/">Tecnologia</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47712"><a href="https://www.ilmetropolitano.it/category/cultura/moda/">Moda e Costume</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-176326"><a href="https://www.ilmetropolitano.it/category/pagina-tre/cinema-pagina-tre/">Il Cinematografo</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47733"><a href="https://www.ilmetropolitano.it/category/cultura/viaggi/">Viaggi</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47732"><a href="https://www.ilmetropolitano.it/category/cultura/salute-benessere/">Salute e Benessere</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47718"><a href="https://www.ilmetropolitano.it/category/cultura/salute-benessere/psicologia-e-dintorni/">Psicologia e dintorni</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47710"><a href="https://www.ilmetropolitano.it/category/cultura/lavvocato-risponde/">L&#8217;Avvocato Risponde</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47720"><a href="https://www.ilmetropolitano.it/category/la-metropolitana/">La Metropolitana</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47704"><a href="https://www.ilmetropolitano.it/category/cultura/animali/">Animali</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47705"><a href="https://www.ilmetropolitano.it/category/cultura/z-beviamoci-su/">Beviamoci su</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-47673"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/">COMUNICATI</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47688"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/carabinieri/">Carabinieri</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47689"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/capitaneria/">Capitaneria</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47690"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/comune/">Comune</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360139"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/universita/">Università</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84546"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/ente-parco-comunicati-stampa/">Ente Parco d&#8217;Aspromonte</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47692"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/esercito/">Esercito</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47693"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/provincia/">Provincia</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47694"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/questura/">Questura</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47687"><a href="https://www.ilmetropolitano.it/category/comunicati-stampa/regione/">Regione</a></li>
+</ul>
+</li>
+</ul></div>	
+
+		
+			<div class="footer-columns container clear">
+
+				<div class="footer-column footer-column-1">
+					<div id="happythemes-ad-5" class="widget footer-widget widget_ad ad-widget"><h3 class="widget-title">banner</h3><div class="adwidget"><div id="49035-19"><script src="//ads.themoneytizer.com/s/gen.js?type=19"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=19" ></script></div></div></div><div id="advancedmagazine-random-2" class="widget footer-widget widget-advancedmagazine-random widget_posts_thumbnail"><h3 class="widget-title">Random Posts</h3><ul><li class="clear"><a href="https://www.ilmetropolitano.it/2021/02/10/maxi-sequestro-di-droga-a-firenze-oltre-300-kg-di-stupefacente-3-persone-in-manette/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2021/02/droga-Firenze-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2021/02/10/maxi-sequestro-di-droga-a-firenze-oltre-300-kg-di-stupefacente-3-persone-in-manette/" rel="bookmark">Maxi sequestro di droga a Firenze: oltre 300 kg di stupefacente. 3 persone in manette</a><div class="entry-meta">10 Febbraio 2021</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2021/03/17/regione-calabria-animazione-beni-culturali-approvata-graduatoria-provvisoria/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2021/01/spirli5-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2021/03/17/regione-calabria-animazione-beni-culturali-approvata-graduatoria-provvisoria/" rel="bookmark">Regione Calabria. Animazione beni culturali, approvata graduatoria provvisoria</a><div class="entry-meta">17 Marzo 2021</div></div></li><li class="clear"><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2015/03/18/bioage-leccellenza-calabrese-gia-nel-futuro/" rel="bookmark">BioAge, l&#8217;eccellenza calabrese già nel futuro</a><div class="entry-meta">18 Marzo 2015</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2024/09/11/nave-da-crociera-ponant-al-porto-di-reggio-latella-visitatori-entusiasti-continuiamo-a-lavorare-per-ampliare-lofferta-turistica/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2024/09/crociera-porto-Ponant-a-Reggio-Calabria-150x150.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="crociera porto Ponant a Reggio Calabria" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2024/09/11/nave-da-crociera-ponant-al-porto-di-reggio-latella-visitatori-entusiasti-continuiamo-a-lavorare-per-ampliare-lofferta-turistica/" rel="bookmark">Nave da crociera Ponant al porto di Reggio, Latella: &#8220;Visitatori entusiasti, continuiamo a lavorare per ampliare l&#8217;offerta turistica&#8221;</a><div class="entry-meta">11 Settembre 2024</div></div></li><li class="clear"><a href="https://www.ilmetropolitano.it/2020/05/23/rimini-la-polizia-ferroviaria-arresta-un-corriere-della-droga/" rel="bookmark"><div class="thumbnail-wrap"><img width="150" height="150" src="https://www.ilmetropolitano.it/wp-content/uploads/2019/10/Polfer-150x150.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Polfer" decoding="async" loading="lazy" /></div></a><div class="entry-wrap"><a href="https://www.ilmetropolitano.it/2020/05/23/rimini-la-polizia-ferroviaria-arresta-un-corriere-della-droga/" rel="bookmark">Rimini. La Polizia Ferroviaria arresta un corriere della droga</a><div class="entry-meta">23 Maggio 2020</div></div></li></ul></div>				</div>
+
+				<div class="footer-column footer-column-2">
+					<div id="tag_cloud-3" class="widget footer-widget widget_tag_cloud"><h3 class="widget-title">Tag</h3><div class="tagcloud"><a href="https://www.ilmetropolitano.it/tag/calabria/" class="tag-cloud-link tag-link-199 tag-link-position-1" style="font-size: 17.568345323741pt;" aria-label="Calabria (8.360 elementi)">Calabria</a>
+<a href="https://www.ilmetropolitano.it/tag/carabinieri/" class="tag-cloud-link tag-link-41162 tag-link-position-2" style="font-size: 12.73381294964pt;" aria-label="Carabinieri (2.726 elementi)">Carabinieri</a>
+<a href="https://www.ilmetropolitano.it/tag/catanzaro/" class="tag-cloud-link tag-link-1397 tag-link-position-3" style="font-size: 9.410071942446pt;" aria-label="Catanzaro (1.281 elementi)">Catanzaro</a>
+<a href="https://www.ilmetropolitano.it/tag/cocaina/" class="tag-cloud-link tag-link-452 tag-link-position-4" style="font-size: 11.323741007194pt;" aria-label="cocaina (1.981 elementi)">cocaina</a>
+<a href="https://www.ilmetropolitano.it/tag/coldiretti/" class="tag-cloud-link tag-link-9082 tag-link-position-5" style="font-size: 9.3093525179856pt;" aria-label="coldiretti (1.249 elementi)">coldiretti</a>
+<a href="https://www.ilmetropolitano.it/tag/confesercenti/" class="tag-cloud-link tag-link-3444 tag-link-position-6" style="font-size: 8.3021582733813pt;" aria-label="Confesercenti (1.006 elementi)">Confesercenti</a>
+<a href="https://www.ilmetropolitano.it/tag/coronavirus/" class="tag-cloud-link tag-link-69449 tag-link-position-7" style="font-size: 11.223021582734pt;" aria-label="coronavirus (1.956 elementi)">coronavirus</a>
+<a href="https://www.ilmetropolitano.it/tag/cosenza/" class="tag-cloud-link tag-link-295 tag-link-position-8" style="font-size: 8.705035971223pt;" aria-label="Cosenza (1.092 elementi)">Cosenza</a>
+<a href="https://www.ilmetropolitano.it/tag/covid/" class="tag-cloud-link tag-link-70129 tag-link-position-9" style="font-size: 12.230215827338pt;" aria-label="Covid (2.436 elementi)">Covid</a>
+<a href="https://www.ilmetropolitano.it/tag/covid-19/" class="tag-cloud-link tag-link-69954 tag-link-position-10" style="font-size: 11.827338129496pt;" aria-label="Covid-19 (2.232 elementi)">Covid-19</a>
+<a href="https://www.ilmetropolitano.it/tag/droga/" class="tag-cloud-link tag-link-287 tag-link-position-11" style="font-size: 15.654676258993pt;" aria-label="Droga (5.414 elementi)">Droga</a>
+<a href="https://www.ilmetropolitano.it/tag/falcomata/" class="tag-cloud-link tag-link-572 tag-link-position-12" style="font-size: 9.2086330935252pt;" aria-label="Falcomatà (1.231 elementi)">Falcomatà</a>
+<a href="https://www.ilmetropolitano.it/tag/furto/" class="tag-cloud-link tag-link-1527 tag-link-position-13" style="font-size: 10.115107913669pt;" aria-label="furto (1.501 elementi)">furto</a>
+<a href="https://www.ilmetropolitano.it/tag/gioia-tauro/" class="tag-cloud-link tag-link-1390 tag-link-position-14" style="font-size: 8.705035971223pt;" aria-label="Gioia Tauro (1.098 elementi)">Gioia Tauro</a>
+<a href="https://www.ilmetropolitano.it/tag/giuseppe-falcomata/" class="tag-cloud-link tag-link-6611 tag-link-position-15" style="font-size: 8.5035971223022pt;" aria-label="Giuseppe Falcomatà (1.045 elementi)">Giuseppe Falcomatà</a>
+<a href="https://www.ilmetropolitano.it/tag/governo/" class="tag-cloud-link tag-link-20 tag-link-position-16" style="font-size: 11.424460431655pt;" aria-label="Governo (2.056 elementi)">Governo</a>
+<a href="https://www.ilmetropolitano.it/tag/guardia-di-finanza/" class="tag-cloud-link tag-link-527 tag-link-position-17" style="font-size: 8.3021582733813pt;" aria-label="Guardia di Finanza (1.007 elementi)">Guardia di Finanza</a>
+<a href="https://www.ilmetropolitano.it/tag/hashish/" class="tag-cloud-link tag-link-6108 tag-link-position-18" style="font-size: 9.0071942446043pt;" aria-label="hashish (1.182 elementi)">hashish</a>
+<a href="https://www.ilmetropolitano.it/tag/ilmetropolitano-it/" class="tag-cloud-link tag-link-1508 tag-link-position-19" style="font-size: 15.755395683453pt;" aria-label="ilMetropolitano.it (5.457 elementi)">ilMetropolitano.it</a>
+<a href="https://www.ilmetropolitano.it/tag/italia/" class="tag-cloud-link tag-link-302 tag-link-position-20" style="font-size: 12.63309352518pt;" aria-label="Italia (2.666 elementi)">Italia</a>
+<a href="https://www.ilmetropolitano.it/tag/lavoro/" class="tag-cloud-link tag-link-91 tag-link-position-21" style="font-size: 10.215827338129pt;" aria-label="Lavoro (1.534 elementi)">Lavoro</a>
+<a href="https://www.ilmetropolitano.it/tag/lega/" class="tag-cloud-link tag-link-121 tag-link-position-22" style="font-size: 9.0071942446043pt;" aria-label="Lega (1.169 elementi)">Lega</a>
+<a href="https://www.ilmetropolitano.it/tag/marijuana/" class="tag-cloud-link tag-link-1420 tag-link-position-23" style="font-size: 10.215827338129pt;" aria-label="marijuana (1.559 elementi)">marijuana</a>
+<a href="https://www.ilmetropolitano.it/tag/messina/" class="tag-cloud-link tag-link-630 tag-link-position-24" style="font-size: 9.0071942446043pt;" aria-label="Messina (1.162 elementi)">Messina</a>
+<a href="https://www.ilmetropolitano.it/tag/migranti/" class="tag-cloud-link tag-link-642 tag-link-position-25" style="font-size: 11.424460431655pt;" aria-label="Migranti (2.055 elementi)">Migranti</a>
+<a href="https://www.ilmetropolitano.it/tag/milano/" class="tag-cloud-link tag-link-575 tag-link-position-26" style="font-size: 12.028776978417pt;" aria-label="Milano (2.331 elementi)">Milano</a>
+<a href="https://www.ilmetropolitano.it/tag/napoli/" class="tag-cloud-link tag-link-158 tag-link-position-27" style="font-size: 8.8057553956835pt;" aria-label="Napoli (1.126 elementi)">Napoli</a>
+<a href="https://www.ilmetropolitano.it/tag/pd/" class="tag-cloud-link tag-link-363 tag-link-position-28" style="font-size: 9.0071942446043pt;" aria-label="PD (1.172 elementi)">PD</a>
+<a href="https://www.ilmetropolitano.it/tag/polizia-di-stato/" class="tag-cloud-link tag-link-2854 tag-link-position-29" style="font-size: 11.525179856115pt;" aria-label="Polizia di Stato (2.082 elementi)">Polizia di Stato</a>
+<a href="https://www.ilmetropolitano.it/tag/rapina/" class="tag-cloud-link tag-link-2622 tag-link-position-30" style="font-size: 8.705035971223pt;" aria-label="rapina (1.100 elementi)">rapina</a>
+<a href="https://www.ilmetropolitano.it/tag/reggio-calabria/" class="tag-cloud-link tag-link-59 tag-link-position-31" style="font-size: 21.294964028777pt;" aria-label="Reggio Calabria (19.343 elementi)">Reggio Calabria</a>
+<a href="https://www.ilmetropolitano.it/tag/regione-calabria/" class="tag-cloud-link tag-link-1416 tag-link-position-32" style="font-size: 12.230215827338pt;" aria-label="Regione Calabria (2.473 elementi)">Regione Calabria</a>
+<a href="https://www.ilmetropolitano.it/tag/roma/" class="tag-cloud-link tag-link-41161 tag-link-position-33" style="font-size: 16.057553956835pt;" aria-label="Roma (5.906 elementi)">Roma</a>
+<a href="https://www.ilmetropolitano.it/tag/salvini/" class="tag-cloud-link tag-link-11772 tag-link-position-34" style="font-size: 10.517985611511pt;" aria-label="Salvini (1.659 elementi)">Salvini</a>
+<a href="https://www.ilmetropolitano.it/tag/sanita/" class="tag-cloud-link tag-link-73 tag-link-position-35" style="font-size: 8.705035971223pt;" aria-label="Sanità (1.108 elementi)">Sanità</a>
+<a href="https://www.ilmetropolitano.it/tag/scopelliti/" class="tag-cloud-link tag-link-112 tag-link-position-36" style="font-size: 8.1007194244604pt;" aria-label="Scopelliti (951 elementi)">Scopelliti</a>
+<a href="https://www.ilmetropolitano.it/tag/scuola/" class="tag-cloud-link tag-link-139 tag-link-position-37" style="font-size: 9.410071942446pt;" aria-label="Scuola (1.277 elementi)">Scuola</a>
+<a href="https://www.ilmetropolitano.it/tag/sicurezza/" class="tag-cloud-link tag-link-405 tag-link-position-38" style="font-size: 9.5107913669065pt;" aria-label="Sicurezza (1.303 elementi)">Sicurezza</a>
+<a href="https://www.ilmetropolitano.it/tag/spaccio/" class="tag-cloud-link tag-link-1886 tag-link-position-39" style="font-size: 11.525179856115pt;" aria-label="spaccio (2.104 elementi)">spaccio</a>
+<a href="https://www.ilmetropolitano.it/tag/tamponi/" class="tag-cloud-link tag-link-70092 tag-link-position-40" style="font-size: 8pt;" aria-label="tamponi (935 elementi)">tamponi</a>
+<a href="https://www.ilmetropolitano.it/tag/top/" class="tag-cloud-link tag-link-4269 tag-link-position-41" style="font-size: 22pt;" aria-label="top (23.121 elementi)">top</a>
+<a href="https://www.ilmetropolitano.it/tag/torino/" class="tag-cloud-link tag-link-1963 tag-link-position-42" style="font-size: 9.7122302158273pt;" aria-label="Torino (1.375 elementi)">Torino</a>
+<a href="https://www.ilmetropolitano.it/tag/truffa/" class="tag-cloud-link tag-link-2855 tag-link-position-43" style="font-size: 8.1007194244604pt;" aria-label="TRUFFA (952 elementi)">TRUFFA</a>
+<a href="https://www.ilmetropolitano.it/tag/turismo/" class="tag-cloud-link tag-link-301 tag-link-position-44" style="font-size: 8.8057553956835pt;" aria-label="Turismo (1.127 elementi)">Turismo</a>
+<a href="https://www.ilmetropolitano.it/tag/usa/" class="tag-cloud-link tag-link-1463 tag-link-position-45" style="font-size: 10.820143884892pt;" aria-label="USA (1.765 elementi)">USA</a></div>
+</div>				</div>
+
+				<div class="footer-column footer-column-3">
+					<div id="rss-2" class="widget footer-widget widget_rss"><h3 class="widget-title"><a class="rsswidget rss-widget-feed" href="https://www.ilmetropolitano.it/feed/"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="https://www.ilmetropolitano.it/wp-includes/images/rss.png" alt="RSS" loading="lazy" /></a> <a class="rsswidget rss-widget-title" href="https://www.ilmetropolitano.it/">LE ULTIME NOTIZIE</a></h3><ul><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/sinner-batte-paul-e-vola-finale-a-roma/'>Sinner batte Paul e vola finale a Roma</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/meloni-non-saremo-tra-i-volenterosi/'>Meloni: Non saremo tra i Volenterosi</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/trasporti-mit-anticipo-tariffe-ferroviarie-merci-segnale-concreto-di-attenzione-al-settore/'>Trasporti: MIT, anticipo tariffe ferroviarie merci segnale concreto di attenzione al settore</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/bando-400-posti-notaio-2022-approvazione-graduatoria/'>Bando 400 posti Notaio 2022, approvazione graduatoria</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/polizia-di-stato-attenzione-alla-truffa-telefonica-con-la-tecnica-dello-spoofing/'>Polizia di Stato: attenzione alla truffa telefonica con la tecnica dello “spoofing”</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/collecorvino-pe-sorvegliato-speciale-trasporta-87-kg-di-marijuana/'>Collecorvino (Pe). Sorvegliato speciale trasporta 87 kg di marijuana</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/clima-mase-avanti-su-energia-sostenibile-e-adattamento-in-africa/'>Clima: MASE, avanti su energia sostenibile e adattamento in Africa</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/tutti-a-tavola-tutti-insieme-ll-comune-di-reggio-calabria-aderisce-alla-giornata-mondiale-della-celiachia/'>“Tutti a tavola, tutti insieme”  ll Comune di Reggio Calabria aderisce alla Giornata mondiale della Celiachia</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/dierre-scrive-la-storia-e-sogna-la-b-cotroneo-esulta-dopo-la-semifinale-play-off-squadra-fenomenale-ora-testa-alla-finale/'>Dierre scrive la storia e sogna la B: Cotroneo esulta dopo la semifinale play off. “Squadra fenomenale, ora testa alla finale”</a> <span class="rss-date">16 Maggio 2025</span></li><li><a class='rsswidget' href='https://www.ilmetropolitano.it/2025/05/16/privacy-tour-2025-terza-tappa-a-catanzaro-21-e-22-maggio/'>Privacy Tour 2025: terza tappa a Catanzaro 21 e 22 Maggio</a> <span class="rss-date">16 Maggio 2025</span></li></ul></div>				</div>
+
+				<div class="footer-column footer-column-4">
+					<div id="advancedmagazine-social-2" class="widget footer-widget widget-advancedmagazine-social widget_social_icons"><h3 class="widget-title">Follow Us</h3><div class="desc">Stay updated via social channels</div><div class="social-icons"><ul><li class="twitter"><a href="https://twitter.com/home"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-twitter.png" alt=""/></a></li><li class="facebook"><a href="https://www.facebook.com/ilmetropolitan/notifications/"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-facebook.png" alt=""/></a></li><li class="youtube"><a href="https://www.youtube.com/channel/UCmWkaSdOo6EdaicCCNWP4AA?view_as=subscriber"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-youtube.png" alt=""/></a></li><li class="linkedin"><a href="https://www.linkedin.com/in/fabrizio-pace-252a0b6/"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-linkedin.png" alt=""/></a></li><li class="instagram"><a href="https://www.instagram.com/ilmetropolitan/?hl=it"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-instagram.png" alt=""/></a></li><li class="rss"><a href="https://www.ilmetropolitano.it/feed/"><img src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/img/icon-rss.png" alt=""/></a></li></ul></div></div><div id="block-2" class="widget footer-widget widget_block"><div id="49035-19"><script src="//ads.themoneytizer.com/s/gen.js?type=19"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=19" ></script></div></div><div id="text-2" class="widget footer-widget widget_text"><h3 class="widget-title">AMAZON</h3>			<div class="textwidget"><p><a target="_blank" href="https://www.amazon.it/ref=nav_logo?&#038;_encoding=UTF8&#038;tag=ilmetro-21&#038;linkCode=ur2&#038;linkId=73bc81f22ebd718f8b74a1aae6db157a&#038;camp=3414&#038;creative=21718"> fai clic qui per aprire una nuova finestra per Amazon</a></p>
+</div>
+		</div><div id="custom_html-2" class="widget_text widget footer-widget widget_custom_html"><h3 class="widget-title">Visitors Map</h3><div class="textwidget custom-html-widget"><!-- Inizio Codice ShinyStat -->
+<script src="//codice.shinystat.com/cgi-bin/getcod.cgi?USER=ilmetropolitano"></script>
+<noscript>
+<a href="https://www.shinystat.com/it/" target="_top">
+<img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=ilmetropolitano" alt="Statistiche web" style="border:0px" /></a>
+</noscript>
+<!-- Fine Codice ShinyStat --></div></div>				</div>												
+
+			</div><!-- .footer-columns -->
+
+		
+		<div class="clear"></div>
+
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">
+
+				© 2010 <a href="https://www.ilmetropolitano.it">Ilmetropolitano.it</a> - IlMetropolitano.it -  testata registrata al tribunale di Reggio Calabria  172010 – proprietà di Associazione No Profit il Metropolitano Partita IVA  02769420809 –  Codice Fiscale 92072430801 -  Direttore Responsabile Fabrizio Pace – Non utilizzare i contenuti di ilMetropolitano.it senza chiedere preventivamente alla redazione - <a href="https://www.ilmetropolitano.it/privacy/">Privacy Policy</a>
+			</div><!-- .site-info -->
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+
+	<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/advanced-magazine\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="49035-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=49035&formatId=6" ></script></div><script type="text/javascript" id="thickbox-js-extra">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Succ. \u00bb","prev":"\u00ab Prec.","image":"Immagine","of":"di","close":"Chiudi","noiframes":"Questa funzionalit\u00e0 richiede il frame in linea. Hai gli iframe disabilitati o il browser non li supporta.","loadingAnimation":"https:\/\/www.ilmetropolitano.it\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105" id="thickbox-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/superfish.js?ver=6.8.1" id="superfish-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/modernizr.min.js?ver=6.8.1" id="modernizr-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/html5.js?ver=6.8.1" id="html5-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/jquery.sticky.js?ver=6.8.1" id="sticky-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/jquery.bxslider.min.js?ver=6.8.1" id="bxslider-js"></script>
+<script type="text/javascript" src="https://www.ilmetropolitano.it/wp-content/themes/advanced-magazine/assets/js/jquery.custom.js?ver=20170808" id="custom-js"></script>
+
+</body>
+</html>

@@ -1,0 +1,841 @@
+
+
+<!DOCTYPE html>
+<!--[if gte IE 9]>
+<html class="no-js lt-ie9 animated-content no-animation no-animation-effects" lang="en-US">
+   <![endif]-->
+   <html lang="it-IT">
+      <head>
+         <!-- Meta Tags -->
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+         <!-- Mobile Specifics -->
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+         <meta name="HandheldFriendly" content="true"/>
+         <meta name="MobileOptimized" content="320"/>
+
+      <link rel="shortcut icon" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="57x57" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-120x120.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-144x144.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-152x152.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="https://ilformat.info/wp-content/themes/ilformat-news/images/icon/apple-touch-icon-180x180.png" />
+
+         <!-- Mobile Internet Explorer ClearType Technology -->
+         <!--[if IEMobile]>  
+         <meta http-equiv="cleartype" content="on">
+         <![endif]-->
+         <!-- Title -->
+         <title>Trump minaccia di interrompere le relazioni con Xi Jinping</title>
+         <!-- RSS & Pingbacks -->
+         <link rel="alternate" type="application/rss+xml" title="ILFORMAT RSS Feed" href="https://ilformat.info/feed/" />
+         <link rel="pingback" href="https://ilformat.info/xmlrpc.php" />
+         
+	<style>
+		.wpcf7-submit{
+			display:none;
+		}
+		.recaptcha-btn{
+			display:block;
+		}
+		.grecaptcha-badge { margin: 10px 0; }
+	</style>
+	<script type="text/javascript">
+		var contactform = [];
+		var checkIfCalled = true;
+		var renderGoogleInvisibleRecaptchaFront = function() {
+			// prevent form submit from enter key
+			jQuery("input[name=_wpcf7]").attr("class","formid");
+				jQuery('.wpcf7-form').on('keyup keypress', "input", function(e) {
+				  var keyCode = e.keyCode || e.which;
+				  if (keyCode === 13) {
+					e.preventDefault();
+					return false;
+				  }
+				});
+
+			jQuery('.wpcf7-submit').each(function(index){
+
+				var checkexclude = 0;
+				var form = jQuery(this).closest('.wpcf7-form');
+				var value = jQuery(form).find(".formid").val();
+				// check form exclude from invisible recaptcha
+								if(checkexclude == 0){
+					// Hide the form orig submit button
+					form.find('.wpcf7-submit').hide();
+
+					// Fetch class and value of orig submit button
+					btnClasses = form.find('.wpcf7-submit').attr('class');
+					btnValue = form.find('.wpcf7-submit').attr('value');
+
+					// Add custom button and recaptcha holder
+
+					form.find('.wpcf7-submit').after('<input type="button" id="wpcf-custom-btn-'+index+'" class="'+btnClasses+'  recaptcha-btn recaptcha-btn-type-css" value="'+btnValue+'" title="'+btnValue+'" >');
+					form.append('<div class="recaptcha-holder" id="recaptcha-holder-'+index+'"></div>');
+					// Recaptcha rendenr from here
+					var holderId = grecaptcha.render('recaptcha-holder-'+index,{
+								'sitekey':'6LfQTt4ZAAAAAPBFxuxIsxfPk9iiy2UcGO-JOnls',
+								'size': 'invisible',
+								'badge' : 'inline', // possible values: bottomright, bottomleft, inline
+								'callback' : function (recaptchaToken) {
+									//console.log(recaptchaToken);
+									var response=jQuery('#recaptcha-holder-'+index).find('.g-recaptcha-response').val();
+									//console.log(response);
+									//Remove old response and store new respone
+									jQuery('#recaptcha-holder-'+index).parent().find(".respose_post").remove();
+									jQuery('#recaptcha-holder-'+index).after('<input type="hidden" name="g-recaptcha-response"  value="'+response+'" class="respose_post">')
+									grecaptcha.reset(holderId);
+
+									if(typeof customCF7Validator !== 'undefined'){
+										if(!customCF7Validator(form)){
+											return;
+										}
+									}
+									// Call default Validator function
+									else if(contactFormDefaultValidator(form)){
+										return;
+									}
+									else{
+										// hide the custom button and show orig submit button again and submit the form
+										jQuery('#wpcf-custom-btn-'+index).hide();
+										form.find('input[type=submit]').show();
+										form.find("input[type=submit]").click();
+										form.find('input[type=submit]').hide();
+										jQuery('#wpcf-custom-btn-'+index).attr('style','');
+									}
+								}
+						},false);
+
+					// action call when click on custom button
+					jQuery('#wpcf-custom-btn-'+index).click(function(event){
+						event.preventDefault();
+						// Call custom validator function
+						if(typeof customCF7Validator == 'function'){
+							if(!customCF7Validator(form)){
+								return false;
+							}
+						}
+						// Call default Validator function
+						else if(contactFormDefaultValidator(form)){
+							return false;
+						}
+						else if(grecaptcha.getResponse(holderId) != ''){
+							grecaptcha.reset(holderId);
+						}
+						else{
+							// execute the recaptcha challenge
+							grecaptcha.execute(holderId);
+						}
+					});
+				}
+			});
+		}
+	</script><script  src="https://www.google.com/recaptcha/api.js?onload=renderGoogleInvisibleRecaptchaFront&render=explicit" async defer></script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<meta property="og:title" content="Trump minaccia di interrompere le relazioni con Xi Jinping"/>
+<meta property="og:description" content="Donald Trump rafforza ulteriormente l&#039;ostilità nei confronti della Cina sul coronavirus: giovedì il presidente americano ha minacciato di interrompere tutte l"/>
+<meta property="og:image" content="https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg"/>
+<meta property="og:image:width" content="871"/>
+<meta property="og:image:height" content="745"/>
+<meta property="og:type" content="article"/>
+<meta property="og:article:published_time" content="2020-05-15 05:00:02"/>
+<meta property="og:article:modified_time" content="2021-11-02 20:31:58"/>
+<meta property="og:article:tag" content="#Covid-19"/>
+<meta property="og:article:tag" content="Cina"/>
+<meta property="og:article:tag" content="FBI"/>
+<meta property="og:article:tag" content="Presidente Donald Trump"/>
+<meta property="og:article:tag" content="presidente Xi Jinping"/>
+<meta property="og:article:tag" content="USA"/>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Trump minaccia di interrompere le relazioni con Xi Jinping"/>
+<meta name="twitter:description" content="Donald Trump rafforza ulteriormente l&#039;ostilità nei confronti della Cina sul coronavirus: giovedì il presidente americano ha minacciato di interrompere tutte l"/>
+<meta name="twitter:image" content="https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg"/>
+<meta name="author" content="Pietro Prudente"/>
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Donald Trump rafforza ulteriormente l&#039;ostilità nei confronti della Cina sul coronavirus: giovedì il presidente americano ha minacciato di interrompere" />
+	<link rel="canonical" href="https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/" />
+	<meta property="og:url" content="https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/" />
+	<meta property="og:site_name" content="ILFORMAT" />
+	<meta property="article:publisher" content="https://www.facebook.com/IlFormat/" />
+	<meta property="article:published_time" content="2020-05-15T03:00:02+00:00" />
+	<meta property="article:modified_time" content="2021-11-02T19:31:58+00:00" />
+	<meta property="og:image" content="https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg" />
+	<meta property="og:image:width" content="871" />
+	<meta property="og:image:height" content="745" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Pietro Prudente" />
+	<meta name="twitter:creator" content="@il_format" />
+	<meta name="twitter:site" content="@il_format" />
+	<meta name="twitter:label1" content="Scritto da" />
+	<meta name="twitter:data1" content="Pietro Prudente" />
+	<meta name="twitter:label2" content="Tempo di lettura stimato" />
+	<meta name="twitter:data2" content="3 minuti" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#article","isPartOf":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/"},"author":{"name":"Pietro Prudente","@id":"https://ilformat.info/#/schema/person/dabb190f299bc8888d80f1e991852d75"},"headline":"Trump minaccia di interrompere le relazioni con Xi Jinping","datePublished":"2020-05-15T03:00:02+00:00","dateModified":"2021-11-02T19:31:58+00:00","mainEntityOfPage":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/"},"wordCount":544,"commentCount":0,"publisher":{"@id":"https://ilformat.info/#organization"},"image":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#primaryimage"},"thumbnailUrl":"https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg","keywords":["#Covid-19","Cina","FBI","Presidente Donald Trump","presidente Xi Jinping","USA"],"articleSection":["ESTERI"],"inLanguage":"it-IT","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#respond"]}]},{"@type":"WebPage","@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/","url":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/","name":"Trump minaccia di interrompere le relazioni con Xi Jinping","isPartOf":{"@id":"https://ilformat.info/#website"},"primaryImageOfPage":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#primaryimage"},"image":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#primaryimage"},"thumbnailUrl":"https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg","datePublished":"2020-05-15T03:00:02+00:00","dateModified":"2021-11-02T19:31:58+00:00","description":"Donald Trump rafforza ulteriormente l'ostilità nei confronti della Cina sul coronavirus: giovedì il presidente americano ha minacciato di interrompere","breadcrumb":{"@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#breadcrumb"},"inLanguage":"it-IT","potentialAction":[{"@type":"ReadAction","target":["https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/"]}]},{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#primaryimage","url":"https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg","contentUrl":"https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping.jpg","width":871,"height":745},{"@type":"BreadcrumbList","@id":"https://ilformat.info/2020/05/15/trump-minaccia-di-interrompere-le-relazioni-con-xi-jinping/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ilformat.info/"},{"@type":"ListItem","position":2,"name":"Trump minaccia di interrompere le relazioni con Xi Jinping"}]},{"@type":"WebSite","@id":"https://ilformat.info/#website","url":"https://ilformat.info/","name":"ILFORMAT","description":"Testata Giornalistica, quotidiano, agenzia stampa","publisher":{"@id":"https://ilformat.info/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ilformat.info/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"it-IT"},{"@type":"Organization","@id":"https://ilformat.info/#organization","name":"ilFormat.info","url":"https://ilformat.info/","logo":{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://ilformat.info/#/schema/logo/image/","url":"","contentUrl":"","caption":"ilFormat.info"},"image":{"@id":"https://ilformat.info/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/IlFormat/","https://twitter.com/il_format","https://www.instagram.com/ilformat.info/","https://www.youtube.com/channel/UC4UaAZVzhJRVHl4L8-E5kkQ"]},{"@type":"Person","@id":"https://ilformat.info/#/schema/person/dabb190f299bc8888d80f1e991852d75","name":"Pietro Prudente","image":{"@type":"ImageObject","inLanguage":"it-IT","@id":"https://ilformat.info/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/e3b323955feb64550499a134772a24450f2b0aa1d61e92b74fc3bc92beb66bb5?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/e3b323955feb64550499a134772a24450f2b0aa1d61e92b74fc3bc92beb66bb5?s=96&d=mm&r=g","caption":"Pietro Prudente"},"url":"https://ilformat.info/author/pietro-prudente/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s7.addthis.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ilformat.info\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://ilformat.info/wp-includes/css/dist/block-library/style.min.css?ver=6.8.1' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://ilformat.info/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsw_social-icons-css' href='https://ilformat.info/wp-content/plugins/wp-social-widget/assets/css/social-icons.css?ver=2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsw_social-css-css' href='https://ilformat.info/wp-content/plugins/wp-social-widget/assets/css/social-style.css?ver=2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://ilformat.info/wp-content/themes/ilformat-news/css/bootstrap.css?ver=2.7' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='https://ilformat.info/wp-content/themes/ilformat-news/css/style.css?ver=2.96' type='text/css' media='all' />
+<link rel='stylesheet' id='typhography-css' href='https://ilformat.info/wp-content/themes/ilformat-news/css/typhography.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css' href='https://ilformat.info/wp-content/themes/ilformat-news/css/responsive.css?ver=3.4' type='text/css' media='all' />
+<script type="text/javascript" src="https://ilformat.info/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/plugins/cf7-invisible-recaptcha/js/cf7_invisible_recaptcha.js?ver=1.2.3" id="cf7_invisible_recaptcha_functions-js"></script>
+<script type="text/javascript" id="wp-statistics-tracker-js-extra">
+/* <![CDATA[ */
+var WP_Statistics_Tracker_Object = {"hitRequestUrl":"https:\/\/ilformat.info\/wp-json\/wp-statistics\/v2\/hit?wp_statistics_hit_rest=yes&track_all=1&current_page_type=post&current_page_id=36027&search_query&page_uri=LzIwMjAvMDUvMTUvdHJ1bXAtbWluYWNjaWEtZGktaW50ZXJyb21wZXJlLWxlLXJlbGF6aW9uaS1jb24teGktamlucGluZy8","keepOnlineRequestUrl":"https:\/\/ilformat.info\/wp-json\/wp-statistics\/v2\/online?wp_statistics_hit_rest=yes&track_all=1&current_page_type=post&current_page_id=36027&search_query&page_uri=LzIwMjAvMDUvMTUvdHJ1bXAtbWluYWNjaWEtZGktaW50ZXJyb21wZXJlLWxlLXJlbGF6aW9uaS1jb24teGktamlucGluZy8","option":{"dntEnabled":true,"cacheCompatibility":false}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/plugins/wp-statistics/assets/js/tracker.js?ver=6.8.1" id="wp-statistics-tracker-js"></script>
+
+<!-- Snippet del tag Google (gtag.js) aggiunto da Site Kit -->
+
+<!-- Snippet Google Analytics aggiunto da Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-WKPJN2L" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["ilformat.info"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-WKPJN2L");
+/* ]]> */
+</script>
+
+<!-- Snippet del tag Google (gtag.js) finale aggiunto da Site Kit -->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ilformat.info/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://ilformat.info/?p=36027' />
+<meta name="generator" content="Site Kit by Google 1.152.1" /><!-- Analytics by WP Statistics v14.2 - https://wp-statistics.com/ -->
+
+<!-- Meta tag Google AdSense aggiunti da Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- Fine dei meta tag Google AdSense aggiunti da Site Kit -->
+
+<!-- Meta Pixel Code -->
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js?v=next');
+</script>
+<!-- End Meta Pixel Code -->
+
+      <script type='text/javascript'>
+        var url = window.location.origin + '?ob=open-bridge';
+        fbq('set', 'openbridge', '403134281662350', url);
+      </script>
+    <script type='text/javascript'>fbq('init', '403134281662350', {}, {
+    "agent": "wordpress-6.8.1-3.0.13"
+})</script><script type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script>
+<!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=403134281662350&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+<link rel="icon" href="https://ilformat.info/wp-content/uploads/2023/09/cropped-345138358_1433651270734640_1154737469319097873_n-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://ilformat.info/wp-content/uploads/2023/09/cropped-345138358_1433651270734640_1154737469319097873_n-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ilformat.info/wp-content/uploads/2023/09/cropped-345138358_1433651270734640_1154737469319097873_n-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://ilformat.info/wp-content/uploads/2023/09/cropped-345138358_1433651270734640_1154737469319097873_n-270x270.jpg" />
+                     <!-- Iubenda -->
+            <script type="text/javascript">
+            var _iub = _iub || [];
+            _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"enableCMP":true,"googleAdditionalConsentMode":true,"isTCFConsentGlobal":false,"whitelabel":false,"lang":"it","siteId":2051914,"perPurposeConsent":true,"cookiePolicyId":87457246, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-bottom-left" }};
+            </script>
+            <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
+            <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+            <!-- /Iubenda -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-122011528-1', 'auto');
+              ga('set', 'anonymizeIp', true);
+              ga('send', 'pageview');
+
+            </script>
+            <!-- Google Analytics -->
+                  <script data-ad-client="ca-pub-8817578573401247" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </head>
+      <body class="wp-singular post-template-default single single-post postid-36027 single-format-standard wp-theme-ilformat-news">
+         <div id="responsive-menu" class="responsive-menu"><ul><li id="menu-item-41693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-41693"><a href="https://ilformat.info/">Home</a></li>
+<li id="menu-item-41700" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41700"><a href="https://ilformat.info/categoria/politica/">Politica</a></li>
+<li id="menu-item-41697" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41697"><a href="https://ilformat.info/categoria/economia/">Economia</a></li>
+<li id="menu-item-41699" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-41699"><a href="https://ilformat.info/categoria/esteri/">Esteri</a></li>
+<li id="menu-item-41694" class="sub-menu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41694"><a href="https://ilformat.info/categoria/attualita/">Attualità  <i class="icon-angle-double-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-41702" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41702"><a href="https://ilformat.info/categoria/attualita/ambiente/">Ambiente</a></li>
+	<li id="menu-item-41703" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41703"><a href="https://ilformat.info/categoria/attualita/salute/">Salute</a></li>
+	<li id="menu-item-41704" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41704"><a href="https://ilformat.info/categoria/attualita/tecnologia/">Tecnologia</a></li>
+</ul>
+</li>
+<li id="menu-item-41695" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41695"><a href="https://ilformat.info/categoria/cronaca/">Cronaca</a></li>
+<li id="menu-item-41696" class="sub-menu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41696"><a href="https://ilformat.info/categoria/cultura-interno/">Cultura <i class="icon-angle-double-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-41705" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41705"><a href="https://ilformat.info/categoria/cultura-interno/cinema-spettacoli/">Cinema</a></li>
+	<li id="menu-item-41706" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41706"><a href="https://ilformat.info/categoria/cultura-interno/libri/">Libri</a></li>
+	<li id="menu-item-41707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41707"><a href="https://ilformat.info/categoria/cultura-interno/teatro-spettacoli/">Teatro</a></li>
+	<li id="menu-item-41708" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41708"><a href="https://ilformat.info/categoria/cultura-interno/tv/">Tv</a></li>
+</ul>
+</li>
+<li id="menu-item-41701" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41701"><a href="https://ilformat.info/categoria/sport/">Sport</a></li>
+<li id="menu-item-41698" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41698"><a href="https://ilformat.info/categoria/editoriale/">Editoriale</a></li>
+<li><div id="search-bar-mobile"><form role="search" method="get" action="https://ilformat.info/"><span>Cerca</span><input  name="s" type="text" placeholder="Scrivi qui la parola chiave..."></form></div></li></ul></div>         <div class="wrapper">
+<header id="header-desktop">
+   <div id="first-header" class="">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-1 col-md-2 col-sm-2">
+               <div id="news-top-title">
+                  <a href="https://ilformat.info/#news">
+                  News
+                  </a>
+               </div>
+            </div>
+            <div class="col-lg-7 col-md-8 col-sm-10 align-xs-center">
+               <div id="news-top-wrapper" class="flexslider">
+                                    <ul class="slides">
+                     <li>
+                        <a title="Skincare 2025: le tendenze che stanno rivoluzionando la cura della pelle" href="https://ilformat.info/2025/05/16/skincare-2025-le-tendenze-che-stanno-rivoluzionando-la-cura-della-pelle/">Skincare 2025: le tendenze che stanno rivoluzionando la cura della pelle</a></li>
+                     <li>
+                        <a title="Il Bologna vince la Coppa Italia 2025: un trionfo storico per i rossoblù" href="https://ilformat.info/2025/05/14/il-bologna-vince-la-coppa-italia-2025-un-trionfo-storico-per-i-rossoblu/">Il Bologna vince la Coppa Italia 2025: un trionfo storico per i rossoblù</a></li>
+                     <li>
+                        <a title="“Zona Franca”" href="https://ilformat.info/2025/05/11/zona-franca/">“Zona Franca”</a></li>
+                     <li>
+                        <a title="Robert Francis Prevost, 69 anni, è il primo Papa americano Ha scelto il nome di Leone XIV: una figura ponte tra Nord e Sud del continente" href="https://ilformat.info/2025/05/08/obert-francis-prevost-69-anni-e-il-primo-papa-americano-ha-scelto-il-nome-di-leone-xiv-una-figura-ponte-tra-nord-e-sud-del-continente/">Robert Francis Prevost, 69 anni, è il primo Papa americano Ha scelto il ...</a></li>
+                     <li>
+                        <a title="Francesco Caroprese è Il Nuovo Vicepresidente.Confermati Spadari Alla Segreteria e Dossena Tesoriere" href="https://ilformat.info/2025/05/08/francesco-caroprese-e-il-nuovo-vicepresidente-confermati-spadari-alla-segreteria-e-dossena-tesoriere/">Francesco Caroprese è Il Nuovo Vicepresidente.Confermati Spadari Alla Segreteria e Dossena Tesoriere</a></li>
+                     <li>
+                        <a title="Luka Luna e il Cammino della Libertà: l’Ultimo Sciamano Bianco" href="https://ilformat.info/2025/05/01/luka-luna-e-il-cammino-della-liberta-lultimo-sciamano-bianco/">Luka Luna e il Cammino della Libertà: l’Ultimo Sciamano Bianco</a></li>
+                                       </ul>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-2 hidden-xs hidden-sm">
+               <div id="top-date" class="hidden-md">
+                  Sabato 17 Maggio 2025               </div>
+               <div id="header-social">
+                  <ul>
+                     <li>
+                        <a title="Segui il Format su Facebook" rel="nofollow" target="_blank" href="https://www.facebook.com/IlFormat">
+                           <i class="icon-facebook"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a title="Segui il Format su Twitter" rel="nofollow" target="_blank" href="https://twitter.com/il_format">
+                           <i class="icon-twitter"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a title="Segui il Format su YouTube" rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UC4UaAZVzhJRVHl4L8-E5kkQ">
+                           <i class="icon-youtube"></i>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="ultimate-header">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-4 col-xs-4 hidden-lg hidden-md">
+            <div class="menu-button">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            </div>
+            <div class="col-md-4 col-sm-8 col-xs-8">
+               <div id="logo-header" class="hidden-xs hidden-sm">
+                  <a href="https://ilformat.info/">
+                  <img src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-standard.jpg" alt="" class="standard-img">
+                  <img src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-retina.jpg" alt="" class="retina-img">
+                  </a>
+               </div>
+               <div id="logo-header-mobile" class="hidden-lg hidden-md">
+                  <a href="https://ilformat.info/">
+                  <img src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-standard-mobile.jpg" alt="" class="standard-img">
+                  <img src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-retina-mobile.jpg" alt="" class="retina-img">
+                  </a>     
+               </div>
+            </div>
+            <div class="clearfix hidden-lg hidden-md"></div>
+            <div class="col-md-8 col-xs-12 col-sm-12">
+               <div id="bn-header">
+                  
+
+
+<a rel="nofollow" id="block_1_click_600" target="_blank" href="">
+	<img src="https://ilformat.info/wp-content/uploads/2024/10/2.jpg" alt="adv-600">	
+</a>
+
+ 	<script>
+		ga('send', 'event', 'Header - 728 x 90', 'Prestiti2', 'Impression');
+		jQuery('#block_1_click_600').on('click', function(event) {
+			ga('send', 'event', 'Header - 728 x 90', 'Prestiti2', 'Click');
+		});
+	</script> 
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="menu-header" class="hidden-sm hidden-xs">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div id="menu-desktop-wrapper-inner">
+               <div id="menu-header-wrapper" class="menu-header"><ul><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-41693"><a href="https://ilformat.info/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41700"><a href="https://ilformat.info/categoria/politica/">Politica</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41697"><a href="https://ilformat.info/categoria/economia/">Economia</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-41699"><a href="https://ilformat.info/categoria/esteri/">Esteri</a></li>
+<li class="sub-menu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41694"><a href="https://ilformat.info/categoria/attualita/">Attualità  <i class="icon-angle-double-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41702"><a href="https://ilformat.info/categoria/attualita/ambiente/">Ambiente</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41703"><a href="https://ilformat.info/categoria/attualita/salute/">Salute</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41704"><a href="https://ilformat.info/categoria/attualita/tecnologia/">Tecnologia</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41695"><a href="https://ilformat.info/categoria/cronaca/">Cronaca</a></li>
+<li class="sub-menu menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-41696"><a href="https://ilformat.info/categoria/cultura-interno/">Cultura <i class="icon-angle-double-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41705"><a href="https://ilformat.info/categoria/cultura-interno/cinema-spettacoli/">Cinema</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41706"><a href="https://ilformat.info/categoria/cultura-interno/libri/">Libri</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41707"><a href="https://ilformat.info/categoria/cultura-interno/teatro-spettacoli/">Teatro</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41708"><a href="https://ilformat.info/categoria/cultura-interno/tv/">Tv</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41701"><a href="https://ilformat.info/categoria/sport/">Sport</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41698"><a href="https://ilformat.info/categoria/editoriale/">Editoriale</a></li>
+<li class="search-menu"><a href="#"><i class="icon-search"></i></a></li></ul></div>                  <div id="search-bar">
+                     <div id="search-bar-inner">
+                     <form role="search" method="get" action="https://ilformat.info/">
+                        <ul>
+                           <li><input  name="s" type="text" placeholder="Scrivi qui la parola chiave..."></li>
+                           <li><input type="submit" class="btn" value="Cerca"></li>
+                        </ul>
+                     </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+      <div class="margin-40"></div>
+<div class="container">
+   <div id="content-row" class="row">
+      <div id="content-right" class="col-md-9">
+         <div id="post-wrapper">
+            <div class="share-post">
+               <div class="addthis_inline_share_toolbox"></div>
+            </div>
+            <div id="single-post-category">
+               <a href="https://ilformat.info/categoria/esteri/"><< ESTERI</a>            </div>
+            <div id="single-post-title">
+               <h1>Trump minaccia di interrompere le relazioni con Xi Jinping</h1>
+            </div>
+                        <div id="single-post-meta">
+                <strong><a href="https://ilformat.info/author/pietro-prudente/" title="Articoli scritti da Pietro Prudente" rel="author">Pietro Prudente</a></strong> <span>|</span> 15 Maggio 2020 <span>|</span> <a href="https://ilformat.info/categoria/esteri/">ESTERI</a>            </div>
+            <div id="single-post-image">
+               <img width="774" height="420" src="https://ilformat.info/wp-content/uploads/2020/05/Trump-vs-Xi-Jinping-774x420.jpg" class="attachment-image_single_post size-image_single_post wp-post-image" alt="" decoding="async" fetchpriority="high" />            </div>
+            <div id="single-post-content">
+				<div class="line textcontent_img watermark">
+<p><span><strong>Donald Trump</strong> rafforza ulteriormente l&#8217;ostilità nei confronti della <strong>Cina</strong> sul coronavirus: giovedì il presidente americano ha minacciato di interrompere tutte le relazioni con il gigante asiatico e ha assicurato che non vuole più parlare con il suo presidente.</span>
+<p><span>L&#8217;inquilino della <strong>Casa Bianca</strong> ha insistito per diverse settimane che il pesante bilancio del <strong>Covid-19</strong> &#8211; quasi 300.000 morti in tutto il mondo &#8211; poteva essere evitato se la Cina avesse agito in modo responsabile sin dall&#8217;inizio del virus scoppiato nel Città di Wuhan.</span>
+</div>
+<p><span>In un&#8217;intervista ha dichiarato di essere &#8220;molto deluso&#8221; dall&#8217;atteggiamento di <strong>Pechino</strong> e ha respinto l&#8217;idea di parlare direttamente con il suo omologo <strong>Xi Jinping</strong> per allentare le tensioni.</span>			               <div class="bn-single-post">
+			               	
+<a rel="nofollow" id="block_4_click_809" target="_blank" href="https://www.fratelliriva.it/maialino-doro/">
+	<img src="https://ilformat.info/wp-content/uploads/2025/04/salami_filzetta.jpg" alt="adv-809">	
+</a>
+
+ 	<script>
+		ga('send', 'event', 'Single Post Content - 336 x 280', 'Maialino 1', 'Impression');
+		jQuery('#block_4_click_809').on('click', function(event) {
+			ga('send', 'event', 'Single Post Content - 336 x 280', 'Maialino 1', 'Click');
+		});
+	</script>
+
+			               </div>
+                        
+<p><span>&#8220;Ho un&#8217;ottima relazione con Xi ma al momento non voglio parlargli&#8221;, ha detto.</span>
+<p><span>Alla domanda sulle varie misure di ritorsione che stava prendendo in considerazione, Trump, che in questi giorni ha parlato della possibile introduzione di tasse doganali punitive, è stato evasivo e minaccioso.</span>
+<p>&#8220;Ci sono molte cose che possiamo fare. Potremmo porre fine a tutte le relazioni&#8221;, ha detto.
+<div class="line textcontent_img watermark">
+<p><span>&#8220;Se lo facessimo, cosa succederebbe?&#8221; Ha continuato. &#8220;Vorremmo risparmiare 500 miliardi di dollari se interrompessimo tutte le relazioni&#8221;, ha detto il miliardario repubblicano, che è abituato ad avvertire senza preavviso.</span>
+<p><span>&#8220;Ciò che è successo al mondo e al nostro paese è molto triste, tutte queste morti&#8221;, ha detto Donald Trump, c<strong>riticato negli Stati Uniti per la sua mancanza di empatia nei confronti delle vittime.</strong></span>
+</div>
+<p><span>&#8220;Avrebbero potuto fermare il virus in Cina, da dove proveniva. Ma non è successo&#8221;, ha detto il presidente americano, correndo per un secondo mandato il 3 novembre e rende la buona salute dell&#8217;economia uno dei principali argomenti della sua campagna.</span>
+<p><span>Pechino afferma di aver trasmesso tutte le informazioni il più rapidamente possibile all&#8217;<strong>Organizzazione mondiale della sanità</strong> (OMS) e ad altri paesi, compresi gli Stati Uniti.</span>
+<p><span>Le due maggiori potenze economiche del mondo sono impegnate in un&#8217;escalation verbale con esiti incerti.</span>
+<p>&#8220;Mentre gli Stati Uniti e i suoi alleati si coordinano per una risposta collettiva e trasparente per salvare vite umane, la Cina continua a mettere a tacere scienziati, giornalisti e cittadini e a diffondere disinformazione&#8221;, ha dichiarato <strong>Mike Pompeo</strong> capo della diplomazia americana.
+<div class="line textcontent_img watermark">
+<p><span>I senatori del suo campo repubblicano, molto arrabbiati con Pechino, hanno presentato martedì un disegno di legge che darebbe al presidente il potere di imporre sanzioni alla Cina se non aiutasse in modo trasparente a far luce sull&#8217;origine della patologia.</span>
+<p><span><strong>Washington</strong> mercoledì ha accusato Pechino di aver tentato di hackerare la ricerca americana su un vaccino per il nuovo coronavirus.</span>
+</div>
+<p><span>&#8220;I tentativi della Cina di colpire i settori (salute e ricerca) rappresentano una grave minaccia alla risposta del nostro paese a Covid-19&#8221;, ha affermato l&#8217;<strong>FBI</strong>.</span>
+<p><span>Pechino ha immediatamente denunciato questa &#8220;diffamazione americana&#8221;.</span>
+<p>&#8220;La Cina è in prima linea nella ricerca sui vaccini e nel trattamento di Covid-19. Pertanto, ha più ragioni di chiunque di diffidare del furto di informazioni su Internet&#8221;, ha affermato <strong>Zhao Lijian</strong>, portavoce del ministero degli Affari esteri.
+<p><span>All&#8217;ipotesi di eventuali prove che avrebbe dovuto dimostrare che il virus proveniva da un laboratorio di Wuhan, Trump è stato molto meno categorico rispetto al passato, anche se sembrava fare marcia indietro.</span>
+<p><span>&#8220;Abbiamo molte informazioni. Ma la cosa peggiore è che il virus provenga dal laboratorio o dai pipistrelli, e che proviene dalla Cina e che dovrebbero smetterla. &#8220;</span>
+            </div>
+                        <div id="single-post-tag">
+               <strong>TAG:</strong> 
+               <a href="https://ilformat.info/tag/covid-19">#Covid-19</a>, <a href="https://ilformat.info/tag/cina">Cina</a>, <a href="https://ilformat.info/tag/fbi">FBI</a>, <a href="https://ilformat.info/tag/presidente-donald-trump">Presidente Donald Trump</a>, <a href="https://ilformat.info/tag/presidente-xi-jinping">presidente Xi Jinping</a>, <a href="https://ilformat.info/tag/usa">USA</a>            </div>
+                        <div class="share-post share-bottom">
+               <div class="addthis_inline_share_toolbox"></div>
+            </div>
+            <div class="margin-10"></div>
+            <div id="bn-single-post" class="align-center margin-40">
+               
+<a rel="nofollow" id="block_2_click_565" target="_blank" href="https://www.trekkingtaroceno.it/52gallerie/">
+	<img src="https://ilformat.info/wp-content/uploads/2024/08/GAE.png" alt="adv-565">	
+</a>
+
+ 	<script>
+		ga('send', 'event', 'Bottom Post 729 x 90', 'Gallerie Pasubio', 'Impression');
+		jQuery('#block_2_click_565').on('click', function(event) {
+			ga('send', 'event', 'Bottom Post 729 x 90', 'Gallerie Pasubio', 'Click');
+		});
+	</script>
+
+            </div>
+            <div class="margin-20">
+            <!-- Composite Start -->
+            <div id="M718173ScriptRootC1145928"></div>
+            <script src="https://jsc.epeex.io/i/l/ilformat.info.1145928.js" async></script>
+            <!-- Composite End -->
+            </div>   
+            <div class="row">
+   <div class="col-md-12">
+      <div class="category-title">
+         <span>Articoli Correlati</span>
+      </div>
+   </div>
+</div>
+<div id="loop-style-standard" class="related-post">
+   <div class="row">
+            <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Addio a Val Kilmer, celebre attore di &#8220;Top Gun&#8221; e &#8220;Batman Forever&#8221;" href="https://ilformat.info/2025/04/02/addio-a-val-kilmer-celebre-attore-di-top-gun-e-batman-forever/">
+               <img width="281" height="179" src="https://ilformat.info/wp-content/uploads/2025/04/5.jpg" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               2 Aprile 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Addio a Val Kilmer, celebre attore di &#8220;Top Gun&#8221; e &#8220;Batman Forever&#8221;" href="https://ilformat.info/2025/04/02/addio-a-val-kilmer-celebre-attore-di-top-gun-e-batman-forever/">Addio a Val Kilmer, celebre attore di &#8220;Top Gun&#8221; e &#8220;Batman Forever&#8221;</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Dal 2 aprile, nuove regole per i viaggi in Gran Bretagna" href="https://ilformat.info/2025/04/01/dal-2-aprile-nuove-regole-per-i-viaggi-in-gran-bretagna/">
+               <img width="300" height="168" src="https://ilformat.info/wp-content/uploads/2025/04/4.jpg" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               1 Aprile 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Dal 2 aprile, nuove regole per i viaggi in Gran Bretagna" href="https://ilformat.info/2025/04/01/dal-2-aprile-nuove-regole-per-i-viaggi-in-gran-bretagna/">Dal 2 aprile, nuove regole per i viaggi in Gran Bretagna</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Amsterdam : Attacco con Coltello in Piazza Dam Cinque Feriti, Arrestato un Sospettato" href="https://ilformat.info/2025/03/27/amsterdam-attacco-con-coltello-in-piazza-dam-cinque-feriti-arrestato-un-sospettato/">
+               <img width="360" height="220" src="https://ilformat.info/wp-content/uploads/2025/03/5-1-360x220.jpg" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               27 Marzo 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Amsterdam : Attacco con Coltello in Piazza Dam Cinque Feriti, Arrestato un Sospettato" href="https://ilformat.info/2025/03/27/amsterdam-attacco-con-coltello-in-piazza-dam-cinque-feriti-arrestato-un-sospettato/">Amsterdam : Attacco con Coltello in Piazza Dam Cinque Feriti, Arrestato un Sospettato</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Lando Norris trionfa in Australia: la McLaren domina ma rischia nel finale" href="https://ilformat.info/2025/03/16/lando-norris-trionfa-in-australia-la-mclaren-domina-ma-rischia-nel-finale/">
+               <img width="360" height="220" src="https://ilformat.info/wp-content/uploads/2025/03/6-360x220.webp" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ilformat.info/wp-content/uploads/2025/03/6-360x220.webp 360w, https://ilformat.info/wp-content/uploads/2025/03/6-720x440.webp 720w" sizes="auto, (max-width: 360px) 100vw, 360px" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               16 Marzo 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Lando Norris trionfa in Australia: la McLaren domina ma rischia nel finale" href="https://ilformat.info/2025/03/16/lando-norris-trionfa-in-australia-la-mclaren-domina-ma-rischia-nel-finale/">Lando Norris trionfa in Australia: la McLaren domina ma rischia nel finale</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Incontro a Gedda tra Stati Uniti e delegazione ucraina" href="https://ilformat.info/2025/03/11/incontro-a-gedda-tra-stati-uniti-e-delegazione-ucraina/">
+               <img width="359" height="220" src="https://ilformat.info/wp-content/uploads/2025/03/5-1-359x220.webp" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               11 Marzo 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Incontro a Gedda tra Stati Uniti e delegazione ucraina" href="https://ilformat.info/2025/03/11/incontro-a-gedda-tra-stati-uniti-e-delegazione-ucraina/">Incontro a Gedda tra Stati Uniti e delegazione ucraina</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Sean Baker e il suo &#8220;Anora&#8221; sbanca la notte degli Oscar 2025" href="https://ilformat.info/2025/03/03/sean-baker-e-il-suo-anora-sbanca-la-notte-degli-oscar-2025/">
+               <img width="360" height="220" src="https://ilformat.info/wp-content/uploads/2025/03/4-360x220.jpg" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               3 Marzo 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Sean Baker e il suo &#8220;Anora&#8221; sbanca la notte degli Oscar 2025" href="https://ilformat.info/2025/03/03/sean-baker-e-il-suo-anora-sbanca-la-notte-degli-oscar-2025/">Sean Baker e il suo &#8220;Anora&#8221; sbanca la notte degli Oscar 2025</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Beyoncé trionfa ai Grammy 2025: vince Album dell’Anno con Cowboy Carter" href="https://ilformat.info/2025/02/03/beyonce-trionfa-ai-grammy-2025-vince-album-dellanno-con-cowboy-carter/">
+               <img width="183" height="220" src="https://ilformat.info/wp-content/uploads/2025/02/6-183x220.jpg" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               3 Febbraio 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Beyoncé trionfa ai Grammy 2025: vince Album dell’Anno con Cowboy Carter" href="https://ilformat.info/2025/02/03/beyonce-trionfa-ai-grammy-2025-vince-album-dellanno-con-cowboy-carter/">Beyoncé trionfa ai Grammy 2025: vince Album dell’Anno con Cowboy Carter</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Washington: scontro tra aereo regionale ed elicottero militare" href="https://ilformat.info/2025/01/30/washington-scontro-tra-aereo-regionale-ed-elicottero-militare/">
+               <img width="360" height="220" src="https://ilformat.info/wp-content/uploads/2025/01/7-1-360x220.webp" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ilformat.info/wp-content/uploads/2025/01/7-1-360x220.webp 360w, https://ilformat.info/wp-content/uploads/2025/01/7-1-720x440.webp 720w" sizes="auto, (max-width: 360px) 100vw, 360px" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               30 Gennaio 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Washington: scontro tra aereo regionale ed elicottero militare" href="https://ilformat.info/2025/01/30/washington-scontro-tra-aereo-regionale-ed-elicottero-militare/">Washington: scontro tra aereo regionale ed elicottero militare</a></h3>
+            </div>
+         </div>
+      </div>
+                  <div class="col-md-4 col-sm-6">
+         <div class="post-style-standard-item eq-height">
+            <div class="post-style-standard-image">
+               <a title="Donald Trump pronto a giurare come 47° Presidente degli Stati Uniti: una cerimonia ricca di simboli e annunci" href="https://ilformat.info/2025/01/20/donald-trump-pronto-a-giurare-come-47-presidente-degli-stati-uniti-una-cerimonia-ricca-di-simboli-e-annunci/">
+               <img width="360" height="220" src="https://ilformat.info/wp-content/uploads/2025/01/T-360x220.avif" class="attachment-image_small_loop_standard size-image_small_loop_standard wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://ilformat.info/wp-content/uploads/2025/01/T-360x220.avif 360w, https://ilformat.info/wp-content/uploads/2025/01/T-720x440.avif 720w" sizes="auto, (max-width: 360px) 100vw, 360px" />               </a>
+            </div>
+            <div class="post-style-standard-date">
+               20 Gennaio 2025 | <a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>            </div>
+            <div class="post-style-standard-title">
+               <h3><a title="Donald Trump pronto a giurare come 47° Presidente degli Stati Uniti: una cerimonia ricca di simboli e annunci" href="https://ilformat.info/2025/01/20/donald-trump-pronto-a-giurare-come-47-presidente-degli-stati-uniti-una-cerimonia-ricca-di-simboli-e-annunci/">Donald Trump pronto a giurare come 47° Presidente degli Stati Uniti: una ...</a></h3>
+            </div>
+         </div>
+      </div>
+               
+   </div>
+</div>         </div>
+      </div>
+      <div id="content-left" class="col-md-3">
+         <div id="sidebar">
+            <div id="block-14" class="widget widget_block">
+<pre class="wp-block-code"><code></code></pre>
+</div>         </div>
+      </div>
+   </div>
+</div>
+<div class="margin-60"></div>   
+<footer>
+   <div id="first-footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4 margin-sm-30">
+               <div id="footer-text" class="align-center">
+                  <div class="margin-30">
+                     <img alt="Il Format - Logo Footer Standard" src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-footer-standard.png" class="standard-img">
+                     <img alt="Il Format - Logo Footer Retina" src="https://ilformat.info/wp-content/themes/ilformat-news/images/logo-footer-retina.png" class="retina-img">
+                  </div>
+                  <p>Le foto, video e testi presenti su ilformat.info provengono anche attraverso la rete Internet: per utilizzo informativo, didattico, scientifico e non a scopo di lucro. Al fine di accettare il libero regime di circolazione e non violare il diritto d'autore o altri diritti esclusivi verranno effettuate le opportune verifiche. Per segnalare alla redazione eventuali errori nell'uso di materiale riservato.</p>
+                  <p>Testata Giornalistica Registrata<br>
+                     al Tribunale di Vicenza n° 7/2018
+                  </p>
+                  <p>Scrivici: <span class="email-spam">redazione [at] ilformat.info</span></p>
+                  <!-- <p><em>Non forniamo consulenza in materia di investimenti in nessuna circostanza.</em></p> -->
+               </div>
+            </div>
+            <div class="col-md-4 margin-sm-30">
+               <div class="sidebar-footer">
+                  <div id="categories-3" class="widget-footer clearfix widget_categories"><div class="widget-title-footer">Categorie</div>
+			<ul>
+					<li class="cat-item cat-item-5900"><a href="https://ilformat.info/categoria/attualita/ambiente/">AMBIENTE</a>
+</li>
+	<li class="cat-item cat-item-13864"><a href="https://ilformat.info/categoria/arte/">ARTE</a>
+</li>
+	<li class="cat-item cat-item-13865"><a href="https://ilformat.info/categoria/cultura-interno/arte-cultura-interno/">ARTE</a>
+</li>
+	<li class="cat-item cat-item-62"><a href="https://ilformat.info/categoria/attualita/">ATTUALITÀ</a>
+</li>
+	<li class="cat-item cat-item-845"><a href="https://ilformat.info/categoria/cultura-interno/cinema-spettacoli/">CINEMA</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://ilformat.info/categoria/cronaca/">CRONACA</a>
+</li>
+	<li class="cat-item cat-item-13845"><a href="https://ilformat.info/categoria/cucina/">CUCINA</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="https://ilformat.info/categoria/cultura-interno/">CULTURA</a>
+</li>
+	<li class="cat-item cat-item-29"><a href="https://ilformat.info/categoria/economia/">ECONOMIA</a>
+</li>
+	<li class="cat-item cat-item-247"><a href="https://ilformat.info/categoria/editoriale/">EDITORIALE</a>
+</li>
+	<li class="cat-item cat-item-5669"><a href="https://ilformat.info/categoria/esteri/">ESTERI</a>
+</li>
+	<li class="cat-item cat-item-6631"><a href="https://ilformat.info/categoria/europa/">EUROPA</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://ilformat.info/categoria/il-format/">IL FORMAT</a>
+</li>
+	<li class="cat-item cat-item-304"><a href="https://ilformat.info/categoria/inchieste/">INCHIESTE</a>
+</li>
+	<li class="cat-item cat-item-11068"><a href="https://ilformat.info/categoria/cultura-interno/intervista/">INTERVISTA</a>
+</li>
+	<li class="cat-item cat-item-11569"><a href="https://ilformat.info/categoria/interviste/">INTERVISTE</a>
+</li>
+	<li class="cat-item cat-item-8303"><a href="https://ilformat.info/categoria/lopinione/">L&#039;OPINIONE</a>
+</li>
+	<li class="cat-item cat-item-5699"><a href="https://ilformat.info/categoria/cultura-interno/libri/">LIBRI</a>
+</li>
+	<li class="cat-item cat-item-6168"><a href="https://ilformat.info/categoria/musica/">MUSICA</a>
+</li>
+	<li class="cat-item cat-item-12644"><a href="https://ilformat.info/categoria/notizie/">NOTIZIE</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="https://ilformat.info/categoria/politica/">POLITICA</a>
+</li>
+	<li class="cat-item cat-item-11921"><a href="https://ilformat.info/categoria/cultura-interno/intervista/ilformat-info-reportage/">REPORTAGE</a>
+</li>
+	<li class="cat-item cat-item-5899"><a href="https://ilformat.info/categoria/attualita/salute/">SALUTE</a>
+</li>
+	<li class="cat-item cat-item-13526"><a href="https://ilformat.info/categoria/shipping/">shipping</a>
+</li>
+	<li class="cat-item cat-item-7739"><a href="https://ilformat.info/categoria/sport/">SPORT</a>
+</li>
+	<li class="cat-item cat-item-2993"><a href="https://ilformat.info/categoria/cultura-interno/teatro-spettacoli/">TEATRO</a>
+</li>
+	<li class="cat-item cat-item-5898"><a href="https://ilformat.info/categoria/attualita/tecnologia/">TECNOLOGIA</a>
+</li>
+	<li class="cat-item cat-item-235"><a href="https://ilformat.info/categoria/cultura-interno/tv/">TV</a>
+</li>
+			</ul>
+
+			</div><div id="block-5" class="widget-footer clearfix widget_block widget_text">
+<p></p>
+</div>               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="sidebar-footer">
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="ultimate-footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div id="footer-menu" class="footer-menu"><ul><li id="menu-item-41709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-41709"><a href="https://ilformat.info/">Home</a></li>
+<li id="menu-item-41718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41718"><a href="https://ilformat.info/chi-siamo/">Chi Siamo</a></li>
+<li id="menu-item-41717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41717"><a href="https://ilformat.info/pubblicita/">Pubblicità</a></li>
+<li id="menu-item-41716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41716"><a href="https://ilformat.info/contatti/">Contatti</a></li>
+<li id="menu-item-41719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41719"><a target="_blank" href="https://www.facebook.com/ilformat.info">Facebook</a></li>
+<li id="menu-item-41720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41720"><a target="_blank" href="https://twitter.com/il_format">Twitter</a></li>
+<li id="menu-item-41721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41721"><a target="_blank" href="https://www.youtube.com/channel/UC4UaAZVzhJRVHl4L8-E5kkQ">YouTube</a></li>
+</ul></div>               <div id="copy" class="align-center">
+                  &copy; Copyright 2025 by <a href="https://ilformat.info/">IlFormat.info</a> <br>
+                  <a class="iubenda-advertising-preferences-link" href="#">Aggiorna le tue preferenze di tracciamento pubblicitario</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<div class="menu-overlay"></div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/ilformat-news\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div style="clear:both;width:100%;text-align:center; font-size:11px; "><a target="_blank" title="WP Twitter Auto Publish" href="https://xyzscripts.com/wordpress-plugins/twitter-auto-publish/compare" >WP Twitter Auto Publish</a> Powered By : <a target="_blank" title="PHP Scripts & Programs" href="http://www.xyzscripts.com" >XYZScripts.com</a></div>    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+          eval(event.detail.apiResponse.fb_pxl_code);
+        }
+      }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+    <div id='fb-pxl-ajax-code'></div><script type="text/javascript" src="https://ilformat.info/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.2" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/ilformat.info\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.2" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/themes/ilformat-news/js/min/match-height.js?ver=1.0" id="match-height-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/themes/ilformat-news/js/min/sticky.js?ver=1.0" id="sticky-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/themes/ilformat-news/js/min/flexslider.js?ver=1.0" id="flexslider-js"></script>
+<script type="text/javascript" src="https://ilformat.info/wp-content/themes/ilformat-news/js/min/main.js?ver=1.0" id="main-js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js?ver=1.0#pubid=ra-5f997610e250f3d9" id="addthis-js"></script>
+</body>
+</html>

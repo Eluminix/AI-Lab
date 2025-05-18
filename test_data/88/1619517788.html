@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+                        <!-- START MAINTAG ONECALL MF - NOTAS -->
+
+<script type="text/javascript">
+
+// 1- Declaración de función para detectar si es mobile o desktop
+
+  window.mobileCheck = function() {
+
+    let check = false;
+
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| ||a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+
+    return check;
+
+  };
+
+</script>
+
+<script type="application/javascript" src="https://ced.sascdn.com/tag/4308/smart.js" async></script>
+
+<script type="text/javascript" src="https://tagmanager.smartadserver.com/4308/631066/smart.prebid.js" async></script>
+
+<script type="application/javascript">
+
+    // 2- Instancia variables y funciones SMART y librería Prebid
+
+        var sas = sas || {};
+
+        sas.cmd = sas.cmd || [];
+
+        sas.cmd.push(function() {
+
+                sas.setup({ networkid: 4308, domain: "https://adapi.smartadserver.com", async: true, renderMode: 2 });
+
+        });
+
+  // 3- Declaración de espacios con sus ids y su condición para ejecutarse en desktop o mobile
+
+    /* mobile */
+
+    if(mobileCheck() === true) {
+
+      sas.cmd.push(function() {
+
+        sas.call("onecall", {
+
+          siteId: 631066,
+
+          pageId: 1917466,
+
+          formats: [
+
+              { id: 112730, tagId: "MobileRectangle_1" },
+
+              { id: 111263, tagId: "MobileBanner_1" },
+
+              { id:111264, tagId: "MobileBanner_2" },
+
+              { id:111265, tagId: "MobileBanner_3" },
+
+              { id:111266, tagId: "MobileBanner_4" },
+
+              { id: 111127, tagId: "Adhesion" },
+
+              { id: 116485, tagId: "adhesion_top" },
+
+              { id: 111126, tagId: "Interstitial" },
+
+              { id: 111268, tagId: "Inline" },
+
+              { id: 111128, tagId: "Parallax" },
+
+          ],
+
+          target: '',
+
+          schain: '1.0,1!mediosfederales.com,631066,1,canal26,canal26.com'
+
+        });
+
+      });
+
+      /* desktop */
+
+      } else {
+
+        sas.cmd.push(function() {
+
+          sas.call("onecall", {
+
+            siteId: 631066,
+
+            pageId: 1917466,
+
+            formats: [
+
+              { id: 111221, tagId: "Halfpage_1" },
+
+              { id: 111222, tagId: "Halfpage_2" },
+
+              { id: 111196, tagId: "MediumRectangle_1" },
+
+              { id: 111197, tagId: "MediumRectangle_2" },
+
+              { id: 111256, tagId: "Skyscraper_1" },
+
+              { id: 111236, tagId: "LargeLeaderboard_1" },
+
+              { id: 111246, tagId: "Billboard_1" },
+
+              { id: 111127, tagId: "Adhesion" },
+
+              { id: 111126, tagId: "Interstitial" },
+
+              { id: 111268, tagId: "Inline" },
+
+              { id: 111128, tagId: "Parallax" },
+
+              { id: 111131, tagId: "InRead" }
+
+            ],
+
+            target: '',
+
+            schain: '1.0,1!mediosfederales.com,631066,1,canal26,canal26.com'
+
+          });
+
+        });
+      }
+
+  </script>
+
+  <!-- END MAINTAG ONECALL MF - NOTAS -->
+                        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W2NQ76W');
+    function trackEvent(name) {
+        dataLayer.push({
+            'event': name
+        });
+    }</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="facebook-domain-verification" content="mel7qbneidgmrykhs2t0uj5jkazaky" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Canal 26">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFF">
+    <link rel="preconnect" href="https://cdn.canal26.com" crossorigin>
+                                <title>Crisis en Venezuela: mayoría opositora del Parlamento ratifica a Juan Guaidó | Canal 26</title>
+                            <script async type="text/javascript" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+                <script src="https://jsc.mgid.com/site/997042.js" async></script>
+        <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+
+    <link rel="stylesheet" href="https://cdn.canal26.com/build/assets/app.36fc7a7c.css" />            <link rel="stylesheet" href="https://cdn.canal26.com/build/assets/listing.8e2a15ac.css" />    <link rel="stylesheet" href="https://cdn.canal26.com/build/assets/article.d93bb4a2.css" />    <link rel="stylesheet" type="text/css" property="stylesheet" href="/css/vast/videojs.vast.vpaid.css">
+                    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+        <meta property="og:title" content="Crisis en Venezuela: mayoría opositora del Parlamento ratifica a Juan Guaidó" />
+    <meta property="og:description" content="&quot;Seguiré ejerciendo mis funciones&quot;, dijo este jueves el líder opositor venezolano Juan Guaidó en rueda de prensa, tras una sesión parlamentaria por videoconferencia."/>
+    <meta property="og:site_name" content="Canal26" />
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:type" content="article" />
+    <meta property="fb:pages" content="109876399068362" />
+    <meta property="og:url" content="https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678"/>
+    <meta property="og:image" content="https://cdn.canal26.com/media/image/2020/01/06/438648.jpg?s=1&amp;a=284678"/>
+    <meta name="robots" content="max-image-preview:large">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:creator" content="@canal26noticias">
+    <meta property="twitter:site" content="@canal26noticias">
+            <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Canal26.com",
+                "@id": "https://www.canal26.com/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Internacionales",
+                    "@id": "https://www.canal26.com/internacionales"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Crisis en Venezuela: mayor\u00eda opositora del Parlamento ratifica a Juan Guaid\u00f3",
+                  "item": {
+                    "name": "Crisis en Venezuela: mayor\u00eda opositora del Parlamento ratifica a Juan Guaid\u00f3",
+                    "@id": "https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678"
+                  }
+                }
+              ]
+            }
+    </script>
+    <script type="application/ld+json">
+    {
+       "@context":"https://schema.org",
+       "@type":"NewsArticle",
+       "headline":"Crisis en Venezuela: mayor\u00eda opositora del Parlamento ratifica a Juan Guaid\u00f3",
+       "articleBody":null,
+       "description":"\u0022Seguir\u00e9 ejerciendo mis funciones\u0022, dijo este jueves el l\u00edder opositor venezolano Juan Guaid\u00f3 en rueda de prensa, tras una sesi\u00f3n parlamentaria por videoconferencia.",
+       "url":"https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678",
+       "dateCreated":"2020-05-28T23:00:37.000000Z",
+       "dateModified":"2020-05-28T23:00:37.000000Z",
+       "datePublished":"2020-05-28T23:00:37.000000Z",
+       "mainEntityOfPage":{
+          "@type":"WebPage",
+          "@id":"https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678"
+       },
+       "articleSection":"Internacionales",
+       "creator":{
+          "@type":"Person",
+          "name":"Canal26"
+       },
+       "keywords":"Juan Guaidó, Venezuela, Crisis en Venezuela, Nicolás Maduro",
+       "publisher":{
+          "@type":"Organization",
+          "name":"Canal26.com",
+          "logo":{
+             "@type":"ImageObject",
+             "url":"https://cdn.canal26.com/images/canal26_logo.svg",
+             "width":294,
+             "height":294
+          }
+       },
+              "author":{
+          "@type":"Organization",
+          "name":"Canal26.com",
+          "url":"https://www.canal26.com"
+       },
+              "image":{
+          "@type":"ImageObject",
+          "url":"https://cdn.canal26.com/media/image/2020/01/06/438648.jpg?s=1&amp;a=284678",
+          "width":1200,
+          "height":650
+       }
+    }
+    </script>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Canal26.com",
+      "url": "https://www.canal26.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.canal26.com/images/canal26_logo.svg",
+        "name": "Canal26.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Información y noticias de Argentina y el mundo",
+      "url": "https://www.canal26.com",
+      "description": "Canal26.com ofrece las últimas novedades de Argentina y el mundo: economía, política, turismo, horóscopo, Planeta, deportes, espectáculos, tecnología y más.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.canal26.com/buscar?palabra={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <meta name="language" content="es" />
+<meta name="distribution" content="Global" />
+<meta name="classification" content="noticias, información, videos, diario digital" />
+
+    <meta name="description" content="&quot;Seguiré ejerciendo mis funciones&quot;, dijo este jueves el líder opositor venezolano Juan Guaidó en rueda de prensa, tras una sesión parlamentaria por videoconferencia."/>    <meta name="robots" content="index, follow"/>
+        <link rel="canonical" href="https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.canal26.com/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.canal26.com/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.canal26.com/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest/site.webmanifest">
+    
+            <script async type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9077525840741891" crossorigin="anonymous"></script>
+        <link rel="preload" as="font" href="/fonts/Manrope.ttf" type="font/ttf" crossorigin="anonymous">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                // console.log('Service worker registration succeeded:', registration);
+            }, function(error) {
+                console.log('Service worker registration failed:', error);
+            });
+        } else {
+            console.log('Service workers are not supported.');
+        }
+    </script>
+            <script async type="text/javascript" id="ebx" src="//applets.ebxcdn.com/ebx.js"></script>
+    
+    
+    <script type="text/javascript">
+        !function(){"use strict";function e(e){var t=!(arguments.length>1&&void 0!==arguments[1])||arguments[1],c=document.createElement("script");c.src=e,t?c.type="module":(c.async=!0,c.type="text/javascript",c.setAttribute("nomodule",""));var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(c,n)}!function(t,c){!function(t,c,n){var a,o,r;n.accountId=c,null!==(a=t.marfeel)&&void 0!==a||(t.marfeel={}),null!==(o=(r=t.marfeel).cmd)&&void 0!==o||(r.cmd=[]),t.marfeel.config=n;var i="https://sdk.mrf.io/statics";e("".concat(i,"/marfeel-sdk.js?id=").concat(c),!0),e("".concat(i,"/marfeel-sdk.es5.js?id=").concat(c),!1)}(t,c,arguments.length>2&&void 0!==arguments[2]?arguments[2]:{})}(window,4933,{} /* Config */)}();
+    </script>
+
+
+</head>
+
+<body x-data="{sidebar_opened: false}" x-on:keydown.esc="sidebar_opened = false">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2NQ76W"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({c1: "2", c2: "37814580"});
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = "https://sb.scorecardresearch.com/cs/37814580/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+    <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=37814580&amp;cv=3.6.0&amp;cj=1">
+</noscript>
+<!-- End comScore Tag -->
+            <!-- Clever AD -->
+<script data-cfasync="false" type="text/javascript" id="clever-core">
+    /* <![CDATA[ */
+        (function (document, window) {
+            var a, c = document.createElement("script"), f = window.frameElement;
+
+            c.id = "CleverCoreLoader75682";
+            c.src = "https://scripts.cleverwebserver.com/415bf9f01c16734c980004c42a3d5cd4.js";
+
+            c.async = !0;
+            c.type = "text/javascript";
+            c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
+            c.setAttribute("data-callback", "put-your-callback-function-here");
+            c.setAttribute("data-callback-url-click", "put-your-click-macro-here");
+            c.setAttribute("data-callback-url-view", "put-your-view-macro-here");
+
+            try {
+                a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+            } catch (e) {
+                a = !1;
+            }
+
+            a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+            a.parentNode.insertBefore(c, a);
+        })(document, window);
+    /* ]]> */
+</script> 
+<!-- Clever AD -->    
+
+    
+
+<div id="body_overlay" :class="{ 'fixed inset-0 bg-zinc-600 bg-opacity-50 overflow-y-hidden h-full w-full z-50': sidebar_opened, '': !(sidebar_opened) }"></div>
+    <nav class="flex flex-col  bg-white  dark:bg-black shadow-md w-full sticky top-0 z-30 justify-between transition-all" id="site-header">
+
+            
+                    <div class="mx-auto z-20 w-full bg-white flex justify-center" id="ads-sticky-header-div">
+                
+        <div id='LargeLeaderboard_1'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('LargeLeaderboard_1');
+
+            });
+
+        </script>
+            </div>
+        
+    
+    <div class="grid grid-cols-3 py-3 px-2">
+                    <!-- Normal mode -->
+            <div class="flex flex-row items-center sm:items-stretch sm:justify-start w-20 dark:w-14 col-span-1">
+                    <div class="flex items-center inset-y-0">
+                <!-- Mobile menu button-->
+                <button id="btn-sidebar" type="button" x-on:click="sidebar_opened = true"
+                        class="inline-flex items-center justify-center p-2 rounded-sm text-gray-900  hover:text-white hover:bg-gray-300  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span class="sr-only">Open main menu</span>
+                    <svg x-description="Icon when menu is closed"
+                         class="block h-6 w-6 dark:text-white" :class="{ 'hidden': sidebar_opened, 'block': !(sidebar_opened) }"
+                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg x-description="Icon when menu is open.
+                            Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class="hidden h-6 w-6"
+                         :class="{ 'block': sidebar_opened, 'hidden': !(sidebar_opened) }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+                    </div>
+
+        <!-- Logo -->
+                                                <a href="/" class="flex justify-center col-span-1">
+                    <img class="logo h-10 md:h-16" src="https://cdn.canal26.com/images/canal26_logo.svg" alt="Canal 26">
+                </a>
+                            
+        <div class="flex flex-row items-center gap-x-4 col-span-1 justify-end">
+                            <div x-data="{ modalOpen: false }" x-on:keydown.escape="modalOpen = false">
+    
+    
+                <button @click="modalOpen =!modalOpen" id="btn-subscribe-newsletter-desktop" class="text-sm font-medium text-white bg-red-600 opacity-60 rounded-3xl py-1 px-9 hidden lg:block">Suscribite</button>
+            <button @click="modalOpen =!modalOpen" id="btn-subscribe-newsletter-mobile" class="bg-corporate-red opacity-60 py-1 px-2 border border-corporate-red border-opacity-90 lg:hidden shadow-md rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 fill-white">
+                    <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,6H19a1,1,0,0,1,1,1l-8,4.88L4,7A1,1,0,0,1,5,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9.28l7.48,4.57a1,1,0,0,0,1,0L20,9.28Z"/>
+                </svg>
+            </button>
+            
+    <div x-show="modalOpen" class="fixed inset-0 z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex justify-center px-4 text-center md:items-center sm:block sm:p-0">
+            <div x-cloak @click="modalOpen = false" x-show="modalOpen"
+                x-transition:enter="transition ease-out duration-300 transform"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-200 transform"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                class="fixed inset-0 transition-opacity bg-zinc-500 bg-opacity-40" aria-hidden="true"
+            >
+            </div>
+            <div x-cloak x-show="modalOpen"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave="transition ease-in duration-200 transform"
+                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    class="inline-block p-8 my-8 md:my-52 xl:my-2 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl dark:bg-zinc-700"
+                >
+                <div class="p-4">
+                    <button @click="modalOpen = false" class="w-8 h-8 border border-gray-900 rounded-full cursor-pointer bg-white absolute right-4 top-4">
+                        <span class="font-medium">X</span>
+                    </button>
+                </div>
+                <h2 class="text-xl lg:text-2xl font-medium text-gray-800 text-center">Suscribite a nuestro newsletter</h2>
+                <p class="text-md text-gray-400 mt-4 mb-6 text-center lg:text-start">
+                    Mantenete siempre informado
+                </p>
+                <form wire:id="iN7Xm63dOQdbKyndfKrI" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;iN7Xm63dOQdbKyndfKrI&quot;,&quot;name&quot;:&quot;widgets.newsletter-subscription-component&quot;,&quot;locale&quot;:&quot;es&quot;,&quot;path&quot;:&quot;internacionales\/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;fd973d14&quot;,&quot;data&quot;:{&quot;extraFields&quot;:{&quot;my_name&quot;:&quot;&quot;,&quot;valid_from&quot;:&quot;eyJpdiI6InBvdHhVM1FaTFltYU04THVTc3ZCTFE9PSIsInZhbHVlIjoiNldpdFJZWHQxOEpoaC80Ty8vbTY5UT09IiwibWFjIjoiNTRkNmU1NzhmYTE2YjU0ZjUzZWM0YjI4MzU4MDI4OWQwNGRkZWI1MTNlODU5ODc4MjU2NTVlNGJhYTYwNTEyZCIsInRhZyI6IiJ9&quot;},&quot;name&quot;:null,&quot;email&quot;:null,&quot;feedbackMessage&quot;:null,&quot;resolvedCategory&quot;:&quot;internacionales&quot;,&quot;source&quot;:&quot;modal&quot;},&quot;dataMeta&quot;:{&quot;wireables&quot;:[&quot;extraFields&quot;]},&quot;checksum&quot;:&quot;eb0e5e0fec50a59cb0b59882eacd36fe61e449f5ee549a32700b9c96f9902b3d&quot;}}" wire:submit.prevent="store" method="POST" class="flex flex-col flex-wrap w-full max-w-[700px] gap-8" id="newsletter-form">
+    <input type="hidden" name="_token" value="WRaE7r1nkQogGn9slj5zah7dNFSSUptAZMIWskid">        <input wire:model="name" type="text" name="name" placeholder="Nombre" class="w-full text-sm border-b  border-b-red-500 pb-5" maxlength="255" required>
+        
+        <input wire:model="email" type="email" name="email" placeholder="Correo electrónico" class="w-full text-sm border-b  border-b-red-500 pb-5" maxlength="255" required>
+        
+        <p class="text-sm text-center"> Al suscribirte aceptas los
+            
+            <a href="/terminos" target="_blank" class=" text-corporate-red font-bold">Términos y Condiciones</a> y la
+            <a href="/politica-privacidad" target="_blank" class=" text-corporate-red font-bold">Política de Privacidad</a> de Canal26.com.
+        </p>
+                <div class="flex flex-col items-center gap-y-2">
+            <div wire:loading.class="opacity-30 pointer-events-none">
+                <button id="btn-subscribe-modal-submit" type="submit" class="g-recaptcha text-sm font-medium text-white  bg-red-600 rounded-3xl py-2 px-16" style="transform: none">Suscribirme</button>
+            </div>
+            <div class="w-56">
+                <p class="flex before:flex-auto before:border-b before:border-b-gray-300 before:m-auto before:mx-2 after:flex-auto after:border-b after:border-b-gray-300 after:my-auto after:mx-2">O</p>
+            </div>
+            <div wire:loading.class="opacity-30 pointer-events-none">
+                <a class="text-sm font-medium text-gray-500 rounded-3xl py-2 px-2 whitespace-nowrap border border-gray-500 flex flex-row items-center gap-x-4 dark:bg-zinc-200" href="/google-auth/redirect">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_2360_13870)">
+            <path d="M3.765 8.99999C3.765 8.40865 3.87 7.86057 4.05 7.32692L0.945 5.01923C0.33 6.24519 0 7.60096 0 8.99999C0 10.4279 0.345 11.7836 0.945 12.9808L4.035 10.6586C3.855 10.1394 3.765 9.57692 3.765 8.99999Z" fill="#f1bc42"></path>
+            <path d="M9.20982 3.67781C10.4398 3.67781 11.6398 4.09608 12.5998 4.8605L15.2848 2.2355C11.4748 -1.03854 5.66982 -0.67796 2.29482 3.04319C1.75482 3.64896 1.30482 4.31243 0.944824 5.01916L4.03482 7.32685C4.75482 5.20666 6.79482 3.67781 9.19482 3.67781H9.20982Z" fill="#d85040"></path>
+            <path d="M4.04996 10.6731L0.959961 12.9808C2.45996 15.9375 5.56496 17.9856 9.16496 18H9.22496C11.475 18 13.62 17.2212 15.225 15.75L12.285 13.5144C11.46 14.0192 10.41 14.3077 9.23996 14.3077C6.82496 14.3077 4.78496 12.7789 4.07996 10.6587L4.04996 10.6731Z" fill="#58a45c"></path>
+            <path d="M18 9C18 8.45192 17.925 7.90385 17.79 7.37019H9.20996V10.8462H14.145C13.89 12.0288 13.215 12.9375 12.255 13.5288L15.195 15.7644C16.89 14.2356 17.985 11.9423 17.985 9.01442L18 9Z" fill="#5086eb"></path>
+        </g>
+    </svg>
+    <span class="font-semibold">Suscribirme con Google</span>
+</a>
+                            </div>
+        </div>
+    <div id="my_name_idC729dBvLbb9X9o_wrap" style="display: none" aria-hidden="true">
+        <input id="my_name_idC729dBvLbb9X9o"
+               name="my_name_idC729dBvLbb9X9o"
+               type="text"
+               value=""
+                wire:model.defer="extraFields.my_name"                autocomplete="nope"
+               tabindex="-1">
+        <input name="valid_from"
+               type="text"
+               value="eyJpdiI6IkMwZHRhMnF6RXRBZmN5T201R3BBMEE9PSIsInZhbHVlIjoiWXVRbEJCNW9KbmVZNzBPWFc2NWs0dz09IiwibWFjIjoiZTU0ZWMzY2ZkZDAyNWFlMGI1MzBmZmEyMThkNmM5MmIyZThlMmNlZDdhMjZkODA3MDdhNTc1NjEwMDFkNWM5MCIsInRhZyI6IiJ9"
+                wire:model.defer="extraFields.valid_from"                autocomplete="off"
+               tabindex="-1">
+    </div>
+</form>
+
+<!-- Livewire Component wire-end:iN7Xm63dOQdbKyndfKrI -->            </div>
+        </div>
+    </div>
+</div>
+                        <div class=" flex items-center space-x-5  inset-y-0 w-20 md:w-40 dark:w-14">
+                <!-- Live -->
+                <a id="btn-live-pill" class="flex text-gray-900 btn-live" href="/canal26-en-vivo">
+                    <div class="flex flex-row items-center border border-gray-900 dark:border-white rounded-3xl px-2 bg-white">
+                        <div class="p-1 dark:hidden">
+                            <img src="/images/live_widget_animation.gif" class="h-4" title="En vivo canal 26" alt="Canal 26 en vivo"/>
+                        </div>
+                        <p class="text-sm my-0 dark:text-gray-400 text-nowrap">
+                                                            Canal 26 en vivo
+                                                    </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+<div class="fixed top-0 z-50 w-full md:w-1/2 lg:w-1/3" id="site-header-sidebar"
+    x-cloak x-show="sidebar_opened" x-on:click.away="sidebar_opened = false" x-transition.scale x-transition.scale.origin.top.left>
+
+    <aside class="overflow-y-auto overflow-x-hidden px-3 bg-neutral-700 h-screen">
+        <ul class="space-y-4">
+            <div class="sticky top-0 w-full h-36 bg-gradient-to-b from-neutral-700 via-neutral-700 py-4">
+                <div class="flex flex-row justify-between mb-2">
+                    <div class="h-10 w-10"></div>
+                    <!-- Logo -->
+                    <a href="/" class="mx-2 block items-center">
+                        <img class="logo h-10 w-10" src="/images/canal26_logo_blanco.svg" alt="Canal 26">
+                    </a>
+                    <button type="button" x-on:click="sidebar_opened = false"
+                            class="p-1 h-10 w-10 justify-center rounded-sm text-gray-900 hover:text-white hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <svg class="h-8 w-8 text-white"
+                             xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex flex-col w-full bg-neutral-700">
+    <form autocomplete="off" method="get" action="/buscar">
+        <div class="pb-4">
+            <div class="relative w-full border-b-2">
+                <button type="submit" class="absolute top-0 left-0 p-2.5 text-sm font-medium text-white disabled:bg-gray-600 disabled:border-gray-500 border-red-700 hover:bg-red-800">
+                    <svg  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+                <input type="search" name="palabra" id="search-imput" class="block p-2.5 w-full z-20 text-md text-white bg-neutral-700 ml-10 focus:outline-none" placeholder="Buscar...">
+                
+
+            </div>
+        </div>
+            </form>
+</div>
+
+
+            </div>
+
+            <div class="h-1/3">
+                <span class="font-medium ml-2 text-gray-200">Noticias</span>
+                <div class="columns-2 border-b border-gray-500 pb-6 pt-2">
+                                    <li>
+                        <a href="/ultimas-noticias" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Últimas Noticias</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/bienestar-y-salud" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Bienestar y Salud</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/ciencia-y-espacio" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Ciencia y Espacio</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/deportes" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Deportes</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/economia" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Economía</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/espectaculos" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Espectáculos</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/general" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>General</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/historia" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Historia</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/horoscopo" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Horóscopo</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/internacionales" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Internacionales</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/musica" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Música</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/opinion" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Opinión</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/planeta" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Planeta</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/policiales" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Policiales</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/politica" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Política</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/tecnologia" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Tecnología</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="/turismo" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Turismo</span>
+                        </a>
+                    </li>
+                                    <li>
+                        <a href="https://www.canal26.com/videos" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                            <span>Videos</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+            <div class="h-1/3">
+                <div class="columns-2 border-b border-gray-500 pb-6 pt-2">
+                                            <li>
+                            <a href="/clima-de-hoy-en-argentina" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                                <span>Clima</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/feriados" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                                <span>Feriados</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/transito" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                                <span>Tránsito</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/efemerides" class="flex items-center p-2 text-base font-light text-gray-200 rounded-lg hover:underline">
+                                <span>Efemérides</span>
+                            </a>
+                        </li>
+                                    </div>
+            </div>
+
+            <div class="h-1/3">
+                <span class="font-medium ml-2 text-gray-200">Canal 26</span>
+                <div class="columns-2 border-b border-gray-500 pb-6 pt-2">
+                                            <li>
+                            <a href="/nuestro-equipo"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Nuestro equipo</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/contacto"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/terminos"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Términos y Condiciones</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/politica-privacidad"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Política de privacidad</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/mediakit"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Mediakit</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/programacion-de-canal-26"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Programación</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/redactores"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Redactores</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="https://www.linkedin.com/company/canal26/jobs/"  class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Empleos</span>
+                            </a>
+                        </li>
+                                    </div>
+            </div>
+
+            <div class="h-1/3">
+                <span class="font-medium ml-2 text-gray-200">Nuestros medios</span>
+                <div class="columns-2 pb-6 pt-2">
+                                            <li>
+                            <a href="/canal26-en-vivo" class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Canal26</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/latinatv" class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Latina TV</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/tierramia" class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Tierra Mia</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/telemax" class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Telemax</span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a href="/musictop" class="flex items-center p-2 text-base font-normal text-gray-200 rounded-lg hover:underline">
+                                <span>Musictop</span>
+                            </a>
+                        </li>
+                                    </div>
+            </div>
+
+        </ul>
+
+        <div class="flex flex-col justify-center sticky bottom-0 w-full bg-gradient-to-t from-neutral-700 via-neutral-700 py-4 space-y-4 h-screen-1/4">
+            <div class="flex flex-row justify-center space-x-2">
+                
+                                                <a id="btn-facebook-sidebar" class="rounded-full bg-black" href="https://www.facebook.com/canal26" title="Facebook" type="button">
+                                <svg role="img" class="w-8 h-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            
+                
+                                            <a id="btn-instagram-sidebar" class="rounded-full bg-white p-2" href="https://www.instagram.com/canal26ok" title="Instagram" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    
+                
+                                            <a id="btn-twitter-sidebar" class="rounded-full bg-white p-2" href="https://twitter.com/canal26noticias" title="Twitter" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    
+                
+                                            <a id="btn-youtube-sidebar" class="rounded-full bg-white p-2" href="https://www.youtube.com/c/canal26" title="YouTube" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    
+                
+                                            <a id="btn-linkedin-sidebar" class="rounded-full bg-white p-2" href="https://www.linkedin.com/company/canal26" title="Linkedin" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    
+                
+                                            <a id="btn-tiktok-sidebar" class="rounded-full bg-white p-2" href="https://www.tiktok.com/@canal26argentina" title="TikTok" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                    
+                
+                                                <a id="btn-telegram-sidebar" class="rounded-full bg-white p-2" href="https://t.me/canal26_noticias" title="Telegram" type="button">
+                                <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"/>
+                                </svg>
+                            </a>
+                            
+                
+                                            <a id="btn-googlenews-sidebar" class="rounded-full bg-white p-2" href="https://news.google.com/publications/CAAqBwgKMNyezQEwqIMn?ceid=AR:es-419&amp;oc=3" title="GoogleNews" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-black stroke-0 fill-black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2666 21.2a.6141.6141 0 0 1-.6128.6128H3.3446a.614.614 0 0 1-.6128-.6128V8.1153a.6141.6141 0 0 1 .6128-.6128h17.3091a.6141.6141 0 0 1 .6128.6128V21.2zm-3.0315-3.4196v-1.1957a.0803.0803 0 0 0-.0803-.0803h-5.3725v1.3619h5.3725a.0817.0817 0 0 0 .0804-.083l-.0001-.0029zm.8171-2.5875v-1.2012a.0803.0803 0 0 0-.079-.0817h-6.191v1.3619h6.1896a.079.079 0 0 0 .0804-.0776v-.0041.0027zm-.8171-2.5875v-1.2066a.0803.0803 0 0 0-.0803-.0803h-5.3725v1.3619h5.3725a.0816.0816 0 0 0 .0803-.079v.004zM8.1492 14.0448v1.2257h1.7704c-.1457.749-.8049 1.2924-1.7704 1.2924-1.0906-.0405-1.9418-.9574-1.9013-2.048.0384-1.0338.8676-1.8629 1.9013-1.9013a1.77 1.77 0 0 1 1.2529.4903l.9342-.9329a3.1405 3.1405 0 0 0-2.1871-.8525c-1.8051 0-3.2684 1.4633-3.2684 3.2684 0 1.8051 1.4633 3.2684 3.2684 3.2684 1.8889 0 3.1323-1.3278 3.1323-3.1976a3.941 3.941 0 0 0-.0518-.6183l-3.0805.0054zM2.2701 7.6537a.6156.6156 0 0 1 .6128-.6128h12.1545l-1.2692-3.4904a.5952.5952 0 0 0-.7436-.3827L.3676 7.7749a.5938.5938 0 0 0-.3228.7749l2.2253 6.112V7.6537za.6156.6156 0 0 1 .6128-.6128h12.1545l-1.2692-3.4904a.5952.5952 0 0 0-.7436-.3827L.3676 7.7749a.5938.5938 0 0 0-.3228.7749l2.2253 6.112V7.6537zm21.3116-.3105l-8.803-2.3683.7517 2.0659h5.5836a.6141.6141 0 0 1 .6128.6128v8.7948l2.2471-8.3659a.5923.5923 0 0 0-.3922-.7393zm-4.4955-1.6738V2.7946a.6101.6101 0 0 0-.6115-.6074H5.5236a.6101.6101 0 0 0-.6156.6046v2.8368l8.3904-3.0519a.5937.5937 0 0 1 .7422.3895l.5447 1.498 4.5009 1.2052z"/>
+                            </svg>
+                        </a>
+                    
+                            </div>
+            <a href="/canal26-en-vivo" class="flex flex-row rounded-2xl justify-center gap-2 border border-neutral-200 w-1/2 mx-auto">
+                <img src="/images/live_animation.gif" class="h-6 my-auto" title="En vivo canal 26" alt="Canal 26 en vivo"/>
+                <p class="uppercase text-sm text-gray-200">Canal 26 en vivo</p>
+            </a>
+        </div>
+    </aside>
+</div>
+
+        <div class="dark:bg-black/50 ">
+            <!-- Categories -->
+
+
+
+
+
+
+
+
+
+        
+        
+    <style>
+        @media (max-width: 768px) {
+            #article_body img{
+                width: 100vw !important; /* Ancho igual al ancho de la ventana */
+                max-width: 100vw !important; /* Ancho igual al ancho de la ventana */
+                margin-left: -50vw; /* Centrar la imagen en la ventana */
+                margin-right: -50vw; /* Centrar la imagen en la ventana */
+                left: 50%; /* Centrar horizontalmente */
+                position: relative; /* Hacer que la imagen ocupe el ancho completo */
+            }
+        
+            /*#article_body video{*/
+            /*    width: 100vw !important; !* Ancho igual al ancho de la ventana *!*/
+            /*    max-width: 100vw !important; !* Ancho igual al ancho de la ventana *!*/
+            /*    margin-left: -50vw; !* Centrar la imagen en la ventana *!*/
+            /*    margin-right: -50vw; !* Centrar la imagen en la ventana *!*/
+            /*    left: 50%;*/
+            /*    object-fit: cover;*/
+            /*    position: absolute;*/
+            /*}*/
+        }
+    </style>
+
+<div x-data="{ visible_article: false, opened_floating_related: true }">
+    <div class="px:0 md:px-2 container sm:grid sm:grid-cols-12 mx-auto">
+        <div class="col-span-12 xl:col-span-10">
+            
+            <div class="inner_container">
+                <nav class="flex mb-4" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="inline-flex items-center text-lg font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                                Inicio
+                            </a>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                                                                    <span
+                                        class="ml-1 text-lg font-medium text-gray-500 md:ml-2 dark:text-gray-400"><a
+                                            href="/internacionales">Internacionales</a></span>
+                                                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="inner_container">
+                <div class="flex flex-col md:flex-row md:gap-4 xl:gap-8">
+                    <div class="hidden md:block flex-initial w-8">
+    <div class="flex flex-col justify-center items-center gap-2 sticky top-0" id="share-container">
+        <a id="btn-facebook-share-article" class="rounded-full" href="https://www.facebook.com/sharer/sharer.php?u=https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678" target="_blank" title="Facebook" type="button">
+            <svg role="img" class="w-8 h-8 fill-black/70" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a id="btn-twitter-share-article" class="rounded-full bg-black/70 p-2" href="https://twitter.com/intent/tweet?url=https://www.canal26.com%2Finternacionales%2Fcrisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678&text=%22Seguir%C3%A9+ejerciendo+mis+funciones%22%2C+dijo+este+jueves+el+l%C3%ADder+opositor+venezolano+Juan+Guaid%C3%B3+en+rueda+de+prensa%2C+tras+una+sesi%C3%B3n+parlamentaria+por+videoconferencia." target="_blank" title="Twitter" type="button">
+            <svg role="img" class="w-4 h-4 stroke-white stroke-0 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a id="btn-whatsapp-share-article" class="rounded-full bg-black/70 p-2" href="https://api.whatsapp.com/send/?text=Crisis+en+Venezuela%3A+mayor%C3%ADa+opositora+del+Parlamento+ratifica+a+Juan+Guaid%C3%B3+-+https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678&type=custom_url&app_absent=0" target="_blank" title="WhatsApp" type="button">
+            <svg role="img" class="w-4 h-4 stroke-white stroke-0 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a id="btn-telegram-share-article" class="rounded-full bg-black/70 p-2" href="https://telegram.me/share/url?url=https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678&text=Crisis+en+Venezuela%3A+mayor%C3%ADa+opositora+del+Parlamento+ratifica+a+Juan+Guaid%C3%B3" target="_blank" title="Telegram" type="button">
+            <svg role="img" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 stroke-white stroke-0 fill-white" viewBox="0 0 32 32"><path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"/></svg>
+        </a>
+
+        <a id="btn-copylink-share-article" class="rounded-full bg-black/70 p-1 cp-button" value="https://www.canal26.com/internacionales/crisis-en-venezuela-mayoria-opositora-del-parlamento-ratifica-a-juan-guaido--284678" @click="$tooltip('Link copiado!', { delay: 500, zIndex: 0, placement: 'right' })" title="Copiar Link" type="button">
+            <svg role="img" class="w-6 h-6 stroke-white stroke-0 fill-white" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/> <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/></svg>
+        </a>
+    </div>
+</div>
+                                        <div class="flex-1 flex flex-col gap-4 mb-8">
+                        <h1 class="first-letter:uppercase text-3xl xl:text-4xl"><span class='text-corporate-red'>Crisis en Venezuela:</span> mayoría opositora del Parlamento ratifica a Juan Guaidó</h1>
+                        <p class="first-letter:uppercase text-[1.3rem] xl:text-2xl m-0">&quot;Seguiré ejerciendo mis funciones&quot;, dijo este jueves el líder opositor venezolano Juan Guaidó en rueda de prensa, tras una sesión parlamentaria por videoconferencia.</p>
+                                                    <div class="flex flex-row gap-4">
+                                <div class="rounded-full w-12 h-12 bg-cover" style="
+                                    background-image:url('https://cdn.canal26.com/images/canal26_logo.svg')"
+                                     id="article_author_avatar">
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="m-0 text-lg">Por Canal26</p>
+                                    <p class="m-0 text-base text-gray-500">Jueves   28  de  Mayo  de  2020 - 20:00</p>
+                                </div>
+                            </div>
+                                                                        <div id="article_body" x-intersect.once.threshold.15="visible_article = true" x-intersect:leave="visible_article = false">
+                                                        
+                           
+                            
+                            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p><img style="width: 100%;" title="Juan Guaid&oacute;, Venezuela, REUTERS" src="/media/image/2020/01/06/438648.jpg" alt="Juan Guaid&oacute;, Venezuela, REUTERS"><em><strong>Juan Guaid&oacute;, Reuters.</strong></em></p>
+<p>La mayor&iacute;a <strong>opositora</strong> del Parlamento de<strong> Venezuela</strong> ratific&oacute; este jueves a <strong>Juan Guaid&oacute;</strong> como su presidente, y tild&oacute; de <strong>"ilegal&rdquo;</strong> la sentencia 0065 de la Sala Constitucional del Tribunal Supremo de Justicia, de l&iacute;nea chavista, que aval&oacute; como jefe de la Asamblea Nacional a <strong>Luis Parra</strong>, un rival del l&iacute;der opositor. A juicio de la oposici&oacute;n, dicho tribunal carece de independencia, autonom&iacute;a e imparcialidad.</p>
+<p>&nbsp;<div class="relative flex items-center justify-center"><div class="z-10">
+        <div id="Inline"></div>
+
+        <script type="application/javascript">
+
+            sas.cmd.push(function() {
+
+                sas.render('Inline');
+
+            });
+
+        </script></div></div></p>
+<p><strong>"Seguir&eacute; ejerciendo mis funciones"</strong>, dijo Guaid&oacute; en rueda de prensa, tras una sesi&oacute;n parlamentaria por videoconferencia, en la que fue aprobado un acuerdo para rechazar "la &iacute;rrita designaci&oacute;n de la junta directiva" de Parra, un diputado opositor que rompi&oacute; con Guaid&oacute; despu&eacute;s de ser <strong>acusado de corrupci&oacute;n</strong> vinculada con un programa de distribuci&oacute;n de alimentos del gobierno de <strong>Nicol&aacute;s Maduro</strong>.</p>
+<p>&nbsp;</p>
+<p>Para los parlamentarios, la <strong>designaci&oacute;n de la junta directiva</strong> para el per&iacute;odo 2020-2021, compuesta por Parra, Francklyn Duarte y Jos&eacute; Gregorio Noriega, es<strong> "nula, ineficiente e inexistente"</strong>, pues fue adoptada violando el art&iacute;culo 194 de la Constituci&oacute;n, adem&aacute;s del Reglamento de Interior y Debates del Parlamento. Tambi&eacute;n se acord&oacute; abrir una investigaci&oacute;n contra los diputados oficialistas.</p>
+<p>&nbsp;</p>
+<p>Como jefe del Parlamento, <strong>Guaid&oacute; reclam&oacute; en 2019 la presidencia encargada de Venezuela</strong> con reconocimiento de medio centenar de pa&iacute;ses, entre ellos Alemania. Ello despu&eacute;s de que la mayor&iacute;a opositora de la c&aacute;mara declarara<strong> "usurpador"</strong> al presidente socialista <strong>Nicol&aacute;s Maduro</strong>. El Tribunal Supremo de Justicia declar&oacute; en desacato al Parlamento, y desde entonces considera nulas todas sus decisiones.</p>
+<p>&nbsp;</p>
+<p>Pese a ello, consider&oacute; <strong>"v&aacute;lida" la junta directiva encabezada por Parra</strong>, diputado que en enero pasado se proclam&oacute; jefe legislativo con apoyo del chavismo, en una sesi&oacute;n sin qu&oacute;rum y sin Guaid&oacute;, quien, bloqueado por militares, no pudo ingresar al edificio del Poder Legislativo. El l&iacute;der opositor fue reelegido poco despu&eacute;s con votos de un centenar de congresistas opositores en la sede de un peri&oacute;dico.</p>
+<p>&nbsp;</p>
+<p>Desde entonces Parra, en el Palacio Legislativo, y <strong>Guaid&oacute;</strong>, en sedes alternas y ahora de manera virtual, han venido presidiendo<strong> sesiones paralelas</strong>.</p>
+<p>&nbsp;</p></body></html>
+
+
+                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="flex gap-4 flex-wrap">
+    <a href="/tag/juan-guaido--10887">
+                        <div id="tag-pill" class="text-xl border border-corporate-red rounded-full py-2 px-4 text-center inline-block">
+                    Juan Guaidó
+                </div>
+                    </a>
+    <a href="/tag/venezuela--214">
+                        <div id="tag-pill" class="text-xl border border-corporate-red rounded-full py-2 px-4 text-center inline-block">
+                    Venezuela
+                </div>
+                    </a>
+    <a href="/tag/crisis-en-venezuela--1088">
+                        <div id="tag-pill" class="text-xl border border-corporate-red rounded-full py-2 px-4 text-center inline-block">
+                    Crisis en Venezuela
+                </div>
+                    </a>
+    <a href="/tag/nicolas-maduro--215">
+                        <div id="tag-pill" class="text-xl border border-corporate-red rounded-full py-2 px-4 text-center inline-block">
+                    Nicolás Maduro
+                </div>
+                    </a>
+</div>
+
+
+                        <div class="flex justify-center">
+                            <a id="google-news-button" target="_blank" class="flex justify-between gap-4 border rounded-lg p-3 bg-neutral-100"
+                               href="https://news.google.com/publications/CAAqJQgKIh9DQklTRVFnTWFnMEtDMk5oYm1Gc01qWXVZMjl0S0FBUAE?hl=es-419&gl=AR&ceid=AR%3Aes-419">
+                                <img decoding="async" alt="Google News" title="Google News" src="/images/logo-googlenews.svg" class="w-10">
+                                <p class="googlenews__texto">Recibí lo último de Canal26.com en <b>Google Noticias</b></p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            setTimeout(function() {
+                                var videos = document.querySelectorAll('.video-js');
+                                videos.forEach(function (videoElement) {
+                                    var player = videojs(videoElement);
+                                    player.ready(function () {
+                                        player.currentTime(6);
+                                        player.pause();
+                                    });
+                                });
+                            }, 500);
+                        });
+                    </script>
+
+                    <div class="hidden lg:flex flex-col" style="min-width: 300px; max-width: 300px">
+                                                    <div class="mx-auto">
+                                
+        <div id='MediumRectangle_1'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('MediumRectangle_1');
+
+            });
+
+        </script>
+                            </div>
+                        
+                        
+                                                                <div class="mb-8">
+            <h2 class="text-lg xl:text-xl">Temas del momento</h2>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/guerra-rusia-ucrania--16390">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">1</span> Guerra Rusia-Ucrania</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/franco-colapinto--16606">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">2</span> Franco Colapinto</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/javier-milei--6671">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">3</span> Javier Milei</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/israel--331">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">4</span> Israel</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/papa-leon-xiv--18984">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">5</span> Papa León XIV</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/clima--8258">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">6</span> Clima</p>
+                </a>
+            </div>
+                        <div class="border-b border-b-gray-400 mt-4">
+                <a href="/tag/zodiaco-horoscopo--4689">
+                    <p class="xl:text-lg"><span class="text-corporate-red font-bold mr-2">7</span> Zodiaco / Horóscopo</p>
+                </a>
+            </div>
+                    </div>
+    
+
+
+                                
+                        
+                        
+                                                    <div class="mx-auto mb-8" style="min-width: 300px; max-width: 300px">
+                                
+        <div id='Halfpage_1'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Halfpage_1');
+
+            });
+
+        </script>
+                            </div>
+
+                            <h2 class="text-lg xl:text-xl border-b border-corporate-red pb-2">Más Leídas</h2>
+    <ol class="mt-2 text-sm">
+                    <li class="border-b border-zinc-200 mt-2">
+                <a class="flex flex-row gap-x-4" href='https://www.canal26.com/internacionales/una-alianza-temible-para-las-grandes-potencias-los-dos-paises-latinos-que-podrian-definir-una-tercera-guerra-mundial--423613'>
+                    <p class="font-semibold self-start">1</p>
+                    <div class="flex flex-col">
+                        <p><span class='text-corporate-red'>Una alianza temible para las grandes potencias:</span> los dos países latinos que podrían definir una Tercera Guerra Mundial</p>
+                    </div>
+                                            <img loading="lazy" class="object-cover aspect-video w-14 h-14 mt-3 rounded-sm" src='https://cdn.canal26.com/media/image/2025/05/15/662923.jpg?s=1&a=423613' alt='El Ejército argentino. Foto: Argentina.gob.ar'>
+                                    </a>
+            </li>
+                    <li class="border-b border-zinc-200 mt-2">
+                <a class="flex flex-row gap-x-4" href='https://www.canal26.com/internacionales/alianza-estrategica-para-china-y-estados-unidos-los-dos-paises-de-latinoamerica-que-seran-potencias-mundiales-en-5-anos--423755'>
+                    <p class="font-semibold self-start">2</p>
+                    <div class="flex flex-col">
+                        <p><span class='text-corporate-red'>Alianza estratégica para China y Estados Unidos:</span> los dos países de Latinoamérica que serán potencias mundiales en 5 años</p>
+                    </div>
+                                            <img loading="lazy" class="object-cover aspect-video w-14 h-14 mt-3 rounded-sm" src='https://cdn.canal26.com/media/image/2025/05/16/663178.jpg?s=1&a=423755' alt='Mapa del mundo. Foto Unsplash'>
+                                    </a>
+            </li>
+                    <li class="border-b border-zinc-200 mt-2">
+                <a class="flex flex-row gap-x-4" href='https://www.canal26.com/internacionales/el-proyecto-halcon-el-plan-de-espana-para-recuperar-los-aviones-de-combate-perdidos-en-los-ultimos-anos--423483'>
+                    <p class="font-semibold self-start">3</p>
+                    <div class="flex flex-col">
+                        <p><span class='text-corporate-red'>El proyecto Halcón:</span> el plan de España para recuperar los aviones de combate perdidos en los últimos años</p>
+                    </div>
+                                            <img loading="lazy" class="object-cover aspect-video w-14 h-14 mt-3 rounded-sm" src='https://cdn.canal26.com/media/image/2025/04/02/655899.jpg?s=1&a=423483' alt='Avión Eurofighter. Foto: Wikipedia.'>
+                                    </a>
+            </li>
+                    <li class="border-b border-zinc-200 mt-2">
+                <a class="flex flex-row gap-x-4" href='https://www.canal26.com/internacionales/preparados-para-la-tercera-guerra-mundial-los-3-paises-de-latinoamerica-que-sumaron-una-importante-arma-de-alta-tecnologia--423739'>
+                    <p class="font-semibold self-start">4</p>
+                    <div class="flex flex-col">
+                        <p><span class='text-corporate-red'>Preparados para la Tercera Guerra Mundial:</span> los 3 países de Latinoamérica que sumaron una importante arma de alta tecnología</p>
+                    </div>
+                                            <img loading="lazy" class="object-cover aspect-video w-14 h-14 mt-3 rounded-sm" src='https://cdn.canal26.com/media/image/2025/05/16/663137.jpg?s=1&a=423739' alt='Avión caza Saab Gripen NG. Foto: Saab'>
+                                    </a>
+            </li>
+                    <li class="border-b border-zinc-200 mt-2">
+                <a class="flex flex-row gap-x-4" href='https://www.canal26.com/internacionales/una-potencia-mundial-dejara-de-pedir-visas-para-el-ingreso-de-argentinos-cuando-entra-en-vigencia-la-medida--423583'>
+                    <p class="font-semibold self-start">5</p>
+                    <div class="flex flex-col">
+                        <p><span class='text-corporate-red'>Una potencia mundial dejará de pedir visas para el ingreso de argentinos al país:</span> cuándo entra en vigencia la medida</p>
+                    </div>
+                                            <img loading="lazy" class="object-cover aspect-video w-14 h-14 mt-3 rounded-sm" src='https://cdn.canal26.com/media/image/2025/05/15/662878.jpg?s=1&a=423583' alt='Aeropuerto Internacional de Pekín Capital. Foto: Reuters / Tingshu Wang.'>
+                                    </a>
+            </li>
+            </ol>
+
+                            <div class="sticky top-20">
+                                <div class="mx-auto mb-8" style="min-width: 300px; max-width: 300px">
+                                    
+        <div id='Halfpage_2'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Halfpage_2');
+
+            });
+
+        </script>
+                                </div>
+
+                                <div class="mx-auto mb-8" style="min-width: 300px; max-width: 300px">
+                                    
+        <div id='MediumRectangle_2'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('MediumRectangle_2');
+
+            });
+
+        </script>
+                                </div>
+                            </div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+                            <div class="relative flex items-center justify-center my-4">
+                    <div class="z-20">
+                        
+        <div id='Billboard_1'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Billboard_1');
+
+            });
+
+        </script>
+                    </div>
+                </div>
+            
+            <div class="inner_container">
+                <link rel="stylesheet" href="https://cdn.canal26.com/build/assets/swiper.79315901.css" /><script type="module" src="https://cdn.canal26.com/build/assets/require_swiper.8b438040.js"></script><!-- Slider main container -->
+<div class="swiper">
+    <div class="flex justify-between">
+        <div class="flex flex-row my-2 justify-between">
+            <h2 class="text-2xl xl:text-3xl my-0 divisor">Notas relacionadas</h2>
+        </div>
+        <div class="flex gap-6">
+            <button class="text-3xl text-gray-400 carousel__prev"><-</button>
+            <button class="text-3xl text-gray-400 carousel__next">-></button>
+        </div>
+    </div>
+
+    <div class="border-b border-b-corporate-red h-1 my-2 divisor">&nbsp;</div>
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/maduro-apunto-contra-zelenski-tan-payaso-tan-burdo-y-tan-derrotado-como-guaido--367679">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2024/03/12/593187.jpg?s=2&amp;a=367679" alt="Nicolás Maduro. Foto: EFE."/>
+                    </a>
+                                <a href="/internacionales/maduro-apunto-contra-zelenski-tan-payaso-tan-burdo-y-tan-derrotado-como-guaido--367679">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Maduro apuntó contra Zelenski:</span> "Tan payaso, tan burdo y tan derrotado como Guaidó"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-el-tribunal-supremo-de-justicia-ratifico-la-inhabilitacion-de-15-anos-para-maria-corina-machado--363292">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2024/01/26/585466.jpg?s=2&amp;a=363292" alt="María Corina Machado; Venezuela. Foto: Reuters."/>
+                    </a>
+                                <a href="/internacionales/venezuela-el-tribunal-supremo-de-justicia-ratifico-la-inhabilitacion-de-15-anos-para-maria-corina-machado--363292">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> el Tribunal Supremo de Justicia ratificó la inhabilitación de 15 años para María Corina Machado</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/juan-guaido-en-canal-26-estoy-perseguido-por-la-dictadura-de-nicolas-maduro--356036">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/10/06/565884.jpg?s=2&amp;a=356036" alt="Juan Guaidó respondió a la orden de arresto en su contra. Foto: EFE."/>
+                    </a>
+                                <a href="/internacionales/juan-guaido-en-canal-26-estoy-perseguido-por-la-dictadura-de-nicolas-maduro--356036">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Juan Guaidó en Canal 26:</span> "Estoy perseguido por la dictadura de Nicolás Maduro"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/elecciones-en-venezuela-guaido-felicito-a-corina-machado-y-llamo-a-fortalecer-la-unidad-contra-maduro--354729">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/10/23/568640.jpg?s=2&amp;a=354729" alt="Juan Guaidó. Foto: Reuters."/>
+                    </a>
+                                <a href="/internacionales/elecciones-en-venezuela-guaido-felicito-a-corina-machado-y-llamo-a-fortalecer-la-unidad-contra-maduro--354729">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Elecciones en Venezuela:</span> Guaidó felicitó a Corina Machado y llamó a fortalecer la unidad contra Maduro</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/maduro-busca-reconocimiento-guaido-tras-la-orden-de-arresto-del-ministerio-publico-de-venezuela--353455">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/10/06/565884.jpg?s=2&amp;a=353455" alt="Juan Guaidó respondió a la orden de arresto en su contra. Foto: EFE."/>
+                    </a>
+                                <a href="/internacionales/maduro-busca-reconocimiento-guaido-tras-la-orden-de-arresto-del-ministerio-publico-de-venezuela--353455">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>"Maduro busca reconocimiento":</span> Guaidó tras la orden de arresto del Ministerio Público de Venezuela</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-la-fiscalia-emitio-una-orden-de-arresto-contra-juan-guaido-exiliado-en-estados-unidos--353386">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/10/05/565741.jpg?s=2&amp;a=353386" alt="Juan Guaidó, expresidente del Parlamento de Venezuela. Foto: Reuters."/>
+                    </a>
+                                <a href="/internacionales/venezuela-la-fiscalia-emitio-una-orden-de-arresto-contra-juan-guaido-exiliado-en-estados-unidos--353386">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> la Fiscalía emitió una orden de arresto contra Juan Guaidó, exiliado en Estados Unidos</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/me-parece-despreciable-guaido-condeno-la-recepcion-de-nicolas-maduro-en-la-unasur--343588">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2020/01/15/439524.jpg?s=2&amp;a=343588" alt="Juan Guaidó. Foto: Reuters."/>
+                    </a>
+                                <a href="/internacionales/me-parece-despreciable-guaido-condeno-la-recepcion-de-nicolas-maduro-en-la-unasur--343588">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>"Me parece despreciable":</span> Guaidó condenó la recepción de Nicolás Maduro en la Unasur</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-con-guaido-en-eeuu-el-partido-opositor-anuncio-su-candidato-para-las-primarias--341648">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/05/05/541628.jpg?s=2&amp;a=341648" alt="Juan Guaidó, Venezuela. Foto: Reuters"/>
+                    </a>
+                                <a href="/internacionales/venezuela-con-guaido-en-eeuu-el-partido-opositor-anuncio-su-candidato-para-las-primarias--341648">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> con Guaidó en EEUU, el partido opositor anunció su candidato para las primarias</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/gustavo-petro-cruzo-a-guaido-tras-acusarlo-de-persecucion-es-mejor-que-la-mentira-no-aparezca-en-politica--340872">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/03/29/537219.jpg?s=2&amp;a=340872" alt="El presidente de Colombia Gustavo Petro Foto Reuters"/>
+                    </a>
+                                <a href="/internacionales/gustavo-petro-cruzo-a-guaido-tras-acusarlo-de-persecucion-es-mejor-que-la-mentira-no-aparezca-en-politica--340872">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Gustavo Petro cruzó a Guaidó tras acusarlo de persecución:</span> "Es mejor que la mentira no aparezca en política"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/juan-guaido-denuncio-que-fue-obligado-a-viajar-a-miami-tras-ser-amenazado-en-su-visita-a-colombia--340848">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/04/25/540357.jpg?s=2&amp;a=340848" alt="Juan Guaidó. Foto: EFE."/>
+                    </a>
+                                <a href="/internacionales/juan-guaido-denuncio-que-fue-obligado-a-viajar-a-miami-tras-ser-amenazado-en-su-visita-a-colombia--340848">
+                    <h3 class="text-xl xl:text-2xl">Juan Guaidó denunció que fue obligado a viajar a Miami tras ser amenazado en su visita a Colombia </h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-juan-guaido-revelo-que-gasto-casi-150-millones-de-dolares-durante-su-gobierno-interino--335133">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/01/26/531161.jpg?s=2&amp;a=335133" alt="Juan Guaidó. Foto: EFE."/>
+                    </a>
+                                <a href="/internacionales/venezuela-juan-guaido-revelo-que-gasto-casi-150-millones-de-dolares-durante-su-gobierno-interino--335133">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> Juan Guaidó reveló que gastó casi 150 millones de dólares durante su "Gobierno interino"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-la-oposicion-nombro-a-la-directiva-para-sustituir-a-guaido--333969">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2023/01/05/529519.jpg?s=2&amp;a=333969" alt="Oposición venezolana. Foto: EFE"/>
+                    </a>
+                                <a href="/internacionales/venezuela-la-oposicion-nombro-a-la-directiva-para-sustituir-a-guaido--333969">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> la oposición nombró a la directiva para sustituir a Guaidó </h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-asamblea-nacional-aprobo-la-disolucion-del-gobierno-interino-de-juan-guaido--333637">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/05/28/476864.jpg?s=2&amp;a=333637" alt="Juan Guaidó, Venezuela, Reuters"/>
+                    </a>
+                                <a href="/internacionales/venezuela-asamblea-nacional-aprobo-la-disolucion-del-gobierno-interino-de-juan-guaido--333637">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> Asamblea Nacional aprobó la disolución del gobierno interino de Juan Guaidó</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/sin-apoyo-en-venezuela-la-soledad-de-juan-guaido--329654">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/05/28/476864.jpg?s=2&amp;a=329654" alt="Juan Guaidó, Venezuela, Reuters"/>
+                    </a>
+                                <a href="/internacionales/sin-apoyo-en-venezuela-la-soledad-de-juan-guaido--329654">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Sin apoyo en Venezuela:</span> la soledad de Juan Guaidó</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/guaido-maduro-tiene-vinculos-terroristas-y-usa-aviones-iranies-para-lavar-dinero--322053">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2020/02/16/442348.jpg?s=2&amp;a=322053" alt="Juan Guaidó, Venezuela, política internacional, NA"/>
+                    </a>
+                                <a href="/internacionales/guaido-maduro-tiene-vinculos-terroristas-y-usa-aviones-iranies-para-lavar-dinero--322053">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Guaidó:</span> “Maduro tiene vínculos terroristas y usa aviones iraníes para lavar dinero”</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/politica/guaido-critico-con-alberto-fernandez-cuestiono-acercamiento-con-maduro-y-lo-acuso-de-una-actitud-negacionista--318887">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2022/04/21/504240.jpg?s=2&amp;a=318887" alt="Juan Guaidó, Venezuela, foto NA"/>
+                    </a>
+                                <a href="/politica/guaido-critico-con-alberto-fernandez-cuestiono-acercamiento-con-maduro-y-lo-acuso-de-una-actitud-negacionista--318887">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Guaidó, crítico con Alberto Fernández:</span> cuestionó acercamiento con Maduro y lo acusó de una actitud "negacionista"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-la-oposicion-convoco-a-la-poblacion-a-manifestarse-por-elecciones-libres-y-justas--307837">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/09/29/487041.jpg?s=2&amp;a=307837" alt="La oposición llama a manifestarse en Venezuela por elecciones &quot;libres y justas&quot; "/>
+                    </a>
+                                <a href="/internacionales/venezuela-la-oposicion-convoco-a-la-poblacion-a-manifestarse-por-elecciones-libres-y-justas--307837">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> la oposición convocó a la población a manifestarse por elecciones "libres y justas" </h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/venezuela-la-oposicion-participara-en-las-elecciones-regionales-y-municipales--306322">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/09/01/484470.jpg?s=2&amp;a=306322" alt="Oposición en Venezuela, conferencia, NA"/>
+                    </a>
+                                <a href="/internacionales/venezuela-la-oposicion-participara-en-las-elecciones-regionales-y-municipales--306322">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Venezuela:</span> la oposición participará en las elecciones regionales y municipales</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/politica/victoria-tolosa-paz-maduro-fue-electo-democraticamente--302581">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/06/24/478873.jpg?s=2&amp;a=302581" alt="Victoria Tolosa Paz, presidenta del Consejo Nacional de Coordinación de Políticas Sociales."/>
+                    </a>
+                                <a href="/politica/victoria-tolosa-paz-maduro-fue-electo-democraticamente--302581">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Victoria Tolosa Paz:</span> “Maduro fue electo democráticamente”</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/guaido-duro-contra-el-gobierno-por-retirar-demando-contra-maduro-genera-impunidad-en-los-dictadores--301169">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/05/28/476864.jpg?s=2&amp;a=301169" alt="Juan Guaidó, Venezuela, Reuters"/>
+                    </a>
+                                <a href="/internacionales/guaido-duro-contra-el-gobierno-por-retirar-demando-contra-maduro-genera-impunidad-en-los-dictadores--301169">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Guaidó duro contra el Gobierno por retirar demando contra Maduro:</span> "Genera impunidad en los dictadores"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/politica/argentina-retiro-su-apoyo-a-la-demanda-contra-el-regimen-de-nicolas-maduro-ante-la-corte-penal-internacional--301062">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/03/24/471490.jpg?s=2&amp;a=301062" alt="Nicolás Maduro y Alberto Fernández, Venezuela y Argentina, Fotos NA"/>
+                    </a>
+                                <a href="/politica/argentina-retiro-su-apoyo-a-la-demanda-contra-el-regimen-de-nicolas-maduro-ante-la-corte-penal-internacional--301062">
+                    <h3 class="text-xl xl:text-2xl">Argentina retiró su apoyo a la demanda contra el régimen de Nicolás Maduro ante la Corte Penal Internacional</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/internacionales/juan-guaido-dio-positivo-de-coronavirus--297772">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2020/02/16/442348.jpg?s=2&amp;a=297772" alt="Juan Guaidó, Venezuela, política internacional, NA"/>
+                    </a>
+                                <a href="/internacionales/juan-guaido-dio-positivo-de-coronavirus--297772">
+                    <h3 class="text-xl xl:text-2xl">Juan Guaidó dio positivo de coronavirus</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/policiales/guaido-hablo-con-la-joven-venezolana-violada-en-balvanera-a-pesar-del-dolor-me-enseno-de-dignidad-y-valentia--295018">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2020/02/16/442348.jpg?s=2&amp;a=295018" alt="Juan Guaidó, Venezuela, política internacional, NA"/>
+                    </a>
+                                <a href="/policiales/guaido-hablo-con-la-joven-venezolana-violada-en-balvanera-a-pesar-del-dolor-me-enseno-de-dignidad-y-valentia--295018">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Guaidó habló con la joven venezolana violada en Balvanera:</span> "A pesar del dolor, me enseñó de dignidad y valentía"</h3>
+                                    </a>
+            </div>
+                    <div class="swiper-slide">
+                                    <a href="/general/caos-politico-y-social-en-estados-unidos-la-explosiva-antesala-de-un-nuevo-peligro-para-america-toda--293899">
+                        <img loading="lazy" class="group-hover:opacity-90 mb-4 object-cover" src="https://cdn.canal26.com/media/image/2021/01/06/465705.jpg?s=2&amp;a=293899" alt="Marcha y protesta en Estados Unidos, Proud Boys, supremacistas blancos, REUTERS"/>
+                    </a>
+                                <a href="/general/caos-politico-y-social-en-estados-unidos-la-explosiva-antesala-de-un-nuevo-peligro-para-america-toda--293899">
+                    <h3 class="text-xl xl:text-2xl"><span class='text-corporate-red'>Caos político y social en Estados Unidos:</span> la explosiva antesala de un nuevo peligro para América toda</h3>
+                                            <p class="article-author">Por Marcelo García</p>
+                                    </a>
+            </div>
+            </div>
+</div>
+
+            </div>
+
+            <div class="inner_container">
+                <div class="my-4">
+    <div class="flex flex-row my-2 justify-between">
+        <h2 class="text-2xl xl:text-3xl my-0">También podría interesarte</h2>
+    </div>
+
+    <div class="border-b border-b-corporate-red h-1 my-2 divisor">&nbsp;</div>
+
+    <section id="bottom" class="md:grid md:grid-cols-8 md:grid-rows-8 md:gap-4 xl:gap-x-4 xl:gap-y-8 grid-flow-row-dense">
+                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/internacionales/rusia-prepara-su-lista-de-demandas-para-un-alto-el-fuego-en-ucrania-que-exigira-el-kremlin--423851">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="https://cdn.canal26.com/media/image/2025/05/17/663262.jpg?s=2&amp;a=423851" alt="Dmitri Peskov, portavoz del Kremlin. Foto: EFE."/>
+                                            </a>
+                    <a href="/internacionales/rusia-prepara-su-lista-de-demandas-para-un-alto-el-fuego-en-ucrania-que-exigira-el-kremlin--423851">
+                        <h2 class="you_may_like_article_low_title"><span class='text-corporate-red'>Rusia prepara su lista de demandas para un alto el fuego en Ucrania:</span> ¿qué exigirá el Kremlin?</h2>
+                                            </a>
+                </div>
+                                                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/general/hasta-cuando-seguiran-las-lluvias-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423849">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="https://cdn.canal26.com/media/image/2025/05/16/663222.jpg?s=2&amp;a=423849" alt="Lluvias en Buenos Aires. Foto: NA"/>
+                                            </a>
+                    <a href="/general/hasta-cuando-seguiran-las-lluvias-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423849">
+                        <h2 class="you_may_like_article_low_title"><span class='text-corporate-red'>¿Hasta cuándo seguirán las lluvias?:</span> cómo estará el clima este sábado 17 de mayo de 2025</h2>
+                                            </a>
+                </div>
+                                                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/agencias/sudafrica-exige-a-la-comunidad-internacional-actuar-contra-israel-por-sus-crimenes-en-gaza--423842">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="/images/default_cover.png" alt=""/>
+                                            </a>
+                    <a href="/agencias/sudafrica-exige-a-la-comunidad-internacional-actuar-contra-israel-por-sus-crimenes-en-gaza--423842">
+                        <h2 class="you_may_like_article_low_title">Sudáfrica exige a la comunidad internacional actuar contra Israel por sus crímenes en Gaza</h2>
+                                            </a>
+                </div>
+                                                                                            <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/agencias/tres-iranies-acusados-en-el-reino-unido-de-espiar-supuestamente-para-iran--423843">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="/images/default_cover.png" alt=""/>
+                                            </a>
+                    <a href="/agencias/tres-iranies-acusados-en-el-reino-unido-de-espiar-supuestamente-para-iran--423843">
+                        <h2 class="you_may_like_article_low_title">Tres iraníes acusados en el Reino Unido de espiar supuestamente para Irán</h2>
+                                            </a>
+                </div>
+                                                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/agencias/la-india-felicita-a-su-medallista-de-jabalina-tras-criticas-durante-la-crisis-con-pakistan--423840">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="/images/default_cover.png" alt=""/>
+                                            </a>
+                    <a href="/agencias/la-india-felicita-a-su-medallista-de-jabalina-tras-criticas-durante-la-crisis-con-pakistan--423840">
+                        <h2 class="you_may_like_article_low_title">La India felicita a su medallista de jabalina tras críticas durante la crisis con Pakistán</h2>
+                                            </a>
+                </div>
+                                                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/agencias/asesor-de-trump-aboga-por-una-estrecha-coordinacion-con-la-ua-para-lograr-la-paz-en-rdc--423841">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="/images/default_cover.png" alt=""/>
+                                            </a>
+                    <a href="/agencias/asesor-de-trump-aboga-por-una-estrecha-coordinacion-con-la-ua-para-lograr-la-paz-en-rdc--423841">
+                        <h2 class="you_may_like_article_low_title">Asesor de Trump aboga por una "estrecha coordinación" con la UA para lograr la paz en RDC</h2>
+                                            </a>
+                </div>
+                                                                                                <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/general/pronostico-del-tiempo-para-tucuman-hoy-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423839">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="https://cdn.canal26.com/media/image/2024/06/11/607582.jpg?s=2&amp;a=423839" alt="Pronóstico de Hoy"/>
+                                            </a>
+                    <a href="/general/pronostico-del-tiempo-para-tucuman-hoy-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423839">
+                        <h2 class="you_may_like_article_low_title"><span class='text-corporate-red'>Pronóstico del tiempo para Tucumán hoy:</span> cómo estará el clima este sábado 17 de mayo de 2025</h2>
+                                            </a>
+                </div>
+                                                        <div class="listing_article_low md:listing_article_low_horizontal">
+                    <a href="/general/pronostico-del-tiempo-para-tierra-del-fuego-hoy-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423838">
+                                                    <img loading="lazy" class="listing_article_low_image group-hover:opacity-90 " src="https://cdn.canal26.com/media/image/2024/06/11/607582.jpg?s=2&amp;a=423838" alt="Pronóstico de Hoy"/>
+                                            </a>
+                    <a href="/general/pronostico-del-tiempo-para-tierra-del-fuego-hoy-como-estara-el-clima-este-sabado-17-de-mayo-de-2025--423838">
+                        <h2 class="you_may_like_article_low_title"><span class='text-corporate-red'>Pronóstico del tiempo para Tierra Del Fuego hoy:</span> cómo estará el clima este sábado 17 de mayo de 2025</h2>
+                                            </a>
+                </div>
+                                            </section>
+</div>
+
+            </div>
+
+            
+                            <!-- Native footer -->
+
+<div class="my-4">
+    <div data-type="_mgwidget" data-widget-id="1699008"></div>
+</div>
+<script>
+    (function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");
+</script>
+                    </div>
+
+        <div class="xl:col-span-2">
+            <div class="hidden xl:block mx-auto z-0" style="min-width: 200px; max-width: 200px">
+            <div id="banner-container" style="width: 200px;">
+                        
+        <div id='Skyscraper_1'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Skyscraper_1');
+
+            });
+
+        </script>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function dragCard() {
+            return {
+                isDragging: false,
+                startY: 0,
+                startHeight: 0,
+                currentHeight: 0,
+
+                startDrag(event) {
+                    if (event.target.closest('.floating-related-articles-container')) {
+                        // If it is the viewRelatedArticles container, we don't want to do drag the card
+                        return;
+                    }
+                    this.isDragging = true;
+                    this.startY = event.clientY;
+                    // Use `touches` for touch devices
+                    this.startY = event.type.includes('mouse') ? event.clientY : event.touches[0].clientY;
+                    this.startHeight = this.$el.clientHeight;
+                },
+
+                dragging(event) {
+                    if (!this.isDragging) return;
+
+                    // If the event is a touchmove and we're dragging, prevent the background from scrolling
+                    if (event.type.includes('touch')) {
+                        event.preventDefault();
+                    }
+
+                    // Use `touches` for touch devices
+                    const clientY = event.type.includes('mouse') ? event.clientY : event.touches[0].clientY;
+                    const distance = this.startY - clientY;
+
+                    // Calculate the new height based on drag distance
+                    let newHeight = this.startHeight + distance;
+
+                    // Calculate the maximum allowed height as 90% of the window's inner height
+                    const maxHeight = window.innerHeight * 0.90;
+
+                    // Apply the maximum height limit
+                    newHeight = Math.min(newHeight, maxHeight);
+
+                    // Update the card's current height
+                    this.currentHeight = Math.max(newHeight, 0); // Ensure the height doesn't go negative
+                    this.$el.style.height = `${this.currentHeight}px`;
+                },
+
+                stopDrag() {
+                    this.isDragging = false;
+                }
+            }
+        }
+    </script>
+    </div>
+    </div>
+            <div class="clever-core-ads"></div>
+        <div class="mx-auto z-20">
+        
+        <div id='Interstitial'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Interstitial');
+
+            });
+
+        </script>
+    </div>
+
+<div class="z-10 relative flex flex-col md:flex-row justify-between md:justify-evenly md:text-left items-stretch text-center w-full p-6 pb-20 md:pb-32 dark:bg-corporate-red text-white" id="footer">
+    <a href="/" class="my-8 block">
+        <img loading="lazy" class="logo w-10 md:w-16" src="/images/canal26_logo_blanco.svg" alt="Canal 26">
+    </a>
+    <div class="flex flex-col space-y-3">
+        <span class="font-medium">Acerca de nosotros</span>
+                    <a href="/nuestro-equipo" class="w-full text-sm font-light rounded-lg">
+                <span class="">Nuestro equipo</span>
+            </a>
+                    <a href="/contacto" class="w-full text-sm font-light rounded-lg">
+                <span class="">Contacto</span>
+            </a>
+                    <a href="/terminos" class="w-full text-sm font-light rounded-lg">
+                <span class="">Términos y Condiciones</span>
+            </a>
+                    <a href="/politica-privacidad" class="w-full text-sm font-light rounded-lg">
+                <span class="">Política de privacidad</span>
+            </a>
+                    <a href="/mediakit" class="w-full text-sm font-light rounded-lg">
+                <span class="">Mediakit</span>
+            </a>
+                    <a href="/programacion-de-canal-26" class="w-full text-sm font-light rounded-lg">
+                <span class="">Programación</span>
+            </a>
+                    <a href="/redactores" class="w-full text-sm font-light rounded-lg">
+                <span class="">Redactores</span>
+            </a>
+                    <a href="https://www.linkedin.com/company/canal26/jobs/" class="w-full text-sm font-light rounded-lg">
+                <span class="">Empleos</span>
+            </a>
+            </div>
+
+    <div class="border-b-2  border-red-400  w-full my-6 md:hidden"></div>
+
+    <div class="flex flex-col space-y-3">
+        <span class="font-medium">Medios</span>
+                    <a href="/canal26-en-vivo" class="w-full text-sm font-light rounded-lg">
+                <span class="">Canal26</span>
+            </a>
+                    <a href="/latinatv" class="w-full text-sm font-light rounded-lg">
+                <span class="">Latina TV</span>
+            </a>
+                    <a href="/tierramia" class="w-full text-sm font-light rounded-lg">
+                <span class="">Tierra Mia</span>
+            </a>
+                    <a href="/telemax" class="w-full text-sm font-light rounded-lg">
+                <span class="">Telemax</span>
+            </a>
+                    <a href="/musictop" class="w-full text-sm font-light rounded-lg">
+                <span class="">Musictop</span>
+            </a>
+            </div>
+
+    <div class="border-b-2  border-red-400  w-full my-6 md:hidden"></div>
+
+    <div class="flex flex-col justify-center mb-4 space-y-6">
+        <div class="flex flex-row justify-center space-x-2">
+            
+                
+            
+            
+                                        <a id="btn-facebook-footer" class="rounded-full" href="https://www.facebook.com/canal26" title="Facebook" target="_blank" type="button">
+                            <svg role="img" class="w-8 h-8 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        
+            
+                                        <a id="btn-instagram-footer" class="rounded-full bg-white p-2" href="https://www.instagram.com/canal26ok" title="Instagram" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                
+            
+                                        <a id="btn-twitter-footer" class="rounded-full bg-white p-2" href="https://twitter.com/canal26noticias" title="Twitter" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                
+            
+                                        <a id="btn-youtube-footer" class="rounded-full bg-white p-2" href="https://www.youtube.com/c/canal26" title="YouTube" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                
+            
+                                        <a id="btn-linkedin-footer" class="rounded-full bg-white p-2" href="https://www.linkedin.com/company/canal26" title="Linkedin" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                
+            
+                                        <a id="btn-tiktok-footer" class="rounded-full bg-white p-2" href="https://www.tiktok.com/@canal26argentina" title="TikTok" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                
+            
+                                        <a id="btn-telegram-footer" class="rounded-full bg-white p-2" href="https://t.me/canal26_noticias" title="Telegram" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"/>
+                            </svg>
+                        </a>
+                    
+            
+                                        <a id="btn-googlenews-footer" class="rounded-full bg-white p-2" href="https://news.google.com/publications/CAAqBwgKMNyezQEwqIMn?ceid=AR:es-419&amp;oc=3" title="GoogleNews" target="_blank" type="button">
+                            <svg role="img" class="w-4 h-4 stroke-0 icon-socialmedia-footer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2666 21.2a.6141.6141 0 0 1-.6128.6128H3.3446a.614.614 0 0 1-.6128-.6128V8.1153a.6141.6141 0 0 1 .6128-.6128h17.3091a.6141.6141 0 0 1 .6128.6128V21.2zm-3.0315-3.4196v-1.1957a.0803.0803 0 0 0-.0803-.0803h-5.3725v1.3619h5.3725a.0817.0817 0 0 0 .0804-.083l-.0001-.0029zm.8171-2.5875v-1.2012a.0803.0803 0 0 0-.079-.0817h-6.191v1.3619h6.1896a.079.079 0 0 0 .0804-.0776v-.0041.0027zm-.8171-2.5875v-1.2066a.0803.0803 0 0 0-.0803-.0803h-5.3725v1.3619h5.3725a.0816.0816 0 0 0 .0803-.079v.004zM8.1492 14.0448v1.2257h1.7704c-.1457.749-.8049 1.2924-1.7704 1.2924-1.0906-.0405-1.9418-.9574-1.9013-2.048.0384-1.0338.8676-1.8629 1.9013-1.9013a1.77 1.77 0 0 1 1.2529.4903l.9342-.9329a3.1405 3.1405 0 0 0-2.1871-.8525c-1.8051 0-3.2684 1.4633-3.2684 3.2684 0 1.8051 1.4633 3.2684 3.2684 3.2684 1.8889 0 3.1323-1.3278 3.1323-3.1976a3.941 3.941 0 0 0-.0518-.6183l-3.0805.0054zM2.2701 7.6537a.6156.6156 0 0 1 .6128-.6128h12.1545l-1.2692-3.4904a.5952.5952 0 0 0-.7436-.3827L.3676 7.7749a.5938.5938 0 0 0-.3228.7749l2.2253 6.112V7.6537za.6156.6156 0 0 1 .6128-.6128h12.1545l-1.2692-3.4904a.5952.5952 0 0 0-.7436-.3827L.3676 7.7749a.5938.5938 0 0 0-.3228.7749l2.2253 6.112V7.6537zm21.3116-.3105l-8.803-2.3683.7517 2.0659h5.5836a.6141.6141 0 0 1 .6128.6128v8.7948l2.2471-8.3659a.5923.5923 0 0 0-.3922-.7393zm-4.4955-1.6738V2.7946a.6101.6101 0 0 0-.6115-.6074H5.5236a.6101.6101 0 0 0-.6156.6046v2.8368l8.3904-3.0519a.5937.5937 0 0 1 .7422.3895l.5447 1.498 4.5009 1.2052z"/>
+                            </svg>
+                        </a>
+                
+                    </div>
+
+        <a href="/canal26-en-vivo" class="flex flex-row rounded-2xl justify-center bg-white px-4 mx-auto">
+            <img loading="lazy" src="/images/live_widget_animation.gif" class="h-6 my-auto" title="En vivo canal 26" alt="Canal 26 en vivo"/>
+            <p class="text-sm text-black dark:text-black">Canal 26 en vivo</p>
+        </a>
+
+        <div class="md:hidden flex flex-row justify-center space-x-4">
+            <a class="h-8" target="_blank" href="https://apps.apple.com/ar/app/diario-26/id548859487">
+                <img loading="lazy" class="h-full" src="/images/disponible_appstore.png" title="Ir a App Store" alt="Ir a App Store">
+            </a>
+            <a class="h-8" target="_blank" href="https://play.google.com/store/apps/details?id=ar.com.telecentro.noticias26&amp;hl=es_419&amp;gl=US">
+                <img loading="lazy" class="h-full" src="/images/disponible_google-play.png" title="Bajar de Google Play" alt="Bajar de Google Play">
+            </a>
+        </div>
+
+        <p class="text-xs font-light">&copy; Canal 26 2025 Todos los derechos reservados</p>
+    </div>
+
+    <div class="hidden md:block flex flex-col">
+        <a class="hidden md:block flex flex-row mb-4" href="https://servicios1.afip.gov.ar/clavefiscal/qr/mobilePublicInfo.aspx?req=e1ttZXRob2Q9Z2V0UHVibGljSW5mb11bcGVyc29uYT0zMDcwOTM3Mzc2MV1bdGlwb2RvbWljaWxpbz0wXVtzZWN1ZW5jaWE9MF1bdXJsPWh0dHA6Ly93d3cuMjZub3RpY2lhcy5jb20uYXJdfQ==" target="_F960AFIPInfo">
+            <img loading="lazy" class="mx-auto" src="data:image/webp;base64,UklGRvoGAABXRUJQVlA4IO4GAAAQIgCdASo8AFAAPm0ykkekIyGhKAmYgA2JbADPna7+Z/iB2c3CvEfgBzHNZvXFUD32eoDbdeYv9oP1V96j0T7zTvOv7Z0M3lt8Y+x/7pfbHdr+/8CPoN9y/Hj8tfxR+197fqA/GD1Wf3j8suEzAB+S/y7/Menb2l/FX3I+pfoT/jn+J/Mfn9/IvYD/j38s/yX29fUx/if9bzf/U//E9xH+af0j/W/2790/8MfQwxHIifcUTIKNE6InQemlnZUsDP6FgWSafX1SDhELzXnmXuwkR9mwRpUzRozB6wNOSlxOxvd/y1aiic5Rg6RlMorfpAKfga1xzoWgSyd/Z1v7OfPcv2t9XOUOXouxHEgbMvdWzRkePOg/b2HtAADnY4KTBbK2hwyvuh0yBSEompSwchG/WPw8Wd3FR6/E/Z/+8OWqjAQQ3LhQF7Z/FEJkcciduhVL5EnSuaYN1Y15+Q91/Jawuko6prrnPzpPflM/PfeHBYR0C9wA68QUilXvjjusyxr/gpekYy8hBwuldKW4scb+OA4K2rA4SxHz9eZPy4HIq1Yz4yQqBerPX8vyLL8SJXUVKMizMSw35a4PGbfrwwB81U2CPXyINtzfPRnp1YaNnQ3jlMWJXT1PoZvxP+/khx/4dD0nM//zGPDoGl0Ow2/Ux/cdUyspTwPW28akK4DoknyplitLmArawf1Sb0ugQv/tjICys8O0Pr+TCbWwG5va2EawuA46Hwem+mVDEBiqSQO0/FtQEZ2PhKzW1v/HDBT9T+lXo17+lr3/6M0H322iG9LFwFlL3MZ59nSCbbS/DF/SQlcourfeYyfZMQDq7TPVXvtDgnnGd/+gM/Umfveq01To9OBvX3bvQKORznRTIU4iSZFNdtV2KKAkS5JopRzu959grXuodp9otGWKu7ULnSpZsUGewE/x/pMxZYx+IVOnhCL0kl1eG11Rvi0xcWavq5eH/rtZ87Lt20cYytm2nTN+rqE3qur69a+tr0Pa0d/Vxm14+//Ds78tdrgvsYOq94d/nhzT7RZ0diO4Mr3RBtLkp2UTLsOyiyoJmeFzuvDdxmwtM7oUj/5+yn/0wMa6CqIu/3XEftlgs/8SoPMSy2SrYMhakRfhPB5m2jPVtDiNGkemY6sZITnHC3ndDduBDzYM/NuOVlJdrAQupZiDnVut1vYp3aWMvsboG+2T+ZRq/p8AydkG4AlvRP8cqx/XZRK78ILxoCvjgqUsko9DWrP8pUdnL6zyM2iPzzGmZd4U7ciKXegbTuIXgxldvoCltzNCXl9fHPom17fFv00XR/Vn4PCKgjwUZ2ojSsCr4jSfmyorO8jdzjnsMa3uJx3QxOW0fA2pSDk5UPhZcGknPEY/O9XarztTBvoBdkFcIxKwd743nkoZNAukrP/pyGZduioqmM1D3zN1lRX/ciej4ZCn55F3lDnPbsUNwt2jYmy5D9dXpr07Lpd92bIuSJ9599584m4zs4W2kpqFYr2k1v5Td6bU9ySKjmzfh7NJuf9HkfWehUfLBXwNe/5bX+ctfJ8kU6KqLIcvGn1IN0/KZczmRkOzI2UpV1t+lXCnVykan7Cb/wAl7QHePD20CG5jGFu/+EicbK2W5CcTVCxZOWqEm/1jWa/L5yqQvwMV+b9/6Lyb/yHSfUGZ7gUIRxWPlH8nvegiQN11GYF1omBPZmxnlwM7RGm7PQTRhrDmm9ogr9c19NIjmLwyYgsC9IJUAPUd7JmAHDxx59ost1eOJRmVij/dXTgIRASMeYt2d2JjSgFbFKOgynr21XiZXglV4ZzD+7mFXC4eD3HASZQGolZxhJo3ESgHPN3+vtcqUnwsoteu1h4WlJVNuAfQARyCvcGX6gzzG4ljrj1luibwE8GDUz+DzDo8MypGSianUXDTMsneNVmBaapvzRdNuTEI2felfNKo0k2MX/DJ3/2IC2ODsYmZPkj2V6amS4nyvqL+UQkHJQubKE6Rh2rBeuN+QRW/7m7mBGxL74GKesqcRulDufg9IULz0pI+BRZMA12uAro8X1d3VBj64qAiahWXH3nse4Ruvg57EcJ647gdnFUEuS22MDdIGuYFFoWdjNj1TqZfK/pQ7iLhjx5TfKBSgvP1n6XAFZeuTPF4KwtCl1KjOeobXP8QdMON8wUVhHikiSZGczI6C/zL2QtGslk9JAgrEWcW5T5LdPtLIFBLrZ1wdRSymP7htR8AR9aMSOdRvzUErHhqelob39MMUiw6+8ALukTcVzTGwYaDXClG8M8/H0J30cdDDKpjCC1TvhkxvSdQfn/6IitCex+McjkETrhIJ6zuQespKT2f/y623hZxooR/SWJUIWtRDxWjXd0K4HH4qLb8i4vAzAAA">
+        </a>
+        <a class="" target="_blank" href="https://apps.apple.com/ar/app/diario-26/id548859487">
+            <img loading="lazy" class="w-24 mb-4" src="/images/disponible_appstore.png" title="Ir a App Store" alt="Ir a App Store">
+        </a>
+        <a class="" target="_blank" href="https://play.google.com/store/apps/details?id=ar.com.telecentro.noticias26&amp;hl=es_419&amp;gl=US">
+            <img loading="lazy" class="w-24" src="/images/disponible_google-play.png" title="Bajar de Google Play" alt="Bajar de Google Play">
+        </a>
+    </div>
+</div>
+    
+    
+    
+    <script>
+        const checkbox = document.querySelector("#toggleDarkMode");
+        const html = document.querySelector("html");
+
+        const toggleDarkMode = function () {
+            checkbox.checked
+                ? html.classList.add("dark")
+                : html.classList.remove("dark")
+        }
+    </script>
+            <div class="bottom-fixed-ad z-20">
+            <div id="sticky-footer-container">
+                                
+        <div id='Adhesion'></div>
+
+        <script type='application/javascript'>
+
+            sas.cmd.push(function() {
+
+                sas.render('Adhesion');
+
+            });
+
+        </script>
+                            </div>
+        </div>
+    
+    <script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'WRaE7r1nkQogGn9slj5zah7dNFSSUptAZMIWskid';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+    <script type="module" src="https://cdn.canal26.com/build/assets/app.83cb5135.js"></script>                        <script type="module" src="https://cdn.canal26.com/build/assets/page_reload_article.85f6c0d7.js"></script>                        <script type="module" src="https://cdn.canal26.com/build/assets/followme.5c8e1134.js"></script>        <script type="module" src="https://cdn.canal26.com/build/assets/require_alpine.84004cd3.js"></script>    <script type="module" src="https://cdn.canal26.com/build/assets/require_firebase.f7ef3901.js"></script>
+        <script type="module" src="https://cdn.canal26.com/build/assets/require_videojs.9fa1ece0.js"></script>    <script type="module" src="https://cdn.canal26.com/build/assets/require_copy.ef195b8c.js"></script>    <script type="module" src="https://cdn.canal26.com/build/assets/videojs_5.vast.vpaid.0fa086fe.js"></script>            
+           </body>
+</html>
