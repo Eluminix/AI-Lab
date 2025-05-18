@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript">
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.quantcast.com'
+    .concat('/choice/', 'tmwwjW_yfh8Cx', '/', host, '/choice.js');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = { ...args[3], tag_version: 'V2' };
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-15">
+	<meta name="format-detection" content="address=no,email=no,telephone:no">
+	<meta http-equiv="Content-Language" content="it">
+	<title>Impeachment, tre «superstar» del diritto difenderanno Trump | Esteri | DiariodelWeb.it</title>
+	<meta name="language" content="it">
+	<meta name="referrer" content="unsafe-url">
+	<meta name="author" content="Redazione">
+	<meta name="title" content="Impeachment, tre «superstar» del diritto difenderanno Trump">
+	<meta name="description" content="Il presidente chiama Dershowitz, già difensore di O. J. Simpson. Nella squadra l'ex procuratore Kenneth Star, che incriminò Clinton Secondo un sondagg...">
+	<meta name="date" content="2020-01-18">
+	<meta name="year" content="2020">
+	<meta name="month" content="2020-01">
+	<meta name="thumbnail" content="https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg">
+
+	<meta property="article:published_time" content="2020-01-18T06:55:54+00:00">
+	<meta property="article:modified_time" content="2020-01-18T06:55:54+00:00">
+	<meta property="article:publisher" content="https://www.facebook.com/diariodelweb.it">
+	<meta property="article:section" content="Esteri">
+	<meta property="article:tag" content="Amministrazione Trump">
+	<meta property="article:tag" content="Impeachment Trump">
+	<meta property="article:tag" content="Governo americano">
+	<meta property="article:tag" content="Stati Uniti">
+	<meta property="article:tag" content="Donald Trump">
+	<meta name="news_keywords" content="Amministrazione Trump, Impeachment Trump, Governo americano, Stati Uniti, Donald Trump">
+	<link rel="image_src" href="https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg">
+
+	<script type="application/ld+json">
+	[
+		{
+            "@context": "https://schema.org",
+            "@type":["NewsArticle","ReportageNewsArticle"],
+            "headline": "Impeachment, tre «superstar» del diritto difenderanno Trump",
+            "datePublished": "2020-01-18T06:55:54+00:00",
+            "dateModified": "2020-01-18T06:55:54+00:00",
+	     	"copyrightYear": 2022,
+            "description": "Il presidente chiama Dershowitz, già difensore di O. J. Simpson. Nella squadra l'ex procuratore Kenneth Star, che incriminò Clinton Secondo un sondaggio 8 afroamericani considerano Trump razzista",
+            "keywords": [
+            "Amministrazione Trump",
+            "Impeachment Trump",
+            "Governo americano",
+            "Stati Uniti",
+            "Donald Trump","Esteri"],
+            "articleSection": "Esteri",
+            "inLanguage": "it",
+            "isAccessibleForFree": "http://schema.org/True",
+            "author": {
+				"@type": "Person",
+				"name": "Redazione",
+				"url": "https://www.diariodelweb.it/autori/?q=1054"
+            },
+            "mainEntityOfPage": {
+				"@type": ["WebPage","ItemPage"],
+				"@id": "https://www.diariodelweb.it/esteri/articolo/?nid=20200118-545599",
+				"name": "Impeachment, tre «superstar» del diritto difenderanno Trump"
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg"
+            },
+			"publisher": {
+				"@type": ["NewsMediaOrganization","Organization"],
+				"sameAs": ["https://twitter.com/diariodelweb","https://www.facebook.com/diariodelweb.it"],
+				"name": "Diario Editore S.r.l.",
+				"foundingDate": "2008-07-18",
+				"logo": {
+					"@type": "ImageObject",
+	                "url": "https://www.diariodelweb.it/icone/loghi/v3/testata_diariodelweb_217x24.png",
+	                "width": "217",
+	                "height": "24"
+				}
+			}
+		},
+		{
+            "@context": "https://schema.org",
+			"@type": "ImageObject",
+			"url": "https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg",
+			"height": "500",
+			"width": "1000"
+		},
+		{
+            "@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "DiariodelWeb.it",
+			"sameAs": ["https://twitter.com/diariodelweb","https://www.facebook.com/diariodelweb.it"],
+			"description": "Notizie dell'ultima ora sull'attualit&agrave; nazionale, internazionale, politica, economia, innovazione, sport e molto altro. Video, foto, blog e commenti degli utenti con il DiariodelWeb.it",
+			"url": "https://www.diariodelWeb.it/",
+			"image": {
+				"@type": "ImageObject",
+                "url": "https://www.diariodelweb.it/icone/loghi/v3/testata_diariodelweb_1500x166.png",
+                "width": "1500",
+                "height": "166"
+			},
+			"copyrightHolder": {
+				"@type": ["NewsMediaOrganization","Organization"],
+                "name": "DiariodelWeb.it",
+				"url": "https://www.diariodelWeb.it/",
+				"logo": {
+					"@type": "ImageObject",
+	                "url": "https://www.diariodelweb.it/icone/loghi/v3/testata_diariodelweb_1500x166.png",
+	                "width": "1500",
+	                "height": "166"
+				},
+				"location": {
+					"@type": "Place",
+	                "name": "DiariodelWeb.it",
+					"url": "https://www.diariodelWeb.it/",
+					"address": {
+						"@type": "PostalAddress",
+		                "addressRegion": "Biella",
+		                "postalCode": "13900",
+		                "addressCountry":  {
+							"@type": "Country",
+			                "name": "IT"
+						}
+					}
+				}
+			},
+			"creator": {
+				"@type": "Organization"
+			}
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement":
+			[
+				{"@type": "ListItem","position": 1,"item":{"@type": "CollectionPage", "@id": "https://www.diariodelWeb.it/", "name": "DiariodelWeb.it"}},
+				{"@type": "ListItem","position": 2,"item":{"@type": "CollectionPage", "@id": "https://www.diariodelweb.it/esteri/", "name": "Esteri"}},
+				{"@type": "ListItem","position": 3,"item":{"@type": "ItemPage", "@id": "https://www.diariodelweb.it/esteri/articolo/?nid=20200118-545599", "name": "Impeachment, tre «superstar» del diritto difenderanno Trump"}}
+			]
+		}
+	]
+	</script>
+	<!-- facebook -->
+
+	<meta property="fb:app_id" content="174211839259672">
+	<meta property="fb:pages" content="321818054687989">
+	<meta property="og:site_name" content="DiariodelWeb.it">
+	<meta property="og:updated_time" content="2020-01-18T06:55:54+00:00">
+	<meta property="og:url" content="https://www.diariodelweb.it/esteri/articolo/?nid=20200118-545599">
+	<meta property="og:type" content="article">
+	<meta property="og:locale" content="it_IT">
+	<meta property="og:title" content="Impeachment, tre «superstar» del diritto difenderanno Trump">
+	<meta property="og:image" content="https://archivi.diariodelweb.it/img/og/545/545599-facebook-998x500.jpg">
+	<meta property="og:image:alt" content="Il Presidente americano, Donald Trump">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="500">
+	<meta property="og:description" content="Il presidente chiama Dershowitz, già difensore di O. J. Simpson. Nella squadra l'ex procuratore Kenneth Star, che incriminò Clinton Secondo un sondagg...">
+	<!-- facebook -->
+
+	<!-- twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Impeachment, tre «superstar» del diritto difenderanno Trump">
+	<meta name="twitter:site" content="@diariodelweb">
+	<meta name="twitter:image" content="https://archivi.diariodelweb.it/img/og/545/545599-facebook-998x500.jpg">
+	<meta name="twitter:description" content="Il presidente chiama Dershowitz, già difensore di O. J. Simpson. Nella squadra l'ex procuratore Kenneth Star, che incriminò Clinton Secondo un sondagg...">
+	<meta name="twitter:url" content="https://www.diariodelweb.it/esteri/articolo/?nid=20200118-545599">
+	<meta name="twitter:site" content="@diariodelweb">
+	<meta name="twitter:creator" content="@diariodelweb">
+	<!-- twitter -->
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS DiariodelWeb.it Esteri" href="https://diariodelweb.it/esteri/feed/">
+	<meta name="robots" content="max-snippet:100, max-image-preview:standard">
+	<link rel="canonical" href="https://www.diariodelweb.it/esteri/articolo/?nid=20200118-545599">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- PRELOAD IMAGES -->
+	<link rel="preload" href="https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg" as="image">
+
+		<!-- PRELOAD STYLES -->
+		<link rel="preload" href="https://www.diariodelweb.it/stili/d/comuni.css" as="style">
+		<link rel="preload" href="https://www.diariodelweb.it/stili/d/notizia.css" as="style">
+		
+		<link href="https://www.diariodelweb.it/stili/d/comuni.css" rel="stylesheet">
+		<link href="https://www.diariodelweb.it/stili/d/notizia.css" rel="stylesheet">
+	
+	<script async defer src="https://www.diariodelweb.it/cgi-bin/analytics.asp?ID=545599"></script>
+</head>
+<body id="Dettaglio">
+
+<div class="contenitore_barra_superiore stirare">
+	<div class="contenitore_sinistra">
+		<div class="data">17&nbsp;maggio&nbsp;2025</div>
+		<div class="aggiornato">Aggiornato <strong>09:30</strong></div>
+	</div>
+	<div class="contenitore_centro">
+		<ul class="edizioni">
+			<li><a target="_blank" href="https://www.diarioditorino.it/" title="Diario di Torino">Diario di Torino</a></li>
+			<li><a target="_blank" href="https://www.diariofvg.it/" title="Diario FVG">Diario FVG</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<header class="header" id="header">
+	<div id="header_fisso">
+		<div class="diariodelweb" id="organization">
+			<div class="logo">
+				<a href="https://diariodelweb.it/" title="DiariodelWeb.it">DiariodelWeb.it</a>
+			</div>
+		</div>
+		<div class="contenitore_destra">
+			<ul class="social">
+				<li><a rel="nofollow" target="_blank" href="https://www.facebook.com/diariodelweb.it" title="Facebook" class="facebook">Facebook</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://twitter.com/diariodelweb" title="Twitter" class="twitter">Twitter</a></li>
+				<li><a rel="nofollow" target="_blank" href="https://www.diariodelweb.it/rss/" title="RSS" class="rss">RSS</a></li>
+			</ul>
+		</div>
+	
+		<div class="sezione">
+			<div class="sezione-briciole">
+			
+					<h6 class="briciola"><a title="Esteri" href="https://diariodelweb.it/esteri/">Esteri</a></h6>
+			
+			</div>
+		</div>
+	
+	</div>
+	<div class="pulire"></div>
+	<div id="submenu" class="submenu stirare">
+		<ul class="nav">
+			<li><a href="https://diariodelweb.it/opinioni/">Opinioni</a></li>	
+			<li><a href="https://diariodelweb.it/politica/">Politica</a></li>	
+			<li><a href="https://diariodelweb.it/economia/">Economia</a></li>	
+			<li><a href="https://diariodelweb.it/esteri/">Esteri</a></li>	
+			<li><a href="https://diariodelweb.it/salute/">Salute</a></li>	
+			<li><a href="https://diariodelweb.it/sport/">Sport</a></li>	
+			<li><a href="https://diariodelweb.it/trend/">Trend</a></li>	
+			<li><a href="https://diariodelweb.it/italia/">Italia</a></li>	
+		</ul>
+	</div>
+</header>
+	<div class="contenitore_principale">
+		<div class="contenuto_principale stirare">
+			<article>
+				<header class="contenitore_testata Esteri">
+	<div class="occhiello">
+		<span class="contenuto">Stati Uniti</span>
+	</div>
+	<div class="hgroup">
+		<h1 id="titolo_notizia" class="Esteri">Impeachment, tre «superstar» del diritto difenderanno Trump</h1>
+		<div class="catenaccio_notizia">
+			<h2>Il presidente chiama Dershowitz, già difensore di O. J. Simpson. Nella squadra l'ex procuratore Kenneth Star, che incriminò Clinton Secondo un sondaggio 8 afroamericani considerano Trump razzista</h2>
+		</div>
+	</div>
+</header>
+
+<div class="articolo-apertura">
+	<div class="firma">
+		<div class="autore">
+			<div class="autore-testo">
+				<a href="https://www.diariodelweb.it/autori/?q=1054"><span class="autore-nome">Redazione</span></a>
+			</div>
+		</div>
+		<time class="articolo-aggiornato" datetime="2020-01-18T06:55:54+00:00">
+			<a href="https://www.diariodelweb.it/tuttosu/data/?q=20200118"><span class="aggiornato">sabato 18 gennaio 2020&nbsp;06:55</span></a>
+		</time>
+	</div>
+</div>
+<div class="pulire"></div>
+				<div class="colonna_principale">
+					<div class="article stirare">
+					
+	<figure class="foto figure">
+		<img src="https://archivi.diariodelweb.it/img/995/545/545599-995x498.jpg" alt="Il Presidente americano, Donald Trump" width="620" height="310" />
+		<figcaption class="foto-pie stirare">
+			<span class="foto-testo">Il Presidente americano, Donald Trump</span>
+			<span class="foto-firma">Foto: 
+		
+				<span class="foto-agenzia">ANSA</span>
+		
+			</span>
+		</figcaption>
+	</figure>
+<div class="colonna_testo">
+<div class="corpo_notizia">
+<p><strong>NEW YORK - </strong>Il collegio difensivo del presidente statunitense, Donald Trump, si arricchisce di tre &#39;superstar&#39; del diritto, segno della sua volont&agrave; di arrivare a una piena assoluzione: non solo in Senato, dove appare scontata, ma anche davanti al &#39;tribunale del popolo&#39;, quello costituito dai talk show televisivi e radiofonici. Il loro ingresso non &egrave; ancora ufficiale, ma per i media statunitensi non ci sono dubbi: a difendere Trump dalle accuse di abuso di potere e intralcio alla giustizia saranno anche Kenneth Starr e Robert Ray, il cui lavoro da procuratori port&ograve; all&#39;impeachment contro l&#39;allora presidente Bill Clinton, e il professore di Harvard Alan Dershowitz, noto avvocato costituzionalista che ha difeso, tra gli altri, la star O.J. Simpson, assolto dall&#39;accusa di aver ucciso la moglie e un suo amico.</p><div id='div-gpt-ad-INARTICLE1'></div>
+
+<p>I primi due potranno mettere a disposizione della Casa Bianca l&#39;esperienza maturata due decenni fa, mentre il compito di Dershowitz sar&agrave; quello di mettere in dubbio la costituzionalit&agrave; del procedimento. Dershowitz, secondo i media, &egrave; particolarmente apprezzato da Trump per i suoi interventi televisivi considerati molto efficaci; nell&#39;entourage presidenziale, per&ograve;, c&#39;&egrave; chi teme che il fatto che l&#39;avvocato abbia difeso Jeffrey Epstein, il finanziere condannato per abusi sessuali e sfruttamento della prostituzione, morto suicida in carcere ad agosto, possa incidere negativamente. Anche Starr, in passato, ha difeso Epstein.</p>
+
+<h3>Team guidato da Pat Cipollone</h3>
+
+<p>Il team legale di Trump sar&agrave; guidato da Pat Cipollone, consigliere della Casa Bianca, e ne far&agrave; parte anche l&#39;avvocato personale del presidente, Jay Sekulow. Marted&igrave; prossimo il processo entrer&agrave; nel vivo: il presidente &egrave; accusato di aver abusato del suo potere per spingere l&#39;Ucraina a perseguire i suoi rivali politici e di aver intralciato il lavoro del Congresso, bloccando la testimonianza di alcuni membri del governo e rifiutandosi di consegnare i documenti richiesti dalla Camera nell&#39;ambito delle indagini.</p>
+
+<p>Trump, secondo l&#39;accusa, ha abusato del suo potere trattenendo quasi 400 milioni di dollari in aiuti destinati all&#39;Ucraina e promettendo un incontro alla Casa Bianca per convincere Kiev a indagare sull&#39;ex vicepresidente Joe Biden. Trump &egrave; il terzo presidente statunitense a subire un processo, dopo Andrew Johnson (1868) e Bill Clinton (1999); entrambi i presidenti furono assolti. Richard Nixon, nel 1974, si dimise - primo e unico presidente a farlo - prima che la Camera votasse il suo impeachment.</p><div id='div-gpt-ad-INARTICLE2'></div>
+
+<p>La Costituzione richiede la maggioranza semplice alla Camera per la messa in stato d&#39;accusa - alla Camera, i democratici detengono la maggioranza - e una maggioranza di due terzi in Senato per la condanna e la rimozione - in questo caso - del presidente (l&#39;impeachment pu&ograve; riguardare qualsiasi «funzionario civile degli Stati Uniti&quot;). In Senato, 53 seggi su 100 sono in mano al partito repubblicano: questo significa che servirebbe il voto di almeno 20 repubblicani per rimuovere Trump.</p>
+
+<h3>8 afroamericani su 10 considerano Trump razzista</h3>
+
+<p>Otto afroamericani su dieci considerano il presidente statunitense Donald Trump un razzista, che ha reso il razzismo un problema pi&ugrave; serio nel Paese. &Egrave; il risultato di un sondaggio Washington Post-Ipsos appena pubblicato sul sito del quotidiano. Pur dicendosi ottimisti sulla propria vita, gli afroamericani sono pessimisti sul Paese sotto Trump e sono determinati a far perdere il presidente alle elezioni di novembre. Durante la campagna elettorale del 2016, Trump si rivolse agli afroamericani chiedendo: «Cosa avete da perdere?». Pi&ugrave; di tre anni dopo, il loro verdetto appare chiaro.</p>
+
+<p>Nello specifico, l&#39;83% degli intervistati ha definito Trump un «razzista» e il 90% ha bocciato l&#39;operato del presidente. Il 65% crede che sia «un brutto momento» per essere una persona di colore in America. Poco &egrave; cambiato, inoltre, per la loro situazione finanziaria: il 19% ha detto di stare meglio ora rispetto a qualche anno fa, il 26% ha dichiarato di stare peggio; il 54% ha detto che poco o nulla &egrave; cambiato.</p>
+
+<p>Solo il 16% degli afroamericani crede che i bambini di colore nati negli Stati Uniti abbiano «una buona opportunit&agrave; di raggiungere un confortevole livello di vita&quot;; il 75%, invece, crede che questa opportunit&agrave; sia riservata ai bianchi. Pi&ugrave; di 8 su 10, inoltre, non hanno fiducia nella polizia e quasi 8 su 10 credono che i bianchi sottovalutino la discriminazione da loro subita. Il sondaggio ha un margine di errore del 3,5 per cento.</p><div id='div-gpt-ad-INARTICLE3'></div>
+<div class="copyright_notice">
+</div>
+</div>
+</div>
+
+<style>
+.articolo-consigliati{clear:both}
+.articolo-consigliati-testata{clear:both;display:block;}
+.articolo-consigliati-titolo{position:relative}
+.articolo-consigliati-titolo{font-weight:700;font-size:14px;text-transform:uppercase;padding:13px 0 15px}
+.articolo-consigliati_interno{display:block;}
+.articolo-consigliati{border-top:1px solid #000;margin-bottom:30px}
+.articolo-consigliati {font-weight:700;font-family:Roboto,sans-serif;font-size:18px;clear:both;padding:5px 0;}
+.articolo-consigliati .data{color: #ff0625; font-size: .6875rem; line-height: 1.1875rem; letter-spacing: .0125rem;display:block;}
+.articolo-consigliati ul{border-left: .0625rem dotted #4a4a4a;}
+.articolo-consigliati li{margin-bottom:0px;padding: .3125rem 0 .625rem .5rem;}
+</style>
+<section class="articolo-consigliati">
+	<header class="articolo-consigliati-testata">
+		<button class="articolo-consigliati-titolo">Più informazioni</button>
+	</header>
+	<div class="articolo-consigliati_interno">
+		<div class="consigliati">
+			<ul class="consigliati-elenco">
+			
+				<li class="lbf">
+					<span class="data">16/01/2020</span>
+					<span class="titolo"><a href="https://www.diariodelweb.it/esteri/articolo/?nid=20200116-545585">La Camera dei Rappresentanti americana invia impeachment di Donald Trump al Senato</a></span>
+				</li>
+			
+				<li class="lbf">
+					<span class="data">11/12/2019</span>
+					<span class="titolo"><a href="https://www.diariodelweb.it/esteri/articolo/?nid=20191211-545152">Impeachment, Donald Trump accusato di abuso potere e intralcio. La Casa Bianca: «Nessuna prova di illeciti»</a></span>
+				</li>
+			
+				<li class="lbf">
+					<span class="data">06/12/2019</span>
+					<span class="titolo"><a href="https://www.diariodelweb.it/esteri/articolo/?nid=20191206-544996">Usa, impeachment contro il presidente. Pelosi: «A rischio la democrazia», Trump: «Vinceremo»</a></span>
+				</li>
+			
+				<li class="lbf">
+					<span class="data">03/12/2019</span>
+					<span class="titolo"><a href="https://www.diariodelweb.it/esteri/articolo/?nid=20191203-544953">Trump ai Dem: «Impeachment è una bufala antipatriottica»</a></span>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="articolo-tags">
+	<header class="articolo-tags_testata">
+		<button class="articolo-tags_testata_titolo">Si parla di:</button>
+	</header>
+	<div class="articolo-tags_interno">
+		<ul class="elenco">
+		<li><a rel="tag" href="https://www.diariodelweb.it/tuttosu/tag/?q=237149" title="Amministrazione Trump">Amministrazione Trump</a></li>
+<li><a rel="tag" href="https://www.diariodelweb.it/tuttosu/tag/?q=242537" title="Impeachment Trump">Impeachment Trump</a></li>
+<li><a rel="tag" href="https://www.diariodelweb.it/tuttosu/tag/?q=14135" title="Governo americano">Governo americano</a></li>
+<li><a rel="tag" href="https://www.diariodelweb.it/tuttosu/tag/?q=4750" title="Stati Uniti">Stati Uniti</a></li>
+<li><a rel="tag" href="https://www.diariodelweb.it/tuttosu/tag/?q=9216" title="Donald Trump">Donald Trump</a></li>
+
+		</ul>
+	</div>
+</section></div>
+</div>
+</article>
+<aside class="colonna_secondaria">
+
+<section class="cassa i_piu_visti">
+	<h3><span class="senza_link">I pi&ugrave; visti</span></h3>
+	<div class="contenuto">
+		<ol>
+		
+			<li class="stirare">
+				<span class="numero">1.</span>
+				<a href="https://www.diariodelweb.it/opinioni/articolo/?nid=20221021-549783">Max Del Papa: «Alla Meloni chiedo solo che rimanga se stessa, una persona normale»</a>
+			</li>
+			<li class="stirare">
+				<span class="numero">2.</span>
+				<a href="https://www.diariodelweb.it/politica/articolo/?nid=20221015-549737">Giorgia Meloni durissima contro Silvio Berlusconi: «Alla sua lista manca che non sono ricattabile»</a>
+			</li>
+			<li class="stirare">
+				<span class="numero">3.</span>
+				<a href="https://www.diariodelweb.it/opinioni/articolo/?nid=20220908-549630">Antonio Ingroia: «Italia fuori da Ue e Nato, che espropriano la sovranità popolare nazionale»</a>
+			</li>
+			<li class="stirare">
+				<span class="numero">4.</span>
+				<a href="https://www.diariodelweb.it/opinioni/articolo/?nid=20221111-549873">Marcello Foa: «Attenta Meloni, il sistema vuole impedirti di realizzare il tuo programma»</a>
+			</li>
+			<li class="stirare">
+				<span class="numero">5.</span>
+				<a href="https://www.diariodelweb.it/politica/articolo/?nid=20221008-549693">Mario Draghi incalza la UE: «Subito misure contro la crisi energetica o unità a rischio»</a>
+			</li>
+		</ol>
+	</div>
+</section>
+
+</aside>
+</div>
+</div>
+
+<footer class="footer">
+	<div class="chi_siamo_contenitore">
+		<div class="chi_siamo">
+			<div class="section_footer_chi_siamo_indirizzo">
+				<span class="copyrightHolder">Diario Editore S.r.l.</span>
+				<p>
+					<span class="copyright">© Copyright 2025 Tutti i diritti riservati.</span>
+					<span class="p-iva">CF, Partita I.V.A. n. 02627740026.</span>
+				</p>
+				<a target="_blank" href="https://it.depositphotos.com/music.html"><img src="/img/logo/Depositphotos_logo_200x32.png"></a>
+			</div>
+			<div class="section_footer_chi_siamo_link">
+				<span class="copyrightWho">Link utili</span>
+				<ul>
+					<li><a rel="nofollow" href="https://diariodelweb.it/contatti/"><span>Contatti</span></a></li>
+					<li><a target="_blank" href="https://www.diariodelwebsrl.it/"><span>Pubblicità</span></a></li>
+					<li><a target="_blank" rel="nofollow" href="https://www.iubenda.com/privacy-policy/38101831">Privacy policy</a></li>
+					<li><a target="_blank" rel="nofollow" href="https://www.iubenda.com/privacy-policy/38101831/cookie-policy">Cookie policy</a></li>
+					<li><a href="javascript:void(0)" onclick="window.__tcfapi('displayConsentUi', 2, function() {} );">Preferenze privacy</a></li>
+				</ul>
+			</div>
+			<div class="pulire"></div>
+		</div>
+	</div>
+</footer>
+
+
+</body>
+</html>
