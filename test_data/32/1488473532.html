@@ -1,0 +1,1186 @@
+
+
+
+	<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<link rel="preconnect" href="https://cflvdg.avoz.es">
+<link rel="preconnect" href="https://js.lavdg.com">
+<link rel="preconnect" href="https://css.lavdg.com">
+<link rel="preconnect" href="https://img.lavdg.com">
+<link rel="preconnect" href="https://miperfil.lavozdegalicia.es">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+<link rel="preconnect" href="https://sb.scorecardresearch.com">
+<link rel="preconnect" href="https://adservice.google.com">
+<link rel="preconnect" href="https://static.wemass.com">
+<link rel="preconnect" href="https://service.wemass.com">
+<link rel="preconnect" href="https://sdk.privacy-center.org">
+<!-- Generic Site Meta's -->
+<meta charset="iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTkycHgiIHZpZXdCb3g9IjAgMCAxOTIgMTkyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2My4xICg5MjQ1MikgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+ZmF2aWNvbjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCI+CiAgICAgICAgICAgIDxnIGlkPSJmYXZpY29uIj4KICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIGZpbGw9IiNENTJEMkUiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj48L3JlY3Q+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iViIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIiBwb2ludHM9IjEwNy41NjY4OTUgMTU1Ljc1NDg4MyAxNDguMDkxNzk3IDM3IDEyMi4zMTA1NDcgMzcgOTYuMjg3NTk3NyAxMjcuMTUzODA5IDcwLjUwNjM0NzcgMzcgNDQgMzcgODQuMTIyMDcwMyAxNTUuNzU0ODgzIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="><!-- ok dist/images/favicon.svg -->
+<link rel="mask-icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkycHgiIGhlaWdodD0iMTkycHgiIHZpZXdCb3g9IjAgMCAxOTIgMTkyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2My4xICg5MjQ1MikgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+ZmF2aWNvbjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCI+CiAgICAgICAgICAgIDxnIGlkPSJmYXZpY29uIj4KICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIGZpbGw9IiNENTJEMkUiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj48L3JlY3Q+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iViIgZmlsbD0iI0ZGRkZGRiIgZmlsbC1ydWxlPSJub256ZXJvIiBwb2ludHM9IjEwNy41NjY4OTUgMTU1Ljc1NDg4MyAxNDguMDkxNzk3IDM3IDEyMi4zMTA1NDcgMzcgOTYuMjg3NTk3NyAxMjcuMTUzODA5IDcwLjUwNjM0NzcgMzcgNDQgMzcgODQuMTIyMDcwMyAxNTUuNzU0ODgzIj48L3BvbHlnb24+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" color="#999999"><!-- ok dist/images/favicon.svg -->
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAB7FBMVEXVLS7VLi/VLzDWMDHWMTLWMjPWMzTWNDXXNjfXNzjXOTrYOjvYOzzYPD3YPT7ZP0DZQULZQkPaREXZQ0TaRkfaR0jaSEnbSUrbSkvcTk/bTU7cT1DcUlPdU1TdVlfdV1jeWFneWlveW1zfXV7fXl/fX2DfYGHgY2TgZGXgZWbhZ2jhaGnhaWribG3ib3DjcXLjcnPjdXbkdnfkeHnkenvlfH3lf4DmgIHmgYLmg4Tnhofojo/pj5Dpk5Tqlpfql5jrnJ3soKHsoaLuqaruqqvvra7vrq/ws7Txt7jxuLnyvL3xu7zywMH43N376uv98/TXOTndVVXfXl7gYmLha2vjcXHjdXXkenrlfn7lf3/mgoLmg4Pnh4fniIjoi4vojIzpkJDpkZHqlJTqlpbrmZnrmprsnp7rnZ3soqLtpKTtpqbtp6fuqanuq6vvr6/vsLDwsrLwtLTxt7fxubnxu7vyvr7yv7/zxMT0xsbzxcX0yMj0ycn1y8v1zMz1zs720ND1z8/20tL209P31dX21NT31tb319f32Nj32dn42tr429v43d3539/54OD54eH65OT54+P65+f66Oj76ur77Oz87u787+/88PD88fH98/P88vL99PT99vb++Pj99/f++vr//f3+/Pz//v7///8mw/nCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFG2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgMTE2LjE2NDc2NiwgMjAyMS8wMi8xOS0yMzoxMDowNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjIgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTA1LTE0VDE0OjU1OjUzKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wNi0yMlQxMToyMDoyMSswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wNi0yMlQxMToyMDoyMSswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjIiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0N2IyOTU5YS02OTQ3LTRhNjktYWQ3MC04OTc2ZTEwNTBmMWEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDdiMjk1OWEtNjk0Ny00YTY5LWFkNzAtODk3NmUxMDUwZjFhIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDdiMjk1OWEtNjk0Ny00YTY5LWFkNzAtODk3NmUxMDUwZjFhIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0N2IyOTU5YS02OTQ3LTRhNjktYWQ3MC04OTc2ZTEwNTBmMWEiIHN0RXZ0OndoZW49IjIwMjEtMDUtMTRUMTQ6NTU6NTMrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMS4yIChNYWNpbnRvc2gpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkHBB8IAAAaWSURBVHic7ZxJUh1HEIYTjCQ0GGFAsgOBpgdEeKUTeJ61MMYH8C18Ed/AW4MQWOAhbJ/AazOIQYAlI4QAI0IgCHh4AQ/o5s/uzKxcOfJfEdmPqo9+2X9XVVZBFAqFQqFQKBQKhUKhUCgUCoVCoVDo/6s68Se/nmYuTG/qurz6Fo7vTEhbaBD31fItc+G7P8VtEBHRnW9w/HsxdL24r1+4C23iJoiIqO5L5sJjcRNy6MdLzIU+eRtERF814/j6Q3ETig65b+/8bXkbRNTMxMeq4iYU0D9zFz6Qt0FEnUz8N3kTCugni8yFW/I2iC4x38vajLwNTT5y+dHZrGjk7ms4PiTPDhU0mx/dikbamficog0N9OI/zAWF6dUzf+DKrAJEZVfjTFxhetebdE1DqaC594vC9D5i4s80HCropwvMBbnp3cDhpfsaDt3bbIqJi02v6SaOi4cdRKSF/omJi03vC2ZUyRoTlA76GfeMS03vGg4vPlFh6KCJgxaaHmd4D3QUSuhRJi40vVuXcJx7VhgpoZ8zt1poeh/i8MJTHYUSmrg5l8z0GJfhnm9OWuiRfRwXmV4zMyydVEJoodeYWy0yvc9xePa5EkILzfqHxPQ6cJhLOVZq6NE9HBeYXgP+w/ZHtAxq6DXGngSm13sBhqfWtAxqaG60LjC9VhzWjKQPpIceYfKj3PQqMLqnzg4D9DqTH6Wm14ZnWhPragQ9NP2Ow6Wm9ykOz+sJDNDcqkqZ6eERXlWfHRboDWbE/l7xr519G4b7N/QEBmjOP7qZFY1DVc7A8EUDgAV6BOfHBewONeEvYkc5lCYiG/RGP45z6zAHwik/qFyRJyIbNPeVflb0O29ehWFu/adQJugHuzDc8UbB7+Dc2VYt0tRkgt68h+NFt/odGB14ZenfBE3Moi8z9CQiOtcDw6+burdBj+3AcIHpdZ9F0YFhU/c26K1BGC4wPWx4r/AfXyYbNPfQ86bXBaO27LBCT+BbxD6J7XBi83LI1rsRemsAhlnT+xhGB7F1lsoIzeUHd6uxr/xt7NwKPbENw4zpNcJ3+AvtekdNVuhtnB+M6fXAEvygoqCVkRWaefAZ08OGx9UVSmWGHsa3GpseNLx+RbkzKzP0Dh41wCexswVFr1mzww7N+Ac0PVwd+tXctR16EucHutXvow+uPjJ3bYfeuQnDwPQuQsMbYxaNBbJDM+sfwPS6YSfsTp1yJUBPvkRRYHrvos8tGxZpakqA3sXj01OmVwfH/2P2jlOgCRf/Tj2JnZfRxxKyIwl6/AWKnjI9aHg/yPeGnVYKdBVX4fO3GtbhriT0mwTN7KTLmV4TXAPWFcNzSoJ+CPMjZ3pdaOC3wG3iEikJugqXWnKmB0d4yrpyTknQzPAhY3q4hp+UHYnQM3ApMvMk3kAD71luC6hMadBVOL3KmN519Al9QSujNGhmr+XJW43m4fpyZ1aJ0DOrKHrCVC6jV8v0SlqvidBVuBjXdzyP7UGblpj6mFiJ0Lj+0th79CNaWdr7K7HTVOhHMD+OCsr1feDqlL7cmVUq9P4Qih69XirnwdU/EvtMhsbu1V6bfqOCZzU1O9Kh56ET1BY60DR3wlDuzCoZGu/HPXz+WtDLR7GPnlE6NJyCHJoeWlnaTZloHSgden4ZBA9NDxneuKXcmVU6NJ6ithIRnUGGl54dHtAwPypERLcbT1+Qn9Di5QANjxq1txBeQh3bSu/RARrv2O4iorsgnjruIPKBhlt924iugDN82w7Z4QK9iGapfQ3Q8PpxrUYnD2iYH429cB+eaatEXi7QcJraeg4Y3qa1oJWRCzTc0l+pgBr+PVsxPCcXaJgf7cg7dAcWOPlAw/fLndMhc7kzKx9o9qhRTveNxfCcfKCly1zWYnhOTtDcUZKs+tOW8I7kBL0sWjPqMJc7s3KCli10KY+zsPKCluTHqur8XoG8oLmjRic1bC93ZuUFLfGPxLXSY7lBj5bexpU5r77coLmjRsca8urKD7r8y1cfHGLlB80dJalpKaXcmZUf9L8lj+KPbj05Qpf9YwCnVziRK3RxfsCJpFGO0NxRowOlr+AdyxG62D9Stkrk5QnNHCUhIqJ5r8ESkS80d9SIyPUx9IUu8g/ZLEEoV+gRdgo4oz37WyhX6A3mKInnK5zIGZo9Pbbvmh3O0MxRI5pUn/0tlC80d9RozrUXZ2hmUdRyurNI8v+XJ1I9KivTJ0O+vYRCoVAoFAqFQqFQKBQKhUKhUCgUEuo/Jb1FDrr5qdMAAAAASUVORK5CYII="><!-- ok dist/images/apple-touch-icon.svg -->
+<link rel="manifest" href="/manifest.json"
+		       
+<!-- SEO Meta's -->
+	
+<title>Exagerar demasiado puede ser peligroso</title>
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="description" content="">	
+
+
+
+
+<link rel="canonical" href="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm"  >  
+  <link rel="amphtml" href="https://www.lavozdeasturias.es/amp/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_campaign=amp">
+  
+
+
+	
+					
+		
+	<!-- AD TAGS - GAM -->
+	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" type="didomi/javascript" data-vendor="didomi:google"></script>
+	<script>
+	window.googletag = window.googletag || {};
+	googletag.cmd = googletag.cmd || [];
+
+	var listaRefreshBannerDESKTOP=new Array();
+	var listaRefreshBannerMOVIL=new Array();
+	const mediaQueryMobile = window.matchMedia('(max-width: 1019px)');
+    const mediaQueryDesktop = window.matchMedia('(min-width: 1020px)');
+
+	var gptAdSlots = [];  
+
+		var  SKY_DER,  SKY_IZQ,  VOZ_ROBA_DESKTOP,  MEGA_MOBILE,  INTEXT_MOBILE,  INTEXT_DESKTOP,  VOZ_ROBA_MOBILE,  VOZ_FALDON_DESKTOP,  MEGADESKTOP;
+			
+	googletag.cmd.push(function() {
+		
+			SKY_DER = googletag.sizeMapping().
+		addSize([1260, 0],[[120,801],[120,601],[450,1001]]).
+		addSize([0, 0],[]).
+				build();
+			SKY_IZQ = googletag.sizeMapping().
+		addSize([1260, 0],[[120,800],[120,802],[120,600],[450,1000]]).
+		addSize([0, 0],[]).
+				build();
+			VOZ_ROBA_DESKTOP = googletag.sizeMapping().
+		addSize([1020, 0], [[300,600],[300,300],[300,250],[160,600],[250,250],[200,200],[1,1]]).
+		addSize([0,0],[]).
+				build();
+			MEGA_MOBILE = googletag.sizeMapping().
+		addSize([1020, 0], []).
+		addSize([320, 0], [[320,100],[320,50]]).
+		addSize([0, 0], []).
+				build();
+			INTEXT_MOBILE = googletag.sizeMapping().
+		addSize([1020, 0],[]).
+		addSize([768, 0],[1,1]).
+		addSize([320, 0],[1,1]).
+		addSize([0, 0],[]).
+				build();
+			INTEXT_DESKTOP = googletag.sizeMapping().
+		addSize([1020, 0],[1,1]).
+		addSize([0, 0],[]).
+				build();
+			VOZ_ROBA_MOBILE = googletag.sizeMapping().
+		addSize([1020, 0], []).
+		addSize([320, 0], [[300,600],[300,300],[300, 250],[250,250],[200, 200],[1,1],'fluid']).
+		addSize([0, 0],[]).
+				build();
+			VOZ_FALDON_DESKTOP = googletag.sizeMapping().
+		addSize([1020,0],[[984,90],[984,80],[984,50],[980,90],[980,50],[970,90],[728,90]]).
+		addSize([0, 0], []).
+				build();
+			MEGADESKTOP = googletag.sizeMapping().
+		addSize([1020, 0], [[1200,250],[980,251],[980,250],[980,90],[984,90],[984,250],[970,250],[728,90]]).
+		addSize([768, 0], [[728,90]]).
+		addSize([0, 0], []).
+				build();
+		
+	if (mediaQueryMobile.matches) {	
+	
+																	    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_RobapaginasMobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_RobapaginasMobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "robapaginas");
+																						    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_Roba2Mobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_Roba2Mobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "Roba2");
+																						    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_Roba3Mobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_Roba3Mobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "Roba3");
+																						    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_Roba4Mobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_Roba4Mobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "roba4");
+																						    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_Roba5Mobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_Roba5Mobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "Roba5");
+																						    		    			
+																																																				gptAdSlots["TEXTO_DETALLE_ad_Roba6Mobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "TEXTO_DETALLE_ad_Roba6Mobile").defineSizeMapping(VOZ_ROBA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "Roba6");
+																																																															    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_MegabannerMobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[320,100],[320,50],'fluid'], "PUB_CABECERO_ad_MegabannerMobile").defineSizeMapping(MEGA_MOBILE).addService(googletag.pubads()).setTargeting("pos", "megabanner");
+																											    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_IntextMobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[1,1]], "PUB_CABECERO_ad_IntextMobile").defineSizeMapping(INTEXT_MOBILE).addService(googletag.pubads()).setTargeting("pos", "intext");
+																						    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_InsterstitialMobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[1,1]], "PUB_CABECERO_ad_InsterstitialMobile").defineSizeMapping(INTEXT_MOBILE).addService(googletag.pubads()).setTargeting("pos", "interstitial");
+																											    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_InimageMobile"] = googletag.defineSlot("/125952410/LVDA.Mobile/opinion/detalle", [[1,1]], "PUB_CABECERO_ad_InimageMobile").defineSizeMapping(INTEXT_MOBILE).addService(googletag.pubads()).setTargeting("pos", "inimage");
+																																					
+	}
+	
+	if (mediaQueryDesktop.matches) {	
+	
+																																																		    		    			
+																																																				gptAdSlots["DETALLE_ad_RobapaginasDesktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_RobapaginasDesktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "robapaginas");
+																						    		    			
+																																																				gptAdSlots["DETALLE_ad_Roba2Desktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_Roba2Desktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "Roba2");
+																						    		    			
+																																																				gptAdSlots["DETALLE_ad_Roba3Desktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_Roba3Desktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "Roba3");
+																						    		    			
+																																																				gptAdSlots["DETALLE_ad_Roba4Desktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_Roba4Desktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "roba4");
+																						    		    			
+																																																				gptAdSlots["DETALLE_ad_Roba5Desktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_Roba5Desktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "Roba5");
+																						    		    			
+																																																				gptAdSlots["DETALLE_ad_Roba6Desktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[300,250],[300,300],[300,600],'fluid'], "DETALLE_ad_Roba6Desktop").defineSizeMapping(VOZ_ROBA_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "Roba6");
+																									    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_MegabannerDesktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[1200,250],[984,250],[980,251],[980,250],[984,90],[980,90],[970,250],[728,90],[468,90],'fluid'], "PUB_CABECERO_ad_MegabannerDesktop").defineSizeMapping(MEGADESKTOP).addService(googletag.pubads()).setTargeting("pos", "megabanner");
+																											    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_IntextDesktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[1,1]], "PUB_CABECERO_ad_IntextDesktop").defineSizeMapping(INTEXT_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "intext");
+																																    		    			
+																																																				gptAdSlots["PUB_CABECERO_ad_InimageDesktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[1,1]], "PUB_CABECERO_ad_InimageDesktop").defineSizeMapping(INTEXT_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "inimage");
+																														    		    			
+																																																				gptAdSlots["skyscraper_izq-id"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[120,600], [120, 800]], "skyscraper_izq-id").defineSizeMapping(SKY_IZQ).addService(googletag.pubads()).setTargeting("pos", "skyscraper_izq");
+																						    		    			
+																																																				gptAdSlots["skyscraper_der-id"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[120,801], [120, 800], [120, 600]], "skyscraper_der-id").defineSizeMapping(SKY_DER).addService(googletag.pubads()).setTargeting("pos", "skyscraper_der");
+																						    		    			
+																																																				gptAdSlots["ad-FaldonSuperiorDesktop"] = googletag.defineSlot("/125952410/LVDA.Desktop/opinion/detalle", [[980, 90], [984, 90],[984,50], [984, 80],[728,90],[728,50],'fluid'], "ad-FaldonSuperiorDesktop").defineSizeMapping(VOZ_FALDON_DESKTOP).addService(googletag.pubads()).setTargeting("pos", "faldonSuperior");
+																			
+	}
+
+				googletag.pubads().setTargeting("tipo","detalle");
+		googletag.pubads().setTargeting("subtipo","noticia");						
+		// REMOVE ON DIST: FOR DEV PURPOSES ONLY
+		googletag.pubads().addEventListener('slotRequested', function(event) {
+			updateSlotStatus(event.slot.getSlotElementId(), 'fetched');
+		});
+
+		googletag.pubads().addEventListener('slotOnload', function(event) {
+			updateSlotStatus(event.slot.getSlotElementId(), 'rendered');
+		});
+
+		// END REMOVE ON DIST
+		
+					googletag.pubads().enableSingleRequest();
+			googletag.pubads().enableAsyncRendering();
+			googletag.pubads().disableInitialLoad()
+				googletag.enableServices();
+
+				
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
+																																																																																																																																															listaRefreshBannerMOVIL=[gptAdSlots['PUB_CABECERO_ad_IntextMobile'],gptAdSlots['PUB_CABECERO_ad_MegabannerMobile']];
+			listaRefreshBannerDESKTOP=[gptAdSlots['PUB_CABECERO_ad_IntextDesktop'],gptAdSlots['PUB_CABECERO_ad_MegabannerDesktop'],gptAdSlots['ad-FaldonSuperiorDesktop'],gptAdSlots['skyscraper_der-id'],gptAdSlots['skyscraper_izq-id']];
+				});
+
+	// REMOVE ON DIST: FOR DEV PURPOSES ONLY	
+	function updateSlotStatus(slotId, state) {
+		console.log('SLOT: ' + slotId + ' - STATUS: ' + state);
+	}
+
+	</script>	
+
+
+				
+
+<script async type="text/javascript" src="https://service.wemass.com/dmp/68c26b8f637e71a514d87e22f4e512ca.js"></script>
+    <script async type="text/javascript" >
+	window.didomiOnReady = window.didomiOnReady || [];
+	window.didomiOnReady.push(function(){
+	    window.__wmass = window.__wmass || {};
+	    window.__wmass.bff = window.__wmass.bff || [];
+	    window.__wmass.getSegments = window.__wmass.getSegments || function(){
+	        let pSegs=[];
+	        try  {
+	            pSegs = JSON.parse(window.localStorage._papns || '[]').slice(0, 250).map(String);
+	        } catch (e) {
+	            pSegs = []
+	        }
+	        return {permutive:pSegs};
+	    };
+	});
+	</script>	
+	
+		<script async type="text/javascript">
+    window.didomiOnReady = window.didomiOnReady || [];
+    window.didomiOnReady.push(function(){
+        __wmass.bff.push(function () {        
+            __wmass.dmp.addon('web',{
+                page: {
+                    type: "noticia",
+                    content: {
+                        categories: ["Opinión"]
+                    },
+                    article: {
+                                                    id: "00031578388657798848995",
+                            title: "Exagerar demasiado puede ser peligroso",
+                            description: "",
+                            authors:[ 	            			 "Francisco Carantoña"  ],
+                            modifiedAt: "2020-01-07T09:23:00.843Z",
+                            publishedAt: "2020-01-07T09:23:00.843Z",
+                                                topics: [""],
+                        premium: false,
+                        paragraphCount: null,
+                        section: "Opinión"
+                    },
+                    user: {
+                        type: "",
+                        age: null,
+                        gender: ""
+                    }
+                }
+            });
+        });
+    });
+    
+    m_seccion='Opinión';
+    m_placement_D_Mega=21530747;
+    m_placement_M_Mega=21530742;
+    m_placement_D_Roba=21530748;
+    m_placement_M_Roba=21530743;
+    m_placement_M_Pre=21500527;
+	m_placement_D_Pre=21500525;
+	m_placement_M_Post=21500528;
+	m_placement_D_Post=21500526;
+        	intext=true;
+    	intext_pos=2;
+    </script>		
+<script type="didomi/javascript" data-purposes="select_personalized_ads,create_ads_profile,measure_ad_performance,select_basic_ads,cookies" async charset="utf-8" src="https://js.lavdg.com/assets/themes/lvda/js/prebidlvda.min.grv-a48f73066427f96d17648318badfcf94.js"></script>
+
+
+	
+<!-- cookiewall -->
+	
+<script type="text/javascript">
+    //var isRegistered = document.cookie.indexOf('_ssous');
+    var isRegistered = function(){ 
+        if (ssoUsuario){ return true} else{ return false}
+    }
+    function sendEventAndGo(boton){
+    	$.cookie('cookiewall',new Date().getTime(), { expires: 1, path: '/' })
+    	SSOFunc.analiticaBoton(boton,{event:"promoClick",ecommerce:{promoClick:{promotions:[{id:"Portada",position:"promociones",creative:"boton",name:"cookiewall"}]}}});
+    	window.location.href=document.getElementById("suscribir").dataset.url;
+    }
+
+    function masTarde(boton){
+        console.log("mastarade")
+        	$.cookie('cookiewall',new Date().getTime(), { expires: 1, path: '/' })
+		$("html").removeClass("cookiewall_active")
+    }
+    
+	function getNumberRejected(json){
+		var obj=Object.values(json)
+		var rejected=0;
+		for(i=0; i< obj.length; i++){
+			if(!obj[i].enabled){
+				rejected=rejected+1;
+			}
+		}
+		console.log("rechazados: " + rejected);
+		return rejected;
+	}
+    
+    function checkTheOven(when){
+        var LIMIT_TIME=86400;
+        console.log((new Date().getTime() - $.cookie('cookiewall'))/1000)
+        if (isRegistered() && ((new Date().getTime() - $.cookie('cookiewall'))/1000) < LIMIT_TIME) return;
+        var _vendors=getNumberRejected(Didomi.getCurrentUserStatus().vendors);
+        var _purposes=getNumberRejected(Didomi.getCurrentUserStatus().purposes);
+        if (_vendors + _purposes > 40){
+            console.log("[CW] User is NOT a registered (" + isRegistered() + ") and doesn't consent all purposes (deny " + _purposes.length + ") and/or vendors (deny " + _vendors.length + "). Good place to show the cookie wall");
+            var where=document.getElementsByTagName('body')[0];       
+               var divcookie='<div id="cookiewall"><div id="cookiewall_main"><div class="row"><div id="cookiewall_maintxt" class="col"><h4>Acepta para leer gratis y sin límites</h4><p>Si aceptas nuestra política de cookies nos ayudas a ofrecerte contenido y publicidad adaptado a tus preferencias.</p><p>Nuestro propósito es seguir ofreciéndote acceso gratuito y sin restricciones a nuestros contenidos y anuncios, por lo que tu consentimiento es importante para nosotros. Empleamos cookies y tecnologías similares para guardar, acceder y tratar datos personales relacionados con tus visitas, interacciones en el sitio web y los dispositivos utilizados, de acuerdo con nuestra Política de Cookies.</p><p>Tienes la opción de aceptar todas las cookies, algunas de ellas, rechazarlas o ajustar tus preferencias en cualquier momento. Además, puedes revocar tu consentimiento siempre que lo desees haciendo clic en el botón "Configuración de cookies", disponible en el pie de página de todas las páginas de nuestro sitio web, para volver a configurar tus preferencias.</p></div></div><div class="row cookie_options f-dir-row"><div id="cookiewall_subscribe_txt" class="col sz-33 contenedorSSO"><a href="javascript:sendEventAndGo($(this))" id="suscribir" data-url="https://sso.lavozdeasturias.es/alta.jsp?url=' + document.location.href + 's&name=cookiewall&dlid=Portada" class="btn btn_subscribe promo-click botonSSO" data-analytics="registrate_cookiewall">Regístrate</a></div><div id="cookiewall_subscribe_txt" class="col sz-33 contenedorSSO"><a href="javascript:masTarde($(this))" id="mastarde" data-url="' + document.URL + '?name=cookiewall&amp;dlid=Portada" class="btn btn_subscribe promo-click botonSSO" data-analytics="mastarde_cookiewall">Más tarde</a></div><div id="cookiewall_accept_txt" class="col sz-33 contenedorSSO"><a id="mastarde" href="javascript:aceptAll();" class="btn btn_agree botonSSO" previewlistener="true" data-analytics="aceptar_cookiewall">Acepta publicidad</a></div></div><div class="row"><div id="cookiewall_login_txt" class="col sz-100"><b>Ya soy registrado: <a href="https://sso.lavozdeasturias.es/login.jsp?url=' + document.location.href + '#cookiewall">Iniciar Sesión</a></b></div></div></div></div>';
+            
+            where.insertAdjacentHTML( 'beforeend', divcookie );
+            document.getElementsByTagName("html")[0].classList.toggle("cookiewall_active");
+            window.scroll({
+          	  top: 0,
+          	  left: 0,
+          	  behavior: "smooth",
+          	});
+          	
+        }else{
+        	if(document.getElementById( 'cookiewall' )) document.getElementById( 'cookiewall' ).style.display = 'none';
+        	console.log("[CW] Subscriber (" + isRegistered() + ") or consent all purposes (deny " + _purposes.length + ") and/or vendors (deny " + _vendors.length + "). Not show cookiewall");        	
+        	document.getElementsByTagName("html")[0].classList.remove("cookiewall_active")
+        }
+    }
+    window.didomiEventListeners = window.didomiEventListeners || [];
+    window.didomiEventListeners.push({
+        event: 'consent.changed',
+        listener: function (context) {
+            // The user consent status has changed
+            checkTheOven('consent_changed');
+        }
+    });
+    window.didomiOnReady = window.didomiOnReady || [];
+    window.didomiOnReady.push(function () {        
+        if (Didomi.isConsentRequired() && !Didomi.isUserStatusPartial())
+            checkTheOven('didomi_ready');
+    });
+	
+	function aceptAll(){
+		Didomi.setUserStatusForAll({
+		purposesConsentStatus: true,
+		purposesLIStatus: true,
+		vendorsConsentStatus: true,
+		vendorsLIStatus: true,
+		action: "click",
+		});
+	}
+</script>
+
+<script>dataLayer = [{ 
+	'idContenido': '00031578388657798848995', 
+	'titulo':'Exagerar demasiado puede ser peligroso', 
+	'tituloCanonical': 'Exagerar demasiado puede ser peligroso', 
+	'urlCanonical': '/noticia/opinion/2020/01/07/00031578388657798848995.htm', 
+	'pathLevel1': 'opinion', 
+	'pathLevel2': 'Unknown', 
+	'localidad': 'Unknown',  
+	'formato': 'opinion',  
+	'superficie': 'web',  
+	'formatoContenido': 'opinion-Web', 
+	'longitudTexto': 'muy largo',  
+	'numPalabras': '907',  
+	'numParrafos': '6',  
+	'fechaPublicacion': '20200107', 
+	'horaPublicacion': '10:23', 
+	'fechaActualizacion': '20200107', 
+	'horaActualizacion': '10:23', 
+	'seccionDelegacion': 'Opinión', 
+	'autor': 'Francisco Carantoña', 
+	'idAutor': 'id1463562192816A', 
+	'tags': 'Unknown', 
+	'seccionPublicacion': 'Opinión', 
+	'seccionAgrupacion': 'Unknown', 
+	'seccionAtribucion': 'Opinión', 
+	'atribucion': 'Unknown', 
+	'origenPublicacion': 'web', 
+	'statusPaywall': 'Unknown' 
+}];</script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MLKVL7');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<style>
+.d-none,.no-visible{display:none}.v-hidden,.hidden{visibility:hidden}*,*::before,*::after{box-sizing:border-box}html{font-size:100%;font-variant-ligatures:none;text-rendering:optimizeLegibility;font-feature-settings:"kern";font:17px "Neue-Helvetica","Helvetica",Arial,sans-serif;line-height:1.5;font-weight:300;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;width:100%;height:100%}input[type=text],input[type=button]{-webkit-appearance:none;-webkit-border-radius:0}body{margin:0;font-size:1rem;background-color:white;font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}article,aside,figcaption,figure,footer,header,hgroup,main,nav,section,picture,img{display:block;margin:0;padding:0}button{margin:0;font-size:1rem;cursor:pointer}[tabindex="-1"]:focus:not(:focus-visible){outline:0 !important}h1,h2,h3,h4,h5,h6{font:lighter 17px Georgia,"Times New Roman",Times,sans-serif;margin:0}img{width:100%}strong{font-weight:600}h1{font-size:1.4rem;letter-spacing:-.03rem}h2,h3,h4,h5,h6{font-size:1.1rem}a{text-decoration:none;color:#000}a:hover{text-decoration:underline}[class^="ratio"],[class*=" ratio"]{position:relative;width:100%}.ratio2-1{padding-bottom:calc(100% * 1 / 2)}.ratio16-9{padding-bottom:calc(100% * 9 / 16)}.ratio1-1{padding-bottom:100%}.ratio16-9 .jwplayer{position:absolute;width:100% !important;height:100% !important}.media img,.media iframe{position:absolute;width:100%;height:100%}.media iframe{z-index:2}.figure-caption{font-size:.65rem;color:#666;line-height:1.3;display:inline-block;padding:7.5px 0}iframe{max-width:100%}form{width:100%}label{padding:7.5px;font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}input[type="text"],textarea,select{border:1px solid #ccc;border-radius:4px;color:#000;padding:7.5px;font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}dd{margin-left:0px}em{font-style:italic}.airship-html-prompt-shadow{position:absolute;z-index:1001}.container{display:block;margin:0 auto;padding:0;background-color:white;width:100%;position:relative;max-width:1178px}.row{display:flex;width:100%;flex-wrap:wrap}.row:not(.f-dir-row){flex-direction:column}.col{margin:0;padding:0 15px;max-width:100%}.sz-0,.sz-10,.sz-20,.sz-30,.sz-40,.sz-50,.sz-60,.sz-70,.sz-80,.sz-90,.sz-100,.sz-33,.sz-67,.sz-25,.sz-75{flex-grow:0}.sz-0{width:0%}.sz-10{width:10%}.sz-20{width:20%}.sz-30{width:30%}.sz-40{width:40%}.sz-50{width:50%}.sz-60{width:60%}.sz-70{width:70%}.sz-80{width:80%}.sz-90{width:90%}.sz-100{width:100%}.sz-33{width:calc(100% / 3)}.sz-67{width:calc(100% / 3 * 2)}.sz-25{width:25%}.sz-75{width:75%}.sz-auto{flex-grow:1}.sz-v-100{height:100%}.filter_invert{filter:invert(1)}.p-rel{position:relative}.fl-r{display:block;float:right}.fl-l{display:block;float:left}.spacer{display:block;width:100%;clear:both;border-top:1px solid #ebebeb;border-bottom:none;border-left:none;border-right:none}.sp-dbl{border-top:3px double #ebebeb}.brd{border:1px solid #ebebeb}.no-brd,.no-brd:focus,.no-brd:hover,.no-brd:active{border:none !important}.circle{border-radius:50%;overflow:hidden;background-color:#f7f7f7}.brd-c-gray-light{border-color:#ccc !important}.brd-t{border-top:1px solid #ebebeb}.brd-b{border-bottom:1px solid #ebebeb}.brd-l{border-left:1px solid #ebebeb}.brd-r{border-right:1px solid #ebebeb}.no-pd{padding:0}.padding{padding:7.5px}.padding-2{padding:15px}.pd-t{padding-top:7.5px}.pd-b{padding-bottom:7.5px}.pd-l{padding-left:7.5px}.pd-r{padding-right:7.5px}.pd-v{padding-top:7.5px;padding-bottom:7.5px}.pd-h{padding-left:7.5px;padding-right:7.5px}.pd-t-2{padding-top:15px}.pd-b-2{padding-bottom:15px}.pd-l-2{padding-left:15px}.pd-r-2{padding-right:15px}.pd-v-2{padding-top:15px;padding-bottom:15px}.pd-h-2{padding-left:15px;padding-right:15px}.no-mg{margin:0}.margin{margin:7.5px}.margin-2{margin:15px}.mg-t{margin-top:7.5px}.mg-b{margin-bottom:7.5px}.mg-l{margin-left:7.5px}.mg-r{margin-right:7.5px}.mg-v{margin-top:7.5px;margin-bottom:7.5px}.mg-h{margin-left:7.5px;margin-right:7.5px}.mg-t-2{margin-top:15px}.mg-b-2{margin-bottom:15px}.mg-l-2{margin-left:15px}.mg-r-2{margin-right:15px}.mg-v-2{margin-top:15px;margin-bottom:15px}.mg-h-2{margin-left:15px;margin-right:15px}.flex{display:flex;flex:1 1 auto;flex-direction:column;flex-wrap:wrap}.d-flex{display:flex}.f-align-base{align-items:baseline}.f-align-center{align-items:center}.f-align-end{align-items:end}.f-align-stretch{align-items:stretch}.f-align-c-end{justify-content:flex-end}.f-align-c-center{justify-content:center}.f-justify-between{justify-content:space-between}.f-justify-center{justify-content:center}.f-justify-end{justify-content:flex-end}.f-dir-row{flex-direction:row}.f-ord-first{order:-1}.f-ord-same{order:0}.f-ord-1{order:1}.f-ord-2{order:2}.f-ord-3{order:3}.f-ord-4{order:4}.f-ord-5{order:5}.f-nowrp{flex-wrap:nowrap}.f-grow{flex-grow:1 !important}.nowrp{white-space:nowrap}.upper{text-transform:uppercase}.linethrough{position:relative}.linethrough:before{content:'';width:100%;height:2px;background:black;position:absolute;top:50%;left:0}.t-sserif{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}.t-bld{font-weight:600}.t-bld-min{font-weight:400}.t-align-ctr{text-align:center}.t-align-lft{text-align:left}.t-align-rgt{text-align:right}.t-lh-1{line-height:1.2}.t-lh-2{line-height:2}.sz-t-xxs{font-size:.65rem}.sz-t-xs{font-size:.75rem}.sz-t-s{font-size:.85rem}.sz-t-md{font-size:1rem}.sz-t-lg{font-size:1.3rem}.sz-t-xl{font-size:1.5rem}.sz-t-xxl{font-size:1.95rem}.c-gray-med{color:#666}.c-gray-light{color:#999}.c-gray-min{color:#f7f7f7}.c-white{color:#fff}.c-paid{color:#B69C56}.c-primary{color:#326891}.bg-white-alpha{background-color:rgba(255,255,255,0.2)}.bg-gray-med{background-color:#666}.bg-gray-light{background-color:#999}.bg-gray-min{background-color:#ebebeb}.bg-gray-faint{background-color:#fcfcfc}.bg-blk{background-color:#000 !important}[class^="sz-sq"],[class*=" sz-sq"]{text-align:center;flex-grow:0;overflow:hidden}.sz-sq-xxs{width:1.95rem;height:1.95rem}.sz-sq-xs{width:2.25rem;height:2.25rem}.sz-sq-s{width:2.55rem;height:2.55rem}.sz-sq-md{width:3rem;height:3rem}.sz-sq-lg{width:3.9rem;height:3.9rem}.sz-sq-xl{width:4.5rem;height:4.5rem}.sz-sq-xxl{width:5.85rem;height:5.85rem}.header_sticky{border-bottom:1px solid #ebebeb;background-color:#D52D2E;position:sticky;top:-1px;left:0;z-index:1000;}.logo{width:100%;background-image:url("data:image/svg+xml,%3Csvg width='119px' height='11px' viewBox='0 0 119 11' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ELVDA%3C/title%3E%3Cg id='lvda' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='lvda_logotipo' transform='translate(-264.000000, -469.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M271.621272,479.803301 L271.621272,477.806052 L266.369386,477.806052 L266.369386,469 L264,469 L264,479.803301 L271.621272,479.803301 Z M275.047071,480 C275.530003,480 276.002874,479.92939 276.465684,479.788171 C276.928494,479.646951 277.330938,479.399817 277.673015,479.046768 C277.683076,479.1779 277.700683,479.306511 277.725835,479.4326 C277.750988,479.558689 277.783687,479.682256 277.823931,479.803301 L277.823931,479.803301 L279.997125,479.803301 C279.896514,479.641907 279.826087,479.399817 279.785842,479.077029 C279.745598,478.754241 279.725476,478.416323 279.725476,478.063274 L279.725476,478.063274 L279.725476,473.993122 C279.725476,473.519028 279.619835,473.138239 279.408552,472.850757 C279.197269,472.563274 278.92562,472.338835 278.593604,472.177442 C278.261588,472.016048 277.894358,471.907611 277.491915,471.852132 C277.089472,471.796653 276.692059,471.768913 276.299676,471.768913 C275.86705,471.768913 275.436938,471.811784 275.009342,471.897524 C274.581746,471.983265 274.19691,472.127006 273.854833,472.328748 C273.512756,472.530491 273.231046,472.797799 273.009702,473.130674 C272.788358,473.463549 272.662594,473.882164 272.632411,474.38652 L272.632411,474.38652 L274.775422,474.38652 C274.815666,473.962861 274.956522,473.660248 275.197988,473.47868 C275.439454,473.297111 275.77147,473.206327 276.194035,473.206327 C276.385196,473.206327 276.56378,473.218936 276.729788,473.244154 C276.895796,473.269372 277.041681,473.319807 277.167445,473.395461 C277.293209,473.471114 277.393819,473.577029 277.469278,473.713205 C277.544736,473.849381 277.582465,474.033471 277.582465,474.265475 C277.592526,474.487391 277.527129,474.65635 277.386274,474.772352 C277.245418,474.888354 277.054258,474.976616 276.812792,475.037139 C276.571326,475.097662 276.294646,475.143054 275.982752,475.173315 C275.670859,475.203576 275.353934,475.243925 275.03198,475.29436 C274.710025,475.344796 274.390586,475.412884 274.073661,475.498624 C273.756737,475.584365 273.475027,475.712976 273.22853,475.884457 C272.982034,476.055938 272.780812,476.28542 272.624865,476.572902 C272.468918,476.860385 272.390945,477.226043 272.390945,477.669876 C272.390945,478.073361 272.458857,478.421366 272.594682,478.713893 C272.730507,479.006419 272.919152,479.24851 273.160618,479.440165 C273.402084,479.63182 273.683794,479.77304 274.005749,479.863824 C274.327704,479.954608 274.674811,480 275.047071,480 Z M275.846928,478.577717 C275.675889,478.577717 275.509881,478.562586 275.348904,478.532325 C275.187927,478.502063 275.047071,478.449106 274.926338,478.373453 C274.805605,478.297799 274.710025,478.194406 274.639597,478.063274 C274.56917,477.932141 274.533956,477.770747 274.533956,477.579092 C274.533956,477.37735 274.56917,477.210912 274.639597,477.07978 C274.710025,476.948647 274.80309,476.840211 274.918793,476.75447 C275.034495,476.66873 275.17032,476.600642 275.326266,476.550206 C275.482213,476.499771 275.640675,476.459422 275.801653,476.429161 C275.972691,476.3989 276.14373,476.373682 276.314768,476.353508 C276.485807,476.333333 276.649299,476.308116 276.805246,476.277854 C276.961193,476.247593 277.107079,476.209766 277.242903,476.164374 C277.378728,476.118982 277.491915,476.055938 277.582465,475.975241 L277.582465,475.975241 L277.582465,476.777166 C277.582465,476.898212 277.569888,477.059606 277.544736,477.261348 C277.519583,477.46309 277.451671,477.662311 277.340999,477.85901 C277.230327,478.055708 277.059288,478.224668 276.827883,478.365887 C276.596478,478.507107 276.269493,478.577717 275.846928,478.577717 Z M289.208213,479.803301 L292.784929,469 L290.340085,469 L287.910333,476.595598 L287.88015,476.595598 L285.480581,469 L283.050829,469 L286.536995,479.803301 L289.208213,479.803301 Z M295.630926,480 C296.244652,480 296.800527,479.904172 297.298551,479.712517 C297.796575,479.520862 298.221656,479.245988 298.573794,478.887895 C298.925932,478.529803 299.197581,478.098579 299.388741,477.594223 C299.579902,477.089867 299.675482,476.524989 299.675482,475.899587 C299.675482,475.274186 299.579902,474.706786 299.388741,474.197387 C299.197581,473.687987 298.925932,473.254241 298.573794,472.896149 C298.221656,472.538056 297.796575,472.26066 297.298551,472.063961 C296.800527,471.867263 296.244652,471.768913 295.630926,471.768913 C295.0172,471.768913 294.46384,471.867263 293.970847,472.063961 C293.477854,472.26066 293.055288,472.538056 292.70315,472.896149 C292.351012,473.254241 292.079363,473.687987 291.888203,474.197387 C291.697042,474.706786 291.601462,475.274186 291.601462,475.899587 C291.601462,476.524989 291.697042,477.089867 291.888203,477.594223 C292.079363,478.098579 292.351012,478.529803 292.70315,478.887895 C293.055288,479.245988 293.477854,479.520862 293.970847,479.712517 C294.46384,479.904172 295.0172,480 295.630926,480 Z M295.630926,478.396149 C295.268727,478.396149 294.966895,478.325539 294.725429,478.184319 C294.483962,478.043099 294.290287,477.853966 294.144401,477.616919 C293.998515,477.379872 293.895389,477.112563 293.835022,476.814993 C293.774656,476.517423 293.744473,476.212288 293.744473,475.899587 C293.744473,475.586887 293.774656,475.27923 293.835022,474.976616 C293.895389,474.674003 293.998515,474.406694 294.144401,474.174691 C294.290287,473.942687 294.483962,473.753553 294.725429,473.60729 C294.966895,473.461027 295.268727,473.387895 295.630926,473.387895 C295.993125,473.387895 296.297473,473.461027 296.54397,473.60729 C296.790466,473.753553 296.986657,473.942687 297.132543,474.174691 C297.278429,474.406694 297.381555,474.674003 297.441921,474.976616 C297.502288,475.27923 297.532471,475.586887 297.532471,475.899587 C297.532471,476.212288 297.502288,476.517423 297.441921,476.814993 C297.381555,477.112563 297.278429,477.379872 297.132543,477.616919 C296.986657,477.853966 296.790466,478.043099 296.54397,478.184319 C296.297473,478.325539 295.993125,478.396149 295.630926,478.396149 Z M307.330291,479.803301 L307.330291,478.184319 L302.983902,478.184319 L307.04355,473.599725 L307.04355,471.980743 L300.463601,471.980743 L300.463601,473.599725 L304.221416,473.599725 L300.161768,478.184319 L300.161768,479.803301 L307.330291,479.803301 Z M312.470435,480 C312.983551,480 313.443845,479.906694 313.851319,479.720083 C314.258793,479.533471 314.588294,479.228336 314.839821,478.804677 L314.870004,478.804677 L314.870004,479.803301 L316.907374,479.803301 L316.907374,469 L314.764363,469 L314.764363,472.933975 L314.734179,472.933975 C314.492713,472.550665 314.163213,472.26066 313.745678,472.063961 C313.328143,471.867263 312.88797,471.768913 312.42516,471.768913 C311.851679,471.768913 311.348624,471.882393 310.915998,472.109354 C310.483371,472.336314 310.123687,472.636405 309.836946,473.009629 C309.550205,473.382852 309.333892,473.814076 309.188006,474.303301 C309.042121,474.792526 308.969178,475.299404 308.969178,475.823934 C308.969178,476.368638 309.042121,476.893168 309.188006,477.397524 C309.333892,477.90188 309.550205,478.348235 309.836946,478.736589 C310.123687,479.124943 310.488402,479.4326 310.931089,479.65956 C311.373777,479.88652 311.886892,480 312.470435,480 Z M312.998642,478.396149 C312.666627,478.396149 312.382401,478.323017 312.145965,478.176754 C311.90953,478.030491 311.713339,477.838835 311.557392,477.601788 C311.401445,477.364741 311.288258,477.094911 311.21783,476.792297 C311.147403,476.489684 311.112189,476.18707 311.112189,475.884457 C311.112189,475.561669 311.144887,475.25149 311.210284,474.95392 C311.275681,474.65635 311.381323,474.391564 311.527209,474.15956 C311.673094,473.927556 311.86677,473.740945 312.108236,473.599725 C312.349702,473.458505 312.646504,473.387895 312.998642,473.387895 C313.35078,473.387895 313.642552,473.458505 313.873957,473.599725 C314.105362,473.740945 314.294007,473.925034 314.439893,474.151994 C314.585778,474.378955 314.688905,474.64122 314.749271,474.93879 C314.809638,475.236359 314.839821,475.546538 314.839821,475.869326 C314.839821,476.192114 314.809638,476.504814 314.749271,476.807428 C314.688905,477.110041 314.588294,477.379872 314.447439,477.616919 C314.306583,477.853966 314.117938,478.043099 313.881503,478.184319 C313.645067,478.325539 313.35078,478.396149 312.998642,478.396149 Z M321.484136,480 C322.369511,480 323.124093,479.798258 323.74788,479.394773 C324.371667,478.991288 324.834477,478.320495 325.13631,477.382393 L323.249856,477.382393 C323.179428,477.624484 322.988268,477.853966 322.676374,478.070839 C322.364481,478.287712 321.99222,478.396149 321.559594,478.396149 C320.955929,478.396149 320.493119,478.239798 320.171164,477.927098 C319.849209,477.614397 319.67314,477.110041 319.642957,476.41403 L325.272134,476.41403 C325.312379,475.808803 325.262073,475.228794 325.121218,474.674003 C324.980363,474.119211 324.751473,473.624943 324.434549,473.191197 C324.117625,472.757451 323.712666,472.411967 323.219673,472.154746 C322.72668,471.897524 322.148167,471.768913 321.484136,471.768913 C320.890532,471.768913 320.349748,471.874828 319.861786,472.086657 C319.373823,472.298487 318.953773,472.588492 318.601635,472.956671 C318.249497,473.324851 317.977848,473.761119 317.786687,474.265475 C317.595526,474.76983 317.499946,475.314535 317.499946,475.899587 C317.499946,476.504814 317.593011,477.059606 317.779141,477.563961 C317.965271,478.068317 318.229375,478.502063 318.571452,478.865199 C318.913528,479.228336 319.331063,479.508253 319.824057,479.704952 C320.31705,479.901651 320.870409,480 321.484136,480 Z M323.129123,475.05227 L319.642957,475.05227 C319.653018,474.900963 319.685717,474.729482 319.741053,474.537827 C319.796389,474.346171 319.891969,474.164603 320.027794,473.993122 C320.163618,473.821641 320.344718,473.6779 320.571092,473.561898 C320.797467,473.445896 321.081692,473.387895 321.423769,473.387895 C321.946946,473.387895 322.336813,473.529115 322.59337,473.811554 C322.849928,474.093994 323.028512,474.507565 323.129123,475.05227 Z M329.547382,479.803301 L330.392513,477.397524 L334.421977,477.397524 L335.236925,479.803301 L337.696861,479.803301 L333.667396,469 L331.237644,469 L327.162905,479.803301 L329.547382,479.803301 Z M333.803221,475.627235 L331.01127,475.627235 L332.414791,471.662999 L332.444974,471.662999 L333.803221,475.627235 Z M341.696142,480 C342.13883,480 342.573972,479.95713 343.001568,479.871389 C343.429164,479.785649 343.80897,479.636864 344.140986,479.425034 C344.473001,479.213205 344.742135,478.933287 344.948388,478.585282 C345.15464,478.237276 345.257766,477.806052 345.257766,477.291609 C345.257766,476.928473 345.187338,476.623338 345.046483,476.376204 C344.905628,476.129069 344.719498,475.922283 344.488093,475.755846 C344.256688,475.589409 343.992585,475.455754 343.695783,475.354883 C343.398981,475.254012 343.094633,475.168271 342.782739,475.097662 C342.480907,475.027052 342.184105,474.961486 341.892333,474.900963 C341.600562,474.84044 341.341489,474.772352 341.115114,474.696699 C340.88874,474.621045 340.705125,474.522696 340.56427,474.401651 C340.423415,474.280605 340.352987,474.124255 340.352987,473.9326 C340.352987,473.771206 340.393231,473.642595 340.47372,473.546768 C340.554209,473.45094 340.652304,473.377808 340.768007,473.327373 C340.883709,473.276937 341.011988,473.244154 341.152843,473.229023 C341.293699,473.213893 341.424493,473.206327 341.545226,473.206327 C341.927547,473.206327 342.259563,473.279459 342.541273,473.425722 C342.822983,473.571985 342.97893,473.851903 343.009114,474.265475 L345.046483,474.265475 C345.006239,473.781293 344.882991,473.38033 344.676738,473.062586 C344.470486,472.744842 344.211413,472.490142 343.89952,472.298487 C343.587626,472.106832 343.232973,471.970656 342.83556,471.889959 C342.438147,471.809262 342.028158,471.768913 341.605592,471.768913 C341.183027,471.768913 340.770522,471.80674 340.368079,471.882393 C339.965635,471.958047 339.603436,472.089179 339.281482,472.275791 C338.959527,472.462403 338.700454,472.717102 338.504263,473.03989 C338.308072,473.362678 338.209976,473.776249 338.209976,474.280605 C338.209976,474.623567 338.280404,474.913572 338.421259,475.150619 C338.562114,475.387666 338.748244,475.584365 338.979649,475.740715 C339.211054,475.897066 339.475157,476.023155 339.771959,476.118982 C340.068761,476.21481 340.373109,476.298028 340.685003,476.368638 C341.449645,476.530032 342.045765,476.691426 342.473361,476.85282 C342.900957,477.014214 343.114755,477.256304 343.114755,477.579092 C343.114755,477.770747 343.06948,477.929619 342.97893,478.055708 C342.888381,478.181797 342.775193,478.282669 342.639369,478.358322 C342.503544,478.433975 342.352628,478.489454 342.18662,478.524759 C342.020612,478.560064 341.86215,478.577717 341.711234,478.577717 C341.499951,478.577717 341.296214,478.552499 341.100023,478.502063 C340.903831,478.451628 340.730278,478.373453 340.579362,478.267538 C340.428445,478.161623 340.305197,478.025447 340.209617,477.85901 C340.114036,477.692572 340.066246,477.493352 340.066246,477.261348 L338.028876,477.261348 C338.048999,477.785878 338.167216,478.222146 338.38353,478.570151 C338.599843,478.918157 338.876523,479.198074 339.213569,479.409904 C339.550616,479.621733 339.935452,479.77304 340.368079,479.863824 C340.800705,479.954608 341.243393,480 341.696142,480 Z M348.901591,479.878955 C349.112874,479.878955 349.329187,479.873911 349.550531,479.863824 C349.771875,479.853737 349.973097,479.833563 350.154196,479.803301 L350.154196,478.138927 C350.053586,478.159101 349.947944,478.174232 349.837272,478.184319 C349.7266,478.194406 349.610898,478.19945 349.490165,478.19945 C349.127966,478.19945 348.8865,478.138927 348.765767,478.017882 C348.645034,477.896836 348.584667,477.654746 348.584667,477.291609 L348.584667,473.418157 L350.154196,473.418157 L350.154196,471.980743 L348.584667,471.980743 L348.584667,469.635488 L346.441656,469.635488 L346.441656,471.980743 L345.143776,471.980743 L345.143776,473.418157 L346.441656,473.418157 L346.441656,478.033012 C346.441656,478.42641 346.507053,478.744154 346.637847,478.986245 C346.768641,479.228336 346.947226,479.414947 347.1736,479.54608 C347.399974,479.677212 347.661563,479.765475 347.958365,479.810867 C348.255167,479.856259 348.569576,479.878955 348.901591,479.878955 Z M353.518987,480 C353.971736,480 354.414424,479.899129 354.84705,479.697387 C355.279677,479.495644 355.631815,479.167813 355.903464,478.713893 L355.948739,478.713893 L355.948739,479.803301 L357.986109,479.803301 L357.986109,471.980743 L355.843098,471.980743 L355.843098,476.081155 C355.843098,476.878038 355.712304,477.450481 355.450716,477.798487 C355.189127,478.146492 354.766562,478.320495 354.183019,478.320495 C353.669903,478.320495 353.312735,478.161623 353.111513,477.843879 C352.910292,477.526135 352.809681,477.044475 352.809681,476.3989 L352.809681,471.980743 L350.66667,471.980743 L350.66667,476.792297 C350.66667,477.276479 350.709429,477.71779 350.794948,478.116231 C350.880468,478.514672 351.028869,478.852591 351.240151,479.129986 C351.451434,479.407382 351.74069,479.621733 352.10792,479.77304 C352.47515,479.924347 352.945505,480 353.518987,480 Z M361.277368,479.803301 L361.277368,476.277854 C361.277368,475.924805 361.312582,475.596974 361.38301,475.29436 C361.453437,474.991747 361.571655,474.72696 361.737663,474.5 C361.903671,474.27304 362.122499,474.093994 362.394149,473.962861 C362.665798,473.831729 362.997814,473.766162 363.390196,473.766162 C363.52099,473.766162 363.656815,473.773728 363.79767,473.788858 C363.938525,473.803989 364.059258,473.821641 364.159869,473.841816 L364.159869,471.844567 C363.988831,471.794131 363.832884,471.768913 363.692029,471.768913 C363.420379,471.768913 363.158791,471.809262 362.907264,471.889959 C362.655737,471.970656 362.419301,472.084136 362.197957,472.230399 C361.976614,472.376662 361.780422,472.553187 361.609384,472.759972 C361.438346,472.966758 361.302521,473.191197 361.20191,473.433287 L361.171727,473.433287 L361.171727,471.980743 L359.134357,471.980743 L359.134357,479.803301 L361.277368,479.803301 Z M366.887279,470.770289 L366.887279,469 L364.744268,469 L364.744268,470.770289 L366.887279,470.770289 Z M366.887279,479.803301 L366.887279,471.980743 L364.744268,471.980743 L364.744268,479.803301 L366.887279,479.803301 Z M370.452114,480 C370.935047,480 371.407918,479.92939 371.870727,479.788171 C372.333537,479.646951 372.735981,479.399817 373.078058,479.046768 C373.088119,479.1779 373.105726,479.306511 373.130878,479.4326 C373.156031,479.558689 373.18873,479.682256 373.228974,479.803301 L373.228974,479.803301 L375.402168,479.803301 C375.301557,479.641907 375.23113,479.399817 375.190885,479.077029 C375.150641,478.754241 375.130519,478.416323 375.130519,478.063274 L375.130519,478.063274 L375.130519,473.993122 C375.130519,473.519028 375.024878,473.138239 374.813595,472.850757 C374.602312,472.563274 374.330663,472.338835 373.998647,472.177442 C373.666631,472.016048 373.299401,471.907611 372.896958,471.852132 C372.494515,471.796653 372.097102,471.768913 371.70472,471.768913 C371.272093,471.768913 370.841981,471.811784 370.414385,471.897524 C369.986789,471.983265 369.601953,472.127006 369.259876,472.328748 C368.917799,472.530491 368.636089,472.797799 368.414745,473.130674 C368.193401,473.463549 368.067637,473.882164 368.037454,474.38652 L368.037454,474.38652 L370.180465,474.38652 C370.220709,473.962861 370.361565,473.660248 370.603031,473.47868 C370.844497,473.297111 371.176513,473.206327 371.599078,473.206327 C371.790239,473.206327 371.968823,473.218936 372.134831,473.244154 C372.300839,473.269372 372.446725,473.319807 372.572488,473.395461 C372.698252,473.471114 372.798863,473.577029 372.874321,473.713205 C372.949779,473.849381 372.987508,474.033471 372.987508,474.265475 C372.997569,474.487391 372.932172,474.65635 372.791317,474.772352 C372.650462,474.888354 372.459301,474.976616 372.217835,475.037139 C371.976369,475.097662 371.699689,475.143054 371.387795,475.173315 C371.075902,475.203576 370.758978,475.243925 370.437023,475.29436 C370.115068,475.344796 369.795629,475.412884 369.478704,475.498624 C369.16178,475.584365 368.88007,475.712976 368.633573,475.884457 C368.387077,476.055938 368.185855,476.28542 368.029908,476.572902 C367.873961,476.860385 367.795988,477.226043 367.795988,477.669876 C367.795988,478.073361 367.8639,478.421366 367.999725,478.713893 C368.13555,479.006419 368.324195,479.24851 368.565661,479.440165 C368.807127,479.63182 369.088837,479.77304 369.410792,479.863824 C369.732747,479.954608 370.079854,480 370.452114,480 Z M371.251971,478.577717 C371.080932,478.577717 370.914924,478.562586 370.753947,478.532325 C370.59297,478.502063 370.452114,478.449106 370.331381,478.373453 C370.210648,478.297799 370.115068,478.194406 370.04464,478.063274 C369.974213,477.932141 369.938999,477.770747 369.938999,477.579092 C369.938999,477.37735 369.974213,477.210912 370.04464,477.07978 C370.115068,476.948647 370.208133,476.840211 370.323836,476.75447 C370.439538,476.66873 370.575363,476.600642 370.73131,476.550206 C370.887256,476.499771 371.045718,476.459422 371.206696,476.429161 C371.377734,476.3989 371.548773,476.373682 371.719811,476.353508 C371.89085,476.333333 372.054342,476.308116 372.210289,476.277854 C372.366236,476.247593 372.512122,476.209766 372.647946,476.164374 C372.783771,476.118982 372.896958,476.055938 372.987508,475.975241 L372.987508,475.975241 L372.987508,476.777166 C372.987508,476.898212 372.974931,477.059606 372.949779,477.261348 C372.924626,477.46309 372.856714,477.662311 372.746042,477.85901 C372.63537,478.055708 372.464331,478.224668 372.232926,478.365887 C372.001522,478.507107 371.674536,478.577717 371.251971,478.577717 Z M379.438376,480 C379.881064,480 380.316206,479.95713 380.743802,479.871389 C381.171398,479.785649 381.551204,479.636864 381.88322,479.425034 C382.215235,479.213205 382.484369,478.933287 382.690622,478.585282 C382.896874,478.237276 383,477.806052 383,477.291609 C383,476.928473 382.929572,476.623338 382.788717,476.376204 C382.647862,476.129069 382.461732,475.922283 382.230327,475.755846 C381.998922,475.589409 381.734819,475.455754 381.438017,475.354883 C381.141215,475.254012 380.836867,475.168271 380.524973,475.097662 C380.223141,475.027052 379.926339,474.961486 379.634567,474.900963 C379.342796,474.84044 379.083723,474.772352 378.857348,474.696699 C378.630974,474.621045 378.447359,474.522696 378.306504,474.401651 C378.165649,474.280605 378.095221,474.124255 378.095221,473.9326 C378.095221,473.771206 378.135465,473.642595 378.215954,473.546768 C378.296443,473.45094 378.394538,473.377808 378.510241,473.327373 C378.625943,473.276937 378.754222,473.244154 378.895077,473.229023 C379.035932,473.213893 379.166727,473.206327 379.28746,473.206327 C379.669781,473.206327 380.001797,473.279459 380.283507,473.425722 C380.565217,473.571985 380.721164,473.851903 380.751347,474.265475 L382.788717,474.265475 C382.748473,473.781293 382.625225,473.38033 382.418972,473.062586 C382.21272,472.744842 381.953647,472.490142 381.641754,472.298487 C381.32986,472.106832 380.975207,471.970656 380.577794,471.889959 C380.180381,471.809262 379.770392,471.768913 379.347826,471.768913 C378.925261,471.768913 378.512756,471.80674 378.110313,471.882393 C377.707869,471.958047 377.34567,472.089179 377.023715,472.275791 C376.701761,472.462403 376.442688,472.717102 376.246497,473.03989 C376.050306,473.362678 375.95221,473.776249 375.95221,474.280605 C375.95221,474.623567 376.022638,474.913572 376.163493,475.150619 C376.304348,475.387666 376.490478,475.584365 376.721883,475.740715 C376.953288,475.897066 377.217391,476.023155 377.514193,476.118982 C377.810995,476.21481 378.115343,476.298028 378.427237,476.368638 C379.191879,476.530032 379.787999,476.691426 380.215595,476.85282 C380.643191,477.014214 380.856989,477.256304 380.856989,477.579092 C380.856989,477.770747 380.811714,477.929619 380.721164,478.055708 C380.630614,478.181797 380.517427,478.282669 380.381603,478.358322 C380.245778,478.433975 380.094862,478.489454 379.928854,478.524759 C379.762846,478.560064 379.604384,478.577717 379.453468,478.577717 C379.242185,478.577717 379.038448,478.552499 378.842257,478.502063 C378.646065,478.451628 378.472512,478.373453 378.321595,478.267538 C378.170679,478.161623 378.047431,478.025447 377.951851,477.85901 C377.85627,477.692572 377.80848,477.493352 377.80848,477.261348 L375.77111,477.261348 C375.791233,477.785878 375.90945,478.222146 376.125764,478.570151 C376.342077,478.918157 376.618757,479.198074 376.955803,479.409904 C377.29285,479.621733 377.677686,479.77304 378.110313,479.863824 C378.542939,479.954608 378.985627,480 379.438376,480 Z' id='logo_lvda'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size:auto 80%;background-repeat:no-repeat;background-position:center center}.btn-inciar-sesion .i-c-usrmnu{background-position:0.12rem 0.25rem;background-repeat:no-repeat;background-size:1.8rem 1.8rem;filter:opacity(0.75) contrast(5) !important}.sso-usuario-logueado{color:#444}.image-gallery .figure{display:none}.image-gallery .figure:first-child{display:block}.article-min .image-gallery .figure-caption{padding:7.5px;display:flex;border:1px solid #ebebeb;background-color:#f7f7f7}.gallery-prev,.gallery-next{position:absolute;background-color:white;top:calc(50% - 20px)}.gallery-prev{left:0}.gallery-next{right:0}.hdln-blk{margin-left:15px;padding-left:15px;margin-top:15px;margin-bottom:15px;border-left:1px solid #ebebeb}.headline,.subtitle{padding:7.5px 0;margin:0}.subtitle,.section{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}.subtitle{font-weight:400;font-size:1rem;line-height:1.3}.section{padding:7.5px 15px;font-size:.65rem;margin:0 -15px}.data img{filter:grayscale(1)}.txt-blk{margin-bottom:30px}.txt-blk .date{padding-left:15px;padding-right:15px;border-left:1px solid #ebebeb;margin-top:15px;margin-bottom:15px}.txt-blk .ladillo,.txt-blk .destacado{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif;font-size:1rem;line-height:1.5rem}.txt-blk .destacado{display:block;margin-bottom:15px}.txt-blk .txt,.txt-blk .entradilla{display:block}.txt-blk .txt a,.txt-blk .entradilla a{border-bottom:1px dotted black}.txt-blk .txt a:hover,.txt-blk .entradilla a:hover{text-decoration:none;border-bottom:1px solid black}.txt-blk .a-min-content{display:flex;flex-direction:column;align-self:center}.txt-blk .embed{text-align:center !important;display:flex;justify-content:center;align-content:center;flex-wrap:nowrap}.txt-blk .embed .twitter-tweet{width:100%}.txt-blk .embed .instagram-media{max-width:550px !important}.first-paragraph::first-letter{float:left;padding:10px 9px 0 0;font-size:2.8rem;line-height:2rem;font-weight:400;font-family:Georgia,"Times New Roman",Times,sans-serif}.txt-det-lad,.ladillo,.destacado{font-weight:600}.txt-det-quest{font-weight:600}.txt-det-answ{padding-left:15px}.txt-det-quote,.titular_importado,h2,blockquote{font-family:Georgia,"Times New Roman",Times,sans-serif;line-height:1.5rem}.txt-det-quote,.titular_importado,blockquote{font-size:1.3rem}.txt-det-quote,blockquote{border-left:1px solid #ebebeb;padding-left:15px;line-height:120%}.titular_importado{margin-top:30px}h2{font-size:1.15rem;margin-top:30px}.entradilla{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif;font-size:1.1rem;line-height:1.5rem;font-weight:400;color:#666}.firma{font-size:.65rem;font-weight:600}.ladillo_antetitulo{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif;text-transform:uppercase;color:#666;font-weight:800;font-size:.75rem;margin-bottom:0}.ladillo_antetitulo strong{font-weight:800}.ladillo_antetitulo+*{margin-top:7.5px}.det-lst,ul{padding-left:22.5px;list-style-type:square;font-size:.85rem}.det-lst li+li,ul li+li{margin-top:15px}.cl-min{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}.cl-med{font-family:"Neue-Helvetica","Helvetica",Arial,sans-serif}.subs_box{padding:20px;border:1px solid #dadada;background:#fff;position:relative;margin-left:7%;align-content:center;text-align:center}.subs_box .subs_box-header{display:block;padding-bottom:10px}.live-post{padding-left:15px;border-left:1px solid #ebebeb;margin-top:45px}.live-post .live-txt a{border-bottom:1px dotted black}.live-post .live-txt a:hover{text-decoration:none;border-bottom:1px solid black}.live-time{color:white;background-color:#ccc;border-radius:4px;font-size:.65rem;padding:4px 6px;font-weight:600;margin-right:7.5px;float:left;min-height:24px}.live-ico{float:left;margin-right:7.5px}.live-post-alert .live-time{animation:blinkBg 2s infinite}@keyframes blinkBg{to{background-color:#D52D2E}}.backgroundGrey{border:1px solid #ccc;background-color:#f7f7f7;padding:15px}.backgroundGrey .ladillo_antetitulo{margin-left:0 !important;color:#000;border-bottom:1px solid #ccc;padding-bottom:15px;margin-bottom:15px}#detail.opinion .headline{font-style:italic}
+</style>
+<link rel="stylesheet" href="https://css.lavdg.com/assets/themes/lvda/css/dt_news_default_mobile.grv-036a4ec18f8fc4f4c1edc82439120053.css" media="(max-width: 1019px)" />		
+<link rel="stylesheet" href="https://css.lavdg.com/assets/themes/lvda/css/dt_news_default_desktop.grv-390643f2b04b4d1fbcf8017058e6744f.css" media="(min-width: 1020px)" />
+	
+<link rel="preload" as="style" media="all" href="https://css.lavdg.com/assets/themes/lvda/css/dt_news_noncritical.grv-2162a01a76d9adaa78bd45e94c5641a3.css"  />
+<link rel="stylesheet" media="all" href="https://css.lavdg.com/assets/themes/lvda/css/dt_news_noncritical.grv-2162a01a76d9adaa78bd45e94c5641a3.css" />	  
+
+		<style>
+/* ESTILO QUE BLOQUEA SCROLL */
+    body.blocked {
+        width: 100%;
+        height: 100;
+        overflow: hidden;
+    }
+
+    body.blocked::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 100000000;
+        opacity: 0.5;
+    }
+</style>  
+
+	    
+
+
+	
+
+	<meta name="robots" content="index,follow">
+<meta name="description" content="">	
+<meta name="keywords" content="">
+<meta itemprop="mainEntityOfPage" content="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm">    <meta property="og:site_name" content="La Voz de Asturias">
+<meta property="og:locale" content="es_ES">
+<meta property="og:rich_attachment" content="true">
+
+<meta property="fb:admins" content="100004577252788">
+<meta property="fb:app_id" content="1736629223247823">
+<meta property="fb:profile_id" content="100004577252788">
+<meta property="fb:pages" content="101351926940208,1784490615159918,238338249551162">
+
+
+<meta property="og:url" content="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm">
+
+<meta property="og:title" content="Exagerar demasiado puede ser peligroso">
+<meta property="og:description" content="">
+<meta property="article:publisher" content="https://www.facebook.com/lavozdeasturias">
+
+  		<meta property="article:opinion" content="true"/>
+<meta property="article:content_tier"content="Unknown"/>
+
+
+
+<!-- Article Content Specific FB Tags -->
+<meta property="og:type" content="article">
+<meta property="article:author" content="https://www.facebook.com/lavozdeasturias">
+
+	
+			
+	<meta property="article:published_time" content="2020-01-07T09:23:00.843Z"><!-- ISO 861 -->
+<meta property="article:modified_time" content="2020-01-07T09:23:00.843Z"><!-- ISO 861 -->
+
+<meta property="article:section" content="Opinión">
+		
+			
+		  
+	  	  
+	  	  	<meta property="og:image" content="https://www.lavozdeasturias.es/assets/themes/${theme}/images/og_default.jpg">
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+	
+
+
+
+
+
+	<!-- Site property -->	
+<!-- meta name="twitter:site"             content="lavozdeasturias" -->
+
+<!-- Common Twitter s Tags (Article, Video) -->	
+
+<meta name="twitter:title"               content="Exagerar demasiado puede ser peligroso">
+<meta name="twitter:description"         content="">
+
+<!-- Article Content Specific TW Tags -->
+
+
+	<meta name="twitter:site"                content="lavozdeasturias">
+	<meta name="twitter:creator"             content="lavozdeasturias">
+						<!-- Thumb image -->
+		<meta name="twitter:card"                content="summary">
+		<meta name="twitter:image"               content="https://www.lavozdeasturias.es/assets/themes/${theme}/images/og_default.jpg">
+	
+	
+
+<!-- Video Content Specific TW Tags -->
+	
+            
+        
+
+<meta property="mrf:authors" content="Francisco Carantoña" />
+<meta property="mrf:tags" content="" />
+
+
+
+
+
+ 												
+ 
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage":{
+            "@type":"WebPage",         
+            "@id":"https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm"
+        },
+        "headline": "Exagerar demasiado puede ser peligroso",    
+        "datePublished": "2020-01-07T09:23:00.843Z",    
+        "dateModified": "2020-01-07T09:23:00.843Z",
+        "author":
+                                {
+            "@type": "Person",
+            "name": "Francisco Carantoña"
+        }	                 ,
+            "publisher": {
+            "@type": "Organization",
+            "name": "La Voz de Asturias",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.lavozdeasturias.es/assets/themes/lvda2017/images/logoSite/md/logo.png",
+                "width": "399px",
+                "height": "60px"
+            }
+        },
+        "description": ""           
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+	
+    
+    <body id="detail" class="detail opinion opinion ">
+								  																																						
+						<!-- debug: MegabannerDesktop -->
+						 			 																						  <div class="container tophead-ad">
+												<div class="ad_fixed_h fixed_MegabannerDesktop MegaHeader  d-none-mb">
+								    <div class="adpos ad_MegabannerDesktop" id="PUB_CABECERO_ad_MegabannerDesktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_MegabannerDesktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+												  </div>
+											
+	  								  																																						
+						<!-- debug: MegabannerMobile -->
+									 																						<div id="ad_faldon_mobile" class="adpos adSticky hidden-dk">
+									<div id="PUB_CABECERO_ad_MegabannerMobile" class="postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_MegabannerMobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    	<button class="icon i-close" aria-label="cerrar" onclick="switchBtn('ad_faldon_mobile');"><span class="d-none">Cerrar</span></button>
+				    				    				    	<div class="cover"></div>
+				    								</div>
+														
+	  								  																																						
+						<!-- debug: IntextDesktop -->
+									 																										    <div class="ad_IntexDesktop hidden" id="PUB_CABECERO_ad_IntextDesktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_IntextDesktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    															
+	  								  																																						
+						<!-- debug: IntextMobile -->
+									 																							<div id="PUB_CABECERO_ad_IntextMobile" class="ad_IntexMobile hidden">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_IntextMobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    														
+	  								  																																						
+						<!-- debug: InsterstitialMobile -->
+																																<div id="PUB_CABECERO_ad_InsterstitialMobile" class="ad_InsterstitialMobile postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_InsterstitialMobile');
+				                											googletag.pubads().refresh([gptAdSlots['PUB_CABECERO_ad_InsterstitialMobile']]);
+													                });
+				            }
+				        </script>   
+				    </div> 
+				    				    														
+	  								  																																						
+						<!-- debug: InimageDesktop -->
+																																			    <div class="" id="PUB_CABECERO_ad_InimageDesktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_InimageDesktop');
+				                											googletag.pubads().refresh([gptAdSlots['PUB_CABECERO_ad_InimageDesktop']]);
+													                });
+				            }
+				        </script>    
+				    </div>
+				    															
+	  								  																																						
+						<!-- debug: InimageMobile -->
+																																<div id="PUB_CABECERO_ad_InimageMobile" class="d-none">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('PUB_CABECERO_ad_InimageMobile');
+				                											googletag.pubads().refresh([gptAdSlots['PUB_CABECERO_ad_InimageMobile']]);
+													                });
+				            }
+				        </script>   
+				    </div> 
+				    				    														
+	  								<article class="root container">	
+			
+			<header id="lvg_header" class="row flex header_sticky">
+				<div class="row flex f-dir-row padding">				
+	<div class="sz-10 sz-dk-20 flex">						
+		<button class="icon i-menu no-brd filter_invert" aria-label="Menu" onclick="switchBtn('menu_site');">
+			<span class="d-none">Menu</span>
+		</button>						
+	</div>
+					
+	<div class="sz-80 sz-dk-60 flex">						
+		<a class="logo flex sz-100" aria-label="Volver a portada" href="/">
+			<span class="d-none">La Voz de Asturias</span>
+		</a>			        
+	</div>		
+	<!-- SSO -->
+<div id="SSOContained_bl1Mobile" class="contenedorSSO sz-10 sz-dk-20 flex f-dir-row f-align-center f-align-c-end" >
+			                
+	<button type="button" class="botonSSO usuarioAnonimo btn-inciar-sesion mg-l-2 no-brd sz-t-xxs d-none"
+		name="login"
+		aria-haspopup="true"
+		aria-expanded="false"
+		aria-label="Inicia sesión">
+		<span class="flex f-dir-row f-align-center ">
+			<span class="d-none-mb c-white t-bld">Inicia sesión</span>			
+			<span class="ico i-user i-c-usrmnu circle flex bg-white-alpha sz-sq-xxs sz-t-xxl mg-l"></span>
+		</span>
+	</button>
+			                
+	<button class="botonSSO btn-inciar-sesion no-brd sz-t-xxs usuarioIdentificado d-none"
+		name="cuenta"
+		data-toggle="modal"
+		data-target="#popupIdentificado"
+		aria-label="Accede a mi cuenta"		                	
+		onclick="switchBtn('popupIdentificado');">
+		<span class="flex f-dir-row f-align-center ">
+	    	<span class="d-none-mb c-white t-bld">Mi cuenta</span>
+	    	<span class="ico i-user i-c-usrmnu circle flex bg-white-alpha sz-sq-xxs sz-t-xxl mg-l"></span>
+	    </span>							
+	</button>
+							
+</div></div>			</header>			
+		    
+		    		    		        			        		
+			
+			
+			<!-- HEADLINE -->
+<div class="row">
+	            
+	<div class="col flex sz-dk-60 hdln-blk">
+	                
+		<h1 class="headline mg-b-2">Exagerar demasiado puede ser peligroso</h1>
+				<div class="data flex f-dir-row f-align-center mg-t-2">
+				 
+						<figure class="a-min-media sz-sq-xs fl-l mg-r-2">        
+			<picture class="media circle ratio1-1">
+				<source srcset="https://img.lavdg.com/sc/9cPg4WcJXv9T1GzKBDhA-jagvmE=/75x75/perfiles/1463562192816/1464635082453_thumb.jpg" type="image/webp">
+				<source srcset="https://img.lavdg.com/sc/9cPg4WcJXv9T1GzKBDhA-jagvmE=/75x75/perfiles/1463562192816/1464635082453_thumb.jpg" type="image/jpeg">                
+				<img loading="lazy" src="https://img.lavdg.com/sc/9cPg4WcJXv9T1GzKBDhA-jagvmE=/75x75/perfiles/1463562192816/1464635082453_thumb.jpg" alt="Francisco Carantoña" width="100" height="100">
+			</picture>	
+		</figure>
+					
+		<span class="flex">
+		<span class="author sz-t-xxs t-bld upper">
+									<a href="/firmas/francisco-carantona">Francisco Carantoña</a>
+						 				</span> 
+			</span>	
+		</div>
+
+		<h2 class="section f-ord-first detalle_cliche_opinion "><a href="/opinion"><span class="t-bld ">OPINIÓN</span></a></h2>
+	</div>	        
+</div>	
+				
+			<!-- CONTENT BLOCK -->			
+	        <div class="row f-dir-row p-rel">            
+	          
+				<!-- ARTICLE TEXT -->
+				<div class="col sz-dk-67 txt-blk">
+																						                	                
+					<div class="date">	                	
+						<h3 class="subtitle t-bld"></h3>
+						<span class="sz-t-xs"><strong>07 ene 2020</strong> . Actualizado a las 10:23 h.</span>						<div class="share mg-t-2 flex f-dir-row f-align-center">	
+
+	<a href="https://api.whatsapp.com/send?text=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=whatsapp%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="whatsapp" aria-label="Compartir en Whatsapp" class="ico i-c-whp circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Whatsapp</span>
+	</a>
+	
+	<a href="mailto:?subject=Esta noticia de La Voz te puede interesar&amp;body=Exagerar demasiado puede ser peligroso https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=email%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm"  data-social="email"  aria-label="Compartir por email" class="ico i-c-mail circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Mail</span>
+	</a>
+		
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=facebook.com%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="facebook" aria-label="Compartir en Facebook" class="ico i-c-fb circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank" >
+		<span class="d-none">Facebook</span>
+	</a>
+	
+	<a href="https://twitter.com/intent/tweet?text=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=t.co%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="twitter" aria-label="Compartir en Twitter" class="ico i-c-tw circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Twitter</span>
+	</a>
+			
+			
+					
+        <div class="sz-auto"><a href="#comments" aria-label="Comentar el art&iacute;ulo" class="btn sz-t-xxs fl-r brd"><span>Comentar · <span class="commentscount" data-site="www.lavozdeasturias.es" data-content-id="00031578388657798848995"></span></span></a></div>    
+    </div>
+
+
+					</div>		
+
+
+		                                                                   		                                        
+                                        		
+											
+						
+																			<p class='first-paragraph txt'>Es verdad que, con alguna variación de intensidad según las comunidades autónomas, también en esto se nota la diversidad, los españoles tendemos a ser vocingleros y apasionados en las discusiones, pero sorprende más que lo sean quienes tienen responsabilidades públicas. Por otra parte, en todo son necesarios los límites. Que una discusión de chigre acabe a bofetadas es desagradable, pero suele provocar daños limitados, si ese comportamiento se extiende a gobiernos, jueces, militares, periodistas y diputados el riesgo de que sean graves aumenta considerablemente.</p>
+																																		
+						 											           		        																																							
+						<!-- debug: RobapaginasMobile -->
+																															<div id="" class="ad_fixed_h fixed_sticky fixed_RobaMobile d-none-dk">
+									<div id="TEXTO_DETALLE_ad_RobapaginasMobile" class="adpos ad_RobapaginasMobile postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('TEXTO_DETALLE_ad_RobapaginasMobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    				    	<div class="cover"></div>
+				    								</div>
+														
+				           																					<p class ='txt'>El conflicto catalán está absolutamente desquiciado y contamina toda la actividad política, pero parece que son muchos los que disfrutan con ello. Es indiscutible que el gobierno de la Generalitat y el parlamento catalán violaron las leyes y se extralimitaron en sus funciones en 2017, pero también que ni quisieron provocar un enfrentamiento violento con el Estado, no hicieron ademán de utilizar a los mossos de escuadra o a parte de ellos, ni pretendieron tomar el poder y proclamar efectivamente la independencia, todavía estos días se recordaba que ni siquiera arriaron la bandera española del palacio de la Generalitat. Tampoco hubo ninguna resistencia a la aplicación del artículo 155 de la Constitución y la consiguiente suspensión de la autonomía.</p>
+																																		
+						 																							<p class ='txt'>Su actuación, cuando los independentistas ni siquiera habían logrado la mayoría de votos en las elecciones autonómicas, fue impolítica e ilegal, exagerada y sobreactuada. Ellos mismos sabían que tendría consecuencias penales, por eso Puigdemont y otros dirigentes se fueron al extranjero, lo que quizá no calcularon es que la exageración se contagiaría y que lloverían acusaciones absurdas de golpe de estado y rebelión. En cualquier caso, el mayor problema no reside en la irresponsabilidad de los dirigentes, sino en que millones de catalanes, casi la mitad de la población, aunque pueda no simpatizar con ellos, sí cree que existen agravios, motivos de descontento, que justificarían la reivindicación de la independencia y los vota como rechazo a lo que perciben como una agresión desde el resto de España. Eso es lo que importa y no se va a arreglar a voces, ni con insultos o amenazas.</p>
+																																		
+						 											           		        																																							
+						<!-- debug: Roba2Mobile -->
+																															<div id="" class="ad_fixed_h fixed_sticky fixed_RobaMobile d-none-dk">
+									<div id="TEXTO_DETALLE_ad_Roba2Mobile" class="adpos ad_RobapaginasMobile postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('TEXTO_DETALLE_ad_Roba2Mobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    				    	<div class="cover"></div>
+				    								</div>
+														
+				           																					<p class ='txt'>El gobierno de coalición de izquierda presidido por Pedro Sánchez es el único posible tras dos elecciones generales y que llegue al poder con la abstención, no con el apoyo, eso hubiera sido el voto favorable, de Esquerra Republicana, conseguida con un pacto en el que no se anuncia nada ilegal, puede ser legítimamente rechazado por quienes tienen ideas políticas distintas o consideran que se debe aislar radicalmente a los independentistas, pero es una exageración terriblemente peligrosa presentarlo como una traición a España, a la Constitución o a la convivencia. Puro histrionismo fue lo que las derechas demostraron con Bildu, que tampoco votará a este gobierno y con quien no ha habido pacto alguno. Ni que fuera la primera vez que los abertzales vascos intervienen en las Cortes o en cualquier otro parlamento, ni que el PP, con Abascal dentro, no hubiera pactado nunca con ellos, cosa que, insisto, ahora no sucede.</p>
+																																		
+						 																							<p class ='txt'>Es cierto que hay motivos para dudar de Pedro Sánchez, él lo ha provocado con el abuso de afirmaciones rotundas de las que ha debido desdecirse al poco tiempo, y es lógico que la oposición lo pusiese de manifiesto. Quizá en su caso se muestre de forma algo exagerada lo que no deja de ser un rasgo desgraciadamente normal de la política española, del que muy pocos se salvan, pero dirige al partido más votado y tiene mayoría relativa en las Cortes, que gobierne y se le juzgue por sus actos, no por una atribución de intenciones.</p>
+																																		
+						 											           		        																																							
+						<!-- debug: Roba3Mobile -->
+																															<div id="" class="ad_fixed_h fixed_sticky fixed_RobaMobile d-none-dk">
+									<div id="TEXTO_DETALLE_ad_Roba3Mobile" class="adpos ad_RobapaginasMobile postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('TEXTO_DETALLE_ad_Roba3Mobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    				    	<div class="cover"></div>
+				    								</div>
+														
+				           																					<p class ='txt'>Estuvo mejor la izquierda en el debate. Pedro Sánchez, Pablo Iglesias, Alberto Garzón, tuvieron relativamente fácil responder a la desmesura de sus rivales y llegaron a ser brillantes. Es indudable que las derechas han ido a remolque desde 1977, tanto en la aprobación de la Constitución como en reformas que luego han usado profusamente, como bien le recordó Sánchez a Maroto. No deja de ser una ventaja, no solo en el debate, sino también porque su exageración le suena a eso a la mayor parte de la ciudadanía. Recuerdo cuando esa derecha, de origen franquista, precisaba a los comunistas para coger pedigrí democrático. Desde que Fraga presentó a Carrillo en el club Siglo XXI, todos querían su foto con él, que también necesitaba que se le dejase de ver como la encarnación de Satanás. Hubiera sido mucho más difícil consolidar la democracia sin esos gestos, hoy parece que el objetivo es destrozarla.</p>
+																																		
+						 																							<p class ='txt'>Comparar a la coalición del PSOE y Unidas Podemos con el Frente Popular es, más que una exageración, una estupidez. Cabría recordar que aquél fue una coalición electoral, cosa que ahora no ha existido, y que en el gobierno que se formó en 1936 no estaban ni el PSOE ni el PCE. Si la comparación se quiere extender a la situación política, más que una estupidez, se estaría cometiendo un crimen solo por la posibilidad de que alguien llegara a creérselo</p>
+																																		
+						 											           		        																																							
+						<!-- debug: Roba4Mobile -->
+																															<div id="" class="ad_fixed_h fixed_sticky fixed_RobaMobile d-none-dk">
+									<div id="TEXTO_DETALLE_ad_Roba4Mobile" class="adpos ad_RobapaginasMobile postload">
+				        <script type="didomi/javascript">
+				            if (mediaQueryMobile.matches) {
+				                googletag.cmd.push(function() {
+				                	googletag.display('TEXTO_DETALLE_ad_Roba4Mobile');
+				                					                });
+				            }
+				        </script>   
+				    </div> 
+				    				    				    	<div class="cover"></div>
+				    								</div>
+														
+				           																					<p class ='txt'>Lo mejor que puede pasar es que Pedro Sánchez saque adelante la investidura, que el nuevo gobierno logre poner en marcha políticas progresistas y derogar o reformar lo peor de la herencia de Rajoy y que encuentre con el diálogo una vía para normalizar la situación en Cataluña. Eso y que las derechas que se consideran constitucionalistas y no herederas del franquismo descubran las virtudes de la tila y las ventajas de hablar en vez de vocear.</p>
+																																		
+						        			 										<hr class="spacer mg-v"/>	
+										<div class="share mg-t-2 flex f-dir-row f-align-center">	
+
+	<a href="https://api.whatsapp.com/send?text=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=whatsapp%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="whatsapp" aria-label="Compartir en Whatsapp" class="ico i-c-whp circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Whatsapp</span>
+	</a>
+	
+	<a href="mailto:?subject=Esta noticia de La Voz te puede interesar&amp;body=Exagerar demasiado puede ser peligroso https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=email%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm"  data-social="email"  aria-label="Compartir por email" class="ico i-c-mail circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Mail</span>
+	</a>
+		
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=facebook.com%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="facebook" aria-label="Compartir en Facebook" class="ico i-c-fb circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank" >
+		<span class="d-none">Facebook</span>
+	</a>
+	
+	<a href="https://twitter.com/intent/tweet?text=https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm?utm_source=t.co%26utm_medium=referral%26utm_campaign=share%26utm_content=00031578388657798848995" data-url="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-social="twitter" aria-label="Compartir en Twitter" class="ico i-c-tw circle flex bg-gray-min mg-r sz-sq-xxs sz-t-md" target="__blank">
+		<span class="d-none">Twitter</span>
+	</a>
+			
+			
+					
+        <div class="sz-auto"><a href="#comments" aria-label="Comentar el art&iacute;ulo" class="btn btn-primary sz-t-xs fl-r"><span>Comentar · <span class="commentscount" data-site="www.lavozdeasturias.es" data-content-id="00031578388657798848995"></span></span></a></div>    
+    </div>
+
+
+					<hr class="spacer no-brd mg-v-2"/>
+				</div>
+				<!-- RELATED CONTENT AND ASIDE -->
+				<aside class="col sz-100 sz-dk-33 fixed-col-dk">				
+
+
+											    	    											  																																						
+						<!-- debug: RobapaginasDesktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_RobapaginasDesktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_RobapaginasDesktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				  								  																																						
+						<!-- debug: Roba2Desktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_Roba2Desktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_Roba2Desktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				  								  																																						
+						<!-- debug: Roba3Desktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_Roba3Desktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_Roba3Desktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				  								  																																						
+						<!-- debug: Roba4Desktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_Roba4Desktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_Roba4Desktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				  								  																																						
+						<!-- debug: Roba5Desktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_Roba5Desktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_Roba5Desktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				  								  																																						
+						<!-- debug: Roba6Desktop -->
+																																			<div class="ad_fixed_h fixed_RobapaginasDesktop fixed_sticky d-none-mb">
+								    <div class="adpos ad_RobapaginasDesktop postload" id="DETALLE_ad_Roba6Desktop" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('DETALLE_ad_Roba6Desktop');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    				    	<div class="cover"></div>
+				    								  </div>
+															
+	  				        								</aside>
+												<!-- NATIVE_ADS -->
+				<aside id="taboola" class="col sz-dk-67">
+					<!-- OUTBRAIN -->			
+<aside id="outbrain" class="col sz-dk-67">
+	<div class="OUTBRAIN" data-src="https://www.lavozdeasturias.es/noticia/opinion/2020/01/07/exagerar-puede-peligroso/00031578388657798848995.htm" data-widget-id="AR_3"></div>
+</aside>
+<script type="didomi/javascript" data-vendor="iab:164">
+function outbrainwdgt() {
+  var outbrain_js = document.createElement('script');
+  outbrain_js.type = "text/javascript";
+  outbrain_js.async = true;
+  outbrain_js.src = "https://widgets.outbrain.com/outbrain.js";
+  document.body.appendChild(outbrain_js);
+}
+function hideSticky(){
+  var element_to_hide;
+  if (mediaQueryMobile.matches)
+    element_to_hide = document.getElementById('2PUB_CABECEROad-megaMobile-id');
+  else 
+    element_to_hide = document.getElementById('ad-FaldonSuperiorDesktop')
+  
+  if (element_to_hide !== null)
+    element_to_hide.parentNode.removeChild(element_to_hide);  
+}
+var wdgt_outbrain = document.querySelector(".OUTBRAIN");
+var outbrain_options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0
+};
+var outbrain_io = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting) {    
+    outbrainwdgt();
+    hideSticky();    
+    outbrain_io.unobserve(wdgt_outbrain);
+  }
+}, outbrain_options);
+
+outbrain_io.observe(wdgt_outbrain);
+</script>
+				</aside>	
+							</div>
+			<!-- COMMENTS -->
+			<aside  class="sz-100">				
+				<hr class="spacer no-brd"/>
+<div id="comments" class="row" data-site="www.lavozdeasturias.es">						
+    <div class="col sz-100">
+    <h4>Comentarios</h4>
+    <hr class="spacer"/>    
+    <div class="contenedorSSO sz-t-s t-align-ctr pd-b-2 brd" data-sso-container-type="5" ></div>
+    
+    <hr class="spacer no-brd"/>
+    <noscript class="idle-load" data-id="comments-feed" data-content-id="00031578388657798848995" data-idle="1">
+    <div id="comments_feed"></div>
+    </noscript>
+    </div>
+</div>
+
+       				</aside>					
+		</article>
+		
+		<!-- NAVIGATION MENU -->
+<nav id="menu_site" style="content-visibility: auto">    
+	<div class="container">
+		<header class="row logo f-dir-row f-align-center header_sticky">
+			<div class="flex sz-25 f-dir-row f-align-center">
+				<button class="icon i-close no-brd filter_invert" aria-label="cerrar" onclick="switchBtn('menu_site');">
+					<span class="d-none">Cerrar</span>
+				</button>
+			</div>
+		</header>
+		<div class="row bg-gray-min pd-t-2 pd-b-2">
+			<div class="col sz-100">
+				<form class="flex f-dir-row">
+					<input id="texto" class="sz-dk-70 sz-60" type="text" placeholder="Texto a buscar..." required />
+					<button id="button_search" class="btn btn-primary sz-t-xxs sz-dk-30 sz-40 ico"
+						type="button">
+						<span>BUSCAR</span>
+					</button>
+				</form>
+			</div>
+		</div>
+		<hr class="spacer sp-dbl no-mg" />
+		<!-- Menu -->
+		<div class="row sz-t-s t-lh-2 f-dir-row f-dir-dk-column no-mg">
+			<dl class="col t-bld-min sz-50 sz-dk-25 p-rel pd-t-2 pd-b-2">
+				<dt class="t-bld">REGISTRADOS</dt>
+				<dd><a href="https://miperfil.lavozdeasturias.es/">Mi perfil</a></dd>
+				<dd><a href="https://miperfil.lavozdeasturias.es/newsletters.html">Newsletters</a></dd>
+				<dd><a href="https://miperfil.lavozdeasturias.es/alta.jsp" class="t-bld c-primary">Reg&iacute;strate</a></dd>
+
+				<dd><hr class="spacer"></dd>
+
+				<dt class="t-bld">CONTACTO</dt>				
+				<dd><a href="https://www.lavozdeasturias.es/contacto/">Contacta con nosotros</a></dd>
+
+				<dd><hr class="spacer"></dd>
+
+				<dt class="t-bld">PUBLICIDAD</dt>
+				<dd><a href="https://www.lavozdeasturias.es/tarifas/web.html">Tarifas publicitarias</a></dd>
+				<dd><a href="https://www.lavozdeasturias.es/contacto/web-contacto.html">Contacto</a>
+				
+				<dd><hr class="spacer"></dd>
+				
+				<dt class="t-bld">REDES SOCIALES</dt>
+				<div class="flex sz-100 f-dir-row f-justify-between">
+					<div class="row sz-100 f-dir-row">
+						<a href="https://www.facebook.com/lavozdeasturias" aria-label="S&iacute;guenos en Facebook" class="ico i-c-fb circle flex mg-r sz-sq-s sz-t-md">
+							<span class="d-none">Facebook</span>
+						</a>
+						<a href="https://twitter.com/lavozdeasturias" aria-label="S&iacute;guenos en Twitter" class="ico i-c-tw circle flex mg-r sz-sq-s sz-t-md">
+							<span class="d-none">Twitter</span>
+						</a>
+						<a href="https://www.instagram.com/lavozdeasturias100/" aria-label="Síquenos en Instagram" class="ico i-c-ins circle flex mg-r sz-sq-s sz-t-md">
+							<span class="d-none">Instagram</span>
+						</a>
+						<a href="https://es.linkedin.com/company/la-voz-de-asturias-sa" aria-label="Síquenos en linkedin" class="ico i-c-lkdn circle flex mg-r sz-sq-s sz-t-md">
+							<span class="d-none">Linkedin</span>
+						</a>
+						<a href="https://whatsapp.com/channel/0029VaCiM78I1rcipd3pjs1V" aria-label="Síquenos en WhatsApp" class="ico i-c-whp circle flex mg-r sz-sq-s sz-t-md">
+							<span class="d-none">WhatsApp</span>
+						</a>
+					</div>
+				</div>
+			</dl>
+
+			<dl class="col sz-50 sz-dk-25 brd-l mg-v-2">
+				<!--<dt class="sz-t-xxs t-bld">SECCIONES</dt>-->
+				<dd><a href="/">Portada</a></dd>
+				<dd><a href="/asturias/">Asturias</a></dd>
+				<dd><a href="/oviedo/">Oviedo</a></dd>
+				<dd><a href="/gijon/">Gij&oacute;n</a></dd>
+				<dd><a href="/aviles/">Avil&eacute;s</a></dd>
+				<dd><a href="/siero/">Siero</a></dd>
+				<dd><a href="/actualidad/">Actualidad</a></dd>
+				<dd><a href="/opinion/">Opini&oacute;n</a></dd>
+				<dd><a href="/cultura/">Cultura</a></dd>
+				<dd><a href="/emigracion/">Global Asturias</a></dd>
+				<dd><a href="/viral/">Viral</a></dd>
+				<dd><a href="/loquenotedebesperder/">Lo que no te debes perder</a></dd>
+				<dd><a href="/suplementos/">Especiales</a></dd>
+			</dl>
+
+			<hr class="spacer d-none-dk sp-dbl no-mg" />
+
+			<dl class="col sz-50 sz-dk-25 brd-l mg-v-2">
+				<dt class="sz-t-xxs t-bld">DEPORTES</dt>
+				<dd><a href="/deportes/">Portada deportes</a></dd>
+				<dd><a href="/sporting1905/">Sporting 1905</a></dd>
+				<dd><a href="/azulcarbayon/">Azul Carbay&oacute;n</a></dd>
+			</dl>
+
+			<dl class="col sz-50 sz-dk-25 brd-l mg-v-2">
+				<dt class="sz-t-xxs t-bld">VERTICALES</dt>
+				<dd><a href="/inasturias/">In Asturias</a></dd>
+				<dd><a href="/agora/">Agora</a></dd>
+				<dd><a href="/gastronomia/">Sabe Bien</a></dd>
+				<dd><a href="/generacion3r/">Generación 3R</a></dd>
+				<dd><a href="/lasaludsabebien/">La salud sabe bien</a></dd>
+				<dd><a href="/turismo/">Turismo Asturias</a></dd>
+			</dl>
+		</div>
+		<!-- // Menu // -->
+		<hr class="spacer sp-dbl" />
+	</div>
+</nav>
+		
+			<!-- SSO MODALS -->
+		<div class="contenedorSSO" data-sso-container-type="0"></div>
+		<!-- FOOTER -->
+<footer id="lvg_footer" class="container sz-t-xxs t-align-ctr">
+            
+            <hr class="spacer mg-t sp-dbl">             
+            
+            <p class="padding">
+                <span class="t-bld">&copy; EDICIONES PERIÓDICAS DEL NOROESTE, S.L.U.</span><br> 
+                <span>Calle Santiago de Compostela, 14-2º C, 33012, Oviedo (Asturias) Inscrita en el Registro Mercantil de Asturias en el Tomo 4055, Folio 225, Hoja nº AS-45.949. CIF: B-52.512.464.</span>
+            </p>
+            
+            <hr class="spacer">            
+            
+            <div class="padding-2">
+                <a href="https://www.lavozdeasturias.es/docs/aviso_legal.htm" rel="nofollow" class="t-bld pd-h" target="_blank" alt="aviso_legal">Aviso legal</a>
+                <a href="https://www.lavozdeasturias.es/docs/politica_de_privacidad.htm" class="t-bld pd-h" target="_blank" rel="nofollow" alt="politica_de_privacidad.htm" >Política de privacidad</a>
+                <a href="https://www.lavozdeasturias.es/docs/politica_de_cookies.htm" class="t-bld pd-h" target="_blank" rel="nofollow"  >Política de cookies</a>
+                <a href="https://www.lavozdeasturias.es/docs/condiciones_generales.htm" class="t-bld pd-h" target="_blank" rel="nofollow" alt="condiciones_generales">Condiciones generales</a>
+                <a href="javascript:Didomi.preferences.show()" class="t-bld pd-h">Configuración de cookies</a>
+            </div>
+
+</footer>
+		<script charset="utf-8" src="https://js.lavdg.com/assets/themes/lvda/js/master.min.grv-5bd78520fb9d27b3076e68c395a0aeeb.js"></script>		
+        <script async charset="utf-8" src="https://js.lavdg.com/assets/themes/lvda/js/consentads.min.grv-2f0ec3c3919103cef01a2a36ca324a6b.js"></script>          		
+        <script async charset="utf-8" src="https://js.lavdg.com/assets/themes/lvda/js/dt_news.grv-1883786585b034bd705a42933c5bb76f.js"></script> 
+
+								  																																						
+						<!-- debug: Sky_izq -->
+									 																										    <div class="sky_izq adSky skyLeft" id="skyscraper_izq-id" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('skyscraper_izq-id');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    															
+	  								  																																						
+						<!-- debug: Sky_der -->
+									 																										    <div class="sky_der adSky skyRight" id="skyscraper_der-id" data-ad="no">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {	
+				                googletag.cmd.push(function() {
+				                	googletag.display('skyscraper_der-id');
+				                					                });
+				            }
+				        </script>    
+				    </div>
+				    															
+	  								  																																						
+						<!-- debug: FaldonSuperiorDesktopSticky -->
+									 																	<!--sticky -->
+								<div id="ad_faldon_desktop" class="adpos adSticky stickyDesktop hidden-mb">
+								    <div id="ad-FaldonSuperiorDesktop">
+				        <script type="didomi/javascript">
+				            if (mediaQueryDesktop.matches) {
+				                googletag.cmd.push(function() {	googletag.display('ad-FaldonSuperiorDesktop'); });
+				            }
+				        </script>   
+				    </div>                    
+									    	<button class="icon i-close" aria-label="cerrar" onclick="switchBtn('ad_faldon_desktop');"><span class="d-none">Cerrar</span></button>
+				    								</div>
+											
+	  							
+							
+    </body>
+</html>
+
+
+
