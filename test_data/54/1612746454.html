@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <style>
+        /* open-sans-300 - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.svg#OpenSans) format('svg');
+        }
+        /* open-sans-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.svg#OpenSans) format('svg');
+        }
+        /* open-sans-500 - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.svg#OpenSans) format('svg');
+        }
+        /* open-sans-600 - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.svg#OpenSans) format('svg');
+        }
+        /* open-sans-700 - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.svg#OpenSans) format('svg');
+        }
+        /* open-sans-800 - latin-ext_latin_cyrillic-ext_cyrillic */
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.eot);
+            src: local(''),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.eot?#iefix) format('embedded-opentype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.woff2) format('woff2'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.woff) format('woff'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.ttf) format('truetype'),
+            url(https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.svg#OpenSans) format('svg');
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+        <!-- Open Sans -->
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-300.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/fonts/open-sans/open-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="alternate" hreflang="uk" href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" />
+<link rel="alternate" hreflang="x-default" href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Карантин. Что происходит на пунктах пропуска Донбасса</title>
+	<meta name="description" content="Карантин. Что происходит на пунктах пропуска Донбасса - Реальна газета" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" />
+	<meta property="og:locale" content="uk_UA" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Карантин. Что происходит на пунктах пропуска Донбасса" />
+	<meta property="og:description" content="Карантин. Что происходит на пунктах пропуска Донбасса - Реальна газета" />
+	<meta property="og:url" content="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" />
+	<meta property="og:site_name" content="Реальна газета" />
+	<meta property="article:publisher" content="https://fb.me/realnajagazeta" />
+	<meta property="article:published_time" content="2020-05-21T08:48:41+00:00" />
+	<meta property="article:modified_time" content="2023-05-05T17:57:07+00:00" />
+	<meta property="og:image" content="https://realgazeta.com.ua/wp-content/uploads/2020/05/Обложка-что-происходит-на-пунктах-пропуска.png" />
+	<meta property="og:image:width" content="1194" />
+	<meta property="og:image:height" content="641" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@realnagazeta" />
+	<meta name="twitter:site" content="@realnagazeta" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Реальная газета">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="0 хвилин">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://realgazeta.com.ua/#organization","name":"\u0420\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0430\u0437\u0435\u0442\u0430","url":"https://realgazeta.com.ua/","sameAs":["https://fb.me/realnajagazeta","https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw","https://twitter.com/realnagazeta"],"logo":{"@type":"ImageObject","@id":"https://realgazeta.com.ua/#logo","inLanguage":"uk","url":"","caption":"\u0420\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0430\u0437\u0435\u0442\u0430"},"image":{"@id":"https://realgazeta.com.ua/#logo"}},{"@type":"WebSite","@id":"https://realgazeta.com.ua/#website","url":"https://realgazeta.com.ua/","name":"\u0420\u0435\u0430\u043b\u044c\u043d\u0430 \u0433\u0430\u0437\u0435\u0442\u0430","description":"\u0420\u043e\u0437\u0441\u043b\u0456\u0434\u0443\u0432\u0430\u043d\u043d\u044f \u0456 \u0430\u043d\u0430\u043b\u0456\u0442\u0438\u043a\u0430 \u043d\u0430 \u0441\u0445\u043e\u0434\u0456 \u0423\u043a\u0440\u0430\u0457\u043d\u0438","publisher":{"@id":"https://realgazeta.com.ua/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://realgazeta.com.ua/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"uk"},{"@type":"ImageObject","@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#primaryimage","inLanguage":"uk","url":"https://realgazeta.com.ua/wp-content/uploads/2020/05/\u041e\u0431\u043b\u043e\u0436\u043a\u0430-\u0447\u0442\u043e-\u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442-\u043d\u0430-\u043f\u0443\u043d\u043a\u0442\u0430\u0445-\u043f\u0440\u043e\u043f\u0443\u0441\u043a\u0430.png","width":1194,"height":641},{"@type":"WebPage","@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#webpage","url":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/","name":"\u041a\u0430\u0440\u0430\u043d\u0442\u0438\u043d. \u0427\u0442\u043e \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u0443\u043d\u043a\u0442\u0430\u0445 \u043f\u0440\u043e\u043f\u0443\u0441\u043a\u0430 \u0414\u043e\u043d\u0431\u0430\u0441\u0441\u0430","isPartOf":{"@id":"https://realgazeta.com.ua/#website"},"primaryImageOfPage":{"@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#primaryimage"},"datePublished":"2020-05-21T08:48:41+00:00","dateModified":"2023-05-05T17:57:07+00:00","description":"\u041a\u0430\u0440\u0430\u043d\u0442\u0438\u043d. \u0427\u0442\u043e \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u0443\u043d\u043a\u0442\u0430\u0445 \u043f\u0440\u043e\u043f\u0443\u0441\u043a\u0430 \u0414\u043e\u043d\u0431\u0430\u0441\u0441\u0430 - \u0420\u0435\u0430\u043b\u044c\u043d\u0430 \u0433\u0430\u0437\u0435\u0442\u0430","inLanguage":"uk","potentialAction":[{"@type":"ReadAction","target":["https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/"]}]},{"@type":"Article","@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#article","isPartOf":{"@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#webpage"},"author":{"@id":"https://realgazeta.com.ua/#/schema/person/76d62101bd45e78ee6a8d29a22245eb9"},"headline":"\u041a\u0430\u0440\u0430\u043d\u0442\u0438\u043d. \u0427\u0442\u043e \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442 \u043d\u0430 \u043f\u0443\u043d\u043a\u0442\u0430\u0445 \u043f\u0440\u043e\u043f\u0443\u0441\u043a\u0430 \u0414\u043e\u043d\u0431\u0430\u0441\u0441\u0430","datePublished":"2020-05-21T08:48:41+00:00","dateModified":"2023-05-05T17:57:07+00:00","mainEntityOfPage":{"@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#webpage"},"commentCount":0,"publisher":{"@id":"https://realgazeta.com.ua/#organization"},"image":{"@id":"https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#primaryimage"},"keywords":"\u043a\u0430\u0440\u0430\u043d\u0442\u0438\u043d,\u041a\u041f\u0412\u0412 \u0421\u0442\u0430\u043d\u0438\u0446\u0430 \u041b\u0443\u0433\u0430\u043d\u0441\u043a\u0430\u044f,\u041b\u041d\u0420,\u041b\u0443\u0433\u0430\u043d\u0441\u043a,\u041f\u0435\u0440\u0435\u0441\u0435\u043b\u0435\u043d\u0446\u0456,\u043f\u0440\u0430\u0432\u0438\u043b\u0430 \u043f\u0435\u0440\u0435\u0441\u0435\u0447\u0435\u043d\u0438\u044f \u041a\u041f\u0412\u0412,\u0420\u0435\u0437\u043d\u0438\u043a\u043e\u0432","articleSection":"\u041d\u043e\u0432\u0438\u043d\u0438,\u041f\u043e\u043b\u0456\u0442\u0438\u043a\u0430,\u0421\u0442\u0430\u0442\u0442\u0456,\u0421\u0443\u0441\u043f\u0456\u043b\u044c\u0441\u0442\u0432\u043e","inLanguage":"uk","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/#respond"]}]},{"@type":"Person","@id":"https://realgazeta.com.ua/#/schema/person/76d62101bd45e78ee6a8d29a22245eb9","name":"\u0420\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0430\u0437\u0435\u0442\u0430","image":{"@type":"ImageObject","@id":"https://realgazeta.com.ua/#personlogo","inLanguage":"uk","url":"https://realgazeta.com.ua/wp-content/uploads/2020/12/cropped-logo-1-1.png","caption":"\u0420\u0435\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0430\u0437\u0435\u0442\u0430"},"sameAs":["https://realgazeta.com.ua"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Реальна газета &raquo; стрічка" href="https://realgazeta.com.ua/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Реальна газета &raquo; Канал коментарів" href="https://realgazeta.com.ua/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Реальна газета &raquo; Карантин. Что происходит на пунктах пропуска Донбасса Канал коментарів" href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/realgazeta.com.ua\/wp-includes\/js\/wp-emoji.js?ver=5.6.14","twemoji":"https:\/\/realgazeta.com.ua\/wp-includes\/js\/twemoji.js?ver=5.6.14"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * So easy, even a baby could do it!
+				 *
+				 *  To test for Emoji 13 support, try to render a new emoji: Man Feeding Baby.
+				 *
+				 * The Man Feeding Baby emoji is a ZWJ sequence combining 👨 Man, a Zero Width Joiner and 🍼 Baby Bottle.
+				 *
+				 * 0xD83D, 0xDC68 == Man emoji.
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the two code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0xD83C, 0xDF7C == Baby Bottle.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0x200D, 0xD83C, 0xDF7C],
+					[0xD83D, 0xDC68, 0x200B, 0xD83C, 0xDF7C]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://realgazeta.com.ua/wp-includes/css/dist/block-library/style.css?ver=5.6.14' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://realgazeta.com.ua/wp-includes/css/dashicons.css?ver=5.6.14' type='text/css' media='all' />
+<link rel='stylesheet' id='post-views-counter-frontend-css'  href='https://realgazeta.com.ua/wp-content/plugins/post-views-counter/css/frontend.css?ver=1.3.12' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css'  href='//realgazeta.com.ua/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1' type='text/css' media='all' />
+<style id='wpml-legacy-horizontal-list-0-inline-css' type='text/css'>
+.wpml-ls-statics-shortcode_actions a {color:#777777;}.wpml-ls-statics-shortcode_actions a:hover,.wpml-ls-statics-shortcode_actions a:focus {color:#ff151e;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {color:#ff151e;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#ff151e;}
+</style>
+<link rel='stylesheet' id='jquery-meanmenu-css'  href='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/css/meanmenu.css?ver=2.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-slick-css'  href='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/css/slick.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mega-magazine-style-css'  href='https://realgazeta.com.ua/wp-content/themes/mega-magazine/style.css?ver=1.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mega-magazine-child-css'  href='https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/css/mmc-style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mmc-single-post-css'  href='https://realgazeta.com.ua/wp-content/themes/mega-magazine-child/assets/css/single-post.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://realgazeta.com.ua/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mega-magazine-font-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%7COpen+Sans%3A400%2C400i%2C600%2C600i%2C700%2C700i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='slb_core-css'  href='https://realgazeta.com.ua/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.8.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-includes/js/jquery/jquery.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-includes/js/jquery/jquery-migrate.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://realgazeta.com.ua/wp-json/" /><link rel="alternate" type="application/json" href="https://realgazeta.com.ua/wp-json/wp/v2/posts/60379" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://realgazeta.com.ua/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://realgazeta.com.ua/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6.14" />
+<link rel='shortlink' href='https://realgazeta.com.ua/?p=60379' />
+<link rel="alternate" type="application/json+oembed" href="https://realgazeta.com.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frealgazeta.com.ua%2Fkak-rabotayet-stanitsa-luganskaya-21-05%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://realgazeta.com.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frealgazeta.com.ua%2Fkak-rabotayet-stanitsa-luganskaya-21-05%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.5.12 stt:45,54;" />
+<style type='text/css'> .ae_data .elementor-editor-element-setting {
+            display:none !important;
+            }
+            </style>
+ <!-- OneAll.com / Social Login for WordPress / v5.7 -->
+<script data-cfasync="false" type="text/javascript">
+ (function() {
+  var oa = document.createElement('script'); oa.type = 'text/javascript';
+  oa.async = true; oa.src = 'https://realgazetacomua.api.oneall.com/socialize/library.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oa, s);
+ })();
+</script>
+<style>.oneall_social_login + p.comment-notes{margin-top: 10px !important;}#login #loginform .oneall_social_login{background-color: rgba(0, 0, 0, 0.04);padding: 10px 10px 0 10px;margin-bottom: 10px;border: 1px solid rgba(0, 0, 0, 0.06);border-radius: 4px;}</style>		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<link rel="pingback" href="https://realgazeta.com.ua/xmlrpc.php">
+        <style type="text/css">
+	        	            	.mega-cat-2 .section-title .widget-title,
+	            	.mega-cat-2 .section-title .widget-title a {
+	            	    color: #ff151e;
+	            	}
+
+	            	.mega-cat-2 .section-title {
+	            	    border-bottom-color: #ff151e;
+	            	}
+
+	            	.mega-cat-2 .news-text-wrap h2 a:hover {
+	            	    color: #ff151e;
+	            	} 
+	            	    	</style>
+    	               
+            
+        <style type="text/css">
+            a,
+            a:visited,
+            a:hover,
+            a:focus,
+            a:active,
+            .site-title a,
+            button:hover,
+            .comment-reply-link:hover,
+            a.button:hover,
+            input[type="button"]:hover,
+            input[type="reset"]:hover,
+            input[type="submit"]:hover,
+            .home.page .header-collapse ul li a:hover,
+            .entry-meta > span::before,
+            .entry-footer > span::before,
+            .single-post-meta > span::before,
+            a.comment-reply-link:hover,
+            .breaking-news-wrap ul.slick-slider .slick-prev:before,
+            .breaking-news-wrap ul.slick-slider .slick-next:before,
+            .post .content-wrap .entry-header h2.entry-title a,
+            .search-results #primary article  h2.entry-title a,
+            .post .content-wrap a:hover,
+            .search-results #primary article .content-wrap a:hover,
+            .post .content-wrap .posted-date a:hover,
+            .posted-date a:hover,
+            .post .content-wrap .cat-links a:hover,
+            .pagination .nav-links .page-numbers.current,
+            .pagination .nav-links .page-numbers:hover,
+            .sidebar .news-item .news-text-wrap h2 a:hover, 
+            .sidebar .news-item .news-text-wrap h3 a:hover, 
+            .news-item.layout-two .news-text-wrap h3 a:hover,
+            .page-title h2 span,
+            .post-navigation  .nav-previous:hover a,
+            .post-navigation  .nav-next:hover a,
+            .post-navigation  .nav-previous:hover:before,
+            .post-navigation  .nav-next:hover:after,
+            .mega-about-author-wrap .author-content-wrap a.authors-more-posts,
+            .mega-related-posts-wrap.carousel-enabled .news-item .news-text-wrap h2 a:hover, 
+            .mega-related-posts-wrap.carousel-enabled .news-item .news-text-wrap h3 a:hover{
+                color: #ff151e;
+            }
+
+            button,
+            .comment-reply-link,
+             a.button, input[type="button"],
+             input[type="reset"],
+             input[type="submit"],
+             .comment-navigation .nav-previous,
+             .posts-navigation .nav-previous,
+             .comment-navigation .nav-next,
+             .posts-navigation .nav-next,
+             #infinite-handle span,
+             .nav-links .page-numbers.current,
+             .nav-links a.page-numbers:hover,
+             .comment-reply-link,
+             .home-icon.home-active a,
+             .main-navigation li.current-menu-item,
+             .search-box form button[type="submit"],
+             .pagination .nav-links .page-numbers,
+             .widget_search button[type="submit"],
+             .search-no-results .no-results.not-found form.search-form input[type="submit"],
+             .search-no-results .no-results.not-found form.search-form button[type="submit"],
+             .search-no-results .no-results.not-found  form.search-form input[type="submit"]:hover,
+             .search-no-results .no-results.not-found form.search-form button[type="submit"]:hover,
+             .error-404.not-found  form.search-form input[type="submit"],
+             .error-404.not-found  form.search-form button[type="submit"],
+             .error-404.not-found  form.search-form input[type="submit"]:hover,
+             .error-404.not-found  form.search-form button[type="submit"]:hover,
+             .mean-container .mean-nav ul li a,
+             .gotop {
+                background: #ff151e;
+            }
+
+            button,
+            .comment-reply-link,
+             a.button, input[type="button"],
+             input[type="reset"],
+             input[type="submit"],
+             button:hover,
+             .comment-reply-link,
+             a.button:hover,
+             input[type="button"]:hover,
+             input[type="reset"]:hover,
+             input[type="submit"]:hover,
+             .nav-links .page-numbers.current,
+             .nav-links a.page-numbers:hover,
+             .pagination .nav-links .page-numbers {
+                border-color: #ff151e;
+            }
+
+            blockquote {
+                border-left-color:#ff151e;
+            }
+
+            .main-navigation ul ul {
+                border-top-color: #ff151e;
+            }
+
+            .main-navigation-holder{
+                border-bottom-color: #ff151e;
+            }
+
+        </style>
+
+        <link rel="icon" href="https://realgazeta.com.ua/wp-content/uploads/2023/10/cropped-LOGO-mini-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://realgazeta.com.ua/wp-content/uploads/2023/10/cropped-LOGO-mini-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://realgazeta.com.ua/wp-content/uploads/2023/10/cropped-LOGO-mini-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://realgazeta.com.ua/wp-content/uploads/2023/10/cropped-LOGO-mini-1-270x270.jpg" />
+		<style type="text/css" id="wp-custom-css">
+			p, li {
+    font-size: 16px;
+}
+.post-new.post{
+	margin-bottom: 0;
+}		</style>
+		
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE7P3K7Q3C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CE7P3K7Q3C');
+    </script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64325627-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-64325627-1');
+    </script>
+	
+	<script type='text/javascript'>
+    (function() {
+        var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+        _sf_async_config.uid = 67196;
+        _sf_async_config.domain = 'realgazeta.com.ua';
+        _sf_async_config.useCanonical = true;
+        _sf_async_config.useCanonicalDomain = true;
+        _sf_async_config.flickerControl = false;
+        _sf_async_config.sections = 'no section';
+        _sf_async_config.authors = 'no author';
+        function loadChartbeat() {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('script')[0];
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = '//static.chartbeat.com/js/chartbeat.js';
+            n.parentNode.insertBefore(e, n);
+        }
+        loadChartbeat();
+     })();
+     </script>
+</head>
+
+<body class="post-template-default single single-post postid-60379 single-format-standard wp-custom-logo sticky-sidebar-enabled layout-right-sidebar elementor-default elementor-kit-64382">
+<!-- (C)2000-2023 Gemius SA - gemiusPrism  / realgazeta.com.ua/Default section -->
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var pp_gemius_identifier = 'bIDldJhkibo1GLTE2.fDspdQzSXsoOc4jDwlFT_bZxP.q7';
+    // lines below shouldn't be edited
+    function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+    gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('gemius_init'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event'); gemius_pending('pp_gemius_init');
+    (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+        gt.setAttribute('defer','defer'); gt.src=l+'://gaua.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+    //--><!]]>
+</script>
+<div id="page" class="site">
+		<header id="masthead" class="site-header advertisement-active" role="banner">
+		
+			<div class="top-bar">
+	            <div class="container">
+	                <div class="top-bar-inner">
+	                	
+	                		<span class="top-bar-date">Субота, 17 Травня, 2025</span>
+
+	                		                        <div class="top-bar-language">
+                            
+<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
+	<ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
+				<a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" class="wpml-ls-link">
+                    <span class="wpml-ls-native">UA</span></a>
+			</li><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+				<a href="https://realgazeta.com.ua/ru/" class="wpml-ls-link">
+                    <span class="wpml-ls-display">RU (країна терорист)</span></a>
+			</li></ul>
+</div>
+                        </div>
+                        <div class="widget social-widgets">            <ul>
+              
+                        <li><a target="_blank" href="https://facebook.com/realnajagazeta">https://facebook.com/realnajagazeta</a></li>
+
+                    
+                        <li><a target="_blank" href="https://twitter.com/realnagazeta">https://twitter.com/realnagazeta</a></li>
+
+                    
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw">https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw</a></li>
+
+                                </ul> 
+
+            </div>
+                        <div class="search-holder top-bar-search">
+                            <a href="#" class="search-btn">Пошук ...<i class="fa fa-search" aria-hidden="true"></i></a>
+
+                            <div class="search-box" style="display: none;">
+                                
+<form role="search" method="get" class="search-form" action="https://realgazeta.com.ua/">
+	
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Пошук ..." value="" name="s" />
+	
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>                            </div>
+                        </div>
+
+	                </div><!-- .top-bar-inner -->   
+	            </div>
+			</div>
+			
+		<div class="mid-header">
+			<div class="container">
+				<div class="mid-header-inner">
+					<div class="site-branding">
+		              	                            <div class="mid-header-logo">
+                                <a href="https://realgazeta.com.ua/" class="custom-logo-link" rel="home"><img width="301" height="150"   alt="" data-src="https://realgazeta.com.ua/wp-content/uploads/2023/10/cropped-LOGO-Realna-Hazeta-sayt.jpg" class="custom-logo lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>                            </div>
+                        <div class="mid-header-box">
+                            
+                                <h3 class="site-description">Розслідування і аналітика на сході України</h3>
+
+                                                        <div id="main-nav-mid" class="clear-fix">
+                                <nav id="site-navigation-mid" class="main-navigation" role="navigation">
+                                    
+                                        <div class="home-icon">
+
+                                            <a href="https://realgazeta.com.ua/"><i class="fa fa-home"></i></a>
+
+                                        </div>
+
+                                        
+                                    <div class="wrap-menu-content">
+                                        <div class="menu-holovna-container"><ul id="primary-menu" class="menu"><li id="menu-item-3147" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3147"><a href="https://realgazeta.com.ua/category/news/">Новини</a></li>
+<li id="menu-item-136832" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136832"><a href="https://realgazeta.com.ua/tag/rozsliduvannia/">Розслідування</a></li>
+<li id="menu-item-136830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136830"><a href="https://realgazeta.com.ua/tag/analityka/">Аналітика</a></li>
+<li id="menu-item-136833" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136833"><a href="https://realgazeta.com.ua/tag/Antyfeik/">Антифейк</a></li>
+<li id="menu-item-136829" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136829"><a href="https://realgazeta.com.ua/tag/pereselentsi/">Переселенці</a></li>
+<li id="menu-item-18564" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18564"><a href="https://realgazeta.com.ua/category/video/">Відео</a></li>
+<li id="menu-item-64349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64349"><a href="https://realgazeta.com.ua/o-nas/">Про редакцію</a></li>
+</ul></div>                                    </div><!-- .wrap-menu-content -->
+                                </nav>
+                            </div> <!-- #main-nav -->
+                        </div>
+		              		
+		              					   </div><!-- .site-branding -->
+
+					
+						<div class="header-advertisement">
+
+							<div id="text-6" class="widget widget_text">			<div class="textwidget"><p><strong><a href="https://send.monobank.ua/jar/51YriNS1yH">ПІДТРИМАТИ РЕДАКЦІЮ</a></strong></p>
+</div>
+		</div>
+						</div><!-- .header-advertisement -->
+
+									    </div>
+			</div>
+		</div>
+        <div class="main-navigation-holder mean-container">
+            <div class="container">
+                <div id="main-nav" class="clear-fix">
+                    <nav id="site-navigation" class="main-navigation" role="navigation">
+                        
+                            <div class="home-icon">
+
+                                <a href="https://realgazeta.com.ua/"><i class="fa fa-home"></i></a>
+
+                            </div>
+
+                            
+                        <div class="wrap-menu-content">
+                            <div class="menu-holovna-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3147"><a href="https://realgazeta.com.ua/category/news/">Новини</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136832"><a href="https://realgazeta.com.ua/tag/rozsliduvannia/">Розслідування</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136830"><a href="https://realgazeta.com.ua/tag/analityka/">Аналітика</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136833"><a href="https://realgazeta.com.ua/tag/Antyfeik/">Антифейк</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136829"><a href="https://realgazeta.com.ua/tag/pereselentsi/">Переселенці</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18564"><a href="https://realgazeta.com.ua/category/video/">Відео</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64349"><a href="https://realgazeta.com.ua/o-nas/">Про редакцію</a></li>
+</ul></div>                        </div><!-- .wrap-menu-content -->
+                    </nav>
+                </div> <!-- #main-nav -->
+
+                
+                    <div class="top-widgets-wrap">
+
+                                                    <div class="search-holder">
+                                <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+
+                                <div class="search-box" style="display: none;">
+                                    
+<form role="search" method="get" class="search-form" action="https://realgazeta.com.ua/">
+	
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Пошук ..." value="" name="s" />
+	
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>                                </div>
+                            </div>
+                            
+                    </div><!-- .social-widgets -->
+                    
+            </div><!-- .container -->
+        </div><!-- .main-navigation-holder -->
+	</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content">
+		<div class="container">
+			<div class="inner-wrapper">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-60379" class="post-60379 post type-post status-publish format-standard has-post-thumbnail hentry category-news category-politics category-articles category-society tag-karantyn tag-kpvv-stanytsa-luhanskaia tag-lnr tag-luhansk tag-pereselentsi tag-pravyla-peresechenyia-kpvv tag-reznykov">
+		                            <div class="entry-img">
+                    <a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/"><div class="bialty-container"><img width="1194" height="641"   alt="&#1050;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;. &#1063;&#1090;&#1086; &#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090; &#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1072;" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;.png 1194w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-300x161.png 300w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-768x412.png 768w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-1024x550.png 1024w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2020/05/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-%D1%87%D1%82%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82-%D0%BD%D0%B0-%D0%BF%D1%83%D0%BD%D0%BA%D1%82%D0%B0%D1%85-%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%81%D0%BA%D0%B0.png" data-sizes="(max-width: 1194px) 100vw, 1194px" class="attachment-full size-full wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>
+                </div>
+                	<div class="content-wrap">
+		<header class="entry-header">
+			
+				<span class="posted-date"><span class="posted-on"><a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/" rel="bookmark"><time class="entry-date published" datetime="2020-05-21T10:48:41+03:00">21.05.2020</time><time class="updated" datetime="2023-05-05T19:57:07+03:00">05.05.2023</time></a></span></span>
+				<h1 class="entry-title">Карантин. Что происходит на пунктах пропуска Донбасса</h1>		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<div class="bialty-container"><h3><a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/%d0%be%d0%b1%d0%bb%d0%be%d0%b6%d0%ba%d0%b0-%d1%87%d1%82%d0%be-%d0%bf%d1%80%d0%be%d0%b8%d1%81%d1%85%d0%be%d0%b4%d0%b8%d1%82-%d0%bd%d0%b0-%d0%bf%d1%83%d0%bd%d0%ba%d1%82%d0%b0%d1%85-%d0%bf%d1%80%d0%be/" rel="attachment wp-att-62408"><img   alt="&#1050;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;. &#1063;&#1090;&#1086; &#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090; &#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1072;" width="1194" height="641" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;.png 1194w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-300x161.png 300w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-768x412.png 768w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1054;&#1073;&#1083;&#1086;&#1078;&#1082;&#1072;-&#1095;&#1090;&#1086;-&#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;-&#1085;&#1072;-&#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;-1024x550.png 1024w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2020/05/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0-%D1%87%D1%82%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D1%82-%D0%BD%D0%B0-%D0%BF%D1%83%D0%BD%D0%BA%D1%82%D0%B0%D1%85-%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%81%D0%BA%D0%B0.png" data-sizes="(max-width: 1194px) 100vw, 1194px" class="aligncenter size-full wp-image-62408 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>&#1059;&#1078;&#1077; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077; &#1076;&#1074;&#1091;&#1093; &#1084;&#1077;&#1089;&#1103;&#1094;&#1077;&#1074; &#1050;&#1055;&#1042;&#1042; &#1085;&#1072; &#1083;&#1080;&#1085;&#1080;&#1080; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1079;&#1072;&#1082;&#1088;&#1099;&#1090;&#1099;. &#1045;&#1089;&#1083;&#1080; &#1088;&#1072;&#1085;&#1100;&#1096;&#1077; &#1077;&#1078;&#1077;&#1076;&#1085;&#1077;&#1074;&#1085;&#1086; &#1080;&#1093; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1082;&#1072;&#1083;&#1080; &#1090;&#1099;&#1089;&#1103;&#1095;&#1080; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1094;&#1077;&#1074;, &#1090;&#1086; &#1090;&#1077;&#1087;&#1077;&#1088;&#1100; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1077; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1076;&#1083;&#1103; &#1085;&#1077;&#1089;&#1082;&#1086;&#1083;&#1100;&#1082;&#1080;&#1093; &#1076;&#1077;&#1089;&#1103;&#1090;&#1082;&#1086;&#1074; &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &ndash; &#1091;&#1078;&#1077; &#1089;&#1086;&#1073;&#1099;&#1090;&#1080;&#1077;. &#1058;&#1077;&#1084; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1077;&#1084;, &#1083;&#1102;&#1076;&#1077;&#1081;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1079;&#1072;&#1089;&#1090;&#1088;&#1103;&#1083;&#1080; &#1085;&#1072; &#1085;&#1077;&#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080; &#1080; &#1083;&#1102;&#1076;&#1077;&#1081;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1085;&#1077; &#1084;&#1086;&#1075;&#1091;&#1090; &#1087;&#1086;&#1087;&#1072;&#1089;&#1090;&#1100; &#1074; &#1054;&#1056;&#1044;&#1051;&#1054; &#1082; &#1088;&#1086;&#1076;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1080;&#1082;&#1072;&#1084;, &#1074;&#1089;&#1077;&#1088;&#1100;&#1077;&#1079; &#1088;&#1072;&#1089;&#1089;&#1090;&#1088;&#1072;&#1080;&#1074;&#1072;&#1077;&#1090; &#1086;&#1090;&#1089;&#1091;&#1090;&#1089;&#1090;&#1074;&#1080;&#1077; &#1086;&#1090;&#1074;&#1077;&#1090;&#1086;&#1074; &#1085;&#1072; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1099;, &#1082;&#1086;&#1075;&#1076;&#1072; &#1093;&#1086;&#1090;&#1103; &#1073;&#1099; &#1078;&#1076;&#1072;&#1090;&#1100; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1087;&#1091;&#1085;&#1082;&#1090;&#1086;&#1074; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;.</h3>
+<h2>&#1057; &#1087;&#1086;&#1089;&#1083;&#1072;&#1073;&#1083;&#1077;&#1085;&#1080;&#1077;&#1084; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1050;&#1055;&#1042;&#1042; &#1085;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1077; &#1085;&#1077; &#1086;&#1090;&#1082;&#1088;&#1086;&#1102;&#1090;</h2>
+<p>&#1057; 11 &#1084;&#1072;&#1103; &#1074; &#1059;&#1082;&#1088;&#1072;&#1080;&#1085;&#1077; &#1085;&#1072;&#1095;&#1072;&#1083;&#1080; &#1087;&#1086;&#1089;&#1083;&#1072;&#1073;&#1083;&#1103;&#1090;&#1100; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;. &#1054;&#1076;&#1085;&#1072;&#1082;&#1086; &#1087;&#1086;&#1089;&#1083;&#1072;&#1073;&#1083;&#1077;&#1085;&#1080;&#1103; &#1087;&#1091;&#1085;&#1082;&#1090;&#1086;&#1074; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1087;&#1086;&#1082;&#1072; &#1085;&#1077; &#1082;&#1072;&#1089;&#1072;&#1102;&#1090;&#1089;&#1103;. &#1042; &#1043;&#1086;&#1089;&#1091;&#1076;&#1072;&#1088;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;&#1081; &#1087;&#1086;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1085;&#1086;&#1081; &#1089;&#1083;&#1091;&#1078;&#1073;&#1077; &#1059;&#1082;&#1088;&#1072;&#1080;&#1085;&#1099; <a href="https://dpsu.gov.ua/ua/news/obmezhennya-na-linii-rozmezhuvannya-okupanti-zavertayut-lyudey-navit-za-osoblivih-obstavin/">&#1075;&#1086;&#1074;&#1086;&#1088;&#1103;&#1090;</a>, &#1095;&#1090;&#1086; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077; &#1086;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1085;&#1072; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077; &#1083;&#1080;&#1085;&#1080;&#1080; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1074; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1077; &#1074;&#1089;&#1077; &#1088;&#1072;&#1074;&#1085;&#1086; &#1086;&#1089;&#1090;&#1072;&#1085;&#1091;&#1090;&#1089;&#1103; &#1074; &#1089;&#1080;&#1083;&#1077; &#1076;&#1086; &#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1087;&#1088;&#1080;&#1082;&#1072;&#1079;&#1072; &#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1091;&#1102;&#1097;&#1077;&#1075;&#1086; &#1054;&#1054;&#1057;.</p>
+<p>&#1055;&#1088;&#1080;&#1073;&#1083;&#1080;&#1079;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1086;&#1090;&#1074;&#1077;&#1090; &#1085;&#1072; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089; &ldquo;&#1082;&#1086;&#1075;&#1076;&#1072;&rdquo; &#1076;&#1072;&#1077;&#1090; &#1079;&#1072;&#1084;&#1077;&#1089;&#1090;&#1080;&#1090;&#1077;&#1083;&#1100; &#1084;&#1080;&#1085;&#1080;&#1089;&#1090;&#1088;&#1072; &#1079;&#1076;&#1088;&#1072;&#1074;&#1086;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085;&#1080;&#1103;, &#1075;&#1083;&#1072;&#1074;&#1085;&#1099;&#1081; &#1075;&#1086;&#1089;&#1091;&#1076;&#1072;&#1088;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081; &#1089;&#1072;&#1085;&#1080;&#1090;&#1072;&#1088;&#1085;&#1099;&#1081; &#1074;&#1088;&#1072;&#1095; &#1042;&#1080;&#1082;&#1090;&#1086;&#1088; &#1051;&#1103;&#1096;&#1082;&#1086;.</p>
+<p><em>&ldquo;&#1052;&#1099; &#1073;&#1091;&#1076;&#1077;&#1084; &#1088;&#1072;&#1089;&#1089;&#1084;&#1072;&#1090;&#1088;&#1080;&#1074;&#1072;&#1090;&#1100; &#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1100; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1050;&#1055;&#1042;&#1042; &#1074;&#1084;&#1077;&#1089;&#1090;&#1077; &#1089; &#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1100;&#1102; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1076;&#1088;&#1091;&#1075;&#1080;&#1093; &#1087;&#1091;&#1085;&#1082;&#1090;&#1086;&#1074; &#1085;&#1072; &#1075;&#1088;&#1072;&#1085;&#1080;&#1094;&#1077;. &#1050;&#1072;&#1082; &#1075;&#1088;&#1072;&#1085;&#1080;&#1094;&#1072;, &#1090;&#1072;&#1082; &#1080; &#1087;&#1091;&#1085;&#1082;&#1090;&#1099; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1077;&#1085;&#1080;&#1103; &#1084;&#1086;&#1075;&#1091;&#1090; &#1088;&#1072;&#1089;&#1089;&#1084;&#1072;&#1090;&#1088;&#1080;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103; &#1082;&#1086;&#1084;&#1087;&#1083;&#1077;&#1082;&#1089;&#1085;&#1086;, &#1082;&#1086;&#1075;&#1076;&#1072; &#1073;&#1091;&#1076;&#1077;&#1090; &#1089;&#1090;&#1072;&#1073;&#1080;&#1083;&#1080;&#1079;&#1072;&#1094;&#1080;&#1103; &#1101;&#1087;&#1080;&#1076;&#1089;&#1080;&#1090;&#1091;&#1072;&#1094;&#1080;&#1080; &#1082;&#1072;&#1082; &#1074; &#1045;&#1074;&#1088;&#1086;&#1087;&#1077;&#1081;&#1089;&#1082;&#1086;&#1084; &#1088;&#1077;&#1075;&#1080;&#1086;&#1085;&#1077; &#1080; &#1074; &#1076;&#1088;&#1091;&#1075;&#1080;&#1093; &#1089;&#1090;&#1088;&#1072;&#1085;&#1072;&#1093;-&#1089;&#1086;&#1089;&#1077;&#1076;&#1103;&#1093;, &#1090;&#1072;&#1082; &#1080; &#1085;&#1072; &#1086;&#1082;&#1082;&#1091;&#1087;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1099;&#1093; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1103;&#1093;&rdquo;,</em> &ndash; &#1079;&#1072;&#1103;&#1074;&#1080;&#1083; &#1086;&#1085; &#1074; &#1080;&#1085;&#1090;&#1077;&#1088;&#1074;&#1100;&#1102; <a href="https://www.rbc.ua/ukr/news/viktor-lyashko-nastorozhennost-koronavirusnoy-1589224394.html">&ldquo;&#1056;&#1041;&#1050;-&#1059;&#1082;&#1088;&#1072;&#1080;&#1085;&#1072;&rdquo;</a>.</p>
+<p>&#1055;&#1086;&#1082;&#1072; &#1078;&#1077; &#1086;&#1073; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1080; &#1087;&#1091;&#1085;&#1082;&#1090;&#1086;&#1074; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1085;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1077; &#1088;&#1077;&#1095;&#1100; &#1085;&#1077; &#1080;&#1076;&#1077;&#1090;. &#1043;&#1083;&#1072;&#1074;&#1072; &#1044;&#1086;&#1085;&#1077;&#1094;&#1082;&#1086;&#1081; &#1054;&#1043;&#1040; &#1055;&#1072;&#1074;&#1077;&#1083; &#1050;&#1080;&#1088;&#1080;&#1083;&#1077;&#1085;&#1082;&#1086; <a href="https://www.ukrinform.ru/rubric-ato/3024964-kirilenko-v-slucae-otkrytia-kpvv-situacia-s-covid19-mozet-byt-nepredskazuemoj.html">&#1088;&#1072;&#1089;&#1089;&#1082;&#1072;&#1079;&#1072;&#1083;</a>, &#1095;&#1090;&#1086; &#1050;&#1055;&#1042;&#1042; &#1085;&#1077; &#1086;&#1090;&#1082;&#1088;&#1099;&#1074;&#1072;&#1102;&#1090;, &#1095;&#1090;&#1086;&#1073;&#1099; &#1080;&#1079;&#1073;&#1077;&#1078;&#1072;&#1090;&#1100; &#1074;&#1089;&#1087;&#1099;&#1096;&#1082;&#1080; &#1082;&#1086;&#1088;&#1086;&#1085;&#1072;&#1074;&#1080;&#1088;&#1091;&#1089;&#1072; &#1074; &#1086;&#1073;&#1083;&#1072;&#1089;&#1090;&#1080;.</p>
+<p><em>&ldquo;&#1053;&#1072; &#1086;&#1082;&#1082;&#1091;&#1087;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080; &#1080;&#1084;&#1077;&#1102;&#1090;&#1089;&#1103; &#1076;&#1072;&#1083;&#1077;&#1082;&#1086; &#1085;&#1077; &#1077;&#1076;&#1080;&#1085;&#1080;&#1095;&#1085;&#1099; &#1089;&#1083;&#1091;&#1095;&#1072;&#1080;, &#1087;&#1086; &#1085;&#1072;&#1096;&#1077;&#1081; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1080;, &#1079;&#1072;&#1073;&#1086;&#1083;&#1077;&#1074;&#1072;&#1085;&#1080;&#1081; COVID-19. &#1042;&#1087;&#1088;&#1086;&#1095;&#1077;&#1084;, &#1086;&#1082;&#1082;&#1091;&#1087;&#1072;&#1094;&#1080;&#1086;&#1085;&#1085;&#1099;&#1077; &#1074;&#1083;&#1072;&#1089;&#1090;&#1080; &#1090;&#1072;&#1082;&#1080;&#1077; &#1092;&#1072;&#1082;&#1090;&#1099; &#1073;&#1072;&#1085;&#1072;&#1083;&#1100;&#1085;&#1086; &#1089;&#1082;&#1088;&#1099;&#1074;&#1072;&#1102;&#1090;. &#1048; &#1074; &#1089;&#1083;&#1091;&#1095;&#1072;&#1077; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1050;&#1055;&#1042;&#1042;, &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1089;&#1082;&#1086;&#1081; &#1074;&#1083;&#1072;&#1089;&#1090;&#1080; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080; &#1089;&#1080;&#1090;&#1091;&#1072;&#1094;&#1080;&#1103; &#1084;&#1086;&#1078;&#1077;&#1090; &#1073;&#1099;&#1090;&#1100; &#1085;&#1077;&#1087;&#1088;&#1077;&#1076;&#1089;&#1082;&#1072;&#1079;&#1091;&#1077;&#1084;&#1086;&#1081;&rdquo;,</em> &ndash; &#1087;&#1086;&#1103;&#1089;&#1085;&#1080;&#1083; &#1050;&#1080;&#1088;&#1080;&#1083;&#1077;&#1085;&#1082;&#1086;.</p>
+<p>&#1055;&#1086;&#1082;&#1072; &#1078;&#1077; &#1074; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1086;&#1081; &#1080; &#1044;&#1086;&#1085;&#1077;&#1094;&#1082;&#1086;&#1081; &#1086;&#1073;&#1083;&#1072;&#1089;&#1090;&#1080; &#1076;&#1077;&#1081;&#1089;&#1090;&#1074;&#1091;&#1077;&#1090; &#1088;&#1077;&#1078;&#1080;&#1084; &ldquo;&#1082;&#1088;&#1072;&#1089;&#1085;&#1099;&#1081;&rdquo;. &#1058;&#1086; &#1077;&#1089;&#1090;&#1100; &#1074;&#1098;&#1077;&#1093;&#1072;&#1090;&#1100; &#1089;&#1102;&#1076;&#1072; &#1084;&#1086;&#1078;&#1077;&#1090; &#1083;&#1080;&#1096;&#1100; &#1083;&#1080;&#1094;&#1086;, &#1080;&#1084;&#1077;&#1102;&#1097;&#1077;&#1077; &#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1102; &#1085;&#1072; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;, &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1089;&#1082;&#1086;&#1081; &#1074;&#1083;&#1072;&#1089;&#1090;&#1080;, &#1072; &#1090;&#1072;&#1082;&#1078;&#1077; &#1088;&#1072;&#1073;&#1086;&#1090;&#1085;&#1080;&#1082;&#1080;, &#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1077; &#1079;&#1072; &#1078;&#1080;&#1079;&#1085;&#1077;&#1086;&#1073;&#1077;&#1089;&#1087;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077; &#1088;&#1077;&#1075;&#1080;&#1086;&#1085;&#1072;, &#1072; &#1090;&#1072;&#1082;&#1078;&#1077; &#1090;&#1077;, &#1082;&#1086;&#1084;&#1091; &#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1100; &#1050;&#1055;&#1042;&#1042; &#1087;&#1086; &#1074;&#1077;&#1089;&#1082;&#1080;&#1084; &#1075;&#1091;&#1084;&#1072;&#1085;&#1080;&#1090;&#1072;&#1088;&#1085;&#1099;&#1084; &#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1072;&#1084;.</p>
+<p><a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/%d0%b8%d0%bd%d1%84%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%89%d0%b0/" rel="attachment wp-att-60381"><img   alt="&#1050;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;. &#1063;&#1090;&#1086; &#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090; &#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1072;" width="792" height="2637" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1048;&#1085;&#1092;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1097;&#1072;.png 792w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1048;&#1085;&#1092;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1097;&#1072;-90x300.png 90w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1048;&#1085;&#1092;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1097;&#1072;-768x2557.png 768w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2020/05/%D0%98%D0%BD%D1%84%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%89%D0%B0.png" data-sizes="(max-width: 792px) 100vw, 792px" class="aligncenter size-full wp-image-60381 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a></p>
+<h2>&#1042; &#1082;&#1072;&#1082;&#1080;&#1093; &#1089;&#1083;&#1091;&#1095;&#1072;&#1103;&#1093; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1100; &#1083;&#1080;&#1085;&#1080;&#1102; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1074;&#1089;&#1077; &#1078;&#1077; &#1084;&#1086;&#1078;&#1085;&#1086;</h2>
+<p>&#1043;&#1086;&#1089;&#1091;&#1076;&#1072;&#1088;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;&#1081; &#1087;&#1086;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1085;&#1086;&#1081; &#1089;&#1083;&#1091;&#1078;&#1073;&#1077; <a href="https://dpsu.gov.ua/ua/news/YAk-peretnuti-liniyu-rozmezhuvannya-za-nayavnosti-nadzvichaynih-obstavin/">&#1091;&#1090;&#1086;&#1095;&#1085;&#1080;&#1083;&#1080;</a>: &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1094;&#1099; &#1074;&#1089;&#1077; &#1078;&#1077; &#1089;&#1084;&#1086;&#1075;&#1091;&#1090; &#1087;&#1086;&#1082;&#1080;&#1085;&#1091;&#1090;&#1100; &#1085;&#1077;&#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1091;&#1102; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1102; &mdash; &#1087;&#1088;&#1080; &#1085;&#1072;&#1083;&#1080;&#1095;&#1080;&#1080; &#1095;&#1088;&#1077;&#1079;&#1074;&#1099;&#1095;&#1072;&#1081;&#1085;&#1099;&#1093; &#1086;&#1073;&#1089;&#1090;&#1086;&#1103;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;. &#1050; &#1090;&#1072;&#1082;&#1080;&#1084; &#1086;&#1073;&#1089;&#1090;&#1086;&#1103;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1072;&#1084; &#1086;&#1090;&#1085;&#1077;&#1089;&#1083;&#1080; &#1083;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077;, &#1091;&#1095;&#1077;&#1073;&#1091;, &#1088;&#1072;&#1073;&#1086;&#1090;&#1091; &#1080; &#1089;&#1084;&#1077;&#1088;&#1090;&#1100; &#1082;&#1086;&#1075;&#1086;-&#1090;&#1086; &#1080;&#1079; &#1088;&#1086;&#1076;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1080;&#1082;&#1086;&#1074;. &#1053;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100; &#1087;&#1088;&#1086;&#1081;&#1090;&#1080; &#1085;&#1091;&#1078;&#1085;&#1086; &#1073;&#1091;&#1076;&#1077;&#1090; &#1087;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1072;&#1090;&#1100; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1072;&#1083;&#1100;&#1085;&#1086;. &#1050;&#1072;&#1078;&#1076;&#1099;&#1081; &#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1089;&#1083;&#1091;&#1095;&#1072;&#1081; &#1073;&#1091;&#1076;&#1077;&#1090; &#1088;&#1072;&#1089;&#1089;&#1084;&#1072;&#1090;&#1088;&#1080;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103; &#1080;&#1085;&#1076;&#1080;&#1074;&#1080;&#1076;&#1091;&#1072;&#1083;&#1100;&#1085;&#1086; &#1087;&#1088;&#1103;&#1084;&#1086; &#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;.</p>
+<p>&#1042; &#1085;&#1072;&#1095;&#1072;&#1083;&#1077; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1074;&#1077;&#1089;&#1082;&#1080;&#1084;&#1080; &#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1072;&#1084;&#1080; &#1076;&#1083;&#1103; &#1087;&#1088;&#1077;&#1086;&#1076;&#1086;&#1083;&#1077;&#1085;&#1080;&#1103; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1086;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1080;&#1083;&#1080;:</p>
+<ul>
+<li>&#1074;&#1086;&#1089;&#1089;&#1086;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089;&#1077;&#1084;&#1100;&#1080;: &#1077;&#1089;&#1083;&#1080; &#1086;&#1076;&#1080;&#1085; &#1080;&#1079; &#1095;&#1083;&#1077;&#1085;&#1086;&#1074; &#1089;&#1077;&#1084;&#1100;&#1080; &#1089;&#1083;&#1077;&#1076;&#1091;&#1077;&#1090; &#1080;&#1079; &#1054;&#1056;&#1044;&#1051;&#1054; &#1082; &#1088;&#1086;&#1076;&#1085;&#1077;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103; &#1085;&#1072;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;, &#1090;&#1086; &#1087;&#1088;&#1080; &#1085;&#1072;&#1083;&#1080;&#1095;&#1080;&#1080; &#1087;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103;, &#1077;&#1075;&#1086; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1103;&#1090;;</li>
+<li>&#1083;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077;: &#1087;&#1088;&#1080; &#1085;&#1072;&#1083;&#1080;&#1095;&#1080;&#1080; &#1089;&#1087;&#1088;&#1072;&#1074;&#1086;&#1082; &#1086; &#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;&#1089;&#1090;&#1080; &#1083;&#1077;&#1095;&#1080;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080; &#1080;&#1083;&#1080; &#1087;&#1088;&#1086;&#1074;&#1086;&#1076;&#1080;&#1090;&#1100; &#1087;&#1083;&#1072;&#1085;&#1086;&#1074;&#1091;&#1102; &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1102;, &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&#1072; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1103;&#1090;;</li>
+<li>&#1092;&#1072;&#1082;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1086;&#1077; &#1087;&#1088;&#1086;&#1078;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;: &#1076;&#1086;&#1082;&#1072;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1086;&#1084; &#1084;&#1077;&#1089;&#1090;&#1072;, &#1075;&#1076;&#1077; &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1078;&#1080;&#1074;&#1077;&#1090; &#1085;&#1072; &#1089;&#1072;&#1084;&#1086;&#1084; &#1076;&#1077;&#1083;&#1077;, &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1089;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1083;&#1077;&#1085;&#1094;&#1072; &#1080;&#1083;&#1080; &#1076;&#1086;&#1082;&#1091;&#1084;&#1077;&#1085;&#1090;&#1099; &#1089; &#1088;&#1072;&#1073;&#1086;&#1090;&#1099; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;;</li>
+<li>&#1091;&#1095;&#1077;&#1073;&#1072;: &#1089;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072; &#1086; &#1090;&#1086;&#1084;, &#1095;&#1090;&#1086; &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1091;&#1095;&#1080;&#1090;&#1089;&#1103; &#1074; &#1086;&#1076;&#1085;&#1086;&#1084; &#1080;&#1079; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1089;&#1082;&#1080;&#1093; &#1074;&#1091;&#1079;&#1086;&#1074;.</li>
+</ul>
+<p>&#1057;&#1077;&#1081;&#1095;&#1072;&#1089; &#1087;&#1086;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1085;&#1080;&#1082;&#1080; &#1087;&#1088;&#1077;&#1076;&#1091;&#1087;&#1088;&#1077;&#1078;&#1076;&#1072;&#1102;&#1090;: &#1076;&#1072;&#1078;&#1077; &#1077;&#1089;&#1083;&#1080; &#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1054;&#1054;&#1057; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1090;, &#1072;&#1085;&#1072;&#1083;&#1086;&#1075;&#1080;&#1095;&#1085;&#1086;&#1075;&#1086; &#1086;&#1076;&#1086;&#1073;&#1088;&#1077;&#1085;&#1080;&#1103; &#1087;&#1088;&#1080;&#1076;&#1077;&#1090;&#1089;&#1103; &#1078;&#1076;&#1072;&#1090;&#1100; &#1086;&#1090; &#1075;&#1088;&#1091;&#1087;&#1087;&#1080;&#1088;&#1086;&#1074;&#1086;&#1082; &ldquo;&#1051;&#1053;&#1056;&rdquo; &#1080; &ldquo;&#1044;&#1053;&#1056;&rdquo;. &#1053;&#1077;&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1078;&#1076;&#1091;&#1090; &#1084;&#1077;&#1089;&#1103;&#1094;&#1072;&#1084;&#1080;.</p>
+<p>&#1055;&#1088;&#1072;&#1074;&#1086;&#1079;&#1072;&#1097;&#1080;&#1090;&#1085;&#1080;&#1082;&#1080;, &#1074; &#1089;&#1074;&#1086;&#1102; &#1086;&#1095;&#1077;&#1088;&#1077;&#1076;&#1100;, &#1086;&#1090;&#1084;&#1077;&#1095;&#1072;&#1102;&#1090;, &#1095;&#1090;&#1086;, &#1085;&#1077;&#1089;&#1084;&#1086;&#1090;&#1088;&#1103; &#1085;&#1072; <a href="https://realgazeta.com.ua/vzaperti-26-03/">&#1087;&#1088;&#1077;&#1078;&#1085;&#1080;&#1077; &#1079;&#1072;&#1074;&#1077;&#1088;&#1077;&#1085;&#1080;&#1103;</a>, &#1089;&#1077;&#1081;&#1095;&#1072;&#1089; &#1095;&#1077;&#1088;&#1077;&#1079; &#1050;&#1055;&#1042;&#1042; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;&#1102;&#1090; &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; &#1087;&#1086; &#1076;&#1074;&#1091;&#1084; &#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1072;&#1084; &ndash; &#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100; &#1089;&#1088;&#1086;&#1095;&#1085;&#1086; &#1083;&#1077;&#1095;&#1080;&#1090;&#1100; &#1093;&#1088;&#1086;&#1085;&#1080;&#1095;&#1077;&#1089;&#1082;&#1091;&#1102; &#1073;&#1086;&#1083;&#1077;&#1079;&#1085;&#1100; &#1080; &#1077;&#1093;&#1072;&#1090;&#1100; &#1085;&#1072; &#1087;&#1086;&#1093;&#1086;&#1088;&#1086;&#1085;&#1099;.</p>
+<h2>&#1052;&#1077;&#1089;&#1090;&#1086; &#1078;&#1080;&#1090;&#1077;&#1083;&#1100;&#1089;&#1090;&#1074;&#1072; &ndash; &#1087;&#1091;&#1085;&#1082;&#1090; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &ldquo;&#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072;&#1103;&rdquo;</h2>
+<p>&#1055;&#1086;&#1082;&#1072; &#1087;&#1088;&#1080;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1078;&#1076;&#1072;&#1090;&#1100; &#1086;&#1089;&#1086;&#1073;&#1086;&#1075;&#1086; &#1088;&#1072;&#1089;&#1087;&#1086;&#1088;&#1103;&#1078;&#1077;&#1085;&#1080;&#1103; &#1089; &#1076;&#1074;&#1091;&#1093; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;, &#1085;&#1077;&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1084; &#1083;&#1102;&#1076;&#1103;&#1084; &#1087;&#1088;&#1080;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1074; &#1087;&#1088;&#1103;&#1084;&#1086;&#1084; &#1089;&#1084;&#1099;&#1089;&#1083;&#1077; &#1087;&#1086;&#1089;&#1077;&#1083;&#1103;&#1090;&#1100;&#1089;&#1103; &#1074;&#1086;&#1079;&#1083;&#1077; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;. &#1044;&#1077;&#1085;&#1100;&#1075;&#1080; &#1079;&#1072;&#1082;&#1086;&#1085;&#1095;&#1080;&#1083;&#1080;&#1089;&#1100;, &#1089;&#1085;&#1080;&#1084;&#1072;&#1090;&#1100; &#1078;&#1080;&#1083;&#1100;&#1077; &#1076;&#1086;&#1088;&#1086;&#1075;&#1086;, &#1079;&#1085;&#1072;&#1082;&#1086;&#1084;&#1099;&#1093;, &#1089;&#1086;&#1075;&#1083;&#1072;&#1089;&#1085;&#1099;&#1093; &#1087;&#1088;&#1080;&#1102;&#1090;&#1080;&#1090;&#1100; &#1085;&#1072; &#1074;&#1088;&#1077;&#1084;&#1103; &#1085;&#1077;&#1090; &ndash; &#1074;&#1086;&#1090; &#1087;&#1088;&#1080;&#1084;&#1077;&#1088;&#1085;&#1099;&#1081; &#1087;&#1077;&#1088;&#1077;&#1089;&#1082;&#1072;&#1079; &#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1081; &#1090;&#1077;&#1093;, &#1082;&#1090;&#1086; &#1090;&#1077;&#1087;&#1077;&#1088;&#1100; &#1078;&#1080;&#1074;&#1077;&#1090; &#1074;&#1086;&#1079;&#1083;&#1077; &#1050;&#1055;&#1042;&#1042; &ldquo;&#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072;&#1103;.</p>
+<p>&#1040;&#1083;&#1077;&#1082;&#1089;&#1072;&#1085;&#1076;&#1088; &#1080;&#1079; &#1057;&#1090;&#1072;&#1093;&#1072;&#1085;&#1086;&#1074;&#1072; (&#1087;&#1086;&#1089;&#1083;&#1077; &#1087;&#1077;&#1088;&#1077;&#1080;&#1084;&#1077;&#1085;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &ndash; &#1050;&#1072;&#1076;&#1080;&#1077;&#1074;&#1082;&#1072;) &#1085;&#1077; &#1091;&#1089;&#1087;&#1077;&#1083; &#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103; &#1076;&#1086;&#1084;&#1086;&#1081; &#1076;&#1086; &#1079;&#1072;&#1082;&#1088;&#1099;&#1090;&#1080;&#1103; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1080; &#1090;&#1077;&#1087;&#1077;&#1088;&#1100; &#1078;&#1080;&#1074;&#1077;&#1090; &#1074; &#1090;&#1086;&#1088;&#1075;&#1086;&#1074;&#1086;&#1084; &#1084;&#1086;&#1076;&#1091;&#1083;&#1077; &#1085;&#1072; &#1086;&#1087;&#1091;&#1089;&#1090;&#1077;&#1074;&#1096;&#1077;&#1084; &#1088;&#1099;&#1085;&#1082;&#1077; &#1074; &#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1077; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1086;&#1081;. &#1045;&#1084;&#1091; &#1087;&#1088;&#1080;&#1096;&#1083;&#1086;&#1089;&#1100; &#1078;&#1080;&#1090;&#1100; &#1074; &#1092;&#1072;&#1085;&#1077;&#1088;&#1085;&#1086;&#1084; &#1087;&#1072;&#1074;&#1080;&#1083;&#1100;&#1086;&#1085;&#1077; &#1074; &#1086;&#1078;&#1080;&#1076;&#1072;&#1085;&#1080;&#1080; &#1088;&#1072;&#1079;&#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1103; &#1086;&#1090; &ldquo;&#1052;&#1048;&#1044;&#1072; &#1051;&#1053;&#1056;&rdquo;.</p>
+<p><iframe style="border: none; overflow: hidden;"  width="500" height="906" frameborder="0" scrolling="no" data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Freutski%2Fposts%2F10217353233439632&amp;width=500" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<p>&#1051;&#1102;&#1076;&#1084;&#1080;&#1083;&#1072; &#1048;&#1074;&#1072;&#1085;&#1086;&#1074;&#1085;&#1072; &#1080;&#1079; &#1050;&#1088;&#1072;&#1089;&#1086;&#1085;&#1076;&#1086;&#1085;&#1072; (&#1087;&#1086;&#1089;&#1083;&#1077; &#1087;&#1077;&#1088;&#1077;&#1080;&#1084;&#1077;&#1085;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &ndash; &#1057;&#1082;&#1086;&#1088;&#1086;&#1082;&#1080;&#1085;&#1086;) &#1087;&#1086;&#1095;&#1090;&#1080; &#1076;&#1074;&#1072; &#1084;&#1077;&#1089;&#1103;&#1094;&#1072; &#1086;&#1085;&#1072; &#1078;&#1080;&#1083;&#1072; &#1074; &#1090;&#1072;&#1082;&#1086;&#1084; &#1078;&#1077; &#1090;&#1086;&#1088;&#1075;&#1086;&#1074;&#1086;&#1084; &#1084;&#1086;&#1076;&#1091;&#1083;&#1077; &#1085;&#1072; &#1088;&#1099;&#1085;&#1082;&#1077; &#1074; &#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1077; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1086;&#1081;. &#1054;&#1090;&#1082;&#1088;&#1099;&#1090;&#1091;&#1102; &#1095;&#1072;&#1089;&#1090;&#1100; &#1077;&#1077; &ldquo;&#1087;&#1072;&#1083;&#1072;&#1090;&#1082;&#1080;&rdquo; &#1079;&#1072;&#1090;&#1103;&#1085;&#1091;&#1083;&#1080; &#1087;&#1083;&#1077;&#1085;&#1082;&#1086;&#1081;. &#1042;&#1085;&#1091;&#1090;&#1088;&#1100; &#1087;&#1086;&#1089;&#1090;&#1072;&#1074;&#1080;&#1083;&#1080; &#1087;&#1077;&#1095;&#1082;&#1091;-&#1073;&#1091;&#1088;&#1078;&#1091;&#1081;&#1082;&#1091;. &#1042;&#1086;&#1076;&#1091; &#1096;&#1077;&#1089;&#1090;&#1080;&#1076;&#1077;&#1089;&#1103;&#1090;&#1080;&#1083;&#1077;&#1090;&#1085;&#1077;&#1081; &#1078;&#1077;&#1085;&#1097;&#1080;&#1085;&#1077; &#1085;&#1086;&#1089;&#1080;&#1083;&#1080; &#1089;&#1086;&#1090;&#1088;&#1091;&#1076;&#1085;&#1080;&#1082;&#1080; &#1044;&#1057;&#1053;&#1057;, &#1090;&#1077;&#1087;&#1083;&#1099;&#1077; &#1074;&#1077;&#1097;&#1080; &ndash; &#1085;&#1077;&#1088;&#1072;&#1074;&#1085;&#1086;&#1076;&#1091;&#1096;&#1085;&#1099;&#1077; &#1084;&#1077;&#1089;&#1090;&#1085;&#1099;&#1077; &#1078;&#1080;&#1090;&#1077;&#1083;&#1080;. &#1051;&#1102;&#1076;&#1084;&#1080;&#1083;&#1072; &#1048;&#1074;&#1072;&#1085;&#1086;&#1074;&#1085;&#1072; &#1089;&#1087;&#1072;&#1083;&#1072; &#1085;&#1072; &#1087;&#1088;&#1080;&#1083;&#1072;&#1074;&#1082;&#1077; &#1080; &#1078;&#1076;&#1072;&#1083;&#1072;, &#1082;&#1086;&#1075;&#1076;&#1072; &#1077;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1103;&#1090; &#1085;&#1072; &#1085;&#1077;&#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1091;&#1102; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1102;. &#1046;&#1091;&#1088;&#1085;&#1072;&#1083;&#1080;&#1089;&#1090; &#1080; &#1072;&#1082;&#1090;&#1080;&#1074;&#1080;&#1089;&#1090; &#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1080;&#1085; &#1056;&#1077;&#1091;&#1094;&#1082;&#1080;&#1081; &#1088;&#1072;&#1089;&#1089;&#1082;&#1072;&#1079;&#1072;&#1083;, &#1095;&#1090;&#1086; &#1078;&#1077;&#1085;&#1097;&#1080;&#1085;&#1077; &#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1083;&#1080; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1083;&#1080;&#1090;&#1100;&#1089;&#1103; &#1074; &#1084;&#1077;&#1089;&#1090;&#1085;&#1091;&#1102; &#1073;&#1086;&#1083;&#1100;&#1085;&#1080;&#1094;&#1091;, &#1085;&#1086; &#1086;&#1085;&#1072; &#1086;&#1090;&#1082;&#1072;&#1079;&#1072;&#1083;&#1072;&#1089;&#1100; &#1080;&#1079; &#1089;&#1090;&#1088;&#1072;&#1093;&#1072;. &#1046;&#1077;&#1085;&#1097;&#1080;&#1085;&#1072; &#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090;, &#1074;&#1089;&#1077;, &#1095;&#1090;&#1086; &#1077;&#1081; &#1085;&#1091;&#1078;&#1085;&#1086; &ndash; &#1101;&#1090;&#1086; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1100; &#1083;&#1080;&#1085;&#1080;&#1102; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103;. &#1042; &#1050;&#1088;&#1072;&#1089;&#1085;&#1086;&#1076;&#1086;&#1085; &#1077;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080; &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; &#1089;&#1087;&#1091;&#1089;&#1090;&#1103; &#1076;&#1074;&#1072; &#1084;&#1077;&#1089;&#1103;&#1094;&#1072; &#1078;&#1080;&#1079;&#1085;&#1080; &#1085;&#1072; &#1088;&#1099;&#1085;&#1082;&#1077;.</p>
+<p><iframe style="border: none; overflow: hidden;"  width="500" height="804" frameborder="0" scrolling="no" data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Freutski%2Fposts%2F10217353024594411&amp;width=500" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<p>&#1053;&#1086;&#1074;&#1086;&#1089;&#1090;&#1100; &#1086; &#1079;&#1072;&#1082;&#1088;&#1099;&#1090;&#1080;&#1080; &#1050;&#1055;&#1042;&#1042; &#1079;&#1072;&#1089;&#1090;&#1072;&#1083;&#1072; &#1042;&#1072;&#1083;&#1077;&#1085;&#1090;&#1080;&#1085;&#1091; &#1042;&#1072;&#1089;&#1080;&#1083;&#1100;&#1077;&#1074;&#1085;&#1091; &#1074; &#1050;&#1088;&#1077;&#1084;&#1077;&#1085;&#1095;&#1091;&#1075;&#1077;, &#1082;&#1091;&#1076;&#1072; &#1086;&#1085;&#1072; &#1077;&#1079;&#1076;&#1080;&#1083;&#1072; &#1076;&#1083;&#1103; &#1087;&#1088;&#1086;&#1093;&#1086;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103; &#1080;&#1076;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;, &#1095;&#1090;&#1086;&#1073;&#1099; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100; &#1087;&#1077;&#1085;&#1089;&#1080;&#1102;. &#1053;&#1072;&#1079;&#1072;&#1076; &#1086;&#1085;&#1072; &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1083;&#1072;&#1089;&#1100; &#1091;&#1078;&#1077; &#1085;&#1072; &#1090;&#1072;&#1082;&#1089;&#1080;, &#1086;&#1090;&#1076;&#1072;&#1074; &#1079;&#1072; &#1084;&#1072;&#1096;&#1080;&#1085;&#1091; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1080;&#1077; &#1076;&#1077;&#1085;&#1100;&#1075;&#1080;. &#1053;&#1086; &#1076;&#1086; &#1050;&#1088;&#1072;&#1089;&#1086;&#1085;&#1076;&#1086;&#1085;&#1072; &#1090;&#1072;&#1082; &#1080; &#1085;&#1077; &#1076;&#1086;&#1073;&#1088;&#1072;&#1083;&#1072;&#1089;&#1100;, &#1080; &#1073;&#1099;&#1083;&#1072; &#1074;&#1099;&#1085;&#1091;&#1078;&#1076;&#1077;&#1085;&#1072; &ldquo;&#1087;&#1086;&#1089;&#1077;&#1083;&#1080;&#1090;&#1100;&#1089;&#1103;&rdquo; &ndash; &#1074; &#1090;&#1086;&#1088;&#1075;&#1086;&#1074;&#1086;&#1084; &#1084;&#1086;&#1076;&#1091;&#1083;&#1077;, &#1075;&#1076;&#1077; &#1088;&#1072;&#1085;&#1100;&#1096;&#1077; &#1087;&#1088;&#1086;&#1076;&#1072;&#1074;&#1072;&#1083;&#1080; &#1092;&#1088;&#1091;&#1082;&#1090;&#1099; &#1080; &#1086;&#1074;&#1086;&#1097;&#1080;. &#1059; &#1042;&#1072;&#1083;&#1077;&#1085;&#1090;&#1080;&#1085;&#1099; &#1042;&#1072;&#1089;&#1080;&#1083;&#1100;&#1077;&#1074;&#1085;&#1099; &#1076;&#1080;&#1072;&#1073;&#1077;&#1090;. &#1058;&#1086;&#1083;&#1100;&#1082;&#1086; &#1073;&#1083;&#1072;&#1075;&#1086;&#1076;&#1072;&#1088;&#1103; &#1074;&#1086;&#1083;&#1086;&#1085;&#1090;&#1077;&#1088;&#1072;&#1084; &#1077;&#1081; &#1091;&#1076;&#1072;&#1083;&#1086;&#1089;&#1100; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100; &#1087;&#1088;&#1086;&#1076;&#1091;&#1082;&#1090;&#1099;, &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;&#1072; &#1075;&#1080;&#1075;&#1080;&#1077;&#1085;&#1099;, &#1083;&#1077;&#1082;&#1072;&#1088;&#1089;&#1090;&#1074;&#1086;, &#1072; &#1075;&#1083;&#1072;&#1074;&#1085;&#1086;&#1077; &ndash; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086;&#1077; &#1078;&#1080;&#1083;&#1100;&#1077;, &#1075;&#1076;&#1077; &#1086;&#1085;&#1072; &#1076;&#1086;&#1078;&#1076;&#1072;&#1083;&#1072;&#1089;&#1100;, &#1087;&#1086;&#1082;&#1072; &#1077;&#1077; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1103;&#1090; &#1074; &#1054;&#1056;&#1051;&#1054;.</p>
+<p><iframe style="border: none; overflow: hidden;"  width="500" height="810" frameborder="0" scrolling="no" data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fproliskamission%2Fposts%2F2670048939943070&amp;width=500" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<p>&#1042; &#1101;&#1090;&#1086;&#1084; &#1078;&#1077; &#1087;&#1072;&#1074;&#1080;&#1083;&#1100;&#1086;&#1085;&#1077; &#1085;&#1072;&#1096;&#1083;&#1080; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1081; &#1087;&#1088;&#1080;&#1102;&#1090; &#1089;&#1091;&#1087;&#1088;&#1091;&#1075;&#1080; &#1040;&#1083;&#1077;&#1082;&#1089;&#1072;&#1085;&#1076;&#1088; &#1080; &#1042;&#1072;&#1083;&#1077;&#1085;&#1090;&#1080;&#1085;&#1072; &#1080;&#1079; &#1057;&#1090;&#1072;&#1093;&#1072;&#1085;&#1086;&#1074;&#1072;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1089;&#1085;&#1072;&#1095;&#1072;&#1083;&#1072; &#1087;&#1099;&#1090;&#1072;&#1083;&#1080;&#1089;&#1100; &#1085;&#1072;&#1081;&#1090;&#1080; &#1088;&#1072;&#1073;&#1086;&#1090;&#1091; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;, &#1072; &#1089; &#1086;&#1073;&#1098;&#1103;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;&#1084; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1086;&#1089;&#1090;&#1072;&#1083;&#1080;&#1089;&#1100; &#1073;&#1077;&#1079; &#1076;&#1077;&#1085;&#1077;&#1075; &#1080; &#1085;&#1077; &#1089;&#1084;&#1086;&#1075;&#1083;&#1080; &#1091;&#1078;&#1077; &#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103; &#1076;&#1086;&#1084;&#1086;&#1081;. &#1054;&#1085;&#1080; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086; &#1087;&#1086;&#1089;&#1077;&#1083;&#1080;&#1083;&#1080;&#1089;&#1100; &#1085;&#1072; &#1088;&#1099;&#1085;&#1082;&#1077;, &#1087;&#1086;&#1082;&#1072; &#1074;&#1086;&#1083;&#1086;&#1085;&#1090;&#1077;&#1088;&#1099; &#1085;&#1077; &#1087;&#1088;&#1077;&#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1080;&#1083;&#1080; &#1080;&#1084; &#1087;&#1088;&#1086;&#1076;&#1091;&#1082;&#1090;&#1099;, &#1074;&#1086;&#1076;&#1091; &#1080; &#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1100; &#1072;&#1088;&#1077;&#1085;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100; &#1078;&#1080;&#1083;&#1100;&#1077;.</p>
+<p><iframe style="border: none; overflow: hidden;"  width="500" height="835" frameborder="0" scrolling="no" data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fproliskamission%2Fposts%2F2671137983167499&amp;width=500" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<p>&#1053;&#1077; &#1080;&#1084;&#1077;&#1103; &#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1080; &#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103;, &#1085;&#1077;&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1087;&#1088;&#1080;&#1085;&#1080;&#1084;&#1072;&#1102;&#1090; &#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1077; &#1086;&#1089;&#1090;&#1072;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;. &#1058;&#1072;&#1082;, 19-&#1083;&#1077;&#1090;&#1085;&#1080;&#1081; &#1057;&#1090;&#1072;&#1085;&#1080;&#1089;&#1083;&#1072;&#1074; &#1080;&#1079; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072; &#1074; &#1084;&#1072;&#1088;&#1090;&#1077; &#1087;&#1088;&#1080;&#1077;&#1093;&#1072;&#1083; &#1051;&#1080;&#1089;&#1080;&#1095;&#1072;&#1085;&#1089;&#1082; &#1086;&#1092;&#1086;&#1088;&#1084;&#1083;&#1103;&#1090;&#1100; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1089;&#1082;&#1080;&#1081; &#1087;&#1072;&#1089;&#1087;&#1086;&#1088;&#1090;, &#1072; &#1082;&#1086;&#1075;&#1076;&#1072; &#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103; &#1076;&#1086;&#1084;&#1086;&#1081; &#1085;&#1077; &#1089;&#1084;&#1086;&#1075; &#1080;&#1079;-&#1079;&#1072; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1088;&#1077;&#1096;&#1080;&#1083; &#1085;&#1077; &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1090;&#1100;&#1089;&#1103; &#1074;&#1086;&#1086;&#1073;&#1097;&#1077; &ndash; &#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1083;&#1089;&#1103; &#1082;&#1072;&#1082; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1083;&#1077;&#1085;&#1077;&#1094;, &#1089;&#1085;&#1103;&#1083; &#1082;&#1074;&#1072;&#1088;&#1090;&#1080;&#1088;&#1091;, &#1085;&#1072;&#1096;&#1077;&#1083; &#1088;&#1072;&#1073;&#1086;&#1090;&#1091; &#1085;&#1072; &#1078;&#1077;&#1083;&#1072;&#1090;&#1080;&#1085;&#1086;&#1074;&#1086;&#1084; &#1079;&#1072;&#1074;&#1086;&#1076;&#1077; &#1080; &#1087;&#1083;&#1072;&#1085;&#1080;&#1088;&#1091;&#1077;&#1090; &#1087;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072;&#1090;&#1100; &#1074; &#1050;&#1080;&#1077;&#1074;&#1089;&#1082;&#1080;&#1081; &#1091;&#1085;&#1080;&#1074;&#1077;&#1088;&#1089;&#1080;&#1090;&#1077;&#1090; &#1082;&#1091;&#1083;&#1100;&#1090;&#1091;&#1088;&#1099; &#1085;&#1072; &#1092;&#1072;&#1082;&#1091;&#1083;&#1100;&#1090;&#1077;&#1090; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083;&#1080;&#1089;&#1090;&#1080;&#1082;&#1080;.</p>
+<p><iframe title="&#1061;&#1083;&#1086;&#1087;&#1077;&#1094;&#1100; &#1074; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1100;&#1082;&#1072; &#1085;&#1077; &#1093;&#1086;&#1095;&#1077; &#1087;&#1086;&#1074;&#1077;&#1088;&#1090;&#1072;&#1090;&#1080;&#1089;&#1103; &#1085;&#1072; &#1086;&#1082;&#1091;&#1087;&#1086;&#1074;&#1072;&#1085;&#1091; &#1090;&#1077;&#1088;&#1080;&#1090;&#1086;&#1088;&#1110;&#1102;" width="640" height="360"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/Rmq1MeBfsZ8?feature=oembed" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<h2>&#1063;&#1077;&#1088;&#1077;&#1079; &#1050;&#1055;&#1042;&#1042; &#1074;&#1089;&#1077; &#1078;&#1077; &#1087;&#1088;&#1086;&#1093;&#1086;&#1076;&#1103;&#1090;. &#1045;&#1076;&#1080;&#1085;&#1080;&#1094;&#1099;</h2>
+<p>&#1057;&#1077;&#1081;&#1095;&#1072;&#1089; &#1087;&#1091;&#1085;&#1082;&#1090;&#1099; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1085;&#1072; &#1083;&#1080;&#1085;&#1080;&#1080; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072;&#1102;&#1090; &#1083;&#1102;&#1076;&#1077;&#1081;, &#1085;&#1086; &#1101;&#1090;&#1086; &#1077;&#1076;&#1080;&#1085;&#1080;&#1094;&#1099; &#1087;&#1086; &#1089;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1102; &#1089; &#1090;&#1077;&#1084;, &#1095;&#1090;&#1086; &#1073;&#1099;&#1083;&#1086; &#1076;&#1086; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072;. &#1059; &#1074;&#1089;&#1077;&#1093; &#1085;&#1080;&#1093; &ndash; &#1074;&#1077;&#1089;&#1086;&#1084;&#1099;&#1077; &#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1099;, &#1095;&#1090;&#1086;&#1073;&#1099; &#1087;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1085;&#1072; &#1076;&#1088;&#1091;&#1075;&#1091;&#1102; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1091;. &#1063;&#1072;&#1097;&#1077; &#1074;&#1089;&#1077;&#1075;&#1086; &ndash; &#1101;&#1090;&#1086; &#1074;&#1086;&#1079;&#1088;&#1072;&#1089;&#1090; &#1080; &#1089;&#1077;&#1088;&#1100;&#1077;&#1079;&#1085;&#1099;&#1077; &#1079;&#1072;&#1073;&#1086;&#1083;&#1077;&#1074;&#1072;&#1085;&#1080;&#1103;, &#1083;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077; &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093; &#1086;&#1090;&#1082;&#1083;&#1072;&#1076;&#1099;&#1074;&#1072;&#1090;&#1100; &#1085;&#1077;&#1083;&#1100;&#1079;&#1103;. &#1050; &#1089;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1102; &#1089;&#1087;&#1080;&#1089;&#1082;&#1086;&#1074; &#1087;&#1088;&#1080;&#1074;&#1083;&#1077;&#1082;&#1072;&#1102;&#1090; &#1087;&#1088;&#1077;&#1076;&#1089;&#1090;&#1072;&#1074;&#1080;&#1090;&#1077;&#1083;&#1077;&#1081; &#1052;&#1077;&#1078;&#1076;&#1091;&#1085;&#1072;&#1088;&#1086;&#1076;&#1085;&#1086;&#1075;&#1086; &#1050;&#1086;&#1084;&#1080;&#1090;&#1077;&#1090;&#1072; &#1050;&#1088;&#1072;&#1089;&#1085;&#1086;&#1075;&#1086; &#1050;&#1088;&#1077;&#1089;&#1090;&#1072; &#1080; &#1054;&#1041;&#1057;&#1045;, &#1072; &#1087;&#1086;&#1090;&#1086;&#1084; &#1089;&#1086;&#1075;&#1083;&#1072;&#1089;&#1086;&#1074;&#1099;&#1074;&#1072;&#1102;&#1090; &#1089; &#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;&#1084; &#1054;&#1073;&#1098;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1085;&#1099;&#1093; &#1089;&#1080;&#1083; &#1080; &#1075;&#1088;&#1091;&#1087;&#1087;&#1080;&#1088;&#1086;&#1074;&#1082;&#1072;&#1084;&#1080; &ldquo;&#1051;&#1044;&#1053;&#1056;&rdquo;.</p>
+<p>&#1042;&#1086;&#1090; &#1085;&#1077;&#1087;&#1086;&#1083;&#1085;&#1099;&#1081; &#1089;&#1087;&#1080;&#1089;&#1086;&#1082; &#1089;&#1083;&#1091;&#1095;&#1072;&#1077;&#1074;, &#1082;&#1086;&#1075;&#1076;&#1072; &#1083;&#1102;&#1076;&#1103;&#1084; &#1088;&#1072;&#1079;&#1088;&#1077;&#1096;&#1072;&#1083;&#1080; &#1087;&#1088;&#1086;&#1081;&#1090;&#1080; &#1095;&#1077;&#1088;&#1077;&#1079; &#1050;&#1055;&#1042;&#1042; &ldquo;&#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072;&#1103;&rdquo; &#1080;&#1079; &ldquo;&#1082;&#1088;&#1080;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1093; &#1075;&#1091;&#1084;&#1072;&#1085;&#1080;&#1090;&#1072;&#1088;&#1085;&#1099;&#1093; &#1087;&#1086;&#1090;&#1088;&#1077;&#1073;&#1085;&#1086;&#1089;&#1090;&#1077;&#1081;&rdquo;.</p>
+<ul>
+<li>19 &#1084;&#1072;&#1103; &ndash; &#1080;&#1079; &#1054;&#1056;&#1051;&#1054; &#1074;&#1099;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080; 19 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;, &#1074; &#1086;&#1073;&#1088;&#1072;&#1090;&#1085;&#1086;&#1084; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1080; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; 12 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;;</li>
+<li>16 &#1084;&#1072;&#1103; &ndash; &#1080;&#1079; &#1054;&#1056;&#1051;&#1054; &#1074;&#1099;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080; 32 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;, &#1074; &#1086;&#1073;&#1088;&#1072;&#1090;&#1085;&#1086;&#1084; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1080; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; 20 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&#1072;;</li>
+<li>25 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103; &ndash; &#1080;&#1079; &#1054;&#1056;&#1051;&#1054; &#1074;&#1099;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080; 22 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;&#1072;, &#1074; &#1086;&#1073;&#1088;&#1072;&#1090;&#1085;&#1086;&#1084; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1080; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; 25 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;;</li>
+<li>29 &#1084;&#1072;&#1088;&#1090;&#1072; &ndash; &#1095;&#1077;&#1088;&#1077;&#1079; &#1083;&#1080;&#1085;&#1080;&#1102; &#1089;&#1086;&#1087;&#1088;&#1080;&#1082;&#1086;&#1089;&#1085;&#1086;&#1074;&#1077;&#1085;&#1080;&#1103; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; 120 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;.</li>
+</ul>
+<p><iframe style="border: none; overflow: hidden;"  width="500" height="614" frameborder="0" scrolling="no" data-src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpressjfo.news%2Fposts%2F821660068326611&amp;width=500" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></p>
+<p>&#1042;&#1089;&#1077;&#1093;, &#1082;&#1090;&#1086; &#1087;&#1077;&#1088;&#1077;&#1093;&#1086;&#1076;&#1103;&#1090; &#1080;&#1079; &#1054;&#1056;&#1044;&#1051;&#1054;, &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1083;&#1103;&#1102;&#1090; &#1085;&#1072; &#1076;&#1074;&#1091;&#1093;&#1085;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1091;&#1102; &#1089;&#1072;&#1084;&#1086;&#1080;&#1079;&#1086;&#1083;&#1103;&#1094;&#1080;&#1102; &#1076;&#1086;&#1084;&#1086;&#1081; &#1080;&#1083;&#1080; &#1085;&#1072; &#1086;&#1073;&#1089;&#1077;&#1088;&#1074;&#1072;&#1094;&#1080;&#1102; &#1074; &#1083;&#1077;&#1095;&#1077;&#1073;&#1085;&#1099;&#1077; &#1091;&#1095;&#1088;&#1077;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103;.</p>
+<p>&#1063;&#1090;&#1086;&#1073;&#1099; &#1086;&#1094;&#1077;&#1085;&#1080;&#1090;&#1100; &#1084;&#1072;&#1089;&#1096;&#1090;&#1072;&#1073;&#1099; &#1076;&#1086;&#1089;&#1090;&#1072;&#1090;&#1086;&#1095;&#1085;&#1086; &#1074;&#1089;&#1087;&#1086;&#1084;&#1085;&#1080;&#1090;&#1100;, &#1095;&#1090;&#1086; &#1076;&#1086; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1099; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1082;&#1072;&#1083;&#1080; &#1090;&#1099;&#1089;&#1103;&#1095;&#1080; &#1091;&#1082;&#1088;&#1072;&#1080;&#1085;&#1094;&#1077;&#1074;.</p>
+<p>&#1042;&#1086;&#1090; &#1090;&#1072;&#1082; &#1074;&#1099;&#1075;&#1083;&#1103;&#1076;&#1077;&#1083;&#1072;<a href="https://dpsu.gov.ua/ua/news/1584342103-Situaciya-v-kontrolnih-punktah-vizdu-viizdu-v-rayoni-provedennya-operacii-Obdnanih-sil/%20%D0%9A%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%B2%D1%81%D0%B5%20%D1%8D%D1%82%D0%BE%20%D0%BA%D0%BE%D0%BD%D1%87%D0%B8%D1%82%D1%81"> &#1089;&#1090;&#1072;&#1090;&#1080;&#1089;&#1090;&#1080;&#1082;&#1072; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1095;&#1077;&#1085;&#1080;&#1103; &#1087;&#1091;&#1085;&#1082;&#1090;&#1086;&#1074; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; 15 &#1084;&#1072;&#1088;&#1090;&#1072;</a>, &#1079;&#1072; &#1076;&#1077;&#1085;&#1100; &#1076;&#1086; &#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1103; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1085;&#1099;&#1093; &#1086;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1081;.</p>
+<ul>
+<li>&ldquo;&#1052;&#1072;&#1081;&#1086;&#1088;&#1089;&#1082;&#1086;&#1077;&rdquo; &ndash; 12 900 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1080; 1425 &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;;</li>
+<li>&ldquo;&#1052;&#1072;&#1088;&#1100;&#1080;&#1085;&#1082;&#1072;&rdquo; &ndash; 10 725 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1080; 1625 &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;;</li>
+<li>&ldquo;&#1053;&#1086;&#1074;&#1086;&#1090;&#1088;&#1086;&#1080;&#1094;&#1082;&#1086;&#1077;&rdquo; &ndash; 10 820 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1080; 1850 &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;;</li>
+<li>&ldquo;&#1043;&#1085;&#1091;&#1090;&#1086;&#1074;&#1086;&rdquo; &ndash; 4480 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1080; 965 &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;;</li>
+<li>&ldquo;&#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072;&#1103;&rdquo; &ndash; 16 055 &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082;.</li>
+</ul>
+<p>&#1042;&#1089;&#1077;&#1075;&#1086; &#1095;&#1077;&#1088;&#1077;&#1079; &#1087;&#1091;&#1085;&#1082;&#1090;&#1099; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1095;&#1077;&#1088;&#1077;&#1079; &#1083;&#1080;&#1085;&#1080;&#1102; &#1088;&#1072;&#1079;&#1075;&#1088;&#1072;&#1085;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103; &#1074; &#1090;&#1086;&#1090; &#1076;&#1077;&#1085;&#1100; &#1087;&#1088;&#1086;&#1096;&#1083;&#1080; 55 &#1090;&#1099;&#1089;&#1103;&#1095; &#1095;&#1077;&#1083;&#1086;&#1074;&#1077;&#1082; &#1080; 5,9 &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;. &#1057;&#1077;&#1081;&#1095;&#1072;&#1089; &#1050;&#1055;&#1042;&#1042; &#1086;&#1090;&#1082;&#1088;&#1099;&#1074;&#1072;&#1102;&#1090;&#1089;&#1103; &#1085;&#1077; &#1095;&#1072;&#1097;&#1077; &#1088;&#1072;&#1079;&#1072; &#1074; &#1085;&#1077;&#1076;&#1077;&#1083;&#1102; &#1080; &#1076;&#1072;&#1083;&#1077;&#1082;&#1086; &#1085;&#1077; &#1076;&#1083;&#1103; &#1074;&#1089;&#1077;&#1093;. &#1055;&#1086;&#1082;&#1072; &#1085;&#1080;&#1082;&#1090;&#1086; &#1085;&#1077; &#1073;&#1077;&#1088;&#1077;&#1090;&#1089;&#1103; &#1087;&#1088;&#1086;&#1075;&#1085;&#1086;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;, &#1082;&#1086;&#1075;&#1076;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1099; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1086;&#1090;&#1082;&#1088;&#1086;&#1102;&#1090;&#1089;&#1103;?</p>
+<p>&#1042; &#1096;&#1090;&#1072;&#1073;&#1077; &#1054;&#1054;&#1057;, &#1052;&#1080;&#1085;&#1080;&#1089;&#1090;&#1077;&#1088;&#1089;&#1090;&#1074;&#1077; &#1079;&#1076;&#1088;&#1072;&#1074;&#1086;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085;&#1080;&#1103; &#1080; &#1052;&#1080;&#1085;&#1080;&#1089;&#1090;&#1077;&#1088;&#1089;&#1090;&#1074;&#1077; &#1087;&#1086; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1072;&#1084; &#1088;&#1077;&#1080;&#1085;&#1090;&#1077;&#1075;&#1088;&#1072;&#1094;&#1080;&#1080; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1086; &#1086;&#1082;&#1082;&#1091;&#1087;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1099;&#1093; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1081; &#1073;&#1086;&#1083;&#1077;&#1077; &#1095;&#1077;&#1084; &#1086;&#1089;&#1090;&#1086;&#1088;&#1086;&#1078;&#1085;&#1099; &#1089; &#1087;&#1088;&#1086;&#1075;&#1085;&#1086;&#1079;&#1072;&#1084;&#1080;. &#1047;&#1072;&#1084;&#1077;&#1089;&#1090;&#1080;&#1090;&#1077;&#1083;&#1100; &#1084;&#1080;&#1085;&#1080;&#1089;&#1090;&#1088;&#1072; &#1079;&#1076;&#1088;&#1072;&#1074;&#1086;&#1086;&#1093;&#1088;&#1072;&#1085;&#1077;&#1085;&#1080;&#1103; &#1042;&#1080;&#1082;&#1090;&#1086;&#1088; &#1051;&#1103;&#1096;&#1082;&#1086; &#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090;, &#1095;&#1090;&#1086; &#1059;&#1082;&#1088;&#1072;&#1080;&#1085;&#1072; &#1074; &#1087;&#1088;&#1086;&#1094;&#1077;&#1089;&#1089;&#1077; &#1074;&#1099;&#1093;&#1086;&#1076;&#1072; &#1080;&#1079; &#1082;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;&#1072; &#1086;&#1088;&#1080;&#1077;&#1085;&#1090;&#1080;&#1088;&#1091;&#1077;&#1090;&#1089;&#1103; &#1085;&#1072; &#1055;&#1086;&#1083;&#1100;&#1096;&#1091;, &#1074; &#1082;&#1086;&#1090;&#1086;&#1088;&#1086;&#1081; &#1101;&#1087;&#1080;&#1076;&#1077;&#1084;&#1080;&#1103; &#1087;&#1088;&#1086;&#1093;&#1086;&#1076;&#1080;&#1090; &#1087;&#1086; &#1089;&#1093;&#1086;&#1078;&#1077;&#1084;&#1091; &#1089; &#1059;&#1082;&#1088;&#1072;&#1080;&#1085;&#1086;&#1081; &#1089;&#1094;&#1077;&#1085;&#1072;&#1088;&#1080;&#1102;, &#1086;&#1087;&#1077;&#1088;&#1077;&#1078;&#1072;&#1103; &#1085;&#1072;&#1089; &#1085;&#1072; &#1076;&#1074;&#1077; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080;. &#1054;&#1076;&#1085;&#1072;&#1082;&#1086;, &#1087;&#1086; &#1077;&#1075;&#1086; &#1089;&#1083;&#1086;&#1074;&#1072;&#1084;, &#1080;&#1079;-&#1079;&#1072; &#1090;&#1086;&#1075;&#1086; &#1095;&#1090;&#1086; SARS-CoV-2 &#1103;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1085;&#1086;&#1074;&#1099;&#1084; &#1074;&#1080;&#1076;&#1086;&#1084; &#1080;&#1085;&#1092;&#1077;&#1082;&#1094;&#1080;&#1080;, &#1089;&#1083;&#1086;&#1078;&#1085;&#1086; &#1076;&#1077;&#1083;&#1072;&#1090;&#1100; &#1076;&#1072;&#1078;&#1077; &#1086;&#1088;&#1080;&#1077;&#1085;&#1090;&#1080;&#1088;&#1086;&#1074;&#1086;&#1095;&#1085;&#1099;&#1077; &#1087;&#1088;&#1086;&#1075;&#1085;&#1086;&#1079;&#1099;.</p>
+<figure id="attachment_60382" aria-describedby="caption-attachment-60382" style="width: 1440px" class="wp-caption aligncenter"><a href="https://realgazeta.com.ua/kak-rabotayet-stanitsa-luganskaya-21-05/%d1%81%d1%82%d0%b0%d0%bd%d0%b8%d1%86%d0%b0-%d0%bf%d1%80%d0%be%d0%bf%d1%83%d1%81%d1%82%d0%b8%d0%bb%d0%b8/" rel="attachment wp-att-60382"><img   alt="&#1050;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1085;. &#1063;&#1090;&#1086; &#1087;&#1088;&#1086;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090; &#1085;&#1072; &#1087;&#1091;&#1085;&#1082;&#1090;&#1072;&#1093; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1082;&#1072; &#1044;&#1086;&#1085;&#1073;&#1072;&#1089;&#1089;&#1072;" width="1440" height="1080" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1089;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080;.jpg 1440w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1089;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080;-300x225.jpg 300w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1089;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080;-768x576.jpg 768w,   https://realgazeta.com.ua/wp-content/uploads/2020/05/&#1089;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072;-&#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080;-1024x768.jpg 1024w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2020/05/%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D0%BF%D1%80%D0%BE%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B8.jpg" data-sizes="(max-width: 1440px) 100vw, 1440px" class="wp-image-60382 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a><figcaption id="caption-attachment-60382" class="wp-caption-text">16 &#1084;&#1072;&#1103; &#1085;&#1072; &#1050;&#1055;&#1042;&#1042; &ldquo;&#1057;&#1090;&#1072;&#1085;&#1080;&#1094;&#1072; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1072;&#1103;&rdquo; &#1074; &#1086;&#1073;&#1077; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099; &#1087;&#1088;&#1086;&#1087;&#1091;&#1089;&#1090;&#1080;&#1083;&#1080; &#1083;&#1102;&#1076;&#1077;&#1081;. &#1060;&#1086;&#1090;&#1086;: Facebook &#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1080;&#1085; &#1056;&#1077;&#1091;&#1094;&#1082;&#1080;&#1081;</figcaption></figure>
+<p>&#1054; &#1090;&#1086;&#1084;, &#1095;&#1090;&#1086; &#1074; &#1052;&#1080;&#1085;&#1079;&#1076;&#1088;&#1072;&#1074;&#1077; &#1086;&#1088;&#1080;&#1077;&#1085;&#1090;&#1080;&#1088;&#1091;&#1102;&#1090;&#1089;&#1103; &#1085;&#1072; &#1101;&#1087;&#1080;&#1076;&#1077;&#1084;&#1080;&#1086;&#1083;&#1086;&#1075;&#1080;&#1095;&#1077;&#1089;&#1082;&#1091;&#1102; &#1089;&#1080;&#1090;&#1091;&#1072;&#1094;&#1080;&#1102; &#1085;&#1077; &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; &#1085;&#1072; &#1087;&#1086;&#1076;&#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1100;&#1085;&#1086;&#1081; &#1090;&#1077;&#1088;&#1088;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;, &#1085;&#1086; &#1080; &#1074; &#1054;&#1056;&#1044;&#1051;&#1054;, &#1084;&#1099; &#1087;&#1080;&#1089;&#1072;&#1083;&#1080; &#1074;&#1099;&#1096;&#1077;. 20 &#1084;&#1072;&#1103; &#1074; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;&#1086;&#1081; &#1086;&#1073;&#1083;&#1072;&#1089;&#1090;&#1080; &#1087;&#1086;-&#1087;&#1088;&#1077;&#1078;&#1085;&#1077;&#1084;&#1091; 42 &#1079;&#1072;&#1073;&#1086;&#1083;&#1077;&#1074;&#1096;&#1080;&#1093; &#1082;&#1086;&#1088;&#1086;&#1085;&#1072;&#1074;&#1080;&#1088;&#1091;&#1089;&#1086;&#1084; (&#1080; &#1101;&#1090;&#1072; &#1094;&#1080;&#1092;&#1088;&#1072; &#1085;&#1077; &#1084;&#1077;&#1085;&#1103;&#1077;&#1090;&#1089;&#1103; &#1091;&#1078;&#1077; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077; &#1085;&#1077;&#1076;&#1077;&#1083;&#1080;), &#1072; &#1074; &#1044;&#1086;&#1085;&#1077;&#1094;&#1082;&#1086;&#1081; &ndash; 138 &#1089;&#1083;&#1091;&#1095;&#1072;&#1077;&#1074;. &#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1093; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093; &#1080;&#1079; &#1054;&#1056;&#1044;&#1051;&#1054; &#1085;&#1077;&#1090;, &#1085;&#1086; &#1075;&#1088;&#1091;&#1087;&#1087;&#1080;&#1088;&#1086;&#1074;&#1082;&#1072; &ldquo;&#1044;&#1053;&#1056;&rdquo; &#1088;&#1072;&#1089;&#1089;&#1082;&#1072;&#1079;&#1072;&#1083;&#1072; &#1086; 305 &#1089;&#1083;&#1091;&#1095;&#1072;&#1103;&#1093; &#1079;&#1072;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;, &#1072; &ldquo;&#1051;&#1053;&#1056;&rdquo; &ndash; &#1086; 345. &#1060;&#1086;&#1088;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1091;&#1090;&#1074;&#1077;&#1088;&#1078;&#1076;&#1072;&#1077;&#1090;, &#1095;&#1090;&#1086; &#1076;&#1077;&#1088;&#1078;&#1080;&#1090; &#1089;&#1080;&#1090;&#1091;&#1072;&#1094;&#1080;&#1102; &#1087;&#1086;&#1076; &#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1077;&#1084;, &#1085;&#1086; &#1074; &#1090;&#1086; &#1078;&#1077; &#1074;&#1088;&#1077;&#1084;&#1103; &#1085;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1090; &#1077;&#1077; &#1089;&#1083;&#1086;&#1078;&#1085;&#1086;&#1081; &#1080; &#1085;&#1072; &#1074;&#1089;&#1103;&#1082;&#1080;&#1081; &#1089;&#1083;&#1091;&#1095;&#1072;&#1081; &#1086;&#1090;&#1084;&#1077;&#1085;&#1103;&#1077;&#1090; &#1091; &#1074;&#1099;&#1087;&#1091;&#1089;&#1082;&#1085;&#1080;&#1082;&#1086;&#1074; &#1101;&#1082;&#1079;&#1072;&#1084;&#1077;&#1085;&#1099; &#1074; &#1096;&#1082;&#1086;&#1083;&#1077;.</p>
+<div class="post-views content-post post-60379 entry-meta">
+				<span class="post-views-icon dashicons dashicons-chart-bar"></span> <span class="post-views-label">Post Views:</span> <span class="post-views-count">417</span>
+			</div></div>
+
+                <div class="entry-taxonomies">
+                    <ul><li><a href="https://realgazeta.com.ua/tag/karantyn/" rel="tag">карантин</a></li><li><a href="https://realgazeta.com.ua/tag/kpvv-stanytsa-luhanskaia/" rel="tag">КПВВ Станица Луганская</a></li><li><a href="https://realgazeta.com.ua/tag/lnr/" rel="tag">ЛНР</a></li><li><a href="https://realgazeta.com.ua/tag/luhansk/" rel="tag">Луганск</a></li><li><a href="https://realgazeta.com.ua/tag/pereselentsi/" rel="tag">Переселенці</a></li><li><a href="https://realgazeta.com.ua/tag/pravyla-peresechenyia-kpvv/" rel="tag">правила пересечения КПВВ</a></li><li><a href="https://realgazeta.com.ua/tag/reznykov/" rel="tag">Резников</a></li></ul>                </div><!-- .entry-taxonomies -->
+
+                		</div><!-- .entry-content -->
+	</div>
+</article>
+
+	<nav class="navigation post-navigation" role="navigation" aria-label="Записи">
+		<h2 class="screen-reader-text">Навігація записів</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://realgazeta.com.ua/reznikov-o-ultimatuma-ldnr-21-05/" rel="prev">Украина просит ОБСЕ созвать внеочередное заседание ТКГ</a></div><div class="nav-next"><a href="https://realgazeta.com.ua/kak-rabotayet-programma-po-pokupke-zhilya-21-05/" rel="next">ООН помогает переселенцам покупать жилье. Как работает программа</a></div></div>
+	</nav>
+<div id="related-posts" class="mega-related-posts-wrap carousel-enabled">
+    
+            <div class="triple-news-wrap related-posts">
+
+                
+                    <h2 class="related-posts-title">Еще новости</h2>
+
+                
+                <div class="inner-wrapper">
+
+                    <div class="grid-news-items">
+
+                          
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/zmi-rozkryly-vymohy-moskvy-pro-shcho-medynskyy-u-stambuli-rozkazuvav-ukrainskiy-delehatsii/"><div class="bialty-container"><img width="380" height="250"   alt="&#1047;&#1052;&#1030; &#1088;&#1086;&#1079;&#1082;&#1088;&#1080;&#1083;&#1080; &#1074;&#1080;&#1084;&#1086;&#1075;&#1080; &#1052;&#1086;&#1089;&#1082;&#1074;&#1080;: &#1087;&#1088;&#1086; &#1097;&#1086; &#1052;&#1077;&#1076;&#1080;&#1085;&#1089;&#1100;&#1082;&#1080;&#1081; &#1091; &#1057;&#1090;&#1072;&#1084;&#1073;&#1091;&#1083;&#1110; &#1088;&#1086;&#1079;&#1082;&#1072;&#1079;&#1091;&#1074;&#1072;&#1074; &#1091;&#1082;&#1088;&#1072;&#1111;&#1085;&#1089;&#1100;&#1082;&#1110;&#1081; &#1076;&#1077;&#1083;&#1077;&#1075;&#1072;&#1094;&#1110;&#1111;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/perehovory-380x250.jpg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/zmi-rozkryly-vymohy-moskvy-pro-shcho-medynskyy-u-stambuli-rozkazuvav-ukrainskiy-delehatsii/">ЗМІ розкрили вимоги Москви: про що Мединський у Стамбулі розказував українській делегації</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                              
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/u-pokrovsku-pokazaly-ruiny-sviato-voznesenkoho-khramu-yoho-zruynuvala-rosiyska-raketa/"><div class="bialty-container"><img width="380" height="250"   alt="&#1059; &#1055;&#1086;&#1082;&#1088;&#1086;&#1074;&#1089;&#1100;&#1082;&#1091; &#1087;&#1086;&#1082;&#1072;&#1079;&#1072;&#1083;&#1080; &#1088;&#1091;&#1111;&#1085;&#1080; &#1057;&#1074;&#1103;&#1090;&#1086;-&#1042;&#1086;&#1079;&#1085;&#1077;&#1089;&#1077;&#1085;&#1100;&#1082;&#1086;&#1075;&#1086; &#1093;&#1088;&#1072;&#1084;&#1091;. &#1049;&#1086;&#1075;&#1086; &#1079;&#1088;&#1091;&#1081;&#1085;&#1091;&#1074;&#1072;&#1083;&#1072; &#1088;&#1086;&#1089;&#1110;&#1081;&#1089;&#1100;&#1082;&#1072; &#1088;&#1072;&#1082;&#1077;&#1090;&#1072;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/khram1-380x250.jpg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/u-pokrovsku-pokazaly-ruiny-sviato-voznesenkoho-khramu-yoho-zruynuvala-rosiyska-raketa/">У Покровську показали руїни Свято-Вознесенького храму. Його зруйнувала російська ракета</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                              
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/predstavnyk-rosii-medynskyy-na-perehovorakh-sypav-vyhadanymy-tsytatamy-napoleona-i-bismarka/"><div class="bialty-container"><img width="380" height="250"   alt="&#1055;&#1088;&#1077;&#1076;&#1089;&#1090;&#1072;&#1074;&#1085;&#1080;&#1082; &#1056;&#1086;&#1089;&#1110;&#1111; &#1052;&#1077;&#1076;&#1080;&#1085;&#1089;&#1100;&#1082;&#1080;&#1081; &#1085;&#1072; &#1087;&#1077;&#1088;&#1077;&#1075;&#1086;&#1074;&#1086;&#1088;&#1072;&#1093; &#1089;&#1080;&#1087;&#1072;&#1074; &#1074;&#1080;&#1075;&#1072;&#1076;&#1072;&#1085;&#1080;&#1084;&#1080; &#1094;&#1080;&#1090;&#1072;&#1090;&#1072;&#1084;&#1080; &#1053;&#1072;&#1087;&#1086;&#1083;&#1077;&#1086;&#1085;&#1072; &#1110; &#1041;&#1110;&#1089;&#1084;&#1072;&#1088;&#1082;&#1072;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/medynskyy--380x250.jpg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/predstavnyk-rosii-medynskyy-na-perehovorakh-sypav-vyhadanymy-tsytatamy-napoleona-i-bismarka/">Представник Росії Мединський на переговорах сипав вигаданими цитатами Наполеона і Бісмарка</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                              
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/u-luhansku-sudyly-avstraliytsia-iakyy-voiuvav-na-botsi-zsu/"><div class="bialty-container"><img width="380" height="250"   alt="&#1059; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1100;&#1082;&#1091; &amp;#8220;&#1089;&#1091;&#1076;&#1080;&#1083;&#1080;&amp;#8221; &#1072;&#1074;&#1089;&#1090;&#1088;&#1072;&#1083;&#1110;&#1081;&#1094;&#1103;, &#1103;&#1082;&#1080;&#1081; &#1074;&#1086;&#1102;&#1074;&#1072;&#1074; &#1085;&#1072; &#1073;&#1086;&#1094;&#1110; &#1047;&#1057;&#1059;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/Znimok-ekrana-2025-05-16-o-20.56.23-380x250.png" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/u-luhansku-sudyly-avstraliytsia-iakyy-voiuvav-na-botsi-zsu/">У Луганську &#8220;судили&#8221; австралійця, який воював на боці ЗСУ</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                              
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/v-anapu-de-stavsia-rozlyv-mazutu-ne-khochut-ikhaty-turysty-zmi/"><div class="bialty-container"><img width="380" height="250"   alt="&#1042; &#1040;&#1085;&#1072;&#1087;&#1091;, &#1076;&#1077; &#1089;&#1090;&#1072;&#1074;&#1089;&#1103; &#1088;&#1086;&#1079;&#1083;&#1080;&#1074; &#1084;&#1072;&#1079;&#1091;&#1090;&#1091;, &#1085;&#1077; &#1093;&#1086;&#1095;&#1091;&#1090;&#1100; &#1111;&#1093;&#1072;&#1090;&#1080; &#1090;&#1091;&#1088;&#1080;&#1089;&#1090;&#1080;, &mdash; &#1047;&#1052;&#1030;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/01/anapa2-380x250.jpg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/v-anapu-de-stavsia-rozlyv-mazutu-ne-khochut-ikhaty-turysty-zmi/">В Анапу, де стався розлив мазуту, не хочуть їхати туристи, — ЗМІ</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                              
+
+                            <div class="news-item">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/rosiiany-na-perehovorakh-u-stambuli-pohrozhuvaly-zakhopyty-shche-dvi-oblasti-ukrainy-zmi/"><div class="bialty-container"><img width="380" height="250"   alt="&#1056;&#1086;&#1089;&#1110;&#1103;&#1085;&#1080; &#1085;&#1072; &#1087;&#1077;&#1088;&#1077;&#1075;&#1086;&#1074;&#1086;&#1088;&#1072;&#1093; &#1091; &#1057;&#1090;&#1072;&#1084;&#1073;&#1091;&#1083;&#1110; &#1087;&#1086;&#1075;&#1088;&#1086;&#1078;&#1091;&#1074;&#1072;&#1083;&#1080; &#1079;&#1072;&#1093;&#1086;&#1087;&#1080;&#1090;&#1080; &#1097;&#1077; &#1076;&#1074;&#1110; &#1086;&#1073;&#1083;&#1072;&#1089;&#1090;&#1110; &#1059;&#1082;&#1088;&#1072;&#1111;&#1085;&#1080; &mdash; &#1047;&#1052;&#1030;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/peregovory-ua-and-rf-1305-380x250.jpeg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/rosiiany-na-perehovorakh-u-stambuli-pohrozhuvaly-zakhopyty-shche-dvi-oblasti-ukrainy-zmi/">Росіяни на переговорах у Стамбулі погрожували захопити ще дві області України — ЗМІ</a></h3>
+
+                                    <span class="posted-date">16.05.2025</span>
+
+                                </div><!-- .news-text-wrap -->
+
+                            </div><!-- .news-item -->
+
+                            
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div><!-- #related-posts -->
+<div id="comments" class="comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Залишити відповідь <small><a rel="nofollow" id="cancel-comment-reply-link" href="/kak-rabotayet-stanitsa-luganskaya-21-05/#respond" style="display:none;">Скасувати відповідь</a></small></h3><p class="must-log-in">Щоб відправити коментар вам необхідно <a href="https://realgazeta.com.ua/wp-login.php?redirect_to=https%3A%2F%2Frealgazeta.com.ua%2Fkak-rabotayet-stanitsa-luganskaya-21-05%2F">авторизуватись</a>.</p> <!-- OneAll.com / Social Login for WordPress / v5.7 -->
+<div class="oneall_social_login">
+ <div class="oneall_social_login_label" style="margin-bottom: 3px;"><label>Войти с помощью соцсети:</label></div>
+ <div class="oneall_social_login_providers" id="oneall_social_login_providers_6248059"></div>
+ <script data-cfasync="false" type="text/javascript">
+  var _oneall = _oneall || [];
+  _oneall.push(['social_login', 'set_providers', ['facebook']]);
+  _oneall.push(['social_login', 'set_callback_uri', (window.location.href + ((window.location.href.split('?')[1] ? '&amp;': '?') + "oa_social_login_source=comments"))]);
+  _oneall.push(['social_login', 'set_custom_css_uri', 'https://secure.oneallcdn.com/css/api/socialize/themes/wordpress/modern.css']);
+  _oneall.push(['social_login', 'do_render_ui', 'oneall_social_login_providers_6248059']);
+ </script>
+</div>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="sidebar-primary" class="widget-area sidebar">
+	<aside id="mega-magazine-ful-news-day-3" class="widget ful-news-day">
+            <div class="ful-news-wrap mega-news-day">
+
+                <div class="inner-wrapper">
+                    
+                        <div class="section-title">
+                            
+                            <h2 class="widget-title"><a href="https://realgazeta.com.ua/category/news/">Новини</a></h2>                        </div>
+
+                    
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">23:47</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/zmi-rozkryly-vymohy-moskvy-pro-shcho-medynskyy-u-stambuli-rozkazuvav-ukrainskiy-delehatsii/">ЗМІ розкрили вимоги Москви: про що Мединський у Стамбулі розказував українській делегації</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">21:57</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/u-pokrovsku-pokazaly-ruiny-sviato-voznesenkoho-khramu-yoho-zruynuvala-rosiyska-raketa/">У Покровську показали руїни Свято-Вознесенького храму. Його зруйнувала російська ракета</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">21:04</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/predstavnyk-rosii-medynskyy-na-perehovorakh-sypav-vyhadanymy-tsytatamy-napoleona-i-bismarka/">Представник Росії Мединський на переговорах сипав вигаданими цитатами Наполеона і Бісмарка</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">20:55</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/u-luhansku-sudyly-avstraliytsia-iakyy-voiuvav-na-botsi-zsu/">У Луганську &#8220;судили&#8221; австралійця, який воював на боці ЗСУ</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">19:46</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/v-anapu-de-stavsia-rozlyv-mazutu-ne-khochut-ikhaty-turysty-zmi/">В Анапу, де стався розлив мазуту, не хочуть їхати туристи, — ЗМІ</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">17:48</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/rosiiany-na-perehovorakh-u-stambuli-pohrozhuvaly-zakhopyty-shche-dvi-oblasti-ukrainy-zmi/">Росіяни на переговорах у Стамбулі погрожували захопити ще дві області України — ЗМІ</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">15:12</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/okupanty-vdaryly-dronom-po-avtomobiliu-v-kostiantynivtsi-zahynuly-dvoie-liudey-shche-dvoie-poraneni/">Окупанти вдарили дроном по автомобілю в Костянтинівці. Загинули двоє людей, ще двоє поранені</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">14:36</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/ne-bilshe-nizh-ideolohichnyy-shtamp-na-odniy-zi-shkil-luhanska-rosiiany-maliuiut-mural-z-katerynoiu-ii/">&#8220;Не більше ніж ідеологічний штамп&#8221;: на одній з гімназій Луганська росіяни малюють мурал з Катериною ІІ</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">14:09</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/armiia-rf-hotuietsia-do-litnoi-nastupalnoi-kampanii-meta-iakoi-vysnazhyty-zapasy-zbroi-zsu-wsj/">Армія РФ готується до літньої наступальної кампанії, мета якої — виснажити запаси зброї ЗСУ — WSJ</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">13:46</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/v-ukrainu-povernuly-tila-909-polehlykh-zakhysnykiv/">В Україну повернули тіла 909 полеглих Захисників</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">13:33</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/p-iatero-liudey-poraneni-v-rezultati-rankovoho-obstrilu-pokrovska/">П’ятеро людей поранені в результаті ранкового обстрілу Покровська</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                            <div class="news-item">
+                                <div class="news-text-wrap">
+                                    <span class="posted-date">12:41</span>
+                                    <div class="posted-title">
+                                        <h3><a href="https://realgazeta.com.ua/na-donechchyni-litak-rosiian-skynuv-500-kilohramovu-bombu-na-okupovane-selyshche-vona-vpala-u-dvori-budynku/">На Донеччині літак росіян скинув 500-кілограмову бомбу на окуповане селище. Вона впала у дворі будинку</a></h3>
+                                    </div>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                        
+                    
+                </div><!-- .inner-wrapper -->
+
+            </div><!-- .news-day-news-wrap -->
+
+            </aside><aside id="custom_html-7" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div id="mc_embed_shell">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 400px;}
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form action="https://realgazeta.us1.list-manage.com/subscribe/post?u=b6fc3224a59ad35effb049b84&amp;id=93953a458f&amp;f_id=00c2fde5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <div id="mc_embed_signup_scroll"><h2>Підписуйтесь на мейл-розсилку новин від «Реальної газети»</h2>
+          <div class="mc-field-group"><label for="mce-EMAIL">Email</label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+      <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display: none;"></div>
+          <div class="response" id="mce-success-response" style="display: none;"></div>
+      </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_b6fc3224a59ad35effb049b84_93953a458f" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Підписатись"></div>
+  </div>
+</form>
+</div>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div></div></aside><aside id="custom_html-6" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="section-title"><h2 class="widget-title">Наші відео</h2></div>
+<div class="video-inner-wrapper"><a href="https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw" target="_blank" rel="noopener">Дивитися на<img id="wp_thbn_23" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAaCAMAAAC6jTM8AAAAllBMVEX/////AAAAAAAoKCgdHR15eXklJSUSEhIWFhZra2vu7u4iIiKurq6enp7X19cKCgrk5OT/5OT4+Pi8vLyBgYG1tbXIyMj/bGz/FhZeXl5VVVX/q6uVlZX/Q0OoqKhLS0v/1NT/nZ3/hob/c3P/WFj/MTH/uLj/7u47Ozv/Jib/UlL/srL/S0v/wcEzMzP/jY3/y8v/fX0/ynYRAAADF0lEQVRIibWWa3uqMAzHa9pRpIwybiqiOC+bbjvO8/2/3EkCXobdI+48ywvkqWl+Nv6TVAi0xfvzcjVaf8w2u/GAbDzebWYf69Fq+fy+EL9kL4Mb9ofdkiAIEnrBz8AVhxxaSy6WQcPjj7AtOACAil58gNoVaA4ne7jkSt/JvY0dDNixNmZCxwKp565AoTVGohmjs9vcRR/ugjwffQn4UVgJsYub1mW596Qsy7q6zZ324U7JMwIGVr5nXFi2ofJkZ+kb7rIP97ONoHMhSqMyR5wT1+vHXX0ljJzcEbs+KCKCtAWdPs0Llm3SyLtRccNtpd88mRvkaavx4763r4TXp7WDu+Ytufa2nG0MWYPVACEdEfVLfwLA/MglZUdIBBgyNwzBWhZFsOV9mLbZV8KTEIfdFXfD3ICQuSZV75W04EkoKAuSuVKHR26oJXOleqCnmQD6KioGic60Lxa7K65Da7smR1sDUaawilJMdppsPVP34UpIY+mRV0rSTKTnV2Ls4F6rrVmtfJ3XHv5YZOmmsJIeXFXRVlrKFP1SfA67baPliteRgxuByjRVUXPSnMPf5pKe0RfliLUw5Eqsv+MmSweXIknStJWmxKxZitWPS76p2HvExTzJb/L87MwzhpVcRXA3F7ucToXPK3PiunR1NSpaXVG2uFeeuekd3By5Uu731MQddbSYdbFtHXEl8Wz4D65pJtZV33h1daz1uelxk/x5ns0kjshEB/PXQT32ySuuvldXknXlrFSnfXa499dReFFHRTms7piDF1wMry77RnLFtZfcOfUKao5N35hbvxSHPtxFh0sHKto+iZ1I58HEv+Din6myJLMt19tGESrKcrYhSmqepH24osMVYKS2hudCgQ1Yw35ozly8CkkFkKkjFyz60Ea8CVlrPPoXeiT65cxt72yxB1pb4HvWBG+MKqh4Dk54KIoK8MuiaOYgQDxEly3vk7gPIHVOn669n7AijuP2DhvlYdGO8iLEYydxTKMeHfjbEOd8ws68EuWFOO47vYrDFK/tb7PNl5453szeRqvP6UH8hv0DS6c6uIk7/Q8AAAAASUVORK5CYII=" class="YQ4gaf zr758c wA1Bge" height="19.88" width="91" alt="" data-atf="1" data-frt="0"></a></div></div></aside><aside id="mega-magazine-split-news-3" class="widget split-news">
+            <div class="split-news-wrap mega-cat-232">
+
+                
+                <div class="inner-wrapper">
+                    
+                                <div class="split-right-side">
+
+                                    <div class="news-item">
+                                        <div class="news-thumb">
+                                            <a href="https://realgazeta.com.ua/den-peremohy-v-luhansku-yak-propahandysty-vkraly-sviato/"><div class="bialty-container"><img width="380" height="250"   alt="&#1044;&#1077;&#1085;&#1100; &#1087;&#1077;&#1088;&#1077;&#1084;&#1086;&#1075;&#1080; &#1074; &#1051;&#1091;&#1075;&#1072;&#1085;&#1089;&#1100;&#1082;&#1091;. &#1071;&#1082; &#1087;&#1088;&#1086;&#1087;&#1072;&#1075;&#1072;&#1085;&#1076;&#1080;&#1089;&#1090;&#1080; &#1074;&#1082;&#1088;&#1072;&#1083;&#1080; &#1089;&#1074;&#1103;&#1090;&#1086;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/Dyzay-n-bez-nazvy-21-1-380x250.jpg" class="attachment-mega-magazine-mid size-mega-magazine-mid wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>  
+                                        </div><!-- .news-thumb --> 
+
+                                        <div class="news-text-wrap">
+                                            <h3><a href="https://realgazeta.com.ua/den-peremohy-v-luhansku-yak-propahandysty-vkraly-sviato/">День перемоги в Луганську. Як пропагандисти вкрали свято</a></h3>
+
+                                            <span class="posted-date">08.05.2025</span>
+                                            <p>Російська пропаганда почала агресію проти України задовго до 2014 року чи повномасштабного вторгнення. В середині нульових Кремль здійснив одну з...</p>
+
+                                        </div><!-- .news-text-wrap -->
+                                    </div><!-- .news-item -->
+
+                                </div>
+
+                                <div class="featured-small-items">
+
+                                
+                                    <div class="news-item layout-two">
+                                        <div class="news-thumb">
+                                            <a href="https://realgazeta.com.ua/kytayski-firmy-bilia-okupovanoho-mariupolia-zhurnalisty-znayshly-slidy-kompaniy-z-kytaiu/"><div class="bialty-container"><img width="115" height="80"   alt="&#1050;&#1080;&#1090;&#1072;&#1081;&#1089;&#1100;&#1082;&#1110; &#1092;&#1110;&#1088;&#1084;&#1080; &#1073;&#1110;&#1083;&#1103; &#1086;&#1082;&#1091;&#1087;&#1086;&#1074;&#1072;&#1085;&#1086;&#1075;&#1086; &#1052;&#1072;&#1088;&#1110;&#1091;&#1087;&#1086;&#1083;&#1103;. &#1046;&#1091;&#1088;&#1085;&#1072;&#1083;&#1110;&#1089;&#1090;&#1080; &#1079;&#1085;&#1072;&#1081;&#1096;&#1083;&#1080; &#1089;&#1083;&#1110;&#1076;&#1080; &#1082;&#1086;&#1084;&#1087;&#1072;&#1085;&#1110;&#1081; &#1079; &#1050;&#1080;&#1090;&#1072;&#1102;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/02/IMG_20250225_112713_535-115x80.jpg" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>   
+                                        </div><!-- .news-thumb --> 
+
+                                        <div class="news-text-wrap">
+                                            <h3><a href="https://realgazeta.com.ua/kytayski-firmy-bilia-okupovanoho-mariupolia-zhurnalisty-znayshly-slidy-kompaniy-z-kytaiu/">Китайські фірми біля окупованого Маріуполя. Журналісти знайшли сліди компаній з Китаю</a></h3>
+                                            <span class="posted-date">25.02.2025</span>
+
+                                        </div><!-- .news-text-wrap -->
+                                    </div><!-- .news-item -->
+
+                                    
+                                    <div class="news-item layout-two">
+                                        <div class="news-thumb">
+                                            <a href="https://realgazeta.com.ua/chomu-pereselentsi-povertaiutsia-na-tot-istoriia-rodyny-hotovoi-povernutysia-z-rivnoho-do-kramatorska/"><div class="bialty-container"><img width="115" height="80"   alt="&#1063;&#1086;&#1084;&#1091; &#1087;&#1077;&#1088;&#1077;&#1089;&#1077;&#1083;&#1077;&#1085;&#1094;&#1110; &#1087;&#1086;&#1074;&#1077;&#1088;&#1090;&#1072;&#1102;&#1090;&#1100;&#1089;&#1103; &#1085;&#1072; &#1058;&#1054;&#1058;. &#1030;&#1089;&#1090;&#1086;&#1088;&#1110;&#1103; &#1088;&#1086;&#1076;&#1080;&#1085;&#1080;, &#1075;&#1086;&#1090;&#1086;&#1074;&#1086;&#1111; &#1087;&#1086;&#1074;&#1077;&#1088;&#1085;&#1091;&#1090;&#1080;&#1089;&#1103; &#1079; &#1056;&#1110;&#1074;&#1085;&#1086;&#1075;&#1086; &#1076;&#1086; &#1050;&#1088;&#1072;&#1084;&#1072;&#1090;&#1086;&#1088;&#1089;&#1100;&#1082;&#1072;" data-src="https://realgazeta.com.ua/wp-content/uploads/2024/11/Dyzay-n-bez-nazvy-9-2-115x80.jpg" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>   
+                                        </div><!-- .news-thumb --> 
+
+                                        <div class="news-text-wrap">
+                                            <h3><a href="https://realgazeta.com.ua/chomu-pereselentsi-povertaiutsia-na-tot-istoriia-rodyny-hotovoi-povernutysia-z-rivnoho-do-kramatorska/">Чому переселенці повертаються на ТОТ. Історія родини, готової повернутися з Рівного до Краматорська</a></h3>
+                                            <span class="posted-date">28.11.2024</span>
+
+                                        </div><!-- .news-text-wrap -->
+                                    </div><!-- .news-item -->
+
+                                    
+                        </div><!-- .featured-small-items -->
+
+                    
+                </div><!-- .inner-wrapper -->
+
+            </div><!-- .mix-column-news -->
+
+            </aside><aside id="mega-magazine-viewed-posts-2" class="widget mega-popular-posts">
+	        <div class="popular-news-wrap">
+
+                <h2 class="widget-title">Популярне</h2>
+                <div class="popular-posts-inner">
+
+                    
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/hra-u-zhyvykh-soldatykiv-yak-rosiia-militaryzuie-ditey-v-sadochkakh-na-okupovaniy-luhanshchyni/"><div class="bialty-container"><img width="115" height="80"   alt="&#1043;&#1088;&#1072; &#1091; &#1078;&#1080;&#1074;&#1080;&#1093; &#1089;&#1086;&#1083;&#1076;&#1072;&#1090;&#1080;&#1082;&#1110;&#1074;. &#1071;&#1082; &#1056;&#1086;&#1089;&#1110;&#1103; &#1084;&#1110;&#1083;&#1110;&#1090;&#1072;&#1088;&#1080;&#1079;&#1091;&#1108; &#1076;&#1110;&#1090;&#1077;&#1081; &#1074; &#1089;&#1072;&#1076;&#1086;&#1095;&#1082;&#1072;&#1093; &#1085;&#1072; &#1086;&#1082;&#1091;&#1087;&#1086;&#1074;&#1072;&#1085;&#1110;&#1081; &#1051;&#1091;&#1075;&#1072;&#1085;&#1097;&#1080;&#1085;&#1110;" data-src="https://realgazeta.com.ua/wp-content/uploads/2025/05/Dyzay-n-bez-nazvy-9-115x80.jpg" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>
+                                </div><!-- .news-thumb -->
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/hra-u-zhyvykh-soldatykiv-yak-rosiia-militaryzuie-ditey-v-sadochkakh-na-okupovaniy-luhanshchyni/">Гра у живих солдатиків. Як Росія мілітаризує дітей в садочках на окупованій Луганщині</a></h3>
+                                     <span class="posted-date">12.05.2025</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/z-polihonu-pid-rostovom-vtekla-hrupa-rosiyskykh-viyskovykh-sered-nykh-ie-zasudzheni-iaki-pidpysaly-kontrakt/"><div class="bialty-container"><img width="115" height="80"   alt="&#1047; &#1087;&#1086;&#1083;&#1110;&#1075;&#1086;&#1085;&#1091; &#1087;&#1110;&#1076; &#1056;&#1086;&#1089;&#1090;&#1086;&#1074;&#1086;&#1084; &#1074;&#1090;&#1077;&#1082;&#1083;&#1072; &#1075;&#1088;&#1091;&#1087;&#1072; &#1088;&#1086;&#1089;&#1110;&#1081;&#1089;&#1100;&#1082;&#1080;&#1093; &#1074;&#1110;&#1081;&#1089;&#1100;&#1082;&#1086;&#1074;&#1080;&#1093;. &#1057;&#1077;&#1088;&#1077;&#1076; &#1085;&#1080;&#1093; &#1108; &#1079;&#1072;&#1089;&#1091;&#1076;&#1078;&#1077;&#1085;&#1110;, &#1103;&#1082;&#1110; &#1087;&#1110;&#1076;&#1087;&#1080;&#1089;&#1072;&#1083;&#1080; &#1082;&#1086;&#1085;&#1090;&#1088;&#1072;&#1082;&#1090;" data-src="https://realgazeta.com.ua/wp-content/uploads/2023/06/72858923-283652735-2835-115x80.jpeg" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>
+                                </div><!-- .news-thumb -->
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/z-polihonu-pid-rostovom-vtekla-hrupa-rosiyskykh-viyskovykh-sered-nykh-ie-zasudzheni-iaki-pidpysaly-kontrakt/">З полігону під Ростовом втекла група російських військових. Серед них є засуджені, які підписали контракт</a></h3>
+                                     <span class="posted-date">13.05.2025</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/na-donechchyni-litak-rosiian-skynuv-500-kilohramovu-bombu-na-okupovane-selyshche-vona-vpala-u-dvori-budynku/"><div class="bialty-container"><img width="115" height="80"   alt="&#1053;&#1072; &#1044;&#1086;&#1085;&#1077;&#1095;&#1095;&#1080;&#1085;&#1110; &#1083;&#1110;&#1090;&#1072;&#1082; &#1088;&#1086;&#1089;&#1110;&#1103;&#1085; &#1089;&#1082;&#1080;&#1085;&#1091;&#1074; 500-&#1082;&#1110;&#1083;&#1086;&#1075;&#1088;&#1072;&#1084;&#1086;&#1074;&#1091; &#1073;&#1086;&#1084;&#1073;&#1091; &#1085;&#1072; &#1086;&#1082;&#1091;&#1087;&#1086;&#1074;&#1072;&#1085;&#1077; &#1089;&#1077;&#1083;&#1080;&#1097;&#1077;. &#1042;&#1086;&#1085;&#1072; &#1074;&#1087;&#1072;&#1083;&#1072; &#1091; &#1076;&#1074;&#1086;&#1088;&#1110; &#1073;&#1091;&#1076;&#1080;&#1085;&#1082;&#1091;" data-src="https://realgazeta.com.ua/wp-content/uploads/2024/01/lita-i-bomba-115x80.jpg" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>
+                                </div><!-- .news-thumb -->
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/na-donechchyni-litak-rosiian-skynuv-500-kilohramovu-bombu-na-okupovane-selyshche-vona-vpala-u-dvori-budynku/">На Донеччині літак росіян скинув 500-кілограмову бомбу на окуповане селище. Вона впала у дворі будинку</a></h3>
+                                     <span class="posted-date">16.05.2025</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                    
+                </div>
+
+	        </aside><aside id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><!-- wp:image {"align":"right","id":64505,"width":262,"height":153,"sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="alignright size-large is-resized"><img  alt=""  width="262" height="153" data-src="https://realgazeta.com.ua/wp-content/uploads/2020/12/EJcov19_logo-wordmark_LR-1024x600.png?v=1608317962" class="wp-image-64505 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><figcaption>Realnaja Gazeta has been awarded 10000  from the European Journalism COVID-19 Support Fund to support us to investigate and produce media content about the<br>situation in the armed conflict zone in the East of Ukraine, including<br>uncontrolled territories of Luhansk and Donetsk regions and problems of<br>internally displaced persons (IDPs). during the Covid-19 crisis</figcaption></figure></div>
+<!-- /wp:image --></div></aside></div><!-- #secondary -->
+			</div> <!-- inner-wrapper -->   
+		</div><!-- .container -->
+	</div><!-- #content -->
+
+			<aside id="footer-widgets" class="widget-area">
+
+		    <div class="container">
+		        <div class="inner-wrapper">
+
+		        	
+		        	 		        	 		<div class="widget-column footer-active-3">
+		        	 			<aside id="media_image-3" class="widget widget_media_image"><img width="80" height="80"   alt="Реальна газета - Розслідування і аналітика на Сході України. Новини Луганська та Луганської області" style="max-width: 100%; height: auto;" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2020/12/logo-1.png 80w,   https://realgazeta.com.ua/wp-content/uploads/2020/12/logo-1-78x78.png 78w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2020/12/logo-1.png" data-sizes="(max-width: 80px) 100vw, 80px" class="image wp-image-64293  attachment-full size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><p><strong style="color: #fff;">Інформаційно-аналітичний онлайн-проект про Донбас і не тільки.</strong></p>
+</div>
+		</aside><aside id="mega-magazine-social-2" class="widget social-widgets">            <ul>
+              
+                        <li><a target="_blank" href="https://facebook.com/realnajagazeta">https://facebook.com/realnajagazeta</a></li>
+
+                    
+                        <li><a target="_blank" href="https://twitter.com/realnagazeta">https://twitter.com/realnagazeta</a></li>
+
+                    
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw">https://www.youtube.com/channel/UCA0GRKtkmFP-PRAFoOFRImw</a></li>
+
+                                </ul> 
+
+            </aside>		        	 		</div>
+		        	 				        	 		<div class="widget-column footer-active-3">
+		        	 			<aside id="categories-2" class="widget widget_categories"><h4 class="widget-title">Категорії</h4>
+			<ul>
+					<li class="cat-item cat-item-232"><a href="https://realgazeta.com.ua/category/video/">Відео</a>
+</li>
+	<li class="cat-item cat-item-2023"><a href="https://realgazeta.com.ua/category/war/">Війна</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://realgazeta.com.ua/category/economy/">Економіка</a>
+</li>
+	<li class="cat-item cat-item-181"><a href="https://realgazeta.com.ua/category/news/">Новини</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://realgazeta.com.ua/category/politics/">Політика</a>
+</li>
+	<li class="cat-item cat-item-654"><a href="https://realgazeta.com.ua/category/incidents/">Пригоди</a>
+</li>
+	<li class="cat-item cat-item-180"><a href="https://realgazeta.com.ua/category/articles/">Статті</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="https://realgazeta.com.ua/category/society/">Суспільство</a>
+</li>
+	<li class="cat-item cat-item-288"><a href="https://realgazeta.com.ua/category/foto/">Фото</a>
+</li>
+			</ul>
+
+			</aside>		        	 		</div>
+		        	 				        	 		<div class="widget-column footer-active-3">
+		        	 			<aside id="mega-magazine-popular-posts-2" class="widget mega-popular-posts">
+	        <div class="popular-news-wrap">
+                
+                <h4 class="widget-title">Популярні новини</h4>
+                <div class="popular-posts-inner">
+
+                    
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/tzarov-pro-bolotova/"><div class="bialty-container"><img width="115" height="77"   alt="&#1062;&#1072;&#1088;&#1077;&#1074; &#1088;&#1072;&#1089;&#1089;&#1082;&#1072;&#1079;&#1072;&#1083; &#1086; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1080;&#1093; &#1095;&#1072;&#1089;&#1072;&#1093; &#1078;&#1080;&#1079;&#1085;&#1080; &#1041;&#1086;&#1083;&#1086;&#1090;&#1086;&#1074;&#1072;" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2017/01/&#1083;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;-&#1094;&#1072;&#1088;&#1077;&#1074;-1.jpg 1200w,   https://realgazeta.com.ua/wp-content/uploads/2017/01/&#1083;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;-&#1094;&#1072;&#1088;&#1077;&#1074;-1-300x200.jpg 300w,   https://realgazeta.com.ua/wp-content/uploads/2017/01/&#1083;&#1091;&#1075;&#1072;&#1085;&#1089;&#1082;-&#1094;&#1072;&#1088;&#1077;&#1074;-1-1024x683.jpg 1024w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2017/01/%D0%BB%D1%83%D0%B3%D0%B0%D0%BD%D1%81%D0%BA-%D1%86%D0%B0%D1%80%D0%B5%D0%B2-1.jpg" data-sizes="(max-width: 115px) 100vw, 115px" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>   
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/tzarov-pro-bolotova/">Царев рассказал о последних часах жизни Болотова</a></h3>
+                                     <span class="posted-date">27.01.2017</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/zastrelili-deputatov-lnr-28-08/"><div class="bialty-container"><img width="115" height="68"   alt="&#1042; &laquo;&#1051;&#1053;&#1056;&raquo; &#1085;&#1072;&#1096;&#1083;&#1080; &#1079;&#1072;&#1089;&#1090;&#1088;&#1077;&#1083;&#1077;&#1085;&#1085;&#1099;&#1084;&#1080; &#1076;&#1074;&#1091;&#1093; &laquo;&#1076;&#1077;&#1087;&#1091;&#1090;&#1072;&#1090;&#1086;&#1074;&raquo; &laquo;&#1085;&#1072;&#1088;&#1086;&#1076;&#1085;&#1086;&#1075;&#1086; &#1089;&#1086;&#1074;&#1077;&#1090;&#1072;&raquo; (&#1054;&#1073;&#1085;&#1086;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103;)" data-srcset="https://realgazeta.com.ua/wp-content/uploads/2017/08/&#1084;&#1080;&#1083;&#1080;&#1094;&#1080;&#1103;-&#1083;&#1085;&#1088;.jpg 2326w,   https://realgazeta.com.ua/wp-content/uploads/2017/08/&#1084;&#1080;&#1083;&#1080;&#1094;&#1080;&#1103;-&#1083;&#1085;&#1088;-300x178.jpg 300w,   https://realgazeta.com.ua/wp-content/uploads/2017/08/&#1084;&#1080;&#1083;&#1080;&#1094;&#1080;&#1103;-&#1083;&#1085;&#1088;-768x456.jpg 768w,   https://realgazeta.com.ua/wp-content/uploads/2017/08/&#1084;&#1080;&#1083;&#1080;&#1094;&#1080;&#1103;-&#1083;&#1085;&#1088;-1024x608.jpg 1024w"  data-src="https://realgazeta.com.ua/wp-content/uploads/2017/08/%D0%BC%D0%B8%D0%BB%D0%B8%D1%86%D0%B8%D1%8F-%D0%BB%D0%BD%D1%80.jpg" data-sizes="(max-width: 115px) 100vw, 115px" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>   
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/zastrelili-deputatov-lnr-28-08/">В «ЛНР» нашли застреленными двух «депутатов» «народного совета» (Обновляется)</a></h3>
+                                     <span class="posted-date">28.08.2017</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                            <div class="news-item layout-two">
+                                <div class="news-thumb">
+                                    <a href="https://realgazeta.com.ua/gruzinskaya-mechta/"><div class="bialty-container"><img width="115" height="80"   alt="&#1043;&#1088;&#1091;&#1079;&#1080;&#1085;&#1089;&#1082;&#1072;&#1103; &#1084;&#1077;&#1095;&#1090;&#1072;" data-src="https://realgazeta.com.ua/wp-content/uploads/2013/10/21-115x80.gif?v=1607985321" class="attachment-mega-magazine-thumb size-mega-magazine-thumb wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+</a>   
+                                </div><!-- .news-thumb --> 
+
+                                <div class="news-text-wrap">
+                                    <h3><a href="https://realgazeta.com.ua/gruzinskaya-mechta/">Грузинская мечта</a></h3>
+                                     <span class="posted-date">22.10.2013</span>
+                                </div><!-- .news-text-wrap -->
+                            </div><!-- .news-item -->
+
+                            
+                    
+                </div>
+
+	        </aside>		        	 		</div>
+		        	 				        </div><!-- .inner-wrapper -->
+		    </div><!-- .container -->
+
+		</aside><!-- #footer-widgets -->
+
+	
+	<footer id="colophon" class="site-footer" role="contentinfo">
+	   <div class="container">
+	      <div class="site-info-holder">
+	        <div class="copyright">
+				
+				    <span class="copyright-text">
+
+				        Авторські права © Всі права захищені
+				    </span>
+
+				    				<span>
+				</span>
+	        </div>
+	    </div>
+	   </div><!-- .container -->
+	</footer>
+</div><!-- #page -->
+
+<a href="#page" class="gotop" id="btn-gotop"><i class="fa fa-angle-up"></i></a><script type='text/javascript' src='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/js/navigation.js?ver=20151215' id='mega-magazine-navigation-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/js/skip-link-focus-fix.js?ver=20151215' id='mega-magazine-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/plugins/elementor/assets/lib/slick/slick.js?ver=1.8.1' id='jquery-slick-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/js/jquery.meanmenu.js?ver=2.0.2' id='jquery-meanmenu-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/js/theia-sticky-sidebar.js?ver=1.0.7' id='jquery-theia-sticky-sidebar-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/themes/mega-magazine/assets/js/custom.js?ver=1.0.3' id='mega-magazine-custom-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-includes/js/comment-reply.js?ver=5.6.14' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.12.6' id='smush-lazy-load-js'></script>
+<script type='text/javascript' src='https://realgazeta.com.ua/wp-includes/js/wp-embed.js?ver=5.6.14' id='wp-embed-js'></script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(70435432, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/70435432" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

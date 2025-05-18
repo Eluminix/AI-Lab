@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html
+  lang="de"
+  data-consentmanagement
+  data-responsive
+>
+    <head>
+        <title>Dieser Text wird nicht weiter zur Verfügung gestellt | Telepolis</title>
+
+        
+
+        
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="publisher" content="Heise Medien">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<link rel="preload" href="/fonts/source-sans-pro-subset/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-sans-pro-subset/sourcesanspro-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="dns-prefetch" href="//heise.cloudimg.io">
+<link rel="dns-prefetch" href="//1.f.ix.de">
+<link rel="dns-prefetch" href="//m.heise.de">
+
+
+<link rel="dns-prefetch" href="//de.ioam.de">
+<link rel="dns-prefetch" href="//responder.wt.heise.de">
+<link rel="dns-prefetch" href="//securepubads.g.doubleclick.net">
+<link rel="dns-prefetch" href="//prophet.heise.de">
+
+
+<link rel="preconnect" href="//heise.cloudimg.io">
+<link rel="preconnect" href="//1.f.ix.de">
+
+
+<link rel="preconnect" href="//de.ioam.de">
+<link rel="preconnect" href="//responder.wt.heise.de">
+<link rel="preconnect" href="//securepubads.g.doubleclick.net">
+<link rel="preconnect" href="//prophet.heise.de">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="title" content="Dieser Text wird nicht weiter zur Verfügung gestellt">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="description" content="✓ kritisch, ✓ meinungsstark, ✓ informativ! Telepolis hinterfragt die digitale Gesellschaft und ihre Entwicklung in Politik, Wirtschaft &amp;amp; Medien.">
+
+
+
+
+
+
+
+  <meta property="fb:pages" content="334294863922">
+  <meta property="og:image" content="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/09/3/1/4/5/social_graph_tp-a23d55c33fd86f32.png">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Telepolis">
+  <meta property="og:title" content="Dieser Text wird nicht weiter zur Verfügung gestellt">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.telepolis.de/Dieser-Text-wird-nicht-weiter-zur-Verfuegung-gestellt-10188780.html">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:image" content="https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/09/3/1/4/5/social_graph_tp-a23d55c33fd86f32.png">
+  <meta property="twitter:site" content="@heiseonline">
+  <meta property="twitter:title" content="Dieser Text wird nicht weiter zur Verfügung gestellt">
+
+
+
+
+
+<link rel="home" type="text/html" title="Startseite" href="/">
+<link rel="copyright" title="Copyright" href="/impressum.html">
+<meta name="generator" content="InterRed V24.2.9, http://www.interred.de/, InterRed GmbH" />
+
+<meta data-embetty-server="https://api.heise.de/svc/embetty">
+
+
+
+
+        
+
+
+
+<script>!function(e){var t={};function o(n){if(t[n])return t[n].exports;var i=t[n]={i:n,l:!1,exports:{}};return e[n].call(i.exports,i,i.exports,o),i.l=!0,i.exports}o.m=e,o.c=t,o.d=function(e,t,n){o.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.p="/assets/heise/",o(o.s=474)}({342:function(e,t,o){"use strict";(function(t){var o=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}();e.exports=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.desktopUserAgents=/(Macintosh|X11|Windows NT|iPad|Tablet|Nexus 10|KF.*Silk)/i}return o(e,[{key:"forceDesktop",value:function(){return 1===parseInt(this.store.mobile_detect_force_desktop)}},{key:"forceMobile",value:function(){return 1===parseInt(this.store.mobile_detect_force_mobile)}},{key:"isDesktop",value:function(){return!/Windows Phone 10/.test(this.userAgent)&&(this.portraitWidth>640||!(!this.desktopUserAgents.test(this.userAgent)||/(ZuneWP7|Mobile Safari)/.test(this.userAgent)))}},{key:"isMobile",value:function(){return!!/Windows Phone 10/.test(this.userAgent)||!(this.portraitWidth>640)&&(!!/(Android|Phone|Mobile|iPod|ZuneWP7|NokiaN97)/i.test(this.userAgent)||!this.desktopUserAgents.test(this.userAgent))}},{key:"persistForce",value:function(){var e=t.window.document.location;"mobile_detect_force_desktop"===e.hash.slice(1)?(this.store.mobile_detect_force_desktop=1,this.store.mobile_detect_force_mobile=0):"unset_mobile_detect_force_desktop"===e.hash.slice(1)&&(this.store.mobile_detect_force_desktop=0),"mobile_detect_force_mobile"===e.hash.slice(1)?(this.store.mobile_detect_force_mobile=1,this.store.mobile_detect_force_desktop=0):"unset_mobile_detect_force_mobile"===e.hash.slice(1)&&(this.store.mobile_detect_force_mobile=0)}},{key:"userAgent",get:function(){return t.window.navigator.userAgent}},{key:"width",get:function(){return t.window.screen.width}},{key:"height",get:function(){return t.window.screen.height}},{key:"portraitWidth",get:function(){return Math.min(this.width,this.height)}},{key:"store",get:function(){return t.window.localStorage}}]),e}()}).call(t,o(43))},43:function(e,t,o){"use strict";var n,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(e){"object"===("undefined"==typeof window?"undefined":i(window))&&(n=window)}e.exports=n},474:function(e,t,o){"use strict";var n=function(e){return e&&e.__esModule?e:{default:e}}(o(475));document.documentElement.setAttribute("data-device",n.default)},475:function(e,t,o){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=new(function(e){return e&&e.__esModule?e:{default:e}}(o(342)).default),i="desktop",r=window.matchMedia("(max-width: 768px)").matches,s=document.querySelector("html[data-responsive]");(n.isMobile()||r&&s)&&(i="mobile"),t.default=i}});</script>
+
+<script type="application/json" data-akwa-config>
+  {
+    "channel": "tp",
+    "contentId": "4757570",
+    "isHeisePlus": false,
+    "clickPerformance": {
+      "keywords": [],
+      "pagetype": "Sonstige"
+      
+    }
+    ,
+    "consentManagement": {
+      "scriptUrl": "https%3A%2F%2Fcmp.telepolis.de/unified/wrapperMessagingWithoutDetection.js"
+    }
+  }
+</script>
+
+
+  <script>function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(){for(var t,e,o=[],n=window,r=n;r;){try{if(r.frames.__tcfapiLocator){t=r;break}}catch(t){}if(r===n.top)break;r=n.parent}t||(function t(){var e=n.document,o=!!n.frames.__tcfapiLocator;if(!o)if(e.body){var r=e.createElement("iframe");r.style.cssText="display:none",r.name="__tcfapiLocator",e.body.appendChild(r)}else setTimeout(t,5);return!o}(),n.__tcfapi=function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return o;"setGdprApplies"===n[0]?n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0)):"ping"===n[0]?"function"==typeof n[2]&&n[2]({gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"}):o.push(n)},n.addEventListener("message",(function(t){var e="string"==typeof t.data,o={};if(e)try{o=JSON.parse(t.data)}catch(t){}else o=t.data;var n="object"===_typeof(o)?o.__tcfapiCall:null;n&&window.__tcfapi(n.command,n.version,(function(o,r){var a={__tcfapiReturn:{returnValue:o,success:r,callId:n.callId}};t&&t.source&&t.source.postMessage&&t.source.postMessage(e?JSON.stringify(a):a,"*")}),n.parameter)}),!1))}();</script>
+
+  <script>
+    window._sp_queue = [];
+    window._sp_ = {
+      config: {
+        accountId: 1603,
+        baseEndpoint: 'https://cmp.telepolis.de',
+        propertyId: 29105,
+        gdpr: { },
+        events: {
+          onMessageChoiceSelect: function() {
+            console.log('[event] onMessageChoiceSelect', arguments);
+          },
+          onMessageReady: function() {
+            console.log('[event] onMessageReady', arguments);
+          },
+          onMessageChoiceError: function() {
+            console.log('[event] onMessageChoiceError', arguments);
+          },
+          onPrivacyManagerAction: function() {
+            console.log('[event] onPrivacyManagerAction', arguments);
+          },
+          onPMCancel: function() {
+            console.log('[event] onPMCancel', arguments);
+          },
+          onMessageReceiveData: function() {
+            console.log('[event] onMessageReceiveData', arguments);
+          },
+          onSPPMObjectReady: function() {
+            console.log('[event] onSPPMObjectReady', arguments);
+          },
+          onConsentReady: function (consentUUID, euconsent) {
+            console.log('[event] onConsentReady', arguments);
+          },
+          onError: function() {
+            console.log('[event] onError', arguments);
+          },
+        }
+      }
+    }
+  </script>
+  <script src='https://cmp.telepolis.de/unified/wrapperMessagingWithoutDetection.js' async></script>
+
+
+
+<script async src="/assets/akwa/v24/js/akwa.js?.ltc.83b7e72485c17aad52d9"></script>
+
+
+
+    <script type="text/javascript" src="/js/jquery/jquery-2.1.1.min.js"></script>
+
+
+
+        
+
+<link rel="stylesheet" href="/assets/styles/index.css?.ltc.5d658eda6a51d9911923" type="text/css">
+
+
+<link
+  href="/assets/akwa/v24/css/akwa.css?.ltc.0d0ff018715e0a77eef0"
+  media="print"
+  onload="this.media='all';this.onload='null'"
+  rel="stylesheet"
+  type="text/css"
+>
+<noscript>
+  <link href="/assets/akwa/v24/css/akwa.css?.ltc.0d0ff018715e0a77eef0" rel="stylesheet" type="text/css">
+</noscript>
+    <link href="/assets/heise/heiseresp/css/heiseresp.css?.ltc.cc74f41abb2c61b47edf" rel="stylesheet" type="text/css">
+
+        <link rel="icon" href="/icons/favicon.ico?.ltc.b04df649c1935855d640" sizes="any">
+        <link rel="icon" href="/icons/favicon.svg?.ltc.a6b5f355325a8975af5f" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+        <link rel="manifest" href="/icons/site.webmanifest">
+        <meta name="application-name" content="Onlinemagazin für Politik &amp;amp; Medien im digitalen Zeitalter | Telepolis">
+        <meta name="msapplication-tooltip" content="Telepolis">
+        <meta name="msapplication-starturl" content="http://www.heise.de/tp/">
+        <meta name="msapplication-TileColor" content="#B42900">
+        <meta name="msapplication-square70x70logo" content="/tp/icons/windows_tiny.png">
+        <meta name="msapplication-square150x150logo" content="/tp/icons/windows_square.png">
+        <meta name="msapplication-wide310x150logo" content="/tp/icons/windows_wide.png">
+        <meta name="msapplication-square310x310logo" content="/tp/icons/windows_large.png">
+
+        <link rel="author" title="Kontakt" href="http://www.heise.de/tp/kontakt/">
+        <link rel="search" title="Suche" href="http://www.heise.de/tp/suche/">
+        <link rel="alternate" type="application/atom+xml" title="Telepolis/letzte 7 Tage" href="http://www.heise.de/tp/rss/news-xl.xml">
+        <link href="/assets/heise/telepolis/css/telepolis.css?.ltc.766e6fd9ffe829d9b0b2" rel="stylesheet" type="text/css">
+
+        
+
+<style type="text/css">
+  
+  @media screen and (min-width: 768px) {
+    a-collapse .header__content {
+      height: auto !important;
+    }
+
+    a-menu:not([disabled]) [data-collapse-target]:not([is-open]) {
+      height: 0;
+      overflow: hidden;
+    }
+    .perf-cls-reduc-leaderboard {
+      min-height: 90px;
+    }
+
+    .perf-cls-reduc-rectangle {
+      min-height: 350px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  a-pur-indicator {
+    display: block;
+    border-top-width: 5px;
+    border-top-style: solid;
+  }
+
+  a-pur-indicator .close {
+    display: none;
+  }
+
+  a-pur-indicator:not([disabled]) [data-collapse-target]:not([is-open]) {
+    height: 0;
+  }
+
+  .a-login__link:link {
+    color: var(--akwa-link-color);
+    text-decoration: none;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+  @media screen and (max-width: 767px) {
+    a-collapse:not([disabled]) [data-collapse-target]:not([is-open]) {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  
+
+  @media screen and (min-width: 992px) {
+    #wtma_teaser_ho_vertrieb_mini_1 {
+      min-height: 500px;
+    }
+  }
+
+  .legacy-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .article-image {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  a-paid-content-teaser {
+    display: none;
+  }
+</style>
+
+    </head>
+
+    <body
+      class="tp"
+      id="pre-akwa"
+    >
+    
+
+    
+
+    <a-analytics type="webtrekk">
+      <script type="application/json">
+        {"options":{},"vars":{"contentGroup":{"1":"www.telepolis.de","10":"sonderseite","2":"tp","3":"dieser-text-wird-nicht-weiter-zur-verfuegung-gestellt-10188780","9":"dieser-text-wird-nicht-weiter-zur-verfuegung-gestellt-10188780"},"contentId":"www.telepolis.de.dieser-text-wird-nicht-weiter-zur-verfuegung-gestellt-10188780","customEcommerceParameter":{},"customParameter":{"17":"undefiniert","25":"Dieser Text wird nicht weiter zur Verfügung gestellt","26":"v5"},"launchLiveaccount":"1","tiDomain":"responder.wt.heise.de","tiId":"288689636920174"}}
+      </script>
+    </a-analytics>
+  
+
+  <a-analytics type="infonline-base">
+    <script type="application/json">
+      {
+        "vars": {
+          "cp":"unt_komm",
+          "co":"%2Ftp%2FDieser-Text-wird-nicht-weiter-zur-Verfuegung-gestellt-10188780.html%3Fwt_mc%3Drss.red.tp.tp.atom.beitrag.beitrag",
+          "dg": true 
+        },
+        "options": {
+          "disableSurvey": false
+
+          ,
+          "domainServiceName": "data-fb7f8b3ae8.telepolis.de"
+
+        }
+      }
+      </script>
+  </a-analytics>
+
+  
+    
+    
+
+
+
+  
+
+  <a-analytics type="upscore">
+    <script type="application/json">
+      {
+        "options": {
+          "enableRecommendations": true,
+          "enablePaywall": true
+        },
+        "vars": {
+          "config": {
+            "article": "",
+            "track_positions": true
+          },
+          "data": {
+          "section": "Telepolis",
+
+          "domain": "telepolis.de",
+          "object_id": "10188780",
+          "pubdate": "",
+          "object_type": "landingpage",
+"content_type":0}
+        }
+      }
+    </script>
+  </a-analytics>
+
+
+
+
+                
+        
+    
+
+
+    
+
+    <div class="container-fluid container_all">
+      <div class="row">
+        <div class="col-md-12 ad-ldb-container">
+          <div class="perf-cls-reduc-leaderboard">
+            
+
+
+
+  <!-- Ads disabled -->
+
+
+
+          </div>
+          
+
+<div class="ad ad--skyscraper a-u-show-from-tablet">
+  
+
+  <!-- Ads disabled -->
+
+
+</div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="bottom-up">
+            <div class="row ho-roof">
+    <a href="https://www.heise.de/" class="ho-roof_einangebotvon" title="Ein Angebot von heise online">
+        <span class="ho-roof_einangebotvon_text">Ein Angebot von</span>
+        <svg class="ho-roof_einangebotvon_img">
+          <use href="/icons/common-icons.svg#heise-online-logo"></use>
+        </svg>
+    </a>
+
+    
+    <nav class="ho-roof_singlesignon hide-for-logged-in-user">
+        <a id="heiselogin-link-login" rel="nofollow" href="/sso/login/?forward=%2Ftp%2FDieser-Text-wird-nicht-weiter-zur-Verfuegung-gestellt-10188780.html" class="ho-roof_anmelden" title="Anmelden / Registrieren">Anmelden</a>
+    </nav>
+
+    <nav class="btn-group ho-roof_singlesignon show-for-logged-in-user">
+        <button type="button" class="dropdown-toggle button-unstyled ho-roof_anmelden" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Account verwalten / Abmelden">
+            Account
+            <span class="a-u-sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="ho-roof_dropdown dropdown-menu">
+            <li class="dropdown-menu--account"><a id="heiselogin-link-profil"  rel="nofollow" href="/sso/registration/account/userdata?forward=%2Ftp%2FDieser-Text-wird-nicht-weiter-zur-Verfuegung-gestellt-10188780.html">Mein Account</a></li>
+            <li class="dropdown-menu--abmelden"><a id="heiselogin-link-logout" rel="nofollow" href="/sso/login/logout/?forward=%2Ftp%2FDieser-Text-wird-nicht-weiter-zur-Verfuegung-gestellt-10188780.html">Abmelden</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<header class="row tp_mainheader navbar">
+
+    <div class="tp_navbar clearfix">
+        <nav class="tp_navbar_header">
+            <div class="col-md-5 col-sm-3 col-xs-12 tp_logo">
+                <a href="/" class="navbar-brand tp_logo">
+                    <img src="/icons/svg/logos/svg/telepolis.svg" alt="TELEPOLIS" width="180" height="45" class="tp_mainlogo">
+                </a>
+            </div>
+
+            
+            <button type="button" class="navbar-toggle collapsed burger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="a-u-sr-only">Navigation ein-/ausblenden</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </nav>
+
+        <nav class="collapse navbar-collapse tp-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul class="nav navbar-nav navbar-right tp_searchsocial">
+                <li>
+                    <div class="navbar-iconsearch-list" id="navbar-collapse-search">
+                        <nav>
+                            <a href="/archiv/" title="Telepolis Archiv" class="btn navbar-btn tp_navbar_iconfont">Archiv</a>
+                            <a href="/forum/Telepolis/kommentare/forum-43418/" class="btn navbar-btn tp_navbar_iconfont" title="Telepolis Forum" role="button">
+                              Forum
+                            </a>
+                            <a href="/news-atom.xml" class="btn navbar-btn rss tp_navbar_icon" title="RSS-Feed" role="button">
+                                <svg preserveAspectRatio="xMinYMin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21H889q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5T250 902q-25-2-41.5-20T192 839V704q0-29 21-47 17-17 43-17h5q160 13 306 80.5T826 902q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5T1329 1476q-12-215-101-408.5t-231.5-336-336-231.5T252 398q-25-1-42.5-19.5T192 335V192q0-28 20-46 18-18 44-18h3q262 13 501.5 120T1186 542q187 186 294 425.5t120 501.5z" fill="#fff"/></svg>
+                            </a>
+                            <a href="https://news.google.com/publications/CAAqBwgKMPn3nQswioK2Aw" class="btn navbar-btn gnews tp_navbar_icon" title="Google News" role="button" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+                                <g>
+                                  <path d="M10.22,21.02c0-1.66,1.34-3,3-3h20.35l-2.36-6.47c-.21-.58-.82-.9-1.36-.7L6.63,19.29c-.54,.2-.8,.83-.59,1.41l4.18,11.47v-11.16h0Z" fill="#fff"/>
+                                  <path d="M49.21,18.4l-15.43-4.18,1.41,3.89,7.52-.1c1.66,0,3,1.34,3,3v14.44l4.21-15.7c.16-.6-.16-1.21-.71-1.36h0Z" fill="#fff"/>
+                                  <path d="M42.71,19.52H13.22c-.83,0-1.5,.68-1.5,1.5v21.75c0,.83,.68,1.5,1.5,1.5h29.5c.83,0,1.5-.68,1.5-1.5V21.02c0-.83-.68-1.5-1.5-1.5h-.01Zm-13.31,6.25h9.5c.28,0,.5,.22,.5,.5v1.5c0,.28-.22,.5-.5,.5h-9.5v-2.5Zm-8.5,12c-3.31,0-6-2.69-6-6s2.69-6,6-6c1.62,0,2.97,.59,4.01,1.56l-1.71,1.71h0c-.63-.6-1.42-.9-2.3-.9-1.96,0-3.56,1.66-3.56,3.62s1.59,3.63,3.56,3.63c1.76,0,2.97-1,3.24-2.37h-3.24v-2.25h5.65c.06,.36,.09,.74,.09,1.14,0,3.43-2.28,5.86-5.74,5.86Zm18.5-.5c0,.28-.22,.5-.5,.5h-9.5v-2.5h9.5c.28,0,.5,.22,.5,.5v1.5Zm1.5-4.75c0,.28-.22,.5-.5,.5h-11v-2.5h11c.28,0,.5,.22,.5,.5v1.5Z" fill="#fff"/>
+                                </g>
+                                <path d="M31.15,9.34c.48,.14,1.14,.68,1.32,1.16l.79,1.9,.19,.06,6.77,1.96v-5.2c0-.54-.45-.99-.99-.99H16.72c-.55,0-1,.45-1,1v5.17l13.62-4.96c.43-.16,1.19-.28,1.81-.1Z" fill="#fff"/>
+                              </svg>
+                            </a>
+                            <a href="https://www.facebook.com/telepolis.de" class="btn navbar-btn facebook tp_navbar_icon" title="Facebook" role="button">
+                                <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"><path fill="#fff" d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z"/></svg>
+                            </a>
+                            <a href="https://twitter.com/telepolis_news/" title="Twitter" class="btn navbar-btn twitter tp_navbar_icon" role="button">
+                              
+
+
+
+
+<svg
+  
+    class="tp-navicon--xcorp"
+  
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 22.1 20"
+  preserveAspectRatio="xMinYMin"
+>
+<path id="path2" d="M17.4,0h3.4l-7.4,8.5L22.1,20h-6.8L10,13l-6.1,7H0.4l7.9-9.1L0,0h7l4.8,6.4L17.4,0z M16.2,18h1.9L6,1.9H4
+	L16.2,18z"/>
+</svg>
+
+                            </a>
+                            <a href="https://www.youtube.com/@Magazin_Telepolis" title="YouTube-Kanal von Telepolis" class="btn navbar-btn youtube tp_navbar_icon" role="button">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+                                <path d="M21.57 7.74c-.18-.68-.72-1.22-1.4-1.4C18.38 6 12 6 12 6s-6 .01-8.17.34c-.68.18-1.22.72-1.4 1.4C2 9.62 2 12 2 12s0 2.38.43 4.26c.18.68.72 1.22 1.4 1.4C5.62 18 12 18 12 18s6-.01 8.17-.34c.68-.18 1.22-.72 1.4-1.4C22 14.38 22 12 22 12s0-2.38-.43-4.26zM10 15V9l5.2 3-5.2 3z"/>
+                              </svg>
+                            </a>
+                            <span class="btn navbar-btn newsletter tp_navbar_icon" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1998 1200">
+                                <path d="M0 0v1200h1998V0H0zm1819.39 100L996.11 762.72 178.61 100h1640.78zM100 1100V165l895.89 726.27L1898 165.1V1100H100z" fill="#fff"/></svg>
+                            </span>
+                            <ul class="nl-dropdown dropdown-menu dropdown-menu-right">
+                              <li class="nl-dropdown__item"><a href="/newsletter/manage/tp-aktuell-tgl/" title="Newsletter täglich abonnieren" class="nl-dropdown__link">Newsletter täglich</a></li>
+                              <li class="nl-dropdown__item"><a href="/newsletter/manage/tp-aktuell-whl/" title="Newsletter wöchentlich abonnieren" class="nl-dropdown__link">Newsletter wöchentlich</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li>
+                    <form class="navbar-form tp_navbar_search" role="search" id="volltextsuche" action="/tp/suche/">
+                        <div class="input-group">
+                            <input type="hidden" name="rm"   value="search">
+                            <input type="hidden" name="bid"  value="TELEPOLIS">
+                            <input type="hidden" name="sort" value="date">
+                            <input type="search" class="form-control" placeholder="Suchbegriff" name="q">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default fa fa-search fa-lg" type="submit"><span class="text-hide">Go!</span></button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+
+            
+            <nav class="row">
+                <ul class="nav navbar-nav col-md-12 tp_mainnavbar_nav">
+                    
+                        <li >
+                        <a href="/politik/">
+                            Politik
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/wirtschaft/">
+                            Wirtschaft
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/wissenschaft/">
+                            Wissen
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/energie-und-klima/">
+                            Energie & Klima
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/kultur/">
+                            Kultur & Medien
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/gesundheit/">
+                            Fit & Gesund
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/finanzen/">
+                            Finanzen
+                        </a>
+                        </li>
+                    
+                
+                    
+                        <li >
+                        <a href="/lifestyle/">
+                            Lifestyle
+                        </a>
+                        </li>
+                    
+                
+                    
+                    
+                    
+                    
+                    
+                        <li >
+                        <a href="/Ueber-Telepolis-9305053.html">
+                            Über uns
+                        </a>
+                        </li>
+                    
+                
+                    
+                </ul>
+            </nav>
+
+        </nav>
+    </div>
+</header>
+
+
+<div class="row">
+    <div class="col-md-12 tp_breadcrumb subnavi">
+        
+
+    </div>
+</div>
+
+            <div class="row">
+              
+
+
+
+  <!-- Ads disabled -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row tp_content">
+        <main class="col-md-8">
+          <article class="tp_beitrag">
+  
+<header class="article-header">
+
+  
+  
+
+
+
+
+    <h1 class="article__heading">
+
+      Dieser Text wird nicht weiter zur Verfügung gestellt
+
+      
+
+      
+
+      </h1>
+    
+
+  <!-- RSPEAK_STOP -->
+
+    <div class="publish-info">
+
+    </div>
+
+</header>
+
+
+  <p>Dieser Text wird von der Heise Medien GmbH &amp; Co. KG nicht weiter zur Verfügung gestellt. Weitere Informationen finden Sie in der <a href="https://www.telepolis.de/Ueber-Telepolis-9305053.html">Darstellung und den Updates zur Arbeit der Redaktion</a>. Als Autor des Textes wenden Sie sich bitte an <a href="mailto:archivtp@heise.de">archivtp@heise.de</a>.</p>
+<!-- RSPEAK_STOP -->
+
+
+
+
+  <!-- Ads disabled -->
+
+
+
+<!-- RSPEAK_START -->
+
+
+  
+
+  
+
+<dl class="faq ">
+  
+</dl>
+
+  
+
+</article>
+
+        </main>
+
+        
+          
+
+<aside class="col-md-4 col-sm-6 tpteaser rectangle perf-cls-reduc-rectangle">
+  
+
+
+
+  <!-- Ads disabled -->
+
+
+
+    
+      
+
+
+
+  <!-- Ads disabled -->
+
+
+
+</aside>
+
+
+
+<aside class="col-md-4 col-sm-6 tpteaser teaser_frei">
+    <a href="https://www.telepolis.de/thema/Ukraine_Krieg" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+    <header class="tp_header">
+        <span class="tp_lable">
+            Telepolis Thema
+        </span>
+    </header>
+    </a>
+
+    <a href="https://www.telepolis.de/thema/Ukraine_Krieg" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+        <figure class="row">
+            <div class="tpteaser_figure col-md-12 col-sm-6 col-xs-12">
+                <img src="https://heise.cloudimg.io/width/350/q100.png-lossy-100.webp-lossy-100.foil1/_www-heise-de_/tp/imgs/89/4/2/6/6/7/5/9/ukraine-konflikt-d0530224a294c387.png" alt="" class="img-responsive img-rounded tpteaser_figure-img">
+            </div>
+            <figcaption class="tpteaser_figcaption col-md-12 col-sm-6 col-xs-12">
+                <header class="tp_title">Ukraine-Krieg</header>
+                    <p>Hintergründe und Aktuelles zum Krieg Russlands in der Ukraine. </p>
+            </figcaption>
+        </figure>
+    </a>
+</aside>
+
+
+
+<aside class="col-md-4 col-sm-6 tpteaser teaser_frei">
+    <a href="https://www.telepolis.de/thema/Logbuch-Telepolis_Archiv" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+    <header class="tp_header">
+        <span class="tp_lable">
+            Telepolis Logbuch
+        </span>
+    </header>
+    </a>
+
+    <a href="https://www.telepolis.de/thema/Logbuch-Telepolis_Archiv" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+        <figure class="row">
+            <div class="tpteaser_figure col-md-12 col-sm-6 col-xs-12">
+                <img src="https://heise.cloudimg.io/width/350/q100.png-lossy-100.webp-lossy-100.foil1/_www-heise-de_/tp/imgs/89/4/8/5/0/1/2/6/tp-archiv-sp-abd4c4101b8d4595.jpg" alt="" class="img-responsive img-rounded tpteaser_figure-img">
+            </div>
+            <figcaption class="tpteaser_figcaption col-md-12 col-sm-6 col-xs-12">
+                <header class="tp_title">Logbuch Telepolis-Archiv</header>
+                    <p>Warum wir 70.000 Texte aus dem Netz entfernt und überprüft haben. Und wie wir sie mehrheitlich wieder online gestellt haben.  </p>
+            </figcaption>
+        </figure>
+    </a>
+</aside>
+
+
+
+
+
+
+
+
+    <aside class="top_beitraege_teaser aside_teaser col-md-4 col-sm-6 tpteaser">
+        <header class="top_beitraege_title akwa-container__header">
+            <span>Meistkommentiert</span>
+        </header>
+        <ul class="meistkommentiert top_beitraege_list a-u-list">
+
+                <li>
+                    <a href="/features/Friedensgespraeche-Ukraine-Russland-Durchbruch-oder-Sackgasse-10383178.html"
+                       name="spalte.telepolis.meistkommentiert.1">Friedensgespräche Ukraine-Russland: Durchbruch oder Sackgasse?</a>
+                </li>
+
+                <li>
+                    <a href="/features/Istanbul-Das-grosse-Warten-auf-den-Frieden-10386106.html"
+                       name="spalte.telepolis.meistkommentiert.2">Istanbul: Das große Warten auf den Frieden</a>
+                </li>
+
+                <li>
+                    <a href="/features/Krieg-der-Worte-Vietnam-Krieg-versus-Krieg-gegen-die-Ukraine-10380312.html"
+                       name="spalte.telepolis.meistkommentiert.3">Krieg der Worte: "Vietnam-Krieg" versus "Krieg gegen die Ukraine"</a>
+                </li>
+
+                <li>
+                    <a href="/features/So-foerdert-Jan-Boehmermann-Nazis-10381754.html"
+                       name="spalte.telepolis.meistkommentiert.4">So fördert Jan Böhmermann Nazis</a>
+                </li>
+
+                <li>
+                    <a href="/features/Umgang-mit-AfD-Die-Angst-der-Medien-vor-der-eigenen-Aufgabe-10385591.html"
+                       name="spalte.telepolis.meistkommentiert.5">Umgang mit AfD: Die Angst der Medien vor der eigenen Aufgabe</a>
+                </li>
+        </ul>
+    </aside>
+
+
+
+
+    <aside class="top_beitraege_teaser aside_teaser col-md-4 col-sm-6 tpteaser">
+        <header class="top_beitraege_title akwa-container__header">
+            <span>Meistgelesen</span>
+        </header>
+        <ul class="meistgelesen top_beitraege_list a-u-list">
+                                                                <li>
+                    <a href="/features/Wie-Israel-Terrorismusvorwuerfe-gezielt-als-Waffe-einsetzt-10383623.html"
+                       name="spalte.telepolis.meistgelesen.1">Wie Israel Terrorismusvorwürfe gezielt als Waffe einsetzt</a>
+                </li>
+                                                                <li>
+                    <a href="/features/Ukraine-Krieg-Russland-bekommt-Fath-360-Raketensysteme-aus-Iran-10384168.html"
+                       name="spalte.telepolis.meistgelesen.2">Ukraine-Krieg: Russland bekommt Fath-360 Raketensysteme aus Iran</a>
+                </li>
+                                                                <li>
+                    <a href="/features/Schicksalstag-fuer-Europa-Wird-der-Ukraine-Krieg-in-wenigen-Stunden-enden-10383876.html"
+                       name="spalte.telepolis.meistgelesen.3">Schicksalstag für Europa: Wird der Ukraine-Krieg in wenigen Stunden enden?</a>
+                </li>
+                                                                <li>
+                    <a href="/features/Waermestau-im-Atlantik-Der-Countdown-zur-naechsten-Hitzewelle-laeuft-10384620.html"
+                       name="spalte.telepolis.meistgelesen.4">Wärmestau im Atlantik: Der Countdown zur nächsten Hitzewelle läuft</a>
+                </li>
+                                                                <li>
+                    <a href="/features/James-Webb-Teleskop-entdeckt-Wassereis-in-155-Lichtjahren-Entfernung-10384990.html"
+                       name="spalte.telepolis.meistgelesen.5">James-Webb-Teleskop entdeckt Wassereis in 155 Lichtjahren Entfernung</a>
+                </li>
+        </ul>
+    </aside>
+
+
+
+<aside class="col-md-4 col-sm-6 tpteaser teaser_frei">
+    <a href="https://www.telepolis.de/autoren/Heiner-Flassbeck-3458967.html" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+    <header class="tp_header">
+        <span class="tp_lable">
+            Telepolis Kolumne
+        </span>
+    </header>
+    </a>
+
+    <a href="https://www.telepolis.de/autoren/Heiner-Flassbeck-3458967.html" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+        <figure class="row">
+            <div class="tpteaser_figure col-md-12 col-sm-6 col-xs-12">
+                <img src="https://heise.cloudimg.io/width/350/q100.png-lossy-100.webp-lossy-100.foil1/_www-heise-de_/tp/imgs/89/4/2/5/4/4/7/3/FLASSBECK-f-c34238e7e698412a.jpg" alt="" class="img-responsive img-rounded tpteaser_figure-img">
+            </div>
+            <figcaption class="tpteaser_figcaption col-md-12 col-sm-6 col-xs-12">
+                <header class="tp_title">Der Makroökonom </header>
+                    <p>Kompetente Einschätzung zu wirtschaftlichen Fakten und Mythen. Hier schreibt Ex-Staatssekretär und UN-Experte Heiner Flassbeck. </p>
+            </figcaption>
+        </figure>
+    </a>
+</aside>
+
+
+<aside class="col-md-4 col-sm-6 tpteaser teaser_frei">
+    <a href="https://www.amazon.de/Schlaglicht-Hintergr%C3%BCnde-einer-Welt-Umbruch/dp/B0D2J1R5ZC/" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+    <header class="tp_header">
+        <span class="tp_lable">
+            Immer informiert
+        </span>
+    </header>
+    </a>
+
+    <a href="https://www.amazon.de/Schlaglicht-Hintergr%C3%BCnde-einer-Welt-Umbruch/dp/B0D2J1R5ZC/" title="Dieser Text wird nicht weiter zur Verfügung gestellt">
+        <figure class="row">
+            <div class="tpteaser_figure col-md-12 col-sm-6 col-xs-12">
+                <img src="https://heise.cloudimg.io/width/350/q100.png-lossy-100.webp-lossy-100.foil1/_www-heise-de_/tp/imgs/89/4/5/8/4/2/3/9/audible-c4919c11536ee597.png" alt="" class="img-responsive img-rounded tpteaser_figure-img">
+            </div>
+            <figcaption class="tpteaser_figcaption col-md-12 col-sm-6 col-xs-12">
+                <header class="tp_title">Folgen Sie uns auf Audible</header>
+            </figcaption>
+        </figure>
+    </a>
+</aside>
+
+
+
+
+
+
+<aside class="col-md-4 col-sm-6 tpteaser rectangle">
+  
+
+
+
+  <!-- Ads disabled -->
+
+
+
+</aside>
+
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 footer-ad">
+          
+
+
+
+  <!-- Ads disabled -->
+
+
+
+          
+
+
+
+  <!-- Ads disabled -->
+
+
+
+        </div>
+      </div>
+
+      <div class="row tp-footer">
+        <div class="col-md-12">
+          
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#top" class="footer__top-link">
+      
+
+
+
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  class="arrow-top footer__arrow-top "
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+</svg>
+ 
+    </a>
+  </div>
+  <ul class="footer__list">
+
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/kontakt/"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Kontakt
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/impressum.html"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Impressum
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="https://www.heise.de/tp/kontakt/?frage=3212474"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Barriere melden
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="https://www.heise.de/account/cancellation"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Verträge kündigen
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="javascript:window._sp_.gdpr.loadPrivacyManagerModal(756676);"
+          class="footer__link"
+          data-google-interstitial=false
+          
+            id="js-gdpr-pm-link"
+          
+        >
+          Cookies &amp; Tracking
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="/Datenschutzerklaerung-der-Heise-Medien-GmbH-Co-KG-4860.html"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Datenschutz
+        </a>
+      </li>
+    
+      
+      
+      <li class="footer__item">
+        
+        
+        <a
+          href="https://mediadaten.heise.de/"
+          class="footer__link"
+          data-google-interstitial=false
+          
+        >
+          Mediadaten
+        </a>
+      </li>
+    
+
+    <li class="footer__item">
+      <a href="http://www.interred.de/" target="_blank" class="footer__link">
+        Content Management by InterRed
+      </a>
+    </li>
+
+    
+      
+      <li class="footer__item">
+        <a href="https://www.plusline.net/" class="footer__link" data-google-interstitial=false>
+          Hosted by Plus.line
+        </a>
+      </li>
+    
+      
+      <li class="footer__item">
+        <a href="https://www.heisegroup.de/artikel/heise-medien-3904998.html" class="footer__link" data-google-interstitial=false>
+          Copyright © 2025 heise medien
+        </a>
+      </li>
+    
+  </ul>
+
+  <div class="footer__bottom">
+    <a href="https://www.heisegroup.de/">
+      <div class="footer__heise-way">
+        
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  xmlns="http://www.w3.org/2000/svg"
+  class="heise-logo footer__heise-icon"
+
+  width="114"
+  height="36"
+  viewBox="0 0 114 36"
+  role="img"
+>
+  <style>
+    .heise-logo-svg-path {
+       fill: #14315b;
+    }
+
+    .dark .heise-logo-svg-path {
+      fill: #f2f2f2;
+    }
+  </style>
+
+  <title>heise Logo</title>
+  <path class="heise-logo-svg-path" d="m39,5.39h3.87v6.14l-.16,3.19c1.38-1.3,3.02-2.5,5.28-2.5,3.53,0,5.08,2.39,5.08,6.56v10.35h-3.87v-9.85c0-2.71-.78-3.74-2.57-3.74-1.45,0-2.41.71-3.76,2.06v11.53h-3.87V5.39Zm16.38,15.49c0-5.36,3.72-8.67,7.61-8.67,4.46,0,6.81,3.23,6.81,7.83,0,.74-.08,1.48-.17,1.88h-10.47c.32,2.93,2.2,4.6,4.86,4.6,1.41,0,2.62-.44,3.83-1.2l1.32,2.41c-1.57,1.06-3.56,1.79-5.66,1.79-4.55,0-8.13-3.2-8.13-8.64Zm11.07-1.59c0-2.54-1.13-4.09-3.39-4.09-1.92,0-3.61,1.44-3.95,4.09h7.34Zm5.19-11.76c0-1.3,1.02-2.19,2.39-2.19s2.39.89,2.39,2.19-1.02,2.19-2.39,2.19-2.39-.91-2.39-2.19Zm.44,5.08h3.87v16.5h-3.87V12.62Zm5.48,14.61l1.8-2.46c1.46,1.14,2.88,1.84,4.56,1.84,1.8,0,2.65-.85,2.65-1.98,0-1.38-1.79-2-3.55-2.67-2.16-.81-4.64-2.06-4.64-4.81s2.31-4.93,6.01-4.93c2.3,0,4.14.93,5.48,1.98l-1.77,2.38c-1.16-.85-2.32-1.44-3.61-1.44-1.66,0-2.45.79-2.45,1.83,0,1.3,1.67,1.8,3.45,2.46,2.23.83,4.73,1.91,4.73,4.99,0,2.84-2.24,5.12-6.41,5.12-2.26,0-4.64-.97-6.25-2.3Zm14.32-6.34c0-5.36,3.72-8.67,7.6-8.67,4.46,0,6.81,3.23,6.81,7.83,0,.74-.08,1.48-.17,1.88h-10.47c.32,2.93,2.2,4.6,4.86,4.6,1.41,0,2.62-.44,3.83-1.2l1.32,2.41c-1.57,1.06-3.56,1.79-5.66,1.79-4.56,0-8.13-3.2-8.13-8.64Zm11.07-1.59c0-2.54-1.13-4.09-3.39-4.09-1.92,0-3.61,1.44-3.95,4.09h7.34ZM21.03,3.86c1.95.91,2.79,3.22,1.88,5.16l-8.99,19.23c-.91,1.94-3.23,2.79-5.17,1.88-1.95-.91-2.79-3.22-1.88-5.16L15.85,5.74c.91-1.94,3.23-2.79,5.17-1.88h0m6.22,12.27h0c-1.95-.91-4.27-.07-5.17,1.88l-3.25,6.95c-.91,1.94-.07,4.26,1.88,5.16,1.95.91,4.27.07,5.17-1.88l3.25-6.95c.91-1.95.07-4.26-1.88-5.16" />
+</svg>
+
+        
+
+
+
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 457 37.01"
+  class="heise-way footer__heise-way-icon"
+>
+  <rect x="0" y="0" width="457" height="37.01" rx="18.51" ry="18.51" fill="#719ed4"/>
+</svg>
+
+        
+
+
+
+
+<svg
+  preserveAspectRatio="xMinYMin"
+  viewBox="0 0 581.4 407.3"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  class="heise-claim footer__heise-claim-icon"
+
+>
+  <style>
+    .heise-claim-svg-g {
+       fill: #14315b;
+    }
+
+    .dark .heise-claim-svg-g {
+      fill: #f2f2f2;
+    }
+  </style>
+  <title>Eine Antwort weiter</title>
+  <g class="heise-claim-svg-g">
+    <path d="m80.8,154.7h21.8l34.2,104.9h-19.7l-16-55.8c-3.3-11.1-6.4-23.1-9.5-34.6h-.6c-2.9,11.6-6,23.5-9.3,34.6l-16.1,55.8h-19l34.2-104.9Zm-14,61.9h49.4v14.6h-49.4v-14.6Z"/><path d="m143.3,180.8h15.1l1.4,10.6h.5c7.1-6.9,15.1-12.6,25.9-12.6,16.9,0,24.2,11.4,24.2,31.3v49.4h-18.5v-47c0-13-3.7-17.8-12.3-17.8-6.9,0-11.5,3.4-18,9.8v55h-18.5v-78.7h.2Z"/><path d="m229.4,233.1v-37.5h-11.2v-13.9l12.2-.8,2.2-21.5h15.3v21.5h20.1v14.7h-20.1v37.5c0,9.3,3.6,13.8,11.2,13.8,2.7,0,5.9-.9,8.2-1.8l3.1,13.6c-4.3,1.4-9.8,2.9-16.1,2.9-18.1-.1-24.9-11.5-24.9-28.5Z"/><path d="m275.1,180.8h18.5l9.6,40.9c1.5,7.6,2.7,15,4.1,22.7h.6c1.5-7.7,3.1-15.3,5-22.7l10.3-40.9h16.7l10.5,40.9c1.9,7.6,3.5,15,5.2,22.7h.6c1.5-7.7,2.7-15.1,4.2-22.7l9.4-40.9h17.3l-20,78.8h-21.9l-9.2-36.8c-1.7-7.4-3.1-14.6-4.7-22.9h-.5c-1.5,8.2-2.9,15.6-4.7,23l-8.9,36.6h-21.3l-20.8-78.7Z"/><path d="m389.4 220.3c0-26.2 17.8-41.4 37.5-41.4s37.5 15.1 37.5 41.4-17.8 41.2-37.5 41.2-37.5-15.1-37.5-41.2zm55.9 0c0-15.8-6.9-26.3-18.5-26.3s-18.5 10.5-18.5 26.3 6.9 26.2 18.5 26.2 18.5-10.4 18.5-26.2z"/><path d="m474.6,180.8h15.2l1.4,14h.5c5.6-10.3,14-16,22.4-16,4,0,6.5.5,8.9,1.6l-3.2,16c-2.8-.8-4.8-1.3-8.1-1.3-6.3,0-13.9,4.3-18.6,16.3v48h-18.5v-78.6h0Z"/><path d="m540.4,233.1v-37.5h-11.2v-13.9l12.2-.8,2.2-21.5h15.3v21.5h20.1v14.7h-20.1v37.5c0,9.3,3.6,13.8,11.2,13.8,2.7,0,5.9-.9,8.2-1.8l3.1,13.6c-4.3,1.4-9.8,2.9-16.1,2.9-18.2-.1-24.9-11.5-24.9-28.5Z"/><path d="m148.4 8.6h63.1v15.7h-44.5v26.9h37.7v15.7h-37.7v31h46.1v15.7h-64.7v-105z"/><path d="m224.5,10.5c0-6.2,4.9-10.5,11.4-10.5s11.4,4.2,11.4,10.5-4.9,10.5-11.4,10.5c-6.5-.1-11.4-4.4-11.4-10.5Zm2.2,24.2h18.5v78.8h-18.5V34.7Z"/><path d="m259.1,34.7h15.1l1.4,10.6h.5c7.1-6.9,15.1-12.6,25.9-12.6,16.9,0,24.2,11.4,24.2,31.3v49.4h-18.5v-47c0-13-3.7-17.8-12.3-17.8-6.9,0-11.5,3.4-18,9.8v55h-18.5V34.7h.2Z"/><path d="m337.3,74.2c0-25.6,17.8-41.4,36.3-41.4,21.3,0,32.5,15.4,32.5,37.4,0,3.5-.4,7.1-.8,9h-50c1.5,14,10.5,21.9,23.2,21.9,6.7,0,12.5-2.1,18.3-5.7l6.3,11.5c-7.5,5.1-17,8.5-27,8.5-21.8,0-38.8-15.2-38.8-41.2Zm52.8-7.6c0-12.1-5.4-19.5-16.2-19.5-9.2,0-17.3,6.9-18.9,19.5h35.1Z"/><path d="m0,326.6h18.5l9.6,40.9c1.5,7.6,2.7,15,4.1,22.7h.6c1.5-7.7,3.1-15.3,5-22.7l10.3-40.9h16.7l10.5,40.9c1.9,7.6,3.5,15,5.2,22.7h.6c1.5-7.7,2.7-15.1,4.2-22.7l9.4-40.9h17.3l-20,78.8h-21.9l-9.2-36.8c-1.7-7.4-3.1-14.6-4.7-22.9h-.6c-1.5,8.2-2.9,15.6-4.7,23l-8.9,36.6h-21.2L0,326.6Z"/><path d="m115.9,366.1c0-25.6,17.8-41.4,36.3-41.4,21.3,0,32.5,15.4,32.5,37.4,0,3.5-.4,7.1-.8,9h-50c1.5,14,10.5,21.9,23.2,21.9,6.7,0,12.5-2.1,18.3-5.7l6.3,11.5c-7.5,5.1-17,8.5-27,8.5-21.7,0-38.8-15.2-38.8-41.2Zm52.9-7.6c0-12.1-5.4-19.5-16.2-19.5-9.2,0-17.3,6.9-18.9,19.5h35.1Z"/><path d="m192.3,302.4c0-6.2,4.9-10.5,11.4-10.5s11.4,4.2,11.4,10.5-4.9,10.5-11.4,10.5c-6.5-.1-11.4-4.4-11.4-10.5Zm2.1,24.2h18.5v78.8h-18.5v-78.8Z"/><path d="m234.4,378.9v-37.5h-11.2v-13.9l12.2-.8,2.2-21.5h15.2v21.5h20.1v14.7h-20.1v37.5c0,9.3,3.6,13.8,11.2,13.8,2.7,0,5.9-.9,8.2-1.8l3.1,13.6c-4.3,1.4-9.8,2.9-16.1,2.9-18.1-.1-24.8-11.5-24.8-28.5Z"/><path d="m276.9,366.1c0-25.6,17.8-41.4,36.3-41.4,21.3,0,32.5,15.4,32.5,37.4,0,3.5-.4,7.1-.8,9h-50c1.5,14,10.5,21.9,23.2,21.9,6.7,0,12.5-2.1,18.3-5.7l6.3,11.5c-7.5,5.1-17,8.5-27,8.5-21.7,0-38.8-15.2-38.8-41.2Zm52.9-7.6c0-12.1-5.4-19.5-16.2-19.5-9.2,0-17.3,6.9-18.9,19.5h35.1Z"/><path d="m355.4,326.6h15.1l1.4,14h.5c5.6-10.3,14-16,22.4-16,4,0,6.5.5,8.9,1.6l-3.2,16c-2.8-.8-4.8-1.3-8.1-1.3-6.3,0-13.9,4.3-18.6,16.3v48h-18.5v-78.6h.1Z"/>
+  </g>
+</svg>
+
+      </div>
+    </a>
+    <img
+      src="/assets/components/images/hauptpartner-heise-hannover-96.png"
+      alt="Unser Hauptpartner Hannover 96"
+      class="footer__partner-img"
+      loading="lazy"
+      width="86px"
+      height="40px"
+    >
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+      
+        <div data-content-id="4538117" data-module-name="AdModule"><a-with-access access-right="telepolis"><div data-has-no-access="true" hidden=""><a-sticky-footer data-component="StickyFooter" class="group inset-x-0 z-[var(--z-index-sticky-footer)] xl:z-[var(--z-index-sticky-footer--desktop)] theme-tp" hidden="true"><button data-collapse-trigger="true" class="relative z-10 flex items-start w-10 h-8 mx-auto translate-y-5"><span class="flex h-5 w-10 items-center justify-center rounded-t-full shadow-[0px_-4px_9px_-5px_rgba(125,125,125,0.45)] ho-bg ho-text"><svg class="h-4 translate-y-1 -rotate-90 fill-current transition-transform group-is-open:translate-y-1.5 group-is-open:rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.41 12" fill="#666"><path d="M0 10.59L4.58 6 0 1.41 1.41 0l6 6-6 6z"></path><path d="M0 10.59L4.58 6 0 1.41 1.41 0l6 6-6 6z"></path></svg></span></button><div class="container relative z-0 p-3 md:p-4 shadow-[0px_-6px_9px_-7px_rgba(125,125,125,0.45)] ho-bg ho-text"><div class="flex items-center"><div class="hidden md:block"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" viewBox="0 0 180 39" role="img" class="w-auto h-6 mr-4"><path fill="#b42900" d="M17.19.5v4.39h-5.87V38.5H6.13V4.89H0V.5Zm19.37 0v4.39h-8.81v11.94h7.87v4.38h-7.87v12.9h8.81v4.39h-14V.5Zm12.77 0v33.61h8.76v4.39h-14V.5Zm27.94 0v4.39h-8.81v11.94h7.87v4.38h-7.87v12.9h8.81v4.39h-14V.5Zm8.27 38V.5h6.19c4.44 0 10.11.4 10.11 10.18 0 7.71-3.1 11.29-11.15 11V38.5Zm5.15-33.71v12.6c4.44.3 5.68-2.07 5.68-6.3 0-3.43-1-6.3-5-6.3ZM127 19.5c0 6.85-.1 19.5-10.21 19.5s-10.21-12.65-10.21-19.5S106.69 0 116.8 0 127 12.65 127 19.5m-14.89 0c0 8.06.57 14.76 4.69 14.76s4.69-6.7 4.69-14.76-.57-14.76-4.69-14.76-4.69 6.7-4.69 14.76m26.6-19v33.61h8.76v4.39h-14V.5Zm18.46 38h-5.22V.5h5.22m20.92 5.84a7.2 7.2 0 0 0-4.4-1.61 4.61 4.61 0 0 0-4.6 4.89 6.05 6.05 0 0 0 1.45 4.13l3.93 4.18c3.52 3.48 5.53 6 5.53 11.14 0 5.34-3.41 9.93-9.15 9.93a9.2 9.2 0 0 1-5.69-1.81V32.1a8.57 8.57 0 0 0 5.12 2c3.21 0 4.55-2.47 4.55-5.29 0-7.56-10.91-9.07-10.91-19 0-5.34 2.9-9.72 8.74-9.72a10.7 10.7 0 0 1 5.48 1.26Z"></path></svg></div><div class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" preserveAspectRatio="xMinYMin" class="dark:hidden w-auto h-6 mr-2"><path fill="#b42900" d="M38.1 3.81v8.35H26.92v64.03h-9.9V12.16H5.34V3.81zM55.39 3.82h-11.8v72.37h9.83V44.13c15.34.58 21.23-6.24 21.23-20.92 0-18.62-10.81-19.39-19.27-19.39Zm-1.97 32.16v-24h1.38c7.47 0 9.44 5.47 9.44 12 0 8.06-2.36 12.57-10.81 12Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" preserveAspectRatio="xMinYMin" class="hidden dark:block w-auto h-6 mr-2"><path fill="#eb002b" d="M38.04 3.82v8.35H26.86V76.2h-9.9V12.17H5.28V3.82zM55.33 3.83h-11.8V76.2h9.83V44.15c15.34.58 21.23-6.24 21.23-20.92 0-18.62-10.81-19.39-19.27-19.39Zm-1.97 32.16v-24h1.38c7.47 0 9.44 5.47 9.44 12 0 8.06-2.36 12.57-10.81 12Z"></path></svg></div><h3 class="flex-grow mb-0 mr-2 text-base font-bold md:mr-4 md:text-xl"><span class="md:hidden inline-block leading-tight">Journalismus fördern</span><span class="hidden md:block">Ihr Beitrag für guten Journalismus</span></h3><a data-component="LinkButton" href="https://www.telepolis.de/Unterstuetzen-Sie-Qualitaetsjournalismus-auf-Telepolis-9613401.html?LPID=39273_TP000002_26868_999_0" data-google-interstitial="false" class="inline-block whitespace-nowrap text-center leading-none border rounded disabled:pointer-events-none disabled:opacity-50 dark:border-gray-100 bg-brand-button border border-brand-button text-brand-button-text hover:border-brand-button-hover hover:bg-brand-button-hover dark:border-white dark:bg-brand-dark dark:text-gray-50 text-base py-3 px-6  group-is-open:hidden md:group-is-open:block"><span class="">Telepolis unterstützen</span></a><button data-hide-trigger="true" class="hidden ml-2 group-is-open:block md:ml-4 md:block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" role="img" preserveAspectRatio="xMinYMin" class="h-3 ho-fill-color"><path fill="#333" d="M12 1.4 10.6 0 6 4.6 1.4 0 0 1.4 4.6 6 0 10.6 1.4 12 6 7.4l4.6 4.6 1.4-1.4L7.4 6z"></path></svg></button></div><div data-collapse-target="true" class="text-sm text-center md:text-base"><div class="flex items-center w-full mt-4 mb-3"><hr class="flex-grow border-gray-100"/><h4 class="mx-5 font-bold"><span class="">Onlinemagazin für Politik &amp; Medien</span></h4><hr class="flex-grow border-gray-100"/></div><p class="mx-auto md:max-w-2xl"><span class="">Durch Ihre Unterstützung werden Sie Teil einer Community, die unabhängigen und freien Qualitätsjournalismus schätzt und fördert. Bei uns finden Sie ein breites Spektrum an einzigartigen Themen und unabhängigen Stimmen.</span></p><a data-component="LinkButton" href="https://www.telepolis.de/Unterstuetzen-Sie-Qualitaetsjournalismus-auf-Telepolis-9613401.html?LPID=39273_TP000002_26868_999_0" data-google-interstitial="false" class="block whitespace-nowrap text-center leading-none border rounded disabled:pointer-events-none disabled:opacity-50 dark:border-gray-100 bg-brand-button border border-brand-button text-brand-button-text hover:border-brand-button-hover hover:bg-brand-button-hover dark:border-white dark:bg-brand-dark dark:text-gray-50 text-base py-3 px-6  mx-auto mt-3 md:hidden">Telepolis unterstützen</a></div></div></a-sticky-footer></div></a-with-access><script type="application/ld+json">{"@context":"https://schema.org","@id":"4538117","@type":"ItemList","description":"AdModule","additionalType":"AdModule","itemListElement":[{"@type":"ListItem","position":0,"item":{"@type":"WPAdBlock","@id":"4538070","additionalType":"StickyFooterAd"}}]}</script></div>
+    
+
+
+    
+
+
+
+
+<script async src="/assets/heise/heise/js/heise.js?.ltc.5b6de719425e1ca20717"></script>
+
+    
+
+    <script src="/assets/heise/telepolis/js/telepolis.js?.ltc.7d0a44ba16f41e52e078"></script>
+
+  </body>
+</html>
+<!-- Created with InterRed V24.2.9, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 4757570, iBID: 4757574, CID: 10188780, iCID: 10188786 -->
+<!-- Link: $(LB4757570:Linktext)$ $(LC10188780:Linktext)$ -->
+<!-- Generiert: 2024-12-05 08:34:48 -->
+
+

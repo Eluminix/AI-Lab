@@ -1,0 +1,1026 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="es"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=yes' />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="https://israelnoticias.com/xmlrpc.php" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<meta property="og:type" content="article">
+<meta property="og:title" content="Trump se sometió a prueba de coronavirus y está a la espera del resultado">
+<meta property="og:site_name" content="Noticias de Israel">
+<meta property="og:description" content="El presidente de los Estados Unidos, Donald Trump, anunció el sábado que se había hecho la prueba del coronavirus pero">
+<meta property="og:url" content="https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg">
+<meta property="og:image:height" content="666">
+<meta property="og:image:width" content="1000">
+<meta property="article:published_time" content="2020-03-15T05:28:27-05:00">
+<meta property="article:modified_time" content="2020-03-15T05:28:30-05:00">
+<meta property="article:author" content="https://israelnoticias.com">
+<meta property="article:section" content="Mundo">
+<meta property="article:tag" content="Coronavirus">
+<meta property="article:tag" content="EE.UU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trump se sometió a prueba de coronavirus y está a la espera del resultado">
+<meta name="twitter:description" content="El presidente de los Estados Unidos, Donald Trump, anunció el sábado que se había hecho la prueba del coronavirus pero">
+<meta name="twitter:url" content="https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/">
+<meta name="twitter:site" content="https://israelnoticias.com">
+<meta name="twitter:image" content="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg">
+<meta name="twitter:image:width" content="1000">
+<meta name="twitter:image:height" content="666">
+<link rel='dns-prefetch' href='https://pagead2.googlesyndication.com/'>
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+			  var jnews_ajax_url = '/?ajax-request=jnews'
+			</script>
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript">;window.jnews=window.jnews||{},window.jnews.library=window.jnews.library||{},window.jnews.library=function(){"use strict";var e=this;e.win=window,e.doc=document,e.noop=function(){},e.globalBody=e.doc.getElementsByTagName("body")[0],e.globalBody=e.globalBody?e.globalBody:e.doc,e.win.jnewsDataStorage=e.win.jnewsDataStorage||{_storage:new WeakMap,put:function(e,t,n){this._storage.has(e)||this._storage.set(e,new Map),this._storage.get(e).set(t,n)},get:function(e,t){return this._storage.get(e).get(t)},has:function(e,t){return this._storage.has(e)&&this._storage.get(e).has(t)},remove:function(e,t){var n=this._storage.get(e).delete(t);return 0===!this._storage.get(e).size&&this._storage.delete(e),n}},e.windowWidth=function(){return e.win.innerWidth||e.docEl.clientWidth||e.globalBody.clientWidth},e.windowHeight=function(){return e.win.innerHeight||e.docEl.clientHeight||e.globalBody.clientHeight},e.requestAnimationFrame=e.win.requestAnimationFrame||e.win.webkitRequestAnimationFrame||e.win.mozRequestAnimationFrame||e.win.msRequestAnimationFrame||window.oRequestAnimationFrame||function(e){return setTimeout(e,1e3/60)},e.cancelAnimationFrame=e.win.cancelAnimationFrame||e.win.webkitCancelAnimationFrame||e.win.webkitCancelRequestAnimationFrame||e.win.mozCancelAnimationFrame||e.win.msCancelRequestAnimationFrame||e.win.oCancelRequestAnimationFrame||function(e){clearTimeout(e)},e.classListSupport="classList"in document.createElement("_"),e.hasClass=e.classListSupport?function(e,t){return e.classList.contains(t)}:function(e,t){return e.className.indexOf(t)>=0},e.addClass=e.classListSupport?function(t,n){e.hasClass(t,n)||t.classList.add(n)}:function(t,n){e.hasClass(t,n)||(t.className+=" "+n)},e.removeClass=e.classListSupport?function(t,n){e.hasClass(t,n)&&t.classList.remove(n)}:function(t,n){e.hasClass(t,n)&&(t.className=t.className.replace(n,""))},e.objKeys=function(e){var t=[];for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&&t.push(n);return t},e.isObjectSame=function(e,t){var n=!0;return JSON.stringify(e)!==JSON.stringify(t)&&(n=!1),n},e.extend=function(){for(var e,t,n,o=arguments[0]||{},i=1,a=arguments.length;i<a;i++)if(null!==(e=arguments[i]))for(t in e)o!==(n=e[t])&&void 0!==n&&(o[t]=n);return o},e.dataStorage=e.win.jnewsDataStorage,e.isVisible=function(e){return 0!==e.offsetWidth&&0!==e.offsetHeight||e.getBoundingClientRect().length},e.getHeight=function(e){return e.offsetHeight||e.clientHeight||e.getBoundingClientRect().height},e.getWidth=function(e){return e.offsetWidth||e.clientWidth||e.getBoundingClientRect().width},e.supportsPassive=!1;try{var t=Object.defineProperty({},"passive",{get:function(){e.supportsPassive=!0}});"createEvent"in e.doc?e.win.addEventListener("test",null,t):"fireEvent"in e.doc&&e.win.attachEvent("test",null)}catch(e){}e.passiveOption=!!e.supportsPassive&&{passive:!0},e.setStorage=function(e,t){e="jnews-"+e;var n={expired:Math.floor(((new Date).getTime()+432e5)/1e3)};t=Object.assign(n,t);localStorage.setItem(e,JSON.stringify(t))},e.getStorage=function(e){e="jnews-"+e;var t=localStorage.getItem(e);return null!==t&&0<t.length?JSON.parse(localStorage.getItem(e)):{}},e.expiredStorage=function(){var t,n="jnews-";for(var o in localStorage)o.indexOf(n)>-1&&"undefined"!==(t=e.getStorage(o.replace(n,""))).expired&&t.expired<Math.floor((new Date).getTime()/1e3)&&localStorage.removeItem(o)},e.addEvents=function(t,n,o){for(var i in n){var a=["touchstart","touchmove"].indexOf(i)>=0&&!o&&e.passiveOption;"createEvent"in e.doc?t.addEventListener(i,n[i],a):"fireEvent"in e.doc&&t.attachEvent("on"+i,n[i])}},e.removeEvents=function(t,n){for(var o in n)"createEvent"in e.doc?t.removeEventListener(o,n[o]):"fireEvent"in e.doc&&t.detachEvent("on"+o,n[o])},e.triggerEvents=function(t,n,o){var i;o=o||{detail:null};return"createEvent"in e.doc?(!(i=e.doc.createEvent("CustomEvent")||new CustomEvent(n)).initCustomEvent||i.initCustomEvent(n,!0,!1,o),void t.dispatchEvent(i)):"fireEvent"in e.doc?((i=e.doc.createEventObject()).eventType=n,void t.fireEvent("on"+i.eventType,i)):void 0},e.getParents=function(t,n){void 0===n&&(n=e.doc);for(var o=[],i=t.parentNode,a=!1;!a;)if(i){var r=i;r.querySelectorAll(n).length?a=!0:(o.push(r),i=r.parentNode)}else o=[],a=!0;return o},e.forEach=function(e,t,n){for(var o=0,i=e.length;o<i;o++)t.call(n,e[o],o)},e.getText=function(e){return e.innerText||e.textContent},e.setText=function(e,t){var n="object"==typeof t?t.innerText||t.textContent:t;e.innerText&&(e.innerText=n),e.textContent&&(e.textContent=n)},e.httpBuildQuery=function(t){return e.objKeys(t).reduce(function t(n){var o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;return function(i,a){var r=n[a];a=encodeURIComponent(a);var s=o?"".concat(o,"[").concat(a,"]"):a;return null==r||"function"==typeof r?(i.push("".concat(s,"=")),i):["number","boolean","string"].includes(typeof r)?(i.push("".concat(s,"=").concat(encodeURIComponent(r))),i):(i.push(e.objKeys(r).reduce(t(r,s),[]).join("&")),i)}}(t),[]).join("&")},e.get=function(t,n,o,i){return o="function"==typeof o?o:e.noop,e.ajax("GET",t,n,o,i)},e.post=function(t,n,o,i){return o="function"==typeof o?o:e.noop,e.ajax("POST",t,n,o,i)},e.ajax=function(t,n,o,i,a){var r=new XMLHttpRequest,s=n,c=e.httpBuildQuery(o);if(t=-1!=["GET","POST"].indexOf(t)?t:"GET",r.open(t,s+("GET"==t?"?"+c:""),!0),"POST"==t&&r.setRequestHeader("Content-type","application/x-www-form-urlencoded"),r.setRequestHeader("X-Requested-With","XMLHttpRequest"),r.onreadystatechange=function(){4===r.readyState&&200<=r.status&&300>r.status&&"function"==typeof i&&i.call(void 0,r.response)},void 0!==a&&!a){return{xhr:r,send:function(){r.send("POST"==t?c:null)}}}return r.send("POST"==t?c:null),{xhr:r}},e.scrollTo=function(t,n,o){function i(e,t,n){this.start=this.position(),this.change=e-this.start,this.currentTime=0,this.increment=20,this.duration=void 0===n?500:n,this.callback=t,this.finish=!1,this.animateScroll()}return Math.easeInOutQuad=function(e,t,n,o){return(e/=o/2)<1?n/2*e*e+t:-n/2*(--e*(e-2)-1)+t},i.prototype.stop=function(){this.finish=!0},i.prototype.move=function(t){e.doc.documentElement.scrollTop=t,e.globalBody.parentNode.scrollTop=t,e.globalBody.scrollTop=t},i.prototype.position=function(){return e.doc.documentElement.scrollTop||e.globalBody.parentNode.scrollTop||e.globalBody.scrollTop},i.prototype.animateScroll=function(){this.currentTime+=this.increment;var t=Math.easeInOutQuad(this.currentTime,this.start,this.change,this.duration);this.move(t),this.currentTime<this.duration&&!this.finish?e.requestAnimationFrame.call(e.win,this.animateScroll.bind(this)):this.callback&&"function"==typeof this.callback&&this.callback()},new i(t,n,o)},e.unwrap=function(t){var n,o=t;e.forEach(t,(function(e,t){n?n+=e:n=e})),o.replaceWith(n)},e.performance={start:function(e){performance.mark(e+"Start")},stop:function(e){performance.mark(e+"End"),performance.measure(e,e+"Start",e+"End")}},e.fps=function(){var t=0,n=0,o=0;!function(){var i=t=0,a=0,r=0,s=document.getElementById("fpsTable"),c=function(t){void 0===document.getElementsByTagName("body")[0]?e.requestAnimationFrame.call(e.win,(function(){c(t)})):document.getElementsByTagName("body")[0].appendChild(t)};null===s&&((s=document.createElement("div")).style.position="fixed",s.style.top="120px",s.style.left="10px",s.style.width="100px",s.style.height="20px",s.style.border="1px solid black",s.style.fontSize="11px",s.style.zIndex="100000",s.style.backgroundColor="white",s.id="fpsTable",c(s));var l=function(){o++,n=Date.now(),(a=(o/(r=(n-t)/1e3)).toPrecision(2))!=i&&(i=a,s.innerHTML=i+"fps"),1<r&&(t=n,o=0),e.requestAnimationFrame.call(e.win,l)};l()}()},e.instr=function(e,t){for(var n=0;n<t.length;n++)if(-1!==e.toLowerCase().indexOf(t[n].toLowerCase()))return!0},e.winLoad=function(t,n){function o(o){if("complete"===e.doc.readyState||"interactive"===e.doc.readyState)return!o||n?setTimeout(t,n||1):t(o),1}o()||e.addEvents(e.win,{load:o})},e.docReady=function(t,n){function o(o){if("complete"===e.doc.readyState||"interactive"===e.doc.readyState)return!o||n?setTimeout(t,n||1):t(o),1}o()||e.addEvents(e.doc,{DOMContentLoaded:o})},e.fireOnce=function(){e.docReady((function(){e.assets=e.assets||[],e.assets.length&&(e.boot(),e.load_assets())}),50)},e.boot=function(){e.length&&e.doc.querySelectorAll("style[media]").forEach((function(e){"not all"==e.getAttribute("media")&&e.removeAttribute("media")}))},e.create_js=function(t,n){var o=e.doc.createElement("script");switch(o.setAttribute("src",t),n){case"defer":o.setAttribute("defer",!0);break;case"async":o.setAttribute("async",!0);break;case"deferasync":o.setAttribute("defer",!0),o.setAttribute("async",!0)}e.globalBody.appendChild(o)},e.load_assets=function(){"object"==typeof e.assets&&e.forEach(e.assets.slice(0),(function(t,n){var o="";t.defer&&(o+="defer"),t.async&&(o+="async"),e.create_js(t.url,o);var i=e.assets.indexOf(t);i>-1&&e.assets.splice(i,1)})),e.assets=jnewsoption.au_scripts=window.jnewsads=[]},e.setCookie=function(e,t,n){var o="";if(n){var i=new Date;i.setTime(i.getTime()+24*n*60*60*1e3),o="; expires="+i.toUTCString()}document.cookie=e+"="+(t||"")+o+"; path=/"},e.getCookie=function(e){for(var t=e+"=",n=document.cookie.split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(t))return i.substring(t.length,i.length)}return null},e.eraseCookie=function(e){document.cookie=e+"=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;"},e.docReady((function(){e.globalBody=e.globalBody==e.doc?e.doc.getElementsByTagName("body")[0]:e.globalBody,e.globalBody=e.globalBody?e.globalBody:e.doc})),e.winLoad((function(){e.winLoad((function(){var t=!1;if(void 0!==window.jnewsadmin)if(void 0!==window.file_version_checker){var n=e.objKeys(window.file_version_checker);n.length?n.forEach((function(e){t||"10.0.4"===window.file_version_checker[e]||(t=!0)})):t=!0}else t=!0;t&&(window.jnewsHelper.getMessage(),window.jnewsHelper.getNotice())}),2500)}))},window.jnews.library=new window.jnews.library;</script>
+	<!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Trump se sometió a prueba de coronavirus y está a la espera del resultado - Noticias de Israel</title><link rel="preload" href="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp" as="image" imagesrcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 2x" fetchpriority="high" /><link rel="preload" href="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-750x375.jpg" as="image" imagesrcset="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-750x375.jpg 750w, https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-360x180.jpg 360w" imagesizes="(max-width: 750px) 100vw, 750px" fetchpriority="high" />
+	<link rel="canonical" href="https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Trump se sometió a prueba de coronavirus y está a la espera del resultado - Noticias de Israel" />
+	<meta name="twitter:description" content="El presidente de los Estados Unidos, Donald Trump, anunció el sábado que se había hecho la prueba del coronavirus pero que aún no había recibido los resultados. Trump ha tenido múltiples contactos directos e indirectos con personas que han dado positivo en las pruebas del virus pandémico. El viernes, declaró estado de emergencia, ya que [&hellip;]" />
+	<meta name="twitter:image" content="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg" />
+	<meta name="twitter:creator" content="@estadoisrael" />
+	<meta name="twitter:site" content="@estadoisrael" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/","url":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/","name":"Trump se sometió a prueba de coronavirus y está a la espera del resultado - Noticias de Israel","isPartOf":{"@id":"https://israelnoticias.com/#website"},"primaryImageOfPage":{"@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/#primaryimage"},"image":{"@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/#primaryimage"},"thumbnailUrl":"https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg","datePublished":"2020-03-14T20:28:27+00:00","dateModified":"2020-03-14T20:28:30+00:00","author":{"@id":"https://israelnoticias.com/#/schema/person/0a5de65a33db3817c5b000d2f1c2be9b"},"breadcrumb":{"@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/#breadcrumb"},"inLanguage":"es","potentialAction":[{"@type":"ReadAction","target":["https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/"]}]},{"@type":"ImageObject","inLanguage":"es","@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/#primaryimage","url":"https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg","contentUrl":"https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg","width":1000,"height":666,"caption":"Trump acierta al imponer nuevas sanciones a Irán. (Reuters)"},{"@type":"BreadcrumbList","@id":"https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Portada","item":"https://israelnoticias.com/"},{"@type":"ListItem","position":2,"name":"Mundo","item":"https://israelnoticias.com/internacional/"},{"@type":"ListItem","position":3,"name":"Trump se sometió a prueba de coronavirus y está a la espera del resultado"}]},{"@type":"WebSite","@id":"https://israelnoticias.com/#website","url":"https://israelnoticias.com/","name":"Noticias de Israel","description":"24 horas en directo y en español","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://israelnoticias.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"es"},{"@type":"Person","@id":"https://israelnoticias.com/#/schema/person/0a5de65a33db3817c5b000d2f1c2be9b","name":"Arí Hashomer","image":{"@type":"ImageObject","inLanguage":"es","@id":"https://israelnoticias.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/e5440ac3fd6c4f59e3d6b90bb567905fe2eece6e177a867b37555d4377febb55?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/e5440ac3fd6c4f59e3d6b90bb567905fe2eece6e177a867b37555d4377febb55?s=96&d=mm&r=g","caption":"Arí Hashomer"},"sameAs":["https://israelnoticias.com"],"url":"https://israelnoticias.com/author/ari-hashomer/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//tpc.googlesyndication.com' />
+<link rel='dns-prefetch' href='//adservice.google.com' />
+<link rel='dns-prefetch' href='//securepubads.g.doubleclick.net' />
+
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color)}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://israelnoticias.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://israelnoticias.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jnews-frontend-css' href='https://israelnoticias.com/wp-content/themes/jnews/assets/dist/frontend.min.css?ver=11.6.13' type='text/css' media='all' />
+<link rel='stylesheet' id='jnews-elementor-css' href='https://israelnoticias.com/wp-content/themes/jnews/assets/css/elementor-frontend.css?ver=11.6.13' type='text/css' media='all' />
+<link rel="stylesheet" id="jnews-style-css" href="https://israelnoticias.com/wp-content/cache/perfmatters/israelnoticias.com/minify/a7752360277b.style.min.css?ver=11.6.13" type="text/css" media="all">
+<link rel='stylesheet' id='jnews-darkmode-css' href='https://israelnoticias.com/wp-content/themes/jnews/assets/css/darkmode.css?ver=11.6.13' type='text/css' media='all' />
+<link rel='stylesheet' id='jnews-darkmode-device-css' href='https://israelnoticias.com/wp-content/themes/jnews/assets/css/darkmode-device.css?ver=11.6.13' type='text/css' media='all' />
+<link rel="stylesheet" id="jnews-scheme-css" href="https://israelnoticias.com/wp-content/cache/perfmatters/israelnoticias.com/minify/c5c2f7a9e6a2.scheme.min.css?ver=11.6.13" type="text/css" media="all">
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://israelnoticias.com/wp-includes/blocks/paragraph/style.min.css?ver=6.8.1' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-XB8PSM3895" id="jnews-google-tag-manager-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="jnews-google-tag-manager-js-after">
+/* <![CDATA[ */
+				window.addEventListener('DOMContentLoaded', function() {
+					(function() {
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-XB8PSM3895');
+					})();
+				});
+				
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://israelnoticias.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://israelnoticias.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" async data-rocket-src="https://israelnoticias.com/wp-content/uploads/perfmatters/gtagv4.js?id=G-XB8PSM3895"></script><script type="rocketlazyloadscript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "G-XB8PSM3895");</script><meta name="generator" content="Elementor 3.28.4; features: additional_custom_breakpoints, e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://israelnoticias.com/wp-content/uploads/2024/10/cropped-NDI-FAVICON-1-1-32x32.webp" sizes="32x32" />
+<link rel="icon" href="https://israelnoticias.com/wp-content/uploads/2024/10/cropped-NDI-FAVICON-1-1-192x192.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://israelnoticias.com/wp-content/uploads/2024/10/cropped-NDI-FAVICON-1-1-180x180.webp" />
+<meta name="msapplication-TileImage" content="https://israelnoticias.com/wp-content/uploads/2024/10/cropped-NDI-FAVICON-1-1-270x270.webp" />
+<script type="rocketlazyloadscript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/noticiasdeisrael-network/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script><style id="jeg_dynamic_css" type="text/css" data-type="jeg_custom-css">.jeg_container, .jeg_content, .jeg_boxed .jeg_main .jeg_container, .jeg_autoload_separator { background-color : #ffffff; } body { --j-body-color : #000000; --j-accent-color : #1e73be; --j-alt-color : #1e73be; --j-heading-color : #212121; --j-entry-color : #000000; --j-entry-link-color : #1e73be; } body,.jeg_newsfeed_list .tns-outer .tns-controls button,.jeg_filter_button,.owl-carousel .owl-nav div,.jeg_readmore,.jeg_hero_style_7 .jeg_post_meta a,.widget_calendar thead th,.widget_calendar tfoot a,.jeg_socialcounter a,.entry-header .jeg_meta_like a,.entry-header .jeg_meta_comment a,.entry-header .jeg_meta_donation a,.entry-header .jeg_meta_bookmark a,.entry-content tbody tr:hover,.entry-content th,.jeg_splitpost_nav li:hover a,#breadcrumbs a,.jeg_author_socials a:hover,.jeg_footer_content a,.jeg_footer_bottom a,.jeg_cartcontent,.woocommerce .woocommerce-breadcrumb a { color : #000000; } a, .jeg_menu_style_5>li>a:hover, .jeg_menu_style_5>li.sfHover>a, .jeg_menu_style_5>li.current-menu-item>a, .jeg_menu_style_5>li.current-menu-ancestor>a, .jeg_navbar .jeg_menu:not(.jeg_main_menu)>li>a:hover, .jeg_midbar .jeg_menu:not(.jeg_main_menu)>li>a:hover, .jeg_side_tabs li.active, .jeg_block_heading_5 strong, .jeg_block_heading_6 strong, .jeg_block_heading_7 strong, .jeg_block_heading_8 strong, .jeg_subcat_list li a:hover, .jeg_subcat_list li button:hover, .jeg_pl_lg_7 .jeg_thumb .jeg_post_category a, .jeg_pl_xs_2:before, .jeg_pl_xs_4 .jeg_postblock_content:before, .jeg_postblock .jeg_post_title a:hover, .jeg_hero_style_6 .jeg_post_title a:hover, .jeg_sidefeed .jeg_pl_xs_3 .jeg_post_title a:hover, .widget_jnews_popular .jeg_post_title a:hover, .jeg_meta_author a, .widget_archive li a:hover, .widget_pages li a:hover, .widget_meta li a:hover, .widget_recent_entries li a:hover, .widget_rss li a:hover, .widget_rss cite, .widget_categories li a:hover, .widget_categories li.current-cat>a, #breadcrumbs a:hover, .jeg_share_count .counts, .commentlist .bypostauthor>.comment-body>.comment-author>.fn, span.required, .jeg_review_title, .bestprice .price, .authorlink a:hover, .jeg_vertical_playlist .jeg_video_playlist_play_icon, .jeg_vertical_playlist .jeg_video_playlist_item.active .jeg_video_playlist_thumbnail:before, .jeg_horizontal_playlist .jeg_video_playlist_play, .woocommerce li.product .pricegroup .button, .widget_display_forums li a:hover, .widget_display_topics li:before, .widget_display_replies li:before, .widget_display_views li:before, .bbp-breadcrumb a:hover, .jeg_mobile_menu li.sfHover>a, .jeg_mobile_menu li a:hover, .split-template-6 .pagenum, .jeg_mobile_menu_style_5>li>a:hover, .jeg_mobile_menu_style_5>li.sfHover>a, .jeg_mobile_menu_style_5>li.current-menu-item>a, .jeg_mobile_menu_style_5>li.current-menu-ancestor>a, .jeg_mobile_menu.jeg_menu_dropdown li.open > div > a { color : #1e73be; } .jeg_menu_style_1>li>a:before, .jeg_menu_style_2>li>a:before, .jeg_menu_style_3>li>a:before, .jeg_side_toggle, .jeg_slide_caption .jeg_post_category a, .jeg_slider_type_1_wrapper .tns-controls button.tns-next, .jeg_block_heading_1 .jeg_block_title span, .jeg_block_heading_2 .jeg_block_title span, .jeg_block_heading_3, .jeg_block_heading_4 .jeg_block_title span, .jeg_block_heading_6:after, .jeg_pl_lg_box .jeg_post_category a, .jeg_pl_md_box .jeg_post_category a, .jeg_readmore:hover, .jeg_thumb .jeg_post_category a, .jeg_block_loadmore a:hover, .jeg_postblock.alt .jeg_block_loadmore a:hover, .jeg_block_loadmore a.active, .jeg_postblock_carousel_2 .jeg_post_category a, .jeg_heroblock .jeg_post_category a, .jeg_pagenav_1 .page_number.active, .jeg_pagenav_1 .page_number.active:hover, input[type="submit"], .btn, .button, .widget_tag_cloud a:hover, .popularpost_item:hover .jeg_post_title a:before, .jeg_splitpost_4 .page_nav, .jeg_splitpost_5 .page_nav, .jeg_post_via a:hover, .jeg_post_source a:hover, .jeg_post_tags a:hover, .comment-reply-title small a:before, .comment-reply-title small a:after, .jeg_storelist .productlink, .authorlink li.active a:before, .jeg_footer.dark .socials_widget:not(.nobg) a:hover .fa,.jeg_footer.dark .socials_widget:not(.nobg) a:hover span.jeg-icon, div.jeg_breakingnews_title, .jeg_overlay_slider_bottom_wrapper .tns-controls button, .jeg_overlay_slider_bottom_wrapper .tns-controls button:hover, .jeg_vertical_playlist .jeg_video_playlist_current, .woocommerce span.onsale, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .jeg_popup_post .caption, .jeg_footer.dark input[type="submit"], .jeg_footer.dark .btn, .jeg_footer.dark .button, .footer_widget.widget_tag_cloud a:hover, .jeg_inner_content .content-inner .jeg_post_category a:hover, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="submit"], #buddypress input[type="button"], #buddypress input[type="reset"], #buddypress ul.button-nav li a, #buddypress .generic-button a, #buddypress .generic-button button, #buddypress .comment-reply-link, #buddypress a.bp-title-button, #buddypress.buddypress-wrap .members-list li .user-update .activity-read-more a, div#buddypress .standard-form button:hover, div#buddypress a.button:hover, div#buddypress input[type="submit"]:hover, div#buddypress input[type="button"]:hover, div#buddypress input[type="reset"]:hover, div#buddypress ul.button-nav li a:hover, div#buddypress .generic-button a:hover, div#buddypress .generic-button button:hover, div#buddypress .comment-reply-link:hover, div#buddypress a.bp-title-button:hover, div#buddypress.buddypress-wrap .members-list li .user-update .activity-read-more a:hover, #buddypress #item-nav .item-list-tabs ul li a:before, .jeg_inner_content .jeg_meta_container .follow-wrapper a { background-color : #1e73be; } .jeg_block_heading_7 .jeg_block_title span, .jeg_readmore:hover, .jeg_block_loadmore a:hover, .jeg_block_loadmore a.active, .jeg_pagenav_1 .page_number.active, .jeg_pagenav_1 .page_number.active:hover, .jeg_pagenav_3 .page_number:hover, .jeg_prevnext_post a:hover h3, .jeg_overlay_slider .jeg_post_category, .jeg_sidefeed .jeg_post.active, .jeg_vertical_playlist.jeg_vertical_playlist .jeg_video_playlist_item.active .jeg_video_playlist_thumbnail img, .jeg_horizontal_playlist .jeg_video_playlist_item.active { border-color : #1e73be; } .jeg_tabpost_nav li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .jeg_mobile_menu_style_1>li.current-menu-item a, .jeg_mobile_menu_style_1>li.current-menu-ancestor a, .jeg_mobile_menu_style_2>li.current-menu-item::after, .jeg_mobile_menu_style_2>li.current-menu-ancestor::after, .jeg_mobile_menu_style_3>li.current-menu-item::before, .jeg_mobile_menu_style_3>li.current-menu-ancestor::before { border-bottom-color : #1e73be; } .jeg_post_share .jeg-icon svg { fill : #1e73be; } .jeg_post_meta .fa, .jeg_post_meta .jpwt-icon, .entry-header .jeg_post_meta .fa, .jeg_review_stars, .jeg_price_review_list { color : #1e73be; } .jeg_share_button.share-float.share-monocrhome a { background-color : #1e73be; } h1,h2,h3,h4,h5,h6,.jeg_post_title a,.entry-header .jeg_post_title,.jeg_hero_style_7 .jeg_post_title a,.jeg_block_title,.jeg_splitpost_bar .current_title,.jeg_video_playlist_title,.gallery-caption,.jeg_push_notification_button>a.button { color : #212121; } .split-template-9 .pagenum, .split-template-10 .pagenum, .split-template-11 .pagenum, .split-template-12 .pagenum, .split-template-13 .pagenum, .split-template-15 .pagenum, .split-template-18 .pagenum, .split-template-20 .pagenum, .split-template-19 .current_title span, .split-template-20 .current_title span { background-color : #212121; } .entry-content .content-inner p, .entry-content .content-inner span, .entry-content .intro-text { color : #000000; } .entry-content .content-inner a { color : #1e73be; } .jeg_topbar, .jeg_topbar.dark { border-top-width : 0px; } .jeg_header .jeg_bottombar.jeg_navbar,.jeg_bottombar .jeg_nav_icon { height : 50px; } .jeg_header .jeg_bottombar.jeg_navbar, .jeg_header .jeg_bottombar .jeg_main_menu:not(.jeg_menu_style_1) > li > a, .jeg_header .jeg_bottombar .jeg_menu_style_1 > li, .jeg_header .jeg_bottombar .jeg_menu:not(.jeg_main_menu) > li > a { line-height : 50px; } .jeg_header .socials_widget > a > i.fa:before { color : #1e73be; } .jeg_header .socials_widget.nobg > a > i > span.jeg-icon svg { fill : #1e73be; } .jeg_header .socials_widget.nobg > a > span.jeg-icon svg { fill : #1e73be; } .jeg_header .socials_widget > a > span.jeg-icon svg { fill : #1e73be; } .jeg_header .socials_widget > a > i > span.jeg-icon svg { fill : #1e73be; } .jeg_aside_item.socials_widget > a > i.fa:before { color : #1e73be; } .jeg_aside_item.socials_widget.nobg a span.jeg-icon svg { fill : #1e73be; } .jeg_aside_item.socials_widget a span.jeg-icon svg { fill : #1e73be; } .jeg_footer_content,.jeg_footer.dark .jeg_footer_content { background-color : #ffffff; } .jeg_footer_secondary,.jeg_footer.dark .jeg_footer_secondary,.jeg_footer_bottom,.jeg_footer.dark .jeg_footer_bottom,.jeg_footer_sidecontent .jeg_footer_primary { color : #000000; } .jeg_footer_bottom a,.jeg_footer.dark .jeg_footer_bottom a,.jeg_footer_secondary a,.jeg_footer.dark .jeg_footer_secondary a,.jeg_footer_sidecontent .jeg_footer_primary a,.jeg_footer_sidecontent.dark .jeg_footer_primary a { color : #ffffff; } .socials_widget a .fa,.jeg_footer.dark .socials_widget a .fa,.jeg_footer .socials_widget.nobg .fa,.jeg_footer.dark .socials_widget.nobg .fa,.jeg_footer .socials_widget:not(.nobg) a .fa,.jeg_footer.dark .socials_widget:not(.nobg) a .fa { color : #1e73be; } .jeg_footer .socials_widget.nobg span.jeg-icon svg, .jeg_footer div.socials_widget span.jeg-icon svg { fill : #1e73be; } .socials_widget a:hover .fa,.jeg_footer.dark .socials_widget a:hover .fa,.socials_widget a:hover .fa,.jeg_footer.dark .socials_widget a:hover .fa,.jeg_footer .socials_widget.nobg a:hover .fa,.jeg_footer.dark .socials_widget.nobg a:hover .fa,.jeg_footer .socials_widget:not(.nobg) a:hover .fa,.jeg_footer.dark .socials_widget:not(.nobg) a:hover .fa { color : #1e73be; } .jeg_footer .socials_widget.nobg span.jeg-icon svg:hover, .jeg_footer div.socials_widget span.jeg-icon svg:hover { fill : #1e73be; } body,input,textarea,select,.chosen-container-single .chosen-single,.btn,.button { font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; } .jeg_post_title, .entry-header .jeg_post_title, .jeg_single_tpl_2 .entry-header .jeg_post_title, .jeg_single_tpl_3 .entry-header .jeg_post_title, .jeg_single_tpl_6 .entry-header .jeg_post_title, .jeg_content .jeg_custom_title_wrapper .jeg_post_title { font-family: "Roboto Condensed",Helvetica,Arial,sans-serif; } .jeg_thumb .jeg_post_category a,.jeg_pl_lg_box .jeg_post_category a,.jeg_pl_md_box .jeg_post_category a,.jeg_postblock_carousel_2 .jeg_post_category a,.jeg_heroblock .jeg_post_category a,.jeg_slide_caption .jeg_post_category a { background-color : #1e73be; } .jeg_overlay_slider .jeg_post_category,.jeg_thumb .jeg_post_category a,.jeg_pl_lg_box .jeg_post_category a,.jeg_pl_md_box .jeg_post_category a,.jeg_postblock_carousel_2 .jeg_post_category a,.jeg_heroblock .jeg_post_category a,.jeg_slide_caption .jeg_post_category a { border-color : #1e73be; } </style>		<style type="text/css" id="wp-custom-css">
+			
+/* Estilo para pantallas estándar */
+.jeg_logo_img {
+    width: 328px; /* Ancho para la vista web */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilo para dispositivos móviles */
+@media screen and (max-width: 600px) { /* Se aplica para pantallas de hasta 600px */
+    .jeg_logo_img {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+}
+
+.jeg_featured .wp-caption-text {
+    margin: 3px 0 0;
+    text-align: left;
+    font-size: 12px;
+    color: #000000;
+	  line-height: 20px;
+}
+/* PREGUNTAS Y RESPUESTAS */
+.schema-faq-section {
+    background-color: #f4f4f4; /* Un color de fondo claro */
+    border: 1px solid #ddd; /* Un borde sutil */
+    padding: 10px; /* Espaciado interno para no pegar el texto a los bordes */
+    margin-bottom: 15px; /* Espacio entre las secciones de preguntas y respuestas */
+    border-radius: 5px; /* Bordes redondeados para un look más suave */
+}
+.schema-faq-question {
+    font-weight: bold; /* Hacer el texto más grueso */
+    color: #333; /* Un color de texto un poco más oscuro para destacar */
+    margin-bottom: 5px; /* Espacio antes de la respuesta */
+}
+.schema-faq-answer {
+    color: #666; /* Un color más suave para el texto de la respuesta */
+    line-height: 1.6; /* Mejora la legibilidad con un mayor interlineado */
+}
+.schema-faq-section:hover {
+    background-color: #e9e9e9; /* Un cambio sutil de color al pasar el mouse */
+    border-color: #ccc; /* Cambio de color del borde al pasar el mouse */
+}
+/* Mejora el contraste del subtítulo de la entrada */
+.entry-header .jeg_post_subtitle {
+    font-size: 20px;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    color: #000000; /* Cambiado a un gris más oscuro para mejor contraste */
+}
+
+/* Ajusta el contraste de los enlaces en la meta de la publicación */
+.jeg_post_meta a {
+    color: #0056b3; /* Azul oscuro para mejorar legibilidad y mantener diseño */
+    font-weight: 700;
+}
+
+/* Mejora el contraste del texto de pie de foto en las características */
+.jeg_featured .wp-caption-text {
+    margin: 3px 0 0;
+    text-align: left;
+    font-size: 12px;
+    color: #000000; /* Cambiado a un gris más oscuro para mejor contraste */
+    line-height: 20px;
+}
+
+/* Mejora el contraste en los breadcrumbs */
+#breadcrumbs {
+    font-size: 12px;
+    margin: 0;
+    color: #000000; /* Cambiado a un gris más oscuro para mejor contraste */
+}
+
+
+
+/* OCULTAR SIDEBAR */
+@media screen and (max-width: 768px) {
+    .jeg_sidebar {
+        display: none !important;
+    }
+}
+
+/* ALINEAR TEXTO */
+p {
+    margin: 0 0 1.75em;
+    text-rendering: optimizeLegibility;
+    text-align: justify;
+    hyphens: auto; /* Puedes usar "auto", "none" o "manual" según tus necesidades */
+}
+/* MEJORAR EL INP DE PAGE SPEED */
+figcaption {
+    margin: 3px 0 1em;
+
+    color: #000000;
+}
+/*Footer - Derechos centrado */
+.jeg_footer .jeg_vc_content {
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;       /* Asegura que el div ocupe el ancho completo */
+    margin: auto;      /* Centra el div dentro de su contenedor */
+    display: block;    /* Asegura que el div se comporte como un bloque */
+}
+/* METATEXT */
+.meta_text {
+  color: #000000; /* Color del texto, en este caso NEGRO */
+  padding: 5px; /* Espaciado interno para mejorar la legibilidad */
+}
+/* Reproductor */
+.jeg_video_container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.jeg_video_container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Estilo base para ambos (móvil y escritorio) */
+  .anuncio {
+    width: 100%; /* Full ancho */
+    height: auto; /* Altura automática para mantener la proporción */
+    /* Si deseas una altura específica para escritorio, puedes ajustarla aquí */
+  }
+
+  /* Media query para pantallas móviles */
+  @media (max-width: 767px) {
+    .anuncio {
+      height: 280px; /* Altura fija para móviles */
+    }
+  }
+/* Asegúrate de que el contenedor mantenga el formato 16:9 */
+.wp-block-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Mantiene el formato 16:9 */
+    background-color: black; /* Para rellenar el área vacía */
+}
+
+.wp-block-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que el video se ajuste al contenedor sin recortarse */
+    background-color: black; /* Fondo negro en caso de que sea necesario */
+}
+/* Estilización general del contenedor del índice */
+.wp-block-yoast-seo-table-of-contents {
+    background: linear-gradient(135deg, #ffffff, #f4f4f4); /* Degradado sutil */
+    border: 1px solid #ddd; /* Borde más ligero */
+    border-radius: 12px; /* Bordes redondeados más modernos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    padding: 20px;
+    margin: 25px 0;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+}
+
+/* Estilización del encabezado del índice */
+.wp-block-yoast-seo-table-of-contents h2 {
+    color: #222; /* Texto ligeramente más oscuro */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #1a73e8; /* Línea moderna y color vibrante */
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Estilización de las listas del índice */
+.wp-block-yoast-seo-table-of-contents ul {
+    list-style: none; /* Quitar los puntos predeterminados */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Estilización de los elementos de lista */
+.wp-block-yoast-seo-table-of-contents ul li {
+    margin-bottom: 8px; /* Mayor espaciado para claridad */
+    line-height: 1.6; /* Altura de línea cómoda */
+}
+
+/* Estilización de los enlaces */
+.wp-block-yoast-seo-table-of-contents ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #1a73e8; /* Azul vibrante */
+    font-size: 1rem; /* Tamaño de texto estándar */
+    font-weight: 500; /* Peso moderado para destacar */
+    border-bottom: 2px solid transparent; /* Línea interactiva sutil */
+    transition: all 0.3s ease; /* Efecto suave */
+}
+
+/* Cambio de color al pasar el cursor sobre los enlaces */
+.wp-block-yoast-seo-table-of-contents ul li a:hover {
+    color: #174ea6; /* Azul más intenso */
+    border-bottom: 2px solid #1a73e8; /* Línea de resaltado */
+}
+
+/* Estilización de subniveles (listas anidadas) */
+.wp-block-yoast-seo-table-of-contents ul ul {
+    padding-left: 20px; /* Mayor sangría para jerarquía */
+    border-left: 2px solid #ddd; /* Línea limpia para subniveles */
+    margin-top: 10px;
+}
+
+.wp-block-yoast-seo-table-of-contents ul ul li {
+    margin-bottom: 6px; /* Espaciado consistente */
+    font-size: 0.95rem; /* Tamaño ligeramente menor */
+    font-weight: 400; /* Peso más ligero para subniveles */
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .wp-block-yoast-seo-table-of-contents {
+        padding: 15px;
+    }
+
+    .wp-block-yoast-seo-table-of-contents h2 {
+        font-size: 1.6rem;
+    }
+
+    .wp-block-yoast-seo-table-of-contents ul li a {
+        font-size: 0.95rem;
+    }
+}
+		</style>
+		<noscript><style>.perfmatters-lazy[data-src]{display:none !important;}</style></noscript><style>.perfmatters-lazy-youtube{position:relative;width:100%;max-width:100%;height:0;padding-bottom:56.23%;overflow:hidden}.perfmatters-lazy-youtube img{position:absolute;top:0;right:0;bottom:0;left:0;display:block;width:100%;max-width:100%;height:auto;margin:auto;border:none;cursor:pointer;transition:.5s all;-webkit-transition:.5s all;-moz-transition:.5s all}.perfmatters-lazy-youtube img:hover{-webkit-filter:brightness(75%)}.perfmatters-lazy-youtube .play{position:absolute;top:50%;left:50%;right:auto;width:68px;height:48px;margin-left:-34px;margin-top:-24px;background:url(https://israelnoticias.com/wp-content/plugins/perfmatters/img/youtube.svg) no-repeat;background-position:center;background-size:cover;pointer-events:none;filter:grayscale(1)}.perfmatters-lazy-youtube:hover .play{filter:grayscale(0)}.perfmatters-lazy-youtube iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:99}.wp-has-aspect-ratio .wp-block-embed__wrapper{position:relative;}.wp-has-aspect-ratio .perfmatters-lazy-youtube{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;padding-bottom:0}.perfmatters-lazy.pmloaded,.perfmatters-lazy.pmloaded>img,.perfmatters-lazy>img.pmloaded,.perfmatters-lazy[data-ll-status=entered]{animation:500ms pmFadeIn}@keyframes pmFadeIn{0%{opacity:0}100%{opacity:1}}body .perfmatters-lazy-css-bg:not([data-ll-status=entered]),body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *,body .perfmatters-lazy-css-bg:not([data-ll-status=entered])::before,body .perfmatters-lazy-css-bg:not([data-ll-status=entered])::after,body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *::before,body .perfmatters-lazy-css-bg:not([data-ll-status=entered]) *::after{background-image:none!important;will-change:transform;transition:opacity 0.025s ease-in,transform 0.025s ease-in!important;}</style><script type="rocketlazyloadscript" async data-rocket-src="https://cdn.taboola.com/webpush/publishers/1831493/taboola-push-sdk.js"></script>
+<script type="rocketlazyloadscript" async data-rocket-type="application/javascript"
+        data-rocket-src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930497139704672"
+     crossorigin="anonymous"></script>
+<script type="rocketlazyloadscript" async data-rocket-src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>	 
+<meta name="generator" content="WP Rocket 3.18.3" data-wpr-features="wpr_delay_js wpr_defer_js wpr_preload_links wpr_desktop wpr_dns_prefetch" /></head>
+<body class="wp-singular post-template-default single single-post postid-126583 single-format-standard wp-embed-responsive wp-theme-jnews jeg_device_dark jnews-dark-nocookie jeg_single_tpl_1 jnews jsc_normal elementor-default elementor-kit-352341">
+
+    
+    
+    <div class="jeg_ad jeg_ad_top jnews_header_top_ads">
+        <div class='ads-wrapper  '></div>    </div>
+
+    <!-- The Main Wrapper
+    ============================================= -->
+    <div class="jeg_viewport">
+
+        
+        <div class="jeg_header_wrapper">
+            <div class="jeg_header_instagram_wrapper">
+    </div>
+
+<!-- HEADER -->
+<div class="jeg_header normal">
+    <div class="jeg_topbar jeg_container jeg_navbar_wrapper normal">
+    <div class="container">
+        <div class="jeg_nav_row">
+            
+                <div class="jeg_nav_col jeg_nav_left  jeg_nav_grow">
+                    <div class="item_wrap jeg_nav_alignleft">
+                        <div class="jeg_nav_item">
+	<ul class="jeg_menu jeg_top_menu"><li id="menu-item-279100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279100"><a href="https://israelnoticias.com/?page_id=279092">Quiénes somos</a></li>
+<li id="menu-item-201058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201058"><a href="https://israelnoticias.com/contacto/">Contacto</a></li>
+<li id="menu-item-201059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201059"><a href="https://embassies.gov.il/Pages/IsraeliMissionsAroundTheWorld.aspx">Embajadas</a></li>
+<li id="menu-item-201060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201060"><a href="https://www.gov.il/en/departments/about/about_pm_office">Oficina PM</a></li>
+<li id="menu-item-201061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201061"><a href="https://www.science.co.il/Israel-info.php">Directorio</a></li>
+<li id="menu-item-201062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201062"><a href="https://www.jerusalem.muni.il/en/">Jerusalén</a></li>
+<li id="menu-item-231034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231034"><a href="https://israelnoticias.com/condiciones-de-servicio/">Condiciones de servicio</a></li>
+<li id="menu-item-231035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-231035"><a rel="privacy-policy" href="https://israelnoticias.com/nuestra-politica-de-privacidad/">Política de Privacidad</a></li>
+</ul></div>                    </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_center  jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_aligncenter">
+                                            </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_right  jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignright">
+                        <div class="jeg_nav_item jeg_top_date">
+    viernes, mayo 16, 2025</div>                    </div>
+                </div>
+
+                        </div>
+    </div>
+</div><!-- /.jeg_container --><div class="jeg_midbar jeg_container jeg_navbar_wrapper normal">
+    <div class="container">
+        <div class="jeg_nav_row">
+            
+                <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignleft">
+                                            </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                    <div class="item_wrap jeg_nav_aligncenter">
+                        <div class="jeg_nav_item jeg_logo jeg_desktop_logo">
+			<div class="site-title">
+			<a href="https://israelnoticias.com/" aria-label="Visit Homepage" style="padding: 0 0 0 0;">
+				<img data-perfmatters-preload class='jeg_logo_img' src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp" srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 2x" alt="Noticias de Israel"data-light-src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp" data-light-srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 2x" data-dark-src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp" data-dark-srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp 2x"width="640" height="77">			</a>
+		</div>
+	</div>
+                    </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_right jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignright">
+                                            </div>
+                </div>
+
+                        </div>
+    </div>
+</div><div class="jeg_bottombar jeg_navbar jeg_container jeg_navbar_wrapper jeg_navbar_normal jeg_navbar_normal">
+    <div class="container">
+        <div class="jeg_nav_row">
+            
+                <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignleft">
+                                            </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                    <div class="item_wrap jeg_nav_aligncenter">
+                        <div class="jeg_nav_item jeg_main_menu_wrapper">
+<div class="jeg_mainmenu_wrap"><ul class="jeg_menu jeg_main_menu jeg_menu_style_5" data-animation="slide"><li id="menu-item-118918" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-118918 bgnav" data-item-row="default" ><a href="https://israelnoticias.com">Inicio</a></li>
+<li id="menu-item-93517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93517 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/idf/">FDI</a></li>
+<li id="menu-item-380278" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380278 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/franja-de-gaza/">Gaza</a></li>
+<li id="menu-item-93512" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93512 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/terrorismo/">Terrorismo</a></li>
+<li id="menu-item-93518" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-93518 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/internacional/">Mundo</a></li>
+<li id="menu-item-380351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380351 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/militar/">Zona de guerra</a></li>
+<li id="menu-item-427829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-427829 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/siria/">Siria</a></li>
+<li id="menu-item-380279" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380279 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/iran/">Irán</a></li>
+<li id="menu-item-93513" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93513 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/antisemitismo/">Antisemitismo</a></li>
+<li id="menu-item-93514" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93514 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/tecnologia/">Tecnología</a></li>
+<li id="menu-item-93515" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93515 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/arqueologia/">Arqueología</a></li>
+</ul></div></div>
+                    </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_right jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignright">
+                                            </div>
+                </div>
+
+                        </div>
+    </div>
+</div></div><!-- /.jeg_header -->        </div>
+
+        <div class="jeg_header_sticky">
+            <div class="sticky_blankspace"></div>
+<div class="jeg_header normal">
+    <div class="jeg_container">
+        <div data-mode="pinned" class="jeg_stickybar jeg_navbar jeg_navbar_wrapper  jeg_navbar_normal">
+            <div class="container">
+    <div class="jeg_nav_row">
+        
+            <div class="jeg_nav_col jeg_nav_left jeg_nav_grow">
+                <div class="item_wrap jeg_nav_alignleft">
+                    <div class="jeg_nav_item jeg_main_menu_wrapper">
+<div class="jeg_mainmenu_wrap"><ul class="jeg_menu jeg_main_menu jeg_menu_style_5" data-animation="slide"><li id="menu-item-118918" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-118918 bgnav" data-item-row="default" ><a href="https://israelnoticias.com">Inicio</a></li>
+<li id="menu-item-93517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93517 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/idf/">FDI</a></li>
+<li id="menu-item-380278" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380278 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/franja-de-gaza/">Gaza</a></li>
+<li id="menu-item-93512" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93512 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/terrorismo/">Terrorismo</a></li>
+<li id="menu-item-93518" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-93518 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/internacional/">Mundo</a></li>
+<li id="menu-item-380351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380351 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/militar/">Zona de guerra</a></li>
+<li id="menu-item-427829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-427829 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/siria/">Siria</a></li>
+<li id="menu-item-380279" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380279 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/iran/">Irán</a></li>
+<li id="menu-item-93513" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93513 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/antisemitismo/">Antisemitismo</a></li>
+<li id="menu-item-93514" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93514 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/tecnologia/">Tecnología</a></li>
+<li id="menu-item-93515" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93515 bgnav" data-item-row="default" ><a href="https://israelnoticias.com/arqueologia/">Arqueología</a></li>
+</ul></div></div>
+                </div>
+            </div>
+
+            
+            <div class="jeg_nav_col jeg_nav_center jeg_nav_normal">
+                <div class="item_wrap jeg_nav_aligncenter">
+                                    </div>
+            </div>
+
+            
+            <div class="jeg_nav_col jeg_nav_right jeg_nav_normal">
+                <div class="item_wrap jeg_nav_alignright">
+                                    </div>
+            </div>
+
+                </div>
+</div>        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="jeg_navbar_mobile_wrapper">
+            <div class="jeg_navbar_mobile" data-mode="scroll">
+    <div class="jeg_mobile_bottombar jeg_mobile_midbar jeg_container normal">
+    <div class="container">
+        <div class="jeg_nav_row">
+            
+                <div class="jeg_nav_col jeg_nav_left jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignleft">
+                                            </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_center jeg_nav_grow">
+                    <div class="item_wrap jeg_nav_aligncenter">
+                        <div class="jeg_nav_item jeg_mobile_logo">
+			<div class="site-title">
+			<a href="https://israelnoticias.com/" aria-label="Visit Homepage">
+				<img data-perfmatters-preload class='jeg_logo_img' src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp" srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 2x" alt="Noticias de Israel"data-light-src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp" data-light-srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-640.webp 2x" data-dark-src="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp" data-dark-srcset="https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp 1x, https://israelnoticias.com/wp-content/uploads/2024/02/Logo-Dark-640.webp 2x"width="640" height="77">			</a>
+		</div>
+	</div>                    </div>
+                </div>
+
+                
+                <div class="jeg_nav_col jeg_nav_right jeg_nav_normal">
+                    <div class="item_wrap jeg_nav_alignright">
+                                            </div>
+                </div>
+
+                        </div>
+    </div>
+</div></div>
+<div class="sticky_blankspace" style="height: 60px;"></div>        </div>
+
+        <div class="jeg_ad jeg_ad_top jnews_header_bottom_ads">
+            <div class='ads-wrapper  '></div>        </div>
+
+            <div class="post-wrapper">
+
+        <div class="post-wrap" >
+
+            
+            <div class="jeg_main jeg_double_sidebar">
+                <div class="jeg_container">
+                    <div class="jeg_content jeg_singlepage">
+
+	<div class="container">
+
+		<div class="jeg_ad jeg_article jnews_article_top_ads">
+			<div class='ads-wrapper  '></div>		</div>
+
+		<div class="row">
+			<div class="jeg_main_content col-md-6">
+				<div class="jeg_inner_content">
+					
+												<div class="jeg_breadcrumbs jeg_breadcrumb_container">
+							<p id="breadcrumbs"><span><span><a href="https://israelnoticias.com/">Portada</a></span> » <span><a href="https://israelnoticias.com/internacional/">Mundo</a></span> » <span class="breadcrumb_last" aria-current="page"><strong>Trump se sometió a prueba de coronavirus y está a la espera del resultado</strong></span></span></p>						</div>
+						
+						<div class="entry-header">
+							
+							<h1 class="jeg_post_title">Trump se sometió a prueba de coronavirus y está a la espera del resultado</h1>
+
+							
+							<div class="jeg_meta_container"><div class="jeg_post_meta jeg_post_meta_1">
+
+	<div class="meta_left">
+									<div class="jeg_meta_author">
+										<span class="meta_text">por</span>
+					<a href="https://israelnoticias.com/author/ari-hashomer/">Arí Hashomer</a>				</div>
+					
+					<div class="jeg_meta_date">
+				<a href="https://israelnoticias.com/internacional/trump-prueba-coronavirus-resultados/">15 de marzo de 2020</a>
+			</div>
+		
+					<div class="jeg_meta_category">
+				<span><span class="meta_text">en</span>
+					<a href="https://israelnoticias.com/internacional/" rel="category tag">Mundo</a>				</span>
+			</div>
+		
+			</div>
+
+	<div class="meta_right">
+					</div>
+</div>
+</div>
+						</div>
+
+						<div  class="jeg_featured featured_image "><a href="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes.jpg"><div class="thumbnail-container" style="padding-bottom:50%"><img data-perfmatters-preload width="750" height="375" src="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-750x375.jpg" class="attachment-jnews-750x375 size-jnews-750x375 wp-post-image no-lazy" alt="Trump acierta al imponer nuevas sanciones a Irán" decoding="async" srcset="https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-750x375.jpg 750w, https://israelnoticias.com/wp-content/uploads/2020/02/rump-talbanes-360x180.jpg 360w" sizes="(max-width: 750px) 100vw, 750px"/></div><p class="wp-caption-text">Trump acierta al imponer nuevas sanciones a Irán. (Reuters)</p></a></div>
+						
+						<div class="jeg_ad jeg_article jnews_content_top_ads "><div class='ads-wrapper  '></div></div>
+						<div class="entry-content no-share">
+							<div class="jeg_share_button share-float jeg_sticky_share clearfix share-monocrhome">
+															</div>
+
+							<div class="content-inner ">
+								
+<p><strong>El presidente de los Estados Unidos, Donald Trump, <a href="https://www.timesofisrael.com/trump-says-he-has-taken-coronavirus-test-awaits-result/">anunció el sábado</a> que se había hecho la prueba del coronavirus pero que aún no había recibido los resultados</strong>.</p>
+
+
+
+<p>Trump ha tenido múltiples contactos directos e indirectos con personas que han dado positivo en las pruebas del <a href="https://israelnoticias.com/internacional/oms-europa-epicentro-pandemia-coronavirus/">virus pandémico</a>. El viernes, declaró estado de emergencia, ya que las escuelas y lugares de trabajo de todo el país fueron cerrados, los vuelos fueron cancelados y los estadounidenses se prepararon para la guerra contra la amenaza de la salud.</p><div class="jeg_ad jeg_ad_article jnews_content_inline_ads jeg_ads_hide_desktop "><div class='ads-wrapper align-center jeg_ads_hide_desktop'><div class='ads_code'><!-- Primero AMP -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5930497139704672"
+     data-ad-slot="2308793280"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div>
+
+
+
+<p>Trump dijo que se tomó la temperatura antes de hablar con los
+periodistas.</p>
+
+
+
+<p>“Fue totalmente normal”, dijo Trump. “Si no lo fuera, no estaría aquí”.</p><div class='jnews_inline_related_post_wrapper left'>
+                        <div class='jnews_inline_related_post'>
+                <div  class="jeg_postblock_21 jeg_postblock jeg_module_hook jeg_pagination_disable jeg_col_2o3 jnews_module_126583_2_6827e285b0ca2   " data-unique="jnews_module_126583_2_6827e285b0ca2">
+					<div class="jeg_block_heading jeg_block_heading_6 jeg_subcat_right">
+                     <h3 class="jeg_block_title"><span>Más noticias</span></h3>
+                     
+                 </div>
+					<div class="jeg_block_container">
+                    
+                    <div class="jeg_posts jeg_load_more_flag"><article class="jeg_post jeg_pl_sm format-standard">
+                    <div class="jeg_thumb">
+                        
+                        <a href="https://israelnoticias.com/internacional/trump-visita-la-casa-de-la-familia-abrahamica-interreligiosa/" aria-label="Read article: Trump visita la Casa de la Familia Abrahámica interreligiosa"><div class="thumbnail-container  size-715 "><img width="120" height="86" src="https://israelnoticias.com/wp-content/uploads/2025/05/gira-120x86.webp" class="attachment-jnews-120x86 size-jnews-120x86 wp-post-image no-lazy" alt="El presidente de Estados Unidos, Donald Trump, visita la Sinagoga Moisés Ben Maimón en la Casa de la Familia Abrahámica, el 16 de mayo de 2025, en Abu Dabi, Emiratos Árabes Unidos. (Foto AP/Alex Brandon)" srcset="https://israelnoticias.com/wp-content/uploads/2025/05/gira-120x86.webp 120w, https://israelnoticias.com/wp-content/uploads/2025/05/gira-350x250.webp 350w, https://israelnoticias.com/wp-content/uploads/2025/05/gira-750x536.webp 750w, https://israelnoticias.com/wp-content/uploads/2025/05/gira-1140x815.webp 1140w" sizes="(max-width: 120px) 100vw, 120px"/></div></a>
+                    </div>
+                    <div class="jeg_postblock_content">
+                        <h3 class="jeg_post_title">
+                            <a href="https://israelnoticias.com/internacional/trump-visita-la-casa-de-la-familia-abrahamica-interreligiosa/">Trump visita la Casa de la Familia Abrahámica interreligiosa</a>
+                        </h3>
+                        <div class="jeg_post_meta"></div>
+                    </div>
+                </article><article class="jeg_post jeg_pl_sm format-standard">
+                    <div class="jeg_thumb">
+                        
+                        <a href="https://israelnoticias.com/internacional/charles-strouse-compositor-de-annie-muere-a-los-96-anos/" aria-label="Read article: Charles Strouse, compositor de “Annie”, muere a los 96 años"><div class="thumbnail-container  size-715 "><img width="120" height="86" src="https://israelnoticias.com/wp-content/uploads/2025/05/Charles-Strouse-120x86.webp" class="attachment-jnews-120x86 size-jnews-120x86 wp-post-image no-lazy" alt="Charles Strouse, compositor de “Annie”, muere a los 96 años" srcset="https://israelnoticias.com/wp-content/uploads/2025/05/Charles-Strouse-120x86.webp 120w, https://israelnoticias.com/wp-content/uploads/2025/05/Charles-Strouse-350x250.webp 350w, https://israelnoticias.com/wp-content/uploads/2025/05/Charles-Strouse-750x536.webp 750w, https://israelnoticias.com/wp-content/uploads/2025/05/Charles-Strouse-1140x815.webp 1140w" sizes="(max-width: 120px) 100vw, 120px"/></div></a>
+                    </div>
+                    <div class="jeg_postblock_content">
+                        <h3 class="jeg_post_title">
+                            <a href="https://israelnoticias.com/internacional/charles-strouse-compositor-de-annie-muere-a-los-96-anos/">Charles Strouse, compositor de “Annie”, muere a los 96 años</a>
+                        </h3>
+                        <div class="jeg_post_meta"></div>
+                    </div>
+                </article><article class="jeg_post jeg_pl_sm format-standard">
+                    <div class="jeg_thumb">
+                        
+                        <a href="https://israelnoticias.com/internacional/donald-trump-expresa-su-preocupacion-por-la-gente-de-gaza/" aria-label="Read article: Donald Trump expresa su preocupación por la gente de Gaza"><div class="thumbnail-container  size-715 "><img width="120" height="86" src="https://israelnoticias.com/wp-content/uploads/2025/05/dice-120x86.webp" class="attachment-jnews-120x86 size-jnews-120x86 wp-post-image no-lazy" alt="El presidente de Estados Unidos, Donald Trump, asiste a un foro empresarial en el Ritz Carlton de Abu Dabi el 16 de mayo de 2025 (Giuseppe CACACE / AFP)" srcset="https://israelnoticias.com/wp-content/uploads/2025/05/dice-120x86.webp 120w, https://israelnoticias.com/wp-content/uploads/2025/05/dice-350x250.webp 350w, https://israelnoticias.com/wp-content/uploads/2025/05/dice-750x536.webp 750w, https://israelnoticias.com/wp-content/uploads/2025/05/dice-1140x815.webp 1140w" sizes="(max-width: 120px) 100vw, 120px"/></div></a>
+                    </div>
+                    <div class="jeg_postblock_content">
+                        <h3 class="jeg_post_title">
+                            <a href="https://israelnoticias.com/internacional/donald-trump-expresa-su-preocupacion-por-la-gente-de-gaza/">Donald Trump expresa su preocupación por la gente de Gaza</a>
+                        </h3>
+                        <div class="jeg_post_meta"></div>
+                    </div>
+                </article><article class="jeg_post jeg_pl_sm format-standard">
+                    <div class="jeg_thumb">
+                        
+                        <a href="https://israelnoticias.com/internacional/congresistas-democratas-presentan-mocion-para-reconocer-la-supuesta-nakba/" aria-label="Read article: Congresistas demócratas presentan moción para reconocer la supuesta “Nakba”"><div class="thumbnail-container  size-715 "><img width="120" height="86" src="https://israelnoticias.com/wp-content/uploads/2025/05/describir-120x86.webp" class="attachment-jnews-120x86 size-jnews-120x86 wp-post-image no-lazy" alt="Graeme Sloan/Sipa USA vía Reuters Connect" srcset="https://israelnoticias.com/wp-content/uploads/2025/05/describir-120x86.webp 120w, https://israelnoticias.com/wp-content/uploads/2025/05/describir-350x250.webp 350w" sizes="(max-width: 120px) 100vw, 120px"/></div></a>
+                    </div>
+                    <div class="jeg_postblock_content">
+                        <h3 class="jeg_post_title">
+                            <a href="https://israelnoticias.com/internacional/congresistas-democratas-presentan-mocion-para-reconocer-la-supuesta-nakba/">Congresistas demócratas presentan moción para reconocer la supuesta “Nakba”</a>
+                        </h3>
+                        <div class="jeg_post_meta"></div>
+                    </div>
+                </article></div>
+                    <div class='module-overlay'>
+				    <div class='preloader_type preloader_dot'>
+				        <div class="module-preloader jeg_preloader dot">
+				            <span></span><span></span><span></span>
+				        </div>
+				        <div class="module-preloader jeg_preloader circle">
+				            <div class="jnews_preloader_circle_outer">
+				                <div class="jnews_preloader_circle_inner"></div>
+				            </div>
+				        </div>
+				        <div class="module-preloader jeg_preloader square">
+				            <div class="jeg_square">
+				                <div class="jeg_square_inner"></div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+                </div>
+                <div class="jeg_block_navigation">
+                    <div class='navigation_overlay'><div class='module-preloader jeg_preloader'><span></span><span></span><span></span></div></div>
+                    
+                    
+                </div>
+					
+					<script type="rocketlazyloadscript">var jnews_module_126583_2_6827e285b0ca2 = {"header_icon":"","first_title":"M\u00e1s noticias","second_title":"","url":"","header_type":"heading_6","header_background":"","header_secondary_background":"","header_text_color":"","header_line_color":"","header_accent_color":"","header_filter_category":"","header_filter_author":"","header_filter_tag":"","header_filter_text":"All","sticky_post":false,"post_type":"post","content_type":"all","sponsor":false,"number_post":"4","post_offset":0,"unique_content":"disable","include_post":"","included_only":false,"exclude_post":126583,"include_category":"33","exclude_category":"","include_author":"","include_tag":"","exclude_tag":"","sort_by":"latest","date_format":"default","date_format_custom":"Y\/m\/d","force_normal_image_load":"","main_custom_image_size":"default","pagination_mode":"disable","pagination_nextprev_showtext":"","pagination_number_post":"4","pagination_scroll_limit":0,"boxed":"","boxed_shadow":"","el_id":"","el_class":"","scheme":"","column_width":"auto","title_color":"","accent_color":"","alt_color":"","excerpt_color":"","css":"","paged":1,"column_class":"jeg_col_2o3","class":"jnews_block_21"};</script>
+				</div>
+            </div>
+                    </div>
+
+
+
+<p><strong>Trump pasó el fin de semana pasado en su club privado en Florida con al
+menos tres personas que ahora han dado positivo</strong>.</p><div class="jeg_ad jeg_ad_article jnews_content_inline_2_ads jeg_ads_hide_desktop "><div class='ads-wrapper align-center jeg_ads_hide_desktop'><div class='ads_code'><!-- Segundo AMP -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5930497139704672"
+     data-ad-slot="2414048146"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div>
+
+
+
+<p>La embajada brasileña en Washington anunció el viernes que el encargado
+de negocios del país, Nestor Forster, dio positivo después de sentarse en la
+mesa de Trump.</p>
+
+
+
+<p>Así que, también, tened a un ayudante del presidente brasileño Jair
+Bolsonaro, Fabio Wajngarten, que posó para una foto con Trump, y a un individuo
+que asistió a una recaudación de fondos el domingo con Trump, según dos
+funcionarios republicanos.</p>
+
+
+
+<p>Un médico de la Casa Blanca dijo que <strong>Trump “permanece sin síntomas” y
+que no necesitaba ser examinado</strong>.</p><div class="jeg_ad jeg_ad_article jnews_content_inline_3_ads jeg_ads_hide_desktop "><div class='ads-wrapper align-center jeg_ads_hide_desktop'><div class='ads_code'><!-- Tercero AMP -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5930497139704672"
+     data-ad-slot="8459268669"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div>
+
+
+
+<p>Contrariamente al consejo médico, también se vio al presidente
+estrechando la mano de todos mientras reunía a su equipo de respuesta al
+coronavirus en la Casa Blanca el viernes.</p>
+
+
+
+<p>Se cree que el coronavirus se propaga entre personas que están en
+estrecho contacto, y el “distanciamiento social” se ha convertido en una
+consigna en todo el mundo.</p>
+
+
+
+<p>Hablando desde el Jardín de Rosas, Trump burló los consejos de los
+funcionarios de salud pública al dar la mano públicamente y repetidamente
+durante la presentación de los nuevos esfuerzos para combatir la pandemia. Al
+mismo tiempo, subrayó que “cualquiera puede ser portador del virus” y
+arriesgarse a infectar a los estadounidenses mayores y a otros de mayor riesgo.</p>
+
+
+
+<p>“DISTANCIA SOCIAL”, el presidente twitteó el sábado temprano.</p>
+
+
+
+<p>La Casa Blanca anunció más tarde ese día que ahora está llevando a cabo
+controles de temperatura en cualquiera que esté en contacto cercano con Trump y
+el Vicepresidente de los EE.UU. <strong>Mike Pence</strong>.</p>
+
+
+
+<p>La medida se está tomando con mucha precaución en respuesta al brote de
+coronavirus, dijo Judd Deere, un portavoz de la Casa Blanca.</p>
+
+
+
+<p>Un representante de la oficina del médico de la Casa Blanca tomó las
+temperaturas de los miembros de los medios de comunicación que estuvieron en la
+Casa Blanca el sábado, yendo a cada persona y poniéndoles el dispositivo en la
+cabeza.</p>
+
+
+
+<p><strong>A un reportero con una temperatura supuestamente elevada no se le
+permitió entrar en la sala de reuniones para una conferencia de prensa con
+Trump y Pence sobre el brote</strong>.</p>
+
+
+
+<p>Los funcionarios de salud pública dicen que los individuos con tos y
+temperaturas elevadas de 100.4 grados o más se consideran preocupantes.</p>
+
+
+
+<p>La portavoz de Pence, <strong>Katie Miller</strong>, publicó en Twitter que, según
+la Unidad Médica de la Casa Blanca, la temperatura se tomó tres veces en un
+período de 15 minutos y las tres se registraron por encima de las pautas de 100.4.</p>
+								
+								
+																<div class="jeg_post_tags"></div>
+															</div>
+
+
+						</div>
+						
+						
+						<div class="jeg_ad jeg_article jnews_content_bottom_ads "><div class='ads-wrapper  '><div class='ads_code'><div id="taboola-below-article-thumbnails"></div>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-feed',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script></div></div></div><div class="jnews_prev_next_container"></div><div class="jnews_author_box_container "></div><div class="jnews_related_post_container"></div><div class="jnews_popup_post_container"></div><div class="jnews_comment_container"></div>
+									</div>
+			</div>
+			
+<div class="jeg_sidebar left  col-md-3">
+    </div>
+<div class="jeg_sidebar right  col-md-3">
+    </div>		</div>
+
+		<div class="jeg_ad jeg_article jnews_article_bottom_ads">
+			<div class='ads-wrapper  '></div>		</div>
+
+	</div>
+</div>
+                </div>
+            </div>
+
+            <div id="post-body-class" class="wp-singular post-template-default single single-post postid-126583 single-format-standard wp-embed-responsive wp-theme-jnews jeg_device_dark jnews-dark-nocookie jeg_single_tpl_1 jnews jsc_normal elementor-default elementor-kit-352341"></div>
+
+            
+        </div>
+
+        <div class="post-ajax-overlay">
+    <div class="preloader_type preloader_dot">
+        <div class="newsfeed_preloader jeg_preloader dot">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="newsfeed_preloader jeg_preloader circle">
+            <div class="jnews_preloader_circle_outer">
+                <div class="jnews_preloader_circle_inner"></div>
+            </div>
+        </div>
+        <div class="newsfeed_preloader jeg_preloader square">
+            <div class="jeg_square"><div class="jeg_square_inner"></div></div>
+        </div>
+    </div>
+</div>
+    </div>
+		<div class="footer-holder" id="footer" data-id="footer">
+			<div class="jeg_footer jeg_footer_custom">
+    <div class="jeg_container">
+        <div class="jeg_content">
+            <div class="jeg_vc_content">
+                © 2017–2025            </div>
+        </div>
+    </div>
+</div><!-- /.footer -->		</div>
+					<div class="jscroll-to-top desktop mobile">
+				<a href="#back-to-top" class="jscroll-to-top_link"><i class="fa fa-angle-up"></i></a>
+			</div>
+			</div>
+
+	<script type="rocketlazyloadscript" data-rocket-type="text/javascript">var jfla = []</script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jnews\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Mobile Navigation
+    ============================================= -->
+<div id="jeg_off_canvas" class="normal">
+    <a href="#" class="jeg_menu_close"><i class="jegicon-cross"></i></a>
+    <div class="jeg_bg_overlay"></div>
+    <div class="jeg_mobile_wrapper">
+        <div class="nav_wrap">
+    <div class="item_main">
+        <!-- Search Form -->
+<div class="jeg_aside_item jeg_search_wrapper jeg_search_no_expand round">
+    <a href="#" aria-label="Search Button" class="jeg_search_toggle"><i class="fa fa-search"></i></a>
+    <form action="https://israelnoticias.com/" method="get" class="jeg_search_form" target="_top">
+    <input name="s" class="jeg_search_input" placeholder="Buscar" type="text" value="" autocomplete="off">
+	<button aria-label="Search Button" type="submit" class="jeg_search_button btn"><i class="fa fa-search"></i></button>
+</form>
+<!-- jeg_search_hide with_result no_result -->
+<div class="jeg_search_result jeg_search_hide with_result">
+    <div class="search-result-wrapper">
+    </div>
+    <div class="search-link search-noresult">
+        No Result    </div>
+    <div class="search-link search-all-button">
+        <i class="fa fa-search"></i> View All Result    </div>
+</div></div><div class="jeg_aside_item">
+    <ul class="jeg_mobile_menu sf-js-hover"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-118918"><a href="https://israelnoticias.com">Inicio</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93517"><a href="https://israelnoticias.com/idf/">FDI</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380278"><a href="https://israelnoticias.com/franja-de-gaza/">Gaza</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93512"><a href="https://israelnoticias.com/terrorismo/">Terrorismo</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-93518"><a href="https://israelnoticias.com/internacional/">Mundo</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380351"><a href="https://israelnoticias.com/militar/">Zona de guerra</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-427829"><a href="https://israelnoticias.com/siria/">Siria</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-380279"><a href="https://israelnoticias.com/iran/">Irán</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93513"><a href="https://israelnoticias.com/antisemitismo/">Antisemitismo</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93514"><a href="https://israelnoticias.com/tecnologia/">Tecnología</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93515"><a href="https://israelnoticias.com/arqueologia/">Arqueología</a></li>
+</ul></div>    </div>
+    <div class="item_bottom">
+        <div class="jeg_aside_item socials_widget nobg">
+    </div><div class="jeg_aside_item jeg_aside_copyright">
+	<p>© 2019 - 2025 Todos los derechos reservados.</p>
+</div>    </div>
+</div>    </div>
+</div><div class="jeg_read_progress_wrapper"></div>			<script type="rocketlazyloadscript">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.*)sitemap(.*).xml\/|\/(.*)sitemap.xsl\/|\/(.*)feed\/|\/feed\/|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/israelnoticias.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://israelnoticias.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://israelnoticias.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="jnews-frontend-js-extra">
+/* <![CDATA[ */
+var jnewsoption = {"login_reload":"https:\/\/israelnoticias.com\/internacional\/trump-prueba-coronavirus-resultados","popup_script":"magnific","single_gallery":"1","ismobile":"","isie":"","sidefeed_ajax":"","language":"es_ES","module_prefix":"jnews_module_ajax_","live_search":"1","postid":"126583","isblog":"1","admin_bar":"0","follow_video":"","follow_position":"top_right","rtl":"0","gif":"","lang":{"invalid_recaptcha":"Invalid Recaptcha!","empty_username":"Please enter your username!","empty_email":"Please enter your email!","empty_password":"Please enter your password!"},"recaptcha":"0","site_slug":"\/","site_domain":"israelnoticias.com","zoom_button":"0","dm_cookie_time":"0"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://israelnoticias.com/wp-content/themes/jnews/assets/dist/frontend.min.js?ver=11.6.13" id="jnews-frontend-js" data-rocket-defer defer></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://israelnoticias.com/wp-content/themes/jnews/assets/js/html5shiv.min.js?ver=11.6.13" id="html5shiv-js"></script>
+<![endif]-->
+<script type="text/javascript" id="perfmatters-lazy-load-js-before">
+/* <![CDATA[ */
+window.lazyLoadOptions={elements_selector:"img[data-src],.perfmatters-lazy,.perfmatters-lazy-css-bg",thresholds:"0px 0px",class_loading:"pmloading",class_loaded:"pmloaded",callback_loaded:function(element){if(element.tagName==="IFRAME"){if(element.classList.contains("pmloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener("LazyLoad::Initialized",function(e){var lazyLoadInstance=e.detail.instance;var target=document.querySelector("body");var observer=new MutationObserver(function(mutations){lazyLoadInstance.update()});var config={childList:!0,subtree:!0};observer.observe(target,config);});function perfmattersLazyLoadYouTube(e){var t=document.createElement("iframe"),r="ID?";r+=0===e.dataset.query.length?"":e.dataset.query+"&",r+="autoplay=1",t.setAttribute("src",r.replace("ID",e.dataset.src)),t.setAttribute("frameborder","0"),t.setAttribute("allowfullscreen","1"),t.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),e.replaceChild(t,e.firstChild)}
+/* ]]> */
+</script>
+<script type="text/javascript" async src="https://israelnoticias.com/wp-content/plugins/perfmatters/js/lazyload.min.js?ver=2.4.4" id="perfmatters-lazy-load-js"></script>
+<div class="jeg_ad jnews_mobile_sticky_ads "></div><script type="rocketlazyloadscript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var menuIcon = document.querySelector('.menu-icon');
+    var menuItems = document.querySelector('.menu-items');
+
+    menuIcon.addEventListener('click', function() {
+        if (menuItems.style.display === 'block') {
+            menuItems.style.display = 'none';
+        } else {
+            menuItems.style.display = 'block';
+        }
+    });
+});
+
+</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">;!function(){"use strict";window.jnews=window.jnews||{},window.jnews.first_load=window.jnews.first_load||{},window.jnews.first_load=function(){var e=this,t=jnews.library,n="object"==typeof jnews&&"object"==typeof jnews.library;e.data=null,e.run_ajax=!0,e.run_loginregister=!0,e.clear=function(){e.run_ajax=!0,e.run_loginregister=!0,e.data=null},e.init=function(){n&&(t.globalBody.querySelectorAll(".jeg_popup_account").length&&jnews.loginregister&&e.run_loginregister&&(e.run_loginregister=!1,jnews.loginregister.init(),jnews.loginregister.hook_form()),jfla.length&&e.run_ajax&&(e.run_ajax=!1,e.do_ajax({action:"jnews_first_load_action",jnews_id:jnewsoption.postid,load_action:jfla})))},e.update_counter=function(){if(n){var o={total_view:t.globalBody.querySelectorAll(".jeg_share_stats .jeg_views_count .counts"),total_share:t.globalBody.querySelectorAll(".jeg_share_stats .jeg_share_count .counts"),total_comment:t.globalBody.querySelectorAll(".jeg_meta_comment a span")};t.forEach(Object.entries(e.data.counter),(function([e,n]){o[e].length&&t.forEach(o[e],(function(e,o){t.setText(e,n)}))}))}},e.do_ajax=function(o){if(n){var a=new XMLHttpRequest;a.onreadystatechange=function(){XMLHttpRequest.DONE===a.readyState&&200==a.status&&(e.data=JSON.parse(a.responseText),e.data.counter&&"object"==typeof e.data.counter&&e.update_counter())},a.open("POST",jnews_ajax_url,!0),a.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8"),a.send(t.httpBuildQuery(o))}}},window.jnews.first_load=new window.jnews.first_load,jnews.first_load.init()}();</script><script>var rocket_beacon_data = {"ajax_url":"https:\/\/israelnoticias.com\/wp-admin\/admin-ajax.php","nonce":"e7c285ad0d","url":"https:\/\/israelnoticias.com\/internacional\/trump-prueba-coronavirus-resultados","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"lrc":false},"lrc_threshold":1800}</script><script data-name="wpr-wpr-beacon" src='https://israelnoticias.com/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script><script>(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach((t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}}))}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find((t=>e[t]))];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout((()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)}),i);window.addEventListener("rocket-startLoading",(function(){clearTimeout(o)}))}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach((t=>{e.forEach((e=>{i.push(t+e)}))})),i}l(t,e){this.i().forEach((t=>delete e[t])),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
