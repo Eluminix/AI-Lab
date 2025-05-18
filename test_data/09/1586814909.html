@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="" data-skin="light">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+        var url = 'https://cmp.inmobi.com'.concat('/choice/', 'LHJgbPCrB8EtE', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+                    if (args[0] === 'init' && typeof args[3] === 'object') {
+                        args[3] = Object.assign(args[3], {
+                            tag_version: 'V3'
+                        });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  function makeGppStub() {
+    const CMP_ID = 10;
+    const SUPPORTED_APIS = [
+      '2:tcfeuv2',
+      '6:uspv1',
+      '7:usnatv1',
+      '8:usca',
+      '9:usvav1',
+      '10:uscov1',
+      '11:usutv1',
+      '12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length == 1 && b[0] == "queue")) {
+        return __gpp.queue;
+      }
+
+      if (b.length == 1 && b[0] == "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+      if (cmd === "ping") {
+        clb(
+          {
+            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+            signalStatus: "not ready", // possible values: not ready, ready
+            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {},
+          },
+          true
+        );
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) {
+          __gpp.lastId = 0;
+        }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({
+          id: lnr,
+          callback: clb,
+          parameter: par,
+        });
+        clb(
+          {
+            eventName: "listenerRegistered",
+            listenerId: lnr, // Registered ID of the listener
+            data: true, // positive signal
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // list of supported APIs
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        clb(
+          {
+            eventName: "listenerRemoved",
+            listenerId: par, // Registered ID of the listener
+            data: success, // status info
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // CMP ID
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "hasSection") {
+        clb(false, true);
+      } else if (cmd === "getSection" || cmd === "getField") {
+        clb(null, true);
+      }
+      //queue all other commands
+      else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      try {
+        var json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (e) {
+        var json = null;
+      }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = {
+              __gppReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: i.callId,
+              },
+            };
+            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+          },
+          "parameter" in i ? i.parameter : null,
+          "version" in i ? i.version : "1.1"
+        );
+      }
+    };
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  };
+
+  makeGppStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//www.google-analytics.com' />
+<link rel='preload' as='image' href='https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png'>
+<link rel='preload' as='image' href='https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg'>
+<link rel='preload' as='script' href='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js'>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+		<link rel='preconnect' href='https://cdn.onthe.io' crossorigin>
+		<link rel='dns-prefetch' href='https://cdn.onthe.io'>
+	<!-- This site is optimized with the Yoast SEO Premium plugin v20.6 (Yoast SEO v24.3) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>History of the Scorpion brand | Lowvelder</title>
+	<link rel="canonical" href="https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="History of the Scorpion brand" />
+	<meta property="og:description" content="Nearly 70 years ago to the day, on April 10, 1950, the great champion Tazio Nuvolari ended his racing career behind the wheel of the Abarth 204A, the first model constructed by Carlo Abarth. The time trial ran from the Sicilian capital of Palermo up Monte Pellegrino: a steep, evocative climb, featuring multiple hairpin bends on tarmac." />
+	<meta property="og:url" content="https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/" />
+	<meta property="og:site_name" content="Lowvelder" />
+	<meta property="article:publisher" content="https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798" />
+	<meta property="article:published_time" content="2020-04-23T12:00:28+00:00" />
+	<meta property="article:modified_time" content="2020-04-22T10:59:14+00:00" />
+	<meta property="og:image" content="https://www.citizen.co.za/lowvelder/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="728" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="wesselcohrs" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@Lowvelder" />
+	<meta name="twitter:site" content="@Lowvelder" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="wesselcohrs" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#article","isPartOf":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/"},"author":{"name":"wesselcohrs","@id":"https://www.citizen.co.za/lowvelder/#/schema/person/53f40e2b5b7e52bd8a34a364bc221e21"},"headline":"History of the Scorpion brand","datePublished":"2020-04-23T12:00:28+00:00","dateModified":"2020-04-22T10:59:14+00:00","mainEntityOfPage":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/"},"wordCount":438,"commentCount":0,"publisher":{"@id":"https://www.citizen.co.za/lowvelder/#organization"},"image":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#primaryimage"},"thumbnailUrl":"https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg","articleSection":["Local news","News"],"inLanguage":"en-GB","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#respond"]}]},{"@type":"WebPage","@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/","url":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/","name":"History of the Scorpion brand | Lowvelder","isPartOf":{"@id":"https://www.citizen.co.za/lowvelder/#website"},"primaryImageOfPage":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#primaryimage"},"image":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#primaryimage"},"thumbnailUrl":"https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg","datePublished":"2020-04-23T12:00:28+00:00","dateModified":"2020-04-22T10:59:14+00:00","breadcrumb":{"@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#primaryimage","url":"https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg","contentUrl":"https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg","width":1024,"height":728},{"@type":"BreadcrumbList","@id":"https://www.citizen.co.za/lowvelder/news-headlines/2020/04/23/history-of-the-scorpion-brand/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.citizen.co.za/lowvelder/"},{"@type":"ListItem","position":2,"name":"History of the Scorpion brand"}]},{"@type":"WebSite","@id":"https://www.citizen.co.za/lowvelder/#website","url":"https://www.citizen.co.za/lowvelder/","name":"Lowvelder","description":"The watchdog of the Lowveld","publisher":{"@id":"https://www.citizen.co.za/lowvelder/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.citizen.co.za/lowvelder/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.citizen.co.za/lowvelder/#organization","name":"Lowvelder","url":"https://www.citizen.co.za/lowvelder/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.citizen.co.za/lowvelder/#/schema/logo/image/","url":"https://www.citizen.co.za/lowvelder/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png","contentUrl":"https://www.citizen.co.za/lowvelder/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png","width":227,"height":90,"caption":"Lowvelder"},"image":{"@id":"https://www.citizen.co.za/lowvelder/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798","https://x.com/Lowvelder","https://www.instagram.com/lowvelder/?hl=en","https://www.youtube.com/c/LowveldMedia"]},{"@type":"Person","@id":"https://www.citizen.co.za/lowvelder/#/schema/person/53f40e2b5b7e52bd8a34a364bc221e21","name":"wesselcohrs"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.citizen.co.za' />
+
+		<style type="text/css">
+			:root{				
+			--tie-preset-gradient-1: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--tie-preset-gradient-2: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--tie-preset-gradient-3: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--tie-preset-gradient-4: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--tie-preset-gradient-5: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--tie-preset-gradient-6: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--tie-preset-gradient-7: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--tie-preset-gradient-8: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--tie-preset-gradient-9: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--tie-preset-gradient-10: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--tie-preset-gradient-11: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--tie-preset-gradient-12: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--tie-preset-gradient-13: linear-gradient(135deg, #4D34FA, #ad34fa);
+			--tie-preset-gradient-14: linear-gradient(135deg, #0057FF, #31B5FF);
+			--tie-preset-gradient-15: linear-gradient(135deg, #FF007A, #FF81BD);
+			--tie-preset-gradient-16: linear-gradient(135deg, #14111E, #4B4462);
+			--tie-preset-gradient-17: linear-gradient(135deg, #F32758, #FFC581);
+
+			
+					--main-nav-background: #1f2024;
+					--main-nav-secondry-background: rgba(0,0,0,0.2);
+					--main-nav-primary-color: #0088ff;
+					--main-nav-contrast-primary-color: #FFFFFF;
+					--main-nav-text-color: #FFFFFF;
+					--main-nav-secondry-text-color: rgba(225,255,255,0.5);
+					--main-nav-main-border-color: rgba(255,255,255,0.07);
+					--main-nav-secondry-border-color: rgba(255,255,255,0.04);
+				
+			}
+		</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><style>
+	@media(min-width: 768px) {
+		.stream-item-top .jannah_ad.mobile,
+		.main-content .stream-item .jannah_ad.mobile,
+		.jannah_ad.mobile {
+			display: none;
+		}
+	}
+	@media(max-width: 768px) {
+		.stream-item-top .jannah_ad.desktop,
+		.main-content .stream-item .jannah_ad.desktop,
+		.jannah_ad.desktop {
+			display: none;
+		}
+	}
+</style>
+<script>
+	// Load GPT asynchronously
+	window.googletag = window.googletag || {
+		cmd: []
+	};
+	window._platform = null;
+
+	window.lnn_tags = {
+		desktop: [],
+		mobile: []
+	};
+
+	// GPT slots
+	window.gptAdSlots = [];
+
+	var REFRESH_KEY = 'refresh'; // Declaring variables for refreshing ad slots that are in view
+	var REFRESH_VALUE = 'true'; // Declaring variables for refreshing ad slots that are in view
+	var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 60;
+
+	/**
+	 * Determine what platform we are currently on.
+	 *
+	 * @return {string} Will return the current platform: desktop, mobile or amp
+	 */
+	lnn_tags.getPlatform = function() {
+		if (_platform) {
+			return _platform;
+		}
+
+		var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i) !== null,
+			isTablet = navigator.userAgent.toLowerCase().match(/tablet/i) !== null,
+			isAndroid = navigator.userAgent.toLowerCase().match(/android/i) !== null,
+			isiPhone = navigator.userAgent.toLowerCase().match(/iphone/i) !== null,
+			isiPad = navigator.userAgent.toLowerCase().match(/ipad/i) !== null;
+
+		if (isMobile || isTablet || isAndroid || isiPhone || isiPad) {
+			_platform = 'mobile';
+		} else {
+			_platform = 'desktop';
+		}
+
+		return _platform;
+	};
+
+	lnn_tags.registerAd = function(ad_tag) {
+		googletag.cmd.push(function() {
+			console.debug(`${ad_tag.element_id}:: creating ad slot.`);
+			if (typeof ad_tag.size === 'string') {
+				ad_tag.size = JSON.parse(ad_tag.size);
+			}
+
+			let adSlot = googletag.defineSlot(ad_tag.path, ad_tag.size, ad_tag.element_id);
+			if (!adSlot) {
+				console.error(`${ad_tag.element_id}:: Unable to create ad slot.`);
+				return;
+			}
+
+			adSlot.setTargeting(REFRESH_KEY, REFRESH_VALUE);
+
+			adSlot.addService(googletag.pubads());
+
+			console.debug(`${ad_tag.element_id}:: Ad slot created.`);
+
+			gptAdSlots.push(adSlot);
+		});
+	};
+
+	/**
+	 * Conditionally display a DFP ad.
+	 */
+	lnn_tags.displayAd = function(element_id) {
+		/**
+		 * Search the current platform for tags matching the requested element ID.
+		 */
+		let ad_tag = lnn_tags[lnn_tags.getPlatform()].filter(ad_tag => {
+			return ad_tag.element_id == element_id;
+		});
+
+		/**
+		 * If the result array is empty, then the element_id does not match the current platform.
+		 */
+		if (!ad_tag.length) {
+			return;
+		}
+
+		/**
+		 * Retrieve the first matched ad tag.
+		 */
+		ad_tag = ad_tag.shift();
+
+		googletag.cmd.push(function() {
+			console.debug(`${element_id}:: Requesting to be displayed.`);
+			googletag.display(element_id);
+		});
+	};
+
+	(function() {
+		var gads = document.createElement('script');
+		var useSSL = 'https:' == document.location.protocol;
+		var node = document.getElementsByTagName('script')[0];
+
+		gads.async = true;
+		gads.src = (useSSL ? 'https:' : 'http:') + '//securepubads.g.doubleclick.net/tag/js/gpt.js';
+		node.parentNode.insertBefore(gads, node);
+	})();
+
+	
+		// Initialize pbjs (Magnite)
+		var pbjs = pbjs || {};
+		pbjs.que = pbjs.que || [];
+
+		
+		// Disable initial loading of DFP ads so we can run them through the Magnite Manager.
+		googletag.cmd.push(function() {
+			googletag.pubads().disableInitialLoad();
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+googletag.pubads().setTargeting('artID','619291');
+
+	googletag.pubads().enableLazyLoad({
+		fetchMarginPercent: 200,	// Fetch slots within 2 viewports.
+		renderMarginPercent: 100,	// Render slots within 1 viewports.
+		mobileScaling: 2.0			// Double the above values on mobile.
+	})
+		});
+		googletag.cmd.push(function () {
+
+			if (googletag.pubads().getTargeting('carbon_segment').length === 0) {
+				var carbon = JSON.parse(window.localStorage.getItem('ccRealtimeData'));
+				googletag.pubads().setTargeting('carbon_segment', carbon ? carbon.audiences.map(function (i) { return i.id; }) : []);
+			}
+
+			if (googletag.pubads().getTargeting('cc-iab-class-id').length === 0) {
+				var iabIds = JSON.parse(window.localStorage.getItem('ccContextualData'));
+				if( !iabIds ) { return; }
+				googletag.pubads().setTargeting('cc-iab-class-id', iabIds);
+			}
+
+		});
+googletag.cmd.push(function() {
+var platform = 'Desktop';
+if (lnn_tags.getPlatform() == 'mobile') {
+platform = 'Mobile';
+}
+var interstitialFullPath = ('/24143856/Lowvelder/Interstitial/' + platform);
+var interstitialSlot = googletag.defineOutOfPageSlot(interstitialFullPath, googletag.enums.OutOfPageFormat.INTERSTITIAL);
+// Slot returns null if the page or device does not support interstitials.
+if(!interstitialSlot) {
+console.warn(platform + ' Interstitial:: Ad not supported on this page.');
+return;
+}
+if(typeof(interstitialSlot.setForceSafeFrame) == 'function'){
+interstitialSlot.setForceSafeFrame(true);
+}
+console.debug(platform + ' Interstitial:: Creating slot...');
+console.debug(platform + ' Interstitial Full Path:: ', interstitialFullPath);
+console.debug(platform + ' Interstitial:: Successfully created slot.');
+interstitialSlot.addService(googletag.pubads());
+googletag.pubads().addEventListener('slotOnload', function(event) {
+console.debug('Ad slot loaded:: ', event.slot.getSlotElementId());
+if (interstitialSlot !== event.slot) {
+return;
+}
+console.debug(platform + ' Interstitial:: Successfully loaded.');
+var ad = document.getElementById(event.slot.getSlotElementId());
+ad.style.backgroundColor = 'transparent';
+console.debug(platform + ' Interstitial:: Background colour changed.');
+});
+googletag.pubads().enableSingleRequest();
+gptAdSlots.push(interstitialSlot);
+googletag.display(interstitialSlot);
+});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_LB1","size":"[[728, 90]]","element_id":"Desktop_Art_LB1"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_LB1","size":"[[300, 50], [320, 50], [300, 100], [320, 100]]","element_id":"Mobile_Art_LB1"});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_LB3","size":"[[728, 90]]","element_id":"Desktop_Art_LB3"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_MPU4","size":"[[200, 200], [250, 250],[300, 250]]","element_id":"Mobile_Art_MPU4"});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_LB5","size":"[[728, 90]]","element_id":"Desktop_Art_LB5"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_LB5","size":"[[300, 50], [320, 50], [300, 100], [320, 100]]","element_id":"Mobile_Art_LB5"});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_MPU1","size":"[[300, 250]]","element_id":"Desktop_Art_MPU1"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_MPU1","size":"[[200, 200], [250, 250],[300, 250]]","element_id":"Mobile_Art_MPU1"});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_MPU3","size":"[[300, 250], [300, 600]]","element_id":"Desktop_Art_MPU3"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_MPU3","size":"[[300, 250], [300, 600]]","element_id":"Mobile_Art_MPU3"});
+
+lnn_tags.desktop.push({"path":"/24143856/Lowvelder/Article/Desktop_Art_MPU2","size":"[[300, 250], [300, 600]]","element_id":"Desktop_Art_MPU2"});
+lnn_tags.mobile.push({"path":"/24143856/Lowvelder/Article/Mobile_Art_MPU2","size":"[[300, 250], [300, 600]]","element_id":"Mobile_Art_MPU2"});
+
+googletag.cmd.push(function() {
+googletag.pubads().setTargeting('Category', 'news');
+googletag.pubads().setTargeting('SubCategory', 'local news');
+});
+
+// Determine if this ad should display on the current platform.
+if( lnn_tags.getPlatform() === 'desktop' ) {
+googletag.cmd.push(function() {
+console.debug(`Desktop_Art_Sticky:: Requesting ad slot.`);
+var anchorSlot = googletag.defineOutOfPageSlot('/24143856/Lowvelder/Article/Desktop_Art_Sticky', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+if(anchorSlot){
+console.debug(`Desktop_Art_Sticky:: Ad slot created.`);
+anchorSlot.addService(googletag.pubads());
+gptAdSlots.push(anchorSlot);
+} else{
+console.debug(`Desktop_Art_Sticky:: Ad slot not supported on this page.`);
+return;
+}
+});
+}
+// Determine if this ad should display on the current platform.
+if( lnn_tags.getPlatform() === 'mobile' ) {
+googletag.cmd.push(function() {
+console.debug(`Mobile_Art_Sticky:: Requesting ad slot.`);
+var anchorSlot = googletag.defineOutOfPageSlot('/24143856/Lowvelder/Article/Mobile_Art_Sticky', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+if(anchorSlot){
+console.debug(`Mobile_Art_Sticky:: Ad slot created.`);
+anchorSlot.addService(googletag.pubads());
+gptAdSlots.push(anchorSlot);
+} else{
+console.debug(`Mobile_Art_Sticky:: Ad slot not supported on this page.`);
+return;
+}
+});
+}
+
+	console.debug(lnn_tags);
+
+	lnn_tags[lnn_tags.getPlatform()].forEach(ad_tag => {
+		lnn_tags.registerAd(ad_tag);
+	});
+
+	googletag.cmd.push(function() {
+		// Refresh function
+		googletag.pubads().addEventListener('impressionViewable', function(event) {
+			var slot = event.slot,
+				element_id = slot.getSlotElementId();
+
+			console.debug(`${element_id}:: Ad slot now viewable.`);
+
+			if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+				console.debug(`${element_id}:: Setting ad slot to refresh after ${SECONDS_TO_WAIT_AFTER_VIEWABILITY} seconds.`);
+
+				setTimeout(function() {
+					console.debug(`${element_id}:: Refreshing ad slot.`);
+					googletag.pubads().refresh([slot]);
+				}, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
+			}
+		});
+	});
+
+	
+		// Function that calls the ad-server
+		pbjs.adserverCalled = false;
+        function callAdserver(requestedSlots) {
+			console.debug('Calling ad server for slots:: ', requestedSlots);
+
+            if (pbjs.adserverCalled) {
+				console.debug('Ad service already called, exiting.');
+				return;
+			}
+
+            pbjs.adserverCalled = true;
+			googletag.cmd.push(function() {
+            	googletag.pubads().refresh(requestedSlots);
+			});
+        }
+
+        // Request pbjs bids when it loads
+		googletag.cmd.push(function() {
+			pbjs.que.push(function() {
+				console.debug('Requesting bids for slots:: ', JSON.stringify( gptAdSlots ) );
+
+				pbjs.rp.requestBids({
+					callback: callAdserver,
+					gptSlotObjects: gptAdSlots
+				});
+			});
+        });
+
+        // Fail-safe in case PBJS doesn't load
+        setTimeout(function() {
+			if( pbjs.adserverCalled ){
+				return;
+			}
+
+			console.debug('PBJS did not load, manually calling the ad server.');
+
+			callAdserver();
+        }, 3500);
+		
+	
+		// End of Magnite
+		</script><style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--global-color: #D91A21;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='video_of_the_day_css-css' href='https://images.caxton.co.za/wp-content/plugins/caxton-video-of-the-day/assets/css/style.css?ver=1.0.7' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-base-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/base.min.css?ver=7.4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-print-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/print.css?ver=7.4.3' type='text/css' media='print' />
+<link rel='stylesheet' id='tie-theme-child-css-css' href='https://images.caxton.co.za/wp-content/themes/jannah-child/assets/css/style.min.css?ver=7.4.3' type='text/css' media='all' />
+<style id='tie-theme-child-css-inline-css' type='text/css'>
+.wf-active .logo-text,.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6,.wf-active .the-subtitle{font-family: 'Poppins';}html #main-nav .main-menu > ul > li > a{text-transform: uppercase;}:root:root{--brand-color: #D91A21;--dark-brand-color: #a70000;--bright-color: #FFFFFF;--base-color: #2c2f34;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 217,26,33,0.7);}html :root:root{--brand-color: #D91A21;--dark-brand-color: #a70000;--bright-color: #FFFFFF;--base-color: #2c2f34;}html #reading-position-indicator{box-shadow: 0 0 10px rgba( 217,26,33,0.7);}html #header-notification-bar{background: var( --tie-preset-gradient-13 );}html #header-notification-bar{--tie-buttons-color: #FFFFFF;--tie-buttons-border-color: #FFFFFF;--tie-buttons-hover-color: #e1e1e1;--tie-buttons-hover-text: #000000;}html #header-notification-bar{--tie-buttons-text: #000000;}html .social-icons-item .custom-link-1-social-icon{background-color: #333 !important;}html .social-icons-item .custom-link-1-social-icon span{color: #333;}html .social-icons-item .custom-link-1-social-icon.custom-social-img span.social-icon-img{background-image: url('https://images.caxton.co.za/wp-content/plugins/dp-citizen-integration/assets/citizen-logo-small.png');}
+</style>
+<script type="text/javascript" src="https://images.caxton.co.za/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://images.caxton.co.za/wp-content/themes/jannah-child/assets/js/header-scripts.js?ver=7.4.3" id="jannah-child-head-js-js"></script>
+<script></script><link rel='shortlink' href='https://www.citizen.co.za/lowvelder/?p=619291' />
+<meta property='fb:pages' content='158345657516798' /><meta property='fb:app_id' content='1512989512283895' />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src='https://www.googletagmanager.com/gtag/js'></script>
+		<script type='text/javascript'>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){ dataLayer.push(arguments); }
+
+			gtag( 'js', new Date() );
+gtag( 'config', 'G-GV1R864711' );
+gtag( 'config', 'G-XPVZV2QZQG' );
+gtag( 'config', 'G-D87LG2K47Y' );
+gtag( 'config', 'G-HP9VN8MGQ9' );
+		</script>
+			<script async src='https://cdn.onthe.io/io.js/x2ikH8cF9w95'></script>
+			<script async src='https://cdn.onthe.io/io.js/rJHPtlB1mMq3'></script>
+			<script async src='https://cdn.onthe.io/io.js/jglGaHKB5y9O'></script>
+			<script async src='https://cdn.onthe.io/io.js/lPUBP1GU2Wfb'></script>
+			<script async src='https://cdn.onthe.io/io.js/NgBcKVJBj50g'></script>
+<script>
+	window._io_config = window._io_config || {};
+	window._io_config['0.2.0'] = window._io_config['0.2.0'] || [];
+	window._io_config['0.2.0'].push({
+		page_url: 'https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/',
+		page_url_canonical: 'https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/',
+		page_title: 'History of the Scorpion brand | Lowvelder',
+		page_type: 'article',
+		page_language: 'en',
+		article_authors: ['Lowvelder'],
+article_categories: ['News', 'Special categories'],
+article_subcategories: ['Local news', 'Top stories'],
+tags: ['Lowvelder'],
+article_word_count: '431',
+article_publication_date: 'Thu, 23 Apr 2020 14:00:28 +0200'	});
+</script><style></style><script type="text/javascript">
+(function(h,e,a,t,m,p) {
+m=e.createElement(a);m.async=!0;m.src=t;
+p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+})(window,document,'script','https://u.heatmap.it/log.js');
+</script>
+		<script>var ajaxurl = 'https://www.citizen.co.za/lowvelder/wp-admin/admin-ajax.php';</script><meta property='og:locale:alternate' content='af_ZA' /><script async src='https://cdn.insurads.com/bootstrap/JBBCS5VY.js'></script><meta name='keywords' content='Local news, Nelspruit, Nelspruit News headlines, News, breaking news, local news, news headlines'><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<script async src='//micro.rubiconproject.com/prebid/dynamic/25500.js?key=Lowvelder'></script><link rel="amphtml" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/amp"><link rel="icon" href="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/site-icon-70x70.png" sizes="32x32" />
+<link rel="icon" href="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/site-icon-246x245.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/site-icon-246x245.png" />
+<meta name="msapplication-TileImage" content="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/site-icon-270x203.png" />
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1512989512283895');
+fbq('track', "PageView");
+fbq('track', 'ViewContent');
+</script>
+<!-- End Facebook Pixel Code --><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+<body id="tie-body" class="post-template-default single single-post postid-619291 single-format-standard tie-no-js wrapper-has-shadow block-head-1 magazine2 is-lazyload is-thumb-overlay-disabled is-desktop is-header-layout-3 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 narrow-title-narrow-media has-mobile-share hide_share_post_top hide_share_post_bottom hide_post_authorbio wpb-js-composer js-comp-ver-8.1 vc_responsive">
+
+
+
+<div class="background-overlay">
+
+	<div id="tie-container" class="site tie-container">
+
+		
+		<div id="tie-wrapper">
+
+			
+<header id="theme-header" class="theme-header header-layout-3 main-nav-dark main-nav-default-dark main-nav-below main-nav-boxed has-stream-item top-nav-active top-nav-light top-nav-default-light top-nav-above has-shadow has-normal-width-logo mobile-header-default">
+	
+<nav id="top-nav"  class="has-date-breaking-components top-nav header-nav has-breaking-news" aria-label="Secondary Navigation">
+	<div class="container">
+		<div class="topbar-wrapper">
+
+			
+					<div class="topbar-today-date">
+						Saturday, May 17 2025					</div>
+					
+			<div class="tie-alignleft">
+							</div><!-- .tie-alignleft /-->
+
+			<div class="tie-alignright">
+				<ul class="components"> <li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/Lowvelder"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">X</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/LowveldMedia"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/lowvelder/?hl=en"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link social-custom-link custom-link-1-social-icon custom-social-img" rel="external noopener nofollow" target="_blank" href="https://www.citizen.co.za"><span class="tie-social-icon social-icon-img social-icon-img-1"></span><span class="screen-reader-text">The Citizen</span></a></li> </ul><!-- Components -->			</div><!-- .tie-alignright /-->
+
+		</div><!-- .topbar-wrapper /-->
+	</div><!-- .container /-->
+</nav><!-- #top-nav /-->
+
+<div class="container header-container">
+	<div class="tie-row logo-row">
+
+		
+		<div class="logo-wrapper">
+			<div class="tie-col-md-4 logo-container clearfix">
+				
+		<div id="logo" class="image-logo" style="margin-top: 20px; margin-bottom: 20px;">
+
+			
+			<a title="Lowvelder" href="https://www.citizen.co.za/lowvelder/">
+				
+				<picture class="tie-logo-default tie-logo-picture">
+					
+					<source class="tie-logo-source-default tie-logo-source" srcset="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png">
+					<img class="sp-no-webp tie-logo-img-default tie-logo-img" src="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png" alt="Lowvelder" width="278" height="116" style="max-height:116px; width: auto;" />
+				</picture>
+						</a>
+
+			
+		</div><!-- #logo /-->
+
+		<div id="mobile-header-components-area_2" class="mobile-header-components"><ul class="components"><li class="mobile-component_menu custom-menu-link"><a href="#" id="mobile-menu-icon" class="menu-text-wrapper"><span class="tie-mobile-menu-icon nav-icon is-layout-1"></span><span class="menu-text">Menu</span></a></li> <li class="mobile-component_search custom-menu-link">
+				<a href="#" class="tie-search-trigger-mobile">
+					<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+					<span class="screen-reader-text">Search for</span>
+				</a>
+			</li></ul></div>			</div><!-- .tie-col /-->
+		</div><!-- .logo-wrapper /-->
+
+		<div class="tie-col-md-8 stream-item stream-item-top-wrapper"><div class="stream-item-top">
+<div id='Desktop_Art_LB1' style='' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_LB1');
+</script>
+</div>
+<div id='Mobile_Art_LB1' style='min-width: 320px;min-height: 100px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_LB1');
+</script>
+</div>
+</div></div><!-- .tie-col /-->
+	</div><!-- .tie-row /-->
+</div><!-- .container /-->
+
+<div class="main-nav-wrapper">
+	<nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent menu-style-default menu-style-solid-bg"  aria-label="Primary Navigation">
+		<div class="container">
+
+			<div class="main-menu-wrapper">
+
+				
+				<div id="menu-components-wrap">
+
+					
+					<div class="main-menu main-menu-wrap">
+						<div id="main-nav-menu" class="main-menu header-menu"><ul id="menu-main-navigation-2016" class="menu"><li id="menu-item-365570" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-365570"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/">News</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-365572" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365572"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-news/">Local news</a></li>
+	<li id="menu-item-366311" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-366311"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-hard-news/">Hard news</a></li>
+	<li id="menu-item-365571" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365571"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-crime-news/">Crime</a></li>
+	<li id="menu-item-365577" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365577"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-municipal-news/">Municipal</a></li>
+	<li id="menu-item-365578" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365578"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-school-news/">Schools</a></li>
+	<li id="menu-item-500100" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-500100"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/business/">Business</a></li>
+	<li id="menu-item-854006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-854006"><a href="https://www.citizen.co.za/lowvelder/national-news/">Network News</a></li>
+</ul>
+</li>
+<li id="menu-item-365597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-365597"><a href="https://www.citizen.co.za/lowvelder/online-classifieds/">Classifieds</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-486475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-486475"><a target="_blank" href="https://www.citizen.co.za/lowvelder/online-classifieds/">View Classifieds</a></li>
+	<li id="menu-item-762575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-762575"><a href="https://www.citizen.co.za/lowvelder/place-ad/">Request a quote</a></li>
+</ul>
+</li>
+<li id="menu-item-365576" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-365576"><a href="https://www.citizen.co.za/lowvelder/local/lifestyle-news/">Lifestyle</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-843248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-843248"><a href="https://www.citizen.co.za/lowvelder/local/lifestyle-news/">Lifestyle News</a></li>
+	<li id="menu-item-853460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-853460"><a href="https://www.citizen.co.za/lowvelder/get-it/">Get It</a></li>
+	<li id="menu-item-700340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-700340"><a href="https://www.citizen.co.za/lowvelder/local/kids/">Kids</a></li>
+	<li id="menu-item-435368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-435368"><a href="https://www.citizen.co.za/lowvelder/category/homes/">Homes</a></li>
+</ul>
+</li>
+<li id="menu-item-700341" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-700341"><a href="https://www.citizen.co.za/lowvelder/local/motoring/">Motoring</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-843249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-843249"><a href="https://www.citizen.co.za/lowvelder/local/motoring/">Motoring News</a></li>
+	<li id="menu-item-776600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-776600"><a href="https://www.citizen.co.za/lowvelder/cars-for-sale/?condition=used">Used Cars For Sale</a></li>
+	<li id="menu-item-776601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-776601"><a href="https://www.citizen.co.za/lowvelder/cars-for-sale/?condition=new">New Cars For Sale</a></li>
+	<li id="menu-item-776602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-776602"><a href="https://www.citizen.co.za/lowvelder/cars-for-sale/?condition=demo">Demo Cars For Sale</a></li>
+</ul>
+</li>
+<li id="menu-item-848718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-848718"><a href="https://www.citizen.co.za/lowvelder/local/sports-news/">Sport</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-848720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-848720"><a href="https://www.citizen.co.za/lowvelder/network-sport/">Network News Sport</a></li>
+	<li id="menu-item-848719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-848719"><a href="https://www.citizen.co.za/lowvelder/local/sports-news/">Local Sport</a></li>
+</ul>
+</li>
+<li id="menu-item-416949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-416949"><a>Promotions</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-377312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/worl-diabetes-day-2024/">World Diabetes Day 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/one-day-breakaway-in-mpumalanga/">One Day Breakaway in Mpumalanga!</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/platinum-the-importance-of-mining-this-valuable-metal/">Platinum: The importance of mining this valuable metal</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/nominations-for-best-of-mbombela/">Best of Nominations 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/mining-matters-2024/">Mining Matters 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/readers-choice-awards-best-of-mbombela-2023/">Readers Choice Awards – Best Of Mbombela 2023</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/citybug-turns-30/">Citybug’s officially 30 years old!</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/tis-the-season-to-start-filing/">Tax Matters 2023</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/new-developments/">NEW DEVELOPMENTS</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/everything-you-need-to-know-about-the-springboks-vs-argentina-match-in-mbombela/">Everything you need to know about the Springboks vs Argentina match in Mbombela</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/buco-interhigh-2025/">BUCO Interhigh 2025</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/buco-interhigh-2024/">BUCO Interhigh 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/spar-lowvelder-easter-egg-hunt-2024-tcs/">SPAR/LOWVELDER Easter Egg Hunt 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/dinkyland-castle-celebrates-30-years-of-joyful-living/">Dinkyland Castle celebrates 30 years of joyful living</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/what-to-do-where-to-golets-travel-2024/">What to do, where to go… Let’s travel 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/ambermacs-expo-2025/">AmberMacs Expo 2025</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/mining-2025/">Mining 2025</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/what-to-do-where-to-go-lets-travel/">What to do, Where to go&#8230;</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/what-to-do-where-to-go-in-case-of-emergencies/">What to do, Where to go in case of emergencies</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/amber-macs-macadamia-expo-2024/">AmberMacs Macadamia Expo 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/top-matric-achievers-2023/">Matric Top Achievers 2023</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/innibos-2024/">Innibos</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/medical-matters/">Medical Matters 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/innibos-boekenaweek-2024/">Innibos Boekenaweek 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/2024-lowvelder-got-talent/">Lowvelder Got Talent</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/?page_id=855804&#038;preview=true">Patel Nelspruit – Grand Opening Specials</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/it-takes-a-village-to-raise-a-child/">It takes a village to raise a child</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/top-achievers-2024/">Top Achievers 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/new-developments-2024/">New Developments 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.citizen.co.za/lowvelder/wildevy-4x4-gesinsdag-2024/">Wildevy 4×4 Gesinsdag 2024</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377312"><a href="https://www.guzzle.co.za/">Specials</a></li>
+</ul>
+</li>
+<li id="menu-item-777160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777160"><a href="https://www.citizen.co.za/lowvelder/about-us/">About Us</a></li>
+<li id="menu-item-861817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-861817"><a href="#">Local Deals</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-861818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-861818"><a href="https://www.citizen.co.za/lowvelder/westvaal-deals/">Westvaal Deals</a></li>
+</ul>
+</li>
+<li id="menu-item-869235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-869235"><a href="https://www.citizen.co.za/lowvelder/sports-news/2025/02/21/75th-buco-interhigh-2025/">Interhigh 2025</a></li>
+<li id="menu-item-873058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-873058"><a href="https://www.citizen.co.za/lowvelder/best-of-mbombela-voting/">Best Of</a></li>
+</ul></div>					</div><!-- .main-menu /-->
+
+					<ul class="components">			<li class="search-compact-icon menu-item custom-menu-link">
+				<a href="#" class="tie-search-trigger">
+					<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+					<span class="screen-reader-text">Search for</span>
+				</a>
+			</li>
+			</ul><!-- Components -->
+				</div><!-- #menu-components-wrap /-->
+			</div><!-- .main-menu-wrapper /-->
+		</div><!-- .container /-->
+
+			</nav><!-- #main-nav /-->
+</div><!-- .main-nav-wrapper /-->
+
+</header>
+
+<link rel='stylesheet' id='tie-css-styles-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/style.min.css?ver=7.4.3' type='text/css' media='all' />
+<script>console.log('Style tie-css-styles')</script>
+<link rel='stylesheet' id='tie-css-single-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/single.min.css?ver=7.4.3' type='text/css' media='all' />
+<script>console.log('Style tie-css-single')</script>
+<link rel='stylesheet' id='tie-css-shortcodes-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/plugins/shortcodes.min.css?ver=7.4.3' type='text/css' media='all' />
+<script>console.log('Style tie-css-shortcodes')</script>
+<div class="stream-item stream-item-below-header"></div><div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
+
+<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+
+	<div class="stream-item stream-item-above-post"></div>
+	<article id="the-post" class="container-wrapper post-content tie-standard">
+
+		
+<header class="entry-header-outer">
+
+	<nav id="breadcrumb"><a href="https://www.citizen.co.za/lowvelder/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/">News</a><em class="delimiter">/</em><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-news/">Local news</a><em class="delimiter">/</em><span class="current">History of the Scorpion brand</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/www.citizen.co.za\/lowvelder\/"}},{"@type":"ListItem","position":2,"item":{"name":"News","@id":"https:\/\/www.citizen.co.za\/lowvelder\/local\/news-headlines\/"}},{"@type":"ListItem","position":3,"item":{"name":"Local news","@id":"https:\/\/www.citizen.co.za\/lowvelder\/local\/news-headlines\/local-news\/"}}]}</script>
+	<div class="entry-header">
+
+		<span class="post-cat-wrap"><a class="post-cat tie-cat-7" href="https://www.citizen.co.za/lowvelder/local/news-headlines/local-news/">Local news</a><a class="post-cat tie-cat-16580" href="https://www.citizen.co.za/lowvelder/local/news-headlines/">News</a></span>
+		<h1 class="post-title entry-title">
+			History of the Scorpion brand		</h1>
+
+					<h2 class="entry-sub-title">Nearly 70 years ago to the day, on April 10, 1950, the great champion Tazio Nuvolari ended his racing career behind the wheel of the Abarth 204A, the first model constructed by Carlo Abarth. The time trial ran from the Sicilian capital of Palermo up Monte Pellegrino: a steep, evocative climb, featuring multiple hairpin bends on tarmac.</h2>
+			<div class="single-post-meta post-meta clearfix"><span class="date meta-item tie-icon">April 23, 2020</span><div class="tie-alignright">
+		<span class='single-author with-avatars'>
+			<span class='meta-item meta-author-wrapper'>
+				<span class='meta-author-avatar'>
+					<svg class='lazy-img avatar avatar-140 photo lazy' xmlns='https://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-user'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
+				</span>
+				<span class='meta-author'>
+					Lowvelder
+				</span>
+			</span>
+		</span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 2 minutes read</span> </div></div><!-- .post-meta -->	</div><!-- .entry-header /-->
+
+	
+	
+</header><!-- .entry-header-outer /-->
+
+
+
+		<div id="share-buttons-top" class="share-buttons share-buttons-top">
+			<div class="share-links  share-centered icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=History%20of%20the%20Scorpion%20brand&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="X" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">X</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;title=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="https://www.tumblr.com/share/link?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;name=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="Tumblr" target="_blank" class="tumblr-share-btn " data-raw="https://www.tumblr.com/share/link?url={post_link}&amp;name={post_title}">
+					<span class="share-btn-icon tie-icon-tumblr"></span> <span class="screen-reader-text">Tumblr</span>
+				</a>
+				<a href="https://pinterest.com/pin/create/button/?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;description=History%20of%20the%20Scorpion%20brand&#038;media=https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg" rel="external noopener nofollow" title="Pinterest" target="_blank" class="pinterest-share-btn " data-raw="https://pinterest.com/pin/create/button/?url={post_link}&amp;description={post_title}&amp;media={post_img}">
+					<span class="share-btn-icon tie-icon-pinterest"></span> <span class="screen-reader-text">Pinterest</span>
+				</a>
+				<a href="https://api.whatsapp.com/send?text=History%20of%20the%20Scorpion%20brand%20https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn " data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="screen-reader-text">WhatsApp</span>
+				</a>
+				<a href="https://telegram.me/share/url?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&text=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="Telegram" target="_blank" class="telegram-share-btn " data-raw="https://telegram.me/share/url?url={post_link}&text={post_title}">
+					<span class="share-btn-icon tie-icon-paper-plane"></span> <span class="screen-reader-text">Telegram</span>
+				</a>
+				<a href="mailto:?subject=History%20of%20the%20Scorpion%20brand&#038;body=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Share via Email</span>
+				</a>
+				<a href="#" rel="external noopener nofollow" title="Print" target="_blank" class="print-share-btn " data-raw="#">
+					<span class="share-btn-icon tie-icon-print"></span> <span class="screen-reader-text">Print</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		<div  class="featured-area"><div class="featured-area-inner"><figure class="single-featured-image"><img width="661" height="470" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAADcAQMAAABOLJSDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUaIHtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAA4N8AKvgAAUFIrrEAAAAASUVORK5CYII=" class="attachment-jannah-image-post size-jannah-image-post lazy-img wp-post-image" alt="" data-main-img="1" decoding="async" fetchpriority="high" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg" loading="lazy" /></figure></div></div>
+		<div class="entry-content entry clearfix">
+
+			<div class="stream-item stream-item-above-post-content"></div>
+			<p>The starting grid included the &#8220;Squadra Carlo Abarth&#8221; team, with Tazio Nuvolari behind the wheel of the Abarth 204A, a two-seater racing car with an impressive 1100cc engine. The champion took on the course with his characteristic zeal, finishing with a victory in his class and in fifth place overall.</p>
+<p><em><strong>ALSO READ: <a href="https://www.citizen.co.za/lowvelder/618509/motorists-can-now-report-minor-accidents-and-obtain-a-case-number-online/" target="_blank" rel="noopener noreferrer">Motorists can now report minor accidents and obtain a case number online</a></strong></em></p><div class="stream-item stream-item-in-post stream-item-inline-post aligncenter">
+<div class='tenancy_slot tenancy_slot_1 jannah_ad' style='display: none;' data-query-id='b8369e5164a6d234cb6ef5f7b83a19b4'></div>
+</div>
+<p>The friendship between Carlo Abarth and the great champion began soon after WWII, when Nuvolari &#8211; who already had 55 victories in international Grand Prix and major road races under his belt &#8211; drove for Piero Dusio&#8217;s Cisitalia, with Carlo Abarth leading the racing team.</p>
+<p><img decoding="async" class="alignnone size-full wp-image-619310" src="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/raphael-astier-fr-abarth-124-rally-team-milano-racing-tour-de-corse-42019_1800x1800-558288.jpg" alt="" width="1024" height="681" /></p><div class="stream-item stream-item-in-post stream-item-inline-post aligncenter">
+<div id='Desktop_Art_LB3' style='min-width: 728px;min-height: 90px;' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_LB3');
+</script>
+</div>
+<div id='Mobile_Art_MPU4' style='min-width: 300px;min-height: 250px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_MPU4');
+</script>
+</div>
+</div>
+<p>When Dusio sold his racing cars to Abarth before he emigrated to Argentina, Abarth knew he could count on the support of Nuvolari, who also took on the role of spokesman for his paddle shift tuning kits and mufflers.</p>
+<p>Abarth sports tuning kits converted city cars into race-winners, enabling many young drivers to compete successfully. &#8220;Sunday on the track, Monday in the office&#8221;, went Carlo Abarth&#8217;s slogan. He combined the production of racing components with working on the official team, whose victories were mainly on the track and in hill climbs, in coupe and sports cars.</p>
+<p><img decoding="async" class="alignnone size-full wp-image-619307" src="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/enrico-brazzoli-it-abarth-124-rally-team-bernini-rally-deutschland-rally-082019_1800x1800-558284.jpg" alt="" width="1024" height="682" /></p>
+<p>Following Nuvolari&#8217;s celebrated victory, Abarth won the International Manufacturers Championship six times running between 1962 and 1967, also racking up wins in the 1972 European Championship for Makes with Arturo Merzario at the wheel, plus four triumphs in the European Touring Championships (in 1965, &#8217;66, &#8217;67, and &#8217;69).</p>
+<p>The history of great successes for the Scorpion brand continued from the 1970s onward in rallies, with the Fiat 131 Abarth Rally winning three World Constructors&#8217; Championships in 1977, 1978 and 1980, a World Drivers&#8217; Championship in 1980 with the German driver Walter Röhrl behind the wheel, and an FIA Cup for Drivers in 1978 with Finland&#8217;s Markku Alén.</p>
+<p>Such major victories were complemented by wins in seven European Rally Championships between 1975 and 2011, and by the Abarth 124 rally&#8217;s 2018 and 2019 triumphs in the FIA R-GT Cup.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-619309" src="https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/maurizio-verini-campione-europeo-rally-1975-fiat-abarth-124-rally_1800x1800-558287.jpg" alt="" width="1024" height="687" /></p>
+<p>A success story with a dual significance: on one hand, continuing to feature in race events, with the Abarth 124 rally running in the 2020 ERC, along with the team acting as technical partner on the track of the Italian and German F4 Championships.</p>
+<p><em><strong>ALSO READ: <a href="https://www.citizen.co.za/lowvelder/618997/rapped-distribution-to-those-in-need-is-continued/" target="_blank" rel="noopener noreferrer">Rapid distribution to those in need is continued</a></strong></em></p>
+<p>On the other hand, for Abarth, racing has always been the ultimate testing ground for engines and technical/technological components. Testing under the most extreme conditions can lead to extraordinary levels of performance and reliability, boosting the competitive spirit while preparing for future technology transfer to models in mass production.</p>
+
+			<div class="stream-item stream-item-below-post-content">
+<div class='tenancy_slot tenancy_slot_3 jannah_ad' style='display: none;' data-query-id='b8369e5164a6d234cb6ef5f7b83a19b4'></div>
+</div>
+		<div class="box note  ">
+			<div class="box-inner-block">
+				<span class="fa tie-shortcode-boxicon"></span>At Caxton, we employ humans to generate daily fresh news, not AI intervention. Happy reading!
+			</div>
+		</div>
+	
+		<div class="box download  ">
+			<div class="box-inner-block">
+				<span class="fa tie-shortcode-boxicon"></span>Stay in the know. Download the Caxton Local News Network App <a href='https://www.citizen.co.za/network-news/download-the-caxton-local-news-app/?utm_source=lnnsite&utm_medium=articlebutton&utm_campaign=lnnapp' target='_blank'>here</a>.
+			</div>
+		</div>
+	
+		</div><!-- .entry-content /-->
+
+				<div id="post-extra-info">
+			<div class="theiaStickySidebar">
+				<div class="single-post-meta post-meta clearfix"><span class="date meta-item tie-icon">April 23, 2020</span><div class="tie-alignright">
+		<span class='single-author with-avatars'>
+			<span class='meta-item meta-author-wrapper'>
+				<span class='meta-author-avatar'>
+					<svg class='lazy-img avatar avatar-140 photo lazy' xmlns='https://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-user'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
+				</span>
+				<span class='meta-author'>
+					Lowvelder
+				</span>
+			</span>
+		</span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 2 minutes read</span> </div></div><!-- .post-meta -->
+
+		<div id="share-buttons-top" class="share-buttons share-buttons-top">
+			<div class="share-links  share-centered icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=History%20of%20the%20Scorpion%20brand&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="X" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">X</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;title=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="https://www.tumblr.com/share/link?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;name=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="Tumblr" target="_blank" class="tumblr-share-btn " data-raw="https://www.tumblr.com/share/link?url={post_link}&amp;name={post_title}">
+					<span class="share-btn-icon tie-icon-tumblr"></span> <span class="screen-reader-text">Tumblr</span>
+				</a>
+				<a href="https://pinterest.com/pin/create/button/?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;description=History%20of%20the%20Scorpion%20brand&#038;media=https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg" rel="external noopener nofollow" title="Pinterest" target="_blank" class="pinterest-share-btn " data-raw="https://pinterest.com/pin/create/button/?url={post_link}&amp;description={post_title}&amp;media={post_img}">
+					<span class="share-btn-icon tie-icon-pinterest"></span> <span class="screen-reader-text">Pinterest</span>
+				</a>
+				<a href="https://api.whatsapp.com/send?text=History%20of%20the%20Scorpion%20brand%20https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn " data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="screen-reader-text">WhatsApp</span>
+				</a>
+				<a href="https://telegram.me/share/url?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&text=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="Telegram" target="_blank" class="telegram-share-btn " data-raw="https://telegram.me/share/url?url={post_link}&text={post_title}">
+					<span class="share-btn-icon tie-icon-paper-plane"></span> <span class="screen-reader-text">Telegram</span>
+				</a>
+				<a href="mailto:?subject=History%20of%20the%20Scorpion%20brand&#038;body=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Share via Email</span>
+				</a>
+				<a href="#" rel="external noopener nofollow" title="Print" target="_blank" class="print-share-btn " data-raw="#">
+					<span class="share-btn-icon tie-icon-print"></span> <span class="screen-reader-text">Print</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+					</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<script id="tie-schema-json" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2020-04-23T14:00:28+02:00","datePublished":"2020-04-23T14:00:28+02:00","dateModified":"2020-04-22T12:59:14+02:00","headline":"History of the Scorpion brand","name":"History of the Scorpion brand","keywords":[],"url":"https:\/\/www.citizen.co.za\/lowvelder\/news-headlines\/local-news\/2020\/04\/23\/history-of-the-scorpion-brand\/","description":"The starting grid included the \"Squadra Carlo Abarth\" team, with Tazio Nuvolari behind the wheel of the Abarth 204A, a two-seater racing car with an impressive 1100cc engine. The champion took on the","copyrightYear":"2020","articleSection":"Local news,News","articleBody":"The starting grid included the \"Squadra Carlo Abarth\" team, with Tazio Nuvolari behind the wheel of the Abarth 204A, a two-seater racing car with an impressive 1100cc engine. The champion took on the course with his characteristic zeal, finishing with a victory in his class and in fifth place overall.\r\n\r\nALSO READ: Motorists can now report minor accidents and obtain a case number online\r\n\r\nThe friendship between Carlo Abarth and the great champion began soon after WWII, when Nuvolari - who already had 55 victories in international Grand Prix and major road races under his belt - drove for Piero Dusio's Cisitalia, with Carlo Abarth leading the racing team.\r\n\r\n\r\n\r\nWhen Dusio sold his racing cars to Abarth before he emigrated to Argentina, Abarth knew he could count on the support of Nuvolari, who also took on the role of spokesman for his paddle shift tuning kits and mufflers.\r\n\r\nAbarth sports tuning kits converted city cars into race-winners, enabling many young drivers to compete successfully. \"Sunday on the track, Monday in the office\", went Carlo Abarth's slogan. He combined the production of racing components with working on the official team, whose victories were mainly on the track and in hill climbs, in coupe and sports cars.\r\n\r\n\r\n\r\nFollowing Nuvolari's celebrated victory, Abarth won the International Manufacturers Championship six times running between 1962 and 1967, also racking up wins in the 1972 European Championship for Makes with Arturo Merzario at the wheel, plus four triumphs in the European Touring Championships (in 1965, '66, '67, and '69).\r\n\r\nThe history of great successes for the Scorpion brand continued from the 1970s onward in rallies, with the Fiat 131 Abarth Rally winning three World Constructors' Championships in 1977, 1978 and 1980, a World Drivers' Championship in 1980 with the German driver Walter R\u00f6hrl behind the wheel, and an FIA Cup for Drivers in 1978 with Finland's Markku Al\u00e9n.\r\n\r\nSuch major victories were complemented by wins in seven European Rally Championships between 1975 and 2011, and by the Abarth 124 rally's 2018 and 2019 triumphs in the FIA R-GT Cup.\r\n\r\n\r\n\r\nA success story with a dual significance: on one hand, continuing to feature in race events, with the Abarth 124 rally running in the 2020 ERC, along with the team acting as technical partner on the track of the Italian and German F4 Championships.\r\n\r\nALSO READ: Rapid distribution to those in need is continued\r\n\r\nOn the other hand, for Abarth, racing has always been the ultimate testing ground for engines and technical\/technological components. Testing under the most extreme conditions can lead to extraordinary levels of performance and reliability, boosting the competitive spirit while preparing for future technology transfer to models in mass production.","publisher":{"@id":"#Publisher","@type":"Organization","name":"Lowvelder","logo":{"@type":"ImageObject","url":"https:\/\/images.caxton.co.za\/wp-content\/uploads\/sites\/44\/2020\/08\/lowvelder-logo-cropped.png"},"sameAs":["https:\/\/www.facebook.com\/pages\/Laevelder-Lowvelder\/158345657516798","https:\/\/twitter.com\/Lowvelder","https:\/\/www.youtube.com\/c\/LowveldMedia","https:\/\/www.instagram.com\/lowvelder\/?hl=en"]},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.citizen.co.za\/lowvelder\/news-headlines\/local-news\/2020\/04\/23\/history-of-the-scorpion-brand\/","breadcrumb":{"@id":"#Breadcrumb"}},"author":{"@type":"Person","name":"wesselcohrs","url":"https:\/\/www.citizen.co.za\/lowvelder\/author\/wesselcohrs\/"},"image":{"@type":"ImageObject","url":"https:\/\/images.caxton.co.za\/wp-content\/uploads\/sites\/44\/2020\/04\/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg","width":1200,"height":728}}</script>
+	</article><!-- #the-post /-->
+
+	<div class="stream-item stream-item-below-post"></div>
+	<div class="post-components">
+
+		
+
+	</div><!-- .post-components /-->
+
+	
+</div><!-- .main-content -->
+
+
+	<div id="check-also-box" class="container-wrapper check-also-right">
+
+		<div class="widget-title the-global-title">
+			<div class="the-subtitle">Check Also</div>
+
+			<a href="#" id="check-also-close" class="remove">
+				<span class="screen-reader-text">Close</span>
+			</a>
+		</div>
+
+		<div class="widget posts-list-big-first has-first-big-post">
+			<ul class="posts-list-items">
+
+			
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="CIT guards pray after surviving heist attempt" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/cit-guards-pray-after-surviving-heist-attempt/" class="post-thumb"><img width="370" height="200" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAADcAQMAAABOLJSDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUaIHtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAA4N8AKvgAAUFIrrEAAAAASUVORK5CYII=" class="attachment-jannah-image-large size-jannah-image-large lazy-img wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/CIT-Gaurds-1-370x200.jpg" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/cit-guards-pray-after-surviving-heist-attempt/">CIT guards pray after surviving heist attempt</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">6 hours ago</span>		</div>
+	</div>
+</li>
+
+			</ul><!-- .related-posts-list /-->
+		</div>
+	</div><!-- #related-posts /-->
+
+	
+	<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
+		<div class="theiaStickySidebar">
+			<link rel='stylesheet' id='tie-css-widgets-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/widgets.min.css?ver=7.4.3' type='text/css' media='all' />
+<script>console.log('Style tie-css-widgets')</script>
+
+		<div class='container-wrapper widget widget_text'>
+			<div class='textwidget'>
+				
+<div id='Desktop_Art_MPU1' style='min-width: 300px;min-height: 250px;' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_MPU1');
+</script>
+</div>
+<div id='Mobile_Art_MPU1' style='min-width: 300px;min-height: 250px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_MPU1');
+</script>
+</div>
+
+			</div>
+			<div class='clearfix'></div>
+		</div><div id="text-16" class="container-wrapper widget widget_text">			<div class="textwidget"></div>
+		<div class="clearfix"></div></div><!-- .widget /-->
+			<div id="widget_tabs-1" class="container-wrapper tabs-container-wrapper tabs-container-1">
+				<div class="widget tabs-widget">
+					<div class="widget-container">
+						<div class="tabs-widget">
+							<div class="tabs-wrapper">
+
+								<ul class="tabs">
+									<li><a href="#widget_tabs-1-recent">Recent</a></li>								</ul><!-- ul.tabs-menu /-->
+
+								
+											<div id="widget_tabs-1-recent" class="tab-content tab-content-recent">
+												<ul class="tab-content-elements">
+													
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="CIT guards pray after surviving heist attempt" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/cit-guards-pray-after-surviving-heist-attempt/" class="post-thumb"><img width="110" height="75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABLAQMAAACr9CA9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABZJREFUOI1jYMADmEe5o9xR7iiXQi4A4BsA388WUyMAAAAASUVORK5CYII=" class="attachment-jannah-image-small size-jannah-image-small lazy-img tie-small-image wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/CIT-Gaurds-1-110x75.jpg" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/cit-guards-pray-after-surviving-heist-attempt/">CIT guards pray after surviving heist attempt</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">6 hours ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Mashishing Civic Coalition writes to premier over fights for tenders" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/mashishing-civic-coalition-writes-to-premier-over-fights-for-tenders/" class="post-thumb"><img width="110" height="75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABLAQMAAACr9CA9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABZJREFUOI1jYMADmEe5o9xR7iiXQi4A4BsA388WUyMAAAAASUVORK5CYII=" class="attachment-jannah-image-small size-jannah-image-small lazy-img tie-small-image wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/WhatsApp-Image-2025-05-16-at-14.11.33_abb4a9ac-110x75.jpg" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/mashishing-civic-coalition-writes-to-premier-over-fights-for-tenders/">Mashishing Civic Coalition writes to premier over fights for tenders</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">12 hours ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Businessman plans to construct road in Burgersfort" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/businessman-plans-to-construct-road-in-burgersfort/" class="post-thumb"><img width="110" height="75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABLAQMAAACr9CA9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABZJREFUOI1jYMADmEe5o9xR7iiXQi4A4BsA388WUyMAAAAASUVORK5CYII=" class="attachment-jannah-image-small size-jannah-image-small lazy-img tie-small-image wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/morgan_49257_86338-110x75.jpg" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/businessman-plans-to-construct-road-in-burgersfort/">Businessman plans to construct road in Burgersfort</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">12 hours ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="FARM ASSAULT: Mbombela pensioner brutally hacked with panga, beaten and left unconscious" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/farm-assault-mbombela-pensioner-brutally-hacked-with-panga-beaten-and-left-unconscious/" class="post-thumb"><img width="110" height="75" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABLAQMAAACr9CA9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABZJREFUOI1jYMADmEe5o9xR7iiXQi4A4BsA388WUyMAAAAASUVORK5CYII=" class="attachment-jannah-image-small size-jannah-image-small lazy-img tie-small-image wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/Law-and-firm-instagram-post-780-x-400-px-780-x-400-px-780-x-400-px-110x75.jpg" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/farm-assault-mbombela-pensioner-brutally-hacked-with-panga-beaten-and-left-unconscious/">FARM ASSAULT: Mbombela pensioner brutally hacked with panga, beaten and left unconscious</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">15 hours ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Missing girl update: A month of scouring the Crocodile River in Mbombela" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/missing-girl-update-a-month-of-scouring-the-crocodile-river-in-mbombela/" class="post-thumb"><img width="1152" height="648" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABLAQMAAACr9CA9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABZJREFUOI1jYMADmEe5o9xR7iiXQi4A4BsA388WUyMAAAAASUVORK5CYII=" class="attachment-jannah-image-small size-jannah-image-small lazy-img tie-small-image wp-post-image" alt="" decoding="async" loading="lazy" data-src="https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/aqhama-low.gif" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/missing-girl-update-a-month-of-scouring-the-crocodile-river-in-mbombela/">Missing girl update: A month of scouring the Crocodile River in Mbombela</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">15 hours ago</span>		</div>
+	</div>
+</li>
+												</ul>
+											</div><!-- .tab-content#recent-posts-tab /-->
+
+										
+							</div><!-- .tabs-wrapper-animated /-->
+						</div><!-- .tabs-widget /-->
+					</div><!-- .widget-container /-->
+				</div><!-- .tabs-widget /-->
+			</div><!-- .container-wrapper /-->
+			<div id="text-17" class="container-wrapper widget widget_text">			<div class="textwidget">
+<div id='Desktop_Art_MPU2' style='' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_MPU2');
+</script>
+</div>
+<div id='Mobile_Art_MPU2' style='min-width: 300px;min-height: 600px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_MPU2');
+</script>
+</div>
+</div>
+		<div class="clearfix"></div></div><!-- .widget /--><div class='container-wrapper widget widget_text'>
+    <style>
+    .subscribe-widget .subscribe-widget-content h3,
+    .subscribe-widget .subscribe-widget-content p,
+    .subscribe-widget .subscribe-widget-content a {
+        margin: 0;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .subscribe-widget .subscribe-widget-content .subscribe-submit {
+        margin-bottom: 0;
+    }
+    </style>
+    <div class='subscribe-widget textwidget'>
+        <div class='jannah_ad subscribe-widget-content widget-inner-wrap'>
+            <h3>Subscribe To Our Newsletter</h3>
+            <a href='https://www.citizen.co.za/lowvelder/subscribe-to-our-newsletter/' title='Subscribe To Our Newsletter' target='_blank' rel='noindex, nofollow, noopener'>
+                <img src='https://images.caxton.co.za/wp-content/uploads/sites/44/2025/05/Lowaevelder-Sign-Up-Email-Newsletter-Banner-1.gif' width="864" height="864" alt='Subscribe To Our Newsletter.' loading="lazy" decoding='async'>
+            </a>
+            <p>
+                            </p>
+                    </div>
+    </div>
+    <div class='clearfix'></div>
+</div>
+		<div class='container-wrapper widget widget_text'>
+			<div class='textwidget'>
+				
+<div id='Desktop_Art_MPU3' style='' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_MPU3');
+</script>
+</div>
+<div id='Mobile_Art_MPU3' style='min-width: 300px;min-height: 600px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_MPU3');
+</script>
+</div>
+
+			</div>
+			<div class='clearfix'></div>
+		</div>		</div><!-- .theiaStickySidebar /-->
+	</aside><!-- .sidebar /-->
+	</div><!-- .main-content-row /--></div><!-- #content /--><div class="stream-item stream-item-above-footer">
+<div id='Desktop_Art_LB5' style='' class='jannah_ad desktop'>
+<script>
+lnn_tags.displayAd('Desktop_Art_LB5');
+</script>
+</div>
+<div id='Mobile_Art_LB5' style='min-width: 320px;min-height: 100px;' class='jannah_ad mobile'>
+<script>
+lnn_tags.displayAd('Mobile_Art_LB5');
+</script>
+</div>
+</div>
+		<div class='fixed_bottom'>
+			
+			
+			
+		<script>
+			jQuery('.close_ad').on('click', function(){
+				jQuery(this).closest('.ad-wrapper').remove();
+			});
+
+			jQuery('.accept_cookies').on('click', function(e){
+				if(e && e.preventDefault){ e.preventDefault(); }
+				localStorage.setItem('cookie-banner-accepted', true);
+				jQuery(this).closest('.cookie-banner').remove();
+			});
+
+			if(!localStorage.getItem('cookie-banner-accepted')){
+				var _banner = jQuery('.cookie-banner');
+				_banner.length && _banner.addClass('visible');
+			}
+		</script>
+			
+			<style>
+			.fixed_bottom {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1000000;
+			}
+
+			.fixed_bottom .ad-wrapper {
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 732px;
+				border-top: 2px solid rgba(0, 0, 0, 0.38);
+				border-left: 2px solid rgba(0, 0, 0, 0.38);
+				border-right: 2px solid rgba(0, 0, 0, 0.38);
+				border-bottom: 2px solid #fff;
+				bottom: -2px;
+			}
+
+			.fixed_bottom .ad-wrapper > div {
+				 max-width: 728px;
+				 max-height: 90px;
+				 background-color: #fff;
+			}
+
+			.fixed_bottom .ad-wrapper::before,
+			.fixed_bottom .ad-wrapper::after {
+				content: '';
+				position: absolute;
+				background-color: transparent;
+				bottom: 0;
+				height: 30px;
+				width: 15px;
+			}
+
+			.fixed_bottom .ad-wrapper::before {
+				left: -15px;
+				border-bottom-right-radius: 25px;
+			}
+
+			.fixed_bottom .ad-wrapper::after {
+				right: -15px;
+				border-bottom-left-radius: 25px;
+			}
+
+			.fixed_bottom .tie-icon-cross {
+				position: absolute;
+				background:#fefefe;
+				border:1px solid #ececec;
+				padding: 10px;
+				text-align:center;
+				cursor:pointer;
+				float:right;
+				width: 34px;
+				height: 34px;
+				right: 0;
+			}
+
+			.fixed_bottom .cookie-banner {
+				display: none;
+				position: relative;
+				background: #fff;
+				text-align: center;
+				padding: 15px;
+				border-top: 2px solid rgba(0, 0, 0, 0.38);
+				z-index: -1;
+			}
+
+			.fixed_bottom .cookie-banner.visible {
+				display: block;
+			}
+
+			.fixed_bottom .cookie-banner .container {
+				padding: 0 60px;
+			}
+
+			.fixed_bottom .cookie-banner a{
+				color: #0088ff;
+			}
+
+			.fixed_bottom .cookie-banner .button {
+				margin-left: 15px;
+			}
+
+			@media(max-width: 768px) {
+				.fixed_bottom .ad-wrapper {
+					/*display: none;*/
+				}
+
+				.fixed_bottom .cookie-banner .container {
+					padding: 0 50px;
+				}
+			}
+			</style>
+		</div>
+<footer id="footer" class="site-footer dark-skin dark-widgetized-area">
+
+	
+			<div id="footer-widgets-container">
+				<div class="container">
+					
+		<div class="footer-widget-area ">
+			<div class="tie-row">
+
+									<div class="tie-col-md-3 normal-side">
+						<div id="posts-list-widget-1" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Most Recent<span class="widget-title-icon tie-icon"></span></div></div><div class="widget-posts-list-wrapper"><div class="widget-posts-list-container timeline-widget" ><ul class="posts-list-items widget-posts-wrapper">					<li class="widget-single-post-item">
+						<a href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/cit-guards-pray-after-surviving-heist-attempt/">
+							<span class="date meta-item tie-icon">6 hours ago</span>							<h3>CIT guards pray after surviving heist attempt</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/mashishing-civic-coalition-writes-to-premier-over-fights-for-tenders/">
+							<span class="date meta-item tie-icon">12 hours ago</span>							<h3>Mashishing Civic Coalition writes to premier over fights for tenders</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://www.citizen.co.za/lowvelder/news-headlines/local-news/2025/05/16/businessman-plans-to-construct-road-in-burgersfort/">
+							<span class="date meta-item tie-icon">12 hours ago</span>							<h3>Businessman plans to construct road in Burgersfort</h3>
+						</a>
+					</li>
+					</ul></div></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-1" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">About Us<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class='widget_nav_menu'><li><a href='https://www.citizen.co.za/lowvelder/'>Home</a></li><li><a href='https://www.citizen.co.za/lowvelder/about-us/'>About Us</a></li><li><a href='https://www.citizen.co.za/lowvelder/epapers/'>Previous Publications</a></li><li><a href='https://www.citizen.co.za/lowvelder/privacy-policy/'>Privacy Policy</a></li><li><a href='https://www.citizen.co.za/lowvelder/code-of-conduct/'>Code of Conduct</a></li><li><a href='https://www.citizen.co.za/lowvelder/terms-and-conditions/'>Terms and Conditions</a></li><li><a href='https://www.citizen.co.za/lowvelder/ai-policy/'>AI Policy</a></li></ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-2" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">News<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class="widget_nav_menu">
+										<li><a href="https://www.citizen.co.za/lowvelder/category/news-headlines/local-news/">Local News</a></li>
+										<li><a href="https://www.citizen.co.za/lowvelder/national-news/">Network News</a></li>
+										<li><a href="https://www.citizen.co.za/lowvelder/category/sports-news/">Sports News</a></li>
+									</ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-md-3 normal-side">
+						<div id="custom_html-4" class="widget_text container-wrapper widget widget_custom_html"><div class="widget-title the-global-title"><div class="the-subtitle">Need Something?<span class="widget-title-icon tie-icon"></span></div></div><div class="textwidget custom-html-widget"><ul class='widget_nav_menu'><li><a href='https://lowvelder.ads.caxton.co.za/' target='_blank' rel='noopener nofollow'>Classifieds</a></li>
+<li><a href='https://www.carmag.co.za/car-reviews/road-tests/' target='_blank' rel='noopener'>Latest Road Tests</a></li>
+<li><a href='https://www.citizen.co.za/lowvelder/category/homes/'>Homes</a></li>
+<li><a href='https://www.citizen.co.za/lowvelder/subscribe-to-our-newsletter/'>Newsletter</a></li>
+<li><a href='https://www.citizen.co.za/network-news/download-the-caxton-local-news-app/'>Caxton Local News App</a></li></ul></div><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+			</div><!-- .tie-row /-->
+		</div><!-- .footer-widget-area /-->
+
+		
+		<div class="footer-widget-area ">
+			<div class="tie-row">
+
+									<div class="tie-col-sm-4 normal-side">
+						<div id="author-bio-widget-1" class="container-wrapper widget aboutme-widget">
+				<div class="about-author about-content-wrapper"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAKCAYAAADVTVykAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpi/P//P8NAAiaGAQajDhh1wKgDRh0AEGAAQTcDEcKDrpMAAAAASUVORK5CYII=" data-src="https://www.citizen.co.za/lowvelder/wp-content/uploads/sites/44/2020/08/lowvelder-logo-cropped.png" style="margin-top: 0px; margin-bottom: 0px;"  class="about-author-img lazy-img" loading="lazy" decoding="async" width="280" height="47">
+
+					<div class="aboutme-widget-content">
+					</div>
+					<div class="clearfix"></div>
+			
+				</div><!-- .about-widget-content -->
+			<div class="clearfix"></div></div><!-- .widget /--><div class="widget social-icons-widget widget-content-only"><ul class="solid-social-icons"><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/Lowvelder"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">X</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/LowveldMedia"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/lowvelder/?hl=en"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link social-custom-link custom-link-1-social-icon custom-social-img" rel="external noopener nofollow" target="_blank" href="https://www.citizen.co.za"><span class="tie-social-icon social-icon-img social-icon-img-1"></span><span class="screen-reader-text">The Citizen</span></a></li></ul> 
+<div class="clearfix"></div></div>					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-sm-4 normal-side">
+						<div id="author-bio-widget-2" class="container-wrapper widget aboutme-widget">
+				<div class="about-author about-content-wrapper">
+
+					<div class="aboutme-widget-content">For advertisers Lowvelder provides an established product where distribution is guaranteed and you have the upper hand in readership figures. Research has shown that our community newspapers reach 75% of our market while any other daily, weekly or Sunday newspaper doesn’t exceed 20%. 
+					</div>
+					<div class="clearfix"></div>
+			
+				</div><!-- .about-widget-content -->
+			<div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="tie-col-sm-4 normal-side">
+						<div id="media_image-2" class="container-wrapper widget widget_media_image"><a href="https://www.citizen.co.za/lowvelder/code-of-conduct/" class="aligncenter"><img class="image " src="https://images.caxton.co.za/wp-content/uploads/sites/110/2023/01/press-council-logo.png" alt="Code of Conduct." width="141" height="100" decoding="async" loading="lazy" /></a><div class="clearfix"></div></div><!-- .widget /--><div id="media_image-1" class="container-wrapper widget widget_media_image"><a href="https://www.iabsa.net/" class="aligncenter" rel="nofollow noopener" target="_blank"><img class="image " src="https://caxtondigital.co.za/wp-content/uploads/sites/110/2022/07/IAB-South-Africa-Logo-1.png" alt="IAB South Africa" width="158" height="110" decoding="async" loading="lazy" /></a><div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+				
+			</div><!-- .tie-row /-->
+		</div><!-- .footer-widget-area /-->
+
+						</div><!-- .container /-->
+			</div><!-- #Footer-widgets-container /-->
+			
+			<div id="site-info" class="site-info site-info-layout-2">
+				<div class="container">
+					<div class="tie-row">
+						<div class="tie-col-md-12">
+
+							<div class="copyright-text copyright-text-first">Copyright &copy; 2025 Caxton & CTP Printers and Publishers Ltd.</div><div class="footer-menu"><ul id="menu-sitemap-column-1" class="menu"><li id="menu-item-965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-965"><a href="https://www.citizen.co.za/lowvelder/">Home</a></li>
+<li id="menu-item-2831" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2831"><a href="https://www.citizen.co.za/lowvelder/local/special-categories/top-stories/">Top stories</a></li>
+<li id="menu-item-967" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-967"><a href="https://www.citizen.co.za/lowvelder/local/news-headlines/">News</a></li>
+</ul></div><ul class="social-icons"><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/Lowvelder"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">X</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/LowveldMedia"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/lowvelder/?hl=en"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link social-custom-link custom-link-1-social-icon custom-social-img" rel="external noopener nofollow" target="_blank" href="https://www.citizen.co.za"><span class="tie-social-icon social-icon-img social-icon-img-1"></span><span class="screen-reader-text">The Citizen</span></a></li></ul> 
+
+						</div><!-- .tie-col /-->
+					</div><!-- .tie-row /-->
+				</div><!-- .container /-->
+			</div><!-- #site-info /-->
+			
+</footer><!-- #footer /-->
+
+
+
+
+		<div id="share-buttons-mobile" class="share-buttons share-buttons-mobile">
+			<div class="share-links  icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=History%20of%20the%20Scorpion%20brand&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="X" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">X</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;title=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="https://pinterest.com/pin/create/button/?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&#038;description=History%20of%20the%20Scorpion%20brand&#038;media=https://images.caxton.co.za/wp-content/uploads/sites/44/2020/04/tazio-nuvolari-al-volante-dell-abarth-204a_1800x1800-558281.jpg" rel="external noopener nofollow" title="Pinterest" target="_blank" class="pinterest-share-btn " data-raw="https://pinterest.com/pin/create/button/?url={post_link}&amp;description={post_title}&amp;media={post_img}">
+					<span class="share-btn-icon tie-icon-pinterest"></span> <span class="screen-reader-text">Pinterest</span>
+				</a>
+				<a href="https://api.whatsapp.com/send?text=History%20of%20the%20Scorpion%20brand%20https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn " data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="screen-reader-text">WhatsApp</span>
+				</a>
+				<a href="https://telegram.me/share/url?url=https://www.citizen.co.za/lowvelder/news-headlines/local-news/2020/04/23/history-of-the-scorpion-brand/&text=History%20of%20the%20Scorpion%20brand" rel="external noopener nofollow" title="Telegram" target="_blank" class="telegram-share-btn " data-raw="https://telegram.me/share/url?url={post_link}&text={post_title}">
+					<span class="share-btn-icon tie-icon-paper-plane"></span> <span class="screen-reader-text">Telegram</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		<div class="mobile-share-buttons-spacer"></div>
+		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+			<span class="tie-icon-angle-up"></span>
+			<span class="screen-reader-text">Back to top button</span>
+		</a>
+	
+		</div><!-- #tie-wrapper /-->
+
+		
+	<aside class=" side-aside normal-side dark-skin dark-widgetized-area is-fullwidth appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
+		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+
+			<a href="#" class="close-side-aside remove big-btn">
+				<span class="screen-reader-text">Close</span>
+			</a><!-- .close-side-aside /-->
+
+
+			
+				<div id="mobile-container">
+
+					
+					<div id="mobile-menu" class="hide-menu-icons">
+											</div><!-- #mobile-menu /-->
+
+											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/pages/Laevelder-Lowvelder/158345657516798"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/Lowvelder"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">X</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/LowveldMedia"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/lowvelder/?hl=en"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link social-custom-link custom-link-1-social-icon custom-social-img" rel="external noopener nofollow" target="_blank" href="https://www.citizen.co.za"><span class="tie-social-icon social-icon-img social-icon-img-1"></span><span class="screen-reader-text">The Citizen</span></a></li></ul> 
+						</div><!-- #mobile-social-icons /-->
+												<div id="mobile-search">
+							<form role="search" method="get" class="search-form" action="https://www.citizen.co.za/lowvelder/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>						</div><!-- #mobile-search /-->
+						
+				</div><!-- #mobile-container /-->
+			
+
+			
+		</div><!-- .side-aside-wrapper /-->
+	</aside><!-- .side-aside /-->
+
+	
+	</div><!-- #tie-container /-->
+</div><!-- .background-overlay /-->
+
+		<script type="text/javascript">
+			if( 'loading' in HTMLImageElement.prototype) {
+				document.querySelectorAll('[data-src]').forEach( function(img){
+					img.src = img.dataset.src;
+					img.removeAttribute('data-src');
+				});
+			}
+		</script>
+		<link rel='preload' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/helpers.min.css?ver=7.4.3' as='style' onload='this.onload=null;this.rel="stylesheet"' />
+<noscript><link rel='stylesheet' id='tie-css-helpers-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/helpers.min.css?ver=7.4.3' type='text/css' media='all' /></noscript>
+<script>console.log('Style tie-css-helpers')</script>
+<link rel='preload' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=7.4.3' as='style' onload='this.onload=null;this.rel="stylesheet"' />
+<noscript><link rel='stylesheet' id='tie-css-ilightbox-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=7.4.3' type='text/css' media='all' /></noscript>
+<script>console.log('Style tie-css-ilightbox')</script>
+<link rel='preload' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/fontawesome.css?ver=7.4.3' as='style' onload='this.onload=null;this.rel="stylesheet"' />
+<noscript><link rel='stylesheet' id='tie-fontawesome5-css' href='https://images.caxton.co.za/wp-content/themes/jannah/assets/css/fontawesome.css?ver=7.4.3' type='text/css' media='all' /></noscript>
+<script>console.log('Style tie-fontawesome5')</script>
+<!-- Carbon Analytics -->
+<script>
+    !function(a,l,b,c,k,s,t,g,A){a.CustomerConnectAnalytics=k,a[k]=a[k]||function(){
+        (a[k].q=a[k].q||[]).push(arguments)},g=l.createElement(b),A=l.getElementsByTagName(b)[0],
+        g.type="text/javascript",g.async=!0,g.src=c+"?id="+s+"&parentId="+t,A.parentNode.insertBefore(g,A)
+    }(window,document,"script","//carbon-cdn.ccgateway.net/script","cca",window.location.hostname,"2d8602113c");
+    </script>
+<!-- Carbon Analytics --><!-- Clicky Tracker -->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100920582); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100920582ns.gif" /></p></noscript>
+<!-- End of Clicky Tracker -->
+        <script>
+            var _prum = [['id', '58c287b07540541250e8b8d2'],
+                ['mark', 'firstbyte', (new Date()).getTime()]];
+
+            (function() {
+                var s = document.getElementsByTagName('script')[0],
+                p = document.createElement('script');
+                p.async = 'async';
+                p.src = '//rum-static.pingdom.net/prum.min.js';
+                s.parentNode.insertBefore(p, s);
+            })();
+        </script><script>
+jQuery(function($) {
+	// Milliseconds
+  let interval = 2000;
+	let $carousels = $('.vc_images_carousel');
+	
+  $carousels.each(function(i, el) {
+    let $carousel = $(el);
+    
+    if ($carousel.data()) {
+      setInterval(function() {
+        $carousel.carousel('next')
+      }, interval)
+    }
+  });
+});
+</script><div id="reading-position-indicator"></div><div id="autocomplete-suggestions" class="autocomplete-suggestions"></div><div id="is-scroller-outer"><div id="is-scroller"></div></div><div id="fb-root"></div>		<div id="tie-popup-search-desktop" class="tie-popup tie-popup-search-wrap" style="display: none;">
+			<a href="#" class="tie-btn-close remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a>
+			<div class="popup-search-wrap-inner">
+
+				<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
+
+										<form method="get" class="tie-popup-search-form" action="https://www.citizen.co.za/lowvelder/">
+							<input class="tie-popup-search-input is-ajax-search" inputmode="search" type="text" name="s" title="Search for" autocomplete="off" placeholder="Type and hit Enter" />
+							<button class="tie-popup-search-submit" type="submit">
+								<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+								<span class="screen-reader-text">Search for</span>
+							</button>
+						</form>
+						
+				</div><!-- .pop-up-live-search /-->
+
+			</div><!-- .popup-search-wrap-inner /-->
+		</div><!-- .tie-popup-search-wrap /-->
+				<div id="tie-popup-search-mobile" class="tie-popup tie-popup-search-wrap" style="display: none;">
+			<a href="#" class="tie-btn-close remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a>
+			<div class="popup-search-wrap-inner">
+
+				<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
+
+										<form method="get" class="tie-popup-search-form" action="https://www.citizen.co.za/lowvelder/">
+							<input class="tie-popup-search-input is-ajax-search" inputmode="search" type="text" name="s" title="Search for" autocomplete="off" placeholder="Search for" />
+							<button class="tie-popup-search-submit" type="submit">
+								<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+								<span class="screen-reader-text">Search for</span>
+							</button>
+						</form>
+						
+				</div><!-- .pop-up-live-search /-->
+
+			</div><!-- .popup-search-wrap-inner /-->
+		</div><!-- .tie-popup-search-wrap /-->
+		<script type="text/javascript" src="https://images.caxton.co.za/wp-content/plugins/dp-site-settings/public/tenancy_ads/tenancy_ads_script.js?ver=3.2.0" id="tenancy_ad_script-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/plugins/dp-twitter-embed/dp-twitter-embed.prod.js?ver=1.1.2" id="dp-twitter-embed-js"></script>
+<script type="text/javascript" id="tie-scripts-js-extra">
+/* <![CDATA[ */
+var tie = {"is_rtl":"","ajaxurl":"https:\/\/www.citizen.co.za\/lowvelder\/wp-admin\/admin-ajax.php","is_side_aside_light":"","is_taqyeem_active":"","is_sticky_video":"1","mobile_menu_top":"","mobile_menu_active":"area_2","mobile_menu_parent":"","lightbox_all":"true","lightbox_gallery":"true","lightbox_skin":"dark","lightbox_thumb":"horizontal","lightbox_arrows":"true","is_singular":"1","autoload_posts":"","reading_indicator":"true","lazyload":"true","select_share":"true","select_share_twitter":"true","select_share_facebook":"true","select_share_linkedin":"true","select_share_email":"true","facebook_app_id":"5303202981","twitter_username":"","responsive_tables":"true","ad_blocker_detector":"","sticky_behavior":"upwards","sticky_desktop":"true","sticky_mobile":"true","sticky_mobile_behavior":"default","ajax_loader":"<div class=\"loader-overlay\"><div class=\"spinner-circle\"><\/div><\/div>","type_to_search":"1","lang_no_results":"Nothing Found","sticky_share_mobile":"true","sticky_share_post":"","sticky_share_post_menu":""};
+/* ]]> */
+</script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/scripts.min.js?ver=7.4.3" id="tie-scripts-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/ilightbox/lightbox.js?ver=7.4.3" id="tie-js-ilightbox-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/desktop.min.js?ver=7.4.3" id="tie-js-desktop-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/live-search.js?ver=7.4.3" id="tie-js-livesearch-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/single.min.js?ver=7.4.3" id="tie-js-single-js"></script>
+<script type="text/javascript" src="https://images.caxton.co.za/wp-content/themes/jannah-child/assets/js/scripts.prod.js?ver=7.4.3" id="jannah-child-js-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/sliders.min.js?ver=7.4.3" id="tie-js-sliders-js"></script>
+<script type="text/javascript" defer="defer" src="https://images.caxton.co.za/wp-content/themes/jannah/assets/js/shortcodes.prod.js?ver=7.4.3" id="tie-js-shortcodes-js"></script>
+<script></script><script>
+				WebFontConfig ={
+					google:{
+						families: [ 'Poppins:600,regular:latin&display=swap' ]
+					}
+				};
+
+				(function(){
+					var wf   = document.createElement('script');
+					wf.src   = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+					wf.type  = 'text/javascript';
+					wf.defer = 'true';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(wf, s);
+				})();
+			</script>		<script type='text/javascript'>
+			!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+		</script>
+
+		<script type='text/javascript'>
+			var c = document.body.className;
+			c = c.replace(/tie-no-js/, 'tie-js');
+			document.body.className = c;
+		</script>
+		
+</body>
+</html>
