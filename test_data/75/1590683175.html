@@ -1,0 +1,1284 @@
+<html lang="es">
+
+<!-- Error de carga de archivo no existe Yonatan Montoya 06-11-2019 -->
+<!--script type="text/javascript" src="../js/funciones.js"></script-->
+<head>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2FHQ2F');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<meta name="google-signin-client_id" content="491545183594-amrte47p6t3g6bingunch5i03otqacnj.apps.googleusercontent.com" />
+  <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "NewsArticle",
+                "isAccessibleForFree": false,
+                "publisher": {
+                "@type": "Organization",
+                    "name": "La patria.com"
+                },
+                "isPartOf": {
+                "@type": ["CreativeWork", "Product"],
+                    "name" : "La patria.com",
+                    "productID": "lapatria.com:showcase"
+                }
+            }
+        </script>
+
+<!--código para push notifications-->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async="async"></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "9769af98-1077-44c1-99ff-163c856ce4db",
+    });
+  });
+</script>
+
+
+<!-- Script para lanzar la versión móvil -->
+<!--script type="text/javascript">
+
+if(str.indexOf("radio") == -1 && str.indexOf("especiales") == -1 && str.indexOf("especiales/festival-teatro") == -1&& str.indexOf("user") == -1 && str.indexOf("kiosko-la-patria-313585") == -1 && str.indexOf("tags/lptvesencial") == -1 && str.indexOf("inscripcion-premio-nacional-periodismo-escrito-universitario-2017-2018") == -1 && str.indexOf("edictos") == -1)
+
+if (screen.width <= 720) {
+window.location = "http://m.lapatria.com"+str;
+}
+</script-->
+<!-- Script para lanzar la versión móvil 25 de Julio de 2018 -->
+<script type="text/javascript">
+var sindykPageURL = location.pathname + window.location.search;
+var sindykReferer = document.referrer;
+var sindykQueryString = window.location.search;
+// If we get a Referer
+if (sindykReferer) {
+    // Get the domain of the referal
+    var sindykRefererDomain = sindykReferer.replace('http://','').replace('https://','').replace('//','').replace('www.','').replace('.com','').replace('.html','').replace('.co','').replace('m.','').replace('.gt','').split(/[/?#]/)[0];
+    sindykRefererDomain = sindykRefererDomain.substring(sindykRefererDomain.lastIndexOf(".", sindykRefererDomain.lastIndexOf(".") - 1) + 1);
+    if (sindykQueryString.indexOf('&') >= 0) {
+        // Check if the user already asigned a predefined source
+        if (sindykQueryString.indexOf('utm_source') < 1) {
+            sindykPageURL = sindykPageURL + "&utm_source=" + sindykRefererDomain;
+        }
+    } else if(sindykReferer.indexOf("facebook.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=facebook&utm_medium=social";
+    } else if(sindykReferer.indexOf("twitter.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=twitter&utm_medium=social";
+    } else if(sindykReferer.indexOf("t.co") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=twitter&utm_medium=social";
+    } else if(sindykReferer.indexOf("instagram") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=instagram&utm_medium=social";
+    } else if(sindykReferer.indexOf("google") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=google&utm_medium=organic";
+	} else if(sindykReferer.indexOf("googleapis.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=google&utm_medium=organic";
+	} else if(sindykReferer.indexOf("google.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=google&utm_medium=organic";
+    } else if(sindykReferer.indexOf("prensaescrita.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=prensaescrita&utm_medium=referral";
+    } else if(sindykReferer.indexOf("lapatria.com") > 0) {
+        sindykPageURL = sindykPageURL + "?utm_source=(none)&utm_medium=direct";
+    } else {
+        sindykPageURL = sindykPageURL + "?utm_source=" + sindykRefererDomain;
+    }
+}
+if (screen.width <= 720) {
+    if(sindykPageURL.indexOf("/especiales") == -1 &&
+        sindykPageURL.indexOf("user") == -1 &&
+        sindykPageURL.indexOf("kiosko-la-patria-313585") == -1 &&
+        sindykPageURL.indexOf("campana-navidad") == -1 &&
+		sindykPageURL.indexOf("emprendiendo/agenda") == -1 &&
+		sindykPageURL.indexOf("emprendiendo/contact") == -1 &&
+        sindykPageURL.indexOf("inscripcion-premio-nacional-periodismo-escrito-universitario-2018-2019") == -1 &&
+        sindykPageURL.indexOf("otras-imagenes/Chec/CHEC2.jpg") == -1 &&
+		sindykPageURL.indexOf("nuestras-publicaciones") == -1 &&
+		sindykPageURL.indexOf("elecciones-2019") == -1 &&
+		sindykPageURL.indexOf("especiales/feria-manizales-2020") == -1 &&
+        sindykPageURL.indexOf("sondeo") == -1) {
+        //window.location = "http://m.lapatria.com" + sindykPageURL ;   
+    }
+}
+
+</script>
+<!-- fin Script para lanzar la versión móvil 25 de Julio de 2018 -->
+<script>
+	//Funcion para detectar el adblock
+	function showLightbox() {
+	document.getElementById('over').style.display='block';
+	document.getElementById('fade').style.display='block';
+}
+function hideLightbox() {
+	document.getElementById('over').style.display='none';
+	document.getElementById('fade').style.display='none';
+}
+</script>
+<style type="text/css">
+<!-- 
+/*Estilo para detectar el adblock*/
+body {
+	background-color: #FFFFFF;
+	font-family: "Trebuchet MS", Tahoma, Verdana;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666666;
+	margin: 10px;
+	padding: 0;
+}
+.fadebox {
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+.overbox {
+	display: none;
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	z-index:1002;
+}
+#content {
+	background: #FFFFFF;
+	border: solid 3px #CCCCCC;
+	padding: 10px;
+}-->
+</style>
+<!-- fin Script para lanzar la versión móvil -->
+<meta property="fb:pages" content="293220964066110" />
+<!-- META TAGS -->
+<!-- META DATOS HOME -->
+<!-- META DATOS ACTUALIDAD -->
+
+<!-- META DATOS DEPORTES -->
+<!-- META DATOS Manizales -->
+<!-- META DATOS Caldas -->
+
+<!-- META DATOS Sucesos -->
+
+<!-- META DATOS Opnión -->
+
+<!-- META DATOS Entretenimiento -->
+
+<!-- META DATOS Nacional -->
+<!-- META DATOS Internacional -->
+
+<!-- META DATOS Política -->
+<!-- META DATOS Economía -->
+
+<!-- META DATOS Tecnología -->
+
+<!-- META DATOS Salud -->
+
+<!-- META DATOS Educación -->
+
+<!-- META DATOS Ciencia -->
+
+<!-- META DATOS Medio Ambiente -->
+
+<!-- META DATOS Denuncie -->
+<!-- FIN META TAGS -->
+<!-- LLamado de archivo complementario para Verificar si adblock esta instalado y activo 13-12-2017 Yonatan Montoya. -->
+	<!--script type="text/javascript" src="blockadblock.js"></script>
+    <script type="text/javascript">
+     /**
+     * Deficnicion de las funciones de adblock
+     **/
+     function adblockDetected() {
+		document.getElementById('over').style.display='block';
+		document.getElementById('fade').style.display='block';
+		document.getElementsByTagName('html')[0].style.overflow=o;
+		document.getElementsByTagName('body')[0].style.overflow=o;
+	}
+	function adblockDisabled() {
+		document.getElementById('over').style.display='none';
+		document.getElementById('fade').style.display='none';
+	}
+    /**
+     * Verifica si adblock esta instalado y activo 13-12-2017 Yonatan Montoya.
+     **/
+    if(typeof blockAdBlock === "undefined"){
+        adblockDetected();
+    }else{
+        blockAdBlock.onDetected(adblockDetected);
+        blockAdBlock.onNotDetected(adblockDisabled);
+    }
+</script-->
+<!-- Fin script contabilizar adblockers -->
+<!-- Excluir iframe papel salmon de analitics -->
+			<!--
+			Anterior Analytics
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-3532849-1']);
+				_gaq.push(['_trackPageview']);
+				(function()
+				{
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+-->
+<!-- Google Analytics -->
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-3532849-1', 'auto');
+				
+				/*ga('send', 'pageview');*/
+			</script>
+			
+			
+		
+<!-- Fin Google Analytics -->
+<!-- Fin Excluir iframe papel salmon de analitics -->
+  <!--[if IE]><![endif]-->
+<meta charset="utf-8" />
+<meta name="description" content="Caldas se mantiene con 53 contagios." />
+<meta name="keywords" content="Ministerio de Salud, Instituto Nacional de Salud, Colombia, Caldas, COVID-19, Salud, 253 personas han fallecido en Colombia por covid-19 ," />
+<meta name="rating" content="general" />
+<link rel="image_src" href="https://archivo.lapatria.com/sites/default/files/imagenprincipal/2020/Abril/253_personas_han_fallecido_en_colombia_por_covid-19.jpg" />
+<meta name="rights" content="La Patria" />
+<link rel="canonical" href="https://archivo.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838" />
+<link rel="shortlink" href="https://archivo.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838" />
+<link rel="publisher" href="https://archivo.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838" />
+<meta property="fb:app_id" content="2067580180195514" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://archivo.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838" />
+<meta property="og:determiner" content="auto" />
+<meta property="og:title" content="253 personas han fallecido en Colombia por covid-19" />
+<meta property="og:description" content="Caldas se mantiene con 53 contagios." />
+<meta property="og:image" content="https://archivo.lapatria.com/sites/default/files/imagenprincipal/2020/Abril/253_personas_han_fallecido_en_colombia_por_covid-19.jpg" />
+<meta property="og:image:secure_url" content="https://archivo.lapatria.com/sites/default/files/imagenprincipal/2020/Abril/253_personas_han_fallecido_en_colombia_por_covid-19.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:locality" content="Manizales" />
+<meta property="og:region" content="Caldas" />
+<meta property="og:country_name" content="Colombia" />
+<meta property="article:section" content="Salud" />
+<meta property="article:tag" content="Ministerio de Salud" />
+<meta property="article:tag" content="Instituto Nacional de Salud" />
+<meta property="article:tag" content="Colombia" />
+<meta property="article:tag" content="Caldas" />
+<meta property="article:tag" content="COVID-19" />
+<meta property="article:published_time" content="2020-04-27 00:00:00" />
+<meta property="article:modified_time" content="Ministerio de Salud, Instituto Nacional de Salud, Colombia, Caldas, COVID-19" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <title>253 personas han fallecido en Colombia por covid-19</title>
+  <link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__BJ6Ou6QsBRtnFTmxaakamOIS8n4QswDP2XnnZ1sxtaM__NBuvkP6eInGIkb1aJvUHx5PX79XApuxBDkk_77W5tYk__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__yqvxp9MAPouTIJ9pg77zRVNN5Qer1SZbYC-LwG0-tc4__NE4vxdrRVaPOKLhlfjPdsFR3NbPGTbH3j_Wp1PYqeMw__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__PJEpMM1LsFuBtmIXgZnRJTbOpdPdrFjI2UGY2zL6sbs__7aGOl65ILdNgsL6Jdjo5b4mX5FmtXa9onFDRwePtGXg__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__YqTkVaw5suk622t2FyDY0dKt_feBkFxOD5gVbaXM0oM__yUmpoe3DRXIsZZ61BjCSAR1ITe-5CTz5UejrndZRFfg__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__CGbf32TpLCqweKDK6MY_OayBNCoGAh0_0FcU4LJoPcA__izbF1X_JhxrbYFH9KUmh37WvEGaUEwVLuskrc2JdRdE__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all and (max-width:780px)" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__2j5eZDrEwus1_yY0n0BStqLNJwFnR--H-94QXFurqRw__XkBxrD-4zguDo6jGM12om-0z3s8PIRMMFSR8EeKf2kE__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all and (max-width:550px)" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__YJWFlPVuHKW7rtf7tAXKHVIGkJcJ75Q8UwhBC8beCwQ__eyYt1VMN9z-2Lkehcrshe8u2oRQz6SjwMViUDraDCos__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all and (max-width:620px)" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__Mj-bIy5ZdhbjdVA7pHj7Qe9m1oxe9CofTDqdsAN1VkQ__Z-ojmBP8i14D2LVXuezhF9XtwiF-pQ8pjn0zf3lN1rw__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.css" media="all" />
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var fonts=document.cookie.split("advaggf");for(var key in fonts){var font=fonts[key].split("="),pos=font[0].indexOf("ont_");-1!==pos&&(window.document.documentElement.className+=" "+font[0].substr(4).replace(/[^a-zA-Z0-9\-]/g,""))}
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/all/libraries/respondjs/respond.min.js?rqx09i"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__ihdwYz7z62m5viS1EMhNOpB9bfVJ_3N7-eC3gKeS-sI__88qaN3RQRoWJWSSy4pYZ0ThWl6Qld-KykYSR11si74k__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__UW4URQsON5h-xjwepC-HoW32RCC10thhh4f0DQ1P8z4__iy3MF_BJ4z37BEHDRzBgtdJlLYv17mxSwzrRA_UvpQA__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__H6kmeDS-jfUngV0U40Qq2qeIYPi8HlMCJtj5CDM_wew__ommBOd1yZfE1nfAQe1YKY6AigY5mFXfLuu9bq3x-F34__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+;window.a2a_config=window.a2a_config||{};window.da2a={done:!1,html_done:!1,script_ready:!1,script_load:function(){var a=document.createElement('script'),t=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=!0;a.src='https://static.addtoany.com/menu/page.js';t.parentNode.insertBefore(a,t);da2a.script_load=function(){}},script_onready:function(){da2a.script_ready=!0;if(da2a.html_done)da2a.init()},init:function(){for(var a=0,t,i,e=da2a.targets,n=e.length;a<n;a++){t=document.getElementById('da2a_'+(a+1));i=e[a];a2a_config.linkname=i.title;a2a_config.linkurl=i.url;if(t){a2a.init('page',{target:t});t.id=''};da2a.done=!0};da2a.targets=[]}};(function(a){Drupal.behaviors.addToAny={attach:function(a,t){if(a!==document&&window.da2a){if(da2a.script_ready)a2a.init_all();da2a.script_load()}}}})(jQuery);a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:da2a.script_onready});a2a_config.overlays=a2a_config.overlays||[];a2a_config.templates=a2a_config.templates||{};a2a_config.templates.twitter={text:'${title} ${link} vía  @lapatriacom'};a2a_config.templates.facebook={text:'${title} ${link} vía  @lapatriacom'};
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__HxTbhN-HTG8H6pU8ZNTXLhmTeg8fhzG_sbeVLz0gBqU__XVOZrC-l1s__UWsCYhSQQTfxp8UqxArG0ecVQR3p0aY__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.js" defer="defer" async="async"></script>
+<script type="text/javascript" defer="defer" async="async" src="https://cdn.rawgit.com/bramstein/fontfaceobserver/v2.3.0/fontfaceobserver.js"></script>
+<script type="text/javascript" src="/sites/default/files/advagg_js/js__X2Ib9Ckx4MweGmtpy_A_3DZa37X1znUd5dQu6T3pE9k__dY0wYJN1YFKnLhDbllV3lS5MjVriKcD3cNV_ktu_XFc__CNF8ud_SxcuMbjQzirI0_Q5J5gImO34YVg1vjKgW0Qk.js"></script>
+<script type="text/javascript" src="//use.edgefonts.net/bebas-neue:n4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+;jQuery.extend(Drupal.settings,{'basePath':'\/','pathPrefix':'','ajaxPageState':{'theme':'framework','theme_token':'rNNLWV2mOvL0uSjgCQBGHpRXGawlmUFZ7qqukwl8Vzw','jquery_version':'1.10','css':{'modules\/system\/system.base.css':1,'modules\/system\/system.menus.css':1,'modules\/system\/system.messages.css':1,'modules\/system\/system.theme.css':1,'modules\/aggregator\/aggregator.css':1,'sites\/all\/modules\/date\/date_api\/date.css':1,'sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css':1,'modules\/field\/theme\/field.css':1,'modules\/node\/node.css':1,'modules\/search\/search.css':1,'modules\/user\/user.css':1,'sites\/all\/modules\/views\/css\/views.css':1,'sites\/all\/modules\/ckeditor\/css\/ckeditor.css':1,'sites\/all\/modules\/ctools\/css\/ctools.css':1,'sites\/default\/modules\/contrib\/panels\/css\/panels.css':1,'sites\/default\/modules\/contrib\/stickynav\/css\/stickynav.css':1,'sites\/default\/modules\/contrib\/nice_menus\/css\/nice_menus.css':1,'sites\/default\/modules\/contrib\/nice_menus\/css\/nice_menus_default.css':1,'sites\/all\/libraries\/sidr\/stylesheets\/jquery.sidr.dark.css':1,'modules\/addtoany\/addtoany.css':1,'sites\/all\/modules\/quicktabs\/css\/quicktabs.css':1,'sites\/all\/themes\/lp\/style.css':1,'sites\/all\/themes\/lp\/css\/global.css':1,'sites\/all\/themes\/lp\/css\/layout.css':1,'sites\/all\/themes\/lp\/css\/header.css':1,'sites\/all\/themes\/lp\/css\/menu.css':1,'sites\/all\/themes\/lp\/css\/front.css':1,'sites\/all\/themes\/lp\/css\/blocks.css':1,'sites\/all\/themes\/lp\/css\/footer.css':1,'sites\/all\/themes\/lp\/css\/sections.css':1,'sites\/all\/themes\/lp\/css\/section_opinion.css':1,'sites\/all\/themes\/lp\/css\/section_especiales.css':1,'sites\/all\/themes\/lp\/css\/section_multimedia.css':1,'sites\/all\/themes\/lp\/css\/node.css':1,'sites\/all\/themes\/lp\/css\/micrositioTeatro.css':1,'sites\/all\/themes\/lp\/css\/micrositioVolcan.css':1,'sites\/all\/themes\/lp\/css\/micrositioPapelSalmon.css':1,'sites\/all\/themes\/lp\/css\/micrositioFeriaManizales.css':1,'sites\/all\/themes\/lp\/css\/micrositioCreerCaldas.css':1,'sites\/all\/themes\/lp\/css\/print.css':1,'sites\/all\/themes\/lp\/css\/layout_max_768.css':1,'sites\/all\/themes\/lp\/css\/layout_max_600.css':1,'sites\/all\/themes\/lp\/css\/layout_max_360.css':1,'sites\/default\/files\/fontyourface\/font.css':1},'js':{'sites\/all\/libraries\/respondjs\/respond.min.js':1,'sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js':1,'misc\/jquery-extend-3.4.0.js':1,'misc\/jquery-html-prefilter-3.5.0-backport.js':1,'misc\/jquery.once.js':1,'misc\/drupal.js':1,'sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js':1,'sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js':1,'misc\/ajax.js':1,'sites\/all\/modules\/jquery_update\/js\/jquery_update.js':1,'misc\/progress.js':1,'public:\/\/languages\/es_2O0TY-4HV74FDpj9ivrYKUGrSi9IO6I5ly-iPs8GJDw.js':1,'sites\/default\/modules\/contrib\/jcaption\/jcaption.js':1,'sites\/default\/modules\/contrib\/stickynav\/js\/stickynav.js':1,'sites\/all\/modules\/views\/js\/base.js':1,'sites\/all\/modules\/views\/js\/ajax_view.js':1,'sites\/all\/modules\/responsive_menus\/styles\/sidr\/js\/responsive_menus_sidr.js':1,'sites\/all\/libraries\/sidr\/jquery.sidr.min.js':1,'sites\/all\/modules\/advagg\/advagg_font\/advagg_font.js':1,'https:\/\/cdn.rawgit.com\/bramstein\/fontfaceobserver\/v2.3.0\/fontfaceobserver.js':1,'sites\/all\/modules\/quicktabs\/js\/quicktabs.js':1,'\/\/use.edgefonts.net\/bebas-neue:n4.js':1}},'jcaption':{'jcaption_selectors':['#view_nodegallery_01 .views-field-field-gallery-image .field-content img'],'jcaption_alt_title':'title','jcaption_requireText':1,'jcaption_copyStyle':1,'jcaption_removeStyle':1,'jcaption_removeClass':1,'jcaption_removeAlign':1,'jcaption_copyAlignmentToClass':0,'jcaption_copyFloatToClass':1,'jcaption_copyClassToClass':1,'jcaption_autoWidth':1,'jcaption_keepLink':0,'jcaption_styleMarkup':'','jcaption_animate':0,'jcaption_showDuration':'200','jcaption_hideDuration':'200'},'stickynav':{'selector':'#navigation'},'views':{'ajax_path':'\/views\/ajax','ajaxViews':{'views_dom_id:bc8d514fc4af9317f316854fe09eebc2':{'view_name':'4_secciones','view_display_id':'block_5','view_args':'456838','view_path':'node\/456838','view_base_path':'breves\/fallecimientos','view_dom_id':'bc8d514fc4af9317f316854fe09eebc2','pager_element':0}}},'owlcarousel':{'owl-carousel-block_1153':{'settings':{'items':9,'itemsDesktop':['1199',89],'itemsDesktopSmall':['979',9],'itemsTablet':['768',5],'itemsTabletSmall':['0',0],'itemsMobile':['479',4],'singleItem':!1,'itemsScaleUp':!1,'slideSpeed':200,'paginationSpeed':800,'rewindSpeed':1000,'autoPlay':'5000','stopOnHover':!1,'navigation':!1,'navigationText':['prev','next'],'rewindNav':!0,'scrollPerPage':!1,'pagination':!0,'paginationNumbers':!1,'responsive':!0,'responsiveRefreshRate':200,'baseClass':'owl-carousel','theme':'owl-theme','lazyLoad':!1,'lazyFollow':!0,'lazyEffect':'fadeIn','autoHeight':!1,'jsonPath':!1,'jsonSuccess':!1,'dragBeforeAnimFinish':!0,'mouseDrag':!0,'touchDrag':!0,'addClassActive':!1,'transitionStyle':!1},'views':{'ajax_pagination':0}}},'responsive_menus':[{'selectors':['.nice-menu-down'],'trigger_txt':'Men\u00fa','side':'left','speed':'200','media_size':'800','displace':'1','onOpen':'','onClose':'','responsive_menus_style':'sidr'}],'advagg_font_cookie':1,'advagg_font_no_fout':1,'quicktabs':{'qt_qt_3_lomas':{'name':'qt_3_lomas','tabs':[{'vid':'8_lomas','display':'block_9','args':'','view_path':'node%2F456838','view_dom_id':6,'ajax_args':'','actual_args':[]},{'vid':'8_lomas','display':'block_1','args':'','view_path':'node%2F456838','view_dom_id':7,'ajax_args':'','actual_args':[]}],'views':{'ajax_path':'\/views\/ajax','ajaxViews':{'views_dom_id:bc8d514fc4af9317f316854fe09eebc2':{'view_name':'4_secciones','view_display_id':'block_5','view_args':'456838','view_path':'node\/456838','view_base_path':'breves\/fallecimientos','view_dom_id':'bc8d514fc4af9317f316854fe09eebc2','pager_element':0}}}}},'advagg_font':{'lucida-grande':'lucida grande'}});
+//--><!]]>
+</script>
+ 
+
+<!-- TailTarget Tag Manager TT-11700-5/CT-672 
+<script>
+	(function(i) {
+		var ts = document.createElement('script');
+		ts.type = 'text/javascript';
+		ts.async = true;
+		ts.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tags.t.tailtarget.com/t3m.js?i=' + i;
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ts, s);
+	})('TT-11700-5/CT-672');
+</script>-->
+<!-- End TailTarget Tag Manager -->
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+  <!-- Script de taboola home -->
+
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/lapatria/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+
+<!-- fin de Script de taboola home-->
+
+<!--taboola articulos-->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/lapatria/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+
+<!--fin taboola articulos>-->
+
+<!--Codigo para 152 media directo
+<script > var dayMs = 864e5, cb = parseInt(Date.now() / dayMs), vpbSrc = '//player.ads.152media.com/prebid/wrapper_hb_299538_4467.js?cb=' + cb, gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; c.appendChild(s); s.onload = cb; s.onerror = cb; return s; } loadScript(vpbSrc, function() { loadScript(gptSrc); }) </script>-->
+
+		<!-- <link rel="amphtml" href="http://www.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838?amp=1">-->
+<!--smart-->
+              <script src='https://smartjscdn.sindyk.com/bip.robotina.co/js/smart/prod/smart_v12.min.js'></script>
+        
+	<script>
+        window._smartstup = window._smartstup || []; //setup Smart
+        _smartstup.push({
+            newsid: "a6c98918-5a53-11e9-8379-126ed9680072",
+            fpd: "dimension8",
+            gacid: "dimension7",
+            gnewidd: "dimension9",
+            trackingId: "UA-3532849-1"
+        });
+        UTILSSMART.setcurrentnews();
+    </script>
+<!--fin smart-->	
+	
+
+<!--seedtag-->
+
+<script async src="https://t.seedtag.com/t/5705-3315-01.js"></script>
+	
+<!--fin seedtag-->
+
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-456838 node-type-article" >
+   <!-- /.region -->
+   
+<div class="region region-javascript-top">
+  <section id="block-block-1224" class="block block-block">
+
+      
+  <div class="content">
+    <!-- Start GPT Tag --> <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script> <script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_TOPBANNER', [[970,250],[970,90],[728,90]], 'div-gpt-ad-2698729-1')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_LATERAL_DERECHO', [[160,600]], 'div-gpt-ad-2698729-2')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_LATERAL_IZQUIERDO', [[160,600]], 'div-gpt-ad-2698729-3')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ROBAPAGINA_DERECHO', [[300,250]], 'div-gpt-ad-2698729-4')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_BOTON', [[300,100]], 'div-gpt-ad-2698729-5')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_BANNERMEDIO', [[970,90],[728,90]], 'div-gpt-ad-2698729-6')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_TOPBANNER', [[970,250],[970,90],[728,90]], 'div-gpt-ad-2698729-7')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_LATERAL_DERECHO', [[160,600]], 'div-gpt-ad-2698729-8')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_LATERAL_IZQUIERDO', [[160,600]], 'div-gpt-ad-2698729-9')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_ROBAPAGINA_DERECHO', [[300,250]], 'div-gpt-ad-2698729-10')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_BOTON', [[300,100]], 'div-gpt-ad-2698729-11')
+             .addService(googletag.pubads());
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_BANNERMEDIO', [[970,90],[728,90]], 'div-gpt-ad-2698729-12')
+             .addService(googletag.pubads());
+     googletag.defineSlot('/21967466426/sticky-internas', [1, 1], 'div-gpt-ad-1627500820011-0').addService(googletag.pubads());
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+
+    googletag.pubads().set('page_url', 'https://www.lapatria.com/');
+    googletag.pubads().set('adsense_ad_types', 'image');
+    googletag.pubads().set('adsense_background_color', '#ffffff');
+    googletag.pubads().set('adsense_border_color', '#ffffff');
+    googletag.pubads().set('adsense_link_color', '#0000ff');
+    googletag.pubads().set('adsense_text_color', '#000000');
+    googletag.pubads().set('adsense_url_color', '#008000');
+googletag.pubads().enableLazyLoad({ 
+fetchMarginPercent: 500, 
+renderMarginPercent: 200,
+ mobileScaling: 2.0 });
+    googletag.enableServices();
+  });
+</script> <!-- End GPT Tag -->
+  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-1333" class="block block-block">
+
+      
+  <div class="content">
+    <script async="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script>
+<!--//--><![CDATA[// ><!--
+
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/21967466426/LAPATRIA_DESKTOP_NOTICIAS_INREAD', [[400, 300], [640, 480], [1, 1], [300, 250]], 'div-gpt-ad-1604416805493-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+
+//--><!]]>
+</script>  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-1231" class="block block-block">
+
+      
+  <div class="content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+#highlighted .block {
+    margin-bottom: 1px !important
+}
+#div-gpt-ad-2698729-7{
+  Margin: auto;
+Display: table;
+ 
+}
+
+/*--><!]]>*/
+</style><!-- GPT AdSlot 7 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_TOPBANNER' ### Size: [[970,250],[970,90],[728,90]] --><div id="div-gpt-ad-2698729-7">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-7'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 7 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-441" class="block block-block">
+
+      
+  <div class="content">
+    <style></style>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+ 
+
+<div id="header_top" class="container"><div class="region region-header-top">
+  <section id="block-block-1233" class="block block-block">
+
+      
+  <div class="content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+#highlighted .block {
+    margin-bottom: 10px !important;
+}
+#div-gpt-ad-2698729-9{
+    max-width: 160px;
+    max-height: 600px;
+    top: 10%;
+    left: 50%;
+    margin-left: -670px;
+    position: fixed;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1000px) {
+    #div-gpt-ad-2698729-9{
+        display:none;      
+    }
+}
+
+/*--><!]]>*/
+</style><!-- GPT AdSlot 9 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_LATERAL_IZQUIERDO' ### Size: [[160,600]] --><div id="div-gpt-ad-2698729-9">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-9'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 9 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-1232" class="block block-block">
+
+      
+  <div class="content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+#highlighted .block {
+    margin-bottom: 10px !important;
+}
+#div-gpt-ad-2698729-8{
+    max-width: 160px;
+    max-height: 600px;
+    top: 10%;
+    left: 50%;
+    margin-left: 510px;
+    position: fixed;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1000px) {
+    #div-gpt-ad-2698729-8{
+        display:none;      
+    }
+}
+
+/*--><!]]>*/
+</style><!-- GPT AdSlot 8 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_LATERAL_DERECHO' ### Size: [[160,600]] --><div id="div-gpt-ad-2698729-8">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-8'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 8 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-1339" class="block block-block">
+
+      
+  <div class="content">
+    <!-- /21967466426/sticky-internas --><div id="div-gpt-ad-1627500820011-0">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1627500820011-0'); });
+  
+//--><!]]>
+</script></div>
+  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+<div style="display:block;clear:both"></div> </div> 
+ 
+<div id="head" class="container clearfix">
+	<div class="header_menutop">
+	<div class="menutop_left">
+		<a class="mn_clas" target="_blank" href="https://clasificados.lapatria.com/clasificados/index.php">Clasificados</a>
+        <a class="mn_clas" target="_blank" href="/edictos">Edictos</a>
+		<!-- <a class="mn_susc" target="_blank" href="http://club.lapatria.com">Club Suscriptores</a> -->
+		<a class="mn_arch" target="_blank" href="/archivo">Archivo</a>
+	</div>
+	<div class="menutop_right">
+		<ul class="dropDownMenu">
+		  <li><a class="mn_susd" style="color:#ffffff !important;" href="/suscripciones">Suscríbete La Patria Digital</a></li>
+          <li><a class="mn_serv" href="/pagina/servicios">Nuestros servicios</a></li>
+		  <li><a class="mn_pagos" target="_blank"  href="/pagos">Pago en l&iacute;nea</a></li>
+		  <li>   </li>
+		  <li> <div id="smarticon"></div></li>   
+	  </ul>
+		
+	</div>
+	
+     <div style="clear:both;display:block;"></div>
+  </div>
+	<div style="clear:both;display:block;"></div>
+	<!-- SOCIAL MEDIA BOX -->
+	<span class="socialmedia" itemscope itemtype="https://schema.org/Organization">
+  		<link class="sm_home" itemprop="url" href="https://www.lapatria.com">
+  		<a class="sm_fb" itemprop="sameAs" href="https://www.facebook.com/lapatria.manizales" target="_blank">FB</a>
+  		<a class="sm_tw" itemprop="sameAs" href="https://twitter.com/lapatriacom" target="_blank">Twitter</a>
+  		<a class="sm_sc" itemprop="sameAs" href="https://soundcloud.com/lapatriaradio" target="_blank">Souncloud</a>
+  		<a class="sm_yt" itemprop="sameAs" href="https://www.youtube.com/channel/UCb8_QDQqWvf2lJL9_1vw99w" target="_blank">YouTube</a>
+  		<a class="sm_in" itemprop="sameAs" href="https://www.instagram.com/lapatriacom" target="_blank">Instagram</a>
+  		<a class="sm_ws" itemprop="sameAs" href="/whatsapp" target="_blank">Whatsapp</a>
+      <a class="sm_rs" itemprop="sameAs" href="/pagina/la-patria-rss" target="_blank">RSS</a>
+	</span>
+	<!-- END - SOCIAL MEDIA BOX -->
+	<!-- GOOGLE SEARCH BOX -->
+	<div class="googlecse">
+	  <script>
+  		(function() {
+    	var cx = '005517516939788514602:z6demihmpoi';
+    	var gcse = document.createElement('script');
+    	gcse.type = 'text/javascript';
+    	gcse.async = true;
+    	gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        	'//cse.google.com/cse.js?cx=' + cx;
+    	var s = document.getElementsByTagName('script')[0];
+    	s.parentNode.insertBefore(gcse, s);
+  		})();
+	  </script>
+	  <gcse:search></gcse:search>
+	</div>
+	<!-- END - GOOGLE SEARCH BOX -->
+	<!-- LOGO -->
+	<div class="logo">
+      <a href="/" title="Inicio" id="logo">
+       <!-- <img src="/sites/default/files/logo_lp_1_1.jpg?colombia=5" alt="logo"/>-->
+	  <!-- <img src="/otras-imagenes/logorosa.jpg?colombia=4" />--> 
+	   <img src="https://www.lapatria.com/otras-imagenes/logo/logo100.jpg?colombia=8" alt="logo" />
+      </a>
+	
+      Noticias de Manizales y Caldas,
+      Mayo 17 2025	<!-- END - LOGO -->
+  </div>
+    
+	
+</div>
+<nav id="navigation" role="navigation" class="container clearfix">
+    <div class="region region-header-menu">
+  <section id="block-nice-menus-1" class="block block-nice-menus menuprincipal">
+
+      
+  <div class="content">
+    <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-1"><li class="menu-249 menu-path-front first odd "><a href="/">Inicio</a></li>
+<li class="menu-11264 menuparent  menu-path-taxonomy-term-81  even "><a href="/nacional" title="">Noticias</a><ul><li class="menu-11265 menu-path-taxonomy-term-81 first odd "><a href="/nacional" title="">Nacional </a></li>
+<li class="menu-11266 menu-path-taxonomy-term-82  even "><a href="/internacional" title="">Internacional</a></li>
+<li class="menu-11267 menu-path-taxonomy-term-5344  odd "><a href="/politica" title="">Política</a></li>
+<li class="menu-11268 menu-path-taxonomy-term-80  even "><a href="/economia" title="">Economía</a></li>
+<li class="menu-11269 menu-path-taxonomy-term-141974  odd "><a href="/tecnologia" title="">Tecnología</a></li>
+<li class="menu-11270 menu-path-taxonomy-term-141975  even "><a href="/salud" title="">Salud</a></li>
+<li class="menu-11549 menu-path-taxonomy-term-141965  odd "><a href="/educacion" title="">Educación </a></li>
+<li class="menu-11271 menu-path-taxonomy-term-141976  even "><a href="/ciencias" title="">Ciencia</a></li>
+<li class="menu-11272 menu-path-taxonomy-term-141977  odd "><a href="/medioambiente" title="">Medioambiente</a></li>
+<li class="menu-12756 menu-path-taxonomy-term-142008  even "><a href="/denuncie" title="">Denuncie </a></li>
+<li class="menu-12762 menu-path-taxonomy-term-142308  odd last"><a href="/tenga-en-cuenta" title="">Tenga en Cuenta</a></li>
+</ul></li>
+<li class="menu-399 menu-path-taxonomy-term-3  odd "><a href="/manizales" title="">Manizales</a></li>
+<li class="menu-400 menu-path-taxonomy-term-4  even "><a href="/caldas" title="">Caldas</a></li>
+<li class="menu-398 menu-path-taxonomy-term-2  odd "><a href="/sucesos" title="">Sucesos</a></li>
+<li class="menu-397 menu-path-taxonomy-term-5  even "><a href="/deportes" title="">Deportes</a></li>
+<li class="menu-1060 menu-path-taxonomy-term-2899  odd "><a href="/opinion" title="">Opinión</a></li>
+<li class="menu-949 menu-path-social  even "><a href="/social" title="">Social</a></li>
+<li class="menu-404 menuparent  menu-path-node-210831  odd "><a href="/especiales" title="">Especiales</a><ul><li class="menu-11273 menu-path-slapatriacom-publirreportajes first odd "><a href="https://www.lapatria.com/publirreportajes" title="">Publirreportajes</a></li>
+<li class="menu-11489 menu-path-100lapatriacom-  even "><a href="http://100.lapatria.com/" title="">Especial 100 años</a></li>
+<li class="menu-14378 menu-path-emprendiendo  odd "><a href="/emprendiendo" title="">Emprendiendo</a></li>
+<li class="menu-14171 menu-path-taxonomy-term-177921  even "><a href="/cereza" title="">Cereza</a></li>
+<li class="menu-14262 menu-path-taxonomy-term-180680  odd "><a href="/tags/especialmascotas" title="">Mascotas</a></li>
+<li class="menu-13544 menu-path-slapatriacom-especiales-feria-manizales  even "><a href="https://www.lapatria.com/especiales/feria-manizales" title="">Feria de Manizales</a></li>
+<li class="menu-13547 menu-path-slapatriacom-especiales-festival-teatro  odd "><a href="https://www.lapatria.com/especiales/festival-teatro" title="">Festival de Teatro</a></li>
+<li class="menu-13694 menu-path-slapatriacom-especiales-papel-salmon  even "><a href="https://www.lapatria.com/especiales/papel-salmon" title="">Papel Salmón</a></li>
+<li class="menu-14432 menu-path-taxonomy-term-187599  odd last"><a href="/tags/panorama-cafetero" title="">Panorama Cafetero</a></li>
+</ul></li>
+<li class="menu-11262 menu-path-taxonomy-term-141906  even "><a href="/entretenimiento" title="">Entretenimiento</a></li>
+<li class="menu-4646 menu-path-slapatriacom-radio  odd "><a href="https://www.lapatria.com/radio" title="">Radio</a></li>
+<li class="menu-13477 menu-path-slapatriacom-tags-lptvesencial  even last"><a href="https://www.lapatria.com/tags/lptvesencial" title="">LPTV</a></li>
+</ul>
+  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</nav>
+
+
+
+
+
+<div id="highlighted" class="container2" style="display:block;clear:both"><div class="region region-highlighted">
+  <section id="block-term-queue-0" class="block block-term-queue temasdestacados">
+
+        <h2 class="block-title">TEMAS DESTACADOS</h2>
+    
+  <div class="content">
+    <ul class="term-queue-links"><li class="0 first"><a href="/tags/las-marionetas">Las Marionetas</a></li>
+<li class="1"><a href="/tags/once-caldas">Once Caldas</a></li>
+<li class="2"><a href="/tags/linea-3-del-cable-aereo">Línea 3 del Cable Aéreo</a></li>
+<li class="3"><a href="/tags/aerocafe">Aerocafé</a></li>
+<li class="4 last"><a href="/tags/lluvias-en-caldas">Lluvias en Caldas</a></li>
+</ul>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+<div id="container" class="clearfix"> 
+	
+        <div class="content_top griddiv"><div class="region region-content-top">
+  <section id="block-views-4-secciones-block-5" class="block block-views">
+
+      
+  <div class="content">
+    <div class="view view-4-secciones view-id-4_secciones view-display-id-block_5 seccion-6-nombreyfecha view-dom-id-bc8d514fc4af9317f316854fe09eebc2">
+        
+  
+      <div class="attachment attachment-before">
+          </div>
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <span class="views-field views-field-term-node-tid">        <span class="field-content">Salud</span>  </span>  
+  <span class="views-field views-field-field-fechapublicacion">        <span class="field-content"><span class="date-display-single">Lunes, Abril 27, 2020</span></span>  </span>  </div>
+    </div>
+  
+  
+      <div class="attachment attachment-after">
+          </div>
+  
+  
+  
+  
+</div>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+ 	 	 	
+  <section id="main" role="main" class="clearfix">
+        <a id="main-content"></a>
+	 
+    
+        <h1 class="title" id="page-title">253 personas han fallecido en Colombia por covid-19 </h1>            <div class="region region-help">
+  <section id="block-system-help" class="block block-system">
+
+      
+  <div class="content">
+      </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+      </section> <!-- /#main -->
+  
+  
+<!-- layout secciones y noticias --> 
+<div id="pagemain" style="display:block;clear:both">
+	
+            
+    <div style="display:block;clear:both"></div> 
+
+     	 	<div class="content_twocolumn">  
+		 	<div class="content_main griddiv">
+
+
+
+ 
+    	
+	
+<div id="smart1234" > 	  
+  <div class="content">
+		
+    <div class="field field-name-field-imagenprincipal field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="https://archivo.lapatria.com/sites/default/files/styles/620x/public/imagenprincipal/2020/Abril/253_personas_han_fallecido_en_colombia_por_covid-19.jpg" width="620" height="394" alt="253 personas han fallecido en Colombia por covid-19 " title="253 personas han fallecido en Colombia por covid-19 " /></div></div></div><div class="field field-name-field-piedefotoimagenppal field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">Foto | EFE | LA PATRIA </div></div></div><div class="field field-name-field-fechapublicacion field-type-datetime field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">Lunes, Abril 27, 2020</span></div></div></div><div class="field field-name-field-resumen field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">Caldas se mantiene con 53 contagios. </div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>LA PATRIA | Manizales </p>
+<p>El Ministerio de Salud y el Instituto Nacional de Salud informaron hoy el contagio de 218 personas y el fallecimiento de nueve.</p>
+<p>Con estos datos las personas contagiadas llegan a 5597, mientras que los fallecidos son 253. Los recuperados ascienden a 1210.</p>
+<p>Los nuevos contagios se dieron en Bogotá (107), Atlántico (32), Meta (16), Tolima (12), Barranquilla (10), Antioquia (9), Valle (6), Huila (5), Cauca (4), Quindío (3), Santa Marta (3), Cartagena (3), Nariño (3), Cundinamarca (3), Norte de Santander (1) y Bolívar (1).</p>
+<p> </p>
+<p>Fallecidos</p>
+<p>-Hombre de 60 años en Neiva. Comorbilidades: sospecha dengue</p>
+<p>-Hombre de 32 años en Soacha. Comorbilidades: obesidad</p>
+<p>-Mujer de 75 años en Santa Marta. Comorbilidades: HTA y diabetes</p>
+<p>-Hombre de 63 años en Tumaco. Comorbilidades: HTA y diabetes</p>
+<p>-Mujer de 86 años en Bogotá. Comorbilidades: demencia senil</p>
+<p>-Hombre de 74 años en Quimbaya (Quindío). Comorbilidades: ACV y Epoc</p>
+<p>-Hombre de 70 años en Bogotá. Comorbilidades: Epoc y enfermedad renal crónica</p>
+<p>-Hombre de 74 años en Medellín. Comorbilidades: HTA e insuficiencia cardíaca congestiva</p>
+<p>-Mujer de 78 años en Cúcuta. Comorbilidades: Epoc y HTA</p>
+<p> </p>
+<p><strong>En Caldas</strong></p>
+<p>Aunque el informe del Ministerio de Salud dice que en Caldas son 54 los contagios, ayer la Dirección Territorial de Salud explicó que son 53: “Este caso corresponde a una persona que no se recuperó del virus y al tomar la muestra nuevamente salió positiva, pero aclaramos que no se cuenta como uno nuevo”.</p>
+<p>La Dorada: 31</p>
+<p>Manizales: 12</p>
+<p>Chinchiná: 4</p>
+<p>Villamaría: 3</p>
+<p>Viterbo: 2</p>
+<p>Anserma: 1</p>
+</div></div></div><span class="a2a_kit a2a_kit_size_32 a2a_target addtoany_list" id="da2a_1">
+      <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="margin-left:-100px; top:150px;">
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_whatsapp"></a>
+</div>
+      <a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=https%3A%2F%2Farchivo.lapatria.com%2Fsalud%2F253-personas-han-fallecido-en-colombia-por-covid-19-456838&amp;title=253%20personas%20han%20fallecido%20en%20Colombia%20por%20covid-19%20"></a>
+      
+    </span>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(window.da2a)da2a.script_load();
+//--><!]]>
+</script>  </div>
+
+      <footer>
+      <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Etiquetas:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/tags/ministerio-de-salud">Ministerio de Salud</a></div><div class="field-item odd"><a href="/tags/instituto-nacional-de-salud">Instituto Nacional de Salud</a></div><div class="field-item even"><a href="/tags/colombia-0">Colombia</a></div><div class="field-item odd"><a href="/tags/caldas">Caldas</a></div><div class="field-item even"><a href="/tags/covid-19">COVID-19</a></div></div></div>          </footer>
+  
+  </div>
+
+
+
+<!-- reglas CSS -->
+<style>
+</style>
+<!-- FIN reglas CSS -->
+<script>
+window.robotina = window.robotina || []; //setup Smart en node-.
+        SMART.initRobotsmt().then(result => {
+            var getnewsessionidc = UTILSSMART.getNEwsessionID();
+            robotina.push({
+                pu: "http://www.lapatria.com/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838",
+                pt: "253 personas han fallecido en Colombia por covid-19 ",
+                pc:  "Salud",
+                pimg: "https://www.lapatria.com/sites/default/files/styles/620x/public/imagenprincipal/2020/Abril/253_personas_han_fallecido_en_colombia_por_covid-19.jpg",
+                pd: "Caldas se mantiene con 53 contagios.", 
+                pa: "Cristian Camilo Aguirre", 
+                pk: "253 personas han fallecido en Colombia por covid-19 ",
+                pdate: "2020-04-27", 
+                gnewid: getnewsessionidc,
+                isar: true,
+                ismodal: true,
+                dividcontect: "smart1234",
+                blockcontent:true
+            });
+            SMART.initRobot();
+            ga(function(tracker) {
+                ga('set', _smartstup[0].fpd, result.FingerPublic);
+                ga('set', _smartstup[0].gacid, result.gaid);
+                ga('set', _smartstup[0].gnewidd, getnewsessionidc);
+            });
+            ga('send', 'pageview');
+        }).catch(error => {
+            console.log(error);
+        });
+
+
+</script>
+</div>
+			<div class="content_left griddiv"><div class="region region-content-left">
+  <section id="block-block-1235" class="block block-block">
+
+      
+  <div class="content">
+    <!-- GPT AdSlot 11 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_BOTON' ### Size: [[300,100]] --><div id="div-gpt-ad-2698729-11">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-11'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 11 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-1234" class="block block-block">
+
+      
+  <div class="content">
+    <!-- GPT AdSlot 10 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_ROBAPAGINA_DERECHO' ### Size: [[300,250]] --><div id="div-gpt-ad-2698729-10">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-10'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 10 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-quicktabs-qt-3-lomas" class="block block-quicktabs">
+
+      
+  <div class="content">
+    <div  id="quicktabs-qt_3_lomas" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle"><li class="active first"><a href="/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838?qt-qt_3_lomas=0#qt-qt_3_lomas" id="quicktabs-tab-qt_3_lomas-0" class="active">MÁS LEÍDO</a></li>
+<li class="last"><a href="/salud/253-personas-han-fallecido-en-colombia-por-covid-19-456838?qt-qt_3_lomas=1#qt-qt_3_lomas" id="quicktabs-tab-qt_3_lomas-1" class="active">MÁS COMENTADO</a></li>
+</ul></div><div id="quicktabs-container-qt_3_lomas" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-qt_3_lomas-0" class="quicktabs-tabpage "></div><div  id="quicktabs-tabpage-qt_3_lomas-1" class="quicktabs-tabpage quicktabs-hide"></div></div></div>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+        </div>
+          
+	 
+    <div style="display:block;clear:both"></div> 
+    
+	        
+</div> 
+<!-- fin secciones y noticias -->
+
+ 
+<!-- fin layout columnas 50% -->
+
+   
+<!-- layout flexible -->
+<div id="pageflex" style="display:block;clear:both">
+	
+	
+	 
+    <div style="display:block;clear:both"></div> 
+    
+        <div class="page_bottom griddiv"> <!-- /.region -->
+</div>
+ 	</div> 
+<!-- fin layout flexible -->
+ 
+</div> <!-- /#container -->
+
+   <div id="recomendados" class="container" style="display:block;clear:both">
+	 	<div class="region region-recomendados">
+  <section id="block-block-1236" class="block block-block">
+
+      
+  <div class="content">
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+#highlighted .block {
+    margin-bottom: 1px !important
+}
+#div-gpt-ad-2698729-12{
+  Margin: auto;
+Display: table;
+ 
+}
+
+/*--><!]]>*/
+</style><!-- GPT AdSlot 12 for Ad unit 'LAPATRIA_DESKTOP_NOTICIAS_ARTICULO_BANNERMEDIO' ### Size: [[970,90],[728,90]] --><div id="div-gpt-ad-2698729-12">
+<script>
+<!--//--><![CDATA[// ><!--
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-2698729-12'); });
+  
+//--><!]]>
+</script></div>
+<!-- End AdSlot 12 -->  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-958" class="block block-block">
+
+      
+  <div class="content">
+    <p><img alt="caldense del año" src="/sites/default/files/default_images/logo2_6.jpg" style="width: 80px; height: 16px;" /></p>
+  </div>
+  
+</section> <!-- /.block -->
+<section id="block-views-3-recomendados-block" class="block block-views">
+
+        <h2 class="block-title">RECOMENDADOS LA PATRIA</h2>
+    
+  <div class="content">
+    <div class="view view-3-recomendados view-id-3_recomendados view-display-id-block recomendados view-dom-id-44b9a5bafb54633e89a19785717af5c7">
+        
+  
+      <div class="attachment attachment-before">
+          </div>
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-3">
+  
+  <tbody>
+          <tr class="row-1 row-first row-last">
+                  <td class="col-1 col-first">
+              
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/declarar-renta.jpeg" width="320" height="230" alt="Si va a declarar renta, tenga en cuenta..." title="Si va a declarar renta, tenga en cuenta..." />         
+<div class="box_main"> 
+   <a href="https://www.lapatria.com/economia/si-va-declarar-renta-tenga-en-cuenta-494244" class="bakcground_shadow"> <div class="box_field_title"> Si va a declarar renta, tenga en cuenta... </div></a>
+</div>
+
+
+
+</div>  </div>          </td>
+                  <td class="col-2">
+              
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/lavar-alimentos.jpeg" width="320" height="230" alt="Que la prioridad sea lavar los alimentos" title="Que la prioridad sea lavar los alimentos" />         
+<div class="box_main"> 
+   <a href="https://www.lapatria.com/salud/que-la-prioridad-sea-lavar-los-alimentos-495214" class="bakcground_shadow"> <div class="box_field_title"> Que la prioridad sea lavar los alimentos </div></a>
+</div>
+
+
+
+</div>  </div>          </td>
+                  <td class="col-3 col-last">
+              
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/agresiones-aula.jpeg" width="320" height="230" alt="Agresiones que sacuden las aulas de Manizales" title="Agresiones que sacuden las aulas de Manizales" />         
+<div class="box_main"> 
+   <a href="https://www.lapatria.com/educacion/agresiones-que-sacuden-las-aulas-de-manizales-495225" class="bakcground_shadow"> <div class="box_field_title"> Agresiones que sacuden las aulas de Manizales </div></a>
+</div>
+
+
+
+</div>  </div>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+      <div class="attachment attachment-after">
+          </div>
+  
+  
+  
+  
+</div>  </div>
+  
+</section> <!-- /.block -->
+<section id="block-block-970" class="block block-block">
+
+      
+  <div class="content">
+    <div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'alternating-thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+
+//--><!]]>
+</script>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+ 		<div style="display:block;clear:both"></div> 
+  </div>
+ 
+   <div id="servicios" class="container" style="display:block;clear:both">
+	 	<div class="region region-servicios">
+  <section id="block-views-3-recomendados-block-1" class="block block-views">
+
+        <h2 class="block-title">SERVICIOS A LA COMUNIDAD</h2>
+    
+  <div class="content">
+    <div class="view view-3-recomendados view-id-3_recomendados view-display-id-block_1 servicios view-dom-id-a58fc8d41cf53ce682c679886380e5aa">
+        
+  
+      <div class="attachment attachment-before">
+          </div>
+  
+      <div class="view-content">
+      <div class="owl-carousel-block_1153"><div class="item-0">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/clima"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_01_1.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/clima">Clima</a></div>  </div></div><div class="item-1">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/horoscopo"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_02_0.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/horoscopo">Horoscopo</a></div>  </div></div><div class="item-2">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/aeropuerto"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_03_0.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/aeropuerto">Aeropuerto</a></div>  </div></div><div class="item-3">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/indicadores-economicos"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_04_0.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/indicadores-economicos">Indicadores económicos</a></div>  </div></div><div class="item-4">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/droguerias"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_06.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/droguerias">Droguerías</a></div>  </div></div><div class="item-5">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/notarias"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_07.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/notarias">Notarías</a></div>  </div></div><div class="item-6">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/calen-tributario"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_08.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/calen-tributario">Calendario Tributario</a></div>  </div></div><div class="item-7">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/sudoku"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/icon_09.jpg" width="59" height="49" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/sudoku">Sudoku</a></div>  </div></div><div class="item-8">  
+  <div class="views-field views-field-field-imagencoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/breves/fallecimientos"><img src="https://archivo.lapatria.com/sites/default/files/imagencoleccion/lazo_d_muerte_2_0.png" width="40" height="48" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-field-titulocoleccion">        <div class="field-content"><a href="https://archivo.lapatria.com/breves/fallecimientos">Fallecimiento</a></div>  </div></div></div>    </div>
+  
+  
+      <div class="attachment attachment-after">
+          </div>
+  
+  
+  
+  
+</div>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+ 		<div style="display:block;clear:both"></div> 
+  </div>
+        
+  <div id="publicaciones" class="container" style="display:block;clear:both">
+  
+	 	 		<div style="display:block;clear:both"></div> 
+  </div>
+  	  
+  
+ 
+
+ 
+ 
+
+<footer id="footer" role="contentinfo" class="container clearfix" >
+    <div class="region region-footer">
+  <section id="block-block-426" class="block block-block">
+
+      
+  <div class="content">
+    <div class="footer-top">
+<div class="footer-logo"><img class="block-inner" alt="" src="/sites/default/files/logo_lp.jpg" style="width: 250px; height: 24px;" /></div>
+<div class="footer-icono"><p class="block-inner"> <a href="/pagina/mapa-del-sitio">Mapa del sitio</a></p></div>
+</div>
+
+<div class="table-footer">
+<div class="block-inline">
+<h3><strong>Contáctenos</strong></h3>
+<p><strong>MANIZALES PRINCIPAL</strong><br />
+				Dirección: Carrera 20 # 46- 35&nbsp;<br />
+				Teléfono: (6) 8932880 - 8781700&nbsp;</p>
+                                Bogotá. Tel: 3226819 Móvil: 3218122468&nbsp;</p>
+                                Medellín: Móvil: 3207273638&nbsp;</p>
+                                Chinchiná. Móvil: 3113348224&nbsp;</p>
+	                       <br />
+
+				</p>
+	</div>
+
+	<div class="block-inline">
+		 <h3><strong>Secciones</strong></h3>
+
+		 <p><a href="http://www.lapatria.com/actualidad" target="_blank">NOTICIAS</a></p>
+
+				<p><a href="http://www.lapatria.com/sucesos" target="_blank">MANIZALES</a></p>
+
+				<p><a href="http://www.lapatria.com/manizales" target="_blank">CALDAS</a></p>
+
+				<p><a href="http://www.lapatria.com/caldas" target="_blank">SUCESOS</a></p>
+
+				<p><a href="http://www.lapatria.com/deportes" target="_blank">DEPORTES</a></p>
+
+				
+
+				<p><a href="http://www.lapatria.com/opinion" target="_blank">OPINIÓN</a></p>
+
+                               <p><a href="http://www.lapatria.com/social" target="_blank"">SOCIAL</a></p>
+
+				<p><a href="http://www.lapatria.com/especiales" target="_blank">ESPECIALES</a></p>
+
+                                 <p><a href="http://www.lapatria.com/entretenimiento" target="_blank">ENTRETENIMIENTO</a></p>
+                                 <p><a href="http://www.lapatria.com/pagina/la-patria-rss" target="_blank">SERVICIOS RSS</a></p>
+		
+	</div>
+
+<div class="block-inline last">
+   <h3><strong>Nuestros Portales</strong></h3>
+   <p> <a href="http://micasa.co">www.micasa.co</a></p>
+   <p> <a href="http://qhubo.com/epaper/manizales/">www.qhubo.com/epaper/manizales/</a></p>
+   <h3><strong>Hacemos parte de:</strong></h3>
+   <div class="box-top-img"><a href="http://www.iabcolombia.com"  target="_blank" class="logo2-img"></a></div>
+<div class="box-top-img"><a href="http://www.ami.org.co/"  target="_blank" class="logo3-img"></a></div>
+   
+
+</div>
+
+</div>  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+	<div style="display:block;clear:both"></div> 
+</footer> <!-- /#footer -->
+ 
+<div id="copyright" class="container" style="display:block;clear:both">
+	 	<div class="region region-copyright">
+  <section id="block-block-427" class="block block-block">
+
+      
+  <div class="content">
+    <p></p><center>
+<p>
+ </p>
+<p style="padding-top: 30px;">
+</p><p>El uso de este sitio web implica la aceptación de los <a href="/informacion-legal">Términos y Condiciones</a>  y <a href="/informacion-legal">Políticas de privacidad</a> de LA PATRIA S.A.</p>
+<p> </p>
+<p>Todos los Derechos Reservados D.R.A. Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma sin la autorización escrita de su titular. Reproduction in whole or in part, or translation without written permission is prohibited. All rights reserved 2015</p>
+<p></p></center>
+  </div>
+  
+</section> <!-- /.block -->
+</div>
+ <!-- /.region -->
+ 		<div style="display:block;clear:both"></div> 
+</div> 
+
+ 
+     	
+    	
+ 
+    <!-- /.region -->
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+;da2a.targets=[{title:'253 personas han fallecido en Colombia por covid-19 ',url:'https:\/\/archivo.lapatria.com\/salud\/253-personas-han-fallecido-en-colombia-por-covid-19-456838'}];da2a.html_done=!0;if(da2a.script_ready&&!da2a.done)da2a.init();da2a.script_load();
+//--><!]]>
+</script>
+  
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2FHQ2F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+	<amp-analytics type="lotame">
+	<script type="application/json">
+	{
+	"vars": {
+	"account": "13840"
+	},
+	"extraUrlParams": {
+	"genp": "www.lapatria.com",
+	}
+	}
+	</script>
+	</amp-analytics>
+
+<!--Script final taboola-->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!--FIN Script final taboola-->
+</body>
+</html>

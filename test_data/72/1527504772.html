@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linke Zeitung</title>
+	        <link rel="stylesheet" href="https://linkezeitung.de/wp-content/plugins/gdpr-notice-original/view/assets/css/style.css">
+		    <script>
+        var GDPR_i10n = {
+            ajaxUrl: 'https://linkezeitung.de/wp-admin/admin-ajax.php',
+            loading: 'Wird geladen …'
+        };
+    </script>
+    <script src="https://linkezeitung.de/wp-includes/js/jquery/jquery.js"></script>
+    <script src="https://linkezeitung.de/wp-content/plugins/gdpr-notice-original/view/assets/js/gdpr.js"></script>
+</head>
+<body class="gdpr-notice-page">
+<form method="post" class="gdpr-notice-form" name="gdpr-notice-form">
+    <div class="privacy-notice">
+        <h1 class="privady-notice-title">Wichtiger Hinweis</h1>
+
+        <div class="privacy-notice-link-wrapper">
+						<article class="message message-44989" id="message-44989"><p>Nach der DSGVO sind wir verpflichtet für die Nutzung externer Dienste Ihre Erlaubnis einzuholen. Sind Sie mit der Nutzung externer Dienste einverstanden? Sie können Ihre Einwilligung jederzeit zurückziehen, indem Sie Cookies in Ihrem Browser löschen.</p>
+</article>			        </div>
+        <div class="privacy-notice-input-wrapper">
+			                <input type="submit" name="privacy-rejected" class="reject" value="Ablehnen"/>
+                <input type="submit" name="privacy-accepted" class="accept" value="Akzeptieren"/>
+                    </div>
+        <div class="gdpr-notice-informational-wrapper">
+			<ul class="link-list"><li><a href="/2020/02/21/ankara-gibt-der-al-qaida-feuerschutz-um-gebietsverluste-in-idlib-zu-revidieren/?gdpr_page=44990" class="link message-44990" id="message-44990" data-id="44990">Cookies</a></li><li><a href="/2020/02/21/ankara-gibt-der-al-qaida-feuerschutz-um-gebietsverluste-in-idlib-zu-revidieren/?gdpr_page=44991" class="link message-44991" id="message-44991" data-id="44991">Datenschutzerklärung</a></li><li><a href="/2020/02/21/ankara-gibt-der-al-qaida-feuerschutz-um-gebietsverluste-in-idlib-zu-revidieren/?gdpr_page=44992" class="link message-44992" id="message-44992" data-id="44992">Impressum</a></li>        </div>
+    </div>
+</form>
+
+<div id="gdpr-post-content" >
+    <div class="response">
+		    </div>
+    <div class="close">x</div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var cbtn = document.getElementById('gdpr-continue'), active = 0, available = 0;
+        if (!cbtn) return;
+        function checkText() {
+            if (0 == active) {
+                cbtn.value = "Alles blockieren";
+            } else if (available == active) {
+                cbtn.value = "Alles zulassen";
+            } else {
+                cbtn.value = "Ausgewähltes zulassen";
+            }
+        }
+        function countActive(e) {
+            active = e.target.checked ? Math.min(active + 1, available) : Math.max(active - 1, 0);
+            checkText();
+        }
+
+        var inputs = document.forms['gdpr-notice-form'].getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            if ("checkbox" == inputs[i].type) {
+                available++;
+                if (inputs[i].checked) active++;
+                inputs[i].addEventListener('change', countActive);
+            }
+        }
+        if (available > 0) {
+            checkText();
+        }
+    })();
+</script>
+</body>
+</html>
+

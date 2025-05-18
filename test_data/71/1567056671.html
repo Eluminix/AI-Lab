@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-d17f109c7e1c3c29839",applicationID:"425086169"};;/*! For license information please see nr-loader-rum-1.290.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},555:(e,t,r)=>{"use strict";r.d(t,{D:()=>s,f:()=>o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const s=e=>(0,i.a)(e,a)},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.290.0",i="PROD",a="CDN"},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>a,gm:()=>o,mw:()=>s,sb:()=>u});var n=r(863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(836),i=r(606),a=r(860),o=r(646);const s={};function c(e,t){const r={staged:!1,priority:a.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const a=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!a.aborted&&a.backlog&&s){if(r){const e=a.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof o.y&&t[0].on(e,t[1])}))}))}}a.isolatedBacklog||delete s[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}}))}},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>s,ee:()=>c});var n=r(384),i=r(990),a=r(646),o=r(607);const s="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);for(var s=g(n),u=m(e),d=u.length,l=0;l<d;l++)u[l].apply(s,r);var p=v()[o[e]];p&&p.push([f,e,r,s]);return s},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{o[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,s,(()=>new a.y(s))):new a.y(s)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c)},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>o});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s<e;s++)o.push(a(r,i++).toString(16));return o.join("")}},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,o=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>a,sB:()=>o});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,n.sp)("load",e,t)}function o(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,US:()=>u,Zm:()=>o,bQ:()=>c,dV:()=>s,pV:()=>d});var n=r(154),i=r(863);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=o();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){o()[e]=t}function d(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},773:(e,t,r)=>{"use strict";r.d(t,{z_:()=>a,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>o});r(154),r(566),r(384);const n=r(860).K7.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(){return this.#e(i.dT)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}}},261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>s,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Tb:()=>l,U2:()=>a,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>o,nb:()=>m,o5:()=>d});const n="api-",i="addPageAction",a="addToTrace",o="addRelease",s="finished",c="interaction",u="log",d="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger"},163:(e,t,r)=>{"use strict";r.d(t,{j:()=>N});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const o="experimental.marks",s="experimental.measures",c="experimental.resources",u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),l=r(944),f=r(122);const g="[data-nr-mask]",p=e=>(0,f.a)(e,(()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(o)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(s)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(g):""===t||null===t?e.mask_selector=g:(0,l.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var m=r(154),h=r(324);let v=0;const b={buildEnv:h.F3,distMethod:h.Xs,version:h.xv,originTime:m.WN},y={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,get harvestCount(){return++v}},_=e=>{const t=(0,f.a)(e,y),r=Object.keys(b).reduce(((e,t)=>(e[t]={value:b[t],writable:!1,configurable:!0,enumerable:!0},e)),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var k=r(836),A=r(241);const T={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},R=e=>(0,f.a)(e,T),S=new Set;function N(e,t={},r,o){let{init:s,info:c,loader_config:u,runtime:d={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();s=e.init,c=e.info,u=e.loader_config}e.init=p(s||{}),e.loader_config=R(u||{}),c.jsAttributes??={},m.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,g=[c.beacon,c.errorBeacon];S.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),g.push(f.proxy.assets)),f.proxy.beacon&&g.push(f.proxy.beacon),function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach((r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})}))}(e),(0,n.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),d.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?g:[]],d.ptid=e.agentIdentifier,d.loaderType=r,e.runtime=_(d),S.has(e.agentIdentifier)||(e.ee=k.ee.get(e.agentIdentifier),e.exposed=l,(0,A.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),S.add(e.agentIdentifier)}},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>s,df:()=>a,qY:()=>n,v4:()=>o});const n="events",i="jserrors",a="browser/blobs",o="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.290.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.290.0.PROD:",i.l=(r,n,a,o)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){s=l;break}}if(!s){c=!0;var f={296:"sha512-+9iJcu5osHb0OseGcJgjoYu+SHwMvnUKuzDnjvqinxFSALjDJVxgQyo8Eg7woMfTg2nlMTpu+xRzS17ylgJKig=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[o]&&(s.integrity=f[o])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[o,s,c]=r,u=0;if(o.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<o.length;u++)a=o[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.290.0.PROD"]=self["webpackChunk:NRBA-1.290.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var o=i(163);var s=i(908),c=i(863),u=i(261),d=i(241),l=i(944),f=i(701),g=i(773);function p(e,t,i,a){const o=a||i;!o||o[e]&&o[e]!==r.prototype[e]||(o[e]=function(){(0,s.p)(g.xV,["API/"+e+"/called"],void 0,n.K7.metrics,i.ee),(0,d.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:"data",name:"api",feature:u.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function m(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:e.info={...e.info,jsAttributes:{...a.jsAttributes,[t]:r}},(i||null===r)&&(0,s.p)(u.Pl+n,[(0,c.t)(),t,r],void 0,"session",e.ee)}var h=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=>y.RI&&!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&&w(e)&&!0===e?.session_trace.enabled}var k=i(389);class A extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise(((t,r)=>{this.ee.on("manual-start-all",(0,k.J)((()=>{(0,h.Ak)(e.agentIdentifier,this.featureName),t()})))})):(0,h.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;let a;this.onAggregateImported=new Promise((e=>{a=e}));const o=async()=>{let o;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,663));o=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit("internal-error",[e]),this.featureName===n.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o,e.init))return(0,h.Ze)(this.agentIdentifier,this.featureName),void a(!1);const{Aggregate:n}=await t();this.featAggregate=new n(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),a(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,h.Ze)(this.agentIdentifier,this.featureName,!0),a(!1),this.ee&&this.ee.abort()}};y.RI?(0,b.GG)((()=>o()),!0):o()}#t(e,t,r){switch(e){case n.K7.sessionReplay:return x(r)&&!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var T=i(630);class R extends A{static featureName=T.T;constructor(e){var t;super(e,T.T),t=e,p(u.Fw,(function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(u.Pl+u.Fw,[(0,c.t)()],void 0,void 0,t.ee))}),t),this.ee.on("api-send-rum",((e,t)=>(0,s.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,108))))}}var S=i(843),N=i(878),E=i(782);class j extends A{static featureName=E.T;constructor(e){super(e,E.T),y.RI&&((0,S.u)((()=>(0,s.p)("docHidden",[(0,c.t)()],void 0,E.T,this.ee)),!0),(0,N.sp)("pagehide",(()=>(0,s.p)("winPagehide",[(0,c.t)()],void 0,E.T,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,350)))))}}class I extends A{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,s.p)(g.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,373))))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===n.K7.softNav)),(0,o.j)(this,e,e.loaderType||"agent"),t=this,p(u.cD,(function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return m(t,e,r,u.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)}),t),function(e){p(u.Dl,(function(t){if("string"==typeof t||null===t)return m(e,"enduser.id",t,u.Dl,!0);(0,l.R)(41,typeof t)}),e)}(this),function(e){p(u.nb,(function(t){if("string"==typeof t||null===t)return m(e,"application.version",t,u.nb,!1);(0,l.R)(42,typeof t)}),e)}(this),function(e){p(u.d3,(function(){e.ee.emit("manual-start-all")}),e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach((r=>{t[r]=!!e[r]?.enabled})),t}(this.init),t=[...this.desiredFeatures];t.sort(((e,t)=>n.P3[e.featureName]-n.P3[t.featureName])),t.forEach((t=>{if(!e[t.featureName]&&t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&&t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter((e=>!(e in this.features)));r.length>0&&(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)}))}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[R,j,I],loaderType:"lite"})})()})();</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noai, noimageai">
+    <style type="text/css">popular-stroies.variation1 .popular-stories-list{
+margin-bottom: 15px;
+}
+@media (max-width: 1199px) {
+    .home .popular-stroies .popular-stories-list ul li.featured-post-row .featured-image {
+flex: 155px 0 0 !important;
+}
+}
+@media (max-width: 574px) {
+    .home .popular-stroies .popular-stories-list ul li.featured-post-row .featured-image {
+flex: 125px 0 0 !important;
+}
+}
+
+
+body .videoicon.post-has-video .fa-brands:before {
+    content: "\f04b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 16px;
+}
+
+body .opscoad-billboard-1, body .opscoad-homepage_billboard-1{
+display: inline-flex !important;
+    justify-content: center;
+}
+body.search .opscoad-billboard-1, body.search .opscoad-homepage_billboard-1{
+margin-bottom: 30px;
+display: inline !important;
+}
+.page-template-podcasts footer, .search footer{
+margin-top: 30px;
+}
+.single-photo-gallery .gallery-item img{
+height:auto !important;
+}
+.logged-in .page-content {
+    padding-top: 130px !important;
+}
+@media (max-width: 1360px) {
+    .page-content {
+        padding-top: 95px !important;
+    }
+.logged-in .page-content {
+    padding-top: 60px !important;
+}
+    body header {
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    body header {
+        margin-top: 90px !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 99999;
+    }
+    .page-content {
+        padding-top: 187px !important;
+    }
+.logged-in .page-content {
+    padding-top: 140px !important;
+}
+}
+
+@media (max-width:1024px){
+.single-photo-gallery .gallery-item img{
+height: auto  !important;
+}
+}
+
+@media (max-width: 575px){
+    header .logo img {
+        max-width: 190px !important;
+    }
+.wish-photo-gallery .gallery-item .photo-item{
+height: auto !important;
+}
+}
+
+@media (max-width: 375px){
+    header .logo img {
+        max-width: 130px !important;
+    }
+}
+
+
+
+.single-post .fusion-flexslider .fuel-meta {
+    display: block !important;
+}
+.single-post .fusion-flexslider .fuel-meta .fuel-player-share{
+    display: block !important;
+}
+
+.email_news_cls .is-layout-flow{ background-color: rgb(146, 146, 146);}
+.bitcentral-fuel-player-section h1.fuel-title-heading{
+display: none;
+}
+
+@media only screen and (max-width: 1640px) {
+    .main-navigation .menu li.menu-item>a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px){
+.email-alerts-block .wp-block-columns.email_news_cls {
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0;
+}
+}
+@media (max-width: 991px) {
+    .food-stories .tree-item:nth-child(2) .titlerow span a .title-1 {
+        padding: 3px 5px 3px 0 !important;
+        flex: auto 0 0 !important;
+        justify-content: flex-start;
+    }
+ .single-photo-gallery .gallery-item picture img {
+        height: 400px;
+object-fit: cover;
+    }
+}
+.email-alerts-block .wp-block-columns.email_news_cls .wp-block-column {
+    width: auto !important;
+}
+}
+</style><!-- Adblocker popup addition Start -->
+
+<script async src="https://fundingchoicesmessages.google.com/i/pub-7477157129758762?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<!-- Adblocker popup addition End -->
+<!-- MGID Header -->
+<script src="https://jsc.mgid.com/site/871355.js" async> 
+ </script>
+<!-- MGID Header End -->    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v22.6 (Yoast SEO v22.6) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Hoosier musician Clayton Anderson performing virtual concert - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |</title>
+	<link rel="canonical" href="https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Hoosier musician Clayton Anderson performing virtual concert" />
+	<meta property="og:description" content="Anderson is performing at The Pavilion at Pan Am in downtown Indianapolis to raise money for local bartenders and service industry workers affected by COVID-19." />
+	<meta property="og:url" content="https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/" />
+	<meta property="og:site_name" content="Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |" />
+	<meta property="article:publisher" content="https://www.facebook.com/WISHNews8" />
+	<meta property="article:published_time" content="2020-04-02T21:15:20+00:00" />
+	<meta property="article:modified_time" content="2020-04-02T22:05:07+00:00" />
+	<meta name="author" content="Gregg Montgomery" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@wishnews8" />
+	<meta name="twitter:site" content="@wishnews8" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#article","isPartOf":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/"},"author":{"name":"Gregg Montgomery","@id":"https://www.wishtv.com/#/schema/person/f0c44967d6163e6e12b26c8fc2e2a186"},"headline":"Hoosier musician Clayton Anderson performing virtual concert","datePublished":"2020-04-02T21:15:20+00:00","dateModified":"2020-04-02T22:05:07+00:00","mainEntityOfPage":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/"},"wordCount":99,"publisher":{"@id":"https://www.wishtv.com/#organization"},"image":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#primaryimage"},"thumbnailUrl":"","articleSection":["All Indiana","Coronavirus","Entertainment","News"],"inLanguage":"en-US","copyrightYear":"2020","copyrightHolder":{"@id":"https://www.wishtv.com/#organization"}},{"@type":"WebPage","@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/","url":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/","name":"Hoosier musician Clayton Anderson performing virtual concert - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |","isPartOf":{"@id":"https://www.wishtv.com/#website"},"primaryImageOfPage":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#primaryimage"},"image":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#primaryimage"},"thumbnailUrl":"","datePublished":"2020-04-02T21:15:20+00:00","dateModified":"2020-04-02T22:05:07+00:00","breadcrumb":{"@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#primaryimage","url":"","contentUrl":""},{"@type":"BreadcrumbList","@id":"https://www.wishtv.com/news/allindiana/hoosier-musician-clayton-anderson-to-perform-virtual-concert/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.wishtv.com/"},{"@type":"ListItem","position":2,"name":"News","item":"https://www.wishtv.com/news"},{"@type":"ListItem","position":3,"name":"All Indiana","item":"https://www.wishtv.com/all-indiana"},{"@type":"ListItem","position":4,"name":"Hoosier musician Clayton Anderson performing virtual concert"}]},{"@type":"WebSite","@id":"https://www.wishtv.com/#website","url":"https://www.wishtv.com/","name":"Indianapolis and Indiana News Weather Sports Traffic WISH-TV","description":"Your Indiana News Weather and Sports Source","publisher":{"@id":"https://www.wishtv.com/#organization"},"alternateName":"Your Indiana News Weather and Sports Source","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.wishtv.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.wishtv.com/#organization","name":"WISH TV - Indianapolis News Weather Sports Authority","alternateName":"Indiana News Weather Sports Authority","url":"https://www.wishtv.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/#/schema/logo/image/","url":"https://wishtv.com/wp-content/uploads/2021/07/dot-com-rotating-8-343x39-1.png","contentUrl":"https://wishtv.com/wp-content/uploads/2021/07/dot-com-rotating-8-343x39-1.png","width":343,"height":39,"caption":"WISH TV - Indianapolis News Weather Sports Authority"},"image":{"@id":"https://www.wishtv.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/WISHNews8","https://x.com/wishnews8","https://www.instagram.com/wish8news/","https://www.linkedin.com/company/wishnews8/","https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ","https://en.wikipedia.org/wiki/WISH-TV"]},{"@type":"Person","@id":"https://www.wishtv.com/#/schema/person/f0c44967d6163e6e12b26c8fc2e2a186","name":"Gregg Montgomery","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/03c1a7da6a370374b74b0292446c0330?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/03c1a7da6a370374b74b0292446c0330?s=96&d=mm&r=g","caption":"Gregg Montgomery"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.wishtv.com' />
+<link rel='dns-prefetch' href='//fuel-streaming-prod01.fuelmedia.io' />
+<link rel='dns-prefetch' href='//htlbid.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.wishtv.com/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpzoom-rcb-block-style-css-css' href='https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/blocks.style.build.css?ver=5.6.16' type='text/css' media='all' />
+<style id='wpzoom-rcb-block-style-css-inline-css' type='text/css'>
+
+                    .wp-block-wpzoom-recipe-card-block-recipe-card ul.wpzoom-rating-stars>li.wpz-star-icon,
+                    .wpzoom-rcb-comment-rating-form .wpzoom-rcb-comment-rating-stars label span.wpz-star-icon,
+                    .wpzoom-rcb-comment-rating .wpzoom-rcb-comment-rating-stars span.wpz-star-icon,
+                    ul.wpzoom-rating-stars > li.wpz-star-icon {
+                        color: #F2A123;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-instagram .cta-text-subtitle {
+                        color: #7C848A;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-instagram .cta-brand-icon .fa-instagram {
+                        color: ;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-pinterest .cta-text-subtitle {
+                        color: #7C848A;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-pinterest .cta-brand-icon .fa-pinterest {
+                        color: #C62122;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-facebook .cta-text-subtitle {
+                        color: #7C848A;
+                    }
+                    .wp-block-wpzoom-recipe-card-block-recipe-card .recipe-card-cta-facebook .cta-brand-icon .fa-facebook {
+                        color: #1877F2;
+                    }
+</style>
+<link rel='stylesheet' id='wpzoom-rcb-block-icon-fonts-css-css' href='https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/assets/css/icon-fonts.build.css?ver=5.6.16' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='awesome-weather-css' href='https://www.wishtv.com/wp-content/plugins/awesome-weather/awesome-weather.css?ver=6.7.2' type='text/css' media='all' />
+<style id='awesome-weather-inline-css' type='text/css'>
+.awesome-weather-wrap { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 14px; }
+</style>
+<link rel='stylesheet' id='embedpress-style-css' href='https://www.wishtv.com/wp-content/plugins/embedpress/assets/css/embedpress.css?ver=4.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fuel-main-css' href='https://www.wishtv.com/wp-content/plugins/fuel-bitcentral/assets/css/fuel.css?ver=1747440000' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css' href='https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/css/bundle.min.css?v=3494909962' type='text/css' media='all' />
+<link rel='stylesheet' id='htlbid-style-css' href='https://htlbid.com/v3/wishtv.com/opscobid.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.wishtv.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://fuel-streaming-prod01.fuelmedia.io/player/v3/fuel.js?ver=1747440000" id="fuel-player-script-js"></script>
+<link rel="https://api.w.org/" href="https://www.wishtv.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.wishtv.com/wp-json/wp/v2/posts/356494" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.wishtv.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.wishtv.com/?p=356494' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.wishtv.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fallindiana%2Fhoosier-musician-clayton-anderson-to-perform-virtual-concert%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.wishtv.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fallindiana%2Fhoosier-musician-clayton-anderson-to-perform-virtual-concert%2F&#038;format=xml" />
+
+<!-- Dark Visitors (https://darkvisitors.com/) -->
+<script src="https://darkvisitors.com/tracker.js?project_key=3413de4f-c917-4669-8051-dfe7a72aa507"></script>
+	<script type='text/javascript'>
+		loadfuelGTMId('script', 'dataLayer');
+		function loadfuelGTMId(script, datalayer) {
+			var fuelgtmId = 'GTM-NWHM49Z';
+			var srcUrl = 'https://www.googletagmanager.com/gtm.js?id=' + fuelgtmId;
+			loadfuelIframeSrc(fuelgtmId);
+			getParamsFromUrl('id');
+			window[datalayer] = window[datalayer] || [];
+			window[datalayer].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+			var f = document.getElementsByTagName(script)[0],
+				j = document.createElement(script),
+				dl = datalayer != 'dataLayer' ? '&l=' + datalayer : '';
+			j.async = true;
+			j.src = srcUrl + dl;
+			f.parentNode.insertBefore(j, f);
+		}
+		function loadfuelIframeSrc(fueltagId) {
+			var iframe = document.getElementById('gtmIframe');
+			var srcUrl = 'https://www.googletagmanager.com/ns.html?id=' + fueltagId;
+			if (iframe) {
+				iframe.src = srcUrl;
+			}
+		}
+		function getParamsFromUrl(value) {
+			var location = window.location.toString();
+			var url = new URL(location);
+			var query_string = url.search;
+			var search_params = new URLSearchParams(query_string);
+			var id = search_params.get(value) !== 'null' ? search_params.get(value) : DEFAULT_GTM_ID;
+			return id;
+		}
+	</script>
+	
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"pageTitle":"Hoosier musician Clayton Anderson performing virtual concert - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |","pagePostType":"post","pagePostType2":"single-post","pageCategory":["allindiana","coronavirus","entertainment-news","news"],"pagePostAuthor":"Gregg Montgomery","pagePostDate":"April 2, 2020","pagePostDateYear":2020,"pagePostDateMonth":4,"pagePostDateDay":2,"pagePostDateDayName":"Thursday","pagePostDateHour":17,"pagePostDateMinute":15,"pagePostDateIso":"2020-04-02T17:15:20-04:00","pagePostDateUnix":1585847720};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWHM49Z');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+	<meta name="ad-category" content="hoosier-musician-clayton-anderson-to-perform-virtual-concert" /><!-- Ads script --><script type="text/javascript">!(function(g,_name){g[_name]=g[_name]||function T(){(T.q=T.q||[]).push(arguments)},g[_name].v=g[_name].v||2,g[_name].s="3";!(function(g,T,O,h){function K(O,h){try{K=g.localStorage,(O=JSON.parse(K[decodeURI(decodeURI('g%65%2574%2549t%25%36%35%6d'))]("_aQS02N0E2NUY4M0IwNjEzMzIwMzQ2NDI4Q0EtMQ")).lgk||[])&&(h=g[T].pubads())&&O.forEach((function(g){g&&g[0]&&h.setTargeting(g[0],g[1]||"")}))}catch(r){}var K}try{(h=g[T]=g[T]||{}).cmd=h.cmd||[],typeof h.pubads===O?K():typeof h.cmd.unshift===O?h.cmd.unshift(K):h.cmd.push(K)}catch(r){}})(window,decodeURI(decodeURI('%256%37%25%36f%6f%67%6c%256%35t%61%67')),"function");;})(window,decodeURI(decodeURI('adm%256%39%72%2561l')));!(function(g,T,O,h){O=g.createElement(T),g=g.getElementsByTagName(T)[0],O.async=1,O.src="https://coolguesthouse.com/assets/q696f7r0d_bj9",(h=0)&&h(O),g.parentNode.insertBefore(O,g)})(document,"script");</script><!-- Ads script -->
+</head>
+
+<body class="post-template-default single single-post postid-356494 single-format-standard index no-sidebar">
+
+    
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHM49Z" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->            <header>
+        <div class="container-xxl header-top">
+            <div class="d-flex align-items-center justify-content-between py-4">
+                <div class="logo-row">
+                    <a href="https://www.wishtv.com" target="_self" class="logo d-inline-block">
+                        
+                            <div class="hide-in-desktop d-flex align-items-center header-mobile">
+                                <img src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/wishtvcom-whiteV2.webp"
+                                    class="whitelogo" width="342" height="47" alt="wishtv-mobile-logo">
+                            </div>
+                            <div class="hide-from-laptop-lg blcklogo">
+                                <div class="d-flex align-items-center">
+                                    <img width="342" height="47"
+                                        src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/wishtvcomV2.webp" class="blcklogo"
+                                        alt="wishtv">
+                                </div>
+                            </div>
+                        
+                    </a>
+                    <div class="talent-ad">
+                        <div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-header-promo"></div>                    </div>
+                </div>
+
+                <div class="header-right d-flex ">
+                    <div class="hide-in-desktop">
+                    <div class="s1m_weather_content">
+  <div class="site-header__weather">
+    <a href="https://www.wishtv.com/weather/">
+      <span class="site-header__weather-forecast">
+              <span class="site-header__weather-forecast__text">63°</span>
+        <i class="wi wi-owm-803"></i>
+            </span>
+      
+    </a>
+  </div>
+</div>
+                    </div>
+                    <div class="gxo-add">
+                        <div class="flex-break"></div><div class="header-ad"><div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-header-microbar"></div></div>                    </div>
+                    <div class="searchbox">
+                        <div class="hide-in-desktop serach-icon-btn only-search-icon"><img
+                                src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/search-icon.png"
+                                alt="Search" height="20" width="20"> <i class="fa-regular fa-xmark"></i></div>
+                        <form role="search" method="get" id="searchform" class="searchform"
+                            action="https://www.wishtv.com/">
+                            <div>
+                                <label class="screen-reader-text d-none"
+                                    for="s"></label>
+                                <input type="text" value="" name="s" id="s"
+                                    placeholder="Search..." />
+                                <button id="searchsubmit" class="serach-icon-btn"><img
+                                        src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/search-icon.png"
+                                        alt="Search" height="20" width="20"> </button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <a class="hdrbtn  hide-from-laptop-lg" href="/make-wishtv-com-your-homepage/">Make
+                        wishtv.com your home page</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom ">
+            <div class="container-xxl d-flex align-middle justify-content-between">
+                <div class="mobile-navigation-icon" id="mobile-menu-trigger">
+                    <i></i>
+                </div>
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                    <div class="mobile-menu-overlay__inner">
+                        <div class="mobile-menu-overlay__header">
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger">
+                                    <i class="fa-regular fa-xmark"></i>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-overlay__body">
+                            <nav class="offcanvas-navigation">
+
+
+                                <div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-304121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304121"><a href="https://www.wishtv.com/news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-767195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767195"><a href="https://www.wishtv.com/beoshow/">BE&#038;O Show</a></li>
+	<li id="menu-item-304123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304123"><a href="https://www.wishtv.com/business/">Business</a></li>
+	<li id="menu-item-1230508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230508"><a href="https://www.wishtv.com/community-connection-contributors/">Community Connection Contributors</a></li>
+	<li id="menu-item-378961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378961"><a href="https://www.wishtv.com/coronavirus/">Coronavirus Latest</a></li>
+	<li id="menu-item-304125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304125"><a href="https://www.wishtv.com/crime-watch-8/">Crime Watch 8</a></li>
+	<li id="menu-item-1260087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260087"><a href="https://www.wishtv.com/crime-watch-8/delphi-murders/">Delphi Murders</a></li>
+	<li id="menu-item-593558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593558"><a href="https://www.wishtv.com/digitaldownload/">Digital Download</a></li>
+	<li id="menu-item-816973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816973"><a href="https://www.wishtv.com/education/">Education</a></li>
+	<li id="menu-item-304134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304134"><a href="https://www.wishtv.com/entertainment/">Entertainment</a></li>
+	<li id="menu-item-845679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845679"><a href="https://www.wishtv.com/election/">Election Coverage</a></li>
+	<li id="menu-item-846446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846446"><a href="https://www.wishtv.com/electionresults/">Election Results</a></li>
+	<li id="menu-item-304135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304135"><a href="https://www.wishtv.com/i-team-8/">I-Team 8</a></li>
+	<li id="menu-item-304136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304136"><a href="https://www.wishtv.com/indiana-news/">Indiana News</a></li>
+	<li id="menu-item-587205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587205"><a href="https://www.wishtv.com/insidestory/">INside Story</a></li>
+	<li id="menu-item-304140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304140"><a href="https://www.wishtv.com/international/">International News</a></li>
+	<li id="menu-item-304139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304139"><a href="https://www.wishtv.com/local/">Local News</a></li>
+	<li id="menu-item-530537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530537"><a href="https://www.wishtv.com/hispanic-culture/">Hispanic Culture</a></li>
+	<li id="menu-item-319905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319905"><a href="https://www.wishtv.com/health-spotlight/">Health Spotlight</a></li>
+	<li id="menu-item-1315469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315469"><a href="https://www.wishtv.com/mental-health-moments/">Mental Health Moments</a></li>
+	<li id="menu-item-319911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319911"><a href="https://www.wishtv.com/multicultural-news/">Multicultural News</a></li>
+	<li id="menu-item-304141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304141"><a href="https://www.wishtv.com/national/">National News</a></li>
+	<li id="menu-item-304142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304142"><a href="https://www.wishtv.com/news/politics/">Political News</a></li>
+	<li id="menu-item-1087998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1087998"><a href="https://www.wishtv.com/eclipse/">Solar Eclipse</a></li>
+	<li id="menu-item-304198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304198"><a href="https://www.wishtv.com/traffic/">Traffic</a></li>
+	<li id="menu-item-697754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697754"><a href="https://www.wishtv.com/news/unphiltered-with-phil-sanchez/">UnPHILtered with Phil Sanchez</a></li>
+</ul>
+</li>
+<li id="menu-item-304143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304143"><a href="https://www.wishtv.com/weather/">Weather</a>
+<ul class="sub-menu">
+	<li id="menu-item-723769" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723769"><a href="https://www.wishtv.com/weather/7-day-forecast/">7 Day Forecast</a></li>
+	<li id="menu-item-723768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723768"><a href="https://www.wishtv.com/weather/almanac/">Almanac</a></li>
+	<li id="menu-item-304145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304145"><a href="https://www.wishtv.com/closings/">Closings &#038; Delays</a></li>
+	<li id="menu-item-723770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723770"><a href="https://www.wishtv.com/weather/current-conditions/">Current Conditions</a></li>
+	<li id="menu-item-304148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304148"><a href="https://www.wishtv.com/email-alerts/">Get Weather Email Alerts</a></li>
+	<li id="menu-item-723767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723767"><a href="https://www.wishtv.com/weather/hourly-forecast/">Hourly Forecast</a></li>
+	<li id="menu-item-723766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723766"><a href="https://www.wishtv.com/weather/future-cast/">Future Cast</a></li>
+	<li id="menu-item-304149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304149"><a href="https://www.wishtv.com/weather/interactive-radar/">Interactive Radar</a></li>
+	<li id="menu-item-723771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723771"><a href="https://www.wishtv.com/weather/radar/">Radar</a></li>
+	<li id="menu-item-723759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723759"><a href="https://www.wishtv.com/weather/severe-outlook/">Severe Outlook</a></li>
+	<li id="menu-item-723760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723760"><a href="https://www.wishtv.com/weather/todays-rainfall/">Today’s Rainfall</a></li>
+	<li id="menu-item-723761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723761"><a href="https://www.wishtv.com/weather/two-week-outlook/">Two Week Outlook</a></li>
+	<li id="menu-item-723762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723762"><a href="https://www.wishtv.com/weather/watches-and-warnings/">Watches and Warnings</a></li>
+	<li id="menu-item-304193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304193"><a href="https://www.wishtv.com/weather/weather-blog/">Weather Blog</a></li>
+	<li id="menu-item-944230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944230"><a href="https://www.wishtv.com/weather-stories/">Weather Stories</a></li>
+	<li id="menu-item-723764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723764"><a href="https://www.wishtv.com/weather/wind-gusts/">Wind Gusts</a></li>
+</ul>
+</li>
+<li id="menu-item-304126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304126"><a href="https://www.wishtv.com/sports/">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-1216633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216633"><a href="https://www.wishtv.com/sports/hbcu-games-on-wndy/">2025 HBCU Games on WNDY</a></li>
+	<li id="menu-item-748445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-748445"><a href="https://www.wishtv.com/behindthebricks/">Behind the Bricks</a></li>
+	<li id="menu-item-304155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304155"><a href="https://www.wishtv.com/college-sports/">College Sports</a></li>
+	<li id="menu-item-304160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304160"><a href="https://www.wishtv.com/indianapolis-colts/">Colts</a></li>
+	<li id="menu-item-722742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722742"><a href="https://www.wishtv.com/sign-up-for-the-gr8-golf-club/">Gr8 Golf Club</a></li>
+	<li id="menu-item-304157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304157"><a href="https://www.wishtv.com/indiana-fever/">Indiana Fever</a></li>
+	<li id="menu-item-304161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304161"><a href="https://www.wishtv.com/indy-eleven/">Indy Eleven</a></li>
+	<li id="menu-item-556900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-556900"><a href="https://www.wishtv.com/monthofmay/">Month of May</a></li>
+	<li id="menu-item-304196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304196"><a href="https://www.wishtv.com/motorsports/">Motorsports</a></li>
+	<li id="menu-item-304158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304158"><a href="https://www.wishtv.com/indiana-pacers/">Pacers</a></li>
+	<li id="menu-item-1013835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013835"><a href="https://www.wishtv.com/the-zone-banner/">The Zone Banner</a></li>
+	<li id="menu-item-304163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304163"><a href="https://www.wishtv.com/high-school-the-zone/">The Zone &#8211; High School Sports</a></li>
+	<li id="menu-item-304162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304162"><a href="https://www.wishtv.com/the-zone-scoreboard/"> The Zone Scoreboard</a></li>
+</ul>
+</li>
+<li id="menu-item-1026655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1026655"><a href="https://www.wishtv.com/lifestyle/">Lifestyle</a>
+<ul class="sub-menu">
+	<li id="menu-item-304122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304122"><a href="https://www.wishtv.com/all-indiana/">All Indiana</a></li>
+	<li id="menu-item-547755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547755"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li id="menu-item-1304172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1304172"><a href="https://www.wishtv.com/drink-of-the-week/">Drink of the Week</a></li>
+	<li id="menu-item-749589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749589"><a href="https://www.wishtv.com/finding-faith/">Finding Faith</a></li>
+	<li id="menu-item-304127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304127"><a href="https://www.wishtv.com/lifestylelive/">Life.Style.Live!</a></li>
+	<li id="menu-item-1026661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026661"><a href="https://www.wishtv.com/offbeat/">Offbeat</a></li>
+	<li id="menu-item-304165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304165"><a href="https://www.wishtv.com/lifestylelive-recipes/">Recipes</a></li>
+</ul>
+</li>
+<li id="menu-item-1116411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1116411"><a href="https://www.wishtv.com/focus-on-food/">Focus on Food</a>
+<ul class="sub-menu">
+	<li id="menu-item-1116412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116412"><a href="https://www.wishtv.com/focus-on-food/entertaining/">Entertaining</a></li>
+	<li id="menu-item-1198241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198241"><a href="https://www.wishtv.com/focus-on-food/ethnic-dishes/">Ethnic Dishes</a></li>
+	<li id="menu-item-1116416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116416"><a href="https://www.wishtv.com/focus-on-food/everyday-meals/">Everyday Meals</a></li>
+	<li id="menu-item-1116413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116413"><a href="https://www.wishtv.com/focus-on-food/farm-to-table/">Farm To Table</a></li>
+	<li id="menu-item-1116414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116414"><a href="https://www.wishtv.com/focus-on-food/ingredients/">Ingredients</a></li>
+	<li id="menu-item-1116415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116415"><a href="https://www.wishtv.com/focus-on-food/just-the-basics/">Just the Basics</a></li>
+	<li id="menu-item-1116418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116418"><a href="https://www.wishtv.com/focus-on-food/specialty-diets/">Specialty Diets</a></li>
+	<li id="menu-item-1116419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116419"><a href="https://www.wishtv.com/focus-on-food/whats-for-dinner/">What’s For Dinner</a></li>
+</ul>
+</li>
+<li id="menu-item-304128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304128"><a href="https://www.wishtv.com/community/">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-902416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902416"><a href="https://www.wishtv.com/businessdirectory/">Business Directory</a></li>
+	<li id="menu-item-502857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502857"><a href="https://www.wishtv.com/celebrating/">Celebrating Moments</a></li>
+	<li id="menu-item-1122346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1122346"><a href="https://www.wishtv.com/citizens-energy/">Citizens Energy</a></li>
+	<li id="menu-item-304168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304168"><a href="https://www.wishtv.com/community-calendar/">Community Calendar</a></li>
+	<li id="menu-item-304169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304169"><a href="https://www.wishtv.com/community-link/">Community Link</a></li>
+	<li id="menu-item-304170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304170"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li id="menu-item-935200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935200"><a href="https://www.wishtv.com/fofac/">Focus on Family and Community</a></li>
+	<li id="menu-item-304191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304191"><a href="https://www.wishtv.com/gas/">Gas Prices</a></li>
+	<li id="menu-item-304171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304171"><a href="https://www.wishtv.com/golden-apple/">Golden Apple Award</a></li>
+	<li id="menu-item-1073006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073006"><a href="https://www.wishtv.com/scouting/">Governor’s Luncheon for Scouting</a></li>
+	<li id="menu-item-758966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758966"><a href="https://www.wishtv.com/patty/">Great Day TV and Pet Pals TV</a></li>
+	<li id="menu-item-410312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410312"><a href="https://www.wishtv.com/paper/">Gr8 Paper Push</a></li>
+	<li id="menu-item-465014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465014"><a href="https://www.wishtv.com/pasta/">Gr8 Pasta Push</a></li>
+	<li id="menu-item-663322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663322"><a href="https://www.wishtv.com/read/">I Love To Read</a></li>
+	<li id="menu-item-1002987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1002987"><a href="https://www.wishtv.com/indiana-youth-services/">Indiana Youth Services Association</a></li>
+	<li id="menu-item-526053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526053"><a href="https://www.wishtv.com/kennedyking/">Kennedy King Memorial Initiative</a></li>
+	<li id="menu-item-467790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467790"><a href="https://www.wishtv.com/mozelsanders/">Mozel Sanders</a></li>
+	<li id="menu-item-913393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-913393"><a target="_blank" href="https://multiculturalproducers.com/">Multicultural Media Producing Program</a></li>
+	<li id="menu-item-431896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431896"><a href="https://www.wishtv.com/ips/">myIPS</a></li>
+	<li id="menu-item-1344424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344424"><a href="https://www.wishtv.com/obituaries/">Obituaries</a></li>
+	<li id="menu-item-1005349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005349"><a href="https://www.wishtv.com/real-talk/">Real Talk</a></li>
+	<li id="menu-item-405151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405151"><a href="https://www.wishtv.com/westandtogether/">We Stand Together</a></li>
+	<li id="menu-item-647269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647269"><a href="https://www.wishtv.com/toys/">WISH Tree</a></li>
+</ul>
+</li>
+<li id="menu-item-703813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-703813"><a href="https://www.wishtv.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-928215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928215"><a href="https://www.wishtv.com/podcasts/all-indiana-podcast-network-feature-of-the-week/">All INdiana Podcast Network Feature of the Week</a></li>
+	<li id="menu-item-707746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707746"><a href="https://www.wishtv.com/podcasts/acs-conversations/">AC’s Conversations</a></li>
+	<li id="menu-item-707744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707744"><a href="https://www.wishtv.com/podcasts/all-indiana-politics/">All INdiana Politics</a></li>
+	<li id="menu-item-707753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707753"><a href="https://www.wishtv.com/podcasts/behind-the-8/">Behind The 8</a></li>
+	<li id="menu-item-749648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749648"><a href="https://www.wishtv.com/podcasts/behind-the-bricks/">Behind the Bricks</a></li>
+	<li id="menu-item-804133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-804133"><a href="https://www.wishtv.com/podcasts/business-equity-and-opportunities-podcast-with-scott-sander/">Business, Equity and Opportunities</a></li>
+	<li id="menu-item-707735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707735"><a href="https://www.wishtv.com/podcasts/daybreak-drive-in/">Daybreak Drive-IN</a></li>
+	<li id="menu-item-707745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707745"><a href="https://www.wishtv.com/podcasts/golden-apple/">Golden Apple</a></li>
+	<li id="menu-item-764760" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-764760"><a href="https://www.wishtv.com/podcasts/growing-a-beautiful-life/">Growing a Beautiful Life</a></li>
+	<li id="menu-item-707741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707741"><a href="https://www.wishtv.com/podcasts/la-voz-latina-en-indiana/">La Voz Latina en Indiana</a></li>
+	<li id="menu-item-707742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707742"><a href="https://www.wishtv.com/podcasts/life-style-live-podcast/">Life Style Live Podcast</a></li>
+	<li id="menu-item-707747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707747"><a href="https://www.wishtv.com/podcasts/in-the-community/">IN The Community</a></li>
+	<li id="menu-item-707750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707750"><a href="https://www.wishtv.com/podcasts/medical-minutes-with-wish-tv/">Medical Minutes with WISH-TV</a></li>
+	<li id="menu-item-707752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707752"><a href="https://www.wishtv.com/podcasts/news-8-daily/">News 8 Daily</a></li>
+	<li id="menu-item-707751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707751"><a href="https://www.wishtv.com/podcasts/whos-got-next-with-andrew-chernoff/">Who’s Got Next with Andrew Chernoff</a></li>
+	<li id="menu-item-707748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707748"><a href="https://www.wishtv.com/podcasts/weather-weekly/">Weather Weekly</a></li>
+	<li id="menu-item-707758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707758"><a href="https://www.wishtv.com/podcasts/women-take-the-wheel/">Women Take The Wheel</a></li>
+</ul>
+</li>
+<li id="menu-item-304129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304129"><a href="https://www.wishtv.com/about-us/">Station Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-304178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304178"><a href="https://www.wishtv.com/about-us/">About Us</a></li>
+	<li id="menu-item-304179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304179"><a href="https://www.wishtv.com/advertise-with-us/">Advertise With Us</a></li>
+	<li id="menu-item-304197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304197"><a href="https://www.wishtv.com/careers/">Careers at WISH-TV</a></li>
+	<li id="menu-item-401252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401252"><a target="_blank" href="https://circlecitybroadcasting.com/">Circle City Broadcasting</a></li>
+	<li id="menu-item-304180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304180"><a href="https://www.wishtv.com/contact-us/">Contact Us</a></li>
+	<li id="menu-item-304188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304188"><a href="https://www.wishtv.com/cw-8/">CW 8</a></li>
+	<li id="menu-item-1230372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230372"><a href="https://www.wishtv.com/apps/">Download WISH-TV Apps</a></li>
+	<li id="menu-item-304187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304187"><a href="https://www.wishtv.com/email-alerts/">Email Alerts</a></li>
+	<li id="menu-item-357929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357929"><a href="https://www.wishtv.com/history-of-wish-tv/">History of WISH-TV</a></li>
+	<li id="menu-item-304181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304181"><a href="https://www.wishtv.com/internships-at-wish/">Internships At WISH-TV</a></li>
+	<li id="menu-item-926997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-926997"><a href="/meet-the-team">Meet The Team</a></li>
+	<li id="menu-item-304184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304184"><a href="https://www.wishtv.com/myindy-tv/">MyINDY-TV 23</a></li>
+	<li id="menu-item-304183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304183"><a href="https://www.wishtv.com/myindy-tv-23-schedule/">MyINDY-TV 23 Schedule</a></li>
+	<li id="menu-item-1345820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1345820"><a href="https://www.wishtv.com/paid-programming/">Paid Programming</a></li>
+	<li id="menu-item-901295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901295"><a href="https://www.wishtv.com/reception-trouble/">Reception Trouble?</a></li>
+	<li id="menu-item-737495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737495"><a href="https://www.wishtv.com/tour-wish-tv-studios/">Tour WISH-TV Studios</a></li>
+	<li id="menu-item-357925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357925"><a href="https://www.wishtv.com/wish-tv-news-partners-and-affiliates/">WISH-TV News Partners and Affiliates</a></li>
+	<li id="menu-item-684424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-684424"><a href="/shop">WISH-TV Store</a></li>
+	<li id="menu-item-304190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304190"><a href="https://www.wishtv.com/tv-schedule/">WISH-TV Schedule</a></li>
+	<li id="menu-item-1184166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184166"><a href="https://www.wishtv.com/70th-anniversary/">WISH-TV 70th Anniversary</a></li>
+</ul>
+</li>
+<li id="menu-item-304132" class="live-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-304132"><a href="https://www.wishtv.com/live-stream/">Watch Live</a></li>
+</ul></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <nav id="site-navigation" class="main-navigation left-col">
+                    <div class="menu-main-menu-container">
+
+                        <div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304121"><a href="https://www.wishtv.com/news/">News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767195"><a href="https://www.wishtv.com/beoshow/">BE&#038;O Show</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304123"><a href="https://www.wishtv.com/business/">Business</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230508"><a href="https://www.wishtv.com/community-connection-contributors/">Community Connection Contributors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378961"><a href="https://www.wishtv.com/coronavirus/">Coronavirus Latest</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304125"><a href="https://www.wishtv.com/crime-watch-8/">Crime Watch 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260087"><a href="https://www.wishtv.com/crime-watch-8/delphi-murders/">Delphi Murders</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593558"><a href="https://www.wishtv.com/digitaldownload/">Digital Download</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816973"><a href="https://www.wishtv.com/education/">Education</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304134"><a href="https://www.wishtv.com/entertainment/">Entertainment</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845679"><a href="https://www.wishtv.com/election/">Election Coverage</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846446"><a href="https://www.wishtv.com/electionresults/">Election Results</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304135"><a href="https://www.wishtv.com/i-team-8/">I-Team 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304136"><a href="https://www.wishtv.com/indiana-news/">Indiana News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587205"><a href="https://www.wishtv.com/insidestory/">INside Story</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304140"><a href="https://www.wishtv.com/international/">International News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304139"><a href="https://www.wishtv.com/local/">Local News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530537"><a href="https://www.wishtv.com/hispanic-culture/">Hispanic Culture</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319905"><a href="https://www.wishtv.com/health-spotlight/">Health Spotlight</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315469"><a href="https://www.wishtv.com/mental-health-moments/">Mental Health Moments</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319911"><a href="https://www.wishtv.com/multicultural-news/">Multicultural News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304141"><a href="https://www.wishtv.com/national/">National News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304142"><a href="https://www.wishtv.com/news/politics/">Political News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1087998"><a href="https://www.wishtv.com/eclipse/">Solar Eclipse</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304198"><a href="https://www.wishtv.com/traffic/">Traffic</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697754"><a href="https://www.wishtv.com/news/unphiltered-with-phil-sanchez/">UnPHILtered with Phil Sanchez</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304143"><a href="https://www.wishtv.com/weather/">Weather</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723769"><a href="https://www.wishtv.com/weather/7-day-forecast/">7 Day Forecast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723768"><a href="https://www.wishtv.com/weather/almanac/">Almanac</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304145"><a href="https://www.wishtv.com/closings/">Closings &#038; Delays</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723770"><a href="https://www.wishtv.com/weather/current-conditions/">Current Conditions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304148"><a href="https://www.wishtv.com/email-alerts/">Get Weather Email Alerts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723767"><a href="https://www.wishtv.com/weather/hourly-forecast/">Hourly Forecast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723766"><a href="https://www.wishtv.com/weather/future-cast/">Future Cast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304149"><a href="https://www.wishtv.com/weather/interactive-radar/">Interactive Radar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723771"><a href="https://www.wishtv.com/weather/radar/">Radar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723759"><a href="https://www.wishtv.com/weather/severe-outlook/">Severe Outlook</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723760"><a href="https://www.wishtv.com/weather/todays-rainfall/">Today’s Rainfall</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723761"><a href="https://www.wishtv.com/weather/two-week-outlook/">Two Week Outlook</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723762"><a href="https://www.wishtv.com/weather/watches-and-warnings/">Watches and Warnings</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304193"><a href="https://www.wishtv.com/weather/weather-blog/">Weather Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944230"><a href="https://www.wishtv.com/weather-stories/">Weather Stories</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723764"><a href="https://www.wishtv.com/weather/wind-gusts/">Wind Gusts</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304126"><a href="https://www.wishtv.com/sports/">Sports</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1216633"><a href="https://www.wishtv.com/sports/hbcu-games-on-wndy/">2025 HBCU Games on WNDY</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-748445"><a href="https://www.wishtv.com/behindthebricks/">Behind the Bricks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304155"><a href="https://www.wishtv.com/college-sports/">College Sports</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304160"><a href="https://www.wishtv.com/indianapolis-colts/">Colts</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722742"><a href="https://www.wishtv.com/sign-up-for-the-gr8-golf-club/">Gr8 Golf Club</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304157"><a href="https://www.wishtv.com/indiana-fever/">Indiana Fever</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304161"><a href="https://www.wishtv.com/indy-eleven/">Indy Eleven</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-556900"><a href="https://www.wishtv.com/monthofmay/">Month of May</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304196"><a href="https://www.wishtv.com/motorsports/">Motorsports</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304158"><a href="https://www.wishtv.com/indiana-pacers/">Pacers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013835"><a href="https://www.wishtv.com/the-zone-banner/">The Zone Banner</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304163"><a href="https://www.wishtv.com/high-school-the-zone/">The Zone &#8211; High School Sports</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304162"><a href="https://www.wishtv.com/the-zone-scoreboard/"> The Zone Scoreboard</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1026655"><a href="https://www.wishtv.com/lifestyle/">Lifestyle</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304122"><a href="https://www.wishtv.com/all-indiana/">All Indiana</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547755"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1304172"><a href="https://www.wishtv.com/drink-of-the-week/">Drink of the Week</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749589"><a href="https://www.wishtv.com/finding-faith/">Finding Faith</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304127"><a href="https://www.wishtv.com/lifestylelive/">Life.Style.Live!</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026661"><a href="https://www.wishtv.com/offbeat/">Offbeat</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304165"><a href="https://www.wishtv.com/lifestylelive-recipes/">Recipes</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1116411"><a href="https://www.wishtv.com/focus-on-food/">Focus on Food</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116412"><a href="https://www.wishtv.com/focus-on-food/entertaining/">Entertaining</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198241"><a href="https://www.wishtv.com/focus-on-food/ethnic-dishes/">Ethnic Dishes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116416"><a href="https://www.wishtv.com/focus-on-food/everyday-meals/">Everyday Meals</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116413"><a href="https://www.wishtv.com/focus-on-food/farm-to-table/">Farm To Table</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116414"><a href="https://www.wishtv.com/focus-on-food/ingredients/">Ingredients</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116415"><a href="https://www.wishtv.com/focus-on-food/just-the-basics/">Just the Basics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116418"><a href="https://www.wishtv.com/focus-on-food/specialty-diets/">Specialty Diets</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116419"><a href="https://www.wishtv.com/focus-on-food/whats-for-dinner/">What’s For Dinner</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304128"><a href="https://www.wishtv.com/community/">Community</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902416"><a href="https://www.wishtv.com/businessdirectory/">Business Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502857"><a href="https://www.wishtv.com/celebrating/">Celebrating Moments</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1122346"><a href="https://www.wishtv.com/citizens-energy/">Citizens Energy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304168"><a href="https://www.wishtv.com/community-calendar/">Community Calendar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304169"><a href="https://www.wishtv.com/community-link/">Community Link</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304170"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935200"><a href="https://www.wishtv.com/fofac/">Focus on Family and Community</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304191"><a href="https://www.wishtv.com/gas/">Gas Prices</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304171"><a href="https://www.wishtv.com/golden-apple/">Golden Apple Award</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073006"><a href="https://www.wishtv.com/scouting/">Governor’s Luncheon for Scouting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758966"><a href="https://www.wishtv.com/patty/">Great Day TV and Pet Pals TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410312"><a href="https://www.wishtv.com/paper/">Gr8 Paper Push</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465014"><a href="https://www.wishtv.com/pasta/">Gr8 Pasta Push</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663322"><a href="https://www.wishtv.com/read/">I Love To Read</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1002987"><a href="https://www.wishtv.com/indiana-youth-services/">Indiana Youth Services Association</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526053"><a href="https://www.wishtv.com/kennedyking/">Kennedy King Memorial Initiative</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467790"><a href="https://www.wishtv.com/mozelsanders/">Mozel Sanders</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-913393"><a target="_blank" href="https://multiculturalproducers.com/">Multicultural Media Producing Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431896"><a href="https://www.wishtv.com/ips/">myIPS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344424"><a href="https://www.wishtv.com/obituaries/">Obituaries</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005349"><a href="https://www.wishtv.com/real-talk/">Real Talk</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405151"><a href="https://www.wishtv.com/westandtogether/">We Stand Together</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647269"><a href="https://www.wishtv.com/toys/">WISH Tree</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-703813"><a href="https://www.wishtv.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928215"><a href="https://www.wishtv.com/podcasts/all-indiana-podcast-network-feature-of-the-week/">All INdiana Podcast Network Feature of the Week</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707746"><a href="https://www.wishtv.com/podcasts/acs-conversations/">AC’s Conversations</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707744"><a href="https://www.wishtv.com/podcasts/all-indiana-politics/">All INdiana Politics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707753"><a href="https://www.wishtv.com/podcasts/behind-the-8/">Behind The 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749648"><a href="https://www.wishtv.com/podcasts/behind-the-bricks/">Behind the Bricks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-804133"><a href="https://www.wishtv.com/podcasts/business-equity-and-opportunities-podcast-with-scott-sander/">Business, Equity and Opportunities</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707735"><a href="https://www.wishtv.com/podcasts/daybreak-drive-in/">Daybreak Drive-IN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707745"><a href="https://www.wishtv.com/podcasts/golden-apple/">Golden Apple</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-764760"><a href="https://www.wishtv.com/podcasts/growing-a-beautiful-life/">Growing a Beautiful Life</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707741"><a href="https://www.wishtv.com/podcasts/la-voz-latina-en-indiana/">La Voz Latina en Indiana</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707742"><a href="https://www.wishtv.com/podcasts/life-style-live-podcast/">Life Style Live Podcast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707747"><a href="https://www.wishtv.com/podcasts/in-the-community/">IN The Community</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707750"><a href="https://www.wishtv.com/podcasts/medical-minutes-with-wish-tv/">Medical Minutes with WISH-TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707752"><a href="https://www.wishtv.com/podcasts/news-8-daily/">News 8 Daily</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707751"><a href="https://www.wishtv.com/podcasts/whos-got-next-with-andrew-chernoff/">Who’s Got Next with Andrew Chernoff</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707748"><a href="https://www.wishtv.com/podcasts/weather-weekly/">Weather Weekly</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707758"><a href="https://www.wishtv.com/podcasts/women-take-the-wheel/">Women Take The Wheel</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304129"><a href="https://www.wishtv.com/about-us/">Station Info</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304178"><a href="https://www.wishtv.com/about-us/">About Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304179"><a href="https://www.wishtv.com/advertise-with-us/">Advertise With Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304197"><a href="https://www.wishtv.com/careers/">Careers at WISH-TV</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401252"><a target="_blank" href="https://circlecitybroadcasting.com/">Circle City Broadcasting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304180"><a href="https://www.wishtv.com/contact-us/">Contact Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304188"><a href="https://www.wishtv.com/cw-8/">CW 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230372"><a href="https://www.wishtv.com/apps/">Download WISH-TV Apps</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304187"><a href="https://www.wishtv.com/email-alerts/">Email Alerts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357929"><a href="https://www.wishtv.com/history-of-wish-tv/">History of WISH-TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304181"><a href="https://www.wishtv.com/internships-at-wish/">Internships At WISH-TV</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-926997"><a href="/meet-the-team">Meet The Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304184"><a href="https://www.wishtv.com/myindy-tv/">MyINDY-TV 23</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304183"><a href="https://www.wishtv.com/myindy-tv-23-schedule/">MyINDY-TV 23 Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1345820"><a href="https://www.wishtv.com/paid-programming/">Paid Programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901295"><a href="https://www.wishtv.com/reception-trouble/">Reception Trouble?</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737495"><a href="https://www.wishtv.com/tour-wish-tv-studios/">Tour WISH-TV Studios</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357925"><a href="https://www.wishtv.com/wish-tv-news-partners-and-affiliates/">WISH-TV News Partners and Affiliates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-684424"><a href="/shop">WISH-TV Store</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304190"><a href="https://www.wishtv.com/tv-schedule/">WISH-TV Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184166"><a href="https://www.wishtv.com/70th-anniversary/">WISH-TV 70th Anniversary</a></li>
+</ul>
+</li>
+<li class="live-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-304132"><a href="https://www.wishtv.com/live-stream/">Watch Live</a></li>
+</ul></div>                    </div>
+                </nav>
+
+                <div class="right-col d-flex align-items-center">
+                    <!-- Follow us on social -->
+                    <div class="socialicon d-flex align-items-center hide-from-laptop-lg">
+                        <div class="position-relative me-2">Follow Us</div>
+                                                                                    <a href="https://www.facebook.com/WISHNews8" target="_blank"
+                                    title="Facebook"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                                            <a href="https://x.com/wishnews8" target="_blank"
+                                    title="Twitter"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-square-x-twitter"></i>
+                                </a>
+                                                            <a href="https://www.instagram.com/wish8news/" target="_blank"
+                                    title="Instagram"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                                            <a href="https://www.threads.net/@wish8news" target="_blank"
+                                    title="Threads"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-threads"></i>
+                                </a>
+                                                            <a href="https://www.tiktok.com/@wishnews8" target="_blank"
+                                    title="TikTok"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                                            <a href="https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ" target="_blank"
+                                    title="YouTube"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                                    
+                    </div>
+                    <!-- Follow us on social -->
+                    <!-- Indiana Polis Weather -->
+                    <div class="hide-from-laptop-lg">
+                    <div class="s1m_weather_content">
+  <div class="site-header__weather">
+    <a href="https://www.wishtv.com/weather/">
+      <span class="site-header__weather-forecast">
+              <span class="site-header__weather-forecast__text">63°</span>
+        <i class="wi wi-owm-803"></i>
+            </span>
+      <span class="site-header__weather-region">Indianapolis</span>
+    </a>
+  </div>
+</div>
+                    </div>
+                    <!-- Indiana Polis Weather -->
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </header>
+    <div id="main" class="page-content">
+
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=641db32127f4aa0019adbdba&product=inline-share-buttons' async='async'></script>
+<!-- #post-wrapper (Ajax Load More target div) -->
+<div class="d-flex d-flex align-items-center justify-content-center full-ads-block text-center">
+<div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-billboard-1"></div></div>
+<div id="post-wrapper">
+    <div class="container article-container my-5">
+        <div class="row">            <div class="col-lg-9 col-12 left-col">
+
+                <!-- <div class=" fusion-text article-list__heading ">
+                    <h2 class=" wish-header-title">
+                        <strong>All Indiana</strong>
+                    </h2>
+                </div> -->
+
+                <!-- <br/>single-archive.php<br/> -->
+
+                <div class="single-page-header">
+
+                    <h1 class="article-title">
+                        Hoosier musician Clayton Anderson performing virtual concert                    </h1>
+                </div>
+
+                <div class="fusion-flexslider flexslider flexslider-hover-type-none"><div class="single-clip shortcode-video"><div class="bitcentral-fuel-player-section"><div class="fuel-title"><h1 class="fuel-title-heading">Clayton Anderson to perform virtual concert</h1></div><div class="fule-video-section"><fuel-video plugin-version="3.6" id="fuel-single-post-player" class="fuel-single-clip-shortcode-player" title="Clayton Anderson to perform virtual concert" video-url="https://fuel-streaming-prod01.fuelmedia.io/v1/sem/3300ef22-50a1-471a-b6f7-3e9706d44dde.m3u8?swc=6eb8c004-7dad-417d-a428-b449a49103bb&#038;a-plcmt=1" data-poster-image="https://www.wishtv.com/wp-content/uploads/2020/04/695f95f4-5e92-40cc-86a1-d36e97e66e8b-150x150.png" data-preroll-vast-url="https://pubads.g.doubleclick.net/gampad/ads?iu=/21876379913/lin.wish/outstream/hoosier-musician-clayton-anderson-to-perform-virtual-concert&amp;description_url=https%3A%2F%2Fwww.wishtv.com%2F&amp;tfcd=0&amp;npa=0&amp;sz=1x1000&amp;gdfp_req=1&amp;output=vast&amp;vpos=preroll&amp;unviewed_position_start=1&amp;plcmt=1&amp;env=vp&amp;vpmute=1&amp;impl=s&amp;correlator=&amp;plcmt=1" data-audio-and-autoplay="1" data-ad-method="1" preload="auto" data-swc="6eb8c004-7dad-417d-a428-b449a49103bb" data-channel="3300ef22-50a1-471a-b6f7-3e9706d44dde"></fuel-video><div class="fuel-meta"><div class="fuel-player-share"><div class="fuel-share-area"><a href="javascript:void(0);"><i class="fas fa-share" post-id="356502" post-url="https://www.wishtv.com/fuel/clayton-anderson-to-perform-virtual-concert/" post-title="Clayton Anderson to perform virtual concert" embed-shortcode="on" social-share="on" social-options='{"facebook":"on","twitter":"on","linkedin":"on","email":"on"}' is-tiles=""></i></a><input type="hidden" name="fuel_embeded_code" value="&lt;script type=&quot;text/javascript&quot; id=&quot;fuel-player-script&quot; src=&quot;https://fuel-streaming-prod01.fuelmedia.io/player/v3/fuel.js&quot;&gt;&lt;/script&gt;&lt;fuel-video plugin-version=&quot;3.6&quot; id=&quot;fuel-single-post-player&quot; class=&quot;single-fuel-player&quot; title=&quot;Clayton Anderson to perform virtual concert&quot; video-url=&quot;https://fuel-streaming-prod01.fuelmedia.io/v1/sem/3300ef22-50a1-471a-b6f7-3e9706d44dde.m3u8?swc=6eb8c004-7dad-417d-a428-b449a49103bb&quot; data-poster-image=&quot;https://www.wishtv.com/wp-content/uploads/2020/04/695f95f4-5e92-40cc-86a1-d36e97e66e8b-150x150.png&quot; data-audio-and-autoplay=&quot;1&quot; preload=&quot;auto&quot; data-swc=&quot;6eb8c004-7dad-417d-a428-b449a49103bb&quot; data-channel=&quot;3300ef22-50a1-471a-b6f7-3e9706d44dde&quot;&gt;&lt;/fuel-video&gt;" class="fuel_embeded_code_356502"></div></div></div></div></div></div>                </div>
+
+                <!-- Share This Button - Displaying from 3rd party website sharethis -->
+                <div class="sharethis-inline-share-buttons" data-network="email" data-title="Check out this article from WISH-TV" data-email-subject="Check out this article from WISH-TV"></div>
+           
+                            <!-- Text to speech -->
+           <script defer="defer"
+                            src="https://tts.carbonatixaudio.com/static/js/tts_player.js"></script>
+                            <div class="tts-player exclude-player">
+                            <div id="xml-audio-player"
+                            data-src="https://api.prod.carbonatixaudio.com/article?token=1NJOa7MmZxfoKhp{M(21KERxftyw!vV90}wlTj.w"></div>
+                            <div id="tts-shadow-root"></div>
+                            </div> 
+                                            <div class="article-meta">
+                    <div class="byline">by: McKinzie Roth</div>
+                    <div class="posttime">Posted: <time>Apr 2, 2020 / 05:15 PM EST</time> / Updated: <time>Apr 2, 2020 / 06:05 PM EST</time></div>
+                </div>
+
+                <div class="article-content rich-text">
+                    <p>
+                        <p>INDIANAPOLIS (WISH) &#8212; News 8&#8217;s Entertainment Insider McKinzie Roth talked Thursday on &#8220;All Indiana: with country musician Clayton Anderson.</p>
+<p>Anderson, who is from Indiana, began a virtual concert at 6 p.m. Thursday for a good cause.</p>
+<p>Anderson is performing at The Pavilion at Pan Am in downtown Indianapolis to raise money for local bartenders and service industry workers affected by COVID-19. Watch the show and donate on <strong><a href="https://www.facebook.com/claytonandersonofficial/">Anderson&#8217;s Facebook page</a></strong>.  Zink Distributing Co. and Anheuser-Busch will provide matching donations.</p>
+<p>Watch the video to watch the interview with Anderson.</p><script type="text/javascript" src="https://newsource-embed-prd.ns.cnn.com/videos/embed-video-player.min.js"
+                        data-newsource-publisher="243" data-max-width="auto" data-player-data="Editors'%20Choice" data-autoplay="1"
+                        data-player-type="1020" data-embed-type="3020" data-row-type="2020">
+                        </script>
+</p>                    </p>
+                </div>
+            </div>             <div class="wish-sidebar col-lg-3 col-12 right-col">                                 <section id="block-42" class="widget widget_block"><div class="adsblock d-flex align-items-center justify-content-center full-ads-block">
+    <div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-rectangle-1"></div></div>
+</section><section id="block-32" class="widget widget_block">    <div class="popular-stroies  variation2  ">
+                    <h2 class="ttl">
+            WISHTV.com Trending Stories             </h2>
+                <div class="popular-stories-list">
+            <ul> 
+                                <li class="featured-post-row">
+                    <!-- Featured image for the top story -->
+                                            <div class="featured-image">
+                            <a href="https://www.wishtv.com/news/health-spotlight/former-cvs-pharmacist-understaffing-causing-medication-errors/"><img decoding="async" width="150" height="150" src="https://www.wishtv.com/wp-content/uploads/2025/05/15/LOCAL-CVS-PHARMACY-PROBLEM-LLPKG.transfer_frame_2928-e1747278631428.jpg?width=150&amp;height=150&amp;fit=bounds&amp;crop=1:1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></a>
+                        </div>
+                            
+                    <!-- Post title with link -->
+                    <div class="content-box">
+                        <div class="post-title">
+                            <a href="https://www.wishtv.com/news/health-spotlight/former-cvs-pharmacist-understaffing-causing-medication-errors/">Former CVS pharmacist: Understaffing causing medication errors</a>
+                        </div>
+                        
+                        <!-- Display the view count for the top story -->
+                        <div class="view-box">
+                            <span>21,995 Views</span>
+                
+                            <!-- Social sharing options for the top story -->
+                            <div class="social-sharing">
+                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.wishtv.com/news/health-spotlight/former-cvs-pharmacist-understaffing-causing-medication-errors/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.wishtv.com/news/health-spotlight/former-cvs-pharmacist-understaffing-causing-medication-errors/&text=Former CVS pharmacist: Understaffing causing medication errors" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fhealth-spotlight%2Fformer-cvs-pharmacist-understaffing-causing-medication-errors%2F" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </li>
+                                            <li>
+                    <div class="post-row">
+                        <div class="post-title">
+                             <a href="https://www.wishtv.com/news/business/kroger-sale-tags-error-report/">Kroger overcharging customers on sale items, ...</a>
+
+                            <div class="social-sharing">
+                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.wishtv.com/news/business/kroger-sale-tags-error-report/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.wishtv.com/news/business/kroger-sale-tags-error-report/&text=Kroger overcharging customers on sale items, Consumer Reports finds" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fbusiness%2Fkroger-sale-tags-error-report%2F" target="_blank">
+                             
+                                <i class="fa-regular fa-envelope"></i>
+                                </a>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                                <input type="hidden" value="Kroger overcharging customers on sale items, Consumer Reports finds - 14017">
+                                                <li>
+                    <div class="post-row">
+                        <div class="post-title">
+                             <a href="https://www.wishtv.com/news/crime-watch-8/indianapolis-woman-fatally-shot-massachusetts-avenue-may-14-2025/">Woman killed in shooting outside east side ev...</a>
+
+                            <div class="social-sharing">
+                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.wishtv.com/news/crime-watch-8/indianapolis-woman-fatally-shot-massachusetts-avenue-may-14-2025/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.wishtv.com/news/crime-watch-8/indianapolis-woman-fatally-shot-massachusetts-avenue-may-14-2025/&text=Woman killed in shooting outside east side event center" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Findianapolis-woman-fatally-shot-massachusetts-avenue-may-14-2025%2F" target="_blank">
+                             
+                                <i class="fa-regular fa-envelope"></i>
+                                </a>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                                <input type="hidden" value="Woman killed in shooting outside east side event center - 12606">
+                                                <li>
+                    <div class="post-row">
+                        <div class="post-title">
+                             <a href="https://www.wishtv.com/news/crime-watch-8/purdue-basketball-player-arrested-for-owi-in-howard-county/">Purdue basketball player arrested for OWI in ...</a>
+
+                            <div class="social-sharing">
+                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.wishtv.com/news/crime-watch-8/purdue-basketball-player-arrested-for-owi-in-howard-county/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.wishtv.com/news/crime-watch-8/purdue-basketball-player-arrested-for-owi-in-howard-county/&text=Purdue basketball player arrested for OWI in Howard County" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Fpurdue-basketball-player-arrested-for-owi-in-howard-county%2F" target="_blank">
+                             
+                                <i class="fa-regular fa-envelope"></i>
+                                </a>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                                <input type="hidden" value="Purdue basketball player arrested for OWI in Howard County - 11612">
+                                                <li>
+                    <div class="post-row">
+                        <div class="post-title">
+                             <a href="https://www.wishtv.com/weather/weather-blog/tracking-thursday-night-severe-risk-fridays-severe-threat-heightened-may-15-2025/">Friday&#8217;s severe weather threat heighten...</a>
+
+                            <div class="social-sharing">
+                                <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.wishtv.com/weather/weather-blog/tracking-thursday-night-severe-risk-fridays-severe-threat-heightened-may-15-2025/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                <a class="twitter" href="https://twitter.com/intent/tweet?url=https://www.wishtv.com/weather/weather-blog/tracking-thursday-night-severe-risk-fridays-severe-threat-heightened-may-15-2025/&text=Friday&#8217;s severe weather threat heightened" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fweather%2Fweather-blog%2Ftracking-thursday-night-severe-risk-fridays-severe-threat-heightened-may-15-2025%2F" target="_blank">
+                             
+                                <i class="fa-regular fa-envelope"></i>
+                                </a>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                                <input type="hidden" value="Friday&#8217;s severe weather threat heightened - 11008">
+                                            </ul>
+        </div>
+    </div>
+</section><section id="block-43" class="widget widget_block"><div class="adsblock d-flex align-items-center justify-content-center full-ads-block">
+    <div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-rectangle-2"></div></div>
+</section>                
+            </div><!-- .wish-sidebar -->
+        </div>
+
+        <div class="news-storie-row">
+            <div class="single-more-stories-section">
+                <div class="row pad-top">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="single-more-stories-ttl viewall-ttlrow mb-5">
+                            <h2 class="underlinetxt">MORE STORIES</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-more-stories-wrapper">
+                    <div class="row">
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/news/quiet-and-more-comfortable-weekend-may-17-2025/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/17/slot0.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Quiet and more comfortable weekend...                                </div>
+
+                                <div class="post-content">
+                                    News /
+                                    <time>May 17, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/sports/veteran-drivers-keep-returning-to-addicting-indy-500/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/17/Helio-Castroneves-Indianapolis-500-Open-Test-By_-Joe-Skibinski_Ref-Image-Without-Watermark_m125981-e1747450749922.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Veteran drivers keep returning to...                                </div>
+
+                                <div class="post-content">
+                                    Sports /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/wish-tv-70th-anniversary/wishstory-serial-killer-herb-baumeister-targets-gay-men-in-indiana/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/16/70th-HERB-BAUMEISTER-PKG_frame_9168-e1747439364467.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    &#8216;WISHstory&#8217; | Serial killer Herb...                                </div>
+
+                                <div class="post-content">
+                                    WISH-TV 70th Anniversary /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/news/crime-watch-8/brownsburg-child-care-center-owner-and-director-arrested-during-child-sex-abuse-investigation/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/16/Minton-and-Lingbeck-mugshots-background.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Brownsburg child care center owner...                                </div>
+
+                                <div class="post-content">
+                                    Crime Watch 8 /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/news/local-news/the-home-depot-foundation-supports-veterans-with-200-essential-home-care-kits/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/16/VETERAN-HOMECARE-KITS-PKG-5PM.transfer_frame_474-e1747433363553.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    The Home Depot Foundation supports...                                </div>
+
+                                <div class="post-content">
+                                    Local News /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/monthofmay/monarca-academy-students-rally-behind-pato-oward/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/16/IMS-STEM-PKG.transfer_frame_1291-e1747432668589.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Monarca Academy students rally behind...                                </div>
+
+                                <div class="post-content">
+                                    Month of May /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/news/allindiana/prime-47-downtown-indy-sells-wagyu-grill-kits-for-memorial-day-and-race-festivities/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2025/05/16/Image-2025-05-16T175727.194.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Prime 47 Downtown Indy sells...                                </div>
+
+                                <div class="post-content">
+                                    All Indiana /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-12">
+
+                            <a href="https://www.wishtv.com/news/politics/1390982us-government-credit-rating-downgraded-may-16-2025/" class="more-post-stories">
+                                <div class="postpic">
+                                    <div class="bgimg postthumb" style="background-image:url(https://www.wishtv.com/wp-content/uploads/2024/01/03/US-Treasury-Building-e1747432552315.jpg)">
+                                    </div>
+                                </div>
+                                <div class="post-ttl">
+                                    Moody&#8217;s downgrades US credit due...                                </div>
+
+                                <div class="post-content">
+                                    Political News /
+                                    <time>May 16, 2025                                    </time>
+
+                                </div>
+                            </a>
+
+                        </div>
+                         <br /> 
+                        <!-- <div id="circularhub_module_10841"></div> -->
+                        <!-- <script src="//api.circularhub.com/10841/f74c53c89e1d7459/circularhub_module.js"></script> -->
+                    </div>
+                </div>
+            </div><!-- .row -->
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">                         <div id="remnant_script">
+                        </div> 
+
+                        <script>
+                            jQuery(document).ready(function () {
+                                    if (jQuery(window).width() < 700) {
+                                        jQuery('#remnant_script').append('<div data-type="_mgwidget" data-widget-id="1740306"><\/div>');
+                                        jQuery('#remnant_script').append('<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");<\/script>');
+                                    }
+                                    else {
+                                        jQuery('#remnant_script').append('<div data-type="_mgwidget" data-widget-id="1740307"><\/div>');
+                                        jQuery('#remnant_script').append('<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");<\/script>');
+                                    }
+                                });
+                        </script>  
+                    
+                                    </div>
+            </div>
+        </div>
+    </div><!-- .article-container -->
+</div> <!-- End #post-wrapper -->
+
+    <input type="hidden" value="post view count-115">
+        
+   </div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+                            <div class="col-xl-3 col-12 d-flex align-items-center footer-logo  mb-5 lg-mb-0">
+                    <div class="widget_text chw-widget"><div class="textwidget custom-html-widget"><a href="/"><img src="/wp-content/uploads/2023/02/footer-logo-300x36-1.png" alt="Wish TV"></a></div></div>                </div>
+            
+                            <div class="col-xl-3 col-md-6 mb-5 lg-mb-0">
+                    <div class="chw-widget"><h2>Categories</h2>
+<ul>
+    <li class="elementor-icon-list-item">
+        <a href="/news">
+            <span class="elementor-icon-list-text">News</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/weather/">
+            <span class="elementor-icon-list-text">Weather</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/sports/">
+            <span class="elementor-icon-list-text">Sports</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/lifestylelive/">
+            <span class="elementor-icon-list-text"> Life. Style. Live!</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/community/">
+
+            <span class="elementor-icon-list-text">Community</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/about-us/">
+
+            <span class="elementor-icon-list-text">Station Info</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/tv-schedule/">
+
+            <span class="elementor-icon-list-text">TV Schedule</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/live-stream/">
+
+            <span class="elementor-icon-list-text">Watch Live</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/monthofmay/">
+
+            <span class="elementor-icon-list-text">Indy 500</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/betting/">
+
+            <span class="elementor-icon-list-text">Betting</span>
+        </a>
+    </li>
+</ul></div>                </div>
+                                        <div class="col-xl-3 col-md-6 news-weather-column  mb-5 lg-mb-0">
+                    <div class="chw-widget"><h2>News/Weather App</h2>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div class="appicons">
+                            <h6>News</h6>
+                            <a href="https://apps.apple.com/us/app/wish-tv-indianapolis/id1492304585" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/appstore_footer-1.png" alt="Appstore" class="mb-2"></a>
+                            <a href="https://play.google.com/store/apps/details?id=wish.id3676" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/googleplay_footer-1.png" alt="Google play Store"></a>
+                        </div>
+                        <div class="appicons">
+                            <h6>Weather</h6>
+                            <a href="https://wish8tv.page.link/qbvQ" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/appstore_footer-1.png" alt="Appstore" class="mb-2"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.wish8tv.android.weatherapp&amp;hl=en_US&amp;pli=1" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/googleplay_footer-1.png" alt="Google play Store"></a>
+                        </div>
+                    </div></div>                </div>
+                                        <div class="col-lg-3">
+                    <div class="chw-widget"><h2>Follow Us</h2>
+<div class="ft-socialicon d-flex">
+    <a href="https://www.facebook.com/WISHNews8" target="_blank" class="d-flex"><i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://x.com/wishnews8" class="d-flex" target="_blank"><i
+            class="fa-brands fa-square-x-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/wish8news/" class="d-flex" target="_blank"><i
+            class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.threads.net/@wish8news" class="d-flex" target="_blank"><i
+        class="fa-brands fa-threads" style="color: #262626;"></i>
+    </a>
+    <a href="https://www.tiktok.com/@wishnews8" class="d-flex" target="_blank"><i
+        class="fa-brands fa-tiktok" style="color: #262626;"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ" class="d-flex" target="_blank"><i
+            class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+<a href="https://circlecitybroadcasting.com/" target="_blank"><img decoding="async"
+        src="/wp-content/uploads/2023/02/CCB-Horizontal-white.png" alt="city circle broadcasting"></a></div>                </div>
+                    </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="container-xxl">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-12">
+                    <div class="menu-footer-primary-container"><ul id="menu-footer-primary" class="menu"><li id="menu-item-1323852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1323852"><a href="https://www.wishtv.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-1324138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1324138"><a href="https://www.wishtv.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1084170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084170"><a href="https://www.wishtv.com/publishing-principles/">Publishing Principles</a></li>
+<li id="menu-item-901252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901252"><a href="https://www.wishtv.com/wp-content/uploads/2024/08/01/EEO-ANNUAL-PUBLIC-FILE-REPORT-WISH-WNDY-WIIH-TV-4.1.2023-3.31.2024V2.pdf">EEO Report</a></li>
+<li id="menu-item-901253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901253"><a href="https://publicfiles.fcc.gov/tv-profile/wish-tv">FCC Public File (WISH)</a></li>
+<li id="menu-item-901255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901255"><a href="https://publicfiles.fcc.gov/tv-profile/wndy-tv">FCC Public File (WNDY)</a></li>
+</ul></div>                </div>
+                <div class="col-xl-5 col-12 text-center text-xl-end">© 2025 CIRCLE CITY BROADCASTING I, LLC. | ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+var sPath = window.location.pathname;
+var parent = window.location.pathname.split('/');
+var sid = 543;
+
+if (sPath == '/weather/' || parent[1] == 'weather' || parent[1] == 'closings') {
+sid = 308;
+}
+else if (sPath == '/beoshow/' || parent[1] == 'beoshow') {
+sid = 513;
+}
+else if (sPath == '/podcasts/' || parent[1] == 'podcasts') {
+sid = 544;
+}
+
+
+;!function(){
+window.PianoESPConfig = {
+id: sid
+}
+var e=document.createElement("script");e.setAttribute("id","pnesplucidsdksel"),e.type="text/javascript",e.src="//api-esp.piano.io/public/sdk/v04/sdk.js?v="+(localStorage&&localStorage.lucidsdkver||"xxx"),e.async=!0,document.getElementsByTagName("script")[0].parentNode.appendChild(e);
+}();
+</script>
+<script type="text/javascript">
+    if (typeof SDG === 'object' && typeof SDG.webAppHacks !== 'undefined') {
+        window.setTimeout(function() {
+            var webAppHacks = new SDG.webAppHacks();
+        }, 1300);
+
+        window.setTimeout(function() {
+            if ( $('.wish-hero').length === 0 ) {
+                SDG.webAppHacksNew = function() {
+                	var $ = jQuery;
+                	/* Hacks go here */
+                	var wishTitles = jQuery('body:not(.home)').find('.post-content>.fusion-fullwidth>.fusion-row>.fusion-layout-column>.fusion-column-wrapper').find('>.article-list__heading, >.fusion-title,>.fusion-text').find('>h1,>h2,>h3');
+                
+                	var wishHero = $('.post-content').find('article.post,fuel-video').find('img,video,iframe').first();
+                
+                	if ( wishHero.length === 0 && wishTitles.length ) {
+                		var altWishHero = wishTitles.first().parents('.fusion-layout-column').next('.fusion-layout-column').find('iframe').first();
+                		if ( altWishHero.length && altWishHero.width() > 400 ) {
+                			wishHero = altWishHero;
+                		}
+                	}
+                
+                	wishTitles.addClass('wish-header-title');
+                	wishHero.addClass('wish-hero');
+                
+                	if (wishHero.length && wishTitles.length) {
+                		var width = wishHero.is('video') ? $('.wish-hero').parents('.fusion-column-wrapper').width() : $('.wish-hero').width();
+                		$('.wish-header-title').first().css('width', width).css('max-width', '100%');
+                	}
+                
+                	var headlines = $('#main .fusion-fullwidth + .fusion-fullwidth > .fusion-row > .fusion-layout-column > .fusion-column-wrapper > .fusion-text > p:first-child:last-child');
+                
+                	if ( headlines.length ) {
+                
+                		$.each(headlines, function() {
+                			var text = $(this).text(),
+                			parent = $(this).parent();
+                
+                			if ( text.length < 80 ) {
+                				parent.html('<h3 class="wish-header-title">' + text + '</h3>');
+                			}
+                		});
+                	}
+                
+                	var badHeaders = $('.page > div > div.fusion-fullwidth > div > .fusion-layout-column > div > .fusion-title > h2:first-child:last-child p:first-child:last-child');
+                
+                	if ( badHeaders.length ) {
+                		$.each(badHeaders, function() {
+                			var text = $(this).text(),
+                				parent = $(this).parents('.fusion-title');
+                
+                			if ( text.length < 80 ) {
+                				parent.html('<h3 class="wish-header-title">' + text + '</h3>');
+                			}
+                		});
+                	}
+                };
+                var webAppHacksNew = new SDG.webAppHacksNew();
+            } else {
+                if ( $('.wish-hero').length && $('.wish-hero').width() < 500 ) {
+                    $('.wish-header-title[style*="max-width: 100%"]').css('width', '100%');
+                }
+            }
+        }, 1600);
+    }
+    
+</script><script>
+    function isOnScreen(elem) {
+        // if the element doesn't exist, abort
+        if (elem.length == 0) {
+            return;
+        }
+        var $window = jQuery(window)
+        var viewport_top = $window.scrollTop()
+        var viewport_height = $window.height()
+        var viewport_bottom = viewport_top + viewport_height
+        var $elem = jQuery(elem)
+        var top = $elem.offset().top
+        var height = $elem.height()
+        var bottom = top + height
+
+        return (top >= viewport_top && top < viewport_bottom) ||
+            (bottom > viewport_top && bottom <= viewport_bottom) ||
+            (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+    }
+
+
+    jQuery(document).ready(function () {
+        jQuery('.accordion-list > li > .answer').hide();
+
+        jQuery('.accordion-list > li').click(function () {
+            if (jQuery(this).hasClass("active")) {
+                jQuery(this).removeClass("active").find(".answer").slideUp();
+            } else {
+                jQuery(".accordion-list > li.active .answer").slideUp();
+                jQuery(".accordion-list > li.active").removeClass("active");
+                jQuery(this).addClass("active").find(".answer").slideDown();
+            }
+            return false;
+        });
+        $(".only-search-icon").click(function () {
+            $('#searchform').toggle();
+        });
+
+    });
+    </script>
+
+<script type="text/javascript" id="wpzoom-rcb-block-script-js-extra">
+/* <![CDATA[ */
+var wpzoomRecipeCard = {"siteURL":"https:\/\/www.wishtv.com","pluginURL":"https:\/\/www.wishtv.com\/wp-content\/plugins\/recipe-card-blocks-by-wpzoom-pro\/","storeURL":"https:\/\/recipecard.io\/","homeURL":"https:\/\/www.wishtv.com\/","defaultCookMode":"0","permalinks":"\/%category%\/%postname%\/","permalink":"https:\/\/www.wishtv.com\/news\/allindiana\/hoosier-musician-clayton-anderson-to-perform-virtual-concert\/","ajax_url":"https:\/\/www.wishtv.com\/wp-admin\/admin-ajax.php","nonce":"1ab2a7ec4a","api_nonce":"d312e9af4b","strings":{"loading-gallery-media":"Loading gallery media"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/assets/js/script.js?ver=5.6.16" id="wpzoom-rcb-block-script-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/assets/js/nosleep.min.js?ver=5.6.16" id="wpzoom-rcb-block-no-sleep-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/assets/js/adjustable-servings.js?ver=5.6.16" id="wpzoom-rcb-block-adjustable-servings-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/recipe-card-blocks-by-wpzoom-pro/dist/assets/js/masonry-gallery.js?ver=5.6.16" id="wpzoom-rcb-block-masonry-gallery-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/awesome-weather/js/awesome-weather-widget-frontend.js?ver=1.1" id="awesome_weather-js"></script>
+<script type="text/javascript" id="embedpress-front-js-extra">
+/* <![CDATA[ */
+var eplocalize = {"ajaxurl":"https:\/\/www.wishtv.com\/wp-admin\/admin-ajax.php","is_pro_plugin_active":"","nonce":"9584fdd4dd"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/embedpress/assets/js/front.js?ver=4.2.3" id="embedpress-front-js"></script>
+<script type="text/javascript" id="fuel-bitcentral-script-js-extra">
+/* <![CDATA[ */
+var fuelajax = {"ajaxurl":"https:\/\/www.wishtv.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/fuel-bitcentral/assets/js/fuel-bitcentral.js?ver=1747440000" id="fuel-bitcentral-script-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.3" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" id="theme-scripts-js-extra">
+/* <![CDATA[ */
+var localVars = {"ajaxurl":"https:\/\/www.wishtv.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/js/bundle.min.js?v=3494909962" id="theme-scripts-js"></script>
+<script type="text/javascript" src="https://htlbid.com/v3/wishtv.com/opscobid.js" id="htlbid-script-js"></script>
+<script type="text/javascript">
+    (function () {
+        /** CONFIGURATION START **/
+        var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+        _sf_async_config.uid = 66049;
+        _sf_async_config.domain = 'wishtv.com'; //CHANGE THIS TO THE ROOT DOMAIN
+        _sf_async_config.flickerControl = false;
+        _sf_async_config.useCanonical = true;
+        _sf_async_config.useCanonicalDomain = true;
+        _sf_async_config.sections = ''; // CHANGE THIS TO YOUR SECTION NAME(s)
+        _sf_async_config.authors = ''; // CHANGE THIS TO YOUR AUTHOR NAME(s)
+        /** CONFIGURATION END **/
+        function loadChartbeat() {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('script')[0];
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = '//static.chartbeat.com/js/chartbeat.js';;
+            n.parentNode.insertBefore(e, n);
+        }
+        loadChartbeat();
+    })();
+</script>
+<script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
+
+
+<script>
+    //Automatically load more posts every 5 minutes on sub-category pages
+            var w = 1;
+        if (jQuery("#loade_more_posts").length > 0) {
+            var refreshId = setInterval(function () {
+                jQuery("#loade_more_posts").click();
+
+                if (w >= 5) {
+                    clearInterval(refreshId);
+                }
+                w++;
+            }, 30000);
+
+        }
+    </script>
+<script>
+    window.opscobid = window.opscobid || {};
+    opscobid.cmd = opscobid.cmd || [];
+    opscobid.cmd.push(function () {
+        opscobid.layout('universal'); // Leave as 'universal' or add custom layout
+                opscobid.setTargeting("is_testing", "no"); // Set to "no" for production
+                        opscobid.setTargeting("is_home", "no"); // Set to "yes" on the homepage
+            
+                    opscobid.setTargeting("category", "All Indiana"); // dynamically pass page category into this function
+        
+        opscobid.setTargeting("post_id", 356494); // dynamically pass unique post/page id into this function
+    });
+</script>
+
+
+
+<div data-unit="lin.wish/hoosier-musician-clayton-anderson-to-perform-virtual-concert" class="opscoad-leaderboard-3"></div>
+
+<!-- Infolink for header popup ad -->
+    <script type="text/javascript">
+        var infolinks_pid = 3287549;
+        var infolinks_wsid = 0;
+    </script>
+    <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+<!-- Infolink for header popup ad -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-d17f109c7e1c3c29839","applicationID":"425086169","transactionName":"Y1EGbBcCCEFZUxBQWVobJVsRCglcF0MNV1FYUUlZFwAOW05V","queueTime":0,"applicationTime":1089,"atts":"TxYFGl8YG08=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
