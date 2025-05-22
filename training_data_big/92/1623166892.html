@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml"><head id="j_idt24"><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/theme.css?ln=primefaces-aristo" /><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/components.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="/faces/javax.faces.resource/core.js?ln=primefaces&amp;v=6.2"></script><script type="text/javascript" src="/faces/javax.faces.resource/components.js?ln=primefaces&amp;v=6.2"></script><link type="text/css" rel="stylesheet" href="/faces/javax.faces.resource/watermark/watermark.css?ln=primefaces&amp;v=6.2" /><script type="text/javascript" src="/faces/javax.faces.resource/watermark/watermark.js?ln=primefaces&amp;v=6.2"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script><!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'ctBk2kAapp1PD', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) --><script type="text/javascript" src="https://ads.vidoomy.com/djazairess.com_16154.js" async></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="/resources/layout_all.css" rel="stylesheet" type="text/css" />
+        <link href="/resources/layout_ar.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="/resources/djazairess-favicon.png" /><script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9685814701970332' crossorigin='anonymous' ></script><script type="text/javascript" src="/faces/javax.faces.resource/query_width.js"></script><script async src='//securepubads.g.doubleclick.net/tag/js/gpt.js'></script><script type='text/javascript'>window.googletag = window.googletag || {cmd: []};googletag.cmd.push(function() {googletag.defineSlot('/null/Djazairess_Ar_Header', [[728, 90]], 'div-gpt-ad-1510511498-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Header', 'div-gpt-ad-1510511498-0-oop').addService(googletag.pubads());
+
+googletag.defineSlot('/null/Djazairess_Ar_Article_1', [[336, 280], [300, 300], [300, 250], [300, 600]], 'div-gpt-ad-502778721-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Article_1', 'div-gpt-ad-502778721-0-oop').addService(googletag.pubads());
+
+googletag.defineSlot('/null/Djazairess_Ar_Article_3', [[336, 280], [300, 300], [300, 250]], 'div-gpt-ad-502778719-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Article_3', 'div-gpt-ad-502778719-0-oop').addService(googletag.pubads());
+
+googletag.defineSlot('/null/Djazairess_Ar_Article_2', [[336, 280], [300, 300], [300, 250]], 'div-gpt-ad-502778720-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Article_2', 'div-gpt-ad-502778720-0-oop').addService(googletag.pubads());
+
+googletag.defineSlot('/null/Djazairess_Ar_Widget', [[222, 280]], 'div-gpt-ad-1077287891-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Widget', 'div-gpt-ad-1077287891-0-oop').addService(googletag.pubads());
+
+googletag.defineSlot('/null/Djazairess_Ar_Siteunder', [[336, 280], [300, 300], [300, 250]], 'div-gpt-ad-1575446168-0').addService(googletag.pubads());
+googletag.defineOutOfPageSlot('/null/Djazairess_Ar_Siteunder', 'div-gpt-ad-1575446168-0-oop').addService(googletag.pubads());
+
+googletag.pubads().enableSingleRequest(); googletag.enableServices();});</script>
+            <meta property="og:title" content="الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="https://www.djazairess.com/eldjadida/129739" />
+            <meta property="og:image" content="https://images2.djazairess.com/eldjadida/129739" />
+            <meta property="og:site_name" content="جزايرس" />
+            <meta property="fb:app_id" content="175897515778319" /><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-null" crossorigin="anonymous"></script>
+            <!-- Google tag (gtag.js) --><script async src='//www.googletagmanager.com/gtag/js?id=G-ZKNZM9GW95'></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'G-ZKNZM9GW95');
+            </script>
+        <title>جزايرس : الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+        </title>
+        <script type="text/javascript" src="//apis.google.com/js/plusone.js">{
+                    lang: 'ar';
+                }</script>
+        <script src="/resources/css_browser_selector.js" type="text/javascript"></script></head><body class="Link body" onload="document.getElementById('queryText').focus()">
+        <div class="wrap">
+            <div id="firstColumn">
+                 
+            </div>
+            <div id="container">
+                <div class="header">
+                    <div id="logoWrapper">
+                        <table style="height: 100%">
+                            <tr>
+                                <td>
+                                    <a href="/">
+                                        <img src="/resources/djazairess-logo-ar.png" alt="جزايرس" style="border: 0px" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="headerAdWrapper"><div id='div-gpt-ad-1510511498-0' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510511498-0');
+});</script>
+</div>
+<div id='div-gpt-ad-1510511498-0-oop' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1510511498-0-oop');
+});</script>
+</div>
+                    </div>
+                </div>
+<form id="j_idt66" name="j_idt66" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt66" value="j_idt66" />
+<div id="centeredmenu" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/"><span class="ui-menuitem-text">الرئيسية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all active" href="/politics"><span class="ui-menuitem-text">السياسية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/economics"><span class="ui-menuitem-text">الاقتصادية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/international"><span class="ui-menuitem-text">الدولية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/sports"><span class="ui-menuitem-text">الرياضية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/society"><span class="ui-menuitem-text">الاجتماعية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/culture"><span class="ui-menuitem-text">الثقافية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/religion"><span class="ui-menuitem-text">الدينية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/health"><span class="ui-menuitem-text">الصحية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/video"><span class="ui-menuitem-text">بالفيديو</span></a></li><li class="ui-widget ui-menuitem ui-corner-all ui-menu-parent" role="menuitem" aria-haspopup="true"><a href="#" class="ui-menuitem-link ui-submenu-link ui-corner-all" tabindex="-1"><span class="ui-menuitem-text">قائمة الصحف</span><span class="ui-icon ui-icon-triangle-1-s"></span></a><ul class="ui-widget-content ui-menu-list ui-corner-all ui-helper-clearfix ui-menu-child ui-shadow" role="menu"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elitihad"><span class="ui-menuitem-text">الاتحاد</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/eloumma"><span class="ui-menuitem-text">الأمة العربية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elayem"><span class="ui-menuitem-text">الأيام الجزائرية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elbilad"><span class="ui-menuitem-text">البلاد أون لاين</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all active" href="/eldjadida"><span class="ui-menuitem-text">الجزائر الجديدة</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/djazairnews"><span class="ui-menuitem-text">الجزائر نيوز</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/djelfa"><span class="ui-menuitem-text">الجلفة إنفو</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/eldjoumhouria"><span class="ui-menuitem-text">الجمهورية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/alhassade"><span class="ui-menuitem-text">الحصاد</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elhiwar"><span class="ui-menuitem-text">الحوار</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elhayat"><span class="ui-menuitem-text">الحياة العربية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elkhabar"><span class="ui-menuitem-text">الخبر</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elkhabarerriadhi"><span class="ui-menuitem-text">الخبر الرياضي</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/erraya"><span class="ui-menuitem-text">الراية</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/essalam"><span class="ui-menuitem-text">السلام اليوم</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/echibek"><span class="ui-menuitem-text">الشباك</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/echorouk"><span class="ui-menuitem-text">الشروق اليومي</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/echchaab"><span class="ui-menuitem-text">الشعب</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/eltarf"><span class="ui-menuitem-text">الطارف انفو</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/alfadjr"><span class="ui-menuitem-text">الفجر</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elmassa"><span class="ui-menuitem-text">المساء</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elmassar"><span class="ui-menuitem-text">المسار العربي</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elmoustakbel"><span class="ui-menuitem-text">المستقبل</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elmustakbal"><span class="ui-menuitem-text">المستقبل العربي</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/alseyassi"><span class="ui-menuitem-text">المشوار السياسي</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elmouwatan"><span class="ui-menuitem-text">المواطن</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/annasr"><span class="ui-menuitem-text">النصر</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ennahar"><span class="ui-menuitem-text">النهار الجديد</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elheddaf"><span class="ui-menuitem-text">الهداف</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elwatani"><span class="ui-menuitem-text">الوطني</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/elyawm"><span class="ui-menuitem-text">اليوم</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/akhbarelyoum"><span class="ui-menuitem-text">أخبار اليوم</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/algeriapress"><span class="ui-menuitem-text">ألجيريا برس أونلاين</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/akhersaa"><span class="ui-menuitem-text">آخر ساعة</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/ouarsenis"><span class="ui-menuitem-text">بوابة الونشريس</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/setif"><span class="ui-menuitem-text">سطايف نت</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/alahrar"><span class="ui-menuitem-text">صوت الأحرار</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/sawtdjelfa"><span class="ui-menuitem-text">صوت الجلفة</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/matchdz"><span class="ui-menuitem-text">ماتش</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all " href="/aps"><span class="ui-menuitem-text">وكالة الأنباء الجزائرية</span></a></li></ul></li><li class="ui-menuitem ui-menubar-options ui-widget ui-corner-all" role="menuitem">
+<form id="searchForm" name="searchForm" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="searchForm" value="searchForm" />
+<table id="queryWrapper">
+<tbody>
+<tr>
+<td><input id="queryText" type="text" name="queryText" size="10" /></td>
+<td><script id="j_idt197_s" type="text/javascript">$(function(){PrimeFaces.cw("Watermark","widget_j_idt197",{id:"j_idt197",value:"بحث في الأرشيف",target:"queryText"});});</script></td>
+<td><select name="j_idt243" size="1">	<option value="search" selected="selected">موضوع</option>
+	<option value="author">كاتب</option>
+	<option value="city">منطقة</option>
+</select></td>
+<td><input id="searchButton" type="submit" name="searchButton" value="" /></td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="oyDs3YEU6Rzg5Xf8P4OuTUOY6AQJASFv7wFqgNykAGWZwfTD4YRWk1qEivtqV+PVI/trwGzyu5lmldnI9wZrYo6qY/Hc597qg+ai4dCULq4wRCiQjV5GkWutRr8nojyNK+xrNEciu9w7AB+ejtSlwf1E/TbjgnYCmkduua/vaMvF9Ja5BLTSHL3HmExbqtQutpKbP3BGDD7z9egEf8OKXhn3M/jHJ5w3zbM/1+jKPvdRcG8QaDgqG2tM+sA82HzCuqkIKd1hKquUZ7JEF6a7XuY4AEMfa4eAeHu8RfqPegy+0OLW4CkTY1wDRtcCRHbdR4rQDIi6g4OT6c247rPX484x6ZweD7JJ8EO0Ba+6L/dqXebtebQvkX19PZqRdi4M55CXn01VLP/Ri2tu0OQV9ltuqvc41hoCNAWN1dGEWx+tqd9HQ3v/2X2dJqRchmlaPk/K98iZeuIp2V2ZzGnF6muqZhoSxWbr1NMMbZwcElxxTuzK0NiLaZCcBcvTqVa6Wl6+xLDaf6niTrvQAECaJEKPyMwSdeMIzN45AkeZ/zlyUmLotOebNINCHfvRpYloG80qkPyiSVN6RTqj7rNbppw75u7fINL2N+5e3uBVCUIz8aqcyCvJkm4SSjm/Ll+i3ox3hqXs/BFj+xDNWjaWN6MztHuEGbEyyPAybaOrciv5xV16YDzyoKzFBxSGFmMz7X3bINYrg3tqgK775Y7vZRLu13fM2mh/FkzlUTPHaHjnN2MbbKDlLK8xXbhfs9QLwjWncDSLzjoydWG8Qz92sNXjIEQOBrP8qQNPe0Q+XY381muap3ckoj5gyQKxu2jP6Fsh6GS718ifMmVuH8Sylr+iCngLJzg3ttq+kJg5bVjonkJeAL7YiM0R9/TcKaJmfBPlppAjiR0BEkLicoJmzxczoWfGxFQa5qsi6BuLNZGMVr6WTBbt94op6tI2ClYa9KfSG31VyL+kh2H6pa2zUDJumOqERxh2VNKyI32OpT2esqqA0hXJtg9PjnCdp3gBGEO46TlpcI9zK9CE6wYs8OUWeLg7pzQ1AILCxptdxD1YMuE89CqcqxZQ0C/r2Q45wULqe4ydg/9ScETOWKLjNe//u8TRcpblJLad5UPk6xFeSKxewj1tyWDUi0mQkRbCSCjVNwAYHGTjjRaTVIeRmbfUrVqD6hp51/q+LuKLE7AVLWrmQ6HDyc63YjnvDkwhde5nZdBSI9Ao/8Lfbwduv3tpZJBFFVXgWNpfQdqS2zMQ/1cpAoAyp9+QDkaizjTZdAFK/MQwdUOA2mrjMhYVs2HxQRs7T87ve/uW5N1Vhv/0B0FJUayHSKrvjM2Rn/GN9ZXh6f/aZ1sUVC1ZBwvy3mbSidaqBc6s5y8ci2kBCetafeSiB9ECIIrh/Tmt/SlM9MghFRsrmmzBUBwzEGu/GGr2PU2GuH/eaTJ+sJM2NasFHnfr9p8mv0xQGxytmSMhsBC/IdKy5TWkJjbzFzvJgnVsYY2uipkyIcmLRtVIdSyx9NiDPi/RkbaL3+FCeiCfkFwB1V3X2coLeTeOEp1L+RDZaC7S3AN9cu7AjJObFK6Zm5m0LkRSCTnFoxFj6AFOwcVBLs8HAYKSG2tbkjDuHA==" autocomplete="off" />
+</form>
+                                <li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a href="/fr" class="ui-menuitem-link ui-corner-all">
+                                        <span class="ui-menuitem-text">Djazairess</span></a>
+                                </li></li></ul></div><script id="centeredmenu_s" type="text/javascript">PrimeFaces.cw("Menubar","widget_centeredmenu",{id:"centeredmenu",autoDisplay:true});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:1" value="zBwoU5NMcxFbzFwBLA8biq+Locvi2lKjQ6mrWApnHHAEi2eUETJwoHEFy6n8lkUtUt65AffvE0UK7lSOuRu6xHXZ9KS85HSXiHaRXb1QoJoQ7lR6hODSkoTPU+PNdej6XAIedtEKzUhZc7Fmf6wV2B3DpaR+Ytz99I9R1xHPquOHaM5Sm5tnks0pz/MbilEk8sX6iIqPt9KOtHBYuA3YYU9nCUw2Ft0oA4kTyX2sekKu4h2ctGl9kSOWPLTmIY05aGGMj25xcdzMhcfCywNQrzGVKcSzfCfzAFXgWCRYUY6kr5lMrWosXIIbQGydxJ0Ap2lrb2dKLjgv5Cdu/ZH3cqSUS+0O2lvx+H+wMSlNe8/kKsWFGXc8jgBtDxWSvq5JbEnRSeqYGdyYJTdeo0JvF8OFgNTDMdukeO9/1T7Bm2U4YdIGvvUoWIbKE1jd+ofYYw09FCP66hT1thcWfseebOdjua7yDVDORPbI6U6wZe8Z6UpQaaIh3xCbo/+6E/sEfX9WlfYsai2hEnuvzi5eTV5MkmPkVRI3sW2heGA+v1axx9z4L+xvVL809yS8/C15vf70iJnJA6JmthBPpB00DwF314yLOl6XtQ1gg4VazUptgscuHReofW2a3qWG5d8H8FBfbAULgt8/WnT7x/lOQRLQQhRmmFx3GGyO+GUrJuldg8A1ymZHllxK52BgvaZ7TKEEWcot5FruXQuEDrMIQOODzN6NtUm02XrpVBX1C3VrduC4MsVYpGl65ett5/KDmLDLCMliWRmCk8WXlUSut/HCQUNCLxX/pWQlBgUAWB0UF4s08BhUmv8/QLempis5HsPCrkYgcbk2cHEF56RqoX9VcwfeY1oGMwQDelPb5bnQKU27whY3lX8LN6Enby6KsGCt5qY2yrndvrPSQ8wl02ABxGXVRgzLIi/5edIF/jVc4LW5NRe91z4gtFXTVGFdRlyEnQSwawEmzmWjCF2icVpPs9Q2OfMRoecAOV6nAixCUbfyVSvAY1ZQPbAtAd4EDmcsH9ivHy0CBW0tiRwPNCifqUd03WwsziNhrOF1epQqdPiwCvpJkQu5s9a0wBuJLhvxGB7HCsaE7z9vlExhaE99cEwRjuuVuxoIwF1nG3/a2Por1grcN+rh3EPWzXmQBfQVVrhuNuHlxGq9uTg/P5yMyQT0G46q/XcHmCPj0054vmb07alx+TMPVxpiYHXsOJleUBlV3fJRjHVWaiVDVgde3VbBz8JK2KXflkhtpi/iiVpPBD3/0N0KQ7JARtA2m4J0WsdBs4FbWsYsV76ieq7LlfDt1f8848OD0a8bE++Y2ZJg0NelBzohleHFyOASaX8A/rxHNAYZngVebJs7kjUg1PERodahGOR5t/oPmbglyQFuKDVP/cmeWAxgbk3e1hbAZN8c2hcrTfuTDaridH66BprnjE8SSjQ6efsnjoT+cxVkQvRFYxoFEWb9HqxNJXMxzxLBJ5Lu05ba5dTNGF8s+QptDfBO1sk0uNtAUWamXPL0wFyj2iDwoj8npllMypj+cFLdufk7NxwXRMkZvAa9+b1hH3WWOaaZ6Cz22D7TXqmr3Bj5qvHlszcVEo0Xg6Ahy5c+Ti/30gstkdqJ+g==" autocomplete="off" />
+</form><div id="j_idt271"></div><script id="j_idt271_s" type="text/javascript">$(function(){PrimeFaces.cw("Sticky","widget_j_idt271",{id:"j_idt271",target:"centeredmenu"});});</script>
+                <div id="belowheader">
+                    <marquee direction="right" id="marquee" onmouseout="this.start();" onmouseover="this.stop();"><span class="marquee"><a href="/akhbarelyoum/340452">قادة أوروبا ينتفضون ضد الكيان الصهيوني</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340450">إطار قانوني يتم الرجوع إليه عند الضرورة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340447">تمرّس المُقاتل عامل حاسم في الحروب</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340439">هذا جديد البنك الوطني</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340441">عطّاف يؤكد الحاجة لإقامة شراكة فاعلة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340437">استعراض عسكري للجيش الصحراوي</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340451">إبراهيم مرّاد يُدشّن الشطر الأول للواجهة البحرية بالعوانة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340438">تجنّد من أجل حجاج الجزائر</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183403">أولاد جلال : الشرطة توقيف 15 شخص في عمليات متعددة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183413">الوزير الأول، نذير العرباوي، يترأس، اجتماعا للحكومة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254727">ضبط الإطار التنظيمي لإنشاء هيئتي الاستيراد والتصدير</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254721">توسيع التعاون الجزائري - القطري في قطاع الصحة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254716">هذه مقترحات البرلمان الفرنسي للاعتراف بمجازر 8 ماي كجريمة دولة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580659">لجنة صحراوية تطالب الأمم المتحدة و مجلس الأمن الدولي بتحمل مسؤولياتهما وتصفية الاستعمار من الصحراء الغربية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254696">نيس يحسم مصير بوداوي وبوعناني الموسم المقبل</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254697">أنصار الوفاق يحتجون وتغييرات جذرية الموسم المقبل</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254698">المولودية لتأمين اللقب وسوسطارة لرد الاعتبار</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254715">الجامعة تقود قاطرة النّمو الاقتصادي في الجزائر الجديدة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254702">مشاريع مؤسسات تربوية وأخرى في طور الإنجاز</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254703">إجراءات احترازية لإنجاح حملة الحصاد والدرس</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254704">الانتقال إلى السرعة القصوى لاستقبال موسم الصيف</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254705">بلديات العاصمة تشرع في حملات تنظيف المقابر</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254713">كاميرات مراقبة ومخطّط خاص بجلوس مترشّحي"البيام" و"الباك"</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580655">سوناطراك والمجمع العماني "محمد البرواني" يبحثان سبل تعزيز شراكتهما</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580653">البنك الإسلامي للتنمية يوقع بالجزائر اتفاقيات تمويلية بقيمة إجمالية تفوق 1 مليار دولار</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254687">كشف 77 مليوناً مزوَّرة بفرجيوة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254688">افتتاح الملتقى الوطني للناشرين الشباب بقصر الثقافة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254690">شاهد على الجمال والأهوال</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254693">إقبال كبير للمولعين بالسفر</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580648">ملتقى علمي بالجزائر العاصمة حول "التنوع الثقافي واللغوي"</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267268">اجتماع وزراء الاتحاد الإفريقي-الاتحاد الاوروبي:الجزائر ترافع لمبدأ "الحلول الإفريقية للمشاكل الإفريقية"</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580643">الإتحاد الإفريقي-الإتحاد الأوروبي: الجمهورية الصحراوية تبرز ببروكسل الترابط الوثيق بين السلام والعدالة والتنمية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580632">معسكر: إطلاق برنامج بيداغوجي للتعريف بالمواقع الأثرية والتاريخية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580633">الرابطة الثانية هواة: رئيس الرابطة الوطنية يسلم درع البطولة لمستقبل الرويسات</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580622">الجزائر تعول على كسب "الداربي" وشباب قسنطينة لتحقيق الفوز الثالث تواليا</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580620">غزة : ارتفاع حصيلة الضحايا إلى 53655 شهيدا و121950 جريحا</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580616">كرة القدم: انطلاق التربص التكويني لمدربي الاختصاص</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267251">الجزائر تؤكد مجددًا التزامها الثابت بالقضية الفلسطينية وتعتبرها قضيتها المركزية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267248">وزير الداخلية يدشّن الشطر الأول من الواجهة البحرية "لكحل مسعودة" بالعوانة تحضيرًا لصيف 2025</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580607">سوق أهراس: افتتاح الطبعة ال11 للمهرجان الثقافي الوطني للموسيقى الأندلسية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580615">سايحي يلتقي نظيره القطري بجنيف</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580617">الإرشاد الديني النسوي: دور هام للمرشدات في تعريف الحاجات بمناسك الحج</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/aps/580611">وزير الصحة يلتقي بجنيف المدير العام لمركز مكافحة الأمراض والوقاية منها في إفريقيا</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183367">ملتزمون بمواصلة العمل على تحسين مناخ الأعمال والإستثمار</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183355">هلاك 29 شخصا وجرح 1322 آخرين خلال أسبوع</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183379">يتحتم تعزيز قدرات التنبؤ والتدخل المبكر وتنسيق الجهود</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183385">استعرضنا "واقع وأفاق" التعاون في المجال الصحي بين البلدين</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340417">المولودية تنفرد بالصدارة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elmassa/254676">إشادة بالتزام الجزائر بتعزيز القانون الدولي الإنساني</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267191">الجزائر تشارك في الدورة ال78 لجمعية الصحة العالمية بجنيف: تأكيد على التزامها بالأمن الصحي العالمي</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340408">هدي رسول الله صلى الله عليه وسلم في الأضاحي</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183298">ظروف التحضير بالجزائر "ممتازة"</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/akhbarelyoum/340392">ما الذي يفعله الزوجان إذا دبّ الخلاف بينهما؟</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267115">الاستغفار .. سر السكينة ومفتاح الرزق ومغفرة الذنوب</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267118">..لا ملجأ ولا منجا منك إلا إليك</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267120">الأذكار المستحبة في العشر الأوائل من ذي الحجة</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/elhayat/267152">دلس: تدشين معلم تذكاري تخليداً لطلبة التحقوا بالثورة التحريرية</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/erraya/183254">فيلم "الطيارة الصفراء"</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </marquee>
+                    <br /><br />
+            <script>
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v2.5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <br />
+            <div align="center"><table class="articlepagecontainer" cellspacing="10">
+<tbody>
+<tr>
+<td><table class="articlewrapper">
+<tbody>
+<tr>
+<td>
+                            <div class="articlemargin">
+                                <div class="addthis">
+                                    <div class="addthis_toolbox addthis_32x32_style">
+                                        <a class="addthis_button_facebook"></a><br />
+                                        <a class="addthis_button_twitter"></a><br />
+                                        <br /><br />
+                                    </div>
+                                    <script type="text/javascript">
+                                        var addthis_config = {
+                                            data_ga_property: 'G-ZKNZM9GW95',
+                                            data_ga_social: true
+                                        };
+                                    </script>
+                                    <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9c956b027ae35f"></script>
+                                </div><span id="imageGroup" class="articleimagegroup" style="min-height: 120px"><img src="//images2.djazairess.com/eldjadida/129739" style="width: 250px; float: left" />
+<form id="j_idt281" name="j_idt281" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded" style="float: right">
+<input type="hidden" name="j_idt281" value="j_idt281" />
+<input type="hidden" name="j_idt282" value="eldjadida" /><input type="hidden" name="j_idt283" value="129739" /><button id="reportimage" name="reportimage" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('dialog').show();},function(event){PrimeFaces.ab({s:&quot;reportimage&quot;,u:&quot;imageGroup&quot;});return false;}]);" title="أبلغ عن صورة غير لائقة" type="submit"><span class="ui-button-text ui-c"></span></button><script id="reportimage_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_reportimage",{id:"reportimage"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2" value="ePNrqhdoPRHGJLYzWaOUd2rj8Ql1ggEBonIOnegcRceolfM8lG5lgd4+sumGyATuOQccqwPBdbqEjuA17AIubdqMWjie2AthS1t7K74Gl+a60O8dS/Ua0hF7zVG47zoT2R3iWB17OAPdQyx/Mqadpo7Q55Jsj7EBys54o3Yl64bZhsCWKIKjvVVHsouKk6msb/q6esOXDTSMNQ4t72zb2886cObqTMCEFUQBfwzpd7Wtnf69NT4BnXUwnpEJztUQvikNF03Jqh8ib2c1zC4UY5ZvEpic2UJ2z4XYJuTnF58bW6KlT+dcKPewT0K+Rb8xXHY4bRAIu1wcc9yf2zXxAIdgvb+76dRXQxk/hBRG2GULp2z7nvnXENYAY4Ep+g0RZJCeJ6iwmDi6G4Fr3uxk9AOe294Is+lK4bY9xHbuBezENH9UZQtrhqO5LDdS3jnyqh+CtzPkkYDF7hGlBTw6pF3QPEamh/y0b4jtiAx1hJOCoX5RwDUXXymCQlscYuJlVTh3Bsfuq2RTgKz//JkTBlmpnSlsENPfFeuzO0a0xPxzlrFJBV5w5kam2Imu4dY+AahgZ6BTYkV+5snimUhPENQkF3+iMdAwre0NKYO/WRveR0Yuqqf0QLVyWMFlEMCqiponl6I3/FlhmH5fkgKnQWlEfoi6qPhoT5Pcw0NQgqavW7arTczC0+leCRC6+HuG9nelC2iogoXk7sEXNC/OAjW3YvgE8DULuYPXM7o0tPpJScZ92UuIOey+ELc2+Vj6CIAGZqAgjp98YoUeCpjc5QwLW8kaI7zQ98P/h1s3K1pjSdkwbUvgd1TEGO43w2UWEfmk8uPYXHfs0fNtudvKfEqs24n2AJf3SJkd0ikaxTC408mrmjc9/TUJnirtYW4GcWNqzRtyCGBmctB9gUU3xjTfuCQ3sGZWL9Uk/Myc5U50RLKrB/PX/kj78Bl7WjTGRQ3REV85F1urLEEUeCj18W17Ux+SKn7K35aSuLgllRzy9qQ7HYV8PFd3iUlvb2CkdVnKNqL9c8lHURrVkn0YiaLwHHHUxY7hSAW4qe1iH6eJVhrmx6/PR6DBFuJPGBMuWN7ZGwAripOz7ScgX9YXZr/apg2VCqjaeP0VIuj8u/NKn3BZTOhvVNMe3dNjBqL5sNwUL2lz3HgI28bqTUN/TYcsgBlqAZ7cPpKAhUudVzxuU4rXALH4kDpUsHqUa5TZ/5BMcU5YoynbdpIVxydME6ybbusP7mr3V2YMyfCAa/1de6Rh7EgpFtZyNivGSYy2PFd4XXrqKiGgsE14sukqEUgwRvBmXWVu/eTYZsgHhc0Mz9LeTlGtPUXBGoJa97XvUN6hNauT2l4bL+ObllZsyb5RwYv9atYdJONojCT5vGyAKHtLxBjgxqdxsL/1quj4173bppdE8GFDIc4juLZLruJplX65bdZCLhdv5Yy615xM5eJ7Vy4l+KHtlrAf1yATcsWJEDMZdgUVkvQEmJ8NSNkldORWDKIjWmyb7fhdaRtvm0NVS+OADs/3HszedncAX3m9c3femG4r6wYGfzyZzm6dzvJa3Ozea2Nqbzx9Gt/0EAzN/oQ3Vb3VMCfnk7LA8Si7nFhxLP2tw8CNclxNag==" autocomplete="off" />
+</form></span>
+                                <br /><div id="j_idt285" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt285_title" class="ui-dialog-title">شكرا على الإبلاغ!</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content">سيتم حجب هذه الصورة تلقائيا عندما يتم الإبلاغ عنها من طرف عدة أشخاص.<br>  
+                                    <br />
+<form id="j_idt288" name="j_idt288" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded" style="text-align: center">
+<input type="hidden" name="j_idt288" value="j_idt288" />
+<button id="j_idt288:j_idt289" name="j_idt288:j_idt289" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({s:&quot;j_idt288:j_idt289&quot;,onco:function(xhr,status,args){PF('dialog').hide();;}});return false;" style="text-align:center" type="submit"><span class="ui-button-text ui-c">موافق</span></button><script id="j_idt288:j_idt289_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt288_j_idt289",{id:"j_idt288:j_idt289"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:3" value="WgK+r5ihlSh2GM9hplfHZhxjETeRi+YRhfGbG+astkEWoVXuv8pElj+dW3PanyvDJGZVG/b7x9DfvnQaD1qtqFo9ObpaY5k6BQx/a6O27FKlWeuXNRPXNTcn9fIGeYBMrdIAyPc84PmH6EHpvgvuzbX2PugsSPHBLkjdt3A+0J8nBN14CLqXbMBvboFRvBUmOZCsqpydc3LPMdGa8qO3HaKqgcmZsUX6ycy4CONrLHpw92eGLrKKE2SiA/Nlhw/85Kg+MLxGoHgcK7rxls6qQoXJ0Ot1Vrc39jkHlv76rr/CznZAJ4P9unnT8FzW/r0epPSW9Pf0pbGNngDnpXFiUCdookyUYLy5rx4l5Ebg0dPuOe2dwI2lz+mMc0bGLHDfFwa8Q3fgCD7RQHLJaD258wopJpr6DNcvNdkDC9PZbjniM6yXPvt4HtOy6pARIFKGdL05P7sQl6X+cr5uqqCMqAYw/QH5+mxcVCrJcVQoy+p269nL88vRU0q6dy3gR1ly1oenjwHrUiruT7gh8FuG3AagGQOnSeSjtob1thzIRxtjjsN1chWTdu67LXTygofpbCt9CeR3+TfR4nKs3bj8xa1pb5MLF9anlgMjuoL8T1VWQsjckenIU/farhuJZL23WF1njj0FY9aUojKoeSveVF+WQVq6ajBSeDMUXw+vcAADSUMdVthaepuzgQJzlHLmgWwMKiM2EhfXPP5aAHbGAKxA7cYGaiLAowHbOCx2GNYhXuwY+qGdc3LQay56+Jvdh+6iGVW0lD5PY4cc48bWxYkXbFY9zTL26ODuXXegXHp82db5Pzy2mGIl1oWT95RvXge3JgTsGkY+m6W4xarV5ijyLqY0SI/1wluugpnTFtxXGwOMh/i0mGT+xXicdqeZkek+PAeMjdmgcLZsahDiR3xQWEh6i+q6Nn6xCb3/mEZZx7f0qRZAWinFSwVpbtymrQ9cknUxoJV775zh/EuGEbChfPsGBXsunbZy41xEYEKd/l9f/dM9H/jsB8qFH6LLhePtoiRqNjirh3yCjs3k+zIearJOLG/Zl3+SnF+GWzx8yKnUg450oL/wYhw0ifhfHyXoNOoESmRiqoZGGyIuyWTOfrTG5XXEfOq8KwK0uk6wDONdpwpjoMTZ+NbLp4qXDTN+WhzhdLLwwQazgRxY9EQNomjHidTbMvMH7Cmfd+CEsGsUBRmFssvRiPw+C8O5yhbuOTLtKJQsJgsvX1PWBkGNSNSTIb5PzvqkGuYaxqAeAtDoOyR/t9+kCIEAMvSuwn8pDqD2Kx8hoqVfCLCfMdlV8IWvAUlPKP43ydW0AsRPWQLAD2Q8C/i7yzRdrI8YCr/tDoNQcC67s5ePAo8oXIeEY1CEp/XIN1566ljBqf7Z/x90t9D72enZ/0+UIVd4KJ4cBlwurNQNzuthkjRog4s+JWWiVxF4P+6KN8zI0DVuV3y6OdyI5UYTr8wNicZwPSoM6kz4YsEU+T5YAEt6BifcvT20LyT5PbOH552Q0As6Y5Dd+OxIl3fwFDW68d4xwaxZc70No/27WWmE6alQrfdQv+VuLyiyu8VXEvNSyfVgTGYS8mItBzIOOGzu5pRmExRui1so4OZ8g1zN4hNZrQ==" autocomplete="off" />
+</form></div></div><script id="j_idt285_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dialog",{id:"j_idt285",resizable:false,hideEffect:"explode"});});</script>
+                                <br />
+                                <div style="width:338px; display: table" align="center">
+                                    <br /><div id='div-gpt-ad-502778721-0' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-502778721-0');
+});</script>
+</div>
+<div id='div-gpt-ad-502778721-0-oop' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-502778721-0-oop');
+});</script>
+</div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 20px"><span id="referer" style="color: red"></span>
+                                <script type="text/javascript">
+                                    document.getElementById('referer').innerHTML = '';
+                                </script><span class="articletitle">الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح</span>
+                                <br /><span class="articlesubtitle"></span>
+                                <div style="padding-top: 10px; ">
+                                    <a href="/author/%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1+%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9" charset="UTF-8" class="articleauthor link">الجزائر الجديدة</a>
+                                    <span class="articlenewspaper">نشر في <a href="/eldjadida" class="articlenewspaper link" style="float: none">الجزائر الجديدة</a> يوم 02 - 06 - 2020</span>
+                                </div>
+                            </div>
+                            <br /><span class="articlecontent">أشرف رئيس الجمهورية, القائد الأعلى للقوات المسلحة, وزير الدفاع الوطني, السيد عبد المجيد تبون, هذا الثلاثاء, على مراسم تسمية مقر أركان الجيش الوطني الشعبي باسم المرحوم المجاهد الفريق أحمد قايد صالح. </span>
+                                <br /><span style="width:582px; display: block"><script async src="https://cdn.ad.plus/player/adplus.js"></script>
+<script data-playerPro="current">(function(){var s=document.querySelector('script[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"a9Jeguab9DdU9eToPMp039FAaJQtoyt0hmX3vmLO5D6FlT3MGQEh",after:s});})();</script></span><span class="articlecontent">وتأتي هذه التسمية اعترافا بالجهود المعتبرة للراحل قايد صالح خلال الثورة التحريرية المباركة في صفوف جيش التحرير الوطني ومساهمته بعد الاستقلال في بناء الجيش الوطني الشعبي.<br/>وقد تمت هذه المراسم خلال الزيارة التي يقوم بها رئيس الجمهورية, إلى مقر وزارة الدفاع الوطني, حيث كان في استقباله, رئيس أركان الجيش الوطني الشعبي بالنيابة, اللواء السعيد شنقريحة, مرفوقا بالأمين العام لوزارة الدفاع الوطني.<br/>واستمع رئيس الجمهورية في بداية الزيارة إلى النشيد الوطني, لتقدم له على إثرها تشكيلات من مختلف قوات الجيش الوطني الشعبي, التشريفات العسكرية.<br/>وحيا السيد تبون بعد ذلك مستقبليه من قادة القوات والحرس الجمهوري والدرك الوطني وقائد الناحية العسكرية الأولى والمراقب العام للجيش ورؤساء الدوائر بوزارة الدفاع الوطني وأركان الجيش الوطني الشعبي.</span>
+                                <br /><br />
+                                <div style="width: 610px; font-size: larger">
+                                        انقر
+                                        <a target="_blank" href="https://www.eldjazaireldjadida.dz/?p=29739" class="link">هنا</a>
+                                        لقراءة الخبر من مصدره.
+                                    
+                                    <iframe class="articlelikebutton" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.djazairess.com%2Feldjadida%2F129739&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;height=35&amp;show_faces=false&amp;locale=ar_AR" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                </div>
+                                <div style="display: table">
+                                    <div class="articlead2container" style="float: right; width: 336px; height: 280px"><div id='div-gpt-ad-502778719-0' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-502778719-0');
+});</script>
+</div>
+<div id='div-gpt-ad-502778719-0-oop' style='text-align: center'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-502778719-0-oop');
+});</script>
+</div>
+                                    </div>
+                                    <div style="float: left;">
+                                        <div id="fb-root"></div>
+                                        <script type="text/javascript" src="/faces/fbcomments.xhtml?resource=comments.js&amp;lang=ar"></script>
+                                        <div class="fb-comments" data-href="https://www.djazairess.com/eldjadida/129739" data-num-posts="10" data-width="600">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                        <div class="tablesgroup" style="width: 326px; float: right">
+                                            <div class="tableheader">مواضيع ذات صلة</div>
+                                                <div class="teasercontainer" style="height: auto; padding: 8px"><a href="/echchaab/170193" class="teasertitle">
+                                                            الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+                                                        </a>
+                                                        <br /><a href="/echchaab/170193" class="teasersubtitle">
+                                                            
+                                                        </a>
+                                                </div>
+                                                <div class="teasercontainer" style="height: auto; padding: 8px"><a href="/elmassa/182694" class="teasertitle">
+                                                            الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+                                                        </a>
+                                                        <br /><a href="/elmassa/182694" class="teasersubtitle">
+                                                            
+                                                        </a>
+                                                </div>
+                                                <div class="teasercontainer" style="height: auto; padding: 8px"><a href="/eldjoumhouria/182981" class="teasertitle">
+                                                            الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+                                                        </a>
+                                                        <br /><a href="/eldjoumhouria/182981" class="teasersubtitle">
+                                                            
+                                                        </a>
+                                                </div>
+                                                <div class="teasercontainer" style="height: auto; padding: 8px"><a href="/aps/487780" class="teasertitle">
+                                                            الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+                                                        </a>
+                                                        <br /><a href="/aps/487780" class="teasersubtitle">
+                                                            
+                                                        </a>
+                                                </div>
+                                                <div class="teasercontainer" style="height: auto; padding: 8px"><a href="/elhayat/135059" class="teasertitle">
+                                                            الرئيس تبون يشرف على مراسم تسمية مقر أركان الجيش باسم المرحوم قايد صالح
+                                                        </a>
+                                                        <br /><a href="/elhayat/135059" class="teasersubtitle">
+                                                            
+                                                        </a>
+                                                </div>
+                                        </div>
+                                    <div class="articlefacebookfriends">
+                                        <div class="fb-page" data-href="https://www.facebook.com/111738858878804" data-width="580" data-height="280" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
+                                    </div>
+                                </div></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+                    <div id="footer">
+                        <div id="footermenu">
+                            <ul>
+                                    <li><a href="/about" class="">
+                                            حول جزايرس
+                                        </a>
+                                    </li>
+                                    <li><a href="/privacy" class="">
+                                            سياسة الخصوصية
+                                        </a>
+                                    </li>
+                                    <li><a href="/widget" class="">
+                                            صندوق الأخبار
+                                        </a>
+                                    </li>
+                                    <li><a href="/advertisement" class="">
+                                            الإعلانات
+                                        </a>
+                                    </li>
+                                    <li>
+<form id="j_idt329:4:j_idt334" name="j_idt329:4:j_idt334" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt329:4:j_idt334" value="j_idt329:4:j_idt334" />
+<a id="j_idt329:4:j_idt334:j_idt336" href="#" class="ui-commandlink ui-widget " onclick="PrimeFaces.ab({s:&quot;j_idt329:4:j_idt334:j_idt336&quot;});return false;">اتصل بنا</a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:4" value="rckHuGVz+R5mv3p0lrNzDobZw2W7GVT9D9mkaaeFuAtgoraB3ai8JKAr5BZAS/r6C1jOb6kZVvvwxonMrrKQHAxJIMzykGbj8lTOujtgHbV2hoZhjwZHKaWYBlnZ6cKWKyX6qJ2ULBtqFf2T6qW9JdrsR1BFgdPXPs2oOL1XJ12fN/EL4POOo7KNWSGAlUIHW+NtCtJjaR1AGnayX4E+ZgaotFW9oOL6EoNm4Lt8LnFmyc0ll0BHCZ2nOlP4ZHWSB6J3PGJlI8dluaHEWFys4RNS90nG85vYbR8SOjJ06zP61+Z/Eh6wBmNG96LmpsvuLIxo/xYeFsuW5Zm0CdVd40GwcUSk2Q2VpxiyNdQSsuWFEwF5pPmbIOoodCMYxZO709kVDsv4UqmJD+DQZE1SLkT79tA3t0P6hQqI3BQPnjDdbKyHerUUektcwuKVUymOc8q31flwbwOHLDF/wW7mdBYs0VqLNML8YZt0dfVjEwbIi2Ca+Tn4xgAvYXNS8A4YSh0uLmx3GNpwNkuiJDrsxz69eWQevSSBqaqcPnENnyF7FdXNQaSdKpsfWdjeK51bG8YaHIRHi08ZOZengfsDXT6Kt0sEFZVsr8R0uFQVRle8UpWzK+ZBy+P34bBr1XLU3Fodid/6k8lVXViHsYQTqN2nbqGE/41sJAiY8sGHgbsc7/h/AdYAOxKnP8KWdPDmLio5rrZI08+VTZCKpoB6cMYmafZRatA7Iul8/hwtb+tAHaL+z3TsoRcn2keAcxB+mJkZcpz2TSMAlUcISWI19l+DUM+tNzisAbiFpIN6iFctDKwBuTQu9MTknXOZdgMr2aT8IQ91If3rAlfVsXAB+sVLDvcnosK1ZRYN2m+rj0VODaAsix0m4wIkIKRW/GVNUfGdmR80JbdAyYPPwQcegoJwTuxumDGWrnV52MzdUYNkcsjvy7AyR89DEgIHp9E1A33m8ueSslzMpLcmOsmMSIDFOReRA0C29eA5IJHE1LrTAuwi36v4+Lo+slkE1JYIIK22KKrIYturSY/yWOGNO9u2OmRrQMV2JNMMQK8dwkS+bcc7D3f3dTeXJOKVqyoMkIY5rL7DkETNIRMnQbuFLtqpJNIgV0ElkedwR7NxCo6O096Kp5n0p3O7XBEYIVFREwFX/ZCPTzg+SK4gVpb7bPVqNdXdy+T0y4bzM6h6pWyu9Qtgp0s5ZHwIlpHZfzJHQDlkvb7sMQ8OnAZTK5YDrwdnXMhDk2WK6ZBCLhutx2B44q8jjVg+ZOom0Vb3IIK8p/i+2Psgnjhckjt246S2i2jC/tFfSlgWK67Z3+sUOvtB5C7ttocL6dssMhWd/r9c6x81aLWCOFCi3M8nkOMLWI8ClVGEqGhEHxRakD005So9Mrez4D5SPC6ZoCqJUXbN0biFilteLKpMURWYYXsYvA/MdaTGNqkI4fRMA4h83t+EnmnAbdrTi6cJskl8zPNlVXPr+aV5De0X6QWlWDNb6jMx/vTeG41t79RUoPbBOZsqX+7DDdNs79G0/PkHYF6KUAF0X8h6t7hW2YotrhDXk2bNUaXJ2WVkFQOowGhYqIxW6QXcKAmuTN+udVD8Y9UrF5o2F8NXtvYzsPHL6FFagQ==" autocomplete="off" />
+</form>
+                                    </li>
+                                    <li>
+                                        <a href="//www.yemeress.com" title="يمرس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/yemeress-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.sauress.com" title="سعورس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/sauress-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.masress.com" title="مصرس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/masress-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.sudaress.com" title="سودارس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/sudaress-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.turess.com" title="تورس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/turess-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="//www.maghress.com" title="مغرس" style="padding: 0; height: 20px" target="_blank">
+                                            <img src="/resources/maghress-flag-icon.png" style="border: 0" />
+                                        </a>
+                                    </li>
+                                <li><span style="font-weight: bold; position:relative; top:3px;right:3px">لدينا 73000000 خبرا ومقالا مفهرسا.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lastColumn">
+                 
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+<form id="j_idt352" name="j_idt352" method="post" action="/faces/showarticle.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt352" value="j_idt352" />
+<button id="j_idt353" name="j_idt353" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only report" onclick="PrimeFaces.ab({s:&quot;j_idt353&quot;});return false;" type="submit"><span class="ui-button-text ui-c">أبلغ عن إشهار غير لائق</span></button><script id="j_idt353_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_j_idt353",{id:"j_idt353"});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:5" value="0kq6FQgHVvxr23BhqsxwVk8+1RHZbqVZmIj+6gJvBosuqW9K/GdBLtz9jq8Up7UkaUfKqW+hqB0Y9gEdgtGGfLxKVMWOqsd1Os8ir91lsG/K332oOpALR+d+JMNp+oF+CmyFhY8TfYADhGTmmGWn0JSIIU11dfLM/zcVGfRthvkFo1F1LEZT2ZI8FS0ydcIBG6TTXAgIIIP4KCLK59HVEeuXf9jejZ3BjVBHRHKNVKpl4JW1vE8v1khVNQxv5TVanKd4RpknJ+OXN8+WjNZXW6ds4e023298y77UizHxjxdI8SKiwxTsIyCgIrS7DcFblMB+EFIBLAQr5hUYY6EMWuIdaxE/NtFmlcj3BX2unp7A3/24acn8QOh6HgDFZPpYPyfrSGbNQqzQ6D8QnBMKX+d9BJHHYHOL17a269XuFB8ktgqTB2F+KTlRcURLIBxApWrd4/blr79M19T1biaNYqjxzEx/PdujPRyBaUpyPLSAzPwD1yi2475lWCAqHZhwwKPxR+hSDSQ6888Jb0DafZuP5Ca88gjxk789bmoYMHdUFCCPsb48U8+nn3zepMJKg+0/usm95jQDkg2YLyIMFb0o+qOp+ilcZiMvFKJJSxpGb0cQOT/hAibYXb14JvvKdNs8M8JQBI6jQU37g86BlhIQczmuRHNoVb8N5XCb96/Mvbrm3OW1XFnD1NxAG9W7DaOBJIbo4He4AMyr8ueRs21kK2DpIhgUTzv2ZpvXclaulLoeLHfg67ZMs1ZLRr15hsxxwlAH7pvEvEhH30hdjjKSR8mBBS6EsXn3N733Vi/7F3Dg9JolRLT+uCOmDhJmIL7XP6VwaXyeqTPS5+7wFzWyQCYpLs3fkfMiUYnwpiJADd+8JzPrzDTwcbrBWHl1RPE8Ar8/To4gz0R28nlQeJopknawhfIJpe2VyJMz+Dk8EGL981HedsjMihuFd/qbq7UFpLwr/KL5HK4wmxOMph2otQJBYi+aRVdjMzrr4G2/tycdDPiHeHE4pRdNTapWO0G60Kyzl8IPJ8Xp8pCItoTnmtaG86XFbaugqwpUlUIV3MtgADd1UKmEQDHIM4sA/UTjp/6DJIRpvIekpKmcT7PUndP2jav+AfF3O8EHKun5BRqzEYabpi4JBSHtjMbNgjEGcd4TPnW5qXiTU0sKj7M8x8G1+eCnEC3iez3lSX3djuVtJBz8WIZvxcjKBIxxCV0YzmbCegL3N4HLDyY/Va7BtduqlxEpKZRBUPSdefUxTdCQEdK0F9ZP9lc6B/RmpPU9GhczlrfZ1pAckfBGyyHRFx3oUAwVVlLfC45F7Z/AByHEwhrvK5V6a0X7TKBHmSCX4Jmgl6sL7MHQ+MaCR3wnMDP3Ep6ypy8GwTjpFPY1gpQ6J/z8E4kLW7a+f206Vj4Pci2HnzKEc2EdwkxMCPz/NdTRff51NtPKvGP1jDz0GdVJ9uPKyFdAPjjvLtl0RjhjtXUPx/q0Z+t5GSezd0oeJ8iHLiaIl8ftqurtljWdp0CSTNoEAEjRgbZA4iHpJUuPo/yPwTVY4q95MHmaeWHD9tc9cP6iYiiLxPhk2BAzXub2mutRi5E41T2laFKU6LBFwlfVuyQ1AA0WBnhfKA==" autocomplete="off" />
+</form></body>
+    <footer><script>function a(r){try{for(;r.parent&&r!==r.parent;)r=r.parent;return r}catch(r){return null}}var n=a(window);if(n&&n.document&&n.document.body){var s=document.createElement("script");s.setAttribute("data-gdpr-applies", "${gdpr}");s.setAttribute("data-consent-string", "${gdpr_consent}");s.src="https://static.sunmedia.tv/integrations/1d841618-de42-4b9d-8590-ba819d5039f0/1d841618-de42-4b9d-8590-ba819d5039f0.js",s.async=!0,n.document.body.appendChild(s)}</script>
+    </footer>
+</html>
