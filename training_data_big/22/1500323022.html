@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="//cdn.townhall.com" crossorigin />
+<link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin />
+<link rel="preconnect" href="//ib.adnxs.com" crossorigin />
+<link rel="preconnect" href="//experience.tinypass.com" crossorigin />
+<link rel="preconnect" href="//www.googletagservices.com" crossorigin />
+<link rel="preconnect" href="//cdn.townhall.com" crossorigin />
+<link rel="preconnect" href="//media.townhall.com" crossorigin />
+<link rel="preconnect" href="//www.google-analytics.com" crossorigin />
+<link rel="preconnect" href="//ad.doubleclick.net" crossorigin />
+<link rel="preconnect" href="//securepubads.g.doubleclick.net" crossorigin />
+<link rel="preconnect" href="//c.amazon-adsystem.com" crossorigin />
+    <link rel="preload" href="https://securepubads.g.doubleclick.net/tag/js/gpt.js" as="script">
+    
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i&display=fallback" as="style" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i&display=fallback" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>.accordion-button:not(.collapsed){--bs-accordion-active-bg:#f3f3f3}.accordion-button:focus{box-shadow:none;outline:0;z-index:3}.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active,.show>.btn-outline-primary.dropdown-toggle{background-color:var(--primary-color);border-color:var(--primary-color);color:#fff}.btn.focus,.btn:focus{box-shadow:0 0 0 .2rem rgba(184,31,36,.25);outline:0}.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(184,31,36,.5)}.btn-outline-primary{border-color:#f38634;color:var(--primary-color)}.btn-outline-primary:hover{background-color:var(--primary-color);border-color:var(--primary-color);color:#fff}.btn{font-family:Source Sans Pro,Helvetica,sans-serif}.nav-link.dropdown-toggle.show{background-color:#fafafa;color:#333}.dropdown-menu{background-clip:padding-box;background-color:#fafafa;border:1px solid #000;border-radius:5px;color:#212529;display:none;float:left;font-size:1rem;left:0;margin:0;min-width:10rem;position:absolute;text-align:left;top:100%;z-index:1000}.dropdown-menu a{color:#000;font-size:18px;font-weight:500;letter-spacing:.5px;text-transform:none}.dropdown-menu a:hover{color:#fff}.nav-link{color:var(--text-color)}.nav-link:focus,.nav-link:hover{color:var(--primary-color)}.dropdown-item.active,.dropdown-item:active,.dropdown-item:hover{background-color:var(--primary-color);color:#fff;text-decoration:none}.dropdown-menu[data-bs-popper]{left:0;margin-top:10px;top:100%}.breadcrumb{font-size:90%;margin:0;padding:0}.offcanvas{--bs-offcanvas-width:320px}.btn-close{opacity:1}b,strong{font-family:var(--font-bolder);font-weight:800}.thm-button-check:checked+.btn,.thm-button-outline-check:checked+.btn,.thm-button-outline.active,.thm-button-outline.show,.thm-button-outline:first-child:active,.thm-button.active,.thm-button.show,.thm-button:first-child:active,:not(.btn-check)+.thm-button-outline:active,:not(.btn-check)+.thm-button:active{background-color:var(--primary-color);border-color:var(--primary-color);color:#fff!important}@font-face{font-display:fallback;font-family:oduda;font-style:normal;font-weight:400;src:url(https://cdn.townhall.com/web/fonts/oduda-webfont.woff2) format("woff2")}@font-face{font-display:fallback;font-family:odudaregular;font-style:normal;font-weight:400;src:url(https://cdn.townhall.com/web/fonts/oduda-regular.woff2) format("woff2")}@font-face{font-display:fallback;font-family:Heuristica Bold;font-style:normal;font-weight:700;src:url(https://cdn.townhall.com/web/fonts/Heuristica-Bold.woff2) format("woff2")}@font-face{font-display:fallback;font-family:HeuristicaBoldItalic;font-style:normal;font-weight:700;src:url(https://cdn.townhall.com/web/fonts/Heuristica-BoldItalic.woff2) format("woff2")}@font-face{font-display:fallback;font-family:SourceSansProBold;font-style:normal;font-weight:700;src:url(https://cdn.townhall.com/web/fonts/SourceSansPro-Bold-webfont.woff) format("woff")}@font-face{font-display:fallback;font-family:SourceSansProRegular;font-style:normal;font-weight:400;src:url(https://cdn.townhall.com/web/fonts/SourceSansPro-Regular-webfont.woff) format("woff")}@media screen and (max-width:767px){input,select,textarea{font-size:16px}}.search-icon>svg{fill:var(--primary-color);width:20px}.thm-root .nav-link{padding:4px}.thm-navbar-mobile #search-mobile{position:relative}.thm-navbar-mobile #search-mobile button[type=submit]{background:transparent;border:0;left:12px;margin:0;padding:0;position:absolute;top:9px}.thm-navbar-mobile #search-mobile input[type=search]{background:0 0;border:2px solid #d7d7d7;border-radius:6px;color:#303030;font-size:14px;margin:0 auto;outline:none;padding:10px 8px 8px 40px;position:relative;text-align:left;width:100%}.thm-navbar-main .thm-search a{right:8px;top:3px}.thm-tags .btn-group-sm>.btn,.thm-tags .btn-sm{margin:3px}.thm-tags .btn-light{background-color:#e8e8e8;border-color:#e8e8e8;color:#6c757d!important}.thm-search{background-color:hsla(0,0%,100%,.96);height:100%;left:0;margin:0 auto;opacity:0;position:fixed;top:0;transform:translateY(-100%) scale(0);transition:all .5s ease-in-out;width:100%;z-index:1200}.thm-search .search-icon>svg{fill:var(--primary-color);width:45px}.thm-search form{margin:0 auto;max-width:970px;position:relative;top:30%}.thm-search .btn-close{font-size:40px;position:absolute;right:10px;top:10px}.thm-search input[type=search]{background:transparent;border:2px solid #d7d7d7;border-radius:15px;color:#000;font-size:50px;margin:0 auto;outline:none;padding:26px 25px 25px 85px;position:relative;text-align:left;width:90%}.thm-search button[type=submit]{background:transparent;border:0;left:15px;position:absolute;top:32px}.open{opacity:1;transform:translate(0) scale(1)}.nav-vip{aspect-ratio:auto 3/1;height:15px;position:relative;top:-2px;width:45px}.thm-vip-badge{background-color:#fff;border-radius:0 5px 5px 0;height:auto;height:24px;padding:6px;position:absolute;width:auto}.thm-vip-menu>svg{height:12px;margin:0 0 3px}.thm-vip-menu>svg,.thm-vip-sublevel{display:inline-block;position:relative}.thm-vip-sublevel{aspect-ratio:auto 10/3;font-size:18px;height:15px;margin:0;top:0}.thm-vip-button{border:1px solid var(--border-color);border-radius:3px;display:inline-block;font-size:26px;padding:0 10px}.thm-vip-button-small{display:inline-block;padding:0}.columnists-header h1{color:#000;display:block;font-family:var(--font-title);font-weight:400;margin:0;padding:0}.thm-sc .btn.tw:hover{background-color:#30a9f3}.thm-sc .btn.fb:hover{background-color:#2b82f3}.thm-sc .btn.tw{background-color:#1da1f2;color:#fff}.thm-brick{display:block;margin-top:80px;position:relative}.thm-comments{color:var(--primary-color)}.thm-comments i>svg{fill:var(--primary-color);width:17px}#thm-comments{align-items:center;background-image:url(https://cdn.townhall.com/web/thm/comments-bg.png);background-position:top;background-repeat:no-repeat;background-size:contain;display:flex;flex-direction:column;justify-content:center;min-height:277px;position:relative}#thm-comments h3{font-family:var(--font-header)}@media(max-width:768px){#thm-comments{background-image:url(https://cdn.townhall.com/web/thm/comments-mobile-bg.png);min-height:343px}}.ad-header{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:table;margin:0 auto;text-align:center!important}.vertical-center{align-items:center;display:flex;min-height:100%;min-height:100vh}.ad-90{min-height:90px}.ad-250{min-height:250px}.live-overlay{background:#c90110;border-radius:3px;display:block;font-size:12px;letter-spacing:1px;line-height:12px;margin:10px;padding:3px 8px;position:absolute;transition:color .1s linear,border .1s linear,opacity .1s linear,background-color .1s linear;white-space:nowrap;z-index:1}.live-overlay,.thm-pill{color:#fff;text-transform:uppercase}.thm-pill{background-color:var(--primary-color);border-color:var(--primary-color);font-family:Source Sans Pro,Helvetica,sans-serif;font-weight:400;padding:6px}.separator{align-items:center;display:flex;font-size:12px;font-weight:400;margin:10px 0;text-align:center}.separator:after,.separator:before{border-bottom:1px solid #6c757d;content:"";flex:1}.separator:before{margin-right:.25em}.separator:after{margin-left:.25em}.small{font-size:var(--post-caption-size)}.thm-author-sm{aspect-ratio:auto 9/8;width:50px}.thm-author-lg,.thm-author-sm{border:.3px solid #8a8a8a;border-radius:5px;height:auto;margin-right:10px;vertical-align:middle}.thm-author-lg{width:122px}@media(max-width:768px){.thm-border{border-bottom:1px solid var(--border-color);margin-bottom:20px}}.thm-chevron svg{fill:#000;height:auto;width:35px}.four-column{-webkit-column-count:4;-moz-column-count:4;column-count:4;-webkit-column-gap:5px;-moz-column-gap:5px;column-gap:5px}@media(max-width:768px){.four-column{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:5px;-moz-column-gap:5px;column-gap:5px}}.three-column{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:5px;-moz-column-gap:5px;column-gap:5px}@media(max-width:768px){.three-column{-webkit-column-count:1;-moz-column-count:1;column-count:1;-webkit-column-gap:5px;-moz-column-gap:5px;column-gap:5px}}.global-video-title{color:var(--primary-color);display:inline-block;font-family:Source Sans Pro,Helvetica,sans-serif;padding:0}.thm-modal-close{background-color:#fff;border:2px var(--bs-border-style) var(--bs-border-color)!important;border-radius:16px;margin:0;padding:7px;position:absolute;right:-17px;top:-16px}article{color:var(--text-color);font-family:SourceSansProRegular,sans-serif;font-size:var(--post-body-size)}article figcaption{font-size:var(--post-caption-size);line-height:100%;padding:20px 0 15px}@media(max-width:768px){article figcaption{padding:10px 0 0}}article h1{font-size:36px}article h3{font-size:30px}article h4{font-size:24px}article h1,article h2,article h3,article h4,article h5{color:var(--text-color);font-family:var(--font-header);font-weight:700;margin-bottom:15px}@media(max-width:1396px){article .post-header__img{aspect-ratio:auto 736/414}}@media(max-width:1024px){article .post-header__img{aspect-ratio:auto 658/370}}article .post-header h1{color:var(--text-color);font-family:var(--font-header);font-size:var(--post-title-size);font-style:normal;font-weight:400;margin-bottom:0;margin-top:0;padding-bottom:0}article .post-header .thm-vip-sublevel{height:18px;margin:9px 0}article .post-header__byline{align-items:center;color:var(--text-color);font-size:var(--post-author-size);justify-content:space-between;letter-spacing:0;margin:15px 0;position:relative}article .post-header__byline a{color:var(--text-color);font-weight:400}article .post-header__byline a:hover{color:var(--primary-color)}article .post-header__byline .x-follow-btn{height:20px;position:relative;top:5px}article .post-header__category{color:var(--category-color);font-size:20px;font-weight:400;text-transform:uppercase}article .post-header__img img{display:inline}article .post-body{line-height:1.6;padding:0 35px}@media(max-width:768px){article .post-body{padding:0}}article .post-body .wp-caption-text{color:#6c757d!important;font-size:80%;font-weight:400}article .post-body blockquote{background-color:#fff;border-bottom:2px solid var(--border-color);border-left:none;border-top:2px solid var(--border-color);font-family:SourceSansProRegular,Helvetica,sans-serif;font-size:100%;font-style:italic;margin:10px 0;padding:10.5px 55px;position:relative}@media(max-width:768px){article .post-body blockquote{font-size:88%;padding:10.5px 28px}}article .post-body blockquote:before{color:var(--category-color);content:"“";font-family:Georgia,serif;font-size:6em;left:-11px;line-height:1;position:absolute;top:0}@media(max-width:768px){article .post-body blockquote:before{font-size:71px;left:-5px}}article .post-body blockquote:after{bottom:-.5em;color:var(--category-color);content:"”";float:right;font-family:Georgia,serif;font-size:6em;line-height:1;position:absolute;right:0}@media(max-width:768px){article .post-body blockquote:after{bottom:-.5em;font-size:71px}}article .post-body blockquote p:last-of-type{margin-bottom:0}article .post-body .fb-post,article .post-body .fb-video,article .post-body .instagram-media,article .post-body .twitter-tweet{display:block;margin:10px auto!important;text-align:center!important}article .post-body div,article .post-body figure{max-width:100%}article .post-body figure figcaption{font-size:var(--post-caption-size);line-height:100%;margin-bottom:35px;margin-top:18px;padding:3px 5px}article .post-body img{display:block;height:auto;margin:0 auto;max-width:100%;text-align:center}article .post-body .thm-iframe{height:0;padding-bottom:56.25%;position:relative;width:100%}article .post-body .thm-iframe iframe{height:100%;left:0;position:absolute;top:0;width:100%}article .post-body iframe{display:block;margin:0 auto;text-align:center}article .post-body a{color:var(--primary-color);font-weight:400;text-decoration:underline}article .post-body a:hover{color:var(--text-color);text-decoration:none}article .post-body .pullquote{border-left:10px solid var(--primary-color);display:block;font-style:italic;margin-bottom:30px;margin-top:30px;padding-left:20px;padding-right:20px}article .post-body .pullquote a{font-weight:700;text-decoration:none}article .post-footer .author-bar{background-color:#f1f1f1;border-radius:5px;font-size:14px;margin:10px 0;padding:20px}article .post-footer .author-bar img{height:auto;width:100px}article .post-footer .author-bar a{color:#b81f24;text-decoration:underline}article .post-footer .author-bar a:hover{color:var(--text-color);text-decoration:none}@media(max-width:768px){article .post-footer .author-bar{background-color:#f1f1f1;font-size:14px;line-height:22px;margin:0;padding:8px}article .post-footer .media img{height:auto;width:75px}}article .author-bio{font-size:16px}article .read-more{color:var(--primary-color)}.come-in{transform:translateY(0)!important;visibility:visible!important}.thm-menu-divider{border-bottom:1px solid #fff;-moz-border-image:-moz-linear-gradient(left,#d8d8d8 0,#fff 100%);-webkit-border-image:-webkit-linear-gradient(left,#d8d8d8,#fff);-o-border-image:linear-gradient(90deg,#d8d8d8 0,#fff);border-image:linear-gradient(90deg,#d8d8d8 0,#fff);border-image-slice:1}.thm-navbar{font-family:var(--font-title);font-weight:400;padding:0;text-transform:uppercase}.thm-navbar .thm-navbar-top{border:0;border-bottom:1px solid #fff;-moz-border-image:-moz-linear-gradient(left,#d8d8d8 0,#fff 100%);-webkit-border-image:-webkit-linear-gradient(left,#d8d8d8,#fff);-o-border-image:linear-gradient(90deg,#d8d8d8 0,#fff);border-image:linear-gradient(90deg,#d8d8d8 0,#fff);border-image-slice:1;font-family:var(--font-title)}.thm-navbar .nav-link{color:#000;padding:4px 18px 0 0}.thm-navbar .nav-link:hover{color:var(--primary-color)}.thm-navbar .navbar-vip-logo .vip-logo--stars{fill:#8fa0d1}.thm-navbar .navbar-vip-logo .vip-logo--stripes{fill:#b12025}.thm-navbar .navbar-vip-logo .vip-logo--text{fill:#fff}.thm-navbar .active{background-color:transparent;color:var(--primary-color);position:relative}.thm-headroom{transform:translateY(-200%);transition:.3s ease-in-out}.thm-navbar-scroll{background-color:var(--menu-bg-color);border:0 solid transparent;border-bottom:1px solid var(--border-color);font-family:var(--font-title);font-weight:700;min-height:67px;padding:0;text-transform:uppercase}.thm-navbar-scroll .nav-link{font-weight:700;margin:0 12px;padding:0 0 20px}.thm-navbar-scroll .nav-link:hover{color:var(--primary-color)}.thm-navbar-scroll .nav-thtv{height:14px;position:relative;top:-1px;width:auto}.thm-navbar-scroll .active{background-color:transparent;border-bottom:3px solid var(--primary-color);color:var(--primary-color);position:relative}.thm-navbar-scroll .headline{font-family:SourceSansProRegular,sans-serif;font-style:normal;overflow:hidden;text-overflow:ellipsis;text-transform:none;white-space:nowrap;width:600px}@media(max-width:1024px){.thm-navbar-scroll .headline{width:490px}}.thm-navbar-mobile .active.nav-link .thm-vip-menu .vip-logo--text,.thm-navbar-scroll .active.nav-link .thm-vip-menu .vip-logo--text{fill:#fff!important}.thm-navbar-mobile .navbar-vip-logo .vip-logo--stars,.thm-navbar-scroll .navbar-vip-logo .vip-logo--stars{fill:#8fa0d1}.thm-navbar-mobile .navbar-vip-logo .vip-logo--stripes,.thm-navbar-scroll .navbar-vip-logo .vip-logo--stripes{fill:#b12025}.thm-navbar-mobile .navbar-vip-logo .vip-logo--text,.thm-navbar-scroll .navbar-vip-logo .vip-logo--text{fill:var(--primary-color)!important}body.thm-condensed{--body-padding-top:67px;padding-top:var(--body-padding-top)}.thm-navbar-condensed{min-height:67px}.thm-navbar-mobile{background-color:var(--menu-bg-color);border-bottom:1px solid var(--border-color);font-family:SourceSansProRegular,Helvetica,sans-serif;font-size:18px;font-weight:600;height:60px;padding:5px 10px;text-transform:uppercase}.thm-navbar-mobile .thm-vip-menu>i>svg{height:18px}.thm-navbar-mobile .thm-vip-login{margin:0 0 0 12px;padding:3px 0}.thm-navbar-mobile .nav-thtv{height:15px;width:auto}.thm-navbar-mobile .navbar-brand{display:inline-block;line-height:inherit;margin:0 0 0 6px;padding:0;white-space:nowrap}.thm-navbar-mobile .navbar-brand .header-logo{aspect-ratio:auto 5/1;width:110px}.thm-navbar-mobile .mobile-ft{background-color:#fff;font-family:Source Sans Pro,Helvetica,sans-serif;font-size:13px;font-weight:400;letter-spacing:normal;padding:0;text-transform:uppercase}.thm-navbar-mobile .column-list{background-color:#f8f9fa;column-count:2;column-gap:10px;-moz-column-gap:10px;-webkit-column-gap:10px;-moz-columns:2;-webkit-columns:2;letter-spacing:normal;padding:8px;position:relative}.thm-navbar-mobile .column-list a{display:block;font-size:calc(100% - 2px);text-transform:none}.thm-navbar-mobile .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true]:after{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}.thm-navbar-mobile .navbar-nav .nav-link[data-bs-toggle=collapse]:after{border-bottom:0;border-left:.3em solid transparent;border-right:.3em solid transparent;border-top:.3em solid;content:"";display:inline-block;margin-left:.255em;-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s;vertical-align:.255em}.thm-main-nav{border-bottom:1px solid var(--border-color)}.thm-main-nav .nav-link{font-weight:700;margin:0 12px;padding:0 0 20px}.thm-main-nav .nav-link:hover{color:var(--primary-color)}.thm-main-nav .nav-thtv{height:13px;position:relative;top:-2px;width:auto}.thm-main-nav .active{background-color:transparent;border-bottom:3px solid var(--primary-color);color:var(--primary-color);position:relative}.alert-bar{background-color:var(--alertbar-color);color:#fff;cursor:pointer;font-size:1.15em;line-height:1.9em;padding:.3em 0}@media(max-width:991px){.alert-bar{margin-top:60px}}@media(max-width:768px){.alert-bar{margin-bottom:.6em;margin-top:-5px}}@media(max-width:576px){.alert-bar{line-height:1.5em;padding-bottom:.4em;padding-top:.4em}}.alert-bar .btn-link{border-color:#fff;color:#fff;padding:.2rem .75rem;text-decoration:none;vertical-align:top}.alert-bar .btn-link:hover{background-color:#fff;color:var(--alertbar-color);text-decoration:none}.alert-bar__title{color:#fff;display:flex;padding-left:.2em}.alert-bar__title:hover{color:#fff;text-decoration:underline}@media(max-width:576px){.alert-bar__title{display:block;overflow:hidden;padding-left:.45em;text-overflow:ellipsis;white-space:nowrap}}@media(max-width:991px){.alert-bar__title{text-decoration:underline}}.alert-bar__label{border-right:1px solid hsla(0,0%,100%,.5);display:block;float:left;font-weight:700;height:100%;margin-right:.15em;padding-right:.45em}@media(max-width:576px){.alert-bar__label{font-size:85%}}.hero-h1{font-family:var(--font-title);font-size:58px;font-weight:700;margin-bottom:50px}@media(max-width:768px){.hero-h1{border-bottom:1px solid var(--border-color);font-size:20px;font-weight:700;line-height:24px;margin-bottom:10px}}.hero-h1__author a{color:#7a7a7a;display:block;font-family:var(--font-header);margin-bottom:10px;margin-top:10px}.wp-card-huge{border:1px solid var(--border-color);border-radius:10px;font-family:var(--font-header);position:relative}@media(max-width:768px){.wp-card-huge{border-bottom:1px solid var(--border-color);margin-bottom:20px}}@media(max-width:576px){.wp-card-huge{min-height:200px!important}}.wp-card-huge__category{display:block;font-size:12px;font-weight:400;letter-spacing:0;margin:15px 0;text-transform:uppercase}.wp-card-huge__category a{color:var(--text-color)}.wp-card-huge__img{aspect-ratio:auto 1052/615;height:auto;position:relative}.wp-card-huge__title{display:block;margin:0 0 10px}.wp-card-huge__title a{color:var(--text-color);font-size:var(--card-huge-title);font-weight:400;line-height:var(--card-huge-title-lh)}.wp-card-huge__author{color:var(--text-color);display:block;font-family:var(--font-title);letter-spacing:0;margin:0 0 15px}.wp-card-huge__author a{color:var(--text-color);font-weight:400}.wp-card-huge__author a:hover{color:var(--primary-color)}.wp-card-hero{background-color:#000;font-family:var(--font-title);position:relative}.wp-card-hero__overlay{color:#fff;left:20px;position:absolute;top:10px;width:70%}.wp-card-hero__overlay a:hover{color:#fff;text-decoration:underline}.wp-card-hero__category{font-size:12px;font-weight:400;letter-spacing:.2em;margin:15px 0;text-transform:uppercase}.wp-card-hero__category a{color:#fff}.wp-card-hero__img{height:auto;position:relative}.wp-card-hero__img img{opacity:.7}.wp-card-hero__title{margin:10px 0 25px}.wp-card-hero__title a{color:#fff;font-size:36px;font-weight:700;line-height:36px}.wp-card-hero__author{color:#fff;letter-spacing:0;margin:10px 0 15px}.wp-card-hero__author a{color:#fff;font-weight:700}.wp-card-hero__author a:hover{color:#fff;text-decoration:underline}.wp-card{border:1px solid var(--border-color);border-radius:10px;font-family:var(--font-title)!important;margin-bottom:15px}@media(max-width:768px){.wp-card{border-bottom:1px solid var(--border-color);margin-bottom:20px}}.wp-card__vip-badge{background-color:#fff;padding:0;position:absolute;top:15px;z-index:10}.wp-card__category{font-size:10px;font-weight:700;letter-spacing:.2em;margin:10px 0 0;text-transform:uppercase}.wp-card__img{aspect-ratio:auto 536/311;height:auto;position:relative}@media(max-width:576px){.wp-card__img{min-height:200px!important}}.wp-card__title{margin-top:10px}.wp-card__title a{color:var(--text-color)!important;font-size:var(--card-title)!important;font-weight:400!important;line-height:var(--card-title-lh)!important;text-decoration:none!important}.wp-card__title a:hover{color:var(--primary-color)!important}.wp-card__author{color:var(--text-color);font-family:var(--font-title);font-size:14px;letter-spacing:0;margin:10px 0 15px;text-transform:uppercase}.wp-card__author a{color:var(--text-color)!important;font-weight:400!important;text-decoration:none!important}.wp-card__author a:hover{color:var(--primary-color)!important}.th-card-h{font-family:var(--font-header)}@media(max-width:768px){.th-card-h{border-bottom:1px solid var(--border-color)}}.th-card-h__title{align-items:flex-start;display:flex;flex-direction:column}.th-card-h__title a{color:var(--text-color);display:inline-block;font-family:var(--font-title);font-size:var(--card-text-size);font-weight:400;line-height:29px}.th-card-h__img{height:auto;position:relative}.th-card-h__img,.th-card-h__img img{aspect-ratio:auto 3/2}.th-card-h__author{color:var(--text-color);font-family:var(--font-header);font-size:var(--post-author-size);letter-spacing:0;margin:0}.th-card-h__author a{color:var(--text-color);font-weight:400}.th-card-h__author a:hover{color:var(--primary-color)}.th-card-h__author img{border:.3px solid #8a8a8a;border-radius:5px;height:auto;margin-right:5px;vertical-align:middle;width:35px}.th-card-hp{font-family:SourceSansProRegular,Helvetica,sans-serif}@media(max-width:768px){.th-card-hp{border-bottom:1px solid var(--border-color)}}.th-card-hp__title a{color:var(--text-color);display:inline-block;font-family:var(--font-title);font-size:var(--card-small-title);font-weight:400;line-height:var(--card-title-lh)}.th-card-hp__img{aspect-ratio:auto 536/311;position:relative}@media(min-width:768px){.th-card-hp__img{height:auto;width:187px}}.th-card-hp__author{color:var(--text-color);font-family:var(--font-header);font-size:var(--card-author);letter-spacing:0;margin:5px 0 0}.th-card-hp__author a{color:var(--text-color);font-weight:400}.th-card-hp__author a:hover{color:var(--primary-color)}.th-card-hp__author img{border:.3px solid #8a8a8a;border-radius:5px;height:auto;margin-right:5px;vertical-align:middle;width:35px}.thm-cartoon-card{display:flex}footer{background-color:var(--menu-bg-color);font-size:18px}footer .column-list{column-count:4;column-gap:10px;-moz-column-gap:10px;-webkit-column-gap:10px;-moz-columns:4;-webkit-columns:4;letter-spacing:normal;padding:0;position:relative;text-transform:uppercase}footer .column-list__item{display:block}@media(max-width:768px){footer .column-list{column-count:2;-moz-columns:2;-webkit-columns:2}}.footer-ad{background-color:#fff;background-image:none!important;bottom:0;box-shadow:0 0 5px 0 rgba(0,0,0,.2)!important;box-sizing:border-box;left:0;margin:0 auto;margin-bottom:0!important;max-height:50px!important;opacity:1!important;position:fixed!important;text-align:center;width:100%!important;z-index:11}.footer-ad__close{background-color:#fff;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='13' viewBox='341 8 13 13' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%234F4F4F' d='M354 9.31 352.69 8l-5.19 5.19L342.31 8 341 9.31l5.19 5.19-5.19 5.19 1.31 1.31 5.19-5.19 5.19 5.19 1.31-1.31-5.19-5.19z' fill-rule='evenodd'/%3E%3C/svg%3E");background-position:9px;background-repeat:no-repeat;background-size:13px 13px;border:none;border-radius:12px 0 0 0;box-shadow:0 -1px 1px 0 rgba(0,0,0,.2);height:28px;position:absolute;right:0;top:-28px;width:28px}#thm-account iframe{min-height:900px!important}.thm-piano-nl-hpfixed{background-color:transparent;bottom:0;left:0;position:fixed;width:100%;z-index:1000}.thm-piano-mop,.thm-piano-mop-premium{margin:0!important;padding:0!important;width:100%}.thm-piano-mop-premium .tp-container-inner:before{background:-moz-linear-gradient(top,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.99) 99%,#fff 100%);background:-webkit-linear-gradient(top,hsla(0,0%,100%,0),hsla(0,0%,100%,.99) 99%,#fff);background:linear-gradient(180deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.99) 99%,#fff);content:"";display:block;height:100px;margin-top:-100px;position:relative;width:100%}.thm-piano-eop{width:100%}.thm-piano-pfixed{background-color:transparent;bottom:0;left:10px;position:fixed;width:350px;z-index:1000}.thm-piano-top{top:10px}.thm-piano-bottom,.thm-piano-top{position:fixed;width:100%;z-index:1000}.thm-piano-bottom{bottom:0}.tp-container-inner{display:inline}.fb-social{background-color:var(--menu-bg-color);color:#fff!important}.fb-social i>svg{fill:#000;position:relative;top:-1px;width:var(--controls-svg-size)}.fb-social i>svg:hover{fill:#000}.fb-social:hover,.truth-social{background-color:var(--menu-bg-color)}.truth-social{color:#fff!important}.truth-social i>svg{fill:#000;position:relative;top:-1px;width:var(--controls-svg-size)}.truth-social i>svg:hover{fill:#000}.print,.truth-social:hover{background-color:var(--menu-bg-color)}.print{color:#fff!important}.print i>svg{fill:#000;position:relative;top:-1px;width:var(--controls-svg-size)}.print i>svg:hover{fill:#000}.print:hover,.tw-social{background-color:var(--menu-bg-color)}.tw-social{color:#fff!important}.tw-social i>svg{fill:#000;width:var(--controls-svg-size)}.tw-social i>svg .svg-tw-circle{fill:#1da1f2}.tw-social i>svg:hover{fill:#000}.em-social,.tw-social:hover{background-color:var(--menu-bg-color)}.em-social{color:#fff!important}.em-social i>svg{fill:#000;width:var(--controls-svg-size)}.em-social i>svg:hover{fill:#000}.em-social:hover{background-color:#d7d7d7}.rss-social{background-color:#ff6500;color:#fff!important}.rss-social i>svg{fill:#fff;width:var(--controls-svg-size)}.rss-social i>svg:hover{fill:#fff}.rss-social:hover{background-color:#fc751c}.controls-social{background-color:transparent;color:#fff!important;cursor:pointer}.controls-social i>svg{fill:#989898;width:25px}.controls-social i>svg:hover{fill:var(--primary-color)}.controls-social:hover{background-color:transparent}.fb-icon>svg{fill:#989898;width:20px}.fb-icon>svg .svg-fb-path{fill:#989898}.fb-icon>svg .svg-fb-path:hover,.fb-icon>svg:hover{fill:#1877f2}.tw-icon>svg{width:20px}.tw-icon>svg .svg-tw-bird{fill:#fff}.tw-icon>svg .svg-tw-circle{fill:#989898}.tw-icon>svg .svg-tw-circle:hover{fill:#1da1f2}.icon-election .red{fill:#fb9e9e}.icon-election .pole{fill:#ccc}.icon-election .blue{fill:#577fbc}.townhall{width:65px!important}.hotair{width:40px!important}.bearingarms,.twitchy{width:75px!important}.pjmedia,.redstate{width:65px!important}.banner{margin:0 auto;text-align:center}.sticky{position:-webkit-sticky;position:sticky;top:6rem}.ad{margin:0 auto}.ad,.advs{text-align:center}.advs{-webkit-font-smoothing:antialiased;display:inline-block;font-size:11px;font-weight:400;line-height:1;margin-bottom:0;padding-top:5px;position:relative;top:0;width:100%}@media(max-width:768px){.gpt-ad-b{border-bottom:1px solid gray;margin-bottom:20px}}.h-50{min-height:50px}.h-90{min-height:90px}.h-250{min-height:250px}.rev-content{font-family:SourceSansProRegular,Helvetica,sans-serif;margin-bottom:3px;margin-top:7px}.widget-list{background-color:transparent;display:inline-block;font-size:20px;line-height:28px}.widget-list__noborder{border:1px solid transparent!important}.widget-list__border{border-bottom:1px solid var(--border-color)}.widget-list__header{background-color:transparent;padding-bottom:5px}.widget-list__header svg{fill:var(--primary-color);width:20px}.widget-list__header-title{color:var(--primary-color);display:inline-block;font-family:var(--font-header);font-size:var(--widget-title-size);font-weight:700;letter-spacing:1px;padding:0;text-transform:uppercase}.widget-list__author{color:#000!important;display:block;font-family:Source Sans Pro,Helvetica,sans-serif;font-size:14px;text-decoration:none!important}.widget-list__body{margin:0}.widget-list__body img{margin:10px 0;width:92px}.widget-list__hero{border:1px solid var(--border-color);border-radius:6px;display:flex;flex-direction:column;line-height:1.2!important}.widget-list__hero img{border-radius:6px;margin:0;padding:0;width:100%}.widget-list__body-title{color:#000!important;font-weight:800!important;line-height:1.2!important;text-decoration:none!important}.widget-list__body-title:hover{color:var(--primary-color)!important}.widget-list__body-img{background-position:50%;background-repeat:no-repeat;background-size:cover;border:.3px solid #707070;border-radius:5px;display:inline-block;height:80px;margin-right:15px;width:80px}.widget-list__count{color:var(--primary-color);display:inline-block;font-family:var(--font-header);font-size:24px;font-weight:700;line-height:24px;margin-right:5px;text-align:center;width:24px}.thm-cartoon-widget{display:inline-block;font-size:var(--widget-title-size);position:relative}.thm-cartoon-widget__button{background:rgba(0,0,0,.6);border-radius:3px;bottom:24px;float:left;font-family:var(--font-header);font-size:18px;left:20px;line-height:15px;margin:0 0 -4px;position:absolute;text-transform:uppercase;transition:color .1s linear,border .1s linear,opacity .1s linear,background-color .1s linear;white-space:nowrap}.thm-cartoon-widget__button a{color:#fff!important;display:block;padding:16px;text-decoration:none!important}.thm-cartoon-widget__button a:hover{background:rgba(0,0,0,.9);color:#fff}.th-widget-columns__img{aspect-ratio:auto 1/1;height:auto;width:85px}.trending__title{color:var(--primary-color);display:inline-block;font-family:var(--font-header);font-size:23px;font-weight:600;letter-spacing:1px;margin:0 0 10px}.trending .xl-story{position:relative}.trending .xl-story__summary{background-image:linear-gradient(-180deg,transparent,#000);bottom:0;left:0;padding:10px 15px 0;pointer-events:auto;position:absolute;right:0}.trending .xl-story__summary h1{font-size:26px;line-height:30px;margin:0 auto;padding:0}.trending .xl-story__summary a{color:#fff}.trending .xl-story__summary h5{color:#fff;font-family:var(--primary-color);font-size:16px;font-weight:700;letter-spacing:3px;margin:0 auto 10px;text-transform:uppercase}.trending .xl-story__img a{background-position:top;background-repeat:no-repeat;background-size:cover;display:block;height:250px;padding-bottom:0;position:relative}.trending .sm-story{padding-bottom:15px}.trending .sm-story__text{margin:20px 0 0}.trending .sm-story__text a{font-family:SourceSansProRegular,Helvetica,sans-serif;font-size:20px;font-weight:700;line-height:24px}.trending .sm-story__text:hover{color:var(--primary-color)!important}.trending .sm-story__flavor{color:#8a8a8a;font-family:var(--primary-color);font-size:14px;font-weight:700;letter-spacing:3px;margin-top:3px;text-transform:uppercase}.trending .tothm-card{font-family:SourceSansProRegular,Helvetica,sans-serif}@media(max-width:768px){.trending .tothm-card{border-bottom:1px solid #989898;margin-bottom:20px}}.trending .tothm-card__vip-badge{border-right:40px solid transparent;border-top:40px solid #e6e6e6;height:0;position:absolute;width:0;z-index:10}.trending .tothm-card__category{font-size:10px;font-weight:700;letter-spacing:.2em;margin:10px 0 0;text-transform:uppercase}.trending .tothm-card__img{height:auto}.trending .tothm-card__img-cover a{background-position:top;background-repeat:no-repeat;background-size:cover;display:block;height:220px;padding-bottom:0;position:relative}.trending .tothm-card__title{margin-top:10px;text-align:left}.trending .tothm-card__title a{color:var(--text-color);font-size:20px;font-weight:700;line-height:20px}.trending .tothm-card__title a:hover{color:var(--primary-color)!important}.trending .tothm-card__author{font-family:var(--primary-color);font-size:14px;font-weight:700;letter-spacing:.2em;margin:5px 0 10px;text-align:left}.mpw-bordered{border:1px solid #ddd;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;float:left;margin-bottom:25px;padding:0 25px}.mpw-bordered>.mpw{margin:10px 0 15px}.mpw{clear:both;margin:0 auto 30px}.mpw .top-pad{padding-top:10px}.mpw ul li{line-height:20px;padding:10px 0}.mpw__domain{color:#8a8a8a;font-size:14px;font-weight:700;letter-spacing:3px;margin-top:5px;text-transform:uppercase}.mpw__domain,.mpw__title{font-family:var(--primary-color)}.mpw__title{border:0;border-bottom:2px solid #fff;color:#00a99d;display:inline-block;font-size:18px;margin:0}.mpw__title .star-box{top:2px}.mpw__story{font-family:SourceSansProRegular,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:23px}.hamburger .line{background-color:#000;display:block;height:2px;margin:7px 0;-webkit-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out;width:25px}.hamburger .line:hover{cursor:pointer}.hamburger .line-long{width:40px}.headroom{display:none;transform:translateY(-110%);transition:transform .2s linear;will-change:transform}.headroom--pinned{display:inline-block;transform:translateY(0)}.headroom--top,.headroom--unpinned{display:inline-block;transform:translateY(-110%)}.thm-headroom{display:none;transform:translateY(-110%);transition:transform .2s linear;will-change:transform}.thm-headroom--pinned{display:inline-block;transform:translateY(0)}.thm-headroom--top,.thm-headroom--unpinned{display:inline-block;transform:translateY(-110%)}#wpadminbar{background:#23282d;font-family:Open Sans,sans-serif;font-size:13px}#wpadminbar.bg-dark{background:#23282d!important}#wpadminbar span.navbar-brand{margin-right:.4em}#wpadminbar a.nav-link{color:#eee;line-height:20px}#wpadminbar a.nav-link:before,#wpadminbar span.nav-link--wordpress:before{font-family:dashicons;font-size:19px;padding-right:4px;vertical-align:middle}#wpadminbar span.nav-link--wordpress:before{color:#a0a5aa}#wpadminbar .dropdown-menu{background-color:#23282d;border:none;border-radius:unset;font-size:unset;margin-top:-3px}#wpadminbar a.dropdown-item{background-color:transparent!important;color:#b4b9be;font-size:1.1em;padding:.25rem 1rem}#wpadminbar a.dropdown-item:hover,#wpadminbar a.nav-link:hover{color:#00b9eb}#wpadminbar .dropdown-toggle.show{color:#33373b}#wpadminbar span.nav-link--wordpress:before{content:""}#wpadminbar a.nav-link--new:before{content:""}#wpadminbar a.nav-link--edit:before{content:""}@media only screen and (max-width:575px){#wpadminbar img.avatar{display:none}#wpadminbar .navbar-brand{padding-bottom:0;padding-top:2px}#wpadminbar span.nav-link--wordpress:before{font-size:25px}.thm-fixed-bottom{bottom:0;left:0;position:fixed;right:0;z-index:1030}}@media only screen and (min-width:576px){body.has-admin-bar{padding-top:56px}#wpadminbar{height:32px}}.thm-author-list .card-body{padding:6px 1px}.thm-slider a:visited{color:#707070}.tns-controls{align-content:center;align-items:center;background:#fdfdfd;display:flex;flex-direction:column;height:75px;justify-content:center;position:fixed;right:0;width:55px;z-index:1025}.tns-controls [aria-controls]{background:#ebebeb;border:0;border-radius:3px;color:#707070;font-size:15px;height:2.5em;margin:5px;padding:0 5px}.tns-outer{background-color:#fff;border:1px solid var(--bs-gray-300);font-size:15px;left:0;margin:0;position:fixed;right:0;top:65px;z-index:1020}.tns-ovh{box-shadow:0 3px 6px 0 rgba(0,0,0,.25)}.tns-inner,.tns-ovh{height:75px}.thm-slider-post{border-right:1px solid var(--border-color)!important;display:flex;flex-direction:row;padding:7px 0}.thm-slider-post__body{font-family:var(--font-title);font-weight:700;padding-right:10px}.gg-chevron-right{border:2px solid transparent;border-radius:100px;box-sizing:border-box;display:block;height:22px;position:relative;transform:scale(var(--ggs,1));width:22px}.gg-chevron-right:after{border-bottom:2px solid;border-right:2px solid;box-sizing:border-box;content:"";display:block;height:10px;position:absolute;right:6px;top:4px;transform:rotate(-45deg);width:10px}.gg-chevron-left{border:2px solid transparent;border-radius:100px;box-sizing:border-box;display:block;height:22px;position:relative;transform:scale(var(--ggs,1));width:22px}.gg-chevron-left:after{border-bottom:2px solid;border-left:2px solid;box-sizing:border-box;content:"";display:block;height:10px;left:6px;position:absolute;top:4px;transform:rotate(45deg);width:10px}:root{--global-text-size:22px;--global-lh:1.2;--fs-0:12px;--fs-1:14px;--fs-2:16px;--fs-3:17px;--fs-4:18px;--fs-5:20px;--fs-6:22px;--fs-7:23px;--fs-8:28px;--alertbar-color:#9f2629;--primary-color:#f27b21;--secondary-color:#fafafa;--yellow-color:#f7dd6d;--category-color:#f27b21;--menu-bg-color:var(--white-color);--border-color:#707070;--dot-color:#f27b21;--font-color:#424242;--bg-color:var(--white-color);--heading-color:#292922;--white-color:#fff;--text-color:#000;--body-text-size:16px;--body-padding-top:0;--card-huge-title:40px;--card-huge-title-lh:var(--global-lh);--card-text-size:22px;--card-text-size-lh:var(--global-lh);--card-title:24px;--card-title-lh:1.15;--card-small-title:22px;--card-author:16px;--post-caption-size:16px;--post-title-size:60px;--post-body-size:var(--global-text-size);--post-author-size:18px;--post-category-size:20px;--post-body-lh:1.6;--controls-svg-size:22px;--main-margin-top:0;--widget-title-size:22px;--font-bolder:SourceSansProBold,Helvetica,sans-serif;--font-title:"SourceSansProRegular",sans-serif,serif;--font-header:"odudaregular",Arial,Sans-serif;--font-author:Helvetica,sans-serif;--h1-size:35px;--lb-fs-body:var(--global-text-size);--bs-btn-active-color:transparent;--bs-btn-active-bg:transparent;--bs-btn-active-border-color:var(--bs-gray-100)}@media(max-width:768px){:root{--global-text-size:16px;--body-padding-top:65px;--post-caption-size:14px;--post-title-size:28px;--post-body-size:20px;--post-author-size:16px;--post-category-size:14px;--post-body-lh:1.5;--controls-svg-size:14px;--widget-title-size:22px;--card-text-size:20px;--card-title:23px;--card-small-title:23px;--card-huge-title:23px;--h1-size:25px;--main-margin-top:0px;--lb-fs-body:var(--global-text-size)}}html{font-smoothing:antialiased;text-rendering:optimizeLegibility}body{background-color:var(--white-color);color:var(--text-color);font-family:var(--font-title);font-size:var(--body-text-size);line-height:1.2;padding-top:var(--body-padding-top)}header{background-color:#fff}a{color:var(--text-color)}a,a:hover{text-decoration:none}.primary-color,a:hover{color:var(--primary-color)}.thfs-1,.thfs-2{color:var(--text-color);font-family:var(--font-title);font-size:var(--fs-2);font-weight:400}.thfs-3{font-size:var(--card-title);font-weight:800}.thfs-3,.thfs-5{color:var(--text-color);font-family:var(--font-header)}.thfs-5{font-size:var(--card-author);letter-spacing:0;line-height:var(--global-lh)}.pc{font-family:var(--font-header);letter-spacing:1px}.pc,.pc a{color:var(--primary-color)}p{margin-bottom:1rem;margin-top:0}.join-vip{display:block;margin:0 auto;position:relative;text-align:center;top:11px}.vip-hero{margin:15px 0;max-width:110px}main{margin-top:var(--main-margin-top);min-height:500px}.social-bar a{margin-left:6px;padding:6px 8px}.social-bar a,.social-bar a:hover{border:1px solid var(--border-color)}.social-bar a:hover{background-color:#ededed}@media(max-width:768px){:root{--controls-svg-size:25px}}.th-bg{background-color:#ededed}.loadmore{overflow-anchor:none}.thm-myaccount{font-family:var(--font-header)}.thm-button-outline{background-color:#fff;border-color:var(--primary-color);color:var(--primary-color)}.thm-button-outline:hover{background-color:#f38634;border-color:#f38634;color:#fff}.thm-button{background-color:var(--primary-color);border-color:var(--primary-color);color:#fff}.thm-button:hover{background-color:#f38634;border-color:#f38634;color:#fff}h1,h2,h3{color:#000;font-family:var(--font-header);font-weight:400}h1{font-size:var(--h1-size);margin-bottom:10px;padding-bottom:10px}@media(max-width:768px){h1{font-size:var(--h1-size)}}.column-list{column-count:2;column-gap:10px;-moz-column-gap:10px;-webkit-column-gap:10px;-moz-columns:2;-webkit-columns:2;letter-spacing:normal;padding:15px 0;position:relative}.column-list a{display:block;overflow:hidden;padding-bottom:10px;text-overflow:ellipsis;text-transform:none;white-space:nowrap}.small-bold{font-size:var(--fs-2);font-weight:700}.columnist-img{height:auto;width:85px}.page-header{border-bottom:1px solid #d7d7d7;display:block;margin:10px 0 25px;padding-bottom:20px}.page-header span{color:#989898;display:block;font-weight:700;letter-spacing:.2em;padding-bottom:14px;text-transform:uppercase}.category-banner{background:#000;margin-bottom:25px}.category-banner h1{color:#fff;display:block;font-family:"Source Serif Pro",serif;font-weight:700;letter-spacing:.2em;padding:30px 0;text-align:center;text-transform:uppercase}.vip-promo img{height:auto;width:160px}.video-card:hover .brid-play{opacity:100%;transition:opacity .4s}.brid-play{height:70px;left:41%;opacity:0;position:absolute;top:50%;transform:translateY(-50%);width:70px}a.thm-brand-button{background-color:var(--bs-gray-100);border:1px solid var(--bs-gray-300);border-radius:4px;color:#212529;cursor:pointer;display:inline-block;font-size:1rem;font-weight:400;line-height:1.5;padding:8px 10px 10px;position:relative;text-align:center;text-decoration:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;vertical-align:middle}.thm-podcast-video{background-color:var(--yellow-color)}.thm-podcast-video .pc{font-size:20px;font-weight:600}@media(min-width:768px){.thm-podcast-video .th-card-hp__img{height:auto;width:150px}.thm-podcast-video .th-card-hp__title a{font-size:17px;font-weight:600;line-height:20px}.thm-podcast-video .wp-card-huge__title a{color:var(--text-color);font-size:35px;font-weight:400;line-height:40px}}.modal-dialog .selectize-dropdown .selected{background-color:var(--primary-color);color:#fff}.modal-dialog .selectize-dropdown-content{font-size:var(--global-text-size)}.thm-badge{background:var(--primary-color);border-radius:8px;color:#fff;font-family:var(--font-header);font-weight:700;letter-spacing:1.5px;margin:8px;padding:6px 8px 5px;position:absolute;text-decoration:none;text-transform:uppercase}.dot{background-color:#fff;border-radius:50%;color:#fff;display:inline-block;height:10px;margin-left:3px;margin-right:6px;position:relative;width:10px}@keyframes flickerAnimation{0%{opacity:1}50%{opacity:0}to{opacity:1}}@-o-keyframes flickerAnimation{0%{opacity:1}50%{opacity:0}to{opacity:1}}@-moz-keyframes flickerAnimation{0%{opacity:1}50%{opacity:0}to{opacity:1}}@-webkit-keyframes flickerAnimation{0%{opacity:1}50%{opacity:0}to{opacity:1}}.animate-flicker{-webkit-animation:flickerAnimation 1s infinite;-moz-animation:flickerAnimation 1s infinite;-o-animation:flickerAnimation 1s infinite;animation:flickerAnimation 1s infinite}</style>
+    
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-METK3LB708"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+ 
+
+ 
+
+
+    gtag('config', 'G-METK3LB708', {'pageType': 'free', 'content_group': 'Doug P.', 'section': 'media'});
+
+</script>
+
+    
+    <title>WEF previews Greta Thunberg's challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course) &ndash; Twitchy </title>
+        <meta property="article:published_time" content="2020-01-20T23:07:20" />
+    <meta name="keywords" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Doug P." />
+    <link rel="canonical" href="https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699" />
+        <link rel="amphtml" href="https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699/amp">
+
+    <meta property="og:title" content="WEF previews Greta Thunberg&#x27;s challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course)" />
+    <meta property="og:type" content="Article" />
+    <meta property="og:url" content="https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699" />
+    <meta property="og:image" content="https://media.townhall.com/cdn/hodl/tw/images/up/2019/09/Thunberg_AP.png" />
+    <meta property="og:site_name" content="twitchy.com" />
+    <meta property="og:description" content="&nbsp;" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WEF previews Greta Thunberg&#x27;s challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course)" />
+    <meta name="twitter:image" content="https://media.townhall.com/cdn/hodl/tw/images/up/2019/09/Thunberg_AP.png" />
+    <meta name="twitter:url" content="https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699" />
+    <meta name="twitter:description" content="&nbsp;" />
+    <meta name="twitter:site" content="@twitchyteam" />
+
+
+
+    <meta property="fb:pages" content="41632789656,103971336305218,319569361390023,106547192707583,124538510989702,283971595408,15418366158,153162531376557,127519040661256,123834811060739,305174559545115,321502821264274,413465452078762,492802317512753,140705212665688,116757565026850,114013445328868" />
+
+    <script>
+    document.cookie = "__adblocker=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    var setNptTechAdblockerCookie = function (adblocker) {
+        var d = new Date();
+        d.setTime(d.getTime() + 60 * 60 * 24 * 2 * 1000);
+        document.cookie = "__adblocker=" + (adblocker ? "true" : "false") + "; expires=" + d.toUTCString() + "; path=/";
+    }
+    var script = document.createElement("script");
+    script.setAttribute("async", true);
+    script.setAttribute("src", "//www.npttech.com/advertising.js");
+    script.setAttribute("onerror", "setNptTechAdblockerCookie(true);");
+    document.getElementsByTagName("head")[0].appendChild(script);
+</script>
+
+    
+
+    
+        <script src="https://assets.freedomadnetwork.com/fan-pxl.js"></script>
+    <script>
+
+        var desktopSizes = [
+            [970, 250],
+            [728, 90],
+            [300, 600],
+            [300, 250]
+        ];
+        var tabletSizes = [
+            [728, 90],
+            [160, 600],
+            [300, 250]
+        ];
+        var phoneSizes = [
+            [320, 100],
+            [320, 50],
+            [300, 250]
+        ];
+        var allSizes = [
+            [970, 250],
+            [728, 90],
+            [320, 100],
+            [320, 50],
+            [300, 600],
+            [300, 250],
+            [160, 600]
+        ];
+
+        var bidTimeout = 1200;
+        var refreshInterval = 120000;
+        var PREBID_TIMEOUT = bidTimeout;
+        var FAILSAFE_TIMEOUT = 3000;
+        var PREBID_ADAGIO = "twitchy-com";
+        var PREBID = true;
+        var adUnits = [{"code":"div-gpt-728x90_1","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-728x90_1","data":{"divId":"div-gpt-728x90_1","placement":"728x90"}},"data":{"pbadslot":"/articles/div-gpt-728x90_1"}},"labelAny":["desktop"],"mediaTypes":{"banner":{"sizes":[[728,90],[970,250],[970,90]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('dfc54e69-dc95-4bc9-9c12-4771b414d4e3')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988473","delDomain":"townhallmedia-d.openx.net"}}]},{"code":"div-gpt-300x250_1","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-300x250_1","data":{"divId":"div-gpt-300x250_1","placement":"300x250"}},"data":{"pbadslot":"/articles/div-gpt-300x250_1"}},"labelAny":["desktop","tablet"],"mediaTypes":{"banner":{"sizes":[[300,250],[336,280],[200,200],[250,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('5144b824-7e28-44bc-9c91-84629ede3276')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988474","delDomain":"townhallmedia-d.openx.net"}},{"bidder":"lockerdome","params":{"adUnitId":"LD16381080472331110"}}]},{"code":"div-gpt-300x250_2","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-300x250_2","data":{"divId":"div-gpt-300x250_2","placement":"300x250"}},"data":{"pbadslot":"/articles/div-gpt-300x250_2"}},"labelAny":["desktop","tablet"],"mediaTypes":{"banner":{"sizes":[[300,250],[336,280],[200,200],[250,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('38f19bdd-aa00-46a8-9a15-1d4cea9b8924')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988474","delDomain":"townhallmedia-d.openx.net"}},{"bidder":"lockerdome","params":{"adUnitId":"LD16381080463942502"}}]},{"code":"div-gpt-300x250_3","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-300x250_3","data":{"divId":"div-gpt-300x250_3","placement":"300x250"}},"data":{"pbadslot":"/articles/div-gpt-300x250_3"}},"labelAny":["desktop","tablet"],"mediaTypes":{"banner":{"sizes":[[300,250],[336,280],[200,200],[250,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('92e9b231-0f95-4f02-9c03-9663b38a5f43')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988474","delDomain":"townhallmedia-d.openx.net"}},{"bidder":"lockerdome","params":{"adUnitId":"LD16381080462893926"}}]},{"code":"div-gpt-300x250_4","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-300x250_4","data":{"divId":"div-gpt-300x250_4","placement":"300x250"}},"data":{"pbadslot":"/articles/div-gpt-300x250_4"}},"labelAny":["desktop","tablet","phone"],"mediaTypes":{"banner":{"sizes":[[728,90],[300,250],[336,280],[200,200],[250,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('54f35800-33e2-4d12-9b09-345f08efdf4d')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988474","delDomain":"townhallmedia-d.openx.net"}}]},{"code":"div-gpt-300x250_5","ortb2Imp":{"ext":{"gpid":"/articles/div-gpt-300x250_5","data":{"divId":"div-gpt-300x250_5","placement":"300x250"}},"data":{"pbadslot":"/articles/div-gpt-300x250_5"}},"labelAny":["desktop","tablet","phone"],"mediaTypes":{"banner":{"sizes":[[300,250],[336,280],[200,200],[250,250]]}},"bids":[{"bidder":"rubicon","params":{"accountId":"7685","siteId":"28798","zoneId":"116612"}},{"bidder":"freedomadnetwork","params":{"placementId":FAN.getPlacementId('782d23b7-5345-42d8-8c6f-268be01ca8b9')}},{"bidder":"kueezrtb","params":{"cId":"6704f3e1a2030208727dc2e4","pId":"65lk7c192882r0011813fn9"}},{"bidder":"adagio","params":{"organizationId":"1475","site":"twitchy-com"}},{"bidder":"criteo","params":{"networkId":"7465"}},{"bidder":"appnexus","params":{"placementId":"9114174"}},{"bidder":"openx","params":{"unit":"537988474","delDomain":"townhallmedia-d.openx.net"}},{"bidder":"lockerdome","params":{"adUnitId":"LD16381080470233958"}}]}];
+        var apstagSlots = [{"slotID":"div-gpt-728x90_1","slotName":"/6177/twitchy/articles/728x90_1","sizes":[[728,90],[970,250],[970,90]]},{"slotID":"div-gpt-300x250_1","slotName":"/6177/twitchy/articles/300x250_1","sizes":[[300,250],[336,280],[200,200],[250,250]]},{"slotID":"div-gpt-300x250_2","slotName":"/6177/twitchy/articles/300x250_2","sizes":[[300,250],[336,280],[200,200],[250,250]]},{"slotID":"div-gpt-300x250_3","slotName":"/6177/twitchy/articles/300x250_3","sizes":[[300,250],[336,280],[200,200],[250,250]]},{"slotID":"div-gpt-300x250_4","slotName":"/6177/twitchy/articles/300x250_4","sizes":[[728,90],[300,250],[336,280],[200,200],[250,250]]},{"slotID":"div-gpt-300x250_5","slotName":"/6177/twitchy/articles/300x250_5","sizes":[[300,250],[336,280],[200,200],[250,250]]}];
+
+    </script>
+    <script type="text/javascript" data-cfasync="false" crossorigin="anonymous" src="https://static.kueezrtb.com/latest.js" id="kueezrtb_latest"></script>
+    <script async src="https://c.amazon-adsystem.com/aax2/apstag.js"></script>
+    
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        <script async src="https://cdn.townhall.com/web/js/prebid/prebid-9.38.0.js?v=3"></script>
+        <script src="/prebid/prebid-responsive.js?v=9.38.0&amp;v=WRisBmisq8J3ornnsP9OmbO3GZphUWKjGHIWye7r48k"></script>
+    
+    
+    <script async>
+
+        var gptAdUnitPath = "dougp";
+        var gptAdSlot = [];
+        // GPT ad slots
+        var interstitialSlot;
+        googletag.cmd.push(function () {
+            googletag.pubads().disableInitialLoad();
+            try {
+                interstitialSlot = googletag.defineOutOfPageSlot('/6177/twitchy/interstitial', googletag.enums.OutOfPageFormat.INTERSTITIAL);
+                if (interstitialSlot) {
+                    interstitialSlot.addService(googletag.pubads());
+                }
+
+                anchorSlot = googletag.defineOutOfPageSlot(
+                    '/6177/twitchy/articles/728x90_anchor',
+                    window.innerWidth <= 500
+                        ? googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
+                        : googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR,
+                );
+
+                if (anchorSlot) {
+                    anchorSlot.addService(googletag.pubads());
+                }
+
+                gptAdSlot['div-gpt-728x90_1'] = googletag.defineSlot('/6177/twitchy/articles/728x90_1', [[728,90],[970,250],[970,90],[1,1]], 'div-gpt-728x90_1').setTargeting('pos', '728x90_1').addService(googletag.pubads());
+gptAdSlot['div-gpt-300x250_1'] = googletag.defineSlot('/6177/twitchy/articles/300x250_1', [[300,250],[336,280],[200,200],[250,250],"fluid"], 'div-gpt-300x250_1').setTargeting('pos', '300x250_1').addService(googletag.pubads());
+gptAdSlot['div-gpt-300x250_2'] = googletag.defineSlot('/6177/twitchy/articles/300x250_2', [[300,250],[336,280],[200,200],[250,250],"fluid"], 'div-gpt-300x250_2').setTargeting('pos', '300x250_2').addService(googletag.pubads());
+gptAdSlot['div-gpt-300x250_3'] = googletag.defineSlot('/6177/twitchy/articles/300x250_3', [[300,250],[336,280],[200,200],[250,250],"fluid"], 'div-gpt-300x250_3').setTargeting('refresh', 'true').setTargeting('pos', '300x250_3').addService(googletag.pubads());
+gptAdSlot['div-gpt-300x250_4'] = googletag.defineSlot('/6177/twitchy/articles/300x250_4', [[728,90],[300,250],[336,280],[200,200],[250,250],"fluid"], 'div-gpt-300x250_4').setTargeting('pos', '300x250_4').addService(googletag.pubads());
+gptAdSlot['div-gpt-300x250_5'] = googletag.defineSlot('/6177/twitchy/articles/300x250_5', [[300,250],[336,280],[200,200],[250,250],"fluid"], 'div-gpt-300x250_5').setTargeting('pos', '300x250_5').addService(googletag.pubads());
+
+        
+            } catch (e) {
+                console.error("thm-ad-exception", e);
+            }
+
+            googletag.pubads().addEventListener('impressionViewable', function (event) {
+
+                var slot = event.slot;
+
+                if (slot.getTargeting('refresh').indexOf('true') > -1) {
+                    console.log("setting refresh timeout:", slot.getAdUnitPath())
+                        setTimeout(function () {
+                            //Thm.RefreshAd(slot);
+                            thmads.RefreshAd(slot.getSlotElementId())
+                            console.log("refreshing slot:", slot.getAdUnitPath());
+                        }, refreshInterval);
+                }
+            });
+        
+            googletag.pubads().setTargeting("postType","free")
+googletag.pubads().setTargeting("tags",["Climate change","Davos","global warming","Greta Thunberg"]).setTargeting("author","Doug P.")
+
+        
+            googletag.pubads().enableLazyLoad({
+                fetchMarginPercent: 200,  // Fetch slots within 5 viewports.
+                renderMarginPercent: 200,  // Render slots within 2 viewports.
+            });
+
+            googletag.enableServices();
+            if (interstitialSlot) {
+                googletag.cmd.push(function () {
+                    googletag.display(interstitialSlot);
+                });
+            }
+            if (anchorSlot) {
+                googletag.cmd.push(() => {
+                    googletag.display(anchorSlot);
+                });
+            }
+        });
+
+    </script>
+
+    
+    <script type='text/javascript'>
+    (function () {
+
+        var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+
+        _sf_async_config.uid = 14482;
+        _sf_async_config.domain = 'twitchy.com';
+        _sf_async_config.flickerControl = false;
+        _sf_async_config.useCanonical = true;
+        _sf_async_config.useCanonicalDomain = true;
+        _sf_async_config.sections = 'Media';
+        _sf_async_config.authors = 'Doug P.';
+
+        var _cbq = window._cbq = window._cbq || [];
+        if (localStorage.getItem('_cbq_acct')) {
+            _cbq.push(['_acct', localStorage.getItem('_cbq_acct') || "anon"]);
+        }
+
+        function loadChartbeat() {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('script')[0];
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = '//static.chartbeat.com/js/chartbeat.js';
+            n.parentNode.insertBefore(e, n);
+        }
+        loadChartbeat();
+    })();
+</script>
+
+<!-- Chartbeat Conversion -->
+<script type="text/javascript">
+    (function (w, d, s, c, u) {
+        var qf = function (e, a) { (w[c].q = w[c].q || []).push([e, a]); }; w[c] = w[c] || qf;
+        var st = d.createElement(s);
+        var fs = d.getElementsByTagName(s)[0];
+        st.async = 1; st.src = u; fs.parentNode.insertBefore(st, fs);
+    })(window, document, 'script', 'chartbeat', 'https://static.chartbeat.com/js/subscriptions.js');
+</script>
+<!-- End Chartbeat Conversion -->
+    
+    
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+
+    
+    
+    
+
+
+
+</head>
+<body class="thm-condensed">
+    <div class="thm-search">
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+    </button>
+    <form id="search" action="/search/q" method="get" class="form-inline">
+        <input type="search" placeholder="Search..." aria-label="Search" name="q" aria-describedby="search">
+        <button type="submit"><i class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></i></button>
+    </form>
+</div>
+    <div class="thm-piano-top"></div>
+    <header>
+        
+
+
+        
+
+        
+
+    
+<!--fixed top menu-->
+<nav class="thm-navbar thm-navbar-scroll thm-navbar-condensed fixed-top d-none d-lg-flex">
+    <div class="container-xl d-flex flex-nowrap align-items-center justify-content-center justify-content-md-between">
+        <div class="col-lg-3 col-xl-2 mt-1">
+            <a class="navbar-brand" href="/">
+                <img src="https://cdn.townhall.com/web/thm/logo-twitchy.svg" width="175" class="header-logo" alt="Twitchy.com">
+            </a>
+        </div>
+
+        <ul class="nav text-uppercase mt-4">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/category/politics">
+Politics
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/category/media">
+Media
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/category/culture">
+Culture
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/videos">
+Videos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/podcasts">
+Podcasts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://store.townhallmedia.com">
+Store
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vip">
+                            <img src="https://cdn.townhall.com/web/thm/subscriptions-badge-vip.svg" class="nav-vip" />
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/subscribe?tpcc=tvlogo">
+                            <img src="https://cdn.townhall.com/web/svg/thm/townhalltv.svg" class="nav-thtv thtv-watch-url" />
+
+                    </a>
+                </li>
+</ul>
+
+        <div class="col-md-3 d-flex align-items-center justify-content-end mt-1">
+            <div class="dropdown thm-myaccount me-2 d-none">
+                <a class="btn thm-button-outline dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MY ACCOUNT
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item btn-account" href="/account/">Account Settings</a>
+                    <a class="dropdown-item btn-nls" href="/newsletters">Newsletter Subscriptions</a>
+                    <a class="dropdown-item btn-logout" href="#">Log Out</a>
+                </div>
+            </div>
+            <a class="btn thm-button-outline btn-login me-2 d-none" href="#">LOGIN</a>
+            <a class="btn btn-join thm-button text-uppercase me-2 d-none" href="/subscribe?tpcc=home_button">Subscribe</a>
+            <a class="btn btn-light" href="/search/q"><i class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></i></a>
+        </div>
+
+    </div>
+</nav>
+
+
+        <nav class="thm-navbar-mobile fixed-top navbar d-lg-none d-print-none">
+
+            <a class="navbar-brand" href="/"><img src="https://cdn.townhall.com/web/thm/logo-twitchy.svg" class="header-logo"></a>
+            <div class="d-flex">
+                <a class="btn thm-button btn-login me-3 d-none" href="/">Login</a>
+                <div class=" hamburger" id="hamburger-1" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line line-long"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="/"><img src="https://cdn.townhall.com/web/thm/logo-twitchy.svg" width="175" class="header-logo"></a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="row thm-myaccount d-none">
+    <div class="col">
+        <div class="dropdown d-inline-block">
+            <a class="btn thm-button-outline dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MY ACCOUNT
+                <span class="thm-msg-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none">
+                    <span class="thm-msg-count__value"></span>
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item btn-account" href="/account/">Account Settings</a></li>
+                <a class="dropdown-item btn-messages" href="/account/messages">Messages <span class="thm-msg-count badge rounded-pill text-bg-danger align-middle d-none"></span></a>
+                <li><a title="Newsletters" class="dropdown-item btn-nls" href="/newsletters">Newsletters</a></li>
+                <li><a class="dropdown-item" href="/account#disqus">Comment Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item btn-logout" href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row g-2">
+    <div class="col d-grid">
+        <button class="btn-outline-primary btn btn-login d-none">LOGIN</button>
+    </div>
+    <div class="col d-grid">
+        <a href="/subscribe?tpcc=home_mobilebutton" class="btn thm-button btn-join d-none">Subscribe</a>
+    </div>
+</div>
+                    <div class="mt-2">
+                        <ul class="navbar-nav me-auto flex-grow">
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/category/politics">
+
+Politics
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/category/media">
+
+Media
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/category/culture">
+
+Culture
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/videos">
+
+Videos
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/podcasts">
+
+Podcasts
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="https://store.townhallmedia.com">
+
+Store
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/vip">
+
+                            <img src="https://cdn.townhall.com/web/thm/subscriptions-badge-vip.svg" class="nav-vip">
+
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link " href="/subscribe?tpcc=tvlogo">
+
+                            <img src="https://cdn.townhall.com/web/svg/thm/townhalltv.svg" class="nav-thtv thtv-watch-url">
+
+                    </a>
+                </li>
+</ul>
+                    </div>
+                    <div class="mt-0">
+                        <form id="search-mobile" action="/search/q" method="get" class="form-inline my-2">
+                            <input type="search" placeholder="Search..." aria-label="Search" name="q" aria-describedby="search">
+                            <button type="submit"><i class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></i></button>
+                        </form>
+                    </div>
+                    <div class="mobile-ft my-2">
+                        <hr />
+                        <div class="row">
+
+                            <div class="col-6 mt-1">
+                                <a href="/contact-us/">Contact Us</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-6 mt-1">
+                                <a href="https://cdn.townhall.com/web/privacypolicy/termsofuse.htm">Terms &amp; Conditions</a>
+                            </div>
+                            <div class="col-6 mt-1">
+                                <a href="https://salemmedia.com/townhall-media-privacy-policy/">Privacy Policy</a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-6 mt-1">
+                                <a href="https://salemmedia.com/ccpa-sale-opt-out/">California - Do Not Sell My Personal Information</a>
+                            </div>
+                            <div class="col-6 mt-1">
+                                <a href="https://salemmedia.com/townhall-media-ccpa-privacy-notice-for-california-residents/">California CCPA Notice</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+<main role="main">
+    
+
+<script id="post-meta" type="application/json">{"Id":1425699,"Title":"WEF previews Greta Thunberg's challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course)","BaseUrl":"https://twitchy.com","Canonical":"https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699","ShareTitle":null,"PublishedDate":"2020-01-20T23:07:20","Author":"Doug P.","AuthorImage":null,"ImageUrl":"https://media.townhall.com/cdn/hodl/tw/images/up/2019/09/Thunberg_AP.png","Tags":["Climate change","Davos","global warming","Greta Thunberg"],"Soup":0}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"NewsArticle","url":"https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699","mainEntityOfPage":{"@type":"WebPage","@id":"https://twitchy.com/dougp/2020/01/20/wef-previews-greta-thunbergs-challenge-to-world-leaders-in-davos-to-take-effect-after-they-all-fly-home-from-switzerland-of-course-n1425699"},"headline":"WEF previews Greta Thunberg's challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course)","datePublished":"1/20/2020 11:07:20 PM","dateModified":"1/20/2020 11:07:20 PM","author":{"@type":"Person","name":"Doug P."},"publisher":{"@type":"Organization","name":"Twitchy","logo":{"@type":"ImageObject","url":"https://cdn.townhall.com/web/thm/logo-twitchy.jpg","width":1280,"height":576}},"isAccessibleForFree":true,"image":{"@type":"ImageObject","url":"https://media.townhall.com/cdn/hodl/tw/images/up/2019/09/Thunberg_AP.png"},"coverageStartTime":"0001-01-01T00:00:00+00:00","coverageEndTime":"0001-01-01T00:00:00+00:00"}</script>
+    <div class="thm-slider d-none">
+        
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway" href="/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2017/286/163a29ab-5721-41ee-9212-6af9a4a21631-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway" href="/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122?utm_medium=widget&amp;utm_source=slider">Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+            <div class="wp-card__vip-badge">
+                <img class="thm-vip-badge" src="https://cdn.townhall.com/web/svg/thm/2024/badge-vip.svg" alt="VIP" />
+            </div>
+
+                        <a title="New Book Includes Writings by Queer and Trans Immigrants Who Oppose Border Controls " href="/brettt/2025/05/22/new-book-includes-writings-by-queer-and-trans-immigrants-who-oppose-deportation-n2413083?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2023/216/85b15b8f-38da-46c6-aaf9-93c65b0d640f-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="New Book Includes Writings by Queer and Trans Immigrants Who Oppose Border Controls " href="/brettt/2025/05/22/new-book-includes-writings-by-queer-and-trans-immigrants-who-oppose-deportation-n2413083?utm_medium=widget&amp;utm_source=slider">New Book Includes Writings by Queer and Trans Immigrants Who Oppose Border Controls</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C." href="/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2025/114/ba2b5a2b-2964-435b-b637-9c0bc9cfd929-90x60.png" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C." href="/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160?utm_medium=widget&amp;utm_source=slider">Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C.</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" href="/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2023/303/4144da92-89b8-4926-b6a2-515f652ef25b-90x60.png" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" href="/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118?utm_medium=widget&amp;utm_source=slider">The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="NYT Correspondent Lists People Charged or Threatened With Investigation by Trump" href="/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2024/254/0dc7e688-8573-416f-8457-19b0cc607f51-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="NYT Correspondent Lists People Charged or Threatened With Investigation by Trump" href="/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138?utm_medium=widget&amp;utm_source=slider">NYT Correspondent Lists People Charged or Threatened With Investigation by Trump</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Savage: DHS Posts Video of President Trump Saying &#x27;Bye-Bye&#x27; to Illegal Aliens" href="/brettt/2025/05/21/savage-dhs-posts-video-of-president-trump-saying-bye-bye-to-illegal-aliens-n2413153?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2025/141/265d5446-c127-459b-bca4-cb49342e0352-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Savage: DHS Posts Video of President Trump Saying &#x27;Bye-Bye&#x27; to Illegal Aliens" href="/brettt/2025/05/21/savage-dhs-posts-video-of-president-trump-saying-bye-bye-to-illegal-aliens-n2413153?utm_medium=widget&amp;utm_source=slider">Savage: DHS Posts Video of President Trump Saying &#x27;Bye-Bye&#x27; to Illegal Aliens</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;" href="/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2022/175/fcacce46-9140-487c-a070-b69fe4ce4a96-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;" href="/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156?utm_medium=widget&amp;utm_source=slider">Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+            <div class="wp-card__vip-badge">
+                <img class="thm-vip-badge" src="https://cdn.townhall.com/web/svg/thm/2024/badge-vip.svg" alt="VIP" />
+            </div>
+
+                        <a title="Justice Ketanji Brown Jackson Can&#x27;t Define Women, nor Does She Understand Democracy" href="/amy-curtis/2025/05/21/sotomayor-kbj-on-maine-rep-libby-n2413116?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2023/174/4be0c889-5e8e-4f1d-89ec-190c38615957-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Justice Ketanji Brown Jackson Can&#x27;t Define Women, nor Does She Understand Democracy" href="/amy-curtis/2025/05/21/sotomayor-kbj-on-maine-rep-libby-n2413116?utm_medium=widget&amp;utm_source=slider">Justice Ketanji Brown Jackson Can&#x27;t Define Women, nor Does She Understand Democracy</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Potty Mouth Rep. Jasmine Crockett Talks SNAP: &#x27;This Is Real Life, Y&#x2019;All&#x27;" href="/brettt/2025/05/21/rep-jasmine-crockett-talks-snap-this-is-real-life-yall-n2413121?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2025/57/c881755d-d090-4ac9-8739-2ed2d90dca3e-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Potty Mouth Rep. Jasmine Crockett Talks SNAP: &#x27;This Is Real Life, Y&#x2019;All&#x27;" href="/brettt/2025/05/21/rep-jasmine-crockett-talks-snap-this-is-real-life-yall-n2413121?utm_medium=widget&amp;utm_source=slider">Potty Mouth Rep. Jasmine Crockett Talks SNAP: &#x27;This Is Real Life, Y&#x2019;All&#x27;</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Brian Schatz Is Mad About &#x27;Big Beautiful Bill&#x27; and Its &#x27;Wealth Transfer&#x27; (but Check Out His Past Posts!)" href="/amy-curtis/2025/05/21/brian-schatz-mad-about-big-beautiful-bill-n2413127?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2024/86/2d32b985-7f53-4bd5-ad82-2f80979464f7-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Brian Schatz Is Mad About &#x27;Big Beautiful Bill&#x27; and Its &#x27;Wealth Transfer&#x27; (but Check Out His Past Posts!)" href="/amy-curtis/2025/05/21/brian-schatz-mad-about-big-beautiful-bill-n2413127?utm_medium=widget&amp;utm_source=slider">Brian Schatz Is Mad About &#x27;Big Beautiful Bill&#x27; and Its &#x27;Wealth Transfer&#x27; (but...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+            <div class="wp-card__vip-badge">
+                <img class="thm-vip-badge" src="https://cdn.townhall.com/web/svg/thm/2024/badge-vip.svg" alt="VIP" />
+            </div>
+
+                        <a title="Jake Tapper&#x27;s Cringe-Worthy Apology Tour: A Hilarious Flop After PR Disaster" href="/justmindy/2025/05/21/the-oops-from-the-media-rings-hollow-n2413144?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2025/139/a4fbfe78-eeb6-4995-b3c4-fc7904e9926f-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Jake Tapper&#x27;s Cringe-Worthy Apology Tour: A Hilarious Flop After PR Disaster" href="/justmindy/2025/05/21/the-oops-from-the-media-rings-hollow-n2413144?utm_medium=widget&amp;utm_source=slider">Jake Tapper&#x27;s Cringe-Worthy Apology Tour: A Hilarious Flop After PR Disaster</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="George Orwell to the White Courtesy Phone! Check Out How WA Media Spin AWFUL Anti-Parental Rights Bill" href="/amy-curtis/2025/05/21/komo-spins-anti-parental-rights-bill-as-students-rights-n2413125?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2025/44/f91cdf5e-36b5-4bf6-831a-6ff2e928069f-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="George Orwell to the White Courtesy Phone! Check Out How WA Media Spin AWFUL Anti-Parental Rights Bill" href="/amy-curtis/2025/05/21/komo-spins-anti-parental-rights-bill-as-students-rights-n2413125?utm_medium=widget&amp;utm_source=slider">George Orwell to the White Courtesy Phone! Check Out How WA Media Spin...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="Woke Woman Says Girls Who Lose Medals to a Boy Will Learn Resilience" href="/brettt/2025/05/21/woke-women-tells-girls-who-lost-medals-to-boy-to-get-used-to-disappointment-n2413143?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/tw/images/up/2023/252/e3ebcf6d-921a-4f10-a746-11bfcd732d47-90x60.JPG" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="Woke Woman Says Girls Who Lose Medals to a Boy Will Learn Resilience" href="/brettt/2025/05/21/woke-women-tells-girls-who-lost-medals-to-boy-to-get-used-to-disappointment-n2413143?utm_medium=widget&amp;utm_source=slider">Woke Woman Says Girls Who Lose Medals to a Boy Will Learn Resilience</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="EFF Leader Amused a Bunch of Older Men Met in DC to &#x27;Gossip&#x27; About Him" href="/brettt/2025/05/21/eff-leader-claims-no-significant-amount-of-white-genocide-has-been-produced-n2413134?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2016/121/46734d8c-8fc9-444e-92eb-be9e89ea81f2-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="EFF Leader Amused a Bunch of Older Men Met in DC to &#x27;Gossip&#x27; About Him" href="/brettt/2025/05/21/eff-leader-claims-no-significant-amount-of-white-genocide-has-been-produced-n2413134?utm_medium=widget&amp;utm_source=slider">EFF Leader Amused a Bunch of Older Men Met in DC to &#x27;Gossip&#x27;...</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thm-slider-post">
+                    <div class="me-2">
+                        
+
+                        <a title="LaMonica McIver: It&#x27;s &#x27;Absurd&#x27; I Have to Follow the Same Laws As Other Americans (WATCH)" href="/amy-curtis/2025/05/21/lamonica-mciver-absurd-im-being-held-to-the-same-laws-as-other-americans-n2413124?utm_medium=widget&amp;utm_source=slider">
+                            <img class="rounded shadow-sm mb-3 mb-md-0" width="90" loading="lazy" src="https://media.townhall.com/cdn/hodl/2025/139/bb329404-3d4c-411a-973a-ae3f67975bc2-90x60.jpg" />
+                        </a>
+                    </div>
+                    <div class="thm-slider-post__body">
+                        <a class="hl" title="LaMonica McIver: It&#x27;s &#x27;Absurd&#x27; I Have to Follow the Same Laws As Other Americans (WATCH)" href="/amy-curtis/2025/05/21/lamonica-mciver-absurd-im-being-held-to-the-same-laws-as-other-americans-n2413124?utm_medium=widget&amp;utm_source=slider">LaMonica McIver: It&#x27;s &#x27;Absurd&#x27; I Have to Follow the Same Laws As Other...</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+<article>
+    <div class="container-xl">
+        <section class="post-header__category mt-2">
+        </section>
+        <section class="post-header my-md-3 my-2">
+            <h1>WEF previews Greta Thunberg&#x27;s challenge to world leaders in Davos (to take effect AFTER they all fly home from Switzerland of course)</h1>
+            <div class="post-header__byline d-md-flex my-2">
+                <div class="author d-flex align-items-center">
+                    <div class="pt-0">
+                        <a href="/author/dougp">Doug P.</a>
+                        
+    <span class="x-follow-btn d-inline-block">
+        <a href="https://twitter.com/thepowersthatbe?ref_src=twsrc%5Etfw"
+           class="twitter-follow-button"
+           data-show-screen-name="false"
+           data-show-count="false"></a>
+    </span>
+
+                        <span class="d-none d-sm-inline-block"> | </span>
+                        <span class="date date-formatted d-block d-sm-inline-block" data-original-date="1/20/2020 11:07:20 PM">
+                            11:07 PM on January 20, 2020
+                        </span>
+                    </div>
+                </div>
+                <div class="social-bar d-none d-md-flex mt-md-0">
+                    <div class="thm-sc">
+    <a class="btn tw-social shadow-sm"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></i><span class="tw-count"></span></a>
+    <a class="btn truth-social shadow-sm"><i class=""><svg viewBox="0 0 54 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M48.7279 30.6369H37.2762V40H48.7279V30.6369Z" fill="black"/>
+    <path d="M44.2507 14.4563V5H20.9162V39.9087H32.8265V14.4563H44.2507Z" fill="black"/>
+    <path d="M5 5H16.4338V14.454H5V5Z" fill="black"/>
+</svg>
+</i> <span class="truth-count"></span></a>
+    <a class="btn fb-social shadow-sm"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></i> <span class="fb-count"></span></a>
+        <a class="btn print shadow-sm" target="_blank" href="/author/print/1425699"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"/></svg></i></a>
+
+        <a class="btn em-social email shadow-sm" href="/cdn-cgi/l/email-protection#023d717760686761763f55474422727067746b67757122457067766322566a776c6067706524217a3035397122616a636e6e676c656722766d22756d706e66226e676366677071226b6c224663746d71222a766d22766369672267646467617622434456475022766a677b22636e6e22646e7b226a6d6f672264706d6f2251756b767867706e636c66226d6422616d777071672b24636f7239606d667b3f55474422727067746b67757122457067766322566a776c6067706524217a3035397122616a636e6e676c656722766d22756d706e66226e676366677071226b6c224663746d71222a766d22766369672267646467617622434456475022766a677b22636e6e22646e7b226a6d6f672264706d6f2251756b767867706e636c66226d6422616d777071672b226a76767271382d2d76756b76616a7b2c616d6f2d666d7765722d303230322d32332d30322d7567642f727067746b6775712f65706776632f766a776c60677065712f616a636e6e676c65672f766d2f756d706e662f6e6763666770712f6b6c2f6663746d712f766d2f766369672f6764646761762f63647667702f766a677b2f636e6e2f646e7b2f6a6d6f672f64706d6f2f71756b767867706e636c662f6d642f616d777071672f6c33363037343b3b"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></i></a>
+        <a class="btn em-social email shadow-sm" href="#thm-comments-bookmark"><i class="comment-social"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg></i></a>
+
+</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div class="banner d-print-none">
+            
+
+        <div class="my-4">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-728x90_1" class="gpt-ad ad-90 gpt-header-expanded text-center">
+                
+                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-728x90_1");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-728x90_1"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+            
+        </div>
+
+    </section>
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-md-8 order-md-5 order-1">
+                
+<div class="post-header__img">
+    <figure>
+            <img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/tw/images/up/2019/09/Thunberg_AP-1052x615.png" width="1052" height="615" />
+
+    </figure>
+</div>
+                <section class="post-body">
+                    <p>Another World Economic Forum is kicking off in Davos, Switzerland: </p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">The <a href="https://twitter.com/wef?ref_src=twsrc%5Etfw">@wef</a> Annual Meeting 2020?is taking place this week. </p>
+<p>Join in the conversation using <a href="https://twitter.com/hashtag/wef20?src=hash&amp;ref_src=twsrc%5Etfw">#wef20</a>, tag us in your posts and find out more about the event themes here:<a href="https://t.co/KLAefTD23C">https://t.co/KLAefTD23C</a></p>
+<p>&mdash; World Economic Forum (@wef) <a href="https://twitter.com/wef/status/1219320009178210311?ref_src=twsrc%5Etfw">January 20, 2020</a></p></blockquote>
+
+        <div class="my-4">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-300x250_4" class="gpt-ad ad-90 text-center">
+                
+                <script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-300x250_4");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-300x250_4"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Naturally there will be a gratuitous amount of climate change alarmism, and who better to present that message than Greta Thunberg. The WEF has provided a preview of what many attendees who have private jets waiting at the nearby airport can expect to hear: </p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">At Davos we will tell world leaders to abandon the fossil fuel economy <a href="https://t.co/P5m8yf050a">https://t.co/P5m8yf050a</a> <a href="https://twitter.com/GretaThunberg?ref_src=twsrc%5Etfw">@GretaThunberg</a> <a href="https://twitter.com/hashtag/wef20?src=hash&amp;ref_src=twsrc%5Etfw">#wef20</a> <a href="https://twitter.com/hashtag/economics?src=hash&amp;ref_src=twsrc%5Etfw">#economics</a> <a href="https://twitter.com/hashtag/climatechange?src=hash&amp;ref_src=twsrc%5Etfw">#climatechange</a> <a href="https://t.co/hIY6JjMEcg">pic.twitter.com/hIY6JjMEcg</a></p>
+<p>&mdash; World Economic Forum (@wef) <a href="https://twitter.com/wef/status/1219454579491905536?ref_src=twsrc%5Etfw">January 21, 2020</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>The climate change alarmists in attendance can discuss Thunberg&#8217;s ideas on their jet rides back home. </p>
+<blockquote class="twitter-tweet" data-conversation="none" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">It is ridiculous that <a href="https://twitter.com/wef?ref_src=twsrc%5Etfw">@wef</a> is even entertaining this.  The fossil fuel economy isn&#39;t going anywhere in the near future.  There is no viable alternative, regardless of how much you wish for it.</p>
+<p>&mdash; Morgan Rodwell (@TechnicalBard) <a href="https://twitter.com/TechnicalBard/status/1219456969079058432?ref_src=twsrc%5Etfw">January 21, 2020</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Maybe those serious about the issue should at least schedule a teleconference next year instead of having everybody fly in from all parts of the world for another lecture about how burning fossil fuels is destroying the planet. </p>    <div class="row mb-3">
+        <div class="col">
+                <h4 class="pc">Recommended</h4>
+        <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/2023/303/4144da92-89b8-4926-b6a2-515f652ef25b-536x311.png" loading="lazy"></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" class="hl thm-inc">The Atlantic: 'Sure, We Lied to You. But You Didn't Believe Us, Did You' </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="Gordon K">Gordon K</a>
+    </div>
+</div>
+
+
+
+            
+        </div>
+            <div class="col d-flex align-items-center justify-content-center">
+                
+
+        <div class="my-4">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-300x250_5" class="gpt-ad ad-250 text-center">
+                
+                <script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-300x250_5");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-300x250_5"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+            </div>
+    </div>
+
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">2 things I like about Davos:</p>
+<p>1. Climate hypocrites flying 1,500 private jets to get there.</p>
+<p>2. Climate bedwetters protesting global warming in the snow &#8212; which they predicted wouldn&#39;t be there. <a href="https://t.co/U9iPycBYCF">https://t.co/U9iPycBYCF</a></p>
+<p>&mdash; Steve Milloy (@JunkScience) <a href="https://twitter.com/JunkScience/status/1219292951848914944?ref_src=twsrc%5Etfw">January 20, 2020</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>And yet they never seem to see the irony or hypocrisy. </p>
+
+                    
+
+
+                    <div class="thm-piano-promo"></div>
+                </section>
+                <section class="post-footer d-print-none">
+                    <div class="social-bar my-3">
+                        <div class="thm-sc">
+    <a class="btn tw-social shadow-sm"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></i><span class="tw-count"></span></a>
+    <a class="btn truth-social shadow-sm"><i class=""><svg viewBox="0 0 54 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M48.7279 30.6369H37.2762V40H48.7279V30.6369Z" fill="black"/>
+    <path d="M44.2507 14.4563V5H20.9162V39.9087H32.8265V14.4563H44.2507Z" fill="black"/>
+    <path d="M5 5H16.4338V14.454H5V5Z" fill="black"/>
+</svg>
+</i> <span class="truth-count"></span></a>
+    <a class="btn fb-social shadow-sm"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></i> <span class="fb-count"></span></a>
+        <a class="btn print shadow-sm" target="_blank" href="/author/print/1425699"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"/></svg></i></a>
+
+        <a class="btn em-social email shadow-sm" href="/cdn-cgi/l/email-protection#a59ad6d0c7cfc0c6d198f2e0e385d5d7c0d3ccc0d2d685e2d7c0d1c485f1cdd0cbc7c0d7c28386dd97929ed685c6cdc4c9c9c0cbc2c085d1ca85d2cad7c9c185c9c0c4c1c0d7d685cccb85e1c4d3cad6858dd1ca85d1c4cec085c0c3c3c0c6d185e4e3f1e0f785d1cdc0dc85c4c9c985c3c9dc85cdcac8c085c3d7cac885f6d2ccd1dfc0d7c9c4cbc185cac385c6cad0d7d6c08c83c4c8d59ec7cac1dc98f2e0e385d5d7c0d3ccc0d2d685e2d7c0d1c485f1cdd0cbc7c0d7c28386dd97929ed685c6cdc4c9c9c0cbc2c085d1ca85d2cad7c9c185c9c0c4c1c0d7d685cccb85e1c4d3cad6858dd1ca85d1c4cec085c0c3c3c0c6d185e4e3f1e0f785d1cdc0dc85c4c9c985c3c9dc85cdcac8c085c3d7cac885f6d2ccd1dfc0d7c9c4cbc185cac385c6cad0d7d6c08c85cdd1d1d5d69f8a8ad1d2ccd1c6cddc8bc6cac88ac1cad0c2d58a979597958a95948a97958ad2c0c388d5d7c0d3ccc0d2d688c2d7c0d1c488d1cdd0cbc7c0d7c2d688c6cdc4c9c9c0cbc2c088d1ca88d2cad7c9c188c9c0c4c1c0d7d688cccb88c1c4d3cad688d1ca88d1c4cec088c0c3c3c0c6d188c4c3d1c0d788d1cdc0dc88c4c9c988c3c9dc88cdcac8c088c3d7cac888d6d2ccd1dfc0d7c9c4cbc188cac388c6cad0d7d6c088cb94919790939c9c"><i class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></i></a>
+        <a class="btn em-social email shadow-sm" href="#thm-comments-bookmark"><i class="comment-social"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg></i></a>
+
+</div>
+                    </div>
+                            <div class="thm-tags">
+            <span class="text-muted"><small>Tags: </small></span>
+                <a class="btn btn-light btn-sm" href="/tags/climate-change" data-tagid="7871">CLIMATE CHANGE</a>
+                <a class="btn btn-light btn-sm" href="/tags/davos" data-tagid="9408">DAVOS</a>
+                <a class="btn btn-light btn-sm" href="/tags/global-warming" data-tagid="13253">GLOBAL WARMING</a>
+                <a class="btn btn-light btn-sm" href="/tags/greta-thunberg" data-tagid="50078">GRETA THUNBERG</a>
+        </div>
+
+                </section>
+                <section class="post-after d-print-none">
+                        <!-- Composite Start -->
+<div id="M914693ScriptRootC1528359"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://jsc.mgid.com/t/w/twitchy.com.1528359.js" async></script>
+<!-- Composite End -->
+                    <div class="thm-piano-recommend"></div>
+                    <div class="thm-piano-eop-recommended"></div>
+                    <div id="thm-comments-bookmark" class="post-comments my-3 d-print-none">
+                        
+
+    <div id="disqus_thread"></div>
+    <div id="thm-comments" class="text-center">
+        <h3>Join the conversation as a VIP Member</h3>
+        <button class="thm-button btn text-uppercase btn-login btn-login-vip">Login to Leave a Comment</button>
+    </div>
+
+
+
+                    </div>
+                    <h4 class="pc">Recommended</h4>
+<div class="row row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/2023/303/4144da92-89b8-4926-b6a2-515f652ef25b-536x311.png" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" class="hl thm-inc">The Atlantic: 'Sure, We Lied to You. But You Didn't Believe Us, Did You' </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="Gordon K">Gordon K</a>
+    </div>
+</div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160" title="Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C."><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/tw/images/up/2025/114/ba2b5a2b-2964-435b-b637-9c0bc9cfd929-536x311.png" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160" title="Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C." class="hl thm-inc">Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C. </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160" title="Warren Squire">Warren Squire</a>
+    </div>
+</div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156" title="Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/2022/175/fcacce46-9140-487c-a070-b69fe4ce4a96-536x311.jpg" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156" title="Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;" class="hl thm-inc">Nancy Pelosi's Infamous Words Come Back to Bite Her While Slamming GOPers for 'Rushing Their Bill' </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156" title="Doug P.">Doug P.</a>
+    </div>
+</div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138" title="NYT Correspondent Lists People Charged or Threatened With Investigation by Trump"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/tw/images/up/2024/254/0dc7e688-8573-416f-8457-19b0cc607f51-536x311.jpg" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138" title="NYT Correspondent Lists People Charged or Threatened With Investigation by Trump" class="hl thm-inc">NYT Correspondent Lists People Charged or Threatened With Investigation by Trump </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138" title="Brett T.">Brett T.</a>
+    </div>
+</div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122" title="Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/2017/286/163a29ab-5721-41ee-9212-6af9a4a21631-536x311.jpg" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122" title="Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway" class="hl thm-inc">Moaning Joe: Scarborough Says He Was Wrong About Biden’s Cognitive Decline but Doesn’t Know the Takeaway </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122" title="Warren Squire">Warren Squire</a>
+    </div>
+</div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="wp-card mb-3">
+    <div class="wp-card__img">
+        <a href="https://twitchy.com/brettt/2025/05/21/rep-jasmine-crockett-talks-snap-this-is-real-life-yall-n2413121" title="Potty Mouth Rep. Jasmine Crockett Talks SNAP: &#x27;This Is Real Life, Y&#x2019;All&#x27;"><img class="img-fluid rounded" src="https://media.townhall.com/cdn/hodl/2025/57/c881755d-d090-4ac9-8739-2ed2d90dca3e-536x311.jpg" loading="lazy" /></a>
+    </div>
+    <div class="wp-card__title px-3">
+        <a href="https://twitchy.com/brettt/2025/05/21/rep-jasmine-crockett-talks-snap-this-is-real-life-yall-n2413121" title="Potty Mouth Rep. Jasmine Crockett Talks SNAP: &#x27;This Is Real Life, Y&#x2019;All&#x27;" class="hl thm-inc">Potty Mouth Rep. Jasmine Crockett Talks SNAP: 'This Is Real Life, Y’All' </a>
+
+    </div>
+    <div class="wp-card__author px-3">
+        <a href="https://twitchy.com/brettt/2025/05/21/rep-jasmine-crockett-talks-snap-this-is-real-life-yall-n2413121" title="Brett T.">Brett T.</a>
+    </div>
+</div>
+        </div>
+</div>
+
+
+                    <h4 class="pc">
+    Trending on Twitchy  Videos
+</h4>
+            <div id="Brid_63696902" class="brid"> </div>
+            <script type="text/javascript">var _bp = _bp || []; _bp.push({ "div": "Brid_63696902", "obj": { "id": "6077", "width": "880", "height": "492", "autoplay": 0, "shuffle": 1, "playlist": { "mode": "widget", "id": "384", "widget_type": "playlist_widget" } } });</script>
+
+                    <div class="thm-piano-eop"></div>
+                </section>
+            </div>
+                <div class="col-md-4 border-start order-md-5 order-5">
+                    <div class="ad">
+                        
+
+        <div class="">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-300x250_1" class="gpt-ad ad-250 text-center">
+                
+                <script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-300x250_1");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-300x250_1"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+                    </div>
+                    
+                                    <div class="widget-list my-3 d-print-none">
+                <div class="widget-list__header">
+                    <div class="widget-list__header-title">
+                        TRENDING ON TOWNHALL MEDIA
+                    </div>
+                </div>
+                <div class="widget-list__body">
+                    <ul class="list-unstyled">
+                            <li class="d-flex my-3">
+                                <div class="flex-shrink-0">
+                                    <span class="widget-list__count">
+                                        1
+                                    </span>
+                                </div>
+
+                                <div class="flex-grow-1 d-flex flex-column">
+                                    <a href="https://townhall.com/tipsheet/mattvespa/2025/05/21/targeted-attack-two-people-with-ties-to-israeli-embassy-shot-in-dc-n2657467" title="223 - Two Israeli Embassy Staffers Assassinated in DC Tonight" class="widget-list__body-title title-link">Two Israeli Embassy Staffers Assassinated in DC Tonight </a>
+                                        <img class="townhall" src="/svg/thm/logo-townhall.svg">
+
+                                </div>
+                            </li>
+                            <li class="d-flex my-3">
+                                <div class="flex-shrink-0">
+                                    <span class="widget-list__count">
+                                        2
+                                    </span>
+                                </div>
+
+                                <div class="flex-grow-1 d-flex flex-column">
+                                    <a href="https://redstate.com/smoosieq/2025/05/21/breaking-2-killed-in-shooting-outside-capital-jewish-museum-including-israeli-embassy-staffer-n2189424" title="95 - Breaking: 2 Killed in Shooting Outside Capital Jewish Museum, Including Israeli Embassy Staffer (Updated)" class="widget-list__body-title title-link">Breaking: 2 Killed in Shooting Outside Capital Jewish Museum, Including Israeli Embassy Staffer (Updated) </a>
+                                        <img class="redstate" src="/svg/thm/logo-redstate.svg">
+
+                                </div>
+                            </li>
+                            <li class="d-flex my-3">
+                                <div class="flex-shrink-0">
+                                    <span class="widget-list__count">
+                                        3
+                                    </span>
+                                </div>
+
+                                <div class="flex-grow-1 d-flex flex-column">
+                                    <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="65 - The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" class="widget-list__body-title title-link">The Atlantic: 'Sure, We Lied to You. But You Didn't Believe Us, Did You' </a>
+                                        <img class="twitchy" src="/svg/thm/logo-twitchy.svg">
+
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+                    
+                    <div class="ad mb-4">
+                        
+
+        <div class="">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-300x250_2" class="gpt-ad ad-250 text-center">
+                
+                <script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-300x250_2");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-300x250_2"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+                    </div>
+                        <div class="widget-list d-print-none">
+        <div class="widget-list__header">
+            <div class="widget-list__header-title primary-color">
+                Most Popular
+            </div>
+        </div>
+        <div class="widget-list__body">
+            <ul class="list-unstyled">
+                    <li class="d-flex my-3 pb-3 widget-list__border">
+                        <div class="flex-shrink-0">
+                            <a class="widget-list__body-img" href="https://media.townhall.com/cdn/hodl/tw/images/up/2025/114/ba2b5a2b-2964-435b-b637-9c0bc9cfd929.png" title="40 - Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C." style="background-image:url('https://media.townhall.com/cdn/hodl/tw/images/up/2025/114/ba2b5a2b-2964-435b-b637-9c0bc9cfd929.png');"></a>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <a href="https://twitchy.com/warren-squire/2025/05/21/an-israeli-diplomat-has-just-been-shot-and-kiiied-outside-the-capital-jewish-museum-in-dc-n2413160" title="40 - Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C." class="widget-list__body-title title-link">Breaking: Two Jewish Diplomats Shot and Killed at Museum Event in Washington, D.C. </a>
+                        </div>
+                    </li>
+                    <li class="d-flex my-3 pb-3 widget-list__border">
+                        <div class="flex-shrink-0">
+                            <a class="widget-list__body-img" href="https://media.townhall.com/cdn/hodl/2022/175/fcacce46-9140-487c-a070-b69fe4ce4a96.jpg" title="26 - Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;" style="background-image:url('https://media.townhall.com/cdn/hodl/2022/175/fcacce46-9140-487c-a070-b69fe4ce4a96.jpg');"></a>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <a href="https://twitchy.com/dougp/2025/05/21/nancy-pelosis-infamous-words-come-back-to-bite-her-while-slamming-gopers-for-rushing-their-bill-n2413156" title="26 - Nancy Pelosi&#x27;s Infamous Words Come Back to Bite Her While Slamming GOPers for &#x27;Rushing Their Bill&#x27;" class="widget-list__body-title title-link">Nancy Pelosi's Infamous Words Come Back to Bite Her While Slamming GOPers for 'Rushing Their Bill' </a>
+                        </div>
+                    </li>
+                    <li class="d-flex my-3 pb-3 widget-list__border">
+                        <div class="flex-shrink-0">
+                            <a class="widget-list__body-img" href="https://media.townhall.com/cdn/hodl/tw/images/up/2024/254/0dc7e688-8573-416f-8457-19b0cc607f51.jpg" title="25 - NYT Correspondent Lists People Charged or Threatened With Investigation by Trump" style="background-image:url('https://media.townhall.com/cdn/hodl/tw/images/up/2024/254/0dc7e688-8573-416f-8457-19b0cc607f51.jpg');"></a>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <a href="https://twitchy.com/brettt/2025/05/21/nyt-correspondent-lists-people-charged-or-threatened-with-investigation-by-trump-n2413138" title="25 - NYT Correspondent Lists People Charged or Threatened With Investigation by Trump" class="widget-list__body-title title-link">NYT Correspondent Lists People Charged or Threatened With Investigation by Trump </a>
+                        </div>
+                    </li>
+                    <li class="d-flex my-3 pb-3 widget-list__border">
+                        <div class="flex-shrink-0">
+                            <a class="widget-list__body-img" href="https://media.townhall.com/cdn/hodl/2017/286/163a29ab-5721-41ee-9212-6af9a4a21631.jpg" title="24 - Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway" style="background-image:url('https://media.townhall.com/cdn/hodl/2017/286/163a29ab-5721-41ee-9212-6af9a4a21631.jpg');"></a>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <a href="https://twitchy.com/warren-squire/2025/05/22/joe-scarborough-then-best-biden-ever-now-i-was-wrong-n2413122" title="24 - Moaning Joe: Scarborough Says He Was Wrong About Biden&#x2019;s Cognitive Decline but Doesn&#x2019;t Know the Takeaway" class="widget-list__body-title title-link">Moaning Joe: Scarborough Says He Was Wrong About Biden’s Cognitive Decline but Doesn’t Know the Takeaway </a>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sticky d-print-none">
+        <div class="widget-list__hero">
+            <div>
+                <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="65 - The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;"><img class="img-fluid" src="https://media.townhall.com/cdn/hodl/2023/303/4144da92-89b8-4926-b6a2-515f652ef25b-400x200.png" /></a>
+            </div>
+            <div class="p-3">
+                <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="65 - The Atlantic: &#x27;Sure, We Lied to You. But You Didn&#x27;t Believe Us, Did You&#x27;" class="widget-list__body-title title-link">The Atlantic: 'Sure, We Lied to You. But You Didn't Believe Us, Did You' </a>
+                <a href="https://twitchy.com/gordon-kushner/2025/05/21/the-atlantic-hiding-in-plain-sight-n2413118" title="Gordon K" class="widget-list__author">Gordon K</a>
+            </div>
+        </div>
+            <div class="ad">
+                
+
+        <div class="my-4">
+                <div class="advs">Advertisement</div>
+            <div id="div-gpt-300x250_3" class="gpt-ad ad-250 text-center">
+                
+                <script type="text/javascript">
+                    googletag.cmd.push(function () {
+                        googletag.display("div-gpt-300x250_3");
+                        //googletag.pubads().refresh([gptAdSlot["div-gpt-300x250_3"]])
+                    });
+                </script>
+            </div>
+        </div>
+
+
+
+            </div>
+
+    </div>
+
+                </div>
+
+        </div>
+    </div>
+</article>
+
+<div class="thm-piano-pfixed"></div>
+
+</main>
+
+    <div class="thm-piano-pfixed"></div>
+    
+<footer class="sticky-stopper mt-4 d-print-none d-none d-md-block">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-md-3">
+                <div class="my-4">
+                    <div class="my-4">
+                        <a class="navbar-brand" href="/">
+                            <img src="https://cdn.townhall.com/web/thm/logo-twitchy.svg" width="175" class="header-logo" alt="Twitchy.com">
+                        </a>
+                    </div>
+                    <div class="my-4">
+                        <p>
+                            Copyright Twitchy.com/Salem Media. All Rights Reserved. Terms under which this service is provided to you.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-2 d-flex justify-content-center"><div class="vr d-none d-md-block"></div></div>
+            <div class="col-md-7">
+                <div>
+                    <ul class="list-inline list-unstyled py-3">
+                        <li class="list-inline-item"><a class="thm-brand-button" href="https://twitchy.com"><img style="width:85px; height:auto" src="https://cdn.townhall.com/web/thm/logo-twitchy.svg" alt="twitchy.com" loading="lazy" /></a></li>
+                        <li class="list-inline-item mb-3"><a class="thm-brand-button" href="https://townhall.com"><img style="width:85px; height:auto" src="https://townhall.com/svg/thm/logo-townhall.svg" alt="townhall.com" loading="lazy" /></a></li>
+                        <li class="list-inline-item"><a class="thm-brand-button" href="https://redstate.com"><img style="width:85px; height:auto" src="https://cdn.townhall.com/web/thm/logo-redstate.svg" alt="Redstate.com" loading="lazy" /></a></li>
+                        <li class="list-inline-item"><a class="thm-brand-button" href="https://pjmedia.com" target="_blank"><img style="width:70px; height:auto" src="https://townhall.com/svg/thm/logo-pjmedia.svg" alt="pjmedia.com" loading="lazy" /></a></li>
+                        <li class="list-inline-item"><a class="thm-brand-button" href="https://hotair.com"><img style="width:54px; height:auto" src="https://cdn.townhall.com/web/thm/logo-hotair.svg" alt="hotair.com" loading="lazy" /></a></li>
+                        <li class="list-inline-item"><a class="thm-brand-button" href="https://bearingarms.com"><img style="width:103px; height:auto" src="/svg/thm/logo-bearingarms.svg" alt="bearingarms.com" loading="lazy" /></a> </li>
+                    </ul>
+                </div>
+                <div class="column-list">
+                                <a class="column-list__item" title="Politics" href="/category/politics">Politics</a>
+            <a class="column-list__item" title="Media" href="/category/media">Media</a>
+            <a class="column-list__item" title="Podcasts" href="/podcasts">Podcasts</a>
+            <a class="column-list__item" title="Culture" href="/category/culture">Culture</a>
+            <a class="column-list__item" title="VIP" href="/vip">VIP</a>
+            <a class="column-list__item" title="About Twitchy" href="/page/about/">About Twitchy</a>
+            <a class="column-list__item" title="Advertise" href="https://townhallmedia.com/">Advertise</a>
+            <a class="column-list__item" title="Terms &amp; Conditions" href="https://media.townhall.com/townhall/privacypolicy/TermsofUse.htm">Terms &amp; Conditions</a>
+            <a class="column-list__item" title="Privacy Policy" href="https://salemmedia.com/privacy-policy/">Privacy Policy</a>
+            <a class="column-list__item" title="California - Do Not Sell My Personal Information" href="https://salemmedia.com/ccpa-sale-opt-out/ ">California - Do Not Sell My Personal Information</a>
+            <a class="column-list__item" title="California - CCPA Notice" href="https://salemmedia.com/townhall-media-ccpa-privacy-notice-for-california-residents/">California - CCPA Notice</a>
+            <a class="column-list__item" title="Sitemap" href="https://twitchy.com/sitemaps/sitemapindex-twitchy.xml">Sitemap</a>
+            <a class="column-list__item" title="Contact Us" href="/contact-us/">Contact Us</a>
+            <a class="column-list__item btn-nls" title="Newsletters" href="/newsletters">Newsletters</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+    
+    <script src="/dist/main.js?v=DsCvsHZB_lp354tJk--DjyRIIwE07BW86Avgo7I1k7I"></script>
+    <script src="/dist/runtime.js?v=uB8GF5-G_8TIuXzVFmH-4irzx9OSzdOvtu_kn_q4MTQ"></script>
+    <script src="/dist/vendors.js?v=IW2-aUAoX3XaSoXVQuWH1TFPqb8q8iMn05q6_uWA3gk"></script>
+
+    <script>
+    function isSafari() {
+        var userAgent = navigator.userAgent;
+        var isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+        return isSafari;
+    }
+    //  var displayMode = 'modal';
+    var userAgent = navigator.userAgent;
+    var isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
+
+    // Checking if the URL path is '/subscribe'
+    var isSubscribePage = window.location.pathname === '/subscribe';
+
+    // Determining the display mode
+    var displayMode;
+    if (isSubscribePage) {
+        displayMode = 'modal';
+    } else {
+        //  displayMode = isSafari ? 'redirect' : 'modal';
+        displayMode = isSafari ? 'modal' : 'redirect';
+        // displayMode = 'redirect';
+    }
+
+    console.log("displayMode is " + displayMode);
+    tp = window["tp"] || [];
+    tp.push(["setUsePianoIdUserProvider", true]);
+    tp.push(["setDebug", false]);
+
+
+        tp.push(['setCloudflareWorkerUrl', 'https://auth.twitchy.com']);
+        tp.push(["init", function () {
+            console.log("[p] init begins");
+            tp.enableGACrossDomainLinking();
+
+            var w = window.innerWidth;
+            if (w > 500) {
+                w = 500;
+            }
+
+            tp.pianoId.init({
+                displayMode: displayMode,
+                confirmation: 'after',
+                // displayMode: 'modal',
+                containerSelector: '#login-form',
+                width: w,
+                height: 400,
+                loggedIn: function (data) {
+                    //console.log('user ', data.user, ' logged in with token', data.token);
+                    pianoMan.verify(data);
+                },
+                loggedOut: function (event) {
+                    pianoMan.verify(event);
+                    window.location.reload();
+                },
+                loginDisplayed: function () {
+                    console.log("login displayed")
+                },
+                loginSuccess: function (e) {
+                    //thmPiano.alreadyLoggedIn = true;
+                    console.log("loginSuccess");
+                }
+            });
+
+            if (!tp.pianoId.isUserValid()) {
+                console.log("[p] anonymous");
+                pianoMan.verify();
+            }
+        }]);
+
+
+    tp.push(["addHandler", "customEvent", function (event, b, c, d) {
+        switch (event.eventName) {
+            case 'newsletter':
+            case 'newsletter-signup':
+            case 'newsletter-poll':
+
+                var iframeId = b;
+                var payload = {
+                    email: event.params.email,
+                    id: 1,
+                    source: event.eventName,
+                    pc: event.params.pc,
+                    list: null,
+                    rid: pianoMan.getRid()
+                };
+                //list came from template
+                if (event.params.list) {
+                    payload.list = thmUtils.tryParseJson(event.params.list);
+                }
+                if (payload.email && payload.email.length > 0) {
+                    pianoMan.postupNewsletter(payload);
+                }
+
+                break;
+            case 'continue-reading':
+                tp.offer.show({ offerId: event.params.offer })
+                break;
+        }
+    }]);
+    tp.push(["addHandler", "showOffer", function (offerParams) {
+        chartbeat('trackPaywallShown');
+    }])
+    tp.push(["addHandler", "startCheckout", function () {
+        chartbeat('trackPaywallStart');
+    }]);
+    tp.push(["addHandler", "checkoutComplete", async function (conversion) {
+
+        console.log(conversion);
+
+        var payload = {
+            email: conversion.email,
+            id: 1,
+            source: "piano conversion through purchase",
+            pc: null,
+            list: [1537],
+            rid: conversion.rid
+        };
+        var result = pianoMan.postupNewsletter(payload);
+
+        chartbeat('trackPaywallComplete');
+    }]);
+</script>
+<script>(function (src) { var a = document.createElement("script"); a.type = "text/javascript"; a.async = false; a.src = src; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b) })("https://experience.tinypass.com/xbuilder/experience/load?aid=PiCfIFWy01");</script>
+<div id="login-form"></div>
+    <!-- LiveConnectTag for advertisers -->
+    <script type="text/javascript" src="//b-code.liadm.com/a-0684.min.js" async="true" charset="utf-8"></script>
+    
+    
+        <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="text/javascript" async src="https://services.brid.tv/player/build/brid.min.js"></script>
+    <script id="post-filter" type="application/json">1425699,2413118</script>
+    <script>
+    tp = window["tp"] || [];
+    tp.push(["setTags", ["thm:article","climate-change","davos","global-warming","greta-thunberg"]]);
+</script>
+
+
+    <script type="text/javascript">
+        console.info("The End: ", window.performance.now());
+    </script>
+    <div class="thm-piano-nl-hpfixed"></div>
+    <div class="thm-piano-bottom"></div>
+
+</body>
+</html>
