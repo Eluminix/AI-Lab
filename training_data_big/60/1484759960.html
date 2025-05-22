@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>City Pages</title>
+  <link rel="shortcut icon" href="/img/faviconit/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="/img/faviconit/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="/img/faviconit/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/img/faviconit/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/faviconit/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/faviconit/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/faviconit/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/faviconit/favicon-16.png">
+  <link rel="apple-touch-icon" href="/img/faviconit/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/faviconit/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/faviconit/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/faviconit/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/faviconit/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/faviconit/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/faviconit/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/faviconit/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/faviconit/favicon-180.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif:wght@400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /*CSS for CP redirect page mobile first design*/
+    body{
+      color:#ffffff;
+      background:#222222;
+      font-size: 16px;
+      font-family: 'PT Serif', serif;
+      margin:0;
+    }
+    .contentWrap{
+      max-width:1200px;
+      margin: auto;
+    }
+
+    h1.logo{
+      color: #ffffff;
+      background: #EE3D42;
+      background-image: url(/img/cp_logo-white.png);
+      background-repeat: no-repeat;
+      background-size: 158px 25px;
+      background-position: center center;
+      font-size: 0px;
+      padding: 0px;
+      margin: 0;
+      height: 50px;
+      width: 100%;
+      align-self: flex-start;
+    }
+    h1{
+
+    }
+    h2{
+      color:#ffffff;
+      font-family: 'PT Serif', serif;
+      font-size: 23px;
+      margin: 1rem 0 1.5rem;
+    }
+    h3{
+      color:#222222;
+      font-family: 'PT Serif', serif;
+      font-size: 18px;
+      margin: 1rem 0 1.5rem;
+    }
+    h3:after {
+      content: "________";
+      clear: both;
+      display: block;
+      color: #ee3e42;
+      font-weight: bold;
+      line-height: 0px;
+    }
+    h4{
+      color:#222222;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+      margin: 2rem 0 0rem;
+    }
+    p{
+      color:#222222;
+      font-family: 'PT Serif', serif;
+      font-size: 16px;
+      margin: 1rem 0;
+    }
+    a{
+      text-decoration:underline;
+      color: #222222;
+      font-weight:bold;
+    }
+    a:hover{
+      font-weight:bold;
+      color: #EE3D42;
+    }
+
+    header{
+      background-image: url(/img/city-pages-minneapolis-closing.jpeg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 300px;
+      padding: 0;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .headerCopy{
+      align-self: flex-end;
+      padding: 0 1rem 0rem;
+      flex-grow: 1;
+      width:100%;
+      background: rgb(0,0,0);
+      background: -moz-linear-gradient(0deg, rgba(0,0,0,0.7189250700280112) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.7189250700280112) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(0deg, rgba(0,0,0,0.7189250700280112) 0%, rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+    }
+
+    p strong{
+      color:#ffffff;
+      text-transform:uppercase;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 18px;
+      border:2px solid #ffffff;
+      padding: 5px 10px;
+
+    }
+    main{
+      background: #ffffff;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    aside{
+      border-top:2px solid #DDDDDD;
+      margin: 1rem 0;
+      width:100%;
+    }
+
+    aside p {
+      margin-top: .5rem;
+    }
+    footer{
+      background:#222222;
+      color:#ffffff;
+      margin:2rem auto;
+      max-width:1200px;
+      padding: 0 1rem;
+    }
+    footer p{
+      color:#ffffff;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width:768px){
+
+      h1.logo{
+        width: 230px;
+        height:70px;
+      }
+      h2{
+        font-size:29px;
+      }
+      .headerCopy{
+        padding: 0 2rem 0rem;
+      }
+      main{
+        padding: 2rem;
+      }
+      footer{
+        padding: 0 2rem;
+      }
+      .maincopyWrap{
+        width: 65%;
+        padding-right: 2rem;
+        box-sizing: border-box;
+      }
+      aside{
+        width: 35%;
+        border-top: 0;
+        border-left: 2px solid #DDDDDD;
+        margin: 0;
+        padding-left: 2rem;
+        box-sizing: border-box;
+      }
+      h3{
+        font-size:20px;
+      }
+      h4{
+        margin:1rem 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="contentWrap">
+  <header>
+    <h1 class="logo">City Pages</h1>
+    <div class="headerCopy">
+      <p><strong>News</strong></p>
+      <h2>City Pages ceased publication on October 29, 2020.</h2>
+    </div>
+  </header>
+  <main>
+    <div class="maincopyWrap">
+      <h3>Looking for the City Pages Archives?</h3>
+      <p>The Minnesota Historical Society and Hennepin County Library will be hosting archives of CityPages.com. Check back soon for more info.</p>
+      <p>Newspapers.com will soon offer a searchable archive of City Pages entire print history. (Estimated availability: April 2021.)</p>
+      <p>The Hennepin County Library collections contain every issue of City Pages. Patrons will also be able to access the Newspapers.com archive at library branches when available.</p>
+    </div>
+    <aside>
+      <h4>Shop City Pages Merchandise</h4>
+      <p>Purchase City Pages merchandise in our <a href="https://shop.startribune.com/category/shop-citypages-com/">store</a>.</p>
+      <h4>Questions about City Pages?</h4>
+      <p>Email <a href="/cdn-cgi/l/email-protection#b0c1c5d5c3c4d9dfdec3f0d3d9c4c9c0d1d7d5c39ed3dfdd"><span class="__cf_email__" data-cfemail="e594908096918c8a8b96a5868c919c9584828096cb868a88">[email&#160;protected]</span></a>.</p>
+    </aside>
+  </main>
+
+</div> <!--end content wrap-->
+
+<footer>
+  <p>© CityPages 2020, All rights reserved.</p>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
