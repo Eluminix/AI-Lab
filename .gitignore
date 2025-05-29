@@ -9,5 +9,4 @@ ENV/
 
 .idea/
 
-#pretrained_models/fastext/
-#pretrained_models/word2vec/
+pretrained_models/
