@@ -9,6 +9,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, mean_squared_error
 
 # Download NLTK resources (only needs to be done once)
 nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # === Step 1: Basic preprocessing ===
 def simple_preprocess(text):
@@ -86,7 +87,7 @@ if __name__ == "__main__":
 
     # # Load pre-trained Word2Vec model (Google News vectors)
     # print("Lade Word2Vec-Modell ...")
-    # model = KeyedVectors.load_word2vec_format("GoogleNews-vectors-negative300.bin", binary=True)
+    # model = KeyedVectors.load_word2vec_format("pretrained_models/word2vec/GoogleNews-vectors-negative300.bin", binary=True)
 
     # Load FastText word vectors
     print("Loading FastText model...")

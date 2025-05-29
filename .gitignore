@@ -7,5 +7,7 @@ __pycache__/
 venv/
 ENV/
 
+.idea/
 
-pretrained_models/fastext/
+#pretrained_models/fastext/
+#pretrained_models/word2vec/
