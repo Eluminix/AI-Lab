@@ -15,3 +15,13 @@ nltk
 
 # Notebook Support
 jupyter
+
+# Summarizer
+protobuf
+tiktoken
+blobfile
+sentencepiece
+torch
+
+# Evaluation
+seaborn

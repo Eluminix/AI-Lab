@@ -1,0 +1,7 @@
+{
+  "Model": "Word Embeddings - Cosine Similarity (Classifier) - English only",
+  "Accuracy": 0.12154696132596685,
+  "Precision": 0.2080473240694235,
+  "Recall": 0.12154696132596685,
+  "F1 Score": 0.10772509585109835
+}
