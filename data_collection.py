@@ -46,7 +46,7 @@ def build_text_pair_dataset(df, base_path="data", limit=None):
 
 if __name__ == "__main__":
 
-    print("Reading CSV...")
+    print("Reading CSV Train small...")
 
     # Path to the CSV file
     csv_path = "data/semeval-2022_task8_train-data_batch.csv"
@@ -59,4 +59,36 @@ if __name__ == "__main__":
     # Process csv and json for all data
     dataset_df = build_text_pair_dataset(df, base_path="data")
 
-    dataset_df.to_csv("data/full_dataset.csv", index=False)
+    dataset_df.to_csv("data/train_dataset.csv", index=False)
+
+
+    print("Reading CSV Train big...")
+
+    # Path to the CSV file
+    csv_path = "training_data_big/semeval-2022_task8_train-data_batch_big.csv"
+
+    # Load the data
+    df = pd.read_csv(csv_path)
+
+    print("Combining CSV with JSON Data...")
+
+    # Process csv and json for all data
+    dataset_df = build_text_pair_dataset(df, base_path="training_data_big")
+
+    dataset_df.to_csv("training_data_big/train_dataset_big.csv", index=False)
+
+
+    print("Reading CSV Test...")
+
+    # Path to the CSV file
+    csv_path = "test_data/final_evaluation_data.csv"
+
+    # Load the data
+    df = pd.read_csv(csv_path)
+
+    print("Combining CSV with JSON Data...")
+
+    # Process csv and json for all data
+    dataset_df = build_text_pair_dataset(df, base_path="test_data")
+
+    dataset_df.to_csv("test_data/test_dataset.csv", index=False)
