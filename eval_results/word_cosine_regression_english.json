@@ -1,0 +1,6 @@
+{
+  "Model": "Word Embeddings - Cosine Similarity (Regression) - English only",
+  "MSE": 3.3011907311007116,
+  "MAE": 1.5097789389817096,
+  "R2": -1.2203884291354319
+}
