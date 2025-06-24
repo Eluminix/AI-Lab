@@ -1,0 +1,6 @@
+{
+  "Model": "Word Embeddings Multilingual - Cosine Similarity (Regression)",
+  "MSE": 3.729208620069935,
+  "MAE": 1.5894088080456321,
+  "R2": -1.718765463936232
+}
