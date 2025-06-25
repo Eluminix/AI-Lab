@@ -2,10 +2,10 @@
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
 import json
 import os
 import pandas as pd
+from scipy.stats import pearsonr
 
 from sklearn.metrics import (
     mean_squared_error, mean_absolute_error, r2_score,
@@ -76,11 +76,13 @@ def evaluate_regression(y_true, y_pred, description="Model", save_json_file_name
     mse = mean_squared_error(y_true, y_pred)
     mae = mean_absolute_error(y_true, y_pred)
     r2 = r2_score(y_true, y_pred)
+    pearson_corr, _ = pearsonr(y_true, y_pred)
 
     print(f"\nRegression Evaluation for {description}")
     print(f"Mean Squared Error (MSE): {mse:.3f}")
     print(f"Mean Absolute Error (MAE): {mae:.3f}")
     print(f"R2 Score: {r2:.3f}")
+    print(f"Pearson Correlation (r): {pearson_corr:.3f}")
 
     # Scatter plot
     plt.figure(figsize=(6, 6))
@@ -97,7 +99,8 @@ def evaluate_regression(y_true, y_pred, description="Model", save_json_file_name
         "Model": description,
         "MSE": mse,
         "MAE": mae,
-        "R2": r2
+        "R2": r2,
+        "Pearson Correlation": pearson_corr
     }
 
     if save_json_file_name:
