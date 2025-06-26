@@ -1,0 +1,7 @@
+{
+  "Model": "XLM-R Title + Text Classifier",
+  "Accuracy": 0.5352627142455746,
+  "Precision": 0.5478068047618281,
+  "Recall": 0.5352627142455746,
+  "F1": 0.5392076641154004
+}

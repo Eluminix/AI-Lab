@@ -1,0 +1,7 @@
+{
+  "Model": "XLM-R Title + Text - Regression",
+  "MSE": 0.5553803222370328,
+  "MAE": 0.536413640639432,
+  "R2": 0.569303677619765912,
+  "Pearson Correlation": 0.79921638941561748
+}
