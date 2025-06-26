@@ -1,0 +1,7 @@
+{
+  "Model": "All Features - Regression",
+  "MSE": 0.24483051553365623,
+  "MAE": 0.34606520826019493,
+  "R2": 0.821507237066795,
+  "Pearson Correlation": 0.9091307056192519
+}

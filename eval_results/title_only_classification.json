@@ -1,0 +1,7 @@
+{
+  "Model": "Title Only - Classification",
+  "Accuracy": 0.36833514689880303,
+  "Precision": 0.3628247363883666,
+  "Recall": 0.36833514689880303,
+  "F1 Score": 0.30165511647107063
+}
