@@ -15,5 +15,5 @@ https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-
 
 Fasttext English only: https://fasttext.cc/docs/en/english-vectors.html
 
-Aligned Fasttext for en, es, de, pl, tr, ar, and fr: https://fasttext.cc/docs/en/aligned-vectors.html
+Aligned Fasttext for en, es, de, pl, tr, ar, it, ru, zh and fr: https://fasttext.cc/docs/en/aligned-vectors.html
 
