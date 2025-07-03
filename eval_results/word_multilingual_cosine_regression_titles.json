@@ -1,0 +1,7 @@
+{
+  "Model": "Word Embeddings Multilingual - Cosine Similarity (Regression) - Titles only",
+  "MSE": 2.368585323371351,
+  "MAE": 1.186233150985809,
+  "R2": -0.7268081868392489,
+  "Pearson Correlation": 0.17382622283396643
+}

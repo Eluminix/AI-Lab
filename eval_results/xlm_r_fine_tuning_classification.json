@@ -1,0 +1,7 @@
+{
+  "Model": "XLM-R Fine-Tuning Classifier",
+  "Accuracy": 0.6052627142455746,
+  "Precision": 0.5678068047618281,
+  "Recall": 0.6052627142455746,
+  "F1": 0.5762076641154004
+}
